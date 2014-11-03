@@ -8,7 +8,7 @@
       MIT License, http://opensource.org/licenses/MIT
 
 */
-package com.wilutions.joa.ctp4iptor;
+package com.wilutions.joa.example.cnaddin;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -219,7 +219,7 @@ public class NoteTaskPane extends TaskPane {
 		root.setSpacing(4);
 
 		final Scene scene = new Scene(root);
-		scene.getStylesheets().add("com/wilutions/joa/ctp4iptor/stylesheet.css");
+		scene.getStylesheets().add("com/wilutions/joa/example/cnaddin/stylesheet.css");
 
 		// ------------------------------------------------------------------------
 		// The note is displayed in a view based on a GridPane with three
@@ -243,7 +243,7 @@ public class NoteTaskPane extends TaskPane {
 		noteGrid.getColumnConstraints().add(new ColumnConstraints(headerRectsSize, headerRectsSize, headerRectsSize));
 
 		// Note icon in left column
-		Image img = new Image("/com/wilutions/joa/ctp4iptor/NoteIcon.png");
+		Image img = new Image("com/wilutions/joa/example/cnaddin/NoteIcon.png");
 		ImageView noteLeftBox = new ImageView(img);
 		noteLeftBox.setFitWidth(16);
 		noteLeftBox.setFitHeight(16);

@@ -8,7 +8,7 @@
       MIT License, http://opensource.org/licenses/MIT
 
 */
-package com.wilutions.joa.ctp4iptor;
+package com.wilutions.joa.example.cnaddin;
 
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;

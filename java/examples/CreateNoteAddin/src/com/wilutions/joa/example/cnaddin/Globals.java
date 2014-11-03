@@ -8,7 +8,7 @@
       MIT License, http://opensource.org/licenses/MIT
 
 */
-package com.wilutions.joa.ctp4iptor;
+package com.wilutions.joa.example.cnaddin;
 
 public class Globals {
 
