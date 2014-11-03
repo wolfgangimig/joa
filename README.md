@@ -24,7 +24,7 @@ The private part consists of C++ sources for the COM bridge and the Java source 
 
 The MIT license allows you to use JOA in any project, inclusive commercial products. I am looking forward to your comments and bug reports on the "Issues" section. Depending on your feedback, this work might become a real product with commercial support. 
 
-More information can be found in the wiki. You may want to look at the  [Tutorial](https://github.com/wolfgangimig/joa/wiki/Tutorial).
+More information can be found in the wiki. You may want to start reading with the  [Tutorial](https://github.com/wolfgangimig/joa/wiki/Tutorial).
 
 Kind regards
 
