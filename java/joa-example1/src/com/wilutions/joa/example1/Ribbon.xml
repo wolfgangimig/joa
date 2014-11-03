@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="JOA" label="JOA">
+        <group id="JOAGroup" label="JOA Group">
+          <button id="NewCustomButton"
+              imageMso="WebPagePreview"
+              size="large"
+              label="Search JOA"
+              onAction="onButtonClicked"/>
+          <button id="NewCustomButton2"
+              imageMso="WebPagePreview"
+              size="large"
+              label="Search JOA"
+              onAction="ButtonClicked2"/>
+         <button id="NewCustomButton4"
+              imageMso="WebPagePreview"
+              size="large"
+              label="Show/Hide Task Pane"
+              onAction="ButtonClicked4"/>
+         <button id="NewCustomButton5"
+              imageMso="WebPagePreview"
+              size="large"
+              label="Add Task Pane"
+              onAction="AddTaskPaneClicked"/>
+          <!--  
+          <checkBox id="NewCustomButton3"
+              label="TaskPane"
+              onAction="ButtonClicked3"/>
+           -->
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

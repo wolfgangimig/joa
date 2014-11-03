@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="build" name="Create Runnable Jar for Project joa">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<!--define folder properties-->
+	<property name="project.dir" value="." />
+	<property name="lib.dir" value="${project.dir}/../lib" />
+	<property name="dest.dir" value="${lib.dir}" />
+	<property name="dll.dir" value="${lib.dir}" />
+	<property name="native.dir" value="${project.dir}/native/" />
+	<property name="native.package.dir" value="${native.dir}/com/wilutions/com" />
+
+	<!--
+		Create runnable JAR file that includes the native DLLs. 
+	-->
+	<target name="create_run_jar+dlls">
+		
+		<mkdir dir="${native.package.dir}"/>
+		<copy todir="${native.package.dir}" >
+			<fileset dir="${dll.dir}" includes="**/*.dll"/>
+		</copy>
+		
+		<jar destfile="${dest.dir}/joa-with-dlls.jar" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Main-Class" value="com.wilutions.joa.AddinApplication" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="${project.dir}/bin" />
+			<fileset dir="${native.dir}" />
+		</jar>
+		
+		<delete dir="${native.dir}"/>
+	</target>
+		
+	<!--
+		Create runnable JAR file without the native DLLs. 
+	-->
+	<target name="create_run_jar">
+		<jar destfile="${dest.dir}/joa-without-dlls.jar" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Main-Class" value="com.wilutions.joa.AddinApplication" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="${project.dir}/bin" />
+		</jar>
+	</target>
+	
+	<!--
+		Create JAR file with sources.
+	-->	
+	<target name="create_src_jar">
+		<jar destfile="${dest.dir}/joa-src.jar">
+			<fileset dir="${project.dir}/src" />
+			<fileset dir="${project.dir}/src-gen" />
+		</jar>
+	</target>
+	
+	<target name="build" depends="create_src_jar,create_run_jar,create_run_jar+dlls" />
+</project>

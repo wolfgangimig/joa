@@ -1,0 +1,1 @@
+call run32 /UnregisterServer user

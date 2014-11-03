@@ -1,0 +1,1 @@
+call run64 /RegisterServer

@@ -1,0 +1,16 @@
+classes
+build
+bin
+*.class
+.metadata
+Debug
+x64\Debug
+Release
+x64\Release
+*.user
+*.sdf
+*.suo
+*.opensdf
+ipch
+*.log
+DebugPS

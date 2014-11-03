@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="javah">
+
+	<property name="dest" value="../../cpp/JoaCtrl" />
+	<property name="project.class.path" value="./bin" />
+
+	<target name="build">
+		<javah classpath="${project.class.path}" destdir="${dest}" force="yes" verbose="yes">
+			<class name="com.wilutions.com.JoaDll"/>
+		</javah>
+	
+	</target>
+
+</project>
+  

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui"
+  onLoad="onLoadRibbon"
+  >
+<!-- http://stackoverflow.com/questions/2375051/outlook-addin-in-c-sharp-how-to-add-button-group-in-new-mail-next-to-signatur -->
+  <ribbon>
+    <tabs>
+      <tab idMso="TabReadMessage">
+        <group id="JOAGroup" label="Note">
+          <toggleButton id="ShowHideTP"
+              getImage="onGetImage" 
+              size="large"
+              label="Show/Hide"
+              getVisible="ShowHideTP_getVisible"
+              getPressed="ShowHideTP_getPressed"
+              onAction="onShowHideTaskPaneClicked"/>
+         </group>
+      </tab>
+    </tabs>
+  </ribbon>
+  
+
+
+</customUI>

@@ -1,0 +1,7 @@
+/bin/
+/.apt_generated/
+/src-gen/
+/joa.jar
+/src-gen2/
+
+*.jar

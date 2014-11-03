@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormRegion xmlns="http://schemas.microsoft.com/office/outlook/12/formregion.xsd">
+  <name>JavaFormRegion</name>
+  <!--  formRegionType: adjoining, separate, replace, replaceAll -->
+  <formRegionType>adjoining</formRegionType>
+  <formRegionName>Java Form Region</formRegionName>
+  <hidden>true</hidden>
+  <ribbonAccelerator>I</ribbonAccelerator>
+  <showInspectorCompose>true</showInspectorCompose>
+  <showInspectorRead>true</showInspectorRead>
+  <showReadingPane>false</showReadingPane>
+  <addin>MyJava.Addin</addin>
+</FormRegion>

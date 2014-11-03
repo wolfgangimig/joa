@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project joa-processor">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+	
+	<property name="project.dir" value="." />
+	<property name="lib.dir" value="${project.dir}/../lib" />
+		
+    <target name="create_run_jar">
+        <jar destfile="${lib.dir}/joa-processor.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.wilutions.com.gen.MainProcessorDummy"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${project.dir}/bin"/>
+            <fileset dir="${project.dir}/../joa/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/git/joa/java/lib/commons-logging-1.1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/git/joa/java/lib/log4j-1.2.15.jar"/>
+        </jar>
+    </target>
+</project>
