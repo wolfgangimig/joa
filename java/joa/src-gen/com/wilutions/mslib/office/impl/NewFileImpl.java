@@ -1,0 +1,48 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
+package com.wilutions.mslib.office.impl;
+import com.wilutions.com.*;
+
+@SuppressWarnings("all")
+@CoClass(guid="{C09B905D-A463-DB41-5DAE-69E7A5F7FCBC}")
+public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.NewFile {
+  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+    final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
+    if (obj == null) return null;
+    return (Dispatch)obj;
+  }
+  @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
+    final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
+    if (obj == null) return null;
+    return (Integer)obj;
+  }
+  @DeclDISPID(1)  public Boolean Add(String FileName, Object Section, Object DisplayName, Object Action) throws ComException {
+    assert(FileName != null);
+    assert(Section != null);
+    assert(DisplayName != null);
+    assert(Action != null);
+    final Object obj = this._dispatchCall(1,"Add", DISPATCH_METHOD,null,FileName,Section,DisplayName,Action);
+    if (obj == null) return null;
+    return (Boolean)obj;
+  }
+  @DeclDISPID(2)  public Boolean Remove(String FileName, Object Section, Object DisplayName, Object Action) throws ComException {
+    assert(FileName != null);
+    assert(Section != null);
+    assert(DisplayName != null);
+    assert(Action != null);
+    final Object obj = this._dispatchCall(2,"Remove", DISPATCH_METHOD,null,FileName,Section,DisplayName,Action);
+    if (obj == null) return null;
+    return (Boolean)obj;
+  }
+  public NewFileImpl(String progId) throws ComException {
+    super(progId);
+  }
+  protected NewFileImpl(long ndisp) {
+    super(ndisp);
+  }
+  public NewFileImpl(Dispatch ndisp) {
+    super(ndisp);
+  }
+  public String toString() {
+    return "[NewFileImpl" + super.toString() + "]";
+  }
+}

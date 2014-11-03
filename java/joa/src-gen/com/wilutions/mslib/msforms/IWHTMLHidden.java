@@ -1,0 +1,15 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
+package com.wilutions.mslib.msforms;
+import com.wilutions.com.*;
+
+/**
+ * IWHTMLHidden.
+ * 
+ */
+@CoInterface(guid="{5512D11D-5CC6-11CF-8D67-00AA00BDCE1D}")
+public interface IWHTMLHidden extends IDispatch {
+  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException;
+  @DeclDISPID(-541)  public String getHTMLName() throws ComException;
+  @DeclDISPID(0)  public void setValue(String value) throws ComException;
+  @DeclDISPID(0)  public String getValue() throws ComException;
+}
