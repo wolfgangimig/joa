@@ -127,14 +127,15 @@ public class Dispatch implements IDispatch {
 	 *            Dispatch object
 	 * @param clazz
 	 *            Class
-	 * @return Casted object.
+	 * @return Casted object or null, if idisp is null.
 	 */
 	public static <T extends Dispatch> T as(Object idisp, Class<T> clazz) {
 		T ret = null;
-		assert idisp != null;
-		assert idisp instanceof Dispatch;
-		Dispatch pthis = ((Dispatch) idisp);
-		ret = pthis.as(clazz);
+		if (idisp != null) {
+			assert idisp instanceof Dispatch;
+			Dispatch pthis = ((Dispatch) idisp);
+			ret = pthis.as(clazz);
+		}
 		return ret;
 	}
 
