@@ -21,12 +21,6 @@ import com.wilutions.mslib.outlook._Explorers;
 import com.wilutions.mslib.outlook._Inspector;
 import com.wilutions.mslib.outlook._Inspectors;
 
-/**
- * Transformation of MSDN article
- * "Extending the User Interface in Outlook 2010".
- * 
- * @see http://msdn.microsoft.com/en-us/library/ee692172(office.14).aspx
- */
 public class ThisAddin extends OutlookAddin implements ExplorersEvents, InspectorsEvents {
 
 	Application m_Application;

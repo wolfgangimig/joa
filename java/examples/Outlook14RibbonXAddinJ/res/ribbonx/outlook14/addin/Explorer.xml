@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <customUI onLoad="Ribbon_Load"
 	xmlns="http://schemas.microsoft.com/office/2009/07/customui">
 	<ribbon>
@@ -123,6 +123,8 @@
 				onAction="OnMyButtonClick" />
 		</contextMenu>
 		<contextMenu idMso="ContextMenuAttachments">
+			<!-- Copied to ReadMail.xml to display the menu as shown in figure 14 in "Extending 
+				the User Interface in Outlook 2010" -->
 			<button id="MyContextMenuAttachments" imageMso="HappyFace"
 				label="ContextMenuAttachments" onAction="OnMyButtonClick" />
 		</contextMenu>

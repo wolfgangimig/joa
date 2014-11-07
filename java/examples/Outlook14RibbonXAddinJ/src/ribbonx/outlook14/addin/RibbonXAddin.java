@@ -1,11 +1,13 @@
 package ribbonx.outlook14.addin;
 
-import com.wilutions.com.BackgTask;
+import java.io.IOException;
+
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
+import com.wilutions.joa.OfficeAddinUtil;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.mslib.office.IMsoContactCard;
 import com.wilutions.mslib.office.IRibbonControl;
@@ -16,6 +18,7 @@ import com.wilutions.mslib.outlook.AddressEntry;
 import com.wilutions.mslib.outlook.Application;
 import com.wilutions.mslib.outlook.Attachment;
 import com.wilutions.mslib.outlook.AttachmentSelection;
+import com.wilutions.mslib.outlook.ContactItem;
 import com.wilutions.mslib.outlook.Explorer;
 import com.wilutions.mslib.outlook.Folder;
 import com.wilutions.mslib.outlook.Inspector;
@@ -33,11 +36,22 @@ import com.wilutions.mslib.outlook.impl.OutlookBarShortcutImpl;
 import com.wilutions.mslib.outlook.impl.SelectionImpl;
 import com.wilutions.mslib.outlook.impl.ViewImpl;
 
+/**
+ * Transformation of MSDN article
+ * "Extending the User Interface in Outlook 2010". In a C# VSTO project, the
+ * Add-in and Ribbon functionality is separated into different classes. The
+ * Add-in class implements the ApplicationEvents_11 and the Ribbon class
+ * implements IRibbonExtensibility. With JOA, both functionality must be
+ * implemented in a single class. This is why the class RibbonXAddin is derived
+ * from ThisAddin.
+ * 
+ * @see http://msdn.microsoft.com/en-us/library/ee692172(office.14).aspx
+ */
 @CoClass(progId = "RibbonXOutlook14Addin.Class", guid = "{f886dd17-3bd7-498c-b1ec-f2b4ec8d477f}")
 @DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "My First JOA Add-in", description = "Example for an Outlook Add-in developed in Java")
 public class RibbonXAddin extends ThisAddin {
 
-	private IRibbonUI ribbon;
+	// private IRibbonUI ribbon; already defined in superclass.
 
 	private Application olApplication;
 
@@ -51,11 +65,29 @@ public class RibbonXAddin extends ThisAddin {
 	}
 
 	@Override
-	public String GetCustomUI(String ribbonId) {
-		// The superclass finds the XML data in a
-		// file named "Ribbon." + ribbonId in the
-		// package of this.getClass()
-		return super.GetCustomUI(ribbonId);
+	public String GetCustomUI(String ribbonID) {
+		// The superclass can find the XML data in
+		// files named "Ribbon." + ribbonId in the
+		// package of this.getClass(). In order to
+		// closely follow the C# code, this function
+		// reads the XML data itself.
+
+		String customUI = "";
+
+		// Return the appropriate Ribbon XML for ribbonID
+		switch (ribbonID) {
+		case "Microsoft.Outlook.Explorer":
+			customUI = GetResourceText("Explorer.xml");
+			return customUI;
+		case "Microsoft.Outlook.Mail.Read":
+			customUI = GetResourceText("ReadMail.xml");
+			return customUI;
+		case "Microsoft.Mso.IMLayerUI":
+			customUI = GetResourceText("ContactCard.xml");
+			return customUI;
+		default:
+			return "";
+		}
 	}
 
 	public void Ribbon_Load(IRibbonUI ribbonUI) {
@@ -70,6 +102,10 @@ public class RibbonXAddin extends ThisAddin {
 
 			if (context.is(Explorer.class)) {
 				Explorer explorer = context.as(Explorer.class);
+
+				// explorer.getSelection throws an exception 80020009
+				// when this function is called at startup.
+
 				Selection selection = explorer.getSelection();
 				if (selection.getCount() == 1) {
 					Dispatch item = selection.Item(1);
@@ -134,6 +170,7 @@ public class RibbonXAddin extends ThisAddin {
 	// OnMyButtonClick routine handles all button click events
 	// and displays IRibbonControl.Context in message box
 	public void OnMyButtonClick(IRibbonControl control) {
+		
 		final Dispatch context = control.getContext();
 		if (context == null)
 			return;
@@ -155,7 +192,7 @@ public class RibbonXAddin extends ThisAddin {
 				msg = msg + folder.getName();
 			} else if (context.is(Selection.class)) {
 				msg = "Context=Selection" + "\n";
-				Selection selection = context.as(SelectionImpl.class);
+				Selection selection = context.as(Selection.class);
 				if (selection.getCount() == 1) {
 					OutlookItem olItem = new OutlookItem(selection.Item(1));
 					msg = msg + olItem.getSubject() + "\n" + olItem.getLastModificationTime();
@@ -191,8 +228,20 @@ public class RibbonXAddin extends ThisAddin {
 			} else if (context.is(Explorer.class)) {
 				msg = "Context=Explorer" + "\n";
 				Explorer explorer = context.as(Explorer.class);
-				int n1 = getApplication().ActiveExplorer().getAttachmentSelection().getCount();
-				if (explorer.getAttachmentSelection().getCount() >= 1) {
+
+				boolean hasAttachments = false;
+
+				// Reading the property AttachmentSelection always results
+				// in an
+				// error inside Outlook. This applies for a VBS script and a
+				// VBA macro too,
+				// see /vbscript/ExplorerAttachmentSelectionFails.vbs.
+				// int n1 =
+				// getApplication().ActiveExplorer().getAttachmentSelection().getCount();
+				// int n2 = explorer.getAttachmentSelection().getCount();
+				// hasAttachments = n2 >= 1;
+
+				if (hasAttachments) {
 					_AttachmentSelection attachSel = explorer.getAttachmentSelection();
 					int n = attachSel.getCount();
 					for (int i = 1; i <= n; i++) {
@@ -224,10 +273,12 @@ public class RibbonXAddin extends ThisAddin {
 				}
 			} else if (context.is(NavigationModule.class)) {
 				msg = "Context=NavigationModule";
-			} else if (control.getContext() == null) {
-				msg = "Context=Null";
+				// } else if (control.getContext() == null) {
+				// msg = "Context=Null";
+			} else if (context.is(ContactItem.class)) {
+				msg = "Context=ContactItem";
 			} else {
-				msg = "Context=Unknown";
+				msg = "Context=Unknown " + new OutlookItem(context).getClass_();
 			}
 
 			// MessageBox.Show(msg,
@@ -243,6 +294,16 @@ public class RibbonXAddin extends ThisAddin {
 		} catch (ComException e) {
 			e.printStackTrace();
 		}
-
 	}
+
+	private String GetResourceText(String resourceName) {
+		String ret = "";
+		try {
+			ret = OfficeAddinUtil.getResourceAsString(this.getClass(), resourceName);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return ret;
+	}
+
 }

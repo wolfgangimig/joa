@@ -1,5 +1,7 @@
 package ribbonx.outlook14.addin;
 
+import java.util.Date;
+
 import com.wilutions.com.Dispatch;
 import com.wilutions.mslib.outlook.Actions;
 import com.wilutions.mslib.outlook.Application;
@@ -23,7 +25,7 @@ public class OutlookItem {
     private final static String OlBillingInformation = "BillingInformation";
     private final static String OlBody = "Body";   
 //    private final static String OlCategories = "Categories";
-//    private final static String OlClass = "Class";
+    private final static String OlClass = "Class";
 //    private final static String OlClose = "Close";
 //    private final static String OlCompanies = "Companies";
 //    private final static String OlConversationIndex = "ConversationIndex";
@@ -99,14 +101,17 @@ public class OutlookItem {
 		m_item._put(OlBody, s);
 	}
 	
+	public Object getClass_() {
+		return m_item._get(OlClass);
+	}
 	// ...
 	
 	public String getSubject() {
 		return (String)m_item._get(OlSubject);
 	}
 	
-	public Object getLastModificationTime() {
-		Object obj = m_item._get(OlLastModificationTime);
+	public Date getLastModificationTime() {
+		Date obj = (Date)m_item._get(OlLastModificationTime);
 		return obj;
 	}
 	
