@@ -2,7 +2,7 @@ JOA - Java Library for Microsoft Outlook Add-ins
 ===
 
 This library enables you to create Add-ins for Microsoft Outlook with Java. It is based on the official APIs for writing COM Add-ins for Microsoft Outlook and offers the following opportunities:
-- Customize the Ribbon toolbar of explorer and inspector windows
+- Customize the Ribbon toolbars and context menus of explorer and inspector windows
 - Add custom task panes to explorer and inspector windows
 - Add form regions to inspector windows
 - Access the Outlook object model
