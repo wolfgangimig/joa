@@ -2,12 +2,13 @@ JOA - Java Library for Microsoft Outlook Add-ins
 ===
 
 This library enables you to create Add-ins for Microsoft Outlook with Java. It is based on the official APIs for writing COM Add-ins for Microsoft Outlook and offers the following opportunities:
-- Customize the Ribbon toolbar of explorer and inspector windows
+- Customize the Ribbon toolbars and context menus of explorer and inspector windows
 - Add custom task panes to explorer and inspector windows
 - Add form regions to inspector windows
 - Access the Outlook object model
 
-Please have a look at https://github.com/wolfgangimig/joa/blob/master/Screenshot1.png to get a picture of JOA. This screenshot was taken from the joa-ctp4iptor example project. 
+![Screenshot](https://github.com/wolfgangimig/joa/blob/master/Screenshot1.png)
+This screenshot was taken from the [CreateNoteAddin](https://github.com/wolfgangimig/joa/wiki/MSDN-Article-How-to-Display-Custom-Task-Panes-with-E-Mail-Messages-in-Outlook) example.
 
 
 In order to develop Add-ins, the following additional software is required:
@@ -22,7 +23,7 @@ and provides Java sources, Eclipse project configurations, ANT scripts and two n
 
 The private part consists of C++ sources for the COM bridge and the Java source code of a frame window class that allows to place a JavaFX scene inside a native window. The private sources are not available for download. 
 
-The MIT license allows you to use JOA in any project, inclusive commercial products. I am looking forward to your comments and bug reports on the "Issues" section. Depending on your feedback, this work might become a real product with commercial support. 
+The MIT license allows you to use JOA in any project, inclusive commercial products. I am looking forward to your comments and bug reports on the [issues](https://github.com/wolfgangimig/joa/issues) section. Depending on your feedback, this work might become a real product with commercial support. 
 
 More information can be found in the wiki. You may want to start reading with the  [Tutorial](https://github.com/wolfgangimig/joa/wiki/Tutorial).
 
