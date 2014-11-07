@@ -7,7 +7,8 @@ This library enables you to create Add-ins for Microsoft Outlook with Java. It i
 - Add form regions to inspector windows
 - Access the Outlook object model
 
-Please have a look at [Screenshot](https://github.com/wolfgangimig/joa/blob/master/Screenshot1.png) to get a picture of JOA. This screenshot was taken from the joa-ctp4iptor example project, [more...](https://github.com/wolfgangimig/joa/wiki/MSDN-Article-How-to-Display-Custom-Task-Panes-with-E-Mail-Messages-in-Outlook). 
+![Screenshot](https://github.com/wolfgangimig/joa/blob/master/Screenshot1.png)
+This screenshot was taken from the [CreateNoteAddin](https://github.com/wolfgangimig/joa/wiki/MSDN-Article-How-to-Display-Custom-Task-Panes-with-E-Mail-Messages-in-Outlook) example.
 
 
 In order to develop Add-ins, the following additional software is required:
