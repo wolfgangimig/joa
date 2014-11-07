@@ -105,7 +105,7 @@ public class Dispatch implements IDispatch {
 	 *            Class object.
 	 * @return new object of type clazz.
 	 */
-	public <T extends Dispatch> T as(Class<T> clazz) {
+	public <T> T as(Class<T> clazz) {
 
 		// This check ...
 		// if (!this.is(clazz)) {
@@ -129,7 +129,7 @@ public class Dispatch implements IDispatch {
 	 *            Class
 	 * @return Casted object or null, if idisp is null.
 	 */
-	public static <T extends Dispatch> T as(Object idisp, Class<T> clazz) {
+	public static <T> T as(Object idisp, Class<T> clazz) {
 		T ret = null;
 		if (idisp != null) {
 			assert idisp instanceof Dispatch;
@@ -159,7 +159,7 @@ public class Dispatch implements IDispatch {
 	 * @param clazz
 	 * @return new object of type clazz.
 	 */
-	public <T extends Dispatch> T uncheckedAs(Class<T> clazz) {
+	public <T> T uncheckedAs(Class<T> clazz) {
 		try {
 			@SuppressWarnings("unchecked")
 			T obj = (T) JoaDll.dispatchAs(this, clazz);
