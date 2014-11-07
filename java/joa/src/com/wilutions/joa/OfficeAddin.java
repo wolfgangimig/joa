@@ -191,12 +191,9 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	public Map<String, Dispatch> createRibbonIconsFromResources(Class<?> forClass, String[] fileNames)
 			throws ComException {
 		Map<String, Dispatch> ret = new HashMap<String, Dispatch>(fileNames.length);
-		String path = forClass.getPackage().getName().replace('.', '/') + "/";
-		ClassLoader classLoader = forClass.getClassLoader();
 		for (String fileName : fileNames) {
-			String imagePath = path + fileName;
 			try {
-				byte[] image = OfficeAddinUtil.getResourceAsBytes(classLoader, imagePath);
+				byte[] image = OfficeAddinUtil.getResourceAsBytes(forClass, fileName);
 				String contentType = fileName;
 				int p = contentType.lastIndexOf('.');
 				if (p >= 0) {

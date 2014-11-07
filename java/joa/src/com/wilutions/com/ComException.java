@@ -50,13 +50,7 @@ public class ComException extends RuntimeException {
 			sbuf.append(" ").append(msg);
 		}
 		if (hr != 0) {
-			HRESULT hrobj = HRESULT.valueOf(hr);
-			if (hrobj != null) {
-				sbuf.append(" ").append(hrobj);
-			}
-			else {
-				sbuf.append(" 0x").append(Integer.toHexString(hr));
-			}
+			sbuf.append(" HRESULT=").append(HRESULT.valueOf(hr)).append(".");
 		}
 		return sbuf.toString();
 	}

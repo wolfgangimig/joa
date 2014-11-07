@@ -23,17 +23,17 @@ public class OfficeAddinUtil {
 	 * 
 	 * @param classLoader
 	 *            e.g. obj.getClass().getClassLoader();
-	 * @param resourceName
+	 * @param resourcePath
 	 *            e.g. "com/wilutions/officeaddin/RibbonManifest.xml"
 	 * @return Resource content.
 	 * @throws IOException
 	 */
-	public static String getResourceAsString(ClassLoader classLoader, String resourceName) throws IOException {
+	public static String getResourceAsString(ClassLoader classLoader, String resourcePath) throws IOException {
 		Reader rd = null;
 		try {
-			InputStream is = classLoader.getResourceAsStream(resourceName);
+			InputStream is = classLoader.getResourceAsStream(resourcePath);
 			if (is == null)
-				throw new IOException("Resource " + resourceName + " not found.");
+				throw new IOException("Resource " + resourcePath + " not found.");
 			rd = new InputStreamReader(is, "UTF-8");
 			StringBuilder sbuf = new StringBuilder();
 			int c = 0;
@@ -50,15 +50,38 @@ public class OfficeAddinUtil {
 			}
 		}
 	}
+	
+	/**
+	 * Return resource as String.
+	 * @param forClass Class object that defines the package of the resourceName.
+	 * @param resourceName Name of the resource relative to the package of forClass.
+	 * @return Resource object.
+	 * @throws IOException
+	 */
+	public static String getResourceAsString(Class<?> forClass, String resourceName) throws IOException {
+		ClassLoader classLoader = forClass.getClassLoader();
+		String resourcePath = forClass.getPackage().getName().replace('.', '/') + "/" + resourceName;
+		return getResourceAsString(classLoader, resourcePath);
+	}
 
-	public static byte[] getResourceAsBytes(ClassLoader classLoader, String resourceName) throws IOException {
+	/**
+	 * Return resource as byte array.
+	 * 
+	 * @param classLoader
+	 *            e.g. obj.getClass().getClassLoader();
+	 * @param resourcePath
+	 *            e.g. "com/wilutions/officeaddin/RibbonManifest.xml"
+	 * @return Resource content.
+	 * @throws IOException
+	 */
+	public static byte[] getResourceAsBytes(ClassLoader classLoader, String resourcePath) throws IOException {
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		InputStream is = null;
 		try {
-			is = classLoader.getResourceAsStream(resourceName);
+			is = classLoader.getResourceAsStream(resourcePath);
 
 			if (is == null)
-				throw new IOException("Resource " + resourceName + " not found.");
+				throw new IOException("Resource " + resourcePath + " not found.");
 			byte[] buf = new byte[1000];
 			int len = 0;
 			while ((len = is.read(buf)) != -1) {
@@ -75,4 +98,18 @@ public class OfficeAddinUtil {
 
 		return bos.toByteArray();
 	}
+	
+	/**
+	 * Return resource as byte array.
+	 * @param forClass Class object that defines the package of the resourceName.
+	 * @param resourceName Name of the resource relative to the package of forClass.
+	 * @return Resource object.
+	 * @throws IOException
+	 */
+	public static byte[] getResourceAsBytes(Class<?> forClass, String resourceName) throws IOException {
+		ClassLoader classLoader = forClass.getClassLoader();
+		String resourcePath = forClass.getPackage().getName().replace('.', '/') + "/" + resourceName;
+		return getResourceAsBytes(classLoader, resourcePath);
+	}
+	
 }

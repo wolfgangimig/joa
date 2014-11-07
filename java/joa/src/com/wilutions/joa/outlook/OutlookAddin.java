@@ -14,14 +14,12 @@ import java.io.IOException;
 
 import javafx.application.Platform;
 
-import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joa.OfficeAddinUtil;
-import com.wilutions.joa.TaskPane;
 import com.wilutions.mslib.outlook.ApplicationEvents_11;
 import com.wilutions.mslib.outlook.FormRegion;
 import com.wilutions.mslib.outlook.MAPIFolder;

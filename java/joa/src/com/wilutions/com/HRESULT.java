@@ -49,6 +49,6 @@ public class HRESULT {
 			} catch (Throwable e) {
 			}
 		}
-		return Integer.toHexString(value);
+		return "0x" + Integer.toHexString(value);
 	}
 }
