@@ -1,5 +1,6 @@
 package com.wilutions.joa;
 
+import javafx.application.Platform;
 import javafx.scene.Scene;
 
 import com.wilutions.com.AsyncResult;
@@ -19,14 +20,14 @@ public abstract class ModalDialog<T> {
 	private long hwndParent;
 	protected AsyncResult<T> asyncResult;
 	private T result;
-	
+
 	private double x, y, width, height, minWidth, maxWidth, minHeight, maxHeight;
 	private boolean centerOnOwner = true;
 	private boolean resizable = true;
 	private boolean minimizeBox = false;
 	private boolean maximizeBox = true;
 	private String title;
-	
+
 	public final static int CANCEL = 0;
 	public final static int OK = 1;
 
@@ -46,7 +47,7 @@ public abstract class ModalDialog<T> {
 	 * @throws ComException
 	 */
 	protected abstract Scene createScene() throws ComException;
-	
+
 	public double getX() {
 		return x;
 	}
@@ -82,11 +83,11 @@ public abstract class ModalDialog<T> {
 	public void setCenterOnOwner(boolean v) {
 		this.centerOnOwner = v;
 	}
-	
+
 	public boolean isCenterOnOwner() {
 		return this.centerOnOwner;
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
@@ -94,7 +95,7 @@ public abstract class ModalDialog<T> {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
+
 	public boolean isResizable() {
 		return resizable;
 	}
@@ -102,7 +103,7 @@ public abstract class ModalDialog<T> {
 	public void setResizable(boolean resizable) {
 		this.resizable = resizable;
 	}
-	
+
 	public double getMinWidth() {
 		return minWidth;
 	}
@@ -134,7 +135,7 @@ public abstract class ModalDialog<T> {
 	public void setMaxHeight(double maxHeight) {
 		this.maxHeight = maxHeight;
 	}
-	
+
 	public boolean isMinimizeBox() {
 		return minimizeBox;
 	}
@@ -162,7 +163,7 @@ public abstract class ModalDialog<T> {
 		System.out.println("CreateBridgeDialog...");
 		joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
 		System.out.println("CreateBridgeDialog=" + joaDlg);
-		
+
 		joaDlg.setWidth(toWin(width));
 		joaDlg.setHeight(toWin(height));
 		joaDlg.setX(toWin(x));
@@ -176,13 +177,13 @@ public abstract class ModalDialog<T> {
 		joaDlg.setMaxWidth(toWin(maxWidth));
 		joaDlg.setMinimizeBox(minimizeBox);
 		joaDlg.setMaximizeBox(maximizeBox);
-	
+
 		DialogEventHandler dialogHandler = new DialogEventHandler();
 		Dispatch.withEvents(joaDlg, dialogHandler);
 		System.out.println("handler assigned");
-		
+
 		try {
-			
+
 			// Show native dialog
 			joaDlg.ShowModal(owner);
 			System.out.println("ShowModal OK");
@@ -192,19 +193,21 @@ public abstract class ModalDialog<T> {
 					this.wait();
 				}
 			}
-			
+
 			System.out.println("state=" + state);
-	
+
 			if (state == State.HasParentHwnd) {
 				Scene scene = createScene();
 				System.out.println("scene=" + scene);
 				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndParent, scene);
 				System.out.println("embedded window OK");
-				joaDlg.SetFocusOnFirstChildWindow();
+				Platform.runLater(() -> {
+					joaDlg.SetFocusOnFirstChildWindow();
+				});
 				this.asyncResult = asyncResult;
-			}
-			else {
-				asyncResult.setAsyncResult(null, new IllegalStateException("Excpected response from Office application."));
+			} else {
+				asyncResult.setAsyncResult(null, new IllegalStateException(
+						"Excpected response from Office application."));
 				dialogHandler.onClosed();
 			}
 
@@ -213,7 +216,7 @@ public abstract class ModalDialog<T> {
 				asyncResult.setAsyncResult(null, ex);
 			}
 			dialogHandler.onClosed();
-		} 
+		}
 	}
 
 	public void finish(T result) {
@@ -226,8 +229,7 @@ public abstract class ModalDialog<T> {
 		if (joaDlg != null) {
 			try {
 				joaDlg.Close();
-			}
-			catch (Throwable ex1) {
+			} catch (Throwable ex1) {
 				ex = ex1;
 			}
 		}
@@ -235,11 +237,11 @@ public abstract class ModalDialog<T> {
 			asyncResult.setAsyncResult(result, ex);
 		}
 	}
-	
+
 	public void setResult(T ret) throws ComException {
 		this.result = ret;
 	}
-	
+
 	public T getResult() {
 		return this.result;
 	}
@@ -247,7 +249,7 @@ public abstract class ModalDialog<T> {
 	public boolean canClose() throws ComException {
 		return true;
 	}
-	
+
 	private class DialogEventHandler extends DispatchImpl implements _IJoaBridgeDialogEvents {
 
 		@Override
@@ -273,6 +275,6 @@ public abstract class ModalDialog<T> {
 				ModalDialog.this.notify();
 			}
 		}
-		
+
 	}
 }
