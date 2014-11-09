@@ -2,6 +2,15 @@ package ribbonx.outlook14.addin;
 
 import java.io.IOException;
 
+import javafx.application.Platform;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
@@ -9,6 +18,8 @@ import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.OfficeAddinUtil;
 import com.wilutions.joa.OfficeApplication;
+import com.wilutions.joa.TaskPane;
+import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.mslib.office.IMsoContactCard;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
@@ -25,15 +36,12 @@ import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.MailItem;
 import com.wilutions.mslib.outlook.NavigationGroup;
 import com.wilutions.mslib.outlook.NavigationModule;
-import com.wilutions.mslib.outlook.NoteItem;
-import com.wilutions.mslib.outlook.OlItemType;
 import com.wilutions.mslib.outlook.OutlookBarShortcut;
 import com.wilutions.mslib.outlook.Selection;
 import com.wilutions.mslib.outlook.Store;
 import com.wilutions.mslib.outlook.View;
 import com.wilutions.mslib.outlook._AttachmentSelection;
 import com.wilutions.mslib.outlook.impl.OutlookBarShortcutImpl;
-import com.wilutions.mslib.outlook.impl.SelectionImpl;
 import com.wilutions.mslib.outlook.impl.ViewImpl;
 
 /**
@@ -285,12 +293,20 @@ public class RibbonXAddin extends ThisAddin {
 			// "RibbonXOutlook14AddinCS",
 			// MessageBoxButtons.OK,
 			// MessageBoxIcon.Information);
+			
+				Stage dialog = new Stage();
+				dialog.initStyle(StageStyle.UTILITY);
+				Scene scene = new Scene(new Group(new Text(25, 25, "Hello World!")));
+				dialog.setScene(scene);
+				
+//				Object parent = getApplication().ActiveExplorer();
+//				showModal(parent, dialog);
 
-			// Create a new NoteItem object and "cast" it to NoteItem.class
-			NoteItem noteItem = olApplication.CreateItem(OlItemType.olNoteItem).as(NoteItem.class);
-			noteItem.setBody("RibbonXOutlook14AddinCS\n" + msg);
-			noteItem.Display(true);
-			noteItem.Delete();
+//			// Create a new NoteItem object and "cast" it to NoteItem.class
+//			NoteItem noteItem = olApplication.CreateItem(OlItemType.olNoteItem).as(NoteItem.class);
+//			noteItem.setBody("RibbonXOutlook14AddinCS\n" + msg);
+//			noteItem.Display(true);
+//			noteItem.Delete();
 		} catch (ComException e) {
 			e.printStackTrace();
 		}

@@ -61,6 +61,24 @@ public class RegisterAddin {
 		// Register ActiveX JoaBridgeCtrl.Class
 		JoaDll.nativeDllRegisterServer(progId, perUserNotMachine, true);
 		
+		registerJoaUtilAddin(perUserNotMachine);
+	}
+	
+	// TODO Reference Management
+	protected static void registerJoaUtilAddin(boolean perUserNotMachine) {
+		
+		String rootKey = perUserNotMachine ? "HKCU" : "HKLM";
+		String progId = "JoaUtilAddin.Class";
+		String officeApplication = "Outlook";
+		String name = "JOA Util Add-in";
+		String desc = "This Add-in supports other Add-ins developed with JOA.";
+		int loadBehavior = LoadBehavior.LoadOnStart.value;
+		
+		String key = rootKey + "\\Software\\Microsoft\\Office\\"
+				+ officeApplication + "\\Addins\\" + progId;
+		RegUtil.setRegistryValue(key, "FriendlyName", name);
+		RegUtil.setRegistryValue(key, "Description", desc);
+		RegUtil.setRegistryValue(key, "LoadBehavior", loadBehavior);
 	}
 	
 	public static void unregister(boolean perUserNotMachine,

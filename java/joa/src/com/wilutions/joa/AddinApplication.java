@@ -160,6 +160,9 @@ public class AddinApplication extends javafx.application.Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
+		javafx.application.Application.setUserAgentStylesheet(null);
+		
 		// A primary stage is only needed in order to keep the
 		// javafx alive when the last TaskPane or FormRegion
 		// is closed.

@@ -17,12 +17,16 @@ import java.util.Map;
 import javafx.application.Platform;
 
 import com.wilutions.com.AsyncResult;
+import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
+import com.wilutions.joactrllib.IJoaUtilAddin;
+import com.wilutions.mslib.office.COMAddIn;
+import com.wilutions.mslib.office.COMAddIns;
 import com.wilutions.mslib.office.CustomTaskPane;
 import com.wilutions.mslib.office.ICTPFactory;
 import com.wilutions.mslib.office.ICustomTaskPaneConsumer;
@@ -43,6 +47,7 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 
 	protected CoAppType applicationObject;
 	protected ICTPFactory customTaskPaneFactory;
+	private static IJoaUtilAddin joaUtil;
 
 	protected final String TASK_PANE_CONTROL_PROGID = "JoaBridgeCtrl.Class";
 
@@ -85,6 +90,7 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	@Override
 	public void onAddInsUpdate(ByRef<Object[]> reserved) {
 		System.out.println("OnAddInsUpdate");
+		BackgTask.run(() -> updateJoaUtil());
 	}
 
 	@Override
@@ -184,8 +190,8 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	}
 
 	public Dispatch createIPictureDisp(byte[] image, String contentType) throws ComException {
-		//return ensureJoaUtil().CreateIPictureDisp(image, contentType);
-		return (Dispatch)JoaDll.nativeCreateIPictureDisp(image);
+		// return ensureJoaUtil().CreateIPictureDisp(image, contentType);
+		return (Dispatch) JoaDll.nativeCreateIPictureDisp(image);
 	}
 
 	public Map<String, Dispatch> createRibbonIconsFromResources(Class<?> forClass, String[] fileNames)
@@ -208,4 +214,44 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 		return ret;
 	}
 
+	/**
+	 * Get the JoaUtilAddin object.
+	 * 
+	 * @return JoaUtilAddin object.
+	 */
+	public static IJoaUtilAddin getJoaUtil() throws ComException {
+		synchronized (OfficeAddin.class) {
+			while (joaUtil == null) {
+				try {
+					OfficeAddin.class.wait(10 * 1000);
+				} catch (InterruptedException e) {
+				}
+			}
+			if (joaUtil == null) {
+				throw new ComException("Cannot find JoaUtilAddin.");
+			}
+		}
+		return joaUtil;
+	}
+
+	private void updateJoaUtil() {
+		synchronized (OfficeAddin.class) {
+
+			if (joaUtil != null)
+				return;
+
+			Object disp = getApplication()._get("COMAddIns");
+			COMAddIns addins = Dispatch.as(disp, COMAddIns.class);
+			int n = addins.getCount();
+			for (int i = 1; i <= n; i++) {
+				COMAddIn addin = addins.Item(i);
+				if (addin.getProgId().equals("JoaUtilAddin.Class")) {
+					IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
+					joaUtil = x;
+					OfficeAddin.class.notifyAll();
+					break;
+				}
+			}
+		}
+	}
 }

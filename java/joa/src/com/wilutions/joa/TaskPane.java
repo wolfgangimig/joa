@@ -44,7 +44,12 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 	/**
 	 * JavaFX view.
 	 */
-	private EmbeddedWindow fxFrame;
+	private volatile EmbeddedWindow fxFrame;
+	
+	/**
+	 * Window handle of the task pane ActiveX control.
+	 */
+	private long hwndJoaCtrl;
 	
 	/**
 	 * Persistent dock position.
@@ -67,7 +72,7 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 
 	/**
 	 * Delete the task pane's view objects.
-	 * This function 
+	 * Call this function to close the task pane.	
 	 */
 	public void dispose() {
 		
@@ -92,9 +97,10 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 		// Remove the JavaFX view.
 		if (fxFrame != null) {
 			fxFrame.dispose();
+			// ? Platform.runLater(() -> fxFrame.dispose());
 		}
 		
-		System.out.println("TaskPane.release");
+		System.out.println("TaskPane.dispose");
 	}
 
 	/**
@@ -130,7 +136,7 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 		
 		// Get the native window handle of the JoaBridgeCtrl
 		Dispatch ctrl = taskPane.getContentControl();
-		final long hwndJoaCtrl = ((Number) ctrl._get("HWND")).longValue();
+		hwndJoaCtrl = ((Number) ctrl._get("HWND")).longValue();
 		System.out.println("hwndJoaCtrl=" + hwndJoaCtrl);
 		
 		// Create the Java window as a child window of the JoaBridgeCtrl.

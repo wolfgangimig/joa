@@ -7,17 +7,19 @@
       
       MIT License, http://opensource.org/licenses/MIT
 
-*/
+ */
 package com.wilutions.joa.outlook;
 
 import java.io.IOException;
 
 import javafx.application.Platform;
 
+import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.joa.ModalDialog;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joa.OfficeAddinUtil;
 import com.wilutions.mslib.outlook.ApplicationEvents_11;
@@ -28,22 +30,26 @@ import com.wilutions.mslib.outlook.OlFormRegionMode;
 import com.wilutions.mslib.outlook.OlFormRegionSize;
 import com.wilutions.mslib.outlook.PropertyPages;
 import com.wilutions.mslib.outlook.Search;
+import com.wilutions.mslib.outlook._Explorer;
 import com.wilutions.mslib.outlook._FormRegionStartup;
+import com.wilutions.mslib.outlook.impl._ExplorerImpl;
 
 // Direkt über Windows-API eingeklinkte Erweiterungen: 
 // http://www.codeproject.com/Articles/27262/Additional-custom-panel-in-Microsoft-Outlook
 
 /**
- * Base class for Microsoft Outlook Addins.
- * This class implements the following event interfaces:
+ * Base class for Microsoft Outlook Addins. This class implements the following
+ * event interfaces:
  * <table>
  * <tr>
  * <td>{@link ApplicationEvents_11}</td>
- * <td>http://msdn.microsoft.com/en-us/library/microsoft.office.interop.outlook.applicationevents_11(v=office.15).aspx</td>
+ * <td>http://msdn.microsoft.com/en-us/library/microsoft.office.interop.outlook.
+ * applicationevents_11(v=office.15).aspx</td>
  * </tr>
  * <tr>
  * <td>{@link _FormRegionStartup}</td>
- * <td>http://msdn.microsoft.com/en-us/library/microsoft.office.interop.outlook._formregionstartup(v=office.15).aspx</td>
+ * <td>http://msdn.microsoft.com/en-us/library/microsoft.office.interop.outlook.
+ * _formregionstartup(v=office.15).aspx</td>
  * </tr>
  */
 public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlook.Application> implements
@@ -57,6 +63,12 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 		return "[OutlookAddin " + super.toString() + " ]";
 	}
 
+	public <T> void showModalDialogAsync(ModalDialog<T> dialog, AsyncResult<T> asyncResult) {
+		_Explorer _exp = getApplication().ActiveExplorer();
+		_ExplorerImpl explorer = Dispatch.as(_exp, _ExplorerImpl.class); 
+		dialog.showAsync(explorer, asyncResult);
+	}
+
 	/**
 	 * Check whether an item (ContactItem, MailItem, ...) is modified.
 	 * 
@@ -64,7 +76,9 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	 *            ContactItem, MailItem, ...
 	 * @return true, if the item is modified (and not jet saved).
 	 * @throws ComException
-	 * @see http://msdn.microsoft.com/en-us/library/office/gg583879(v=office.14).aspx
+	 * @see http
+	 *      ://msdn.microsoft.com/en-us/library/office/gg583879(v=office.14).
+	 *      aspx
 	 */
 	public static boolean isItemModified(Dispatch item) throws ComException {
 		final int dispidModified = 0xF024;
@@ -183,6 +197,5 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	@Override
 	public void onBeforeFolderSharingDialog(MAPIFolder FolderToShare, ByRef<Boolean> Cancel) throws ComException {
 	}
-
 
 }
