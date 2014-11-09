@@ -10,9 +10,7 @@
 */
 package com.wilutions.joa.fx;
 
-import javafx.stage.Stage;
 
 public interface EmbeddedWindow {
 	public void dispose();
-	public void showModal(Stage dialog);
 }

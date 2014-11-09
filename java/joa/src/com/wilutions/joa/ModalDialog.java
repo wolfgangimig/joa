@@ -152,37 +152,65 @@ public abstract class ModalDialog<T> {
 		this.maximizeBox = maximizeBox;
 	}
 
+	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
+		this.owner = Dispatch.as(_owner, Dispatch.class);
+		if (Platform.isFxApplicationThread()) {
+			internalShowAsync(owner, asyncResult);
+		} else {
+			Platform.runLater(() -> internalShowAsync(owner, asyncResult));
+		}
+	}
+
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
 
-	public void showAsync(Object _owner, AsyncResult<T> asyncResult) {
-		this.owner = Dispatch.as(_owner, Dispatch.class);
-		assert this.owner != null;
+	@SuppressWarnings("deprecation")
+	private void internalShowAsync(Dispatch owner, AsyncResult<T> asyncResult) {
+		this.owner = owner;
 
-		System.out.println("CreateBridgeDialog...");
-		joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
-		System.out.println("CreateBridgeDialog=" + joaDlg);
-
-		joaDlg.setWidth(toWin(width));
-		joaDlg.setHeight(toWin(height));
-		joaDlg.setX(toWin(x));
-		joaDlg.setY(toWin(y));
-		joaDlg.setTitle(title != null ? title : "");
-		joaDlg.setCenterOnOwner(centerOnOwner);
-		joaDlg.setResizable(resizable);
-		joaDlg.setMinHeight(toWin(minHeight));
-		joaDlg.setMaxHeight(toWin(maxHeight));
-		joaDlg.setMinWidth(toWin(minWidth));
-		joaDlg.setMaxWidth(toWin(maxWidth));
-		joaDlg.setMinimizeBox(minimizeBox);
-		joaDlg.setMaximizeBox(maximizeBox);
-
-		DialogEventHandler dialogHandler = new DialogEventHandler();
-		Dispatch.withEvents(joaDlg, dialogHandler);
-		System.out.println("handler assigned");
-
+		DialogEventHandler dialogHandler = null;
 		try {
+			Scene scene = createScene();
+			System.out.println("scene=" + scene);
+
+			scene.impl_preferredSize();
+
+			double sceneWidth = scene.getWidth();
+			double sceneHeight = scene.getHeight();
+
+			if (width == 0) {
+				width = sceneWidth + 50;
+//				if (minWidth == 0)
+//					minWidth = width;
+			}
+			if (height == 0) {
+				height = sceneHeight + 50;
+//				if (minHeight == 0)
+//					minHeight = height;
+			}
+
+			System.out.println("CreateBridgeDialog...");
+			joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
+			System.out.println("CreateBridgeDialog=" + joaDlg);
+
+			joaDlg.setWidth(toWin(width));
+			joaDlg.setHeight(toWin(height));
+			joaDlg.setX(toWin(x));
+			joaDlg.setY(toWin(y));
+			joaDlg.setTitle(title != null ? title : "");
+			joaDlg.setCenterOnOwner(centerOnOwner);
+			joaDlg.setResizable(resizable);
+			joaDlg.setMinHeight(toWin(minHeight));
+			joaDlg.setMaxHeight(toWin(maxHeight));
+			joaDlg.setMinWidth(toWin(minWidth));
+			joaDlg.setMaxWidth(toWin(maxWidth));
+			joaDlg.setMinimizeBox(minimizeBox);
+			joaDlg.setMaximizeBox(maximizeBox);
+
+			dialogHandler = new DialogEventHandler();
+			Dispatch.withEvents(joaDlg, dialogHandler);
+			System.out.println("handler assigned");
 
 			// Show native dialog
 			joaDlg.ShowModal(owner);
@@ -197,13 +225,14 @@ public abstract class ModalDialog<T> {
 			System.out.println("state=" + state);
 
 			if (state == State.HasParentHwnd) {
-				Scene scene = createScene();
-				System.out.println("scene=" + scene);
+
 				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndParent, scene);
 				System.out.println("embedded window OK");
+
 				Platform.runLater(() -> {
 					joaDlg.SetFocusOnFirstChildWindow();
 				});
+
 				this.asyncResult = asyncResult;
 			} else {
 				asyncResult.setAsyncResult(null, new IllegalStateException(
@@ -212,10 +241,13 @@ public abstract class ModalDialog<T> {
 			}
 
 		} catch (Throwable ex) {
+			ex.printStackTrace();
 			if (asyncResult != null) {
 				asyncResult.setAsyncResult(null, ex);
 			}
-			dialogHandler.onClosed();
+			if (dialogHandler != null) {
+				dialogHandler.onClosed();
+			}
 		}
 	}
 
@@ -268,8 +300,13 @@ public abstract class ModalDialog<T> {
 
 		@Override
 		public void onClosed() throws ComException {
-			Dispatch.releaseEvents(ModalDialog.this.joaDlg, this);
-			ModalDialog.this.fxFrame.dispose();
+			if (ModalDialog.this.joaDlg != null) {
+				Dispatch.releaseEvents(ModalDialog.this.joaDlg, this);
+			}
+			if (ModalDialog.this.fxFrame != null) {
+				ModalDialog.this.fxFrame.dispose();
+			}
+
 			synchronized (ModalDialog.this) {
 				ModalDialog.this.state = State.IsClosed;
 				ModalDialog.this.notify();

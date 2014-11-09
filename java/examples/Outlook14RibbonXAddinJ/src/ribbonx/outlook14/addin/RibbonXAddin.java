@@ -2,24 +2,14 @@ package ribbonx.outlook14.addin;
 
 import java.io.IOException;
 
-import javafx.application.Platform;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
+import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeAddinUtil;
 import com.wilutions.joa.OfficeApplication;
-import com.wilutions.joa.TaskPane;
-import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.mslib.office.IMsoContactCard;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
@@ -56,7 +46,7 @@ import com.wilutions.mslib.outlook.impl.ViewImpl;
  * @see http://msdn.microsoft.com/en-us/library/ee692172(office.14).aspx
  */
 @CoClass(progId = "RibbonXOutlook14Addin.Class", guid = "{f886dd17-3bd7-498c-b1ec-f2b4ec8d477f}")
-@DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "My First JOA Add-in", description = "Example for an Outlook Add-in developed in Java")
+@DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "RibbonXOutlook14Addin", description = "Transformation of the .NET example RibbonXOutlook14Addin")
 public class RibbonXAddin extends ThisAddin {
 
 	// private IRibbonUI ribbon; already defined in superclass.
@@ -111,21 +101,28 @@ public class RibbonXAddin extends ThisAddin {
 			if (context.is(Explorer.class)) {
 				Explorer explorer = context.as(Explorer.class);
 
-				// explorer.getSelection throws an exception 80020009
-				// when this function is called at startup.
+				try {
+					// explorer.getSelection throws an exception 80020009
+					// when this function is called at startup.
+					// Cannot verify whether this is the same with a VSTO Add-in,
+					// because the example cannot be compiled with VS 2012.
 
-				Selection selection = explorer.getSelection();
-				if (selection.getCount() == 1) {
-					Dispatch item = selection.Item(1);
-					if (item.is(MailItem.class)) {
-						MailItem oMail = item.as(MailItem.class);
-						return oMail.getSent();
+					Selection selection = explorer.getSelection();
+					if (selection.getCount() == 1) {
+						Dispatch item = selection.Item(1);
+						if (item.is(MailItem.class)) {
+							MailItem oMail = item.as(MailItem.class);
+							return oMail.getSent();
+						} else {
+							return false;
+						}
 					} else {
 						return false;
 					}
-				} else {
+				} catch (ComException e) {
 					return false;
 				}
+
 			} else if (context.is(Inspector.class)) {
 				Inspector oInsp = context.as(Inspector.class);
 				Dispatch item = oInsp.getCurrentItem();
@@ -178,7 +175,7 @@ public class RibbonXAddin extends ThisAddin {
 	// OnMyButtonClick routine handles all button click events
 	// and displays IRibbonControl.Context in message box
 	public void OnMyButtonClick(IRibbonControl control) {
-		
+
 		final Dispatch context = control.getContext();
 		if (context == null)
 			return;
@@ -289,24 +286,15 @@ public class RibbonXAddin extends ThisAddin {
 				msg = "Context=Unknown " + new OutlookItem(context).getClass_();
 			}
 
-			// MessageBox.Show(msg,
-			// "RibbonXOutlook14AddinCS",
-			// MessageBoxButtons.OK,
-			// MessageBoxIcon.Information);
-			
-				Stage dialog = new Stage();
-				dialog.initStyle(StageStyle.UTILITY);
-				Scene scene = new Scene(new Group(new Text(25, 25, "Hello World!")));
-				dialog.setScene(scene);
-				
-//				Object parent = getApplication().ActiveExplorer();
-//				showModal(parent, dialog);
+			Object owner = getApplication().ActiveWindow();
+			MessageBox.show(owner, "RibbonXOutlook14Addin", msg, null);
 
-//			// Create a new NoteItem object and "cast" it to NoteItem.class
-//			NoteItem noteItem = olApplication.CreateItem(OlItemType.olNoteItem).as(NoteItem.class);
-//			noteItem.setBody("RibbonXOutlook14AddinCS\n" + msg);
-//			noteItem.Display(true);
-//			noteItem.Delete();
+			// Misuse NoteItem as message box
+			// NoteItem noteItem =
+			// olApplication.CreateItem(OlItemType.olNoteItem).as(NoteItem.class);
+			// noteItem.setBody("RibbonXOutlook14AddinCS\n" + msg);
+			// noteItem.Display(true);
+			// noteItem.Delete();
 		} catch (ComException e) {
 			e.printStackTrace();
 		}

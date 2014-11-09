@@ -26,7 +26,7 @@ public class Dialog1 extends ModalDialog<String> {
 		grid.setHgap(10);
 		grid.setVgap(10);
 		
-		Text text = new Text("Enter some text than press OK or Cancel");
+		Text text = new Text("Enter some text and click a button.");
 		grid.add(text, 0, 0, 2, 1);
 		
 		final TextField textField = new TextField();

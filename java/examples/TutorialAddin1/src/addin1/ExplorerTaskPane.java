@@ -1,13 +1,11 @@
 package addin1;
 
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 
 import com.wilutions.com.ComException;
 import com.wilutions.joa.TaskPane;
@@ -18,12 +16,11 @@ public class ExplorerTaskPane extends TaskPane {
 	@Override
 	protected Scene createScene() throws ComException {
 		GridPane grid = new GridPane();
-		
-		Text scenetitle = new Text("Welcome");
-		scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-		grid.add(scenetitle, 0, 0, 2, 1);
-		
-		Label userName = new Label("User name:");
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.setPadding(new Insets(10));
+
+		Label userName = new Label("Some text:");
 		grid.add(userName, 0, 1, 2, 1);
 		
 		final TextField userTextField = new TextField();

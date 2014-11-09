@@ -96,6 +96,7 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	@Override
 	public void onStartupComplete(ByRef<Object[]> reserved) {
 		System.out.println("OnStartupComplete");
+		BackgTask.run(() -> updateJoaUtil());
 	}
 
 	@Override
@@ -220,10 +221,16 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	 * @return JoaUtilAddin object.
 	 */
 	public static IJoaUtilAddin getJoaUtil() throws ComException {
+		final long timeout = 10 * 1000;
+		long t1 = System.currentTimeMillis();
 		synchronized (OfficeAddin.class) {
 			while (joaUtil == null) {
+				long t2 = System.currentTimeMillis();
+				if (t2 - t1 > timeout) {
+					break;
+				}
 				try {
-					OfficeAddin.class.wait(10 * 1000);
+					OfficeAddin.class.wait(1000);
 				} catch (InterruptedException e) {
 				}
 			}
@@ -240,13 +247,28 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 			if (joaUtil != null)
 				return;
 
+			CoAppType app = getApplication();
+			if (app == null) return;
 			Object disp = getApplication()._get("COMAddIns");
+			if (disp == null) return;
+			
 			COMAddIns addins = Dispatch.as(disp, COMAddIns.class);
+			if (addins == null) return;
+			
 			int n = addins.getCount();
 			for (int i = 1; i <= n; i++) {
 				COMAddIn addin = addins.Item(i);
 				if (addin.getProgId().equals("JoaUtilAddin.Class")) {
+					if (!addin.getConnect()) {
+						addin.setConnect(Boolean.TRUE);
+					}
 					IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
+					if (x != null) {
+						System.out.println("Connected to JoaUtilAddin.");
+					}
+					else {
+						System.err.println("Failed to load JoaUtilAddin.");
+					}
 					joaUtil = x;
 					OfficeAddin.class.notifyAll();
 					break;
