@@ -80,7 +80,7 @@ public class Dispatch implements IDispatch {
 	 */
 	@Override
 	protected void finalize() throws Throwable {
-		JoaDll.release(this);
+		JoaDll.deleteDispatch(this);
 		super.finalize();
 	}
 
@@ -168,12 +168,13 @@ public class Dispatch implements IDispatch {
 	}
 
 	/**
-	 * Release the COM object.
-	 * 
-	 * @see #releaseComObject()
+	 * Delete internal IDispatch pointer to the COM object.
+	 * Other Java objects might still reference the COM object.
+	 * If the COM object should be released from all Java objects,
+	 * call function {@link #releaseComObject()}
 	 */
-	public synchronized void release() {
-		JoaDll.release(this);
+	public synchronized void releaseDispatch() {
+		JoaDll.deleteDispatch(this);
 		assert this.ndisp == 0;
 	}
 

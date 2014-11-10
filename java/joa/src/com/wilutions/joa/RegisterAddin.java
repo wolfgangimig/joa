@@ -64,15 +64,18 @@ public class RegisterAddin {
 		}
 	}
 
-	protected static String getKeyOfficeApplicationAddins(String officeApplication, boolean perUserNotMachine, boolean wow6432Node) {
+	protected static String getKeyOfficeApplicationAddins(String officeApplication, boolean perUserNotMachine,
+			boolean wow6432Node) {
 		String rootKey = perUserNotMachine ? "HKCU" : "HKLM";
 		String key = rootKey + "\\Software\\";
-		if (wow6432Node) key += "Wow6432Node\\";
+		if (wow6432Node)
+			key += "Wow6432Node\\";
 		key += "Microsoft\\Office\\" + officeApplication + "\\Addins";
 		return key;
 	}
 
-	protected static void registerJoaUtilAddin(String officeApplication, String referencedByAddin, boolean perUserNotMachine) {
+	protected static void registerJoaUtilAddin(String officeApplication, String referencedByAddin,
+			boolean perUserNotMachine) {
 
 		String progId = JoaUtilAddin_progId;
 		String name = JoaUtilAddin_name;
@@ -80,11 +83,11 @@ public class RegisterAddin {
 		int loadBehavior = JoaUtilAddin_loadBehavior;
 
 		registerAddin(officeApplication, progId, name, desc, loadBehavior, perUserNotMachine);
-		
+
 		// Add reference to JoaUtilAddin from referencing Add-in
 		String key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
 		key += "\\__References\\" + referencedByAddin;
-		String value = dateFormat.format(new Date(System.currentTimeMillis())); 
+		String value = dateFormat.format(new Date(System.currentTimeMillis()));
 		RegUtil.setRegistryValue(key, "", value);
 	}
 
@@ -117,21 +120,25 @@ public class RegisterAddin {
 			RegUtil.purgeRegistryKey(key);
 		}
 
-		// Delete Registry key where Outlook stores unspecified data about the
-		// Addin.
-		if (perUserNotMachine) {
-			String keyAddinData = "HKCU\\Software\\Microsoft\\Office\\15.0\\" + officeApplication + "\\Addins\\"
-					+ progId;
+		// Delete Registry key where Outlook stores data about the Addin.
+		{
+			String keyOfficeApp = "HKCU\\Software\\Microsoft\\Office\\15.0\\" + officeApplication;
+
+			String keyAddinData = keyOfficeApp + "\\Addins\\" + progId;
 			RegUtil.purgeRegistryKey(keyAddinData);
+
+			String keyAddinLoadTimes = keyOfficeApp + "\\AddInLoadTimes";
+			RegUtil.deleteRegistryValue(keyAddinLoadTimes, progId);
 		}
 	}
 
-	protected static void unregisterJoaUtilAddin(String officeApplication, String referencedByAddin, boolean perUserNotMachine) {
+	protected static void unregisterJoaUtilAddin(String officeApplication, String referencedByAddin,
+			boolean perUserNotMachine) {
 		String progId = JoaUtilAddin_progId;
 		String refsKey = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
 		refsKey += "\\__References";
 		RegUtil.deleteRegistryKey(refsKey + "\\" + referencedByAddin);
-		
+
 		if (RegUtil.deleteRegistryKey(refsKey)) {
 			unregisterAddin(officeApplication, JoaUtilAddin_progId, perUserNotMachine);
 		}

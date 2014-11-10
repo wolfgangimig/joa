@@ -153,9 +153,7 @@ public class JoaDll {
 
 	public static native void nativeDoneCOM();
 
-	public static native long addRef(Object obj);
-
-	public static native long release(Object obj);
+	public static native long deleteDispatch(Object obj);
 
 	public static native Object dispatchCall(Object dispatch, Integer methodId, String methodName, int method,
 			Object putValue, Object[] args) throws ComException;

@@ -97,8 +97,8 @@ public class TestReferenceManagement {
 			// for each interface. Releasing joa1 and disp1 should free the COM
 			// object
 			// immediately. joa2 holds no object.
-			joa1.release();
-			disp1.release();
+			joa1.releaseDispatch();
+			disp1.releaseDispatch();
 
 		} catch (ComException e) {
 			log.error("testReturnSameJavaObjectForSameInterface failed", e);
