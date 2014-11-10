@@ -13,13 +13,9 @@ package com.wilutions.joa.fx;
 import java.lang.reflect.Constructor;
 
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 import com.wilutions.com.JoaDll;
-import com.wilutions.com.WindowsUtil;
 
 public class EmbeddedWindowFactory {
 
@@ -27,8 +23,7 @@ public class EmbeddedWindowFactory {
 		try {
 			embeddedWindowClass = Class.forName("com.wilutions.joa.fx.JFXEmbeddedFrame");
 		} catch (ClassNotFoundException ignored) {
-			//embeddedWindowClass = JoaDll.nativeLoadEmbeddedWindowClass();
-			ignored.printStackTrace();
+			embeddedWindowClass = JoaDll.nativeLoadEmbeddedWindowClass();
 		}
 	}
 

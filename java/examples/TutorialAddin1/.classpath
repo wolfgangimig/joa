@@ -8,7 +8,6 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/joa"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/joa-private"/>
+	<classpathentry kind="lib" path="D:/git/joa/java/lib/joa-with-dlls.jar" sourcepath="D:/git/joa/java/lib/joa-src.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
