@@ -11,9 +11,6 @@ public class IAccessibleImpl extends Dispatch implements com.wilutions.mslib.off
   protected IAccessibleImpl(long ndisp) {
     super(ndisp);
   }
-  public IAccessibleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IAccessibleImpl" + super.toString() + "]";
   }

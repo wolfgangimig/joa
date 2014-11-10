@@ -72,9 +72,6 @@ public class _OlkFrameHeaderImpl extends Dispatch implements com.wilutions.mslib
   protected _OlkFrameHeaderImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkFrameHeaderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkFrameHeaderImpl" + super.toString() + "]";
   }

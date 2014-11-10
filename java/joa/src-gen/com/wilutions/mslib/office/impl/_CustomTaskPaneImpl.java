@@ -79,9 +79,6 @@ public class _CustomTaskPaneImpl extends Dispatch implements com.wilutions.mslib
   protected _CustomTaskPaneImpl(long ndisp) {
     super(ndisp);
   }
-  public _CustomTaskPaneImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CustomTaskPaneImpl" + super.toString() + "]";
   }

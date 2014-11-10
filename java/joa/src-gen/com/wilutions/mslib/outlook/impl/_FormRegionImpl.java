@@ -120,9 +120,6 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
   protected _FormRegionImpl(long ndisp) {
     super(ndisp);
   }
-  public _FormRegionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_FormRegionImpl" + super.toString() + "]";
   }

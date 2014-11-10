@@ -98,9 +98,6 @@ public class Rule extends Dispatch implements _Rule {
   protected Rule(long ndisp) {
     super(ndisp);
   }
-  public Rule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Rule" + super.toString() + "]";
   }

@@ -45,9 +45,6 @@ public class AddressListsImpl extends Dispatch implements com.wilutions.mslib.ou
   protected AddressListsImpl(long ndisp) {
     super(ndisp);
   }
-  public AddressListsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AddressListsImpl" + super.toString() + "]";
   }

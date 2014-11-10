@@ -138,9 +138,6 @@ public class _BusinessCardViewImpl extends Dispatch implements com.wilutions.msl
   protected _BusinessCardViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _BusinessCardViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_BusinessCardViewImpl" + super.toString() + "]";
   }

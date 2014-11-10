@@ -77,9 +77,6 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
   protected ColorFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ColorFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ColorFormatImpl" + super.toString() + "]";
   }

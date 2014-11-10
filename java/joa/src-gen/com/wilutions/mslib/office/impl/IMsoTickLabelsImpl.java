@@ -139,9 +139,6 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
   protected IMsoTickLabelsImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoTickLabelsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoTickLabelsImpl" + super.toString() + "]";
   }

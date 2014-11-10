@@ -324,9 +324,6 @@ public class _ExchangeUserImpl extends Dispatch implements com.wilutions.mslib.o
   protected _ExchangeUserImpl(long ndisp) {
     super(ndisp);
   }
-  public _ExchangeUserImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ExchangeUserImpl" + super.toString() + "]";
   }

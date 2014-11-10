@@ -81,9 +81,6 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
   protected SeriesCollectionImpl(long ndisp) {
     super(ndisp);
   }
-  public SeriesCollectionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SeriesCollectionImpl" + super.toString() + "]";
   }

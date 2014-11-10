@@ -44,9 +44,6 @@ public class PanesImpl extends Dispatch implements com.wilutions.mslib.outlook.P
   protected PanesImpl(long ndisp) {
     super(ndisp);
   }
-  public PanesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PanesImpl" + super.toString() + "]";
   }

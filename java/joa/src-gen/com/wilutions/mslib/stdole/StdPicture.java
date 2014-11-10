@@ -14,9 +14,6 @@ public class StdPicture extends Dispatch {
   protected StdPicture(long ndisp) {
     super(ndisp);
   }
-  public StdPicture(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[StdPicture" + super.toString() + "]";
   }

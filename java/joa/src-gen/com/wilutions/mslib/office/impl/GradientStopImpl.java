@@ -45,9 +45,6 @@ public class GradientStopImpl extends Dispatch implements com.wilutions.mslib.of
   protected GradientStopImpl(long ndisp) {
     super(ndisp);
   }
-  public GradientStopImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[GradientStopImpl" + super.toString() + "]";
   }

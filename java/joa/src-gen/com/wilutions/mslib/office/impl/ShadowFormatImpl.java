@@ -133,9 +133,6 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
   protected ShadowFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ShadowFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ShadowFormatImpl" + super.toString() + "]";
   }

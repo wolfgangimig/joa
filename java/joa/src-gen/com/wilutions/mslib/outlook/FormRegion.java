@@ -123,9 +123,6 @@ public class FormRegion extends Dispatch implements _FormRegion {
   protected FormRegion(long ndisp) {
     super(ndisp);
   }
-  public FormRegion(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FormRegion" + super.toString() + "]";
   }

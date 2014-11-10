@@ -67,9 +67,6 @@ public class _CalendarModuleImpl extends Dispatch implements com.wilutions.mslib
   protected _CalendarModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _CalendarModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CalendarModuleImpl" + super.toString() + "]";
   }

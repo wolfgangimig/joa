@@ -27,9 +27,6 @@ public class IConverterApplicationPreferencesImpl extends Dispatch implements co
   protected IConverterApplicationPreferencesImpl(long ndisp) {
     super(ndisp);
   }
-  public IConverterApplicationPreferencesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IConverterApplicationPreferencesImpl" + super.toString() + "]";
   }

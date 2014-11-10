@@ -48,9 +48,6 @@ public class TextColumn2Impl extends Dispatch implements com.wilutions.mslib.off
   protected TextColumn2Impl(long ndisp) {
     super(ndisp);
   }
-  public TextColumn2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TextColumn2Impl" + super.toString() + "]";
   }

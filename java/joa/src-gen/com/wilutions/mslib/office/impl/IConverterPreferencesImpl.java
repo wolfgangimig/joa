@@ -23,9 +23,6 @@ public class IConverterPreferencesImpl extends Dispatch implements com.wilutions
   protected IConverterPreferencesImpl(long ndisp) {
     super(ndisp);
   }
-  public IConverterPreferencesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IConverterPreferencesImpl" + super.toString() + "]";
   }

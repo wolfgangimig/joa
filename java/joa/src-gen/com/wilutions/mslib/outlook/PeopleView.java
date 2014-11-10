@@ -126,9 +126,6 @@ public class PeopleView extends Dispatch implements _PeopleView {
   protected PeopleView(long ndisp) {
     super(ndisp);
   }
-  public PeopleView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PeopleView" + super.toString() + "]";
   }

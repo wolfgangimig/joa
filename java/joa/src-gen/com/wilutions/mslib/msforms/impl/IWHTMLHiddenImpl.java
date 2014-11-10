@@ -29,9 +29,6 @@ public class IWHTMLHiddenImpl extends Dispatch implements com.wilutions.mslib.ms
   protected IWHTMLHiddenImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLHiddenImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLHiddenImpl" + super.toString() + "]";
   }

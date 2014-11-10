@@ -617,9 +617,6 @@ public class AppointmentItem extends Dispatch implements _AppointmentItem {
   protected AppointmentItem(long ndisp) {
     super(ndisp);
   }
-  public AppointmentItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AppointmentItem" + super.toString() + "]";
   }

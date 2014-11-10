@@ -270,9 +270,6 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
   protected TextRange2Impl(long ndisp) {
     super(ndisp);
   }
-  public TextRange2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TextRange2Impl" + super.toString() + "]";
   }

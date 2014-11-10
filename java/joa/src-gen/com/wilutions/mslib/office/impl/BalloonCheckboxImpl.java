@@ -54,9 +54,6 @@ public class BalloonCheckboxImpl extends Dispatch implements com.wilutions.mslib
   protected BalloonCheckboxImpl(long ndisp) {
     super(ndisp);
   }
-  public BalloonCheckboxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[BalloonCheckboxImpl" + super.toString() + "]";
   }

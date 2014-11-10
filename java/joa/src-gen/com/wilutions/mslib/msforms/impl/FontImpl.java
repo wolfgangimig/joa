@@ -11,9 +11,6 @@ public class FontImpl extends Dispatch implements com.wilutions.mslib.msforms.Fo
   protected FontImpl(long ndisp) {
     super(ndisp);
   }
-  public FontImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FontImpl" + super.toString() + "]";
   }

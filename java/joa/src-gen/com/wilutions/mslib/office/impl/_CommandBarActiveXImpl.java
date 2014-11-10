@@ -252,9 +252,6 @@ public class _CommandBarActiveXImpl extends Dispatch implements com.wilutions.ms
   protected _CommandBarActiveXImpl(long ndisp) {
     super(ndisp);
   }
-  public _CommandBarActiveXImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CommandBarActiveXImpl" + super.toString() + "]";
   }

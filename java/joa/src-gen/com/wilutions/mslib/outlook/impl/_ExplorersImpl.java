@@ -53,9 +53,6 @@ public class _ExplorersImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _ExplorersImpl(long ndisp) {
     super(ndisp);
   }
-  public _ExplorersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ExplorersImpl" + super.toString() + "]";
   }

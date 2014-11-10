@@ -74,9 +74,6 @@ public class _ColumnFormatImpl extends Dispatch implements com.wilutions.mslib.o
   protected _ColumnFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public _ColumnFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ColumnFormatImpl" + super.toString() + "]";
   }

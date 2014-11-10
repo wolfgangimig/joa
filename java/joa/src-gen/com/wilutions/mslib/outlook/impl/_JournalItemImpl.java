@@ -406,9 +406,6 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _JournalItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _JournalItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_JournalItemImpl" + super.toString() + "]";
   }

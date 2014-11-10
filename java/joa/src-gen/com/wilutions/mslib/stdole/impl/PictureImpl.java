@@ -24,9 +24,6 @@ public class PictureImpl extends Dispatch implements com.wilutions.mslib.stdole.
   protected PictureImpl(long ndisp) {
     super(ndisp);
   }
-  public PictureImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PictureImpl" + super.toString() + "]";
   }

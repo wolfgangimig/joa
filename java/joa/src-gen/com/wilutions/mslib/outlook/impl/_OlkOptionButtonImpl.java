@@ -127,9 +127,6 @@ public class _OlkOptionButtonImpl extends Dispatch implements com.wilutions.msli
   protected _OlkOptionButtonImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkOptionButtonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkOptionButtonImpl" + super.toString() + "]";
   }

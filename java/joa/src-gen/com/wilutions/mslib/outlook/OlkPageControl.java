@@ -23,9 +23,6 @@ public class OlkPageControl extends Dispatch implements _OlkPageControl {
   protected OlkPageControl(long ndisp) {
     super(ndisp);
   }
-  public OlkPageControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkPageControl" + super.toString() + "]";
   }

@@ -56,9 +56,6 @@ public class _MoveOrCopyRuleActionImpl extends Dispatch implements com.wilutions
   protected _MoveOrCopyRuleActionImpl(long ndisp) {
     super(ndisp);
   }
-  public _MoveOrCopyRuleActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_MoveOrCopyRuleActionImpl" + super.toString() + "]";
   }

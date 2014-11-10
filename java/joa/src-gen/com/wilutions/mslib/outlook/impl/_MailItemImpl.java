@@ -740,9 +740,6 @@ public class _MailItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _MailItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _MailItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_MailItemImpl" + super.toString() + "]";
   }

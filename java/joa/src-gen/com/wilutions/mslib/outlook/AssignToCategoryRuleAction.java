@@ -59,9 +59,6 @@ public class AssignToCategoryRuleAction extends Dispatch implements _AssignToCat
   protected AssignToCategoryRuleAction(long ndisp) {
     super(ndisp);
   }
-  public AssignToCategoryRuleAction(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AssignToCategoryRuleAction" + super.toString() + "]";
   }

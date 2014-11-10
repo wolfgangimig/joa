@@ -53,9 +53,6 @@ public class _ToOrFromRuleConditionImpl extends Dispatch implements com.wilution
   protected _ToOrFromRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _ToOrFromRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ToOrFromRuleConditionImpl" + super.toString() + "]";
   }

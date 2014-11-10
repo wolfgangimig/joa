@@ -86,9 +86,6 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
   protected IMsoFloorImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoFloorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoFloorImpl" + super.toString() + "]";
   }

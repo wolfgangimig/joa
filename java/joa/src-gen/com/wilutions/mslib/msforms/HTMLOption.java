@@ -41,9 +41,6 @@ public class HTMLOption extends Dispatch implements IWHTMLOption {
   protected HTMLOption(long ndisp) {
     super(ndisp);
   }
-  public HTMLOption(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLOption" + super.toString() + "]";
   }

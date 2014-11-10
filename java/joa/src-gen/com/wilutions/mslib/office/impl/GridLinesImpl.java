@@ -53,9 +53,6 @@ public class GridLinesImpl extends Dispatch implements com.wilutions.mslib.offic
   protected GridLinesImpl(long ndisp) {
     super(ndisp);
   }
-  public GridLinesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[GridLinesImpl" + super.toString() + "]";
   }

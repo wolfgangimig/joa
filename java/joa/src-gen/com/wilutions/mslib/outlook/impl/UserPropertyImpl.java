@@ -82,9 +82,6 @@ public class UserPropertyImpl extends Dispatch implements com.wilutions.mslib.ou
   protected UserPropertyImpl(long ndisp) {
     super(ndisp);
   }
-  public UserPropertyImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[UserPropertyImpl" + super.toString() + "]";
   }

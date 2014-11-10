@@ -198,9 +198,6 @@ public class RuleConditions extends Dispatch implements _RuleConditions {
   protected RuleConditions(long ndisp) {
     super(ndisp);
   }
-  public RuleConditions(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RuleConditions" + super.toString() + "]";
   }

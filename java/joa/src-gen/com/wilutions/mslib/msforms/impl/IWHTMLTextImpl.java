@@ -47,9 +47,6 @@ public class IWHTMLTextImpl extends Dispatch implements com.wilutions.mslib.msfo
   protected IWHTMLTextImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLTextImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLTextImpl" + super.toString() + "]";
   }

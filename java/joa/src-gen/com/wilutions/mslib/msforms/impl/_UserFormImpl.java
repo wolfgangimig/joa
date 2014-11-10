@@ -349,9 +349,6 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   protected _UserFormImpl(long ndisp) {
     super(ndisp);
   }
-  public _UserFormImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_UserFormImpl" + super.toString() + "]";
   }

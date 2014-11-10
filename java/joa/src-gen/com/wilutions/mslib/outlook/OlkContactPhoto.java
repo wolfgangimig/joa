@@ -41,9 +41,6 @@ public class OlkContactPhoto extends Dispatch implements _OlkContactPhoto {
   protected OlkContactPhoto(long ndisp) {
     super(ndisp);
   }
-  public OlkContactPhoto(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkContactPhoto" + super.toString() + "]";
   }

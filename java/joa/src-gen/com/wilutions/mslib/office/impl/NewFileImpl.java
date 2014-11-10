@@ -39,9 +39,6 @@ public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.
   protected NewFileImpl(long ndisp) {
     super(ndisp);
   }
-  public NewFileImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NewFileImpl" + super.toString() + "]";
   }

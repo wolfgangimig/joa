@@ -45,9 +45,6 @@ public class GlowFormatImpl extends Dispatch implements com.wilutions.mslib.offi
   protected GlowFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public GlowFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[GlowFormatImpl" + super.toString() + "]";
   }

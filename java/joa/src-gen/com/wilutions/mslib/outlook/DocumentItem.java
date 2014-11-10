@@ -287,9 +287,6 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   protected DocumentItem(long ndisp) {
     super(ndisp);
   }
-  public DocumentItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DocumentItem" + super.toString() + "]";
   }

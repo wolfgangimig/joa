@@ -56,9 +56,6 @@ public class IWHTMLImageImpl extends Dispatch implements com.wilutions.mslib.msf
   protected IWHTMLImageImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLImageImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLImageImpl" + super.toString() + "]";
   }

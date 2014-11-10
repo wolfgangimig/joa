@@ -263,9 +263,6 @@ public class _NameSpaceImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _NameSpaceImpl(long ndisp) {
     super(ndisp);
   }
-  public _NameSpaceImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NameSpaceImpl" + super.toString() + "]";
   }

@@ -55,9 +55,6 @@ public class CommandBarControlsImpl extends Dispatch implements com.wilutions.ms
   protected CommandBarControlsImpl(long ndisp) {
     super(ndisp);
   }
-  public CommandBarControlsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CommandBarControlsImpl" + super.toString() + "]";
   }

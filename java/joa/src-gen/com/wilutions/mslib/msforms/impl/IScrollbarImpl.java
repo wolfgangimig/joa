@@ -130,9 +130,6 @@ public class IScrollbarImpl extends Dispatch implements com.wilutions.mslib.msfo
   protected IScrollbarImpl(long ndisp) {
     super(ndisp);
   }
-  public IScrollbarImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IScrollbarImpl" + super.toString() + "]";
   }

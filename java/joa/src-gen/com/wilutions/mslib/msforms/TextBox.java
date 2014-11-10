@@ -361,9 +361,6 @@ public class TextBox extends Dispatch implements IMdcText {
   protected TextBox(long ndisp) {
     super(ndisp);
   }
-  public TextBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TextBox" + super.toString() + "]";
   }

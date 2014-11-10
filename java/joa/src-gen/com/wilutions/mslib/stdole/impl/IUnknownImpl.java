@@ -11,9 +11,6 @@ public class IUnknownImpl extends Dispatch implements com.wilutions.mslib.stdole
   protected IUnknownImpl(long ndisp) {
     super(ndisp);
   }
-  public IUnknownImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IUnknownImpl" + super.toString() + "]";
   }

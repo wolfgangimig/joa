@@ -61,9 +61,6 @@ public class MsoDebugOptions_UTsImpl extends Dispatch implements com.wilutions.m
   protected MsoDebugOptions_UTsImpl(long ndisp) {
     super(ndisp);
   }
-  public MsoDebugOptions_UTsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MsoDebugOptions_UTsImpl" + super.toString() + "]";
   }

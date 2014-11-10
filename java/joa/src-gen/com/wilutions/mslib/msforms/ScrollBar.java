@@ -133,9 +133,6 @@ public class ScrollBar extends Dispatch implements IScrollbar {
   protected ScrollBar(long ndisp) {
     super(ndisp);
   }
-  public ScrollBar(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ScrollBar" + super.toString() + "]";
   }

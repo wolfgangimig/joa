@@ -23,9 +23,6 @@ public class ReturnEffect extends Dispatch implements IReturnEffect {
   protected ReturnEffect(long ndisp) {
     super(ndisp);
   }
-  public ReturnEffect(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReturnEffect" + super.toString() + "]";
   }

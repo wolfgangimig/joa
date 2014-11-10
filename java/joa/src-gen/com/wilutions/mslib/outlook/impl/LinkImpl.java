@@ -48,9 +48,6 @@ public class LinkImpl extends Dispatch implements com.wilutions.mslib.outlook.Li
   protected LinkImpl(long ndisp) {
     super(ndisp);
   }
-  public LinkImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[LinkImpl" + super.toString() + "]";
   }

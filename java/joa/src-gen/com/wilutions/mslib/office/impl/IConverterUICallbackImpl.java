@@ -29,9 +29,6 @@ public class IConverterUICallbackImpl extends Dispatch implements com.wilutions.
   protected IConverterUICallbackImpl(long ndisp) {
     super(ndisp);
   }
-  public IConverterUICallbackImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IConverterUICallbackImpl" + super.toString() + "]";
   }

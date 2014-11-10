@@ -134,9 +134,6 @@ public class MultiPage extends Dispatch implements IMultiPage {
   protected MultiPage(long ndisp) {
     super(ndisp);
   }
-  public MultiPage(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MultiPage" + super.toString() + "]";
   }

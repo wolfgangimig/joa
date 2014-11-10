@@ -20,9 +20,6 @@ public class IReturnEffectImpl extends Dispatch implements com.wilutions.mslib.m
   protected IReturnEffectImpl(long ndisp) {
     super(ndisp);
   }
-  public IReturnEffectImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IReturnEffectImpl" + super.toString() + "]";
   }

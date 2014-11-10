@@ -70,9 +70,6 @@ public class CustomXMLSchemaCollection extends Dispatch implements _CustomXMLSch
   protected CustomXMLSchemaCollection(long ndisp) {
     super(ndisp);
   }
-  public CustomXMLSchemaCollection(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomXMLSchemaCollection" + super.toString() + "]";
   }

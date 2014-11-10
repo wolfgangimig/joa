@@ -266,9 +266,6 @@ public class NameSpace extends Dispatch implements _NameSpace {
   protected NameSpace(long ndisp) {
     super(ndisp);
   }
-  public NameSpace(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NameSpace" + super.toString() + "]";
   }

@@ -1457,9 +1457,6 @@ public class _ContactItemImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _ContactItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _ContactItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ContactItemImpl" + super.toString() + "]";
   }

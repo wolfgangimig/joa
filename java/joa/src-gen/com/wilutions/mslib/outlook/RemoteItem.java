@@ -318,9 +318,6 @@ public class RemoteItem extends Dispatch implements _RemoteItem {
   protected RemoteItem(long ndisp) {
     super(ndisp);
   }
-  public RemoteItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RemoteItem" + super.toString() + "]";
   }

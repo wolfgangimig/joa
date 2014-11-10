@@ -42,9 +42,6 @@ public class AccountSelector extends Dispatch implements _AccountSelector {
   protected AccountSelector(long ndisp) {
     super(ndisp);
   }
-  public AccountSelector(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AccountSelector" + super.toString() + "]";
   }

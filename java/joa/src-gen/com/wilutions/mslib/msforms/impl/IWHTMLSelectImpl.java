@@ -65,9 +65,6 @@ public class IWHTMLSelectImpl extends Dispatch implements com.wilutions.mslib.ms
   protected IWHTMLSelectImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLSelectImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLSelectImpl" + super.toString() + "]";
   }

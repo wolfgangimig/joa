@@ -49,9 +49,6 @@ public class _RemindersImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _RemindersImpl(long ndisp) {
     super(ndisp);
   }
-  public _RemindersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RemindersImpl" + super.toString() + "]";
   }

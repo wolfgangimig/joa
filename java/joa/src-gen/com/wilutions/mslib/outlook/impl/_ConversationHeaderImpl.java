@@ -55,9 +55,6 @@ public class _ConversationHeaderImpl extends Dispatch implements com.wilutions.m
   protected _ConversationHeaderImpl(long ndisp) {
     super(ndisp);
   }
-  public _ConversationHeaderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ConversationHeaderImpl" + super.toString() + "]";
   }

@@ -64,9 +64,6 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
   protected _IRecipientControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _IRecipientControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_IRecipientControlImpl" + super.toString() + "]";
   }

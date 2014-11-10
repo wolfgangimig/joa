@@ -11,9 +11,6 @@ public class IMsoHyperlinksImpl extends Dispatch implements com.wilutions.mslib.
   protected IMsoHyperlinksImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoHyperlinksImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoHyperlinksImpl" + super.toString() + "]";
   }

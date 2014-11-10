@@ -69,9 +69,6 @@ public class NavigationPane extends Dispatch implements _NavigationPane {
   protected NavigationPane(long ndisp) {
     super(ndisp);
   }
-  public NavigationPane(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NavigationPane" + super.toString() + "]";
   }

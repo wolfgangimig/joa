@@ -106,9 +106,6 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
   protected SharedWorkspaceImpl(long ndisp) {
     super(ndisp);
   }
-  public SharedWorkspaceImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SharedWorkspaceImpl" + super.toString() + "]";
   }

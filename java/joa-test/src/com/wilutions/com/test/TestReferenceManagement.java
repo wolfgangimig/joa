@@ -121,7 +121,6 @@ public class TestReferenceManagement {
 			ArrayList<Dispatch> objs = new ArrayList<Dispatch>();
 			JoaTestDispatch1 testDisp1 = new JoaTestDispatch1();
 			for (int i = 0; i < 10; i++) {
-				objs.add(new Dispatch(testDisp1));
 				objs.add(Dispatch.as(testDisp1, JoaTestDispatch1.class));
 			}
 

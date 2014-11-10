@@ -29,9 +29,6 @@ public class _DDocSiteControlImpl extends Dispatch implements com.wilutions.msli
   protected _DDocSiteControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _DDocSiteControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_DDocSiteControlImpl" + super.toString() + "]";
   }

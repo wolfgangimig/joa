@@ -63,9 +63,6 @@ public class ServerPolicyImpl extends Dispatch implements com.wilutions.mslib.of
   protected ServerPolicyImpl(long ndisp) {
     super(ndisp);
   }
-  public ServerPolicyImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ServerPolicyImpl" + super.toString() + "]";
   }

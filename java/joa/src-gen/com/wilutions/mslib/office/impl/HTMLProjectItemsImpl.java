@@ -43,9 +43,6 @@ public class HTMLProjectItemsImpl extends Dispatch implements com.wilutions.msli
   protected HTMLProjectItemsImpl(long ndisp) {
     super(ndisp);
   }
-  public HTMLProjectItemsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLProjectItemsImpl" + super.toString() + "]";
   }

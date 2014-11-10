@@ -38,9 +38,6 @@ public class Ruler2Impl extends Dispatch implements com.wilutions.mslib.office.R
   protected Ruler2Impl(long ndisp) {
     super(ndisp);
   }
-  public Ruler2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Ruler2Impl" + super.toString() + "]";
   }

@@ -27,8 +27,11 @@ public class JoaDll {
 	static {
 		// Debugging: set this command line option in order to debug the DLL. 
 		// This option only makes sense, if the source code of the DLL is available.
-		String strDebugJoaDll = System.getProperty("com.wilutions.joa.DebugJoaDll");
-		boolean isDebug = strDebugJoaDll != null && strDebugJoaDll.equalsIgnoreCase("true");
+//		String strDebugJoaDll = System.getProperty("com.wilutions.joa.DebugJoaDll");
+//		boolean isDebug = strDebugJoaDll != null && strDebugJoaDll.equalsIgnoreCase("true");
+		
+		boolean isDebug = true;
+		
 		
 		// Debugging: load from C++ output directories
 		if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\x64\\Debug\\JoaCtrl.dll", false)) {

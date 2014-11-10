@@ -17,9 +17,6 @@ public class IRibbonExtensibilityImpl extends Dispatch implements com.wilutions.
   protected IRibbonExtensibilityImpl(long ndisp) {
     super(ndisp);
   }
-  public IRibbonExtensibilityImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IRibbonExtensibilityImpl" + super.toString() + "]";
   }

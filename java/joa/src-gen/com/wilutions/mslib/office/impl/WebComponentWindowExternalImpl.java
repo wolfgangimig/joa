@@ -40,9 +40,6 @@ public class WebComponentWindowExternalImpl extends Dispatch implements com.wilu
   protected WebComponentWindowExternalImpl(long ndisp) {
     super(ndisp);
   }
-  public WebComponentWindowExternalImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WebComponentWindowExternalImpl" + super.toString() + "]";
   }

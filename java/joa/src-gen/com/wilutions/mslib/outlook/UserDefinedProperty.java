@@ -59,9 +59,6 @@ public class UserDefinedProperty extends Dispatch implements _UserDefinedPropert
   protected UserDefinedProperty(long ndisp) {
     super(ndisp);
   }
-  public UserDefinedProperty(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[UserDefinedProperty" + super.toString() + "]";
   }

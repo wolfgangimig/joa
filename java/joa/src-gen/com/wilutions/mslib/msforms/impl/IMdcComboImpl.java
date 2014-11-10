@@ -472,9 +472,6 @@ public class IMdcComboImpl extends Dispatch implements com.wilutions.mslib.msfor
   protected IMdcComboImpl(long ndisp) {
     super(ndisp);
   }
-  public IMdcComboImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMdcComboImpl" + super.toString() + "]";
   }

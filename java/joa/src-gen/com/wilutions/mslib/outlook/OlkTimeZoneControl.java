@@ -89,9 +89,6 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
   protected OlkTimeZoneControl(long ndisp) {
     super(ndisp);
   }
-  public OlkTimeZoneControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkTimeZoneControl" + super.toString() + "]";
   }

@@ -113,9 +113,6 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
   protected ActionImpl(long ndisp) {
     super(ndisp);
   }
-  public ActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ActionImpl" + super.toString() + "]";
   }

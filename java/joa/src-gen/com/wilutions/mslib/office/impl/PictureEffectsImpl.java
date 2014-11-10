@@ -50,9 +50,6 @@ public class PictureEffectsImpl extends Dispatch implements com.wilutions.mslib.
   protected PictureEffectsImpl(long ndisp) {
     super(ndisp);
   }
-  public PictureEffectsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PictureEffectsImpl" + super.toString() + "]";
   }

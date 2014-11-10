@@ -193,9 +193,6 @@ public class IMdcToggleButtonImpl extends Dispatch implements com.wilutions.msli
   protected IMdcToggleButtonImpl(long ndisp) {
     super(ndisp);
   }
-  public IMdcToggleButtonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMdcToggleButtonImpl" + super.toString() + "]";
   }

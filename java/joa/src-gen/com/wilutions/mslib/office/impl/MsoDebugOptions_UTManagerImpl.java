@@ -42,9 +42,6 @@ public class MsoDebugOptions_UTManagerImpl extends Dispatch implements com.wilut
   protected MsoDebugOptions_UTManagerImpl(long ndisp) {
     super(ndisp);
   }
-  public MsoDebugOptions_UTManagerImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MsoDebugOptions_UTManagerImpl" + super.toString() + "]";
   }

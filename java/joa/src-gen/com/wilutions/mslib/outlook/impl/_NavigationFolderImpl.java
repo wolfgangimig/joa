@@ -76,9 +76,6 @@ public class _NavigationFolderImpl extends Dispatch implements com.wilutions.msl
   protected _NavigationFolderImpl(long ndisp) {
     super(ndisp);
   }
-  public _NavigationFolderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NavigationFolderImpl" + super.toString() + "]";
   }

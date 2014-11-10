@@ -82,9 +82,6 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
   protected CustomTaskPane(long ndisp) {
     super(ndisp);
   }
-  public CustomTaskPane(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomTaskPane" + super.toString() + "]";
   }

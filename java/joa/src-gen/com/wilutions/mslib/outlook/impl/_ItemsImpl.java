@@ -113,9 +113,6 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
   protected _ItemsImpl(long ndisp) {
     super(ndisp);
   }
-  public _ItemsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ItemsImpl" + super.toString() + "]";
   }

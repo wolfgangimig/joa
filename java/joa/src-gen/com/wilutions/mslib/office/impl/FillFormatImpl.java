@@ -235,9 +235,6 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
   protected FillFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public FillFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FillFormatImpl" + super.toString() + "]";
   }

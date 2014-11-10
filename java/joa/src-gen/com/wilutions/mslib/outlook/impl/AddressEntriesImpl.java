@@ -83,9 +83,6 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
   protected AddressEntriesImpl(long ndisp) {
     super(ndisp);
   }
-  public AddressEntriesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AddressEntriesImpl" + super.toString() + "]";
   }

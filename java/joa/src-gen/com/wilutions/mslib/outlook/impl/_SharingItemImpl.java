@@ -771,9 +771,6 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _SharingItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _SharingItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_SharingItemImpl" + super.toString() + "]";
   }

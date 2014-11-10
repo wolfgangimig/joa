@@ -189,9 +189,6 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoLegendKeyImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoLegendKeyImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoLegendKeyImpl" + super.toString() + "]";
   }

@@ -62,9 +62,6 @@ public class IMsoBorderImpl extends Dispatch implements com.wilutions.mslib.offi
   protected IMsoBorderImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoBorderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoBorderImpl" + super.toString() + "]";
   }

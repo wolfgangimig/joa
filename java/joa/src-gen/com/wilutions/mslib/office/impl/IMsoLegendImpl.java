@@ -154,9 +154,6 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
   protected IMsoLegendImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoLegendImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoLegendImpl" + super.toString() + "]";
   }

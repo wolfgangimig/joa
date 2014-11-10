@@ -67,9 +67,6 @@ public class _MailModuleImpl extends Dispatch implements com.wilutions.mslib.out
   protected _MailModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _MailModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_MailModuleImpl" + super.toString() + "]";
   }

@@ -345,9 +345,6 @@ public class Page extends Dispatch implements IPage {
   protected Page(long ndisp) {
     super(ndisp);
   }
-  public Page(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Page" + super.toString() + "]";
   }

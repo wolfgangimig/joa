@@ -285,9 +285,6 @@ public class ChartPointImpl extends Dispatch implements com.wilutions.mslib.offi
   protected ChartPointImpl(long ndisp) {
     super(ndisp);
   }
-  public ChartPointImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ChartPointImpl" + super.toString() + "]";
   }

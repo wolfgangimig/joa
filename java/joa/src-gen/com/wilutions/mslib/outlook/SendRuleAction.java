@@ -56,9 +56,6 @@ public class SendRuleAction extends Dispatch implements _SendRuleAction {
   protected SendRuleAction(long ndisp) {
     super(ndisp);
   }
-  public SendRuleAction(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SendRuleAction" + super.toString() + "]";
   }

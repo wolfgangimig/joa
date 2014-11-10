@@ -56,9 +56,6 @@ public class _TextRuleConditionImpl extends Dispatch implements com.wilutions.ms
   protected _TextRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _TextRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TextRuleConditionImpl" + super.toString() + "]";
   }

@@ -67,9 +67,6 @@ public class ODSOFilterImpl extends Dispatch implements com.wilutions.mslib.offi
   protected ODSOFilterImpl(long ndisp) {
     super(ndisp);
   }
-  public ODSOFilterImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ODSOFilterImpl" + super.toString() + "]";
   }

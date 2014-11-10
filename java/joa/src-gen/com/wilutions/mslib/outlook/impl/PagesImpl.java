@@ -54,9 +54,6 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.outlook.P
   protected PagesImpl(long ndisp) {
     super(ndisp);
   }
-  public PagesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PagesImpl" + super.toString() + "]";
   }

@@ -774,9 +774,6 @@ public class SharingItem extends Dispatch implements _SharingItem {
   protected SharingItem(long ndisp) {
     super(ndisp);
   }
-  public SharingItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SharingItem" + super.toString() + "]";
   }

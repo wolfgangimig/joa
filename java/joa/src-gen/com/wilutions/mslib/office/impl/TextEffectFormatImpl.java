@@ -137,9 +137,6 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
   protected TextEffectFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public TextEffectFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TextEffectFormatImpl" + super.toString() + "]";
   }

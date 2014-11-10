@@ -274,9 +274,6 @@ public class OlkComboBox extends Dispatch implements _OlkComboBox {
   protected OlkComboBox(long ndisp) {
     super(ndisp);
   }
-  public OlkComboBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkComboBox" + super.toString() + "]";
   }

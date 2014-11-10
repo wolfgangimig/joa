@@ -115,9 +115,6 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
   protected CalloutFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public CalloutFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CalloutFormatImpl" + super.toString() + "]";
   }

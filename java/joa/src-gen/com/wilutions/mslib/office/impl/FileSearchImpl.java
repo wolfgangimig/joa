@@ -137,9 +137,6 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
   protected FileSearchImpl(long ndisp) {
     super(ndisp);
   }
-  public FileSearchImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FileSearchImpl" + super.toString() + "]";
   }

@@ -38,9 +38,6 @@ public class IWHTMLOptionImpl extends Dispatch implements com.wilutions.mslib.ms
   protected IWHTMLOptionImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLOptionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLOptionImpl" + super.toString() + "]";
   }

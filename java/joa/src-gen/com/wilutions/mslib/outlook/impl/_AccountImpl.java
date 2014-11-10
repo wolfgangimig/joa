@@ -104,9 +104,6 @@ public class _AccountImpl extends Dispatch implements com.wilutions.mslib.outloo
   protected _AccountImpl(long ndisp) {
     super(ndisp);
   }
-  public _AccountImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AccountImpl" + super.toString() + "]";
   }

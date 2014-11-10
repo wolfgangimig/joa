@@ -56,9 +56,6 @@ public class IWHTMLTextAreaImpl extends Dispatch implements com.wilutions.mslib.
   protected IWHTMLTextAreaImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLTextAreaImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLTextAreaImpl" + super.toString() + "]";
   }

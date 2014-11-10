@@ -247,9 +247,6 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
   protected MAPIFolderImpl(long ndisp) {
     super(ndisp);
   }
-  public MAPIFolderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MAPIFolderImpl" + super.toString() + "]";
   }

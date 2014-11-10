@@ -53,9 +53,6 @@ public class IMsoSeriesLinesImpl extends Dispatch implements com.wilutions.mslib
   protected IMsoSeriesLinesImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoSeriesLinesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoSeriesLinesImpl" + super.toString() + "]";
   }

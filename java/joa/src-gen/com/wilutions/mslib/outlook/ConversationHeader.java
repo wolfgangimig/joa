@@ -58,9 +58,6 @@ public class ConversationHeader extends Dispatch implements _ConversationHeader 
   protected ConversationHeader(long ndisp) {
     super(ndisp);
   }
-  public ConversationHeader(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ConversationHeader" + super.toString() + "]";
   }

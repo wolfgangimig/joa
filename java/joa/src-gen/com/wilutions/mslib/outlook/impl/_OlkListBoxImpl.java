@@ -187,9 +187,6 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
   protected _OlkListBoxImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkListBoxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkListBoxImpl" + super.toString() + "]";
   }

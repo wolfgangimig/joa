@@ -59,9 +59,6 @@ public class AccountRuleCondition extends Dispatch implements _AccountRuleCondit
   protected AccountRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public AccountRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AccountRuleCondition" + super.toString() + "]";
   }

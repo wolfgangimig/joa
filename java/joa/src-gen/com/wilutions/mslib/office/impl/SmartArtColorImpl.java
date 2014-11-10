@@ -46,9 +46,6 @@ public class SmartArtColorImpl extends Dispatch implements com.wilutions.mslib.o
   protected SmartArtColorImpl(long ndisp) {
     super(ndisp);
   }
-  public SmartArtColorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SmartArtColorImpl" + super.toString() + "]";
   }

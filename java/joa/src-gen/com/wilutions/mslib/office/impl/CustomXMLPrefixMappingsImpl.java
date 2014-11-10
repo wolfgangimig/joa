@@ -60,9 +60,6 @@ public class CustomXMLPrefixMappingsImpl extends Dispatch implements com.wilutio
   protected CustomXMLPrefixMappingsImpl(long ndisp) {
     super(ndisp);
   }
-  public CustomXMLPrefixMappingsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomXMLPrefixMappingsImpl" + super.toString() + "]";
   }

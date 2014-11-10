@@ -105,9 +105,6 @@ public class _ViewFontImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _ViewFontImpl(long ndisp) {
     super(ndisp);
   }
-  public _ViewFontImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ViewFontImpl" + super.toString() + "]";
   }

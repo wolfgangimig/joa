@@ -92,9 +92,6 @@ public class Table extends Dispatch implements _Table {
   protected Table(long ndisp) {
     super(ndisp);
   }
-  public Table(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Table" + super.toString() + "]";
   }

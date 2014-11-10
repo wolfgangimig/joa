@@ -60,9 +60,6 @@ public class SharedWorkspaceTasksImpl extends Dispatch implements com.wilutions.
   protected SharedWorkspaceTasksImpl(long ndisp) {
     super(ndisp);
   }
-  public SharedWorkspaceTasksImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SharedWorkspaceTasksImpl" + super.toString() + "]";
   }

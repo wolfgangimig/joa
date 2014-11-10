@@ -186,9 +186,6 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
   protected CommandBarImpl(long ndisp) {
     super(ndisp);
   }
-  public CommandBarImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CommandBarImpl" + super.toString() + "]";
   }

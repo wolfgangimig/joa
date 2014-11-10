@@ -53,9 +53,6 @@ public class _OutlookBarPaneImpl extends Dispatch implements com.wilutions.mslib
   protected _OutlookBarPaneImpl(long ndisp) {
     super(ndisp);
   }
-  public _OutlookBarPaneImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OutlookBarPaneImpl" + super.toString() + "]";
   }

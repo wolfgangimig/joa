@@ -45,9 +45,6 @@ public class SearchFoldersImpl extends Dispatch implements com.wilutions.mslib.o
   protected SearchFoldersImpl(long ndisp) {
     super(ndisp);
   }
-  public SearchFoldersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SearchFoldersImpl" + super.toString() + "]";
   }

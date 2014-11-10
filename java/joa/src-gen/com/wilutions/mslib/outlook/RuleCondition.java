@@ -50,9 +50,6 @@ public class RuleCondition extends Dispatch implements _RuleCondition {
   protected RuleCondition(long ndisp) {
     super(ndisp);
   }
-  public RuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RuleCondition" + super.toString() + "]";
   }

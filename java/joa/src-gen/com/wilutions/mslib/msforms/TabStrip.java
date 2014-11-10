@@ -188,9 +188,6 @@ public class TabStrip extends Dispatch implements ITabStrip {
   protected TabStrip(long ndisp) {
     super(ndisp);
   }
-  public TabStrip(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TabStrip" + super.toString() + "]";
   }

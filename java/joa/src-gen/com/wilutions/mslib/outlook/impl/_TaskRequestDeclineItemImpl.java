@@ -311,9 +311,6 @@ public class _TaskRequestDeclineItemImpl extends Dispatch implements com.wilutio
   protected _TaskRequestDeclineItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _TaskRequestDeclineItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TaskRequestDeclineItemImpl" + super.toString() + "]";
   }

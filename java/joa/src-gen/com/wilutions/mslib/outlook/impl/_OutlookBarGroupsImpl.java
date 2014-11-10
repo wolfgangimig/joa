@@ -57,9 +57,6 @@ public class _OutlookBarGroupsImpl extends Dispatch implements com.wilutions.msl
   protected _OutlookBarGroupsImpl(long ndisp) {
     super(ndisp);
   }
-  public _OutlookBarGroupsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OutlookBarGroupsImpl" + super.toString() + "]";
   }

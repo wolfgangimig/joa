@@ -44,9 +44,6 @@ public class OfficeThemeImpl extends Dispatch implements com.wilutions.mslib.off
   protected OfficeThemeImpl(long ndisp) {
     super(ndisp);
   }
-  public OfficeThemeImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OfficeThemeImpl" + super.toString() + "]";
   }

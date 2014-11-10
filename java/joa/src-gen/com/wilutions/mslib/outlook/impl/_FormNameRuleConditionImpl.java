@@ -56,9 +56,6 @@ public class _FormNameRuleConditionImpl extends Dispatch implements com.wilution
   protected _FormNameRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _FormNameRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_FormNameRuleConditionImpl" + super.toString() + "]";
   }

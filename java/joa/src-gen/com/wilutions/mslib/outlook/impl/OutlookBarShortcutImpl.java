@@ -51,9 +51,6 @@ public class OutlookBarShortcutImpl extends Dispatch implements com.wilutions.ms
   protected OutlookBarShortcutImpl(long ndisp) {
     super(ndisp);
   }
-  public OutlookBarShortcutImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OutlookBarShortcutImpl" + super.toString() + "]";
   }

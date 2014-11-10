@@ -133,9 +133,6 @@ public class Image extends Dispatch implements IImage {
   protected Image(long ndisp) {
     super(ndisp);
   }
-  public Image(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Image" + super.toString() + "]";
   }

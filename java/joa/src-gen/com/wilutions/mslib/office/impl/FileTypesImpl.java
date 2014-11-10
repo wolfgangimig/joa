@@ -45,9 +45,6 @@ public class FileTypesImpl extends Dispatch implements com.wilutions.mslib.offic
   protected FileTypesImpl(long ndisp) {
     super(ndisp);
   }
-  public FileTypesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FileTypesImpl" + super.toString() + "]";
   }

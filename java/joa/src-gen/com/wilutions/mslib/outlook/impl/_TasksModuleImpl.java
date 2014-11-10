@@ -67,9 +67,6 @@ public class _TasksModuleImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _TasksModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _TasksModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TasksModuleImpl" + super.toString() + "]";
   }

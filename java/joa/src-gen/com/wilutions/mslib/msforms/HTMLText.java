@@ -50,9 +50,6 @@ public class HTMLText extends Dispatch implements IWHTMLText {
   protected HTMLText(long ndisp) {
     super(ndisp);
   }
-  public HTMLText(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLText" + super.toString() + "]";
   }

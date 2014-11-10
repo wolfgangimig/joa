@@ -59,9 +59,6 @@ public class ImportanceRuleCondition extends Dispatch implements _ImportanceRule
   protected ImportanceRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public ImportanceRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ImportanceRuleCondition" + super.toString() + "]";
   }

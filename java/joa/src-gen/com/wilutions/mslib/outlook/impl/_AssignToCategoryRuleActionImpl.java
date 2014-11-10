@@ -56,9 +56,6 @@ public class _AssignToCategoryRuleActionImpl extends Dispatch implements com.wil
   protected _AssignToCategoryRuleActionImpl(long ndisp) {
     super(ndisp);
   }
-  public _AssignToCategoryRuleActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AssignToCategoryRuleActionImpl" + super.toString() + "]";
   }

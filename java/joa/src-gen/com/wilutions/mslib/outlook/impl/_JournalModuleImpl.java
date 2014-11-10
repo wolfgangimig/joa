@@ -67,9 +67,6 @@ public class _JournalModuleImpl extends Dispatch implements com.wilutions.mslib.
   protected _JournalModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _JournalModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_JournalModuleImpl" + super.toString() + "]";
   }

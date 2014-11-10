@@ -296,9 +296,6 @@ public class ListBox extends Dispatch implements IMdcList {
   protected ListBox(long ndisp) {
     super(ndisp);
   }
-  public ListBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ListBox" + super.toString() + "]";
   }

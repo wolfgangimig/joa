@@ -210,9 +210,6 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
   protected _CalendarViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _CalendarViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CalendarViewImpl" + super.toString() + "]";
   }

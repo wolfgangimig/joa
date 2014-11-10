@@ -107,9 +107,6 @@ public class StorageItem extends Dispatch implements _StorageItem {
   protected StorageItem(long ndisp) {
     super(ndisp);
   }
-  public StorageItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[StorageItem" + super.toString() + "]";
   }

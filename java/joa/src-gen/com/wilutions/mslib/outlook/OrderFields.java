@@ -72,9 +72,6 @@ public class OrderFields extends Dispatch implements _OrderFields {
   protected OrderFields(long ndisp) {
     super(ndisp);
   }
-  public OrderFields(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OrderFields" + super.toString() + "]";
   }

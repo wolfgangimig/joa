@@ -57,9 +57,6 @@ public class _AttachmentSelectionImpl extends Dispatch implements com.wilutions.
   protected _AttachmentSelectionImpl(long ndisp) {
     super(ndisp);
   }
-  public _AttachmentSelectionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AttachmentSelectionImpl" + super.toString() + "]";
   }

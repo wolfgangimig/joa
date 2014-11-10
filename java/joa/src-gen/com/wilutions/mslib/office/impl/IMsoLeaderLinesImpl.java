@@ -44,9 +44,6 @@ public class IMsoLeaderLinesImpl extends Dispatch implements com.wilutions.mslib
   protected IMsoLeaderLinesImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoLeaderLinesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoLeaderLinesImpl" + super.toString() + "]";
   }

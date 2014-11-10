@@ -457,9 +457,6 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
   protected IMsoSeriesImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoSeriesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoSeriesImpl" + super.toString() + "]";
   }

@@ -103,9 +103,6 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
   protected _ConversationImpl(long ndisp) {
     super(ndisp);
   }
-  public _ConversationImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ConversationImpl" + super.toString() + "]";
   }

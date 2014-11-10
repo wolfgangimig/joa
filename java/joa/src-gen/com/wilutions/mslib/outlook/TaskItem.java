@@ -606,9 +606,6 @@ public class TaskItem extends Dispatch implements _TaskItem {
   protected TaskItem(long ndisp) {
     super(ndisp);
   }
-  public TaskItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TaskItem" + super.toString() + "]";
   }

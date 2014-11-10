@@ -305,9 +305,6 @@ public class _ReportItemImpl extends Dispatch implements com.wilutions.mslib.out
   protected _ReportItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _ReportItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ReportItemImpl" + super.toString() + "]";
   }

@@ -77,9 +77,6 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
   protected SmartArtImpl(long ndisp) {
     super(ndisp);
   }
-  public SmartArtImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SmartArtImpl" + super.toString() + "]";
   }

@@ -14,9 +14,6 @@ public class NewFont extends Dispatch implements Font {
   protected NewFont(long ndisp) {
     super(ndisp);
   }
-  public NewFont(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NewFont" + super.toString() + "]";
   }

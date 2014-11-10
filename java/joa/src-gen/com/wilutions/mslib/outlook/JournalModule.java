@@ -70,9 +70,6 @@ public class JournalModule extends Dispatch implements _JournalModule {
   protected JournalModule(long ndisp) {
     super(ndisp);
   }
-  public JournalModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[JournalModule" + super.toString() + "]";
   }

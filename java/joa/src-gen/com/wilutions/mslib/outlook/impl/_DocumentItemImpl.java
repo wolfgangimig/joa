@@ -284,9 +284,6 @@ public class _DocumentItemImpl extends Dispatch implements com.wilutions.mslib.o
   protected _DocumentItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _DocumentItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_DocumentItemImpl" + super.toString() + "]";
   }

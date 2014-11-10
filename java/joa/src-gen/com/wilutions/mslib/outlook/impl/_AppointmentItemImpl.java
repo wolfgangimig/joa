@@ -614,9 +614,6 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
   protected _AppointmentItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _AppointmentItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AppointmentItemImpl" + super.toString() + "]";
   }

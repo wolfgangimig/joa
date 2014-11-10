@@ -23,9 +23,6 @@ public class ReturnBoolean extends Dispatch implements IReturnBoolean {
   protected ReturnBoolean(long ndisp) {
     super(ndisp);
   }
-  public ReturnBoolean(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReturnBoolean" + super.toString() + "]";
   }

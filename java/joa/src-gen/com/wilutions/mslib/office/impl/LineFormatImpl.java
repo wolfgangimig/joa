@@ -161,9 +161,6 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
   protected LineFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public LineFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[LineFormatImpl" + super.toString() + "]";
   }

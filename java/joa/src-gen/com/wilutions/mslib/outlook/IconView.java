@@ -144,9 +144,6 @@ public class IconView extends Dispatch implements _IconView {
   protected IconView(long ndisp) {
     super(ndisp);
   }
-  public IconView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IconView" + super.toString() + "]";
   }

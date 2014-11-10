@@ -311,9 +311,6 @@ public class _TaskRequestUpdateItemImpl extends Dispatch implements com.wilution
   protected _TaskRequestUpdateItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _TaskRequestUpdateItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TaskRequestUpdateItemImpl" + super.toString() + "]";
   }

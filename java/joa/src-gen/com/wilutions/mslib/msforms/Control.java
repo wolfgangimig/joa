@@ -277,9 +277,6 @@ public class Control extends Dispatch implements IControl {
   protected Control(long ndisp) {
     super(ndisp);
   }
-  public Control(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Control" + super.toString() + "]";
   }

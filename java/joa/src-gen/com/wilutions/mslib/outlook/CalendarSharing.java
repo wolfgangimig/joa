@@ -116,9 +116,6 @@ public class CalendarSharing extends Dispatch implements _CalendarSharing {
   protected CalendarSharing(long ndisp) {
     super(ndisp);
   }
-  public CalendarSharing(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CalendarSharing" + super.toString() + "]";
   }

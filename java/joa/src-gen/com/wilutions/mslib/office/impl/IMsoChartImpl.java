@@ -579,9 +579,6 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   protected IMsoChartImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoChartImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoChartImpl" + super.toString() + "]";
   }

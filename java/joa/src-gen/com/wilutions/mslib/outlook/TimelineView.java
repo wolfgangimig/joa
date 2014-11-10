@@ -207,9 +207,6 @@ public class TimelineView extends Dispatch implements _TimelineView {
   protected TimelineView(long ndisp) {
     super(ndisp);
   }
-  public TimelineView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TimelineView" + super.toString() + "]";
   }

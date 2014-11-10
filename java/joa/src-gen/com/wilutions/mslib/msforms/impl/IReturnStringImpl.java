@@ -20,9 +20,6 @@ public class IReturnStringImpl extends Dispatch implements com.wilutions.mslib.m
   protected IReturnStringImpl(long ndisp) {
     super(ndisp);
   }
-  public IReturnStringImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IReturnStringImpl" + super.toString() + "]";
   }

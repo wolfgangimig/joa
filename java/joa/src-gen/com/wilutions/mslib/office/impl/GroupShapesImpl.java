@@ -50,9 +50,6 @@ public class GroupShapesImpl extends Dispatch implements com.wilutions.mslib.off
   protected GroupShapesImpl(long ndisp) {
     super(ndisp);
   }
-  public GroupShapesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[GroupShapesImpl" + super.toString() + "]";
   }

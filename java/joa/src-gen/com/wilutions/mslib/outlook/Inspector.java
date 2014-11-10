@@ -163,9 +163,6 @@ public class Inspector extends Dispatch implements _Inspector {
   protected Inspector(long ndisp) {
     super(ndisp);
   }
-  public Inspector(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Inspector" + super.toString() + "]";
   }

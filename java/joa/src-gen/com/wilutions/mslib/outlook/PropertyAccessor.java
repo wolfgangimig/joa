@@ -94,9 +94,6 @@ public class PropertyAccessor extends Dispatch implements _PropertyAccessor {
   protected PropertyAccessor(long ndisp) {
     super(ndisp);
   }
-  public PropertyAccessor(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PropertyAccessor" + super.toString() + "]";
   }

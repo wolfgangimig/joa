@@ -137,9 +137,6 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
   protected BalloonImpl(long ndisp) {
     super(ndisp);
   }
-  public BalloonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[BalloonImpl" + super.toString() + "]";
   }

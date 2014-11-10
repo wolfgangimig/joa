@@ -51,9 +51,6 @@ public class OlkSenderPhoto extends Dispatch implements _OlkSenderPhoto {
   protected OlkSenderPhoto(long ndisp) {
     super(ndisp);
   }
-  public OlkSenderPhoto(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkSenderPhoto" + super.toString() + "]";
   }

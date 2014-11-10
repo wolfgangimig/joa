@@ -10,9 +10,6 @@ public class IPictureDispImpl extends com.wilutions.mslib.stdole.impl.PictureImp
   protected IPictureDispImpl(long ndisp) {
     super(ndisp);
   }
-  public IPictureDispImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IPictureDispImpl" + super.toString() + "]";
   }

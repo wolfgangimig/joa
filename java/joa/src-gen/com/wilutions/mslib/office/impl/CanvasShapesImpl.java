@@ -174,9 +174,6 @@ public class CanvasShapesImpl extends Dispatch implements com.wilutions.mslib.of
   protected CanvasShapesImpl(long ndisp) {
     super(ndisp);
   }
-  public CanvasShapesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CanvasShapesImpl" + super.toString() + "]";
   }

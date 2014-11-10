@@ -70,9 +70,6 @@ public class NotesModule extends Dispatch implements _NotesModule {
   protected NotesModule(long ndisp) {
     super(ndisp);
   }
-  public NotesModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NotesModule" + super.toString() + "]";
   }

@@ -21,9 +21,6 @@ public class _IMsoDispObjImpl extends Dispatch implements com.wilutions.mslib.of
   protected _IMsoDispObjImpl(long ndisp) {
     super(ndisp);
   }
-  public _IMsoDispObjImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_IMsoDispObjImpl" + super.toString() + "]";
   }

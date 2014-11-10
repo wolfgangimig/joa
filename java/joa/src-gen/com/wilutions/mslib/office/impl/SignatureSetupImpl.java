@@ -99,9 +99,6 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
   protected SignatureSetupImpl(long ndisp) {
     super(ndisp);
   }
-  public SignatureSetupImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SignatureSetupImpl" + super.toString() + "]";
   }

@@ -196,9 +196,6 @@ public class CheckBox extends Dispatch implements IMdcCheckBox {
   protected CheckBox(long ndisp) {
     super(ndisp);
   }
-  public CheckBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CheckBox" + super.toString() + "]";
   }

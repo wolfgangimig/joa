@@ -26,9 +26,6 @@ public class IRibbonControlImpl extends Dispatch implements com.wilutions.mslib.
   protected IRibbonControlImpl(long ndisp) {
     super(ndisp);
   }
-  public IRibbonControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IRibbonControlImpl" + super.toString() + "]";
   }

@@ -206,9 +206,6 @@ public class _NoteItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _NoteItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _NoteItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NoteItemImpl" + super.toString() + "]";
   }

@@ -23,9 +23,6 @@ public class ReturnString extends Dispatch implements IReturnString {
   protected ReturnString(long ndisp) {
     super(ndisp);
   }
-  public ReturnString(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReturnString" + super.toString() + "]";
   }

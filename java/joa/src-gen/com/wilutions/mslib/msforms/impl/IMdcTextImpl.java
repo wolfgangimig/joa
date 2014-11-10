@@ -358,9 +358,6 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
   protected IMdcTextImpl(long ndisp) {
     super(ndisp);
   }
-  public IMdcTextImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMdcTextImpl" + super.toString() + "]";
   }

@@ -41,9 +41,6 @@ public class ShapeNodeImpl extends Dispatch implements com.wilutions.mslib.offic
   protected ShapeNodeImpl(long ndisp) {
     super(ndisp);
   }
-  public ShapeNodeImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ShapeNodeImpl" + super.toString() + "]";
   }

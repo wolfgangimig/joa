@@ -56,9 +56,6 @@ public class _FromRssFeedRuleConditionImpl extends Dispatch implements com.wilut
   protected _FromRssFeedRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _FromRssFeedRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_FromRssFeedRuleConditionImpl" + super.toString() + "]";
   }

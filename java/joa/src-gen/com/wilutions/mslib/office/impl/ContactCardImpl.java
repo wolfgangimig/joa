@@ -34,9 +34,6 @@ public class ContactCardImpl extends Dispatch implements com.wilutions.mslib.off
   protected ContactCardImpl(long ndisp) {
     super(ndisp);
   }
-  public ContactCardImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ContactCardImpl" + super.toString() + "]";
   }

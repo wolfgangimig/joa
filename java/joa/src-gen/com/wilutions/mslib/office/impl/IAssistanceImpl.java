@@ -29,9 +29,6 @@ public class IAssistanceImpl extends Dispatch implements com.wilutions.mslib.off
   protected IAssistanceImpl(long ndisp) {
     super(ndisp);
   }
-  public IAssistanceImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IAssistanceImpl" + super.toString() + "]";
   }

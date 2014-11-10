@@ -65,9 +65,6 @@ public class IMsoUpBarsImpl extends Dispatch implements com.wilutions.mslib.offi
   protected IMsoUpBarsImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoUpBarsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoUpBarsImpl" + super.toString() + "]";
   }

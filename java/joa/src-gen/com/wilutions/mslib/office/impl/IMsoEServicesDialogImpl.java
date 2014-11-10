@@ -39,9 +39,6 @@ public class IMsoEServicesDialogImpl extends Dispatch implements com.wilutions.m
   protected IMsoEServicesDialogImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoEServicesDialogImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoEServicesDialogImpl" + super.toString() + "]";
   }

@@ -30,9 +30,6 @@ public class ThemeEffectSchemeImpl extends Dispatch implements com.wilutions.msl
   protected ThemeEffectSchemeImpl(long ndisp) {
     super(ndisp);
   }
-  public ThemeEffectSchemeImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ThemeEffectSchemeImpl" + super.toString() + "]";
   }

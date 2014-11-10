@@ -308,9 +308,6 @@ public class ReportItem extends Dispatch implements _ReportItem {
   protected ReportItem(long ndisp) {
     super(ndisp);
   }
-  public ReportItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReportItem" + super.toString() + "]";
   }

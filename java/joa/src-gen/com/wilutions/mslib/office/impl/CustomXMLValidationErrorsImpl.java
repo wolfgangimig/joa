@@ -49,9 +49,6 @@ public class CustomXMLValidationErrorsImpl extends Dispatch implements com.wilut
   protected CustomXMLValidationErrorsImpl(long ndisp) {
     super(ndisp);
   }
-  public CustomXMLValidationErrorsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomXMLValidationErrorsImpl" + super.toString() + "]";
   }

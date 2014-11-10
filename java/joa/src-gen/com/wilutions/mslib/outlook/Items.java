@@ -116,9 +116,6 @@ public class Items extends Dispatch implements _Items {
   protected Items(long ndisp) {
     super(ndisp);
   }
-  public Items(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Items" + super.toString() + "]";
   }

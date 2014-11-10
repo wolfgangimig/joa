@@ -32,9 +32,6 @@ public class _DocSiteControl extends Dispatch implements _DDocSiteControl {
   protected _DocSiteControl(long ndisp) {
     super(ndisp);
   }
-  public _DocSiteControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_DocSiteControl" + super.toString() + "]";
   }

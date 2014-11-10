@@ -29,9 +29,6 @@ public class _OlkBusinessCardControlImpl extends Dispatch implements com.wilutio
   protected _OlkBusinessCardControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkBusinessCardControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkBusinessCardControlImpl" + super.toString() + "]";
   }

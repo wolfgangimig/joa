@@ -108,9 +108,6 @@ public class ViewFont extends Dispatch implements _ViewFont {
   protected ViewFont(long ndisp) {
     super(ndisp);
   }
-  public ViewFont(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ViewFont" + super.toString() + "]";
   }

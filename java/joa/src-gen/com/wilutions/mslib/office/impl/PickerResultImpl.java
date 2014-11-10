@@ -85,9 +85,6 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
   protected PickerResultImpl(long ndisp) {
     super(ndisp);
   }
-  public PickerResultImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PickerResultImpl" + super.toString() + "]";
   }

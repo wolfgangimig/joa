@@ -136,9 +136,6 @@ public class _OlkLabelImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _OlkLabelImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkLabelImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkLabelImpl" + super.toString() + "]";
   }

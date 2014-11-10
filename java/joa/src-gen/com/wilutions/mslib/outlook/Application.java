@@ -188,9 +188,6 @@ public class Application extends Dispatch implements _Application {
   protected Application(long ndisp) {
     super(ndisp);
   }
-  public Application(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Application" + super.toString() + "]";
   }

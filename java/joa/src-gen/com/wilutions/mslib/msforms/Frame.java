@@ -343,9 +343,6 @@ public class Frame extends Dispatch implements IOptionFrame {
   protected Frame(long ndisp) {
     super(ndisp);
   }
-  public Frame(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Frame" + super.toString() + "]";
   }

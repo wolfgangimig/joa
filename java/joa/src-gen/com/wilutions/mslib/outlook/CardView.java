@@ -186,9 +186,6 @@ public class CardView extends Dispatch implements _CardView {
   protected CardView(long ndisp) {
     super(ndisp);
   }
-  public CardView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CardView" + super.toString() + "]";
   }

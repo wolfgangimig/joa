@@ -318,9 +318,6 @@ public class _TableViewImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _TableViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _TableViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TableViewImpl" + super.toString() + "]";
   }

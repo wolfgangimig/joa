@@ -20,9 +20,6 @@ public class JoaBridgeCtrl extends Dispatch implements IJoaBridgeCtrl {
   protected JoaBridgeCtrl(long ndisp) {
     super(ndisp);
   }
-  public JoaBridgeCtrl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[JoaBridgeCtrl" + super.toString() + "]";
   }

@@ -79,9 +79,6 @@ public class TabsImpl extends Dispatch implements com.wilutions.mslib.msforms.Ta
   protected TabsImpl(long ndisp) {
     super(ndisp);
   }
-  public TabsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TabsImpl" + super.toString() + "]";
   }

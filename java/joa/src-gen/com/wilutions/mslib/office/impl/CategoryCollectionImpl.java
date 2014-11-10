@@ -43,9 +43,6 @@ public class CategoryCollectionImpl extends Dispatch implements com.wilutions.ms
   protected CategoryCollectionImpl(long ndisp) {
     super(ndisp);
   }
-  public CategoryCollectionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CategoryCollectionImpl" + super.toString() + "]";
   }

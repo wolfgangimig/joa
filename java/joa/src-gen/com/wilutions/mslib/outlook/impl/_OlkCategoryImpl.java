@@ -76,9 +76,6 @@ public class _OlkCategoryImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _OlkCategoryImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkCategoryImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkCategoryImpl" + super.toString() + "]";
   }

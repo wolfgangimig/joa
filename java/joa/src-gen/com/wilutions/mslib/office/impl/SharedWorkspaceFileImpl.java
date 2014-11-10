@@ -54,9 +54,6 @@ public class SharedWorkspaceFileImpl extends Dispatch implements com.wilutions.m
   protected SharedWorkspaceFileImpl(long ndisp) {
     super(ndisp);
   }
-  public SharedWorkspaceFileImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SharedWorkspaceFileImpl" + super.toString() + "]";
   }

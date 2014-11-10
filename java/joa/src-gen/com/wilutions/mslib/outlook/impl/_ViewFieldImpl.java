@@ -44,9 +44,6 @@ public class _ViewFieldImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _ViewFieldImpl(long ndisp) {
     super(ndisp);
   }
-  public _ViewFieldImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ViewFieldImpl" + super.toString() + "]";
   }

@@ -56,9 +56,6 @@ public class IWHTMLSubmitButtonImpl extends Dispatch implements com.wilutions.ms
   protected IWHTMLSubmitButtonImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLSubmitButtonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLSubmitButtonImpl" + super.toString() + "]";
   }

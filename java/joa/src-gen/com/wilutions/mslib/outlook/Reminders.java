@@ -52,9 +52,6 @@ public class Reminders extends Dispatch implements _Reminders {
   protected Reminders(long ndisp) {
     super(ndisp);
   }
-  public Reminders(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Reminders" + super.toString() + "]";
   }

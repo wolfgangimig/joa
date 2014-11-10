@@ -60,9 +60,6 @@ public class OutlookBarGroups extends Dispatch implements _OutlookBarGroups {
   protected OutlookBarGroups(long ndisp) {
     super(ndisp);
   }
-  public OutlookBarGroups(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OutlookBarGroups" + super.toString() + "]";
   }

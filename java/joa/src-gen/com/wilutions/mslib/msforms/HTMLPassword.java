@@ -50,9 +50,6 @@ public class HTMLPassword extends Dispatch implements IWHTMLPassword {
   protected HTMLPassword(long ndisp) {
     super(ndisp);
   }
-  public HTMLPassword(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLPassword" + super.toString() + "]";
   }

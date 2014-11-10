@@ -52,9 +52,6 @@ public class AxesImpl extends Dispatch implements com.wilutions.mslib.office.Axe
   protected AxesImpl(long ndisp) {
     super(ndisp);
   }
-  public AxesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AxesImpl" + super.toString() + "]";
   }

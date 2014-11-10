@@ -61,9 +61,6 @@ public class MsoDebugOptionsImpl extends Dispatch implements com.wilutions.mslib
   protected MsoDebugOptionsImpl(long ndisp) {
     super(ndisp);
   }
-  public MsoDebugOptionsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MsoDebugOptionsImpl" + super.toString() + "]";
   }

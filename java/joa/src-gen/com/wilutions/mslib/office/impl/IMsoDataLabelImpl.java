@@ -343,9 +343,6 @@ public class IMsoDataLabelImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoDataLabelImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDataLabelImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDataLabelImpl" + super.toString() + "]";
   }

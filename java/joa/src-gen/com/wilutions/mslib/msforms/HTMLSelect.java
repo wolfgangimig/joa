@@ -68,9 +68,6 @@ public class HTMLSelect extends Dispatch implements IWHTMLSelect {
   protected HTMLSelect(long ndisp) {
     super(ndisp);
   }
-  public HTMLSelect(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLSelect" + super.toString() + "]";
   }

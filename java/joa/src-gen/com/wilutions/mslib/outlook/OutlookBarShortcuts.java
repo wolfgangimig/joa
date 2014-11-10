@@ -61,9 +61,6 @@ public class OutlookBarShortcuts extends Dispatch implements _OutlookBarShortcut
   protected OutlookBarShortcuts(long ndisp) {
     super(ndisp);
   }
-  public OutlookBarShortcuts(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OutlookBarShortcuts" + super.toString() + "]";
   }

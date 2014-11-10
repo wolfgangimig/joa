@@ -41,9 +41,6 @@ public class Column extends Dispatch implements _Column {
   protected Column(long ndisp) {
     super(ndisp);
   }
-  public Column(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Column" + super.toString() + "]";
   }

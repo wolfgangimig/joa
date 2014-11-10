@@ -43,9 +43,6 @@ public class IDataAutoWrapperImpl extends Dispatch implements com.wilutions.msli
   protected IDataAutoWrapperImpl(long ndisp) {
     super(ndisp);
   }
-  public IDataAutoWrapperImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IDataAutoWrapperImpl" + super.toString() + "]";
   }

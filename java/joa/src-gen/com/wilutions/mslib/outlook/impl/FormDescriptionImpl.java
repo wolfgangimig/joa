@@ -183,9 +183,6 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
   protected FormDescriptionImpl(long ndisp) {
     super(ndisp);
   }
-  public FormDescriptionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FormDescriptionImpl" + super.toString() + "]";
   }

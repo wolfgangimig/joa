@@ -89,9 +89,6 @@ public class _TableImpl extends Dispatch implements com.wilutions.mslib.outlook.
   protected _TableImpl(long ndisp) {
     super(ndisp);
   }
-  public _TableImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TableImpl" + super.toString() + "]";
   }

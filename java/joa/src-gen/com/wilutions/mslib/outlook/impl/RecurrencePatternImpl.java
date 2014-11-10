@@ -172,9 +172,6 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
   protected RecurrencePatternImpl(long ndisp) {
     super(ndisp);
   }
-  public RecurrencePatternImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RecurrencePatternImpl" + super.toString() + "]";
   }

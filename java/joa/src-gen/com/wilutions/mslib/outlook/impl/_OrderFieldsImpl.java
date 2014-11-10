@@ -69,9 +69,6 @@ public class _OrderFieldsImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _OrderFieldsImpl(long ndisp) {
     super(ndisp);
   }
-  public _OrderFieldsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OrderFieldsImpl" + super.toString() + "]";
   }

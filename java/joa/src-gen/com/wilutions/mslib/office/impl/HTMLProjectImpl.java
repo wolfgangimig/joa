@@ -49,9 +49,6 @@ public class HTMLProjectImpl extends Dispatch implements com.wilutions.mslib.off
   protected HTMLProjectImpl(long ndisp) {
     super(ndisp);
   }
-  public HTMLProjectImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLProjectImpl" + super.toString() + "]";
   }

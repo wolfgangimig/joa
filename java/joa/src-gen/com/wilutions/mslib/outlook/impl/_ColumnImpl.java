@@ -38,9 +38,6 @@ public class _ColumnImpl extends Dispatch implements com.wilutions.mslib.outlook
   protected _ColumnImpl(long ndisp) {
     super(ndisp);
   }
-  public _ColumnImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ColumnImpl" + super.toString() + "]";
   }

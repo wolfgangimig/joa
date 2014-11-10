@@ -141,9 +141,6 @@ public class BusinessCardView extends Dispatch implements _BusinessCardView {
   protected BusinessCardView(long ndisp) {
     super(ndisp);
   }
-  public BusinessCardView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[BusinessCardView" + super.toString() + "]";
   }

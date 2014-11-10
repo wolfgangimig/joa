@@ -384,9 +384,6 @@ public class MobileItem extends Dispatch implements _MobileItem {
   protected MobileItem(long ndisp) {
     super(ndisp);
   }
-  public MobileItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MobileItem" + super.toString() + "]";
   }

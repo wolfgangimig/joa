@@ -41,9 +41,6 @@ public class IMsoContactCardImpl extends Dispatch implements com.wilutions.mslib
   protected IMsoContactCardImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoContactCardImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoContactCardImpl" + super.toString() + "]";
   }

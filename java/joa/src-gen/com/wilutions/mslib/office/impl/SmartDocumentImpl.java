@@ -46,9 +46,6 @@ public class SmartDocumentImpl extends Dispatch implements com.wilutions.mslib.o
   protected SmartDocumentImpl(long ndisp) {
     super(ndisp);
   }
-  public SmartDocumentImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SmartDocumentImpl" + super.toString() + "]";
   }

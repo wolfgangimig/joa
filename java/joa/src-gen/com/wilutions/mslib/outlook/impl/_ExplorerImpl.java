@@ -191,9 +191,6 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _ExplorerImpl(long ndisp) {
     super(ndisp);
   }
-  public _ExplorerImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ExplorerImpl" + super.toString() + "]";
   }

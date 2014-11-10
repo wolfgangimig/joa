@@ -37,9 +37,6 @@ public class FoundFilesImpl extends Dispatch implements com.wilutions.mslib.offi
   protected FoundFilesImpl(long ndisp) {
     super(ndisp);
   }
-  public FoundFilesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FoundFilesImpl" + super.toString() + "]";
   }

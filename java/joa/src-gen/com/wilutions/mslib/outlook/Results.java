@@ -88,9 +88,6 @@ public class Results extends Dispatch implements _Results {
   protected Results(long ndisp) {
     super(ndisp);
   }
-  public Results(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Results" + super.toString() + "]";
   }

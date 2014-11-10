@@ -47,9 +47,6 @@ public class SimpleItems extends Dispatch implements _SimpleItems {
   protected SimpleItems(long ndisp) {
     super(ndisp);
   }
-  public SimpleItems(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SimpleItems" + super.toString() + "]";
   }

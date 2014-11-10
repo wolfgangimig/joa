@@ -352,9 +352,6 @@ public class UserForm extends Dispatch implements _UserForm {
   protected UserForm(long ndisp) {
     super(ndisp);
   }
-  public UserForm(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[UserForm" + super.toString() + "]";
   }

@@ -119,9 +119,6 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
   protected PermissionImpl(long ndisp) {
     super(ndisp);
   }
-  public PermissionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PermissionImpl" + super.toString() + "]";
   }

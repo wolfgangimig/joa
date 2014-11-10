@@ -178,9 +178,6 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoTrendlineImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoTrendlineImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoTrendlineImpl" + super.toString() + "]";
   }

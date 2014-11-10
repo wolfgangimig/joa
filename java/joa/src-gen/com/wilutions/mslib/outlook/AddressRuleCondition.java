@@ -59,9 +59,6 @@ public class AddressRuleCondition extends Dispatch implements _AddressRuleCondit
   protected AddressRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public AddressRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AddressRuleCondition" + super.toString() + "]";
   }

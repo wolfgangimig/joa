@@ -185,9 +185,6 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _ApplicationImpl(long ndisp) {
     super(ndisp);
   }
-  public _ApplicationImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ApplicationImpl" + super.toString() + "]";
   }

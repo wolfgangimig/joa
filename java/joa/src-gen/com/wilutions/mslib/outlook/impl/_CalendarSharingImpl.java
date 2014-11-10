@@ -113,9 +113,6 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
   protected _CalendarSharingImpl(long ndisp) {
     super(ndisp);
   }
-  public _CalendarSharingImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CalendarSharingImpl" + super.toString() + "]";
   }

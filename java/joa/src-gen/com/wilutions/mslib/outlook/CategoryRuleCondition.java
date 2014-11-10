@@ -59,9 +59,6 @@ public class CategoryRuleCondition extends Dispatch implements _CategoryRuleCond
   protected CategoryRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public CategoryRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CategoryRuleCondition" + super.toString() + "]";
   }

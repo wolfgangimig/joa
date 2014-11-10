@@ -151,9 +151,6 @@ public class CommandButton extends Dispatch implements ICommandButton {
   protected CommandButton(long ndisp) {
     super(ndisp);
   }
-  public CommandButton(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CommandButton" + super.toString() + "]";
   }

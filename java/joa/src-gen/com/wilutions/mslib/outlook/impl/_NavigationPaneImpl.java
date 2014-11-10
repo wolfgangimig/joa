@@ -66,9 +66,6 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
   protected _NavigationPaneImpl(long ndisp) {
     super(ndisp);
   }
-  public _NavigationPaneImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NavigationPaneImpl" + super.toString() + "]";
   }

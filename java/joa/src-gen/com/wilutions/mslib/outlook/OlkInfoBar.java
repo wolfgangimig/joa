@@ -32,9 +32,6 @@ public class OlkInfoBar extends Dispatch implements _OlkInfoBar {
   protected OlkInfoBar(long ndisp) {
     super(ndisp);
   }
-  public OlkInfoBar(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkInfoBar" + super.toString() + "]";
   }

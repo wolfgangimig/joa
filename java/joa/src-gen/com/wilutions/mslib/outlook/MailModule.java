@@ -70,9 +70,6 @@ public class MailModule extends Dispatch implements _MailModule {
   protected MailModule(long ndisp) {
     super(ndisp);
   }
-  public MailModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MailModule" + super.toString() + "]";
   }

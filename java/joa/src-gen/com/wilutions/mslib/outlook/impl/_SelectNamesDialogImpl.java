@@ -132,9 +132,6 @@ public class _SelectNamesDialogImpl extends Dispatch implements com.wilutions.ms
   protected _SelectNamesDialogImpl(long ndisp) {
     super(ndisp);
   }
-  public _SelectNamesDialogImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_SelectNamesDialogImpl" + super.toString() + "]";
   }

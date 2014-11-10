@@ -85,9 +85,6 @@ public class LegendEntryImpl extends Dispatch implements com.wilutions.mslib.off
   protected LegendEntryImpl(long ndisp) {
     super(ndisp);
   }
-  public LegendEntryImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[LegendEntryImpl" + super.toString() + "]";
   }

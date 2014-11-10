@@ -139,9 +139,6 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
   protected OlkLabel(long ndisp) {
     super(ndisp);
   }
-  public OlkLabel(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkLabel" + super.toString() + "]";
   }

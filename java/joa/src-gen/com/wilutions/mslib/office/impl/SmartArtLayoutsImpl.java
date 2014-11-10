@@ -43,9 +43,6 @@ public class SmartArtLayoutsImpl extends Dispatch implements com.wilutions.mslib
   protected SmartArtLayoutsImpl(long ndisp) {
     super(ndisp);
   }
-  public SmartArtLayoutsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SmartArtLayoutsImpl" + super.toString() + "]";
   }

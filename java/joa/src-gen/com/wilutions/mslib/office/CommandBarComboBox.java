@@ -311,9 +311,6 @@ public class CommandBarComboBox extends Dispatch implements _CommandBarComboBox 
   protected CommandBarComboBox(long ndisp) {
     super(ndisp);
   }
-  public CommandBarComboBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CommandBarComboBox" + super.toString() + "]";
   }

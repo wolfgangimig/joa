@@ -279,9 +279,6 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
   protected IMsoDataLabelsImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDataLabelsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDataLabelsImpl" + super.toString() + "]";
   }

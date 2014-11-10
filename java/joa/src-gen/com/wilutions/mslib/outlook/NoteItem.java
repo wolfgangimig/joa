@@ -209,9 +209,6 @@ public class NoteItem extends Dispatch implements _NoteItem {
   protected NoteItem(long ndisp) {
     super(ndisp);
   }
-  public NoteItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NoteItem" + super.toString() + "]";
   }

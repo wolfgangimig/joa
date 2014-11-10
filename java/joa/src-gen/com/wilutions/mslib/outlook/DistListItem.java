@@ -442,9 +442,6 @@ public class DistListItem extends Dispatch implements _DistListItem {
   protected DistListItem(long ndisp) {
     super(ndisp);
   }
-  public DistListItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DistListItem" + super.toString() + "]";
   }

@@ -109,9 +109,6 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
   protected IFontImpl(long ndisp) {
     super(ndisp);
   }
-  public IFontImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IFontImpl" + super.toString() + "]";
   }

@@ -52,9 +52,6 @@ public class UserPermissionImpl extends Dispatch implements com.wilutions.mslib.
   protected UserPermissionImpl(long ndisp) {
     super(ndisp);
   }
-  public UserPermissionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[UserPermissionImpl" + super.toString() + "]";
   }

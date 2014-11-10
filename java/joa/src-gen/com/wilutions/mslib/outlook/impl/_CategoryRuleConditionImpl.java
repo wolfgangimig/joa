@@ -56,9 +56,6 @@ public class _CategoryRuleConditionImpl extends Dispatch implements com.wilution
   protected _CategoryRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _CategoryRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CategoryRuleConditionImpl" + super.toString() + "]";
   }

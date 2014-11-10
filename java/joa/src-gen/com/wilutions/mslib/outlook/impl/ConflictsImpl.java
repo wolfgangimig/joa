@@ -69,9 +69,6 @@ public class ConflictsImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected ConflictsImpl(long ndisp) {
     super(ndisp);
   }
-  public ConflictsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ConflictsImpl" + super.toString() + "]";
   }

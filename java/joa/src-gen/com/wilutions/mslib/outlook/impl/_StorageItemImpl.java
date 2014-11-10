@@ -104,9 +104,6 @@ public class _StorageItemImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _StorageItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _StorageItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_StorageItemImpl" + super.toString() + "]";
   }

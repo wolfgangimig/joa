@@ -57,9 +57,6 @@ public class WebPageFontImpl extends Dispatch implements com.wilutions.mslib.off
   protected WebPageFontImpl(long ndisp) {
     super(ndisp);
   }
-  public WebPageFontImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WebPageFontImpl" + super.toString() + "]";
   }

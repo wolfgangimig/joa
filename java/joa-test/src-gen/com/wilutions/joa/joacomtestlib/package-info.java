@@ -1,3 +1,4 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
 /**
  * JoaComTestLib.
  * 

@@ -59,9 +59,6 @@ public class SenderInAddressListRuleCondition extends Dispatch implements _Sende
   protected SenderInAddressListRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public SenderInAddressListRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SenderInAddressListRuleCondition" + super.toString() + "]";
   }

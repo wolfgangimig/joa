@@ -327,9 +327,6 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
   protected ExchangeUser(long ndisp) {
     super(ndisp);
   }
-  public ExchangeUser(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ExchangeUser" + super.toString() + "]";
   }

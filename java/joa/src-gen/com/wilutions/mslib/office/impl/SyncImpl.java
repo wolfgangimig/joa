@@ -63,9 +63,6 @@ public class SyncImpl extends Dispatch implements com.wilutions.mslib.office.Syn
   protected SyncImpl(long ndisp) {
     super(ndisp);
   }
-  public SyncImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SyncImpl" + super.toString() + "]";
   }

@@ -42,9 +42,6 @@ public class AdjustmentsImpl extends Dispatch implements com.wilutions.mslib.off
   protected AdjustmentsImpl(long ndisp) {
     super(ndisp);
   }
-  public AdjustmentsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AdjustmentsImpl" + super.toString() + "]";
   }

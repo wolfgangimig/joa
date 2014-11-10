@@ -122,9 +122,6 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
   protected PictureFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public PictureFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PictureFormatImpl" + super.toString() + "]";
   }

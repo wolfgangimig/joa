@@ -44,9 +44,6 @@ public class _SyncObjectImpl extends Dispatch implements com.wilutions.mslib.out
   protected _SyncObjectImpl(long ndisp) {
     super(ndisp);
   }
-  public _SyncObjectImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_SyncObjectImpl" + super.toString() + "]";
   }

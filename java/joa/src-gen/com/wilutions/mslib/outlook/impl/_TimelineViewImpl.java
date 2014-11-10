@@ -204,9 +204,6 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
   protected _TimelineViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _TimelineViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TimelineViewImpl" + super.toString() + "]";
   }

@@ -475,9 +475,6 @@ public class ComboBox extends Dispatch implements IMdcCombo {
   protected ComboBox(long ndisp) {
     super(ndisp);
   }
-  public ComboBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ComboBox" + super.toString() + "]";
   }

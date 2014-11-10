@@ -59,9 +59,6 @@ public class PlaySoundRuleAction extends Dispatch implements _PlaySoundRuleActio
   protected PlaySoundRuleAction(long ndisp) {
     super(ndisp);
   }
-  public PlaySoundRuleAction(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PlaySoundRuleAction" + super.toString() + "]";
   }

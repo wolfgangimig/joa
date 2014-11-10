@@ -48,9 +48,6 @@ public class FullSeriesCollectionImpl extends Dispatch implements com.wilutions.
   protected FullSeriesCollectionImpl(long ndisp) {
     super(ndisp);
   }
-  public FullSeriesCollectionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FullSeriesCollectionImpl" + super.toString() + "]";
   }

@@ -1460,9 +1460,6 @@ public class ContactItem extends Dispatch implements _ContactItem {
   protected ContactItem(long ndisp) {
     super(ndisp);
   }
-  public ContactItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ContactItem" + super.toString() + "]";
   }

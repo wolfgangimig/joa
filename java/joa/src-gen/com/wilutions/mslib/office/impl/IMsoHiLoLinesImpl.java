@@ -49,9 +49,6 @@ public class IMsoHiLoLinesImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoHiLoLinesImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoHiLoLinesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoHiLoLinesImpl" + super.toString() + "]";
   }

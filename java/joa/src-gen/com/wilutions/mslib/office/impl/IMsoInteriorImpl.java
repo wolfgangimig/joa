@@ -80,9 +80,6 @@ public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.of
   protected IMsoInteriorImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoInteriorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoInteriorImpl" + super.toString() + "]";
   }

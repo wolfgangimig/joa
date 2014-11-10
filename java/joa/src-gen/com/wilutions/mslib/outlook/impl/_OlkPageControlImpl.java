@@ -20,9 +20,6 @@ public class _OlkPageControlImpl extends Dispatch implements com.wilutions.mslib
   protected _OlkPageControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkPageControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkPageControlImpl" + super.toString() + "]";
   }

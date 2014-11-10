@@ -484,9 +484,6 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _MeetingItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _MeetingItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_MeetingItemImpl" + super.toString() + "]";
   }

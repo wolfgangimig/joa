@@ -19,9 +19,6 @@ public class IMsoDispCagNotifySinkImpl extends Dispatch implements com.wilutions
   protected IMsoDispCagNotifySinkImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDispCagNotifySinkImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDispCagNotifySinkImpl" + super.toString() + "]";
   }

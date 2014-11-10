@@ -23,9 +23,6 @@ public class ReturnSingle extends Dispatch implements IReturnSingle {
   protected ReturnSingle(long ndisp) {
     super(ndisp);
   }
-  public ReturnSingle(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReturnSingle" + super.toString() + "]";
   }

@@ -136,9 +136,6 @@ public class ILicWizExternalImpl extends Dispatch implements com.wilutions.mslib
   protected ILicWizExternalImpl(long ndisp) {
     super(ndisp);
   }
-  public ILicWizExternalImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ILicWizExternalImpl" + super.toString() + "]";
   }

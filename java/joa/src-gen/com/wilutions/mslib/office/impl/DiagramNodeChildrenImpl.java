@@ -66,9 +66,6 @@ public class DiagramNodeChildrenImpl extends Dispatch implements com.wilutions.m
   protected DiagramNodeChildrenImpl(long ndisp) {
     super(ndisp);
   }
-  public DiagramNodeChildrenImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DiagramNodeChildrenImpl" + super.toString() + "]";
   }

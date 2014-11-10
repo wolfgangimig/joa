@@ -405,9 +405,6 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   protected IMsoAxisImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoAxisImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoAxisImpl" + super.toString() + "]";
   }

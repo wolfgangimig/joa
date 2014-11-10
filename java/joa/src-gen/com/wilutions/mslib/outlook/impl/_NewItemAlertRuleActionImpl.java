@@ -56,9 +56,6 @@ public class _NewItemAlertRuleActionImpl extends Dispatch implements com.wilutio
   protected _NewItemAlertRuleActionImpl(long ndisp) {
     super(ndisp);
   }
-  public _NewItemAlertRuleActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NewItemAlertRuleActionImpl" + super.toString() + "]";
   }

@@ -48,9 +48,6 @@ public class Accounts extends Dispatch implements _Accounts {
   protected Accounts(long ndisp) {
     super(ndisp);
   }
-  public Accounts(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Accounts" + super.toString() + "]";
   }

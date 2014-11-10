@@ -1,3 +1,4 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.joa.joacomtestlib;
 import com.wilutions.com.*;
 
@@ -293,9 +294,6 @@ public class JoaTestObjectJavaImpl extends Dispatch implements IJoaTestObject {
     super("{A4DFAB66-8B5D-40AE-8D8C-7457F4BE5894}");
   }
   protected JoaTestObjectJavaImpl(long ndisp) {
-    super(ndisp);
-  }
-  public JoaTestObjectJavaImpl(Dispatch ndisp) {
     super(ndisp);
   }
   public String toString() {

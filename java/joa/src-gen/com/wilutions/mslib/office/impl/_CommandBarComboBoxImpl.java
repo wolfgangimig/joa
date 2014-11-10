@@ -308,9 +308,6 @@ public class _CommandBarComboBoxImpl extends Dispatch implements com.wilutions.m
   protected _CommandBarComboBoxImpl(long ndisp) {
     super(ndisp);
   }
-  public _CommandBarComboBoxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CommandBarComboBoxImpl" + super.toString() + "]";
   }

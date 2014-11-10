@@ -233,9 +233,6 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
   protected IMsoDisplayUnitLabelImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDisplayUnitLabelImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDisplayUnitLabelImpl" + super.toString() + "]";
   }

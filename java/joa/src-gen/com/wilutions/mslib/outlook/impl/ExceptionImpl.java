@@ -49,9 +49,6 @@ public class ExceptionImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected ExceptionImpl(long ndisp) {
     super(ndisp);
   }
-  public ExceptionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ExceptionImpl" + super.toString() + "]";
   }

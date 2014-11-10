@@ -14,9 +14,6 @@ public class StdFont extends Dispatch implements Font {
   protected StdFont(long ndisp) {
     super(ndisp);
   }
-  public StdFont(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[StdFont" + super.toString() + "]";
   }

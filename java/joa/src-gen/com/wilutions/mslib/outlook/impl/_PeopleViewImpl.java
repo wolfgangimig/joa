@@ -123,9 +123,6 @@ public class _PeopleViewImpl extends Dispatch implements com.wilutions.mslib.out
   protected _PeopleViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _PeopleViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_PeopleViewImpl" + super.toString() + "]";
   }

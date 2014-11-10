@@ -20,9 +20,6 @@ public class ICTPFactoryImpl extends Dispatch implements com.wilutions.mslib.off
   protected ICTPFactoryImpl(long ndisp) {
     super(ndisp);
   }
-  public ICTPFactoryImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ICTPFactoryImpl" + super.toString() + "]";
   }

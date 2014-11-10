@@ -47,9 +47,6 @@ public class SyncObject extends Dispatch implements _SyncObject {
   protected SyncObject(long ndisp) {
     super(ndisp);
   }
-  public SyncObject(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SyncObject" + super.toString() + "]";
   }

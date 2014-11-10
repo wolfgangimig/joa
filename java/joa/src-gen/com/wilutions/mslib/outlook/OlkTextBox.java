@@ -282,9 +282,6 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
   protected OlkTextBox(long ndisp) {
     super(ndisp);
   }
-  public OlkTextBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkTextBox" + super.toString() + "]";
   }

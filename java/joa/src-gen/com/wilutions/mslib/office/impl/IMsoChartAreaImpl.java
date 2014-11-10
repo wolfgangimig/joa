@@ -149,9 +149,6 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoChartAreaImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoChartAreaImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoChartAreaImpl" + super.toString() + "]";
   }

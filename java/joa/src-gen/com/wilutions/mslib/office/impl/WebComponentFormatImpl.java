@@ -78,9 +78,6 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
   protected WebComponentFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public WebComponentFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WebComponentFormatImpl" + super.toString() + "]";
   }

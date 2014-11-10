@@ -36,9 +36,6 @@ public class IMsoCornersImpl extends Dispatch implements com.wilutions.mslib.off
   protected IMsoCornersImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoCornersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoCornersImpl" + super.toString() + "]";
   }

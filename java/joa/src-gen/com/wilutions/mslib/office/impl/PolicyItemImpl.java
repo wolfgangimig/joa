@@ -46,9 +46,6 @@ public class PolicyItemImpl extends Dispatch implements com.wilutions.mslib.offi
   protected PolicyItemImpl(long ndisp) {
     super(ndisp);
   }
-  public PolicyItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PolicyItemImpl" + super.toString() + "]";
   }

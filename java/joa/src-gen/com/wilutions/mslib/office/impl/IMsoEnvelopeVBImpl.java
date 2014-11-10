@@ -35,9 +35,6 @@ public class IMsoEnvelopeVBImpl extends Dispatch implements com.wilutions.mslib.
   protected IMsoEnvelopeVBImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoEnvelopeVBImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoEnvelopeVBImpl" + super.toString() + "]";
   }

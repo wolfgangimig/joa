@@ -127,9 +127,6 @@ public class _OlkCheckBoxImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _OlkCheckBoxImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkCheckBoxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkCheckBoxImpl" + super.toString() + "]";
   }

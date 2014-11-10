@@ -55,9 +55,6 @@ public class NavigationModules extends Dispatch implements _NavigationModules {
   protected NavigationModules(long ndisp) {
     super(ndisp);
   }
-  public NavigationModules(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NavigationModules" + super.toString() + "]";
   }

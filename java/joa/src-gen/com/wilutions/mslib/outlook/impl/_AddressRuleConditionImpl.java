@@ -56,9 +56,6 @@ public class _AddressRuleConditionImpl extends Dispatch implements com.wilutions
   protected _AddressRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _AddressRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AddressRuleConditionImpl" + super.toString() + "]";
   }

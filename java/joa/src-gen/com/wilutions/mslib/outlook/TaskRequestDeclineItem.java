@@ -314,9 +314,6 @@ public class TaskRequestDeclineItem extends Dispatch implements _TaskRequestDecl
   protected TaskRequestDeclineItem(long ndisp) {
     super(ndisp);
   }
-  public TaskRequestDeclineItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TaskRequestDeclineItem" + super.toString() + "]";
   }

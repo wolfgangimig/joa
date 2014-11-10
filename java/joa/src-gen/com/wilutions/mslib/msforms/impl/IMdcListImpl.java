@@ -293,9 +293,6 @@ public class IMdcListImpl extends Dispatch implements com.wilutions.mslib.msform
   protected IMdcListImpl(long ndisp) {
     super(ndisp);
   }
-  public IMdcListImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMdcListImpl" + super.toString() + "]";
   }

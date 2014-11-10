@@ -29,9 +29,6 @@ public class _OlkInfoBarImpl extends Dispatch implements com.wilutions.mslib.out
   protected _OlkInfoBarImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkInfoBarImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkInfoBarImpl" + super.toString() + "]";
   }

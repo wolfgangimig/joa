@@ -340,9 +340,6 @@ public class IOptionFrameImpl extends Dispatch implements com.wilutions.mslib.ms
   protected IOptionFrameImpl(long ndisp) {
     super(ndisp);
   }
-  public IOptionFrameImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IOptionFrameImpl" + super.toString() + "]";
   }

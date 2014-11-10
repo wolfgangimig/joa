@@ -487,9 +487,6 @@ public class MeetingItem extends Dispatch implements _MeetingItem {
   protected MeetingItem(long ndisp) {
     super(ndisp);
   }
-  public MeetingItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MeetingItem" + super.toString() + "]";
   }

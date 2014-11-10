@@ -84,9 +84,6 @@ public class Folders extends Dispatch implements _Folders {
   protected Folders(long ndisp) {
     super(ndisp);
   }
-  public Folders(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Folders" + super.toString() + "]";
   }

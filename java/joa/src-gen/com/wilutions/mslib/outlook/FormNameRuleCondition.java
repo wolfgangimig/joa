@@ -59,9 +59,6 @@ public class FormNameRuleCondition extends Dispatch implements _FormNameRuleCond
   protected FormNameRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public FormNameRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FormNameRuleCondition" + super.toString() + "]";
   }

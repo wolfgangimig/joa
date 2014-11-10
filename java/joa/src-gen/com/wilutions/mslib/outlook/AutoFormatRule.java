@@ -77,9 +77,6 @@ public class AutoFormatRule extends Dispatch implements _AutoFormatRule {
   protected AutoFormatRule(long ndisp) {
     super(ndisp);
   }
-  public AutoFormatRule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AutoFormatRule" + super.toString() + "]";
   }

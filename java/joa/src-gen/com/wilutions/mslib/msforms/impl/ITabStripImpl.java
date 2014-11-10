@@ -185,9 +185,6 @@ public class ITabStripImpl extends Dispatch implements com.wilutions.mslib.msfor
   protected ITabStripImpl(long ndisp) {
     super(ndisp);
   }
-  public ITabStripImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ITabStripImpl" + super.toString() + "]";
   }

@@ -267,9 +267,6 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
   protected AssistantImpl(long ndisp) {
     super(ndisp);
   }
-  public AssistantImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AssistantImpl" + super.toString() + "]";
   }

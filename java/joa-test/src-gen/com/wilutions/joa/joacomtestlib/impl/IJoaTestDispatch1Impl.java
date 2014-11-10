@@ -1,3 +1,4 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.joa.joacomtestlib.impl;
 import com.wilutions.com.*;
 
@@ -17,9 +18,6 @@ public class IJoaTestDispatch1Impl extends Dispatch implements com.wilutions.joa
     super(progId);
   }
   protected IJoaTestDispatch1Impl(long ndisp) {
-    super(ndisp);
-  }
-  public IJoaTestDispatch1Impl(Dispatch ndisp) {
     super(ndisp);
   }
   public String toString() {

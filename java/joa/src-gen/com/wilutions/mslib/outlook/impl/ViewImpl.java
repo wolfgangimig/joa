@@ -117,9 +117,6 @@ public class ViewImpl extends Dispatch implements com.wilutions.mslib.outlook.Vi
   protected ViewImpl(long ndisp) {
     super(ndisp);
   }
-  public ViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ViewImpl" + super.toString() + "]";
   }

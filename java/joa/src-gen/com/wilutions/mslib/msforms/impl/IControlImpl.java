@@ -274,9 +274,6 @@ public class IControlImpl extends Dispatch implements com.wilutions.mslib.msform
   protected IControlImpl(long ndisp) {
     super(ndisp);
   }
-  public IControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IControlImpl" + super.toString() + "]";
   }

@@ -38,9 +38,6 @@ public class LanguageSettingsImpl extends Dispatch implements com.wilutions.msli
   protected LanguageSettingsImpl(long ndisp) {
     super(ndisp);
   }
-  public LanguageSettingsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[LanguageSettingsImpl" + super.toString() + "]";
   }

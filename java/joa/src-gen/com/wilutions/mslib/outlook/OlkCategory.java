@@ -79,9 +79,6 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
   protected OlkCategory(long ndisp) {
     super(ndisp);
   }
-  public OlkCategory(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkCategory" + super.toString() + "]";
   }

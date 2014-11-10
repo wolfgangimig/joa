@@ -10,9 +10,6 @@ public class IFontDispImpl extends com.wilutions.mslib.stdole.impl.FontImpl impl
   protected IFontDispImpl(long ndisp) {
     super(ndisp);
   }
-  public IFontDispImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IFontDispImpl" + super.toString() + "]";
   }

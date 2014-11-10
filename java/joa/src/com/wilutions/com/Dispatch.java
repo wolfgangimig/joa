@@ -36,18 +36,6 @@ public class Dispatch implements IDispatch {
 	 */
 	protected Dispatch(long ndisp) {
 		this.ndisp = ndisp;
-		JoaDll.addRef(this);
-	}
-
-	/**
-	 * Copy constructor. After initialization, the native object is assigned to
-	 * both, the passed object and the constructed object.
-	 * 
-	 * @param rhs
-	 */
-	public Dispatch(Dispatch rhs) {
-		this.ndisp = rhs.ndisp;
-		JoaDll.addRef(this);
 	}
 
 	/**
@@ -186,7 +174,7 @@ public class Dispatch implements IDispatch {
 	 */
 	public synchronized void release() {
 		JoaDll.release(this);
-		this.ndisp = 0;
+		assert this.ndisp == 0;
 	}
 
 	public String toString() {

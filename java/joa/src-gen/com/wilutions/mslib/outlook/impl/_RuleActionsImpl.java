@@ -147,9 +147,6 @@ public class _RuleActionsImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _RuleActionsImpl(long ndisp) {
     super(ndisp);
   }
-  public _RuleActionsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RuleActionsImpl" + super.toString() + "]";
   }

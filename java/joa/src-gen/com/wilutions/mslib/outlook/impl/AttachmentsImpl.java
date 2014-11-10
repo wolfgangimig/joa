@@ -59,9 +59,6 @@ public class AttachmentsImpl extends Dispatch implements com.wilutions.mslib.out
   protected AttachmentsImpl(long ndisp) {
     super(ndisp);
   }
-  public AttachmentsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AttachmentsImpl" + super.toString() + "]";
   }

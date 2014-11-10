@@ -57,9 +57,6 @@ public class OutlookBarGroupImpl extends Dispatch implements com.wilutions.mslib
   protected OutlookBarGroupImpl(long ndisp) {
     super(ndisp);
   }
-  public OutlookBarGroupImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OutlookBarGroupImpl" + super.toString() + "]";
   }

@@ -180,9 +180,6 @@ public class CustomXMLNodeImpl extends Dispatch implements com.wilutions.mslib.o
   protected CustomXMLNodeImpl(long ndisp) {
     super(ndisp);
   }
-  public CustomXMLNodeImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomXMLNodeImpl" + super.toString() + "]";
   }

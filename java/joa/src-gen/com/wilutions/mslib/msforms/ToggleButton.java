@@ -196,9 +196,6 @@ public class ToggleButton extends Dispatch implements IMdcToggleButton {
   protected ToggleButton(long ndisp) {
     super(ndisp);
   }
-  public ToggleButton(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ToggleButton" + super.toString() + "]";
   }

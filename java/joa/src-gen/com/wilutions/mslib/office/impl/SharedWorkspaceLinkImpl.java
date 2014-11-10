@@ -79,9 +79,6 @@ public class SharedWorkspaceLinkImpl extends Dispatch implements com.wilutions.m
   protected SharedWorkspaceLinkImpl(long ndisp) {
     super(ndisp);
   }
-  public SharedWorkspaceLinkImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SharedWorkspaceLinkImpl" + super.toString() + "]";
   }

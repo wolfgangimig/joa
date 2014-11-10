@@ -62,9 +62,6 @@ public class _RowImpl extends Dispatch implements com.wilutions.mslib.outlook._R
   protected _RowImpl(long ndisp) {
     super(ndisp);
   }
-  public _RowImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RowImpl" + super.toString() + "]";
   }

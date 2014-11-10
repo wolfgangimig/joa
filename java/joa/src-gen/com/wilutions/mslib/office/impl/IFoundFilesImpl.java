@@ -27,9 +27,6 @@ public class IFoundFilesImpl extends Dispatch implements com.wilutions.mslib.off
   protected IFoundFilesImpl(long ndisp) {
     super(ndisp);
   }
-  public IFoundFilesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IFoundFilesImpl" + super.toString() + "]";
   }

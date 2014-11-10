@@ -80,9 +80,6 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
   protected SearchImpl(long ndisp) {
     super(ndisp);
   }
-  public SearchImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SearchImpl" + super.toString() + "]";
   }

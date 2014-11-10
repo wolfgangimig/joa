@@ -81,9 +81,6 @@ public class IBlogExtensibilityImpl extends Dispatch implements com.wilutions.ms
   protected IBlogExtensibilityImpl(long ndisp) {
     super(ndisp);
   }
-  public IBlogExtensibilityImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IBlogExtensibilityImpl" + super.toString() + "]";
   }

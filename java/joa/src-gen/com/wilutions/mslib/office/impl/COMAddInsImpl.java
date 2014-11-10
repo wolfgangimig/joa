@@ -46,9 +46,6 @@ public class COMAddInsImpl extends Dispatch implements com.wilutions.mslib.offic
   protected COMAddInsImpl(long ndisp) {
     super(ndisp);
   }
-  public COMAddInsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[COMAddInsImpl" + super.toString() + "]";
   }

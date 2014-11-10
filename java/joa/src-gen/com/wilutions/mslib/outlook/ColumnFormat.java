@@ -77,9 +77,6 @@ public class ColumnFormat extends Dispatch implements _ColumnFormat {
   protected ColumnFormat(long ndisp) {
     super(ndisp);
   }
-  public ColumnFormat(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ColumnFormat" + super.toString() + "]";
   }

@@ -40,9 +40,6 @@ public class ScopeFolderImpl extends Dispatch implements com.wilutions.mslib.off
   protected ScopeFolderImpl(long ndisp) {
     super(ndisp);
   }
-  public ScopeFolderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ScopeFolderImpl" + super.toString() + "]";
   }

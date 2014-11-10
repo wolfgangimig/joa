@@ -86,9 +86,6 @@ public class Category extends Dispatch implements _Category {
   protected Category(long ndisp) {
     super(ndisp);
   }
-  public Category(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Category" + super.toString() + "]";
   }

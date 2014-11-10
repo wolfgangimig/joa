@@ -381,9 +381,6 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   protected _MobileItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _MobileItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_MobileItemImpl" + super.toString() + "]";
   }

@@ -70,9 +70,6 @@ public class _RulesImpl extends Dispatch implements com.wilutions.mslib.outlook.
   protected _RulesImpl(long ndisp) {
     super(ndisp);
   }
-  public _RulesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RulesImpl" + super.toString() + "]";
   }

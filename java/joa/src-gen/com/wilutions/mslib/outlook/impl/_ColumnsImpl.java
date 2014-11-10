@@ -59,9 +59,6 @@ public class _ColumnsImpl extends Dispatch implements com.wilutions.mslib.outloo
   protected _ColumnsImpl(long ndisp) {
     super(ndisp);
   }
-  public _ColumnsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ColumnsImpl" + super.toString() + "]";
   }

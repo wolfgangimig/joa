@@ -17,9 +17,6 @@ public class IJoaUtilAddinImpl extends Dispatch implements com.wilutions.joactrl
   protected IJoaUtilAddinImpl(long ndisp) {
     super(ndisp);
   }
-  public IJoaUtilAddinImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IJoaUtilAddinImpl" + super.toString() + "]";
   }

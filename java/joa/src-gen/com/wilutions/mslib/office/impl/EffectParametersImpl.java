@@ -38,9 +38,6 @@ public class EffectParametersImpl extends Dispatch implements com.wilutions.msli
   protected EffectParametersImpl(long ndisp) {
     super(ndisp);
   }
-  public EffectParametersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[EffectParametersImpl" + super.toString() + "]";
   }

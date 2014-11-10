@@ -61,9 +61,6 @@ public class Views extends Dispatch implements _Views {
   protected Views(long ndisp) {
     super(ndisp);
   }
-  public Views(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Views" + super.toString() + "]";
   }

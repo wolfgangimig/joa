@@ -141,9 +141,6 @@ public class _IconViewImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _IconViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _IconViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_IconViewImpl" + super.toString() + "]";
   }

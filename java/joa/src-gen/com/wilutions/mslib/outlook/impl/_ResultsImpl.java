@@ -85,9 +85,6 @@ public class _ResultsImpl extends Dispatch implements com.wilutions.mslib.outloo
   protected _ResultsImpl(long ndisp) {
     super(ndisp);
   }
-  public _ResultsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ResultsImpl" + super.toString() + "]";
   }

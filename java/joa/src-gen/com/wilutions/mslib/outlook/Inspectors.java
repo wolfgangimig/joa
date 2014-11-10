@@ -54,9 +54,6 @@ public class Inspectors extends Dispatch implements _Inspectors {
   protected Inspectors(long ndisp) {
     super(ndisp);
   }
-  public Inspectors(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Inspectors" + super.toString() + "]";
   }

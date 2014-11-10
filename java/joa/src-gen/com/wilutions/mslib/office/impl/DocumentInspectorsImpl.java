@@ -43,9 +43,6 @@ public class DocumentInspectorsImpl extends Dispatch implements com.wilutions.ms
   protected DocumentInspectorsImpl(long ndisp) {
     super(ndisp);
   }
-  public DocumentInspectorsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DocumentInspectorsImpl" + super.toString() + "]";
   }

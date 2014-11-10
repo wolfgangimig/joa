@@ -66,9 +66,6 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
   protected ReflectionFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ReflectionFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReflectionFormatImpl" + super.toString() + "]";
   }

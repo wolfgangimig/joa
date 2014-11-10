@@ -70,9 +70,6 @@ public class CalendarModule extends Dispatch implements _CalendarModule {
   protected CalendarModule(long ndisp) {
     super(ndisp);
   }
-  public CalendarModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CalendarModule" + super.toString() + "]";
   }

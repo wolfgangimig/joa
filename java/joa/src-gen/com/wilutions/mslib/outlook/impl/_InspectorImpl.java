@@ -160,9 +160,6 @@ public class _InspectorImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _InspectorImpl(long ndisp) {
     super(ndisp);
   }
-  public _InspectorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_InspectorImpl" + super.toString() + "]";
   }

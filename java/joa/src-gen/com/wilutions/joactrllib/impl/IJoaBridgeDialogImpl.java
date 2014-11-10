@@ -146,9 +146,6 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
   protected IJoaBridgeDialogImpl(long ndisp) {
     super(ndisp);
   }
-  public IJoaBridgeDialogImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IJoaBridgeDialogImpl" + super.toString() + "]";
   }

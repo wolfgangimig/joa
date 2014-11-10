@@ -51,9 +51,6 @@ public class PickerPropertiesImpl extends Dispatch implements com.wilutions.msli
   protected PickerPropertiesImpl(long ndisp) {
     super(ndisp);
   }
-  public PickerPropertiesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PickerPropertiesImpl" + super.toString() + "]";
   }

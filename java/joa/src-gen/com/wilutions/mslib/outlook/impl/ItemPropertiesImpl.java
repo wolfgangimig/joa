@@ -59,9 +59,6 @@ public class ItemPropertiesImpl extends Dispatch implements com.wilutions.mslib.
   protected ItemPropertiesImpl(long ndisp) {
     super(ndisp);
   }
-  public ItemPropertiesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ItemPropertiesImpl" + super.toString() + "]";
   }

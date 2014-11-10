@@ -743,9 +743,6 @@ public class MailItem extends Dispatch implements _MailItem {
   protected MailItem(long ndisp) {
     super(ndisp);
   }
-  public MailItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MailItem" + super.toString() + "]";
   }

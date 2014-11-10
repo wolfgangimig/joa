@@ -17,9 +17,6 @@ public class IJoaBridgeCtrlImpl extends Dispatch implements com.wilutions.joactr
   protected IJoaBridgeCtrlImpl(long ndisp) {
     super(ndisp);
   }
-  public IJoaBridgeCtrlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IJoaBridgeCtrlImpl" + super.toString() + "]";
   }

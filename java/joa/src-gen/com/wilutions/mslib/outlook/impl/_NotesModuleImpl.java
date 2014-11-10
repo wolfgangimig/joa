@@ -67,9 +67,6 @@ public class _NotesModuleImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _NotesModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _NotesModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NotesModuleImpl" + super.toString() + "]";
   }

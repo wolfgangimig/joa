@@ -59,9 +59,6 @@ public class DocumentLibraryVersionImpl extends Dispatch implements com.wilution
   protected DocumentLibraryVersionImpl(long ndisp) {
     super(ndisp);
   }
-  public DocumentLibraryVersionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DocumentLibraryVersionImpl" + super.toString() + "]";
   }

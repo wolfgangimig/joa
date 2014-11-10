@@ -65,9 +65,6 @@ public class Row extends Dispatch implements _Row {
   protected Row(long ndisp) {
     super(ndisp);
   }
-  public Row(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Row" + super.toString() + "]";
   }

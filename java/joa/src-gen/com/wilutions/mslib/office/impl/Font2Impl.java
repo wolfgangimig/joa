@@ -294,9 +294,6 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
   protected Font2Impl(long ndisp) {
     super(ndisp);
   }
-  public Font2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Font2Impl" + super.toString() + "]";
   }

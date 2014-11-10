@@ -67,9 +67,6 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
   protected _RecipientControl(long ndisp) {
     super(ndisp);
   }
-  public _RecipientControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RecipientControl" + super.toString() + "]";
   }

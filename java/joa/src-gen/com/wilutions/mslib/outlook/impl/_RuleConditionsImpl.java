@@ -195,9 +195,6 @@ public class _RuleConditionsImpl extends Dispatch implements com.wilutions.mslib
   protected _RuleConditionsImpl(long ndisp) {
     super(ndisp);
   }
-  public _RuleConditionsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RuleConditionsImpl" + super.toString() + "]";
   }

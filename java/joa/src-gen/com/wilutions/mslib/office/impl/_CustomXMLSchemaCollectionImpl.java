@@ -67,9 +67,6 @@ public class _CustomXMLSchemaCollectionImpl extends Dispatch implements com.wilu
   protected _CustomXMLSchemaCollectionImpl(long ndisp) {
     super(ndisp);
   }
-  public _CustomXMLSchemaCollectionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CustomXMLSchemaCollectionImpl" + super.toString() + "]";
   }

@@ -167,9 +167,6 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
   protected ILabelControlImpl(long ndisp) {
     super(ndisp);
   }
-  public ILabelControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ILabelControlImpl" + super.toString() + "]";
   }

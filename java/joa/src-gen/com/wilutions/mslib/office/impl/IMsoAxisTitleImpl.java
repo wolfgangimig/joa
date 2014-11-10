@@ -233,9 +233,6 @@ public class IMsoAxisTitleImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoAxisTitleImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoAxisTitleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoAxisTitleImpl" + super.toString() + "]";
   }

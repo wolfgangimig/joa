@@ -119,9 +119,6 @@ public class OlkCommandButton extends Dispatch implements _OlkCommandButton {
   protected OlkCommandButton(long ndisp) {
     super(ndisp);
   }
-  public OlkCommandButton(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkCommandButton" + super.toString() + "]";
   }

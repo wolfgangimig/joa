@@ -93,9 +93,6 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
   protected CropImpl(long ndisp) {
     super(ndisp);
   }
-  public CropImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CropImpl" + super.toString() + "]";
   }

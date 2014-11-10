@@ -53,9 +53,6 @@ public class _SendRuleActionImpl extends Dispatch implements com.wilutions.mslib
   protected _SendRuleActionImpl(long ndisp) {
     super(ndisp);
   }
-  public _SendRuleActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_SendRuleActionImpl" + super.toString() + "]";
   }

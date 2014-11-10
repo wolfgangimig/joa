@@ -59,9 +59,6 @@ public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
   protected HTMLTextArea(long ndisp) {
     super(ndisp);
   }
-  public HTMLTextArea(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLTextArea" + super.toString() + "]";
   }

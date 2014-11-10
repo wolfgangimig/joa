@@ -36,9 +36,6 @@ public class PropertyPageSiteImpl extends Dispatch implements com.wilutions.msli
   protected PropertyPageSiteImpl(long ndisp) {
     super(ndisp);
   }
-  public PropertyPageSiteImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PropertyPageSiteImpl" + super.toString() + "]";
   }

@@ -58,9 +58,6 @@ public class ThemeColorSchemeImpl extends Dispatch implements com.wilutions.msli
   protected ThemeColorSchemeImpl(long ndisp) {
     super(ndisp);
   }
-  public ThemeColorSchemeImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ThemeColorSchemeImpl" + super.toString() + "]";
   }

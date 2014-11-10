@@ -169,9 +169,6 @@ public class OlkDateControl extends Dispatch implements _OlkDateControl {
   protected OlkDateControl(long ndisp) {
     super(ndisp);
   }
-  public OlkDateControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkDateControl" + super.toString() + "]";
   }

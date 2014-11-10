@@ -70,9 +70,6 @@ public class TasksModule extends Dispatch implements _TasksModule {
   protected TasksModule(long ndisp) {
     super(ndisp);
   }
-  public TasksModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TasksModule" + super.toString() + "]";
   }

@@ -43,9 +43,6 @@ public class RulerLevels2Impl extends Dispatch implements com.wilutions.mslib.of
   protected RulerLevels2Impl(long ndisp) {
     super(ndisp);
   }
-  public RulerLevels2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RulerLevels2Impl" + super.toString() + "]";
   }

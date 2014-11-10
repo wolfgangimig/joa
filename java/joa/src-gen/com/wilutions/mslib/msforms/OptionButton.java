@@ -196,9 +196,6 @@ public class OptionButton extends Dispatch implements IMdcOptionButton {
   protected OptionButton(long ndisp) {
     super(ndisp);
   }
-  public OptionButton(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OptionButton" + super.toString() + "]";
   }

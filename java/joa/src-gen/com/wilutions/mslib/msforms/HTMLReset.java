@@ -32,9 +32,6 @@ public class HTMLReset extends Dispatch implements IWHTMLReset {
   protected HTMLReset(long ndisp) {
     super(ndisp);
   }
-  public HTMLReset(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLReset" + super.toString() + "]";
   }

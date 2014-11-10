@@ -14,9 +14,6 @@ public class ICustomTaskPaneConsumerImpl extends Dispatch implements com.wilutio
   protected ICustomTaskPaneConsumerImpl(long ndisp) {
     super(ndisp);
   }
-  public ICustomTaskPaneConsumerImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ICustomTaskPaneConsumerImpl" + super.toString() + "]";
   }

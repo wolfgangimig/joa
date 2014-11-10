@@ -59,9 +59,6 @@ public class TextRuleCondition extends Dispatch implements _TextRuleCondition {
   protected TextRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public TextRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TextRuleCondition" + super.toString() + "]";
   }

@@ -485,9 +485,6 @@ public class _PostItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _PostItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _PostItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_PostItemImpl" + super.toString() + "]";
   }

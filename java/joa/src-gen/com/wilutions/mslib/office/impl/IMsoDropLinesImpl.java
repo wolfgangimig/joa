@@ -49,9 +49,6 @@ public class IMsoDropLinesImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoDropLinesImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDropLinesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDropLinesImpl" + super.toString() + "]";
   }

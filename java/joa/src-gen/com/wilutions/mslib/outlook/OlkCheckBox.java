@@ -130,9 +130,6 @@ public class OlkCheckBox extends Dispatch implements _OlkCheckBox {
   protected OlkCheckBox(long ndisp) {
     super(ndisp);
   }
-  public OlkCheckBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkCheckBox" + super.toString() + "]";
   }

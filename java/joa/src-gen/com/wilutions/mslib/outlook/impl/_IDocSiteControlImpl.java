@@ -29,9 +29,6 @@ public class _IDocSiteControlImpl extends Dispatch implements com.wilutions.msli
   protected _IDocSiteControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _IDocSiteControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_IDocSiteControlImpl" + super.toString() + "]";
   }

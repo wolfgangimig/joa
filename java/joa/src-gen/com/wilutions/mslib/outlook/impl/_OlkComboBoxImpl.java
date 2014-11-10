@@ -271,9 +271,6 @@ public class _OlkComboBoxImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _OlkComboBoxImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkComboBoxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkComboBoxImpl" + super.toString() + "]";
   }

@@ -39,9 +39,6 @@ public class OutlookBarStorageImpl extends Dispatch implements com.wilutions.msl
   protected OutlookBarStorageImpl(long ndisp) {
     super(ndisp);
   }
-  public OutlookBarStorageImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OutlookBarStorageImpl" + super.toString() + "]";
   }

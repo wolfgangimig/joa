@@ -32,9 +32,6 @@ public class OlkBusinessCardControl extends Dispatch implements _OlkBusinessCard
   protected OlkBusinessCardControl(long ndisp) {
     super(ndisp);
   }
-  public OlkBusinessCardControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkBusinessCardControl" + super.toString() + "]";
   }

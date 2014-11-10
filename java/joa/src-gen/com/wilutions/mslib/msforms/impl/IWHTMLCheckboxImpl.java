@@ -38,9 +38,6 @@ public class IWHTMLCheckboxImpl extends Dispatch implements com.wilutions.mslib.
   protected IWHTMLCheckboxImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLCheckboxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLCheckboxImpl" + super.toString() + "]";
   }

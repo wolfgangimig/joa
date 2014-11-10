@@ -75,9 +75,6 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
   protected IMsoCharactersImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoCharactersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoCharactersImpl" + super.toString() + "]";
   }

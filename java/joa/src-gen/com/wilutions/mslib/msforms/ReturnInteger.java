@@ -23,9 +23,6 @@ public class ReturnInteger extends Dispatch implements IReturnInteger {
   protected ReturnInteger(long ndisp) {
     super(ndisp);
   }
-  public ReturnInteger(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ReturnInteger" + super.toString() + "]";
   }

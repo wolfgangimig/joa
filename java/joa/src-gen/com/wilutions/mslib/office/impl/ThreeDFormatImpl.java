@@ -286,9 +286,6 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
   protected ThreeDFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ThreeDFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ThreeDFormatImpl" + super.toString() + "]";
   }

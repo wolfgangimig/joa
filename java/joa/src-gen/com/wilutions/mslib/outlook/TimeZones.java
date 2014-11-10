@@ -60,9 +60,6 @@ public class TimeZones extends Dispatch implements _TimeZones {
   protected TimeZones(long ndisp) {
     super(ndisp);
   }
-  public TimeZones(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TimeZones" + super.toString() + "]";
   }

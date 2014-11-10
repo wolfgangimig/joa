@@ -149,9 +149,6 @@ public class JoaBridgeDialog extends Dispatch implements IJoaBridgeDialog {
   protected JoaBridgeDialog(long ndisp) {
     super(ndisp);
   }
-  public JoaBridgeDialog(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[JoaBridgeDialog" + super.toString() + "]";
   }

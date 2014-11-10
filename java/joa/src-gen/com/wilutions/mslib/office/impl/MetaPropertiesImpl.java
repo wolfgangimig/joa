@@ -60,9 +60,6 @@ public class MetaPropertiesImpl extends Dispatch implements com.wilutions.mslib.
   protected MetaPropertiesImpl(long ndisp) {
     super(ndisp);
   }
-  public MetaPropertiesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MetaPropertiesImpl" + super.toString() + "]";
   }

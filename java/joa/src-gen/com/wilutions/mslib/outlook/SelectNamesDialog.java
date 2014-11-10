@@ -135,9 +135,6 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
   protected SelectNamesDialog(long ndisp) {
     super(ndisp);
   }
-  public SelectNamesDialog(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SelectNamesDialog" + super.toString() + "]";
   }

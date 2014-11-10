@@ -112,9 +112,6 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
   protected ISpinbuttonImpl(long ndisp) {
     super(ndisp);
   }
-  public ISpinbuttonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ISpinbuttonImpl" + super.toString() + "]";
   }

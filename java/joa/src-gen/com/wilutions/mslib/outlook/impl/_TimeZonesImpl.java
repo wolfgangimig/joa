@@ -57,9 +57,6 @@ public class _TimeZonesImpl extends Dispatch implements com.wilutions.mslib.outl
   protected _TimeZonesImpl(long ndisp) {
     super(ndisp);
   }
-  public _TimeZonesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TimeZonesImpl" + super.toString() + "]";
   }

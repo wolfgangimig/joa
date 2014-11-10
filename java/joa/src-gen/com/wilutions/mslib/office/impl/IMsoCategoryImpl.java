@@ -30,9 +30,6 @@ public class IMsoCategoryImpl extends Dispatch implements com.wilutions.mslib.of
   protected IMsoCategoryImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoCategoryImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoCategoryImpl" + super.toString() + "]";
   }

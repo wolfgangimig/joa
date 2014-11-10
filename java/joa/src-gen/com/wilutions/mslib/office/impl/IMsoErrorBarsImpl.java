@@ -65,9 +65,6 @@ public class IMsoErrorBarsImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoErrorBarsImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoErrorBarsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoErrorBarsImpl" + super.toString() + "]";
   }

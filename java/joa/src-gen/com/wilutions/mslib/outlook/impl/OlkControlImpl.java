@@ -92,9 +92,6 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
   protected OlkControlImpl(long ndisp) {
     super(ndisp);
   }
-  public OlkControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkControlImpl" + super.toString() + "]";
   }

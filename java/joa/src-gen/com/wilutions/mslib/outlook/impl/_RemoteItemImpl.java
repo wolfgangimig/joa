@@ -315,9 +315,6 @@ public class _RemoteItemImpl extends Dispatch implements com.wilutions.mslib.out
   protected _RemoteItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _RemoteItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_RemoteItemImpl" + super.toString() + "]";
   }

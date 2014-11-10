@@ -30,9 +30,6 @@ public class IBlogPictureExtensibilityImpl extends Dispatch implements com.wilut
   protected IBlogPictureExtensibilityImpl(long ndisp) {
     super(ndisp);
   }
-  public IBlogPictureExtensibilityImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IBlogPictureExtensibilityImpl" + super.toString() + "]";
   }

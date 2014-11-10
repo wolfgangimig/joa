@@ -55,9 +55,6 @@ public class LinksImpl extends Dispatch implements com.wilutions.mslib.outlook.L
   protected LinksImpl(long ndisp) {
     super(ndisp);
   }
-  public LinksImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[LinksImpl" + super.toString() + "]";
   }

@@ -110,9 +110,6 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
   protected FileDialogImpl(long ndisp) {
     super(ndisp);
   }
-  public FileDialogImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FileDialogImpl" + super.toString() + "]";
   }

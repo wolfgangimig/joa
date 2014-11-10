@@ -131,9 +131,6 @@ public class IMultiPageImpl extends Dispatch implements com.wilutions.mslib.msfo
   protected IMultiPageImpl(long ndisp) {
     super(ndisp);
   }
-  public IMultiPageImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMultiPageImpl" + super.toString() + "]";
   }

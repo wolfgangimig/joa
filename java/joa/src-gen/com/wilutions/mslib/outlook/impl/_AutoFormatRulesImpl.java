@@ -70,9 +70,6 @@ public class _AutoFormatRulesImpl extends Dispatch implements com.wilutions.msli
   protected _AutoFormatRulesImpl(long ndisp) {
     super(ndisp);
   }
-  public _AutoFormatRulesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AutoFormatRulesImpl" + super.toString() + "]";
   }

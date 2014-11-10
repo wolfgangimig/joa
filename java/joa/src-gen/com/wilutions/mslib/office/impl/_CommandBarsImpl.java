@@ -201,7 +201,7 @@ public class _CommandBarsImpl extends Dispatch implements com.wilutions.mslib.of
     final Object obj = this._dispatchCall(1610809380,"GetImageMso", DISPATCH_METHOD,null,idMso,Width,Height);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return new com.wilutions.mslib.stdole.impl.IPictureDispImpl(disp);
+    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(1610809381)  public void CommitRenderingTransaction(Integer hwnd) throws ComException {
     assert(hwnd != null);
@@ -211,9 +211,6 @@ public class _CommandBarsImpl extends Dispatch implements com.wilutions.mslib.of
     super(progId);
   }
   protected _CommandBarsImpl(long ndisp) {
-    super(ndisp);
-  }
-  public _CommandBarsImpl(Dispatch ndisp) {
     super(ndisp);
   }
   public String toString() {

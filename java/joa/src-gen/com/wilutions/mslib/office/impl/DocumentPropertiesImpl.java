@@ -54,9 +54,6 @@ public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.ms
   protected DocumentPropertiesImpl(long ndisp) {
     super(ndisp);
   }
-  public DocumentPropertiesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DocumentPropertiesImpl" + super.toString() + "]";
   }

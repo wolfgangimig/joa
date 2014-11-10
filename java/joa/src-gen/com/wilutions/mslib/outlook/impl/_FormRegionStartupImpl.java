@@ -38,9 +38,6 @@ public class _FormRegionStartupImpl extends Dispatch implements com.wilutions.ms
   protected _FormRegionStartupImpl(long ndisp) {
     super(ndisp);
   }
-  public _FormRegionStartupImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_FormRegionStartupImpl" + super.toString() + "]";
   }

@@ -37,9 +37,6 @@ public class ODSOColumnsImpl extends Dispatch implements com.wilutions.mslib.off
   protected ODSOColumnsImpl(long ndisp) {
     super(ndisp);
   }
-  public ODSOColumnsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ODSOColumnsImpl" + super.toString() + "]";
   }

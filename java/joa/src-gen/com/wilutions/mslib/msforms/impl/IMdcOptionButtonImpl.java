@@ -193,9 +193,6 @@ public class IMdcOptionButtonImpl extends Dispatch implements com.wilutions.msli
   protected IMdcOptionButtonImpl(long ndisp) {
     super(ndisp);
   }
-  public IMdcOptionButtonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMdcOptionButtonImpl" + super.toString() + "]";
   }

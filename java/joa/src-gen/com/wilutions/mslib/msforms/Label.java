@@ -170,9 +170,6 @@ public class Label extends Dispatch implements ILabelControl {
   protected Label(long ndisp) {
     super(ndisp);
   }
-  public Label(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Label" + super.toString() + "]";
   }

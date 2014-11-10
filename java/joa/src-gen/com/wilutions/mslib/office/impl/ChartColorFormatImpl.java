@@ -54,9 +54,6 @@ public class ChartColorFormatImpl extends Dispatch implements com.wilutions.msli
   protected ChartColorFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ChartColorFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ChartColorFormatImpl" + super.toString() + "]";
   }

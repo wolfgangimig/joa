@@ -57,9 +57,6 @@ public class ScriptsImpl extends Dispatch implements com.wilutions.mslib.office.
   protected ScriptsImpl(long ndisp) {
     super(ndisp);
   }
-  public ScriptsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ScriptsImpl" + super.toString() + "]";
   }

@@ -284,7 +284,7 @@ public class _CommandBarButtonImpl extends Dispatch implements com.wilutions.msl
     final Object obj = this._dispatchCall(1610940430,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return new com.wilutions.mslib.stdole.impl.IPictureDispImpl(disp);
+    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(1610940430)  public void setPicture(com.wilutions.mslib.stdole.IPictureDisp value) throws ComException {
     this._dispatchCall(1610940430,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -293,7 +293,7 @@ public class _CommandBarButtonImpl extends Dispatch implements com.wilutions.msl
     final Object obj = this._dispatchCall(1610940432,"Mask", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return new com.wilutions.mslib.stdole.impl.IPictureDispImpl(disp);
+    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(1610940432)  public void setMask(com.wilutions.mslib.stdole.IPictureDisp value) throws ComException {
     this._dispatchCall(1610940432,"Mask", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -302,9 +302,6 @@ public class _CommandBarButtonImpl extends Dispatch implements com.wilutions.msl
     super(progId);
   }
   protected _CommandBarButtonImpl(long ndisp) {
-    super(ndisp);
-  }
-  public _CommandBarButtonImpl(Dispatch ndisp) {
     super(ndisp);
   }
   public String toString() {

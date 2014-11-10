@@ -62,9 +62,6 @@ public class _NavigationGroupImpl extends Dispatch implements com.wilutions.msli
   protected _NavigationGroupImpl(long ndisp) {
     super(ndisp);
   }
-  public _NavigationGroupImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NavigationGroupImpl" + super.toString() + "]";
   }

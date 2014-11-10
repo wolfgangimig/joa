@@ -409,9 +409,6 @@ public class JournalItem extends Dispatch implements _JournalItem {
   protected JournalItem(long ndisp) {
     super(ndisp);
   }
-  public JournalItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[JournalItem" + super.toString() + "]";
   }

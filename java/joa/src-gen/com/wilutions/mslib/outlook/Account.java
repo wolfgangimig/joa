@@ -107,9 +107,6 @@ public class Account extends Dispatch implements _Account {
   protected Account(long ndisp) {
     super(ndisp);
   }
-  public Account(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Account" + super.toString() + "]";
   }

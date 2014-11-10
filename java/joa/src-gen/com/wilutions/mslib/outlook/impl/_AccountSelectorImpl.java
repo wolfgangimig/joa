@@ -39,9 +39,6 @@ public class _AccountSelectorImpl extends Dispatch implements com.wilutions.msli
   protected _AccountSelectorImpl(long ndisp) {
     super(ndisp);
   }
-  public _AccountSelectorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AccountSelectorImpl" + super.toString() + "]";
   }

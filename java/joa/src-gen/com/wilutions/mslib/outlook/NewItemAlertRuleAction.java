@@ -59,9 +59,6 @@ public class NewItemAlertRuleAction extends Dispatch implements _NewItemAlertRul
   protected NewItemAlertRuleAction(long ndisp) {
     super(ndisp);
   }
-  public NewItemAlertRuleAction(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NewItemAlertRuleAction" + super.toString() + "]";
   }

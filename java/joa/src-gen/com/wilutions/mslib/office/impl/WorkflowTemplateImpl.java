@@ -51,9 +51,6 @@ public class WorkflowTemplateImpl extends Dispatch implements com.wilutions.msli
   protected WorkflowTemplateImpl(long ndisp) {
     super(ndisp);
   }
-  public WorkflowTemplateImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WorkflowTemplateImpl" + super.toString() + "]";
   }

@@ -59,9 +59,6 @@ public class HTMLImage extends Dispatch implements IWHTMLImage {
   protected HTMLImage(long ndisp) {
     super(ndisp);
   }
-  public HTMLImage(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLImage" + super.toString() + "]";
   }

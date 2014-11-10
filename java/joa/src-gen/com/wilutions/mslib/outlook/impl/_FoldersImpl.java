@@ -81,9 +81,6 @@ public class _FoldersImpl extends Dispatch implements com.wilutions.mslib.outloo
   protected _FoldersImpl(long ndisp) {
     super(ndisp);
   }
-  public _FoldersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_FoldersImpl" + super.toString() + "]";
   }

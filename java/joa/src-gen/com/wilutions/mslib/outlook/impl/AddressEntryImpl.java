@@ -119,9 +119,6 @@ public class AddressEntryImpl extends Dispatch implements com.wilutions.mslib.ou
   protected AddressEntryImpl(long ndisp) {
     super(ndisp);
   }
-  public AddressEntryImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AddressEntryImpl" + super.toString() + "]";
   }

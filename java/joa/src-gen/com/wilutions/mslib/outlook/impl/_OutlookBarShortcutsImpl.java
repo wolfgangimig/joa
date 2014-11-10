@@ -58,9 +58,6 @@ public class _OutlookBarShortcutsImpl extends Dispatch implements com.wilutions.
   protected _OutlookBarShortcutsImpl(long ndisp) {
     super(ndisp);
   }
-  public _OutlookBarShortcutsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OutlookBarShortcutsImpl" + super.toString() + "]";
   }

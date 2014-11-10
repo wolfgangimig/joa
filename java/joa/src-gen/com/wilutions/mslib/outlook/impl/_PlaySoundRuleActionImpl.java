@@ -56,9 +56,6 @@ public class _PlaySoundRuleActionImpl extends Dispatch implements com.wilutions.
   protected _PlaySoundRuleActionImpl(long ndisp) {
     super(ndisp);
   }
-  public _PlaySoundRuleActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_PlaySoundRuleActionImpl" + super.toString() + "]";
   }

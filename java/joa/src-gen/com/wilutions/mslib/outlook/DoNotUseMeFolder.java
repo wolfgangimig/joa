@@ -250,9 +250,6 @@ public class DoNotUseMeFolder extends Dispatch implements MAPIFolder {
   protected DoNotUseMeFolder(long ndisp) {
     super(ndisp);
   }
-  public DoNotUseMeFolder(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DoNotUseMeFolder" + super.toString() + "]";
   }

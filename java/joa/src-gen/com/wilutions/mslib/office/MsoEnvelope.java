@@ -38,9 +38,6 @@ public class MsoEnvelope extends Dispatch implements IMsoEnvelopeVB {
   protected MsoEnvelope(long ndisp) {
     super(ndisp);
   }
-  public MsoEnvelope(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MsoEnvelope" + super.toString() + "]";
   }

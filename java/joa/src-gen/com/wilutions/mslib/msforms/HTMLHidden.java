@@ -32,9 +32,6 @@ public class HTMLHidden extends Dispatch implements IWHTMLHidden {
   protected HTMLHidden(long ndisp) {
     super(ndisp);
   }
-  public HTMLHidden(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLHidden" + super.toString() + "]";
   }

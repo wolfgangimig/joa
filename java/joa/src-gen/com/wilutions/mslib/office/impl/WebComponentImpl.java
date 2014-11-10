@@ -71,9 +71,6 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
   protected WebComponentImpl(long ndisp) {
     super(ndisp);
   }
-  public WebComponentImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WebComponentImpl" + super.toString() + "]";
   }

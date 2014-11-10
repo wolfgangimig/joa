@@ -144,9 +144,6 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected RecipientImpl(long ndisp) {
     super(ndisp);
   }
-  public RecipientImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RecipientImpl" + super.toString() + "]";
   }

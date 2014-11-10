@@ -73,9 +73,6 @@ public class Rules extends Dispatch implements _Rules {
   protected Rules(long ndisp) {
     super(ndisp);
   }
-  public Rules(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Rules" + super.toString() + "]";
   }

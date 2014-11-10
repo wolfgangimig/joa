@@ -56,9 +56,6 @@ public class Explorers extends Dispatch implements _Explorers {
   protected Explorers(long ndisp) {
     super(ndisp);
   }
-  public Explorers(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Explorers" + super.toString() + "]";
   }

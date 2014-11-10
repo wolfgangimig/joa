@@ -128,9 +128,6 @@ public class Store extends Dispatch implements _Store {
   protected Store(long ndisp) {
     super(ndisp);
   }
-  public Store(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Store" + super.toString() + "]";
   }

@@ -56,9 +56,6 @@ public class _AccountRuleConditionImpl extends Dispatch implements com.wilutions
   protected _AccountRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _AccountRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_AccountRuleConditionImpl" + super.toString() + "]";
   }

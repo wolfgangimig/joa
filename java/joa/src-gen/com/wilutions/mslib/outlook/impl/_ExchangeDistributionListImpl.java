@@ -156,9 +156,6 @@ public class _ExchangeDistributionListImpl extends Dispatch implements com.wilut
   protected _ExchangeDistributionListImpl(long ndisp) {
     super(ndisp);
   }
-  public _ExchangeDistributionListImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ExchangeDistributionListImpl" + super.toString() + "]";
   }

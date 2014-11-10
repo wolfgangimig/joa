@@ -31,9 +31,6 @@ public class MsoDebugOptions_UTRunResultImpl extends Dispatch implements com.wil
   protected MsoDebugOptions_UTRunResultImpl(long ndisp) {
     super(ndisp);
   }
-  public MsoDebugOptions_UTRunResultImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MsoDebugOptions_UTRunResultImpl" + super.toString() + "]";
   }

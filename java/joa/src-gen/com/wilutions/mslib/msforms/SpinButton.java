@@ -115,9 +115,6 @@ public class SpinButton extends Dispatch implements ISpinbutton {
   protected SpinButton(long ndisp) {
     super(ndisp);
   }
-  public SpinButton(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SpinButton" + super.toString() + "]";
   }

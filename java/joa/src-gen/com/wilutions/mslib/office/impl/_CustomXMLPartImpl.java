@@ -109,9 +109,6 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
   protected _CustomXMLPartImpl(long ndisp) {
     super(ndisp);
   }
-  public _CustomXMLPartImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CustomXMLPartImpl" + super.toString() + "]";
   }

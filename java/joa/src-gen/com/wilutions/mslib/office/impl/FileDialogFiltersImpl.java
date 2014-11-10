@@ -59,9 +59,6 @@ public class FileDialogFiltersImpl extends Dispatch implements com.wilutions.msl
   protected FileDialogFiltersImpl(long ndisp) {
     super(ndisp);
   }
-  public FileDialogFiltersImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FileDialogFiltersImpl" + super.toString() + "]";
   }

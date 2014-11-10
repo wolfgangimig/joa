@@ -113,9 +113,6 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
   protected BulletFormat2Impl(long ndisp) {
     super(ndisp);
   }
-  public BulletFormat2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[BulletFormat2Impl" + super.toString() + "]";
   }

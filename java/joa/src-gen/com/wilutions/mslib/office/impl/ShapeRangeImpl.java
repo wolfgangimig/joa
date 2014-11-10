@@ -428,9 +428,6 @@ public class ShapeRangeImpl extends Dispatch implements com.wilutions.mslib.offi
   protected ShapeRangeImpl(long ndisp) {
     super(ndisp);
   }
-  public ShapeRangeImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ShapeRangeImpl" + super.toString() + "]";
   }

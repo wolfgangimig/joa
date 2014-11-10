@@ -59,9 +59,6 @@ public class MoveOrCopyRuleAction extends Dispatch implements _MoveOrCopyRuleAct
   protected MoveOrCopyRuleAction(long ndisp) {
     super(ndisp);
   }
-  public MoveOrCopyRuleAction(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MoveOrCopyRuleAction" + super.toString() + "]";
   }

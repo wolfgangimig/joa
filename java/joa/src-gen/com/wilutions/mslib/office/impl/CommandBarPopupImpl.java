@@ -247,9 +247,6 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
   protected CommandBarPopupImpl(long ndisp) {
     super(ndisp);
   }
-  public CommandBarPopupImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CommandBarPopupImpl" + super.toString() + "]";
   }

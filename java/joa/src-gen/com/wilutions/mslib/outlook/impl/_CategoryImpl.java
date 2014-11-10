@@ -83,9 +83,6 @@ public class _CategoryImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _CategoryImpl(long ndisp) {
     super(ndisp);
   }
-  public _CategoryImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CategoryImpl" + super.toString() + "]";
   }

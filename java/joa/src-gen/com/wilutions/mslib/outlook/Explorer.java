@@ -194,9 +194,6 @@ public class Explorer extends Dispatch implements _Explorer {
   protected Explorer(long ndisp) {
     super(ndisp);
   }
-  public Explorer(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Explorer" + super.toString() + "]";
   }

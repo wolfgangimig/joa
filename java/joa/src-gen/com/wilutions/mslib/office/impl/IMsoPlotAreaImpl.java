@@ -146,9 +146,6 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
   protected IMsoPlotAreaImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoPlotAreaImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoPlotAreaImpl" + super.toString() + "]";
   }

@@ -166,9 +166,6 @@ public class _OlkDateControlImpl extends Dispatch implements com.wilutions.mslib
   protected _OlkDateControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkDateControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkDateControlImpl" + super.toString() + "]";
   }

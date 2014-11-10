@@ -43,9 +43,6 @@ public class FreeformBuilderImpl extends Dispatch implements com.wilutions.mslib
   protected FreeformBuilderImpl(long ndisp) {
     super(ndisp);
   }
-  public FreeformBuilderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FreeformBuilderImpl" + super.toString() + "]";
   }

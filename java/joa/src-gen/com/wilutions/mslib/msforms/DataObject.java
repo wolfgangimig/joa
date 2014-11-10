@@ -46,9 +46,6 @@ public class DataObject extends Dispatch implements IDataAutoWrapper {
   protected DataObject(long ndisp) {
     super(ndisp);
   }
-  public DataObject(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DataObject" + super.toString() + "]";
   }

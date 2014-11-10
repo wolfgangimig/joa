@@ -91,9 +91,6 @@ public class _PropertyAccessorImpl extends Dispatch implements com.wilutions.msl
   protected _PropertyAccessorImpl(long ndisp) {
     super(ndisp);
   }
-  public _PropertyAccessorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_PropertyAccessorImpl" + super.toString() + "]";
   }

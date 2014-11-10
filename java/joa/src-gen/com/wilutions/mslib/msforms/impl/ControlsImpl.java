@@ -92,9 +92,6 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
   protected ControlsImpl(long ndisp) {
     super(ndisp);
   }
-  public ControlsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ControlsImpl" + super.toString() + "]";
   }

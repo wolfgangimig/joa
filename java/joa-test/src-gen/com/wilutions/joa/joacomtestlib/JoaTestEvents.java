@@ -1,3 +1,4 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.joa.joacomtestlib;
 import com.wilutions.com.*;
 
@@ -11,9 +12,6 @@ public class JoaTestEvents extends Dispatch {
     super("{F28556CB-1929-449E-A904-7521ED711A0E}");
   }
   protected JoaTestEvents(long ndisp) {
-    super(ndisp);
-  }
-  public JoaTestEvents(Dispatch ndisp) {
     super(ndisp);
   }
   public String toString() {

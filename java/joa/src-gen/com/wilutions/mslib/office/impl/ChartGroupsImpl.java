@@ -43,9 +43,6 @@ public class ChartGroupsImpl extends Dispatch implements com.wilutions.mslib.off
   protected ChartGroupsImpl(long ndisp) {
     super(ndisp);
   }
-  public ChartGroupsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ChartGroupsImpl" + super.toString() + "]";
   }

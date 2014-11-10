@@ -50,9 +50,6 @@ public class PropertyTestsImpl extends Dispatch implements com.wilutions.mslib.o
   protected PropertyTestsImpl(long ndisp) {
     super(ndisp);
   }
-  public PropertyTestsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PropertyTestsImpl" + super.toString() + "]";
   }

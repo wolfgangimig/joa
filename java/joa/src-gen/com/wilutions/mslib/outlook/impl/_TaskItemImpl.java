@@ -603,9 +603,6 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _TaskItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _TaskItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TaskItemImpl" + super.toString() + "]";
   }

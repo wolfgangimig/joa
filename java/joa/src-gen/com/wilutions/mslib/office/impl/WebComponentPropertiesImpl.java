@@ -88,9 +88,6 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
   protected WebComponentPropertiesImpl(long ndisp) {
     super(ndisp);
   }
-  public WebComponentPropertiesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WebComponentPropertiesImpl" + super.toString() + "]";
   }

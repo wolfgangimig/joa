@@ -314,9 +314,6 @@ public class TaskRequestAcceptItem extends Dispatch implements _TaskRequestAccep
   protected TaskRequestAcceptItem(long ndisp) {
     super(ndisp);
   }
-  public TaskRequestAcceptItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TaskRequestAcceptItem" + super.toString() + "]";
   }

@@ -130,9 +130,6 @@ public class OlkOptionButton extends Dispatch implements _OlkOptionButton {
   protected OlkOptionButton(long ndisp) {
     super(ndisp);
   }
-  public OlkOptionButton(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkOptionButton" + super.toString() + "]";
   }

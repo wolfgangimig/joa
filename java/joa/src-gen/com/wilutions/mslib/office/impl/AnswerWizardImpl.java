@@ -38,9 +38,6 @@ public class AnswerWizardImpl extends Dispatch implements com.wilutions.mslib.of
   protected AnswerWizardImpl(long ndisp) {
     super(ndisp);
   }
-  public AnswerWizardImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AnswerWizardImpl" + super.toString() + "]";
   }

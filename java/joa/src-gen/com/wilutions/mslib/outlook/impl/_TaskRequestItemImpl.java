@@ -311,9 +311,6 @@ public class _TaskRequestItemImpl extends Dispatch implements com.wilutions.msli
   protected _TaskRequestItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _TaskRequestItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_TaskRequestItemImpl" + super.toString() + "]";
   }

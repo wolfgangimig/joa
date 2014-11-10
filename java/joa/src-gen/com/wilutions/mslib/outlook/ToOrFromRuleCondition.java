@@ -56,9 +56,6 @@ public class ToOrFromRuleCondition extends Dispatch implements _ToOrFromRuleCond
   protected ToOrFromRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public ToOrFromRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ToOrFromRuleCondition" + super.toString() + "]";
   }

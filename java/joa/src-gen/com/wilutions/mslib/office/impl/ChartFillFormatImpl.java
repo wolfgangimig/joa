@@ -136,9 +136,6 @@ public class ChartFillFormatImpl extends Dispatch implements com.wilutions.mslib
   protected ChartFillFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ChartFillFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ChartFillFormatImpl" + super.toString() + "]";
   }

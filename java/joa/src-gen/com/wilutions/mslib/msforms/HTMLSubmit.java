@@ -59,9 +59,6 @@ public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
   protected HTMLSubmit(long ndisp) {
     super(ndisp);
   }
-  public HTMLSubmit(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLSubmit" + super.toString() + "]";
   }

@@ -48,9 +48,6 @@ public class PointsImpl extends Dispatch implements com.wilutions.mslib.office.P
   protected PointsImpl(long ndisp) {
     super(ndisp);
   }
-  public PointsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PointsImpl" + super.toString() + "]";
   }

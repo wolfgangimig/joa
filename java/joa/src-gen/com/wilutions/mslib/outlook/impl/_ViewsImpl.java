@@ -58,9 +58,6 @@ public class _ViewsImpl extends Dispatch implements com.wilutions.mslib.outlook.
   protected _ViewsImpl(long ndisp) {
     super(ndisp);
   }
-  public _ViewsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ViewsImpl" + super.toString() + "]";
   }

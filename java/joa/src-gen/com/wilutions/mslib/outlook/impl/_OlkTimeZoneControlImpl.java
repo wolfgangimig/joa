@@ -86,9 +86,6 @@ public class _OlkTimeZoneControlImpl extends Dispatch implements com.wilutions.m
   protected _OlkTimeZoneControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkTimeZoneControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkTimeZoneControlImpl" + super.toString() + "]";
   }

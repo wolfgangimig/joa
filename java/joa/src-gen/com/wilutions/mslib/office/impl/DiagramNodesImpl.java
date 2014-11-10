@@ -46,9 +46,6 @@ public class DiagramNodesImpl extends Dispatch implements com.wilutions.mslib.of
   protected DiagramNodesImpl(long ndisp) {
     super(ndisp);
   }
-  public DiagramNodesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[DiagramNodesImpl" + super.toString() + "]";
   }

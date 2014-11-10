@@ -67,9 +67,6 @@ public class _ContactsModuleImpl extends Dispatch implements com.wilutions.mslib
   protected _ContactsModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _ContactsModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ContactsModuleImpl" + super.toString() + "]";
   }

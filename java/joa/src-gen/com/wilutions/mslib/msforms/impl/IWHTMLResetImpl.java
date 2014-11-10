@@ -29,9 +29,6 @@ public class IWHTMLResetImpl extends Dispatch implements com.wilutions.mslib.msf
   protected IWHTMLResetImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLResetImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLResetImpl" + super.toString() + "]";
   }

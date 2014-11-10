@@ -70,9 +70,6 @@ public class ContactsModule extends Dispatch implements _ContactsModule {
   protected ContactsModule(long ndisp) {
     super(ndisp);
   }
-  public ContactsModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ContactsModule" + super.toString() + "]";
   }

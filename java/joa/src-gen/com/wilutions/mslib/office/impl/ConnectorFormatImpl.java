@@ -81,9 +81,6 @@ public class ConnectorFormatImpl extends Dispatch implements com.wilutions.mslib
   protected ConnectorFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public ConnectorFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ConnectorFormatImpl" + super.toString() + "]";
   }

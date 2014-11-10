@@ -80,9 +80,6 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
   protected OfficeDataSourceObjectImpl(long ndisp) {
     super(ndisp);
   }
-  public OfficeDataSourceObjectImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OfficeDataSourceObjectImpl" + super.toString() + "]";
   }

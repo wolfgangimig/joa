@@ -342,9 +342,6 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
   protected IPageImpl(long ndisp) {
     super(ndisp);
   }
-  public IPageImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IPageImpl" + super.toString() + "]";
   }

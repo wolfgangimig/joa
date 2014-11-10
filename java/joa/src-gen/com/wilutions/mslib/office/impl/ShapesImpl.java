@@ -217,9 +217,6 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
   protected ShapesImpl(long ndisp) {
     super(ndisp);
   }
-  public ShapesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ShapesImpl" + super.toString() + "]";
   }

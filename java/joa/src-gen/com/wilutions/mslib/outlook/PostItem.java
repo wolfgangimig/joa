@@ -488,9 +488,6 @@ public class PostItem extends Dispatch implements _PostItem {
   protected PostItem(long ndisp) {
     super(ndisp);
   }
-  public PostItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PostItem" + super.toString() + "]";
   }

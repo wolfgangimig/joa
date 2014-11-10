@@ -68,9 +68,6 @@ public class SolutionsModule extends Dispatch implements _SolutionsModule {
   protected SolutionsModule(long ndisp) {
     super(ndisp);
   }
-  public SolutionsModule(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SolutionsModule" + super.toString() + "]";
   }

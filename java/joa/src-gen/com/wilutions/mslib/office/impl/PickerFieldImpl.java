@@ -36,9 +36,6 @@ public class PickerFieldImpl extends Dispatch implements com.wilutions.mslib.off
   protected PickerFieldImpl(long ndisp) {
     super(ndisp);
   }
-  public PickerFieldImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PickerFieldImpl" + super.toString() + "]";
   }

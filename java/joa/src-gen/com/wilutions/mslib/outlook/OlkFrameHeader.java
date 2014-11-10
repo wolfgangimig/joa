@@ -75,9 +75,6 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
   protected OlkFrameHeader(long ndisp) {
     super(ndisp);
   }
-  public OlkFrameHeader(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkFrameHeader" + super.toString() + "]";
   }

@@ -68,9 +68,6 @@ public class MarkAsTaskRuleAction extends Dispatch implements _MarkAsTaskRuleAct
   protected MarkAsTaskRuleAction(long ndisp) {
     super(ndisp);
   }
-  public MarkAsTaskRuleAction(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MarkAsTaskRuleAction" + super.toString() + "]";
   }

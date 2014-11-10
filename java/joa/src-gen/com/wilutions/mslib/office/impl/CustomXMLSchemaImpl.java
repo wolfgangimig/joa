@@ -42,9 +42,6 @@ public class CustomXMLSchemaImpl extends Dispatch implements com.wilutions.mslib
   protected CustomXMLSchemaImpl(long ndisp) {
     super(ndisp);
   }
-  public CustomXMLSchemaImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomXMLSchemaImpl" + super.toString() + "]";
   }

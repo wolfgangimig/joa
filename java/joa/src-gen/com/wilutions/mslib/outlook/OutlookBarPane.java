@@ -56,9 +56,6 @@ public class OutlookBarPane extends Dispatch implements _OutlookBarPane {
   protected OutlookBarPane(long ndisp) {
     super(ndisp);
   }
-  public OutlookBarPane(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OutlookBarPane" + super.toString() + "]";
   }

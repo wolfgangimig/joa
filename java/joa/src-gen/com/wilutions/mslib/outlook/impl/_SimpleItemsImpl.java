@@ -44,9 +44,6 @@ public class _SimpleItemsImpl extends Dispatch implements com.wilutions.mslib.ou
   protected _SimpleItemsImpl(long ndisp) {
     super(ndisp);
   }
-  public _SimpleItemsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_SimpleItemsImpl" + super.toString() + "]";
   }

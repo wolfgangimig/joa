@@ -56,9 +56,6 @@ public class SelectionImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected SelectionImpl(long ndisp) {
     super(ndisp);
   }
-  public SelectionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SelectionImpl" + super.toString() + "]";
   }

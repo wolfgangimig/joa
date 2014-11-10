@@ -182,9 +182,6 @@ public class ParagraphFormat2Impl extends Dispatch implements com.wilutions.msli
   protected ParagraphFormat2Impl(long ndisp) {
     super(ndisp);
   }
-  public ParagraphFormat2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ParagraphFormat2Impl" + super.toString() + "]";
   }

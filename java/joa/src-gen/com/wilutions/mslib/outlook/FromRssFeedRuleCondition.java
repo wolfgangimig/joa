@@ -59,9 +59,6 @@ public class FromRssFeedRuleCondition extends Dispatch implements _FromRssFeedRu
   protected FromRssFeedRuleCondition(long ndisp) {
     super(ndisp);
   }
-  public FromRssFeedRuleCondition(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FromRssFeedRuleCondition" + super.toString() + "]";
   }

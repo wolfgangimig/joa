@@ -39,9 +39,6 @@ public class SoftEdgeFormatImpl extends Dispatch implements com.wilutions.mslib.
   protected SoftEdgeFormatImpl(long ndisp) {
     super(ndisp);
   }
-  public SoftEdgeFormatImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SoftEdgeFormatImpl" + super.toString() + "]";
   }

@@ -41,9 +41,6 @@ public class FormRegionStartup extends Dispatch implements _FormRegionStartup {
   protected FormRegionStartup(long ndisp) {
     super(ndisp);
   }
-  public FormRegionStartup(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FormRegionStartup" + super.toString() + "]";
   }

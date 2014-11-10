@@ -65,9 +65,6 @@ public class _SolutionsModuleImpl extends Dispatch implements com.wilutions.msli
   protected _SolutionsModuleImpl(long ndisp) {
     super(ndisp);
   }
-  public _SolutionsModuleImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_SolutionsModuleImpl" + super.toString() + "]";
   }

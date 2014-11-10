@@ -65,9 +65,6 @@ public class _MarkAsTaskRuleActionImpl extends Dispatch implements com.wilutions
   protected _MarkAsTaskRuleActionImpl(long ndisp) {
     super(ndisp);
   }
-  public _MarkAsTaskRuleActionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_MarkAsTaskRuleActionImpl" + super.toString() + "]";
   }

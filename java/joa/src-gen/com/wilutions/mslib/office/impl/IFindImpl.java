@@ -226,9 +226,6 @@ public class IFindImpl extends Dispatch implements com.wilutions.mslib.office.IF
   protected IFindImpl(long ndisp) {
     super(ndisp);
   }
-  public IFindImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IFindImpl" + super.toString() + "]";
   }

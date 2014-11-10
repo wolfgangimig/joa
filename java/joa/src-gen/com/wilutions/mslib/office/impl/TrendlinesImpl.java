@@ -62,9 +62,6 @@ public class TrendlinesImpl extends Dispatch implements com.wilutions.mslib.offi
   protected TrendlinesImpl(long ndisp) {
     super(ndisp);
   }
-  public TrendlinesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TrendlinesImpl" + super.toString() + "]";
   }

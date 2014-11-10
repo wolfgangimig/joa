@@ -148,9 +148,6 @@ public class ICommandButtonImpl extends Dispatch implements com.wilutions.mslib.
   protected ICommandButtonImpl(long ndisp) {
     super(ndisp);
   }
-  public ICommandButtonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ICommandButtonImpl" + super.toString() + "]";
   }

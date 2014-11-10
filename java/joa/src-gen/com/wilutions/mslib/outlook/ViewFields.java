@@ -67,9 +67,6 @@ public class ViewFields extends Dispatch implements _ViewFields {
   protected ViewFields(long ndisp) {
     super(ndisp);
   }
-  public ViewFields(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ViewFields" + super.toString() + "]";
   }

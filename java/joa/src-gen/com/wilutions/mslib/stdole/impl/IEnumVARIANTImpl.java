@@ -28,9 +28,6 @@ public class IEnumVARIANTImpl extends Dispatch implements com.wilutions.mslib.st
   protected IEnumVARIANTImpl(long ndisp) {
     super(ndisp);
   }
-  public IEnumVARIANTImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IEnumVARIANTImpl" + super.toString() + "]";
   }

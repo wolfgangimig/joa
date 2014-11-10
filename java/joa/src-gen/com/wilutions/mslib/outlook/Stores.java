@@ -48,9 +48,6 @@ public class Stores extends Dispatch implements _Stores {
   protected Stores(long ndisp) {
     super(ndisp);
   }
-  public Stores(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Stores" + super.toString() + "]";
   }

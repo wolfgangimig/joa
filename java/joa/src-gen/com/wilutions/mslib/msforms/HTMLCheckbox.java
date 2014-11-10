@@ -41,9 +41,6 @@ public class HTMLCheckbox extends Dispatch implements IWHTMLCheckbox {
   protected HTMLCheckbox(long ndisp) {
     super(ndisp);
   }
-  public HTMLCheckbox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[HTMLCheckbox" + super.toString() + "]";
   }

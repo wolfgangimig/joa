@@ -25,9 +25,6 @@ public class ILicValidatorImpl extends Dispatch implements com.wilutions.mslib.o
   protected ILicValidatorImpl(long ndisp) {
     super(ndisp);
   }
-  public ILicValidatorImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ILicValidatorImpl" + super.toString() + "]";
   }

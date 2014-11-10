@@ -71,9 +71,6 @@ public class TextFrameImpl extends Dispatch implements com.wilutions.mslib.offic
   protected TextFrameImpl(long ndisp) {
     super(ndisp);
   }
-  public TextFrameImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TextFrameImpl" + super.toString() + "]";
   }

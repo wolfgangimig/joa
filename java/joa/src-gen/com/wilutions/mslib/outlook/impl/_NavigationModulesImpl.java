@@ -52,9 +52,6 @@ public class _NavigationModulesImpl extends Dispatch implements com.wilutions.ms
   protected _NavigationModulesImpl(long ndisp) {
     super(ndisp);
   }
-  public _NavigationModulesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_NavigationModulesImpl" + super.toString() + "]";
   }

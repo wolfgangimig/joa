@@ -45,9 +45,6 @@ public class _StoresImpl extends Dispatch implements com.wilutions.mslib.outlook
   protected _StoresImpl(long ndisp) {
     super(ndisp);
   }
-  public _StoresImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_StoresImpl" + super.toString() + "]";
   }

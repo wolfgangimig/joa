@@ -321,9 +321,6 @@ public class TableView extends Dispatch implements _TableView {
   protected TableView(long ndisp) {
     super(ndisp);
   }
-  public TableView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TableView" + super.toString() + "]";
   }

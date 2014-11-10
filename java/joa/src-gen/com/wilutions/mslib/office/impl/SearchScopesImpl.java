@@ -38,9 +38,6 @@ public class SearchScopesImpl extends Dispatch implements com.wilutions.mslib.of
   protected SearchScopesImpl(long ndisp) {
     super(ndisp);
   }
-  public SearchScopesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SearchScopesImpl" + super.toString() + "]";
   }

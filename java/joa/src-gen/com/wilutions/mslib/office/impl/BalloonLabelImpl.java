@@ -45,9 +45,6 @@ public class BalloonLabelImpl extends Dispatch implements com.wilutions.mslib.of
   protected BalloonLabelImpl(long ndisp) {
     super(ndisp);
   }
-  public BalloonLabelImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[BalloonLabelImpl" + super.toString() + "]";
   }

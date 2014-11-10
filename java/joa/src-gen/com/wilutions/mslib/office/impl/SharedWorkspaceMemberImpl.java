@@ -44,9 +44,6 @@ public class SharedWorkspaceMemberImpl extends Dispatch implements com.wilutions
   protected SharedWorkspaceMemberImpl(long ndisp) {
     super(ndisp);
   }
-  public SharedWorkspaceMemberImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SharedWorkspaceMemberImpl" + super.toString() + "]";
   }

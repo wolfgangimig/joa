@@ -53,9 +53,6 @@ public class PropertyPagesImpl extends Dispatch implements com.wilutions.mslib.o
   protected PropertyPagesImpl(long ndisp) {
     super(ndisp);
   }
-  public PropertyPagesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PropertyPagesImpl" + super.toString() + "]";
   }

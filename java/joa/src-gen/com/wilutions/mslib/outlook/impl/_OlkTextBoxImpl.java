@@ -279,9 +279,6 @@ public class _OlkTextBoxImpl extends Dispatch implements com.wilutions.mslib.out
   protected _OlkTextBoxImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkTextBoxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkTextBoxImpl" + super.toString() + "]";
   }

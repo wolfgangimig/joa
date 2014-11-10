@@ -47,9 +47,6 @@ public class IWHTMLPasswordImpl extends Dispatch implements com.wilutions.mslib.
   protected IWHTMLPasswordImpl(long ndisp) {
     super(ndisp);
   }
-  public IWHTMLPasswordImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IWHTMLPasswordImpl" + super.toString() + "]";
   }

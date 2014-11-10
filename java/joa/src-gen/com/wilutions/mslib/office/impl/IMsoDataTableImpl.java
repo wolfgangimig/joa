@@ -95,9 +95,6 @@ public class IMsoDataTableImpl extends Dispatch implements com.wilutions.mslib.o
   protected IMsoDataTableImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDataTableImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDataTableImpl" + super.toString() + "]";
   }

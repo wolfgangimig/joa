@@ -184,9 +184,6 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
   protected _OlkTimeControlImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkTimeControlImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkTimeControlImpl" + super.toString() + "]";
   }

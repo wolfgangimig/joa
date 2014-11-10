@@ -42,9 +42,6 @@ public class IConverterImpl extends Dispatch implements com.wilutions.mslib.offi
   protected IConverterImpl(long ndisp) {
     super(ndisp);
   }
-  public IConverterImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IConverterImpl" + super.toString() + "]";
   }

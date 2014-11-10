@@ -45,9 +45,6 @@ public class AnswerWizardFilesImpl extends Dispatch implements com.wilutions.msl
   protected AnswerWizardFilesImpl(long ndisp) {
     super(ndisp);
   }
-  public AnswerWizardFilesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AnswerWizardFilesImpl" + super.toString() + "]";
   }

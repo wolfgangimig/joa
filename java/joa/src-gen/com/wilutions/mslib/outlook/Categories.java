@@ -61,9 +61,6 @@ public class Categories extends Dispatch implements _Categories {
   protected Categories(long ndisp) {
     super(ndisp);
   }
-  public Categories(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Categories" + super.toString() + "]";
   }

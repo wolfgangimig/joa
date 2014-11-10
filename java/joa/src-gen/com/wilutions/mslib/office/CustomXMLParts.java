@@ -68,9 +68,6 @@ public class CustomXMLParts extends Dispatch implements _CustomXMLParts {
   protected CustomXMLParts(long ndisp) {
     super(ndisp);
   }
-  public CustomXMLParts(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CustomXMLParts" + super.toString() + "]";
   }

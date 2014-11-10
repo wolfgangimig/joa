@@ -57,9 +57,6 @@ public class NavigationFolders extends Dispatch implements _NavigationFolders {
   protected NavigationFolders(long ndisp) {
     super(ndisp);
   }
-  public NavigationFolders(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NavigationFolders" + super.toString() + "]";
   }

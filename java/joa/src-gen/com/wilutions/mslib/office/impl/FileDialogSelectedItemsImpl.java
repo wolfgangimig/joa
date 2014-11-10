@@ -42,9 +42,6 @@ public class FileDialogSelectedItemsImpl extends Dispatch implements com.wilutio
   protected FileDialogSelectedItemsImpl(long ndisp) {
     super(ndisp);
   }
-  public FileDialogSelectedItemsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[FileDialogSelectedItemsImpl" + super.toString() + "]";
   }

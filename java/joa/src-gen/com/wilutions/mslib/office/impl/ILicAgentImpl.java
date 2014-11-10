@@ -471,9 +471,6 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
   protected ILicAgentImpl(long ndisp) {
     super(ndisp);
   }
-  public ILicAgentImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ILicAgentImpl" + super.toString() + "]";
   }

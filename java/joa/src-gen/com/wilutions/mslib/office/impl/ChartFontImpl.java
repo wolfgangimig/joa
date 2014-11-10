@@ -152,9 +152,6 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
   protected ChartFontImpl(long ndisp) {
     super(ndisp);
   }
-  public ChartFontImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ChartFontImpl" + super.toString() + "]";
   }

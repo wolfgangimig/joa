@@ -69,9 +69,6 @@ public class EncryptionProviderImpl extends Dispatch implements com.wilutions.ms
   protected EncryptionProviderImpl(long ndisp) {
     super(ndisp);
   }
-  public EncryptionProviderImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[EncryptionProviderImpl" + super.toString() + "]";
   }

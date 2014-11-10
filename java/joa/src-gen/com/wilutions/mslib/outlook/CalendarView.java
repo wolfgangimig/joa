@@ -213,9 +213,6 @@ public class CalendarView extends Dispatch implements _CalendarView {
   protected CalendarView(long ndisp) {
     super(ndisp);
   }
-  public CalendarView(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[CalendarView" + super.toString() + "]";
   }

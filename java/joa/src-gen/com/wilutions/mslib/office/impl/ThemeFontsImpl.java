@@ -43,9 +43,6 @@ public class ThemeFontsImpl extends Dispatch implements com.wilutions.mslib.offi
   protected ThemeFontsImpl(long ndisp) {
     super(ndisp);
   }
-  public ThemeFontsImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ThemeFontsImpl" + super.toString() + "]";
   }

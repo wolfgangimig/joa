@@ -38,7 +38,7 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     final Object obj = this._dispatchCall(4,"SignatureImage", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return new com.wilutions.mslib.stdole.impl.IPictureDispImpl(disp);
+    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(4)  public void setSignatureImage(com.wilutions.mslib.stdole.IPictureDisp value) throws ComException {
     this._dispatchCall(4,"SignatureImage", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -110,9 +110,6 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     super(progId);
   }
   protected SignatureInfoImpl(long ndisp) {
-    super(ndisp);
-  }
-  public SignatureInfoImpl(Dispatch ndisp) {
     super(ndisp);
   }
   public String toString() {

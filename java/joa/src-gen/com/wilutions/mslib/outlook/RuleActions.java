@@ -150,9 +150,6 @@ public class RuleActions extends Dispatch implements _RuleActions {
   protected RuleActions(long ndisp) {
     super(ndisp);
   }
-  public RuleActions(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[RuleActions" + super.toString() + "]";
   }

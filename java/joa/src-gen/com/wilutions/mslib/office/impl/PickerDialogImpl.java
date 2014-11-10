@@ -66,9 +66,6 @@ public class PickerDialogImpl extends Dispatch implements com.wilutions.mslib.of
   protected PickerDialogImpl(long ndisp) {
     super(ndisp);
   }
-  public PickerDialogImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[PickerDialogImpl" + super.toString() + "]";
   }

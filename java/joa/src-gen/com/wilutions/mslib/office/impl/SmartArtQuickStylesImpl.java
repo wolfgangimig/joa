@@ -43,9 +43,6 @@ public class SmartArtQuickStylesImpl extends Dispatch implements com.wilutions.m
   protected SmartArtQuickStylesImpl(long ndisp) {
     super(ndisp);
   }
-  public SmartArtQuickStylesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SmartArtQuickStylesImpl" + super.toString() + "]";
   }

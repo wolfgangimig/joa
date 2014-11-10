@@ -116,9 +116,6 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
   protected _OlkCommandButtonImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkCommandButtonImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkCommandButtonImpl" + super.toString() + "]";
   }

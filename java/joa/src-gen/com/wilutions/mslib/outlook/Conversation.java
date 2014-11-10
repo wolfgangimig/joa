@@ -106,9 +106,6 @@ public class Conversation extends Dispatch implements _Conversation {
   protected Conversation(long ndisp) {
     super(ndisp);
   }
-  public Conversation(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Conversation" + super.toString() + "]";
   }

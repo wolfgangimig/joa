@@ -48,9 +48,6 @@ public class _OlkSenderPhotoImpl extends Dispatch implements com.wilutions.mslib
   protected _OlkSenderPhotoImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkSenderPhotoImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkSenderPhotoImpl" + super.toString() + "]";
   }

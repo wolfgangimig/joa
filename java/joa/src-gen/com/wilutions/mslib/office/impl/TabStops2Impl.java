@@ -60,9 +60,6 @@ public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.offic
   protected TabStops2Impl(long ndisp) {
     super(ndisp);
   }
-  public TabStops2Impl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TabStops2Impl" + super.toString() + "]";
   }

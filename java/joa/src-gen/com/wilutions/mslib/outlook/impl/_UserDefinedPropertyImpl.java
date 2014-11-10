@@ -56,9 +56,6 @@ public class _UserDefinedPropertyImpl extends Dispatch implements com.wilutions.
   protected _UserDefinedPropertyImpl(long ndisp) {
     super(ndisp);
   }
-  public _UserDefinedPropertyImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_UserDefinedPropertyImpl" + super.toString() + "]";
   }

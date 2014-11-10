@@ -56,9 +56,6 @@ public class _ImportanceRuleConditionImpl extends Dispatch implements com.wiluti
   protected _ImportanceRuleConditionImpl(long ndisp) {
     super(ndisp);
   }
-  public _ImportanceRuleConditionImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_ImportanceRuleConditionImpl" + super.toString() + "]";
   }

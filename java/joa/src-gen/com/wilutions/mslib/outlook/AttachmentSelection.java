@@ -60,9 +60,6 @@ public class AttachmentSelection extends Dispatch implements _AttachmentSelectio
   protected AttachmentSelection(long ndisp) {
     super(ndisp);
   }
-  public AttachmentSelection(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[AttachmentSelection" + super.toString() + "]";
   }

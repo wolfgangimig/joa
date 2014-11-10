@@ -190,9 +190,6 @@ public class OlkListBox extends Dispatch implements _OlkListBox {
   protected OlkListBox(long ndisp) {
     super(ndisp);
   }
-  public OlkListBox(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkListBox" + super.toString() + "]";
   }

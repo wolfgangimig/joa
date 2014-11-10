@@ -187,9 +187,6 @@ public class OlkTimeControl extends Dispatch implements _OlkTimeControl {
   protected OlkTimeControl(long ndisp) {
     super(ndisp);
   }
-  public OlkTimeControl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[OlkTimeControl" + super.toString() + "]";
   }

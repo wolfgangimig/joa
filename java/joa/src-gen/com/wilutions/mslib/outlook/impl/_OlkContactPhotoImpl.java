@@ -38,9 +38,6 @@ public class _OlkContactPhotoImpl extends Dispatch implements com.wilutions.msli
   protected _OlkContactPhotoImpl(long ndisp) {
     super(ndisp);
   }
-  public _OlkContactPhotoImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_OlkContactPhotoImpl" + super.toString() + "]";
   }

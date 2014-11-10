@@ -159,9 +159,6 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
   protected ExchangeDistributionList(long ndisp) {
     super(ndisp);
   }
-  public ExchangeDistributionList(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[ExchangeDistributionList" + super.toString() + "]";
   }

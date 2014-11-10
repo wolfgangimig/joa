@@ -37,9 +37,6 @@ public class MsoDebugOptions_UTImpl extends Dispatch implements com.wilutions.ms
   protected MsoDebugOptions_UTImpl(long ndisp) {
     super(ndisp);
   }
-  public MsoDebugOptions_UTImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[MsoDebugOptions_UTImpl" + super.toString() + "]";
   }

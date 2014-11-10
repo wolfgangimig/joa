@@ -314,9 +314,6 @@ public class TaskRequestUpdateItem extends Dispatch implements _TaskRequestUpdat
   protected TaskRequestUpdateItem(long ndisp) {
     super(ndisp);
   }
-  public TaskRequestUpdateItem(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[TaskRequestUpdateItem" + super.toString() + "]";
   }

@@ -250,9 +250,6 @@ public class Folder extends Dispatch implements MAPIFolder {
   protected Folder(long ndisp) {
     super(ndisp);
   }
-  public Folder(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[Folder" + super.toString() + "]";
   }

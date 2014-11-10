@@ -130,9 +130,6 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
   protected IImageImpl(long ndisp) {
     super(ndisp);
   }
-  public IImageImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IImageImpl" + super.toString() + "]";
   }

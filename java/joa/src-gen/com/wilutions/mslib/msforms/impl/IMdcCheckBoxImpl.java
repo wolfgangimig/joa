@@ -193,9 +193,6 @@ public class IMdcCheckBoxImpl extends Dispatch implements com.wilutions.mslib.ms
   protected IMdcCheckBoxImpl(long ndisp) {
     super(ndisp);
   }
-  public IMdcCheckBoxImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMdcCheckBoxImpl" + super.toString() + "]";
   }

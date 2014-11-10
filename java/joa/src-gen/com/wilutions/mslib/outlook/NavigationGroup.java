@@ -65,9 +65,6 @@ public class NavigationGroup extends Dispatch implements _NavigationGroup {
   protected NavigationGroup(long ndisp) {
     super(ndisp);
   }
-  public NavigationGroup(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[NavigationGroup" + super.toString() + "]";
   }

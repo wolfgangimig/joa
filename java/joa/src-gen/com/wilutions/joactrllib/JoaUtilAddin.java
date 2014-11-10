@@ -20,9 +20,6 @@ public class JoaUtilAddin extends Dispatch implements IJoaUtilAddin {
   protected JoaUtilAddin(long ndisp) {
     super(ndisp);
   }
-  public JoaUtilAddin(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[JoaUtilAddin" + super.toString() + "]";
   }

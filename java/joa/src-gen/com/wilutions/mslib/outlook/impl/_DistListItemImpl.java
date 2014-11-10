@@ -439,9 +439,6 @@ public class _DistListItemImpl extends Dispatch implements com.wilutions.mslib.o
   protected _DistListItemImpl(long ndisp) {
     super(ndisp);
   }
-  public _DistListItemImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_DistListItemImpl" + super.toString() + "]";
   }

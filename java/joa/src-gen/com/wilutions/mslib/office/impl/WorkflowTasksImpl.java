@@ -38,9 +38,6 @@ public class WorkflowTasksImpl extends Dispatch implements com.wilutions.mslib.o
   protected WorkflowTasksImpl(long ndisp) {
     super(ndisp);
   }
-  public WorkflowTasksImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[WorkflowTasksImpl" + super.toString() + "]";
   }

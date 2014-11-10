@@ -183,9 +183,6 @@ public class _CardViewImpl extends Dispatch implements com.wilutions.mslib.outlo
   protected _CardViewImpl(long ndisp) {
     super(ndisp);
   }
-  public _CardViewImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[_CardViewImpl" + super.toString() + "]";
   }

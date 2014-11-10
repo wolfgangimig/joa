@@ -71,9 +71,6 @@ public class IMsoDiagramImpl extends Dispatch implements com.wilutions.mslib.off
   protected IMsoDiagramImpl(long ndisp) {
     super(ndisp);
   }
-  public IMsoDiagramImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[IMsoDiagramImpl" + super.toString() + "]";
   }

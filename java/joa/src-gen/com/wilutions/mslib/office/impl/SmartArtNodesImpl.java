@@ -49,9 +49,6 @@ public class SmartArtNodesImpl extends Dispatch implements com.wilutions.mslib.o
   protected SmartArtNodesImpl(long ndisp) {
     super(ndisp);
   }
-  public SmartArtNodesImpl(Dispatch ndisp) {
-    super(ndisp);
-  }
   public String toString() {
     return "[SmartArtNodesImpl" + super.toString() + "]";
   }
