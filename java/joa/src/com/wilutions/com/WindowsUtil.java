@@ -10,7 +10,6 @@
 */
 package com.wilutions.com;
 
-import java.awt.Frame;
 import java.lang.reflect.Method;
 
 import sun.awt.windows.WComponentPeer;
@@ -36,7 +35,7 @@ public class WindowsUtil {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static long getWindowHandle(Frame window) {
+	public static long getWindowHandle(java.awt.Window window) {
 		return window.getPeer() != null ? ((WComponentPeer) window.getPeer()).getHWnd() : 0;
 	}
 }

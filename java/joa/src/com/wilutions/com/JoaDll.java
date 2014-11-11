@@ -206,11 +206,6 @@ public class JoaDll {
 	
 	public static native void nativeUpdatePrivateClasses(String privateClassesDir);
 	
-	public static native long nativeGetApplicationWindow(long hwnd);
+	public static native void nativeActivateSceneInDialog(long hwnd);
 	
-	public static native void nativeSetOwnerWindow(long hwndChild, long hwndOwner);
-	
-	public static native void nativeEnableWindow(long hwnd, boolean enable);
-	
-	public static native void nativeEnableChildWindows(long hwndParent, long hwndSkipChild, boolean enable);
 }

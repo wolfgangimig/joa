@@ -7,6 +7,7 @@ import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.JoaDll;
 import com.wilutions.joa.fx.EmbeddedWindow;
 import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
@@ -181,13 +182,13 @@ public abstract class ModalDialog<T> {
 
 			if (width == 0) {
 				width = sceneWidth + 50;
-//				if (minWidth == 0)
-//					minWidth = width;
+				// if (minWidth == 0)
+				// minWidth = width;
 			}
 			if (height == 0) {
 				height = sceneHeight + 50;
-//				if (minHeight == 0)
-//					minHeight = height;
+				// if (minHeight == 0)
+				// minHeight = height;
 			}
 
 			System.out.println("CreateBridgeDialog...");
@@ -211,7 +212,7 @@ public abstract class ModalDialog<T> {
 			dialogHandler = new DialogEventHandler();
 			Dispatch.withEvents(joaDlg, dialogHandler);
 			System.out.println("handler assigned");
-
+			
 			// Show native dialog
 			joaDlg.ShowModal(owner);
 			System.out.println("ShowModal OK");
@@ -221,7 +222,7 @@ public abstract class ModalDialog<T> {
 					this.wait();
 				}
 			}
-
+			
 			System.out.println("state=" + state);
 
 			if (state == State.HasParentHwnd) {
@@ -230,7 +231,8 @@ public abstract class ModalDialog<T> {
 				System.out.println("embedded window OK");
 
 				Platform.runLater(() -> {
-					joaDlg.SetFocusOnFirstChildWindow();
+					long hwndChild = fxFrame.getWindowHandle();
+					JoaDll.nativeActivateSceneInDialog(hwndChild);
 				});
 
 				this.asyncResult = asyncResult;
