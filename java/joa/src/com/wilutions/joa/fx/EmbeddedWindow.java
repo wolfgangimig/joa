@@ -10,7 +10,7 @@
 */
 package com.wilutions.joa.fx;
 
-
 public interface EmbeddedWindow {
 	public void dispose();
+	public long getWindowHandle();
 }

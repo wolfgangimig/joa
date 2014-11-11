@@ -48,7 +48,7 @@ public class ExplorerTaskPane extends TaskPane {
 			});
 
 		});
-
+		
 		return scene;
 	}
 
