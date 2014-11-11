@@ -120,15 +120,18 @@ public class RegisterAddin {
 			RegUtil.purgeRegistryKey(key);
 		}
 
-		// Delete Registry key where Outlook stores data about the Addin.
+		// Delete Registry keys where Outlook stores data about the Addin.
 		{
 			String keyOfficeApp = "HKCU\\Software\\Microsoft\\Office\\15.0\\" + officeApplication;
 
 			String keyAddinData = keyOfficeApp + "\\Addins\\" + progId;
 			RegUtil.purgeRegistryKey(keyAddinData);
 
-			String keyAddinLoadTimes = keyOfficeApp + "\\AddInLoadTimes";
-			RegUtil.deleteRegistryValue(keyAddinLoadTimes, progId);
+			try {
+				String keyAddinLoadTimes = keyOfficeApp + "\\AddInLoadTimes";
+				RegUtil.deleteRegistryValue(keyAddinLoadTimes, progId);
+			}
+			catch(ComException ignored) {}
 		}
 	}
 
