@@ -2,7 +2,6 @@ package addin1;
 
 import java.util.Map;
 
-import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -15,11 +14,8 @@ import javafx.stage.Stage;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.Dispatch;
-import com.wilutions.com.JoaDll;
-import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
-import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.outlook.OutlookAddin;
 import com.wilutions.mslib.office.IRibbonControl;
@@ -44,14 +40,14 @@ public class JoaAddin1 extends OutlookAddin {
 //    	});
 //    }
     
-    public void onHappyButtonClicked(IRibbonControl ribbonControl) {
-    	Object owner = getApplication().ActiveWindow();
-    	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
-    		System.out.println("This button was pressed=" + result);
-    	});
-    }
+//    public void onHappyButtonClicked(IRibbonControl ribbonControl) {
+//    	Object owner = getApplication().ActiveWindow();
+//    	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
+//    		System.out.println("MessageBox closed by button=" + result);
+//    	});
+//    }
 
-    public void onHappyButtonClicked2(Dispatch ribbonControl) {
+    public void onHappyButtonClicked(Dispatch ribbonControl) {
     	
         // Event functions triggered from Outlook should not immediately call
         // Outlook functions during processing. This can cause a deadlock.
