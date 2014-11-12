@@ -2,9 +2,21 @@ package addin1;
 
 import java.util.Map;
 
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.JoaDll;
+import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.MessageBox;
@@ -26,8 +38,21 @@ public class JoaAddin1 extends OutlookAddin {
         ribbonIcons = createRibbonIconsFromResources(this.getClass(), new String[] { "MyHappyFaceIcon.png" });
     }
 
-    public void onHappyButtonClicked(Dispatch ribbonControl) {
+//    public void onHappyButtonClicked(Dispatch ribbonControl) {
+//    	Platform.runLater(() -> {
+//    		showDialog();
+//    	});
+//    }
+    
+    public void onHappyButtonClicked(IRibbonControl ribbonControl) {
+    	Object owner = getApplication().ActiveWindow();
+    	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
+    		System.out.println("This button was pressed=" + result);
+    	});
+    }
 
+    public void onHappyButtonClicked2(Dispatch ribbonControl) {
+    	
         // Event functions triggered from Outlook should not immediately call
         // Outlook functions during processing. This can cause a deadlock.
         // Thus: execute the code in a background thread.
@@ -53,13 +78,6 @@ public class JoaAddin1 extends OutlookAddin {
         return picdisp;
     }
     
-    public void onHappyButton2Clicked(IRibbonControl ribbonControl) {
-    	Object owner = getApplication().ActiveWindow();
-    	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
-    		System.out.println("This button was pressed=" + result);
-    	});
-    }
-
     public void onJoaTaskPaneClicked(Dispatch control, Boolean pressed) {
         BackgTask.run(() -> {
             if (taskPane.hasWindow()) {
@@ -82,5 +100,36 @@ public class JoaAddin1 extends OutlookAddin {
         boolean ret = taskPane.isVisible();
         return ret;
     }
+
+	private void showDialog() {
+		
+		GridPane grid = new GridPane();
+		grid.setAlignment(Pos.CENTER);
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.setPadding(new Insets(10));
+		
+		Text text = new Text("Enter some text and click a button.");
+		grid.add(text, 0, 0);
+		
+		final TextField textField = new TextField();
+		grid.add(textField, 0, 1);
+
+		Button bnOK = new Button("OK");
+		grid.add(bnOK, 0, 2);
+		
+		Scene dialog = new Scene(grid);
+		
+		Stage stage = new Stage();
+		stage.setScene(dialog);
+		
+		bnOK.setOnAction((e)-> {
+			stage.close();
+		});
+
+		stage.show();
+		
+		stage.toFront();
+	}
 
 }

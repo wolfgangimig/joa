@@ -37,6 +37,9 @@ import com.wilutions.mslib.outlook.impl._ExplorerImpl;
 // Direkt über Windows-API eingeklinkte Erweiterungen: 
 // http://www.codeproject.com/Articles/27262/Additional-custom-panel-in-Microsoft-Outlook
 
+// Java Outlook Plugin nicht möglich:
+// https://social.technet.microsoft.com/Forums/en-US/419e76eb-5728-432f-b3b9-04769b32fe1a/is-it-possible-to-develop-microsoft-outlook-plugins-in-java?forum=outlookdev
+
 /**
  * Base class for Microsoft Outlook Addins. This class implements the following
  * event interfaces:

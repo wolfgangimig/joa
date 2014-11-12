@@ -12,38 +12,69 @@ import javafx.stage.WindowEvent;
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 
+/**
+ * This class provides convenient functions to display message boxes.
+ */
 public class MessageBox {
 
 	public final static int CANCEL = ModalDialog.CANCEL;
 	public final static int OK = ModalDialog.OK;
-	public final static int YES = 2;
-	public final static int NO = 4;
 
+	/**
+	 * Defines a message box button.
+	 */
 	public static class ButtonDefinition {
+		
+		/**
+		 * ID to be passed as result to the callback expression of {@link MessageBox#show(Object, String, String, AsyncResult)}
+		 */
 		public int id;
+		
+		/**
+		 * Text to be displayed on the button.
+		 */
 		public String text;
 
+		/**
+		 * Constructor to initialize an object.
+		 * @param id button ID
+		 * @param text button caption
+		 */
 		public ButtonDefinition(int id, String text) {
 			this.id = id;
 			this.text = text;
 		}
 	}
 
+	/**
+	 * Show message box with given buttons.
+	 * @param owner the message box will be placed on top of this window. It can be an explorer or inspector window.
+	 * @param title dialog caption
+	 * @param text message box's message
+	 * @param buttons buttons to be displayed 
+	 * @param asyncResult callback expression which is invoked, when one of the buttons is pressed. 
+	 */
 	public static void show(Object owner, String title, String text, ButtonDefinition[] buttons,
 			AsyncResult<Integer> asyncResult) {
 		DialogBox dialog = new DialogBox(title, text, buttons);
 		dialog.showAsync(owner, asyncResult);
 	}
 
+	/**
+	 * Show message box with OK button.
+	 * @param owner the message box will be placed on top of this window. It can be an explorer or inspector window.
+	 * @param title dialog caption
+	 * @param text message box's message
+	 * @param asyncResult callback expression which is invoked, when the OK button is pressed. 
+	 */
 	public static void show(Object owner, String title, String text, AsyncResult<Integer> asyncResult) {
 		ButtonDefinition[] buttons = new ButtonDefinition[] {
 				new ButtonDefinition(1, "OK"),
-				new ButtonDefinition(2, "Cancel")
 		};
 		show(owner, title, text, buttons, asyncResult);
 	}
 
-	private static class DialogBox extends ModalDialog<Integer> {
+	protected static class DialogBox extends ModalDialog<Integer> {
 
 		private String text;
 		private ButtonDefinition[] buttons;
@@ -54,8 +85,6 @@ public class MessageBox {
 			this.buttons = buttons;
 			setMinimizeBox(false);
 			setMaximizeBox(false);
-//			setWidth(300);
-//			setHeight(200);
 		}
 
 		@Override

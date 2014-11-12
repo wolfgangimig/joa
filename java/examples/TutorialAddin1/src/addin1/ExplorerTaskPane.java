@@ -1,55 +1,65 @@
 package addin1;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import com.wilutions.com.ComException;
 import com.wilutions.joa.TaskPane;
 import com.wilutions.mslib.outlook._Explorer;
 
 public class ExplorerTaskPane extends TaskPane {
-
+	
 	@Override
 	protected Scene createScene() throws ComException {
-		GridPane grid = new GridPane();
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.setPadding(new Insets(10));
+        GridPane grid = new GridPane();
+        Button clear = new Button("Klickme!");
+        GridPane.setConstraints(clear, 0, 0);
+        grid.getChildren().add(clear);
+        Scene scene = new Scene(grid);
+        return scene;
+    }
 
-		Label userName = new Label("Some text:");
-		grid.add(userName, 0, 1, 2, 1);
-		
-		final TextField userTextField = new TextField();
-		grid.add(userTextField, 1, 2);
-		
-		Button btn = new Button("...");
-		grid.add(btn, 2, 2);
-
-		Scene scene = new Scene(grid);
-
-		btn.setOnAction((event) -> {
-			System.out.println("btn onAction");
-
-			Dialog1 dialog = new Dialog1();
-			System.out.println("dialog=" + dialog);
-
-			_Explorer explorer = Globals.getThisAddin().getApplication().ActiveExplorer();
-			System.out.println("explorer=" + explorer);
-			
-			dialog.showAsync(explorer, (result, ex) -> {
-				
-				System.out.println("result=" + result);
-				userTextField.setText(result);
-				System.out.println("setText OK");
-			});
-
-		});
-		
-		return scene;
-	}
+//	@Override
+//	protected Scene createScene() throws ComException {
+//		GridPane grid = new GridPane();
+//		grid.setHgap(10);
+//		grid.setVgap(10);
+//		grid.setPadding(new Insets(10));
+//		
+//		int row = 0;
+//		
+//		Button btn = new Button("Show Dialog");
+//		grid.add(btn, 0, row++);
+//		
+//		Label userName = new Label("Received text:");
+//		grid.add(userName, 0, row++, 2, 1);
+//		
+//		final TextField userTextField = new TextField();
+//		grid.add(userTextField, 0, row++, 2, 1);
+//
+//		Scene scene = new Scene(grid);
+//
+//		btn.setOnAction((event) -> {
+//			
+//			Dialog1 dialog = new Dialog1();
+//			_Explorer owner = Globals.getThisAddin().getApplication().ActiveExplorer();
+//			
+//			dialog.showAsync(owner, (result, ex) -> {
+//				if (result.length() != 0) {
+//					userTextField.setText(result);
+//				}
+//			});
+//
+//		});
+//		
+//		return scene;
+//	}
 
 }

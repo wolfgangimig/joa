@@ -13,33 +13,91 @@ import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
 import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
 
+/**
+ * This is the base class for all modal dialogs.
+ *
+ * @param <T> Result type of callback expression. 
+ */
 public abstract class ModalDialog<T> {
 
+	/**
+	 * Dialog owner.
+	 * Can be an explorer or inspector window.
+	 */
 	protected Dispatch owner;
+	
+	/**
+	 * Helper object to show an empty modal dialog in the UI thread of Outlook.
+	 */
 	protected IJoaBridgeDialog joaDlg;
+	
+	/**
+	 * JavaFX frame window placed inside the {@link #joaDlg}.
+	 */
 	private EmbeddedWindow fxFrame;
+	
+	/**
+	 * Native window handle of the {@link #joaDlg}
+	 */
 	private long hwndParent;
+	
+	/**
+	 * Callback expression received from function {@link #showAsync(Object, AsyncResult)}.
+	 */
 	protected AsyncResult<T> asyncResult;
+	
+	/**
+	 * Result that will passed to {@link #asyncResult} when the dialog is closed.
+	 */
 	private T result;
 
+	// Dimensions
 	private double x, y, width, height, minWidth, maxWidth, minHeight, maxHeight;
+	
+	/**
+	 * Align dialog box in the center of the owner window.
+	 */
 	private boolean centerOnOwner = true;
+	
+	/**
+	 * Dialog box is re-sizable.
+	 */
 	private boolean resizable = true;
+	
+	/**
+	 * Dialog box has a minimize button.
+	 */
 	private boolean minimizeBox = false;
+	
+	/**
+	 * Dialog box has a maximize button.
+	 */
 	private boolean maximizeBox = true;
+	
+	/**
+	 * Caption
+	 */
 	private String title;
 
+	/**
+	 * Definition for cancel button ID.
+	 */
 	public final static int CANCEL = 0;
+	
+	/**
+	 * Definition for OK button ID.
+	 */
 	public final static int OK = 1;
 
+	/**
+	 * Internal processing state.
+	 *
+	 */
 	private enum State {
 		Initialized, HasParentHwnd, IsClosed
 	};
 
 	private State state = State.Initialized;
-
-	public ModalDialog() {
-	}
 
 	/**
 	 * Create JavaFX scene.
@@ -48,6 +106,80 @@ public abstract class ModalDialog<T> {
 	 * @throws ComException
 	 */
 	protected abstract Scene createScene() throws ComException;
+
+	/**
+	 * Constructor.
+	 */
+	public ModalDialog() {
+	}
+
+	/**
+	 * Show the dialog box.
+	 * @param _owner Owner object, either explorer or inspector window.
+	 * @param asyncResult Callback expression which is called, when the dialog is closed.
+	 */
+	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
+		this.owner = Dispatch.as(_owner, Dispatch.class);
+		if (Platform.isFxApplicationThread()) {
+			internalShowAsync(owner, asyncResult);
+		} else {
+			Platform.runLater(() -> internalShowAsync(owner, asyncResult));
+		}
+	}
+
+	/**
+	 * Close dialog and invoke callback expression.
+	 * @param result Object to be passed to the callback expression.
+	 * @see #showAsync(Object, AsyncResult)
+	 */
+	public void finish(T result) {
+		setResult(result);
+		close();
+	}
+
+	/**
+	 * Close dialog.
+	 * Invokes the callback expression with the current value of {@link #result}.
+	 * @see #finish(Object)
+	 * @see #setResult(Object)
+	 */
+	public void close() {
+		Throwable ex = null;
+		if (joaDlg != null) {
+			try {
+				joaDlg.Close();
+			} catch (Throwable ex1) {
+				ex = ex1;
+			}
+		}
+		if (asyncResult != null) {
+			asyncResult.setAsyncResult(result, ex);
+		}
+	}
+
+	/**
+	 * Set callback result.
+	 * @param ret Result object
+	 * @throws ComException
+	 */
+	public void setResult(T ret) {
+		this.result = ret;
+	}
+
+	public T getResult() {
+		return this.result;
+	}
+
+	/**
+	 * Tests whether dialog can be closed.
+	 * Override this function to prevent the dialog from being closed before all mandatory fields are filled.  
+	 * This function is also called, if the user tries to close the dialog via the system menu. 
+	 * @return true, if the dialog can be closed, false otherwise.
+	 * @throws ComException
+	 */
+	public boolean canClose() throws ComException {
+		return true;
+	}
 
 	public double getX() {
 		return x;
@@ -153,15 +285,6 @@ public abstract class ModalDialog<T> {
 		this.maximizeBox = maximizeBox;
 	}
 
-	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
-		this.owner = Dispatch.as(_owner, Dispatch.class);
-		if (Platform.isFxApplicationThread()) {
-			internalShowAsync(owner, asyncResult);
-		} else {
-			Platform.runLater(() -> internalShowAsync(owner, asyncResult));
-		}
-	}
-
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
@@ -181,12 +304,12 @@ public abstract class ModalDialog<T> {
 			double sceneHeight = scene.getHeight();
 
 			if (width == 0) {
-				width = sceneWidth + 50;
+				width = sceneWidth + 20;
 				// if (minWidth == 0)
 				// minWidth = width;
 			}
 			if (height == 0) {
-				height = sceneHeight + 50;
+				height = sceneHeight + 40;
 				// if (minHeight == 0)
 				// minHeight = height;
 			}
@@ -251,37 +374,6 @@ public abstract class ModalDialog<T> {
 				dialogHandler.onClosed();
 			}
 		}
-	}
-
-	public void finish(T result) {
-		setResult(result);
-		close();
-	}
-
-	public void close() {
-		Throwable ex = null;
-		if (joaDlg != null) {
-			try {
-				joaDlg.Close();
-			} catch (Throwable ex1) {
-				ex = ex1;
-			}
-		}
-		if (asyncResult != null) {
-			asyncResult.setAsyncResult(result, ex);
-		}
-	}
-
-	public void setResult(T ret) throws ComException {
-		this.result = ret;
-	}
-
-	public T getResult() {
-		return this.result;
-	}
-
-	public boolean canClose() throws ComException {
-		return true;
 	}
 
 	private class DialogEventHandler extends DispatchImpl implements _IJoaBridgeDialogEvents {

@@ -1,5 +1,6 @@
 package addin1;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,8 +15,6 @@ public class Dialog1 extends ModalDialog<String> {
 
 	public Dialog1() {
 		setTitle("Tutorial Dialog");
-		setWidth(300);
-		setHeight(200);
 	}
 
 	@Override
@@ -25,7 +24,8 @@ public class Dialog1 extends ModalDialog<String> {
 		grid.setAlignment(Pos.CENTER);
 		grid.setHgap(10);
 		grid.setVgap(10);
-		
+		grid.setPadding(new Insets(10));
+
 		Text text = new Text("Enter some text and click a button.");
 		grid.add(text, 0, 0, 2, 1);
 		
@@ -44,8 +44,10 @@ public class Dialog1 extends ModalDialog<String> {
 		bnCancel.setOnAction((e)-> {
 			Dialog1.this.finish("");
 		});
+		
 
 		Scene dialog = new Scene(grid);
+		
 		return dialog;
 	}
 
