@@ -11,7 +11,11 @@
 package com.wilutions.joa;
 
 import javafx.application.Platform;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.scene.Scene;
+import javafx.stage.WindowEvent;
 
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
@@ -58,6 +62,12 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 	 */
 	@DeclRegistryValue
 	private boolean reg_visible;
+	
+	/**
+	 * Event handlers usually added to a Stage.
+	 * Currently, only WindowEvent.WINDOW_SHOWN is supported.
+	 */
+	private EventHandler<WindowEvent> eventHandlerWindowShown;
 	
 	/**
 	 * Constructor.
@@ -139,6 +149,14 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 			try {
 				final Scene scene = TaskPane.this.createScene();
 				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndJoaCtrl, scene);
+				
+				Platform.runLater(() -> {
+					if (eventHandlerWindowShown != null) {
+						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN); 
+						eventHandlerWindowShown.handle(event);
+					}
+				});
+				
 			} catch (ComException e) {
 				throw new IllegalStateException(e);
 			}
@@ -190,6 +208,21 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 		return customTaskPane != null;
 	}
 	
+	
+	/**
+	 * Set event handler for WindowEvent.WINDOW_SHOWN.
+	 * Only one hander is supported. Only WINDOW_SHOWN is supported.
+	 * The handler receives null as source parameter.
+	 * @param eventType must be WindowEvent.WINDOW_SHOWN
+	 * @param eventHandler handler expression
+	 */
+	@SuppressWarnings("unchecked")
+	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
+		assert eventType == WindowEvent.WINDOW_SHOWN;
+		assert eventHandler != null;
+		eventHandlerWindowShown = (EventHandler<WindowEvent>)eventHandler;
+	}
+
 }
 
 

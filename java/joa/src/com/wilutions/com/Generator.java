@@ -22,10 +22,10 @@ public class Generator {
 		
 		System.out.println("JoaDll.version=" + JoaDll.getVersion());
 
-		generateJavaClasses("com.wilutions.mslib", 
-				"{00062FFF-0000-0000-C000-000000000046}", // "D:\\Program Files (x86)\\Microsoft Office\\Office15\\MSOUTL.OLB";
-				"{0D452EE1-E08F-101A-852E-02608C4D0BB4}" // Forms type library (i.e., fm20.dll)
-		);
+//		generateJavaClasses("com.wilutions.mslib", 
+//				"{00062FFF-0000-0000-C000-000000000046}", // "D:\\Program Files (x86)\\Microsoft Office\\Office15\\MSOUTL.OLB";
+//				"{0D452EE1-E08F-101A-852E-02608C4D0BB4}" // Forms type library (i.e., fm20.dll)
+//		);
 
 		generateJavaClasses("com.wilutions", 
 				"{0F9377B3-9F5B-4551-8709-8E422D5F7A8A}" // JoaCtrl

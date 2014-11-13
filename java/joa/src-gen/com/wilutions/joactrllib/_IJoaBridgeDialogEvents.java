@@ -10,5 +10,5 @@ import com.wilutions.com.*;
 public interface _IJoaBridgeDialogEvents extends IDispatch {
   @DeclDISPID(1)  public void onShow(Long HWND) throws ComException;
   @DeclDISPID(2)  public void onClosed() throws ComException;
-  @DeclDISPID(3)  public Boolean onCanClose() throws ComException;
+  @DeclDISPID(3)  public void onSystemMenuClose() throws ComException;
 }

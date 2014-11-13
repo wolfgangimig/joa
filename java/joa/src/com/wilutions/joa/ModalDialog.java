@@ -1,7 +1,11 @@
 package com.wilutions.joa;
 
 import javafx.application.Platform;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.scene.Scene;
+import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
@@ -20,12 +24,6 @@ import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
  */
 public abstract class ModalDialog<T> {
 
-	/**
-	 * Dialog owner.
-	 * Can be an explorer or inspector window.
-	 */
-	protected Dispatch owner;
-	
 	/**
 	 * Helper object to show an empty modal dialog in the UI thread of Outlook.
 	 */
@@ -78,6 +76,12 @@ public abstract class ModalDialog<T> {
 	 * Caption
 	 */
 	private String title;
+	
+	/**
+	 * Event handlers usually added to a Stage.
+	 * Currently, only WindowEvent.WINDOW_SHOWN is supported.
+	 */
+	private EventHandler<WindowEvent> eventHandlerWindowShown;
 
 	/**
 	 * Definition for cancel button ID.
@@ -119,11 +123,10 @@ public abstract class ModalDialog<T> {
 	 * @param asyncResult Callback expression which is called, when the dialog is closed.
 	 */
 	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
-		this.owner = Dispatch.as(_owner, Dispatch.class);
 		if (Platform.isFxApplicationThread()) {
-			internalShowAsync(owner, asyncResult);
+			internalShowAsync(_owner, asyncResult);
 		} else {
-			Platform.runLater(() -> internalShowAsync(owner, asyncResult));
+			Platform.runLater(() -> internalShowAsync(_owner, asyncResult));
 		}
 	}
 
@@ -156,6 +159,13 @@ public abstract class ModalDialog<T> {
 			asyncResult.setAsyncResult(result, ex);
 		}
 	}
+	
+	/**
+	 * Called when the dialog is closed over the system menu.
+	 */
+	public void onSystemMenuClose() {
+		this.close();
+	}
 
 	/**
 	 * Set callback result.
@@ -168,17 +178,6 @@ public abstract class ModalDialog<T> {
 
 	public T getResult() {
 		return this.result;
-	}
-
-	/**
-	 * Tests whether dialog can be closed.
-	 * Override this function to prevent the dialog from being closed before all mandatory fields are filled.  
-	 * This function is also called, if the user tries to close the dialog via the system menu. 
-	 * @return true, if the dialog can be closed, false otherwise.
-	 * @throws ComException
-	 */
-	public boolean canClose() throws ComException {
-		return true;
 	}
 
 	public double getX() {
@@ -284,14 +283,38 @@ public abstract class ModalDialog<T> {
 	public void setMaximizeBox(boolean maximizeBox) {
 		this.maximizeBox = maximizeBox;
 	}
-
+	
+	/**
+	 * Set event handler for WindowEvent.WINDOW_SHOWN.
+	 * Only one hander is supported. Only WINDOW_SHOWN is supported.
+	 * The handler receives null as source parameter.
+	 * @param eventType must be WindowEvent.WINDOW_SHOWN
+	 * @param eventHandler handler expression
+	 */
+	@SuppressWarnings("unchecked")
+	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
+		assert eventType == WindowEvent.WINDOW_SHOWN;
+		assert eventHandler != null;
+		eventHandlerWindowShown = (EventHandler<WindowEvent>)eventHandler;
+	}
+	
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
 
-	@SuppressWarnings("deprecation")
-	private void internalShowAsync(Dispatch owner, AsyncResult<T> asyncResult) {
-		this.owner = owner;
+	@SuppressWarnings({ "deprecation", "rawtypes" })
+	private void internalShowAsync(Object _owner, AsyncResult<T> asyncResult) {
+		
+		Object owner = null;
+
+		assert (_owner instanceof Dispatch) || (_owner instanceof ModalDialog);
+		
+		if (_owner instanceof ModalDialog) {
+			owner = ((ModalDialog)_owner).joaDlg.getHWND();
+		}
+		else {
+			owner = _owner;
+		}
 
 		DialogEventHandler dialogHandler = null;
 		try {
@@ -356,6 +379,11 @@ public abstract class ModalDialog<T> {
 				Platform.runLater(() -> {
 					long hwndChild = fxFrame.getWindowHandle();
 					JoaDll.nativeActivateSceneInDialog(hwndChild);
+					
+					if (eventHandlerWindowShown != null) {
+						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN); 
+						eventHandlerWindowShown.handle(event);
+					}
 				});
 
 				this.asyncResult = asyncResult;
@@ -388,8 +416,8 @@ public abstract class ModalDialog<T> {
 		}
 
 		@Override
-		public Boolean onCanClose() throws ComException {
-			return ModalDialog.this.canClose();
+		public void onSystemMenuClose() throws ComException {
+			ModalDialog.this.onSystemMenuClose();
 		}
 
 		@Override

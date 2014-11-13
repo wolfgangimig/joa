@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{092F3085-8620-4218-A38D-7F223DA710D9}")
 public interface IJoaBridgeDialog extends IDispatch {
-  @DeclDISPID(11)  public void ShowModal(Dispatch owner) throws ComException;
+  @DeclDISPID(11)  public void ShowModal(Object owner) throws ComException;
   @DeclDISPID(10)  public void Close() throws ComException;
   @DeclDISPID(1)  public Long getHWND() throws ComException;
   @DeclDISPID(1)  public void setHWND(Long value) throws ComException;

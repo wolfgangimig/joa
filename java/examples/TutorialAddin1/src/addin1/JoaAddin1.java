@@ -2,6 +2,7 @@ package addin1;
 
 import java.util.Map;
 
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ import com.wilutions.com.CoClass;
 import com.wilutions.com.Dispatch;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
+import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.outlook.OutlookAddin;
 import com.wilutions.mslib.office.IRibbonControl;
@@ -34,18 +36,18 @@ public class JoaAddin1 extends OutlookAddin {
         ribbonIcons = createRibbonIconsFromResources(this.getClass(), new String[] { "MyHappyFaceIcon.png" });
     }
 
-//    public void onHappyButtonClicked(Dispatch ribbonControl) {
-//    	Platform.runLater(() -> {
-//    		showDialog();
-//    	});
-//    }
+    public void onHappyButtonClicked2(Dispatch ribbonControl) {
+    	Platform.runLater(() -> {
+    		showDialog();
+    	});
+    }
     
-//    public void onHappyButtonClicked(IRibbonControl ribbonControl) {
-//    	Object owner = getApplication().ActiveWindow();
-//    	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
-//    		System.out.println("MessageBox closed by button=" + result);
-//    	});
-//    }
+    public void onHappyButtonClicked3(IRibbonControl ribbonControl) {
+    	Object owner = getApplication().ActiveWindow();
+    	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
+    		System.out.println("MessageBox closed by button=" + result);
+    	});
+    }
 
     public void onHappyButtonClicked(Dispatch ribbonControl) {
     	

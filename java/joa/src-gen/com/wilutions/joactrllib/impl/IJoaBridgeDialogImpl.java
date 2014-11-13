@@ -5,8 +5,9 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C9B8A9EE-2243-9959-3E23-16C59850EC23}")
 public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joactrllib.IJoaBridgeDialog {
-  @DeclDISPID(11)  public void ShowModal(Dispatch owner) throws ComException {
-    this._dispatchCall(11,"ShowModal", DISPATCH_METHOD,null,(owner!=null?owner:Dispatch.NULL));
+  @DeclDISPID(11)  public void ShowModal(Object owner) throws ComException {
+    assert(owner != null);
+    this._dispatchCall(11,"ShowModal", DISPATCH_METHOD,null,owner);
   }
   @DeclDISPID(10)  public void Close() throws ComException {
     this._dispatchCall(10,"Close", DISPATCH_METHOD,null);
