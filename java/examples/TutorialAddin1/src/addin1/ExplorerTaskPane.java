@@ -1,11 +1,16 @@
 package addin1;
 
+
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
 import com.wilutions.com.ComException;
 import com.wilutions.joa.TaskPane;
+import com.wilutions.mslib.outlook._Explorer;
 
 public class ExplorerTaskPane extends TaskPane {
 	

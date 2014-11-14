@@ -7,7 +7,7 @@
       
       MIT License, http://opensource.org/licenses/MIT
 
-*/
+ */
 package com.wilutions.com.test;
 
 import static org.junit.Assert.fail;
@@ -32,6 +32,10 @@ import com.wilutions.com.DispatchImpl;
 import com.wilutions.joa.joacomtestlib.IJoaTestDispatch1;
 import com.wilutions.joa.joacomtestlib.JoaTestDispatch1;
 import com.wilutions.joa.joacomtestlib.JoaTestObject;
+import com.wilutions.mslib.outlook.NoteItem;
+import com.wilutions.mslib.outlook.OlItemType;
+import com.wilutions.mslib.outlook._Application;
+import com.wilutions.mslib.outlook.impl._ApplicationImpl;
 
 public class TestPropertyParameterTypes {
 
@@ -118,27 +122,57 @@ public class TestPropertyParameterTypes {
 
 		log.info(")testPropertyAccessPrimitiveTypes");
 	}
+
+	@Test
+	public void testPropertyAccessVariant() {
+		log.info("testPropertyAccessVariant(");
+		try {
+			testObj.setVariant1(Boolean.TRUE);
+			boolean v = (Boolean)testObj.getVariant1();
+			TestCase.assertEquals("Boolean1", true, v);
+			testObj.setVariant1(!v);
+			v = (Boolean)testObj.getVariant1();
+			TestCase.assertEquals("Boolean1", false, v);
+		
+			{
+				String name = "testPropertyAccessVariant";
+				Dispatch rawDisp1 = new JoaTestDispatch1();
+				JoaTestDispatch1 disp1 = rawDisp1.as(JoaTestDispatch1.class);
+				disp1.setName(name);
+				testObj.setVariant1(disp1);
 	
-	
+				Object read_rawDisp1 = testObj.getVariant1();
+				JoaTestDispatch1 read_disp1 = Dispatch.as(read_rawDisp1, JoaTestDispatch1.class);
+				TestCase.assertEquals("disp1.name", name, read_disp1.getName());
+			}
+			
+
+		} catch (ComException e) {
+			log.error("testPropertyAccessVariant failed", e);
+			fail(e.toString());
+		}
+		log.info(")testPropertyAccessVariant");
+	}
+
 	@Test
 	public void testPropertyAccessDate() {
 		log.info("testPropertyAccessDate(");
 
 		try {
 			final String dateStr = "2014-10-05T18:31:54.000";
-			
+
 			SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 			Date date1 = fmt.parse(dateStr);
-			
+
 			log.info("setDate1 " + date1);
 			testObj.setDate1(date1);
 			TestCase.assertEquals("date1", date1, testObj.getDate1());
 
-			// JoaTestObject formats the date value into a string and stores it in property String1.
+			// JoaTestObject formats the date value into a string and stores it
+			// in property String1.
 			String str = testObj.getString1();
 			log.info("testObj received date=" + str);
 			TestCase.assertEquals("date1", dateStr, str);
-			
 
 		} catch (Exception e) {
 			log.error("testPropertyAccessDate failed", e);
@@ -165,7 +199,7 @@ public class TestPropertyParameterTypes {
 				int rvalue = testObj.getLongArray1dim(i);
 				TestCase.assertEquals("LongArray1dim[" + i + "]", value, rvalue);
 			}
-			
+
 		} catch (ComException e) {
 			log.error("testIndexedProperties1dim failed", e);
 			fail(e.toString());
@@ -173,6 +207,7 @@ public class TestPropertyParameterTypes {
 
 		log.info(")testIndexedProperties1dim");
 	}
+
 	/**
 	 * Test array and map properties.
 	 */
@@ -186,9 +221,9 @@ public class TestPropertyParameterTypes {
 			for (int i = 0; i < 10; i++) {
 				Boolean value = (i & 1) != 0;
 				String key = "i" + i;
-				
+
 				testObj.setBooleanMap1(key, value);
-				
+
 				Boolean rvalue = testObj.getBooleanMap1(key);
 				TestCase.assertEquals("BooleanMap1[" + key + "]", value, rvalue);
 
@@ -215,11 +250,11 @@ public class TestPropertyParameterTypes {
 			for (int i1 = 1; i1 < 3; i1++) {
 				for (int i2 = 2; i2 < 4; i2++) {
 					for (int i3 = 3; i3 < 5; i3++) {
-						
+
 						String value = i1 + "-" + i2 + "-" + i3;
 
 						testObj.setStringArray3dim(i1, i2, i3, value);
-						
+
 						String rvalue = testObj.getStringArray3dim(i1, i2, i3);
 						TestCase.assertEquals("StringArray3dim[" + value + "]", value, rvalue);
 					}
@@ -233,29 +268,28 @@ public class TestPropertyParameterTypes {
 
 		log.info(")testIndexedProperties3dim");
 	}
-	
+
 	/**
 	 * An IDispatch property can be set to NULL.
 	 */
 	@Test
 	public void testPropertyInterfacePtrNull() {
 		log.info("testPropertyInterfacePtrNull(");
-		
+
 		try {
 			testObj.setDispatch1(null);
-			
+
 			Dispatch disp = testObj.getDispatch1();
 			TestCase.assertTrue("disp must be null", disp == null);
-		}
-		catch (ComException e) {
+		} catch (ComException e) {
 			log.error("testPropertyInterfacePtrNull failed", e);
 			fail(e.toString());
-			
+
 		}
-		
+
 		log.info(")testPropertyInterfacePtrNull");
 	}
-	
+
 	/**
 	 * Get/set property of type IDispatch.
 	 */
@@ -270,16 +304,15 @@ public class TestPropertyParameterTypes {
 			JoaTestDispatch1 disp1 = rawDisp1.as(JoaTestDispatch1.class);
 			disp1.setName(name);
 			testObj.setDispatch1(disp1);
-			
+
 			Dispatch read_rawDisp1 = testObj.getDispatch1();
 			JoaTestDispatch1 read_disp1 = read_rawDisp1.as(JoaTestDispatch1.class);
 			TestCase.assertEquals("disp1.name", name, read_disp1.getName());
-			
+
 			read_disp1.releaseComObject();
 
 			testObj.setDispatch1(null);
 			disp1.releaseComObject();
-			
 
 		} catch (ComException e) {
 			log.error("testPropertyDispatchPtr failed", e);
@@ -289,7 +322,6 @@ public class TestPropertyParameterTypes {
 		log.info(")testPropertyDispatchPtr");
 	}
 
-	
 	/**
 	 * Get/set property of user defined interface.
 	 */
@@ -304,13 +336,13 @@ public class TestPropertyParameterTypes {
 			IJoaTestDispatch1 disp1 = rawDisp1.as(JoaTestDispatch1.class);
 			disp1.setName(name);
 			testObj.setPropJoaTestDispatch1(disp1);
-			
+
 			IJoaTestDispatch1 read_disp1 = testObj.getPropJoaTestDispatch1();
 			TestCase.assertEquals("disp1.name", name, read_disp1.getName());
-			
-			testObj.setPropJoaTestDispatch1(null); 
+
+			testObj.setPropJoaTestDispatch1(null);
 			Dispatch.releaseComObject(disp1);
-			
+
 			// read_disp1 muss nicht extra freigegeben werden,
 			// es ist ja dasselbe wie disp1 - oder?
 
@@ -321,7 +353,7 @@ public class TestPropertyParameterTypes {
 
 		log.info(")testPropertyUserdefInterface");
 	}
-	
+
 	/**
 	 * Call function with no return value. If the parameters of
 	 * LongBstrReturnVoid are not equal, the function returns an error code and
@@ -450,7 +482,7 @@ public class TestPropertyParameterTypes {
 
 		log.info(")testInvokeFunctionWithByRefParam");
 	}
-	
+
 	/**
 	 * Invoke function with in/out parameter of type Dispatch.
 	 */
@@ -465,11 +497,11 @@ public class TestPropertyParameterTypes {
 			testDisp1.setName("disp1");
 			disp1.value = testDisp1;
 			testObj.MethodByRef_Dispatch(disp1);
-			
+
 			TestCase.assertTrue("Byref value must have changed", disp1.value != testDisp1);
 			JoaTestDispatch1 readDisp = disp1.value.as(JoaTestDispatch1.class);
 			TestCase.assertEquals("MethodByRef_Dispatch", "disp1+1", readDisp.getName());
-			
+
 			testDisp1.releaseComObject();
 			disp1.value.releaseComObject();
 
@@ -484,6 +516,5 @@ public class TestPropertyParameterTypes {
 
 		log.info(")testInvokeFunctionWithByRefParamDispatch");
 	}
-	
-	
+
 }

@@ -39,4 +39,6 @@ public interface IJoaBridgeDialog extends IDispatch {
   @DeclDISPID(23)  public Integer getMaxWidth() throws ComException;
   @DeclDISPID(23)  public void setMaxWidth(Integer value) throws ComException;
   @DeclDISPID(24)  public void SetFocusOnFirstChildWindow() throws ComException;
+  @DeclDISPID(25)  public void ShowModal2(Long hwndOwner) throws ComException;
+  @DeclDISPID(26)  public void ShowModal3(Dispatch dispOwner) throws ComException;
 }

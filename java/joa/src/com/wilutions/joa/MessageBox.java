@@ -14,6 +14,7 @@ import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
+import com.wilutions.com.Dispatch;
 
 /**
  * This class provides convenient functions to display message boxes.
@@ -56,7 +57,13 @@ public class MessageBox {
 		private List<ButtonDefinition> _buttonDefinitions = new ArrayList<ButtonDefinition>();
 
 		public Builder owner(Object v) {
-			_owner = v;
+			assert (v instanceof Dispatch) || (v instanceof ModalDialog);
+			if (v instanceof ModalDialog) {
+				_owner = v;
+			}
+			else {
+				_owner = Dispatch.as(v, Dispatch.class);
+			}
 			return this;
 		}
 
@@ -130,6 +137,16 @@ public class MessageBox {
 	 */
 	public static void show(Object owner, String title, String text, AsyncResult<Integer> asyncResult) {
 		
+		Object _owner;
+		
+		assert (owner instanceof Dispatch) || (owner instanceof ModalDialog);
+		if (owner instanceof ModalDialog) {
+			_owner = owner;
+		}
+		else {
+			_owner = Dispatch.as(owner, Dispatch.class);
+		}
+		
 		Button button = new Button("OK");
 		button.setMinWidth(DEFAULT_BUTTON_MIN_WIDTH);
 		button.setDefaultButton(true);
@@ -141,7 +158,7 @@ public class MessageBox {
 		buttonDefinitions.add(bd);
 		
 		DialogBox dialog = new DialogBox(title, text, buttonDefinitions);
-		dialog.showAsync(owner, asyncResult);
+		dialog.showAsync(_owner, asyncResult);
 	}
 
 	protected static class DialogBox extends ModalDialog<Integer> {

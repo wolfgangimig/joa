@@ -141,6 +141,14 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
   @DeclDISPID(24)  public void SetFocusOnFirstChildWindow() throws ComException {
     this._dispatchCall(24,"SetFocusOnFirstChildWindow", DISPATCH_METHOD,null);
   }
+  @DeclDISPID(25)  public void ShowModal2(Long hwndOwner) throws ComException {
+    assert(hwndOwner != null);
+    this._dispatchCall(25,"ShowModal2", DISPATCH_METHOD,null,hwndOwner);
+  }
+  @DeclDISPID(26)  public void ShowModal3(Dispatch dispOwner) throws ComException {
+    assert(dispOwner != null);
+    this._dispatchCall(26,"ShowModal3", DISPATCH_METHOD,null,dispOwner);
+  }
   public IJoaBridgeDialogImpl(String progId) throws ComException {
     super(progId);
   }

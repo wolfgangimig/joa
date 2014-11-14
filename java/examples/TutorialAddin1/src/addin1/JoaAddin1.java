@@ -42,7 +42,7 @@ public class JoaAddin1 extends OutlookAddin {
     	});
     }
     
-    public void onHappyButtonClicked3(IRibbonControl ribbonControl) {
+    public void onHappyButtonClicked1(IRibbonControl ribbonControl) {
     	Object owner = getApplication().ActiveWindow();
     	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
     		System.out.println("MessageBox closed by button=" + result);

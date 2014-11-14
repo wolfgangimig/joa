@@ -20,7 +20,8 @@ import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
 /**
  * This is the base class for all modal dialogs.
  *
- * @param <T> Result type of callback expression. 
+ * @param <T>
+ *            Result type of callback expression.
  */
 public abstract class ModalDialog<T> {
 
@@ -28,58 +29,60 @@ public abstract class ModalDialog<T> {
 	 * Helper object to show an empty modal dialog in the UI thread of Outlook.
 	 */
 	protected IJoaBridgeDialog joaDlg;
-	
+
 	/**
 	 * JavaFX frame window placed inside the {@link #joaDlg}.
 	 */
 	private EmbeddedWindow fxFrame;
-	
+
 	/**
 	 * Native window handle of the {@link #joaDlg}
 	 */
 	private long hwndParent;
-	
+
 	/**
-	 * Callback expression received from function {@link #showAsync(Object, AsyncResult)}.
+	 * Callback expression received from function
+	 * {@link #showAsync(Object, AsyncResult)}.
 	 */
 	protected AsyncResult<T> asyncResult;
-	
+
 	/**
-	 * Result that will passed to {@link #asyncResult} when the dialog is closed.
+	 * Result that will passed to {@link #asyncResult} when the dialog is
+	 * closed.
 	 */
 	private T result;
 
 	// Dimensions
 	private double x, y, width, height, minWidth, maxWidth, minHeight, maxHeight;
-	
+
 	/**
 	 * Align dialog box in the center of the owner window.
 	 */
 	private boolean centerOnOwner = true;
-	
+
 	/**
 	 * Dialog box is re-sizable.
 	 */
 	private boolean resizable = true;
-	
+
 	/**
 	 * Dialog box has a minimize button.
 	 */
 	private boolean minimizeBox = false;
-	
+
 	/**
 	 * Dialog box has a maximize button.
 	 */
 	private boolean maximizeBox = true;
-	
+
 	/**
 	 * Caption
 	 */
 	private String title;
-	
+
 	/**
-	 * Event handlers usually added to a Stage.
-	 * Currently, only WindowEvent.WINDOW_SHOWN is supported.
+	 * Event handlers usually added to a Stage. Currently, only
+	 * WindowEvent.WINDOW_SHOWN is supported.
 	 */
 	private EventHandler<WindowEvent> eventHandlerWindowShown;
 
@@ -87,7 +90,7 @@ public abstract class ModalDialog<T> {
 	 * Definition for cancel button ID.
 	 */
 	public final static int CANCEL = 0;
-	
+
 	/**
 	 * Definition for OK button ID.
 	 */
@@ -119,8 +122,12 @@ public abstract class ModalDialog<T> {
 
 	/**
 	 * Show the dialog box.
-	 * @param _owner Owner object, either explorer or inspector window.
-	 * @param asyncResult Callback expression which is called, when the dialog is closed.
+	 * 
+	 * @param _owner
+	 *            Owner object, either explorer or inspector window.
+	 * @param asyncResult
+	 *            Callback expression which is called, when the dialog is
+	 *            closed.
 	 */
 	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
 		if (Platform.isFxApplicationThread()) {
@@ -132,7 +139,9 @@ public abstract class ModalDialog<T> {
 
 	/**
 	 * Close dialog and invoke callback expression.
-	 * @param result Object to be passed to the callback expression.
+	 * 
+	 * @param result
+	 *            Object to be passed to the callback expression.
 	 * @see #showAsync(Object, AsyncResult)
 	 */
 	public void finish(T result) {
@@ -141,8 +150,9 @@ public abstract class ModalDialog<T> {
 	}
 
 	/**
-	 * Close dialog.
-	 * Invokes the callback expression with the current value of {@link #result}.
+	 * Close dialog. Invokes the callback expression with the current value of
+	 * {@link #result}.
+	 * 
 	 * @see #finish(Object)
 	 * @see #setResult(Object)
 	 */
@@ -159,7 +169,7 @@ public abstract class ModalDialog<T> {
 			asyncResult.setAsyncResult(result, ex);
 		}
 	}
-	
+
 	/**
 	 * Called when the dialog is closed over the system menu.
 	 */
@@ -169,7 +179,9 @@ public abstract class ModalDialog<T> {
 
 	/**
 	 * Set callback result.
-	 * @param ret Result object
+	 * 
+	 * @param ret
+	 *            Result object
 	 * @throws ComException
 	 */
 	public void setResult(T ret) {
@@ -283,37 +295,38 @@ public abstract class ModalDialog<T> {
 	public void setMaximizeBox(boolean maximizeBox) {
 		this.maximizeBox = maximizeBox;
 	}
-	
+
 	/**
-	 * Set event handler for WindowEvent.WINDOW_SHOWN.
-	 * Only one hander is supported. Only WINDOW_SHOWN is supported.
-	 * The handler receives null as source parameter.
-	 * @param eventType must be WindowEvent.WINDOW_SHOWN
-	 * @param eventHandler handler expression
+	 * Set event handler for WindowEvent.WINDOW_SHOWN. Only one hander is
+	 * supported. Only WINDOW_SHOWN is supported. The handler receives null as
+	 * source parameter.
+	 * 
+	 * @param eventType
+	 *            must be WindowEvent.WINDOW_SHOWN
+	 * @param eventHandler
+	 *            handler expression
 	 */
 	@SuppressWarnings("unchecked")
 	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
 		assert eventType == WindowEvent.WINDOW_SHOWN;
 		assert eventHandler != null;
-		eventHandlerWindowShown = (EventHandler<WindowEvent>)eventHandler;
+		eventHandlerWindowShown = (EventHandler<WindowEvent>) eventHandler;
 	}
-	
+
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
 
-	@SuppressWarnings({ "deprecation", "rawtypes" })
+	@SuppressWarnings({ "rawtypes" })
 	private void internalShowAsync(Object _owner, AsyncResult<T> asyncResult) {
-		
-		Object owner = null;
 
-		assert (_owner instanceof Dispatch) || (_owner instanceof ModalDialog);
-		
+		Dispatch dispOwner = null;
+		long hwndOwner = 0;
+
 		if (_owner instanceof ModalDialog) {
-			owner = ((ModalDialog)_owner).joaDlg.getHWND();
-		}
-		else {
-			owner = _owner;
+			hwndOwner = ((ModalDialog) _owner).joaDlg.getHWND();
+		} else if (_owner instanceof Dispatch) {
+			dispOwner = (Dispatch)_owner;
 		}
 
 		DialogEventHandler dialogHandler = null;
@@ -321,22 +334,8 @@ public abstract class ModalDialog<T> {
 			Scene scene = createScene();
 			System.out.println("scene=" + scene);
 
-			scene.impl_preferredSize();
-
-			double sceneWidth = scene.getWidth();
-			double sceneHeight = scene.getHeight();
-
-			if (width == 0) {
-				width = sceneWidth + 20;
-				// if (minWidth == 0)
-				// minWidth = width;
-			}
-			if (height == 0) {
-				height = sceneHeight + 40;
-				// if (minHeight == 0)
-				// minHeight = height;
-			}
-
+			maybeSetWidthAndHightFromSceneExtent(scene);
+			
 			System.out.println("CreateBridgeDialog...");
 			joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
 			System.out.println("CreateBridgeDialog=" + joaDlg);
@@ -358,9 +357,14 @@ public abstract class ModalDialog<T> {
 			dialogHandler = new DialogEventHandler();
 			Dispatch.withEvents(joaDlg, dialogHandler);
 			System.out.println("handler assigned");
-			
+
 			// Show native dialog
-			joaDlg.ShowModal(owner);
+			if (dispOwner != null) {
+				joaDlg.ShowModal3(dispOwner);
+			}
+			else {
+				joaDlg.ShowModal2(hwndOwner);
+			}
 			System.out.println("ShowModal OK");
 
 			synchronized (this) {
@@ -368,7 +372,7 @@ public abstract class ModalDialog<T> {
 					this.wait();
 				}
 			}
-			
+
 			System.out.println("state=" + state);
 
 			if (state == State.HasParentHwnd) {
@@ -379,9 +383,9 @@ public abstract class ModalDialog<T> {
 				Platform.runLater(() -> {
 					long hwndChild = fxFrame.getWindowHandle();
 					JoaDll.nativeActivateSceneInDialog(hwndChild);
-					
+
 					if (eventHandlerWindowShown != null) {
-						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN); 
+						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
 						eventHandlerWindowShown.handle(event);
 					}
 				});
@@ -400,6 +404,21 @@ public abstract class ModalDialog<T> {
 			}
 			if (dialogHandler != null) {
 				dialogHandler.onClosed();
+			}
+		}
+	}
+
+	@SuppressWarnings("deprecation")
+	private void maybeSetWidthAndHightFromSceneExtent(Scene scene) {
+		if (width == 0 || height == 0) {
+			scene.impl_preferredSize();
+			double sceneWidth = scene.getWidth();
+			double sceneHeight = scene.getHeight();
+			if (width == 0) {
+				width = sceneWidth + 20;
+			}
+			if (height == 0) {
+				height = sceneHeight + 40;
 			}
 		}
 	}
