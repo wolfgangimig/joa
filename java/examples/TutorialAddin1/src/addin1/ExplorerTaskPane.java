@@ -10,6 +10,7 @@ import javafx.scene.layout.GridPane;
 
 import com.wilutions.com.ComException;
 import com.wilutions.joa.TaskPane;
+import com.wilutions.mslib.office._CustomTaskPane;
 import com.wilutions.mslib.outlook._Explorer;
 
 public class ExplorerTaskPane extends TaskPane {
@@ -23,6 +24,11 @@ public class ExplorerTaskPane extends TaskPane {
         Scene scene = new Scene(grid);
         return scene;
     }
+	
+//	@Override
+//	public void onVisibleStateChange(_CustomTaskPane ctp) throws ComException {
+//		Globals.getThisAddin().getRibbon().InvalidateControl("JoaTaskPane");
+//	}
 
 //	@Override
 //	protected Scene createScene() throws ComException {

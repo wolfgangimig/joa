@@ -40,8 +40,6 @@ public class AddinApplication extends javafx.application.Application {
 			String[] args) {
 
 		try {
-			System.out.println("Java Add-in for Microsoft Outlook Version=" + JoaDll.getVersion());
-
 			if (parseCommandLine(mainClass, args)) {
 				Platform.exit();
 			} else {

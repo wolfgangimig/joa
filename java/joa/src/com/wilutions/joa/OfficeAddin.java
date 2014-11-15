@@ -77,36 +77,30 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	@Override
 	public void onConnection(Dispatch app, ext_ConnectMode connectMode, Dispatch addin, ByRef<Object[]> custom)
 			throws ComException {
-		System.out.println("OnConnection " + connectMode);
 		applicationObject = app.as(applicationClass);
 		applicationObject.withEvents(this);
 	}
 
 	@Override
 	public void onDisconnection(ext_DisconnectMode disconnectMode, ByRef<Object[]> reserved) {
-		System.out.println("OnDisconnection " + disconnectMode);
 	}
 
 	@Override
 	public void onAddInsUpdate(ByRef<Object[]> reserved) {
-		System.out.println("OnAddInsUpdate");
 		BackgTask.run(() -> updateJoaUtil());
 	}
 
 	@Override
 	public void onStartupComplete(ByRef<Object[]> reserved) {
-		System.out.println("OnStartupComplete");
 		BackgTask.run(() -> updateJoaUtil());
 	}
 
 	@Override
 	public void onBeginShutdown(ByRef<Object[]> reserved) {
-		System.out.println("OnBeginShutdown");
 	}
 
 	@Override
 	public void CTPFactoryAvailable(ICTPFactory CTPFactoryInst) throws ComException {
-		System.out.println("CTPFactoryAvailable");
 		customTaskPaneFactory = CTPFactoryInst;
 	}
 
@@ -263,12 +257,6 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 						addin.setConnect(Boolean.TRUE);
 					}
 					IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
-					if (x != null) {
-						System.out.println("Connected to JoaUtilAddin.");
-					}
-					else {
-						System.err.println("Failed to load JoaUtilAddin.");
-					}
 					joaUtil = x;
 					OfficeAddin.class.notifyAll();
 					break;

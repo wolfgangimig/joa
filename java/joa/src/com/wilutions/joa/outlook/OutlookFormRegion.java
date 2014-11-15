@@ -61,8 +61,6 @@ public abstract class OutlookFormRegion extends DispatchImpl implements FormRegi
 
 	private void createSceneAndShowWindow() throws ComException {
 
-		System.out.println("createSceneAndShowWindow");
-
 		Platform.runLater(() -> {
 			try {
 				final long hwndJoaCtrl = joaCtrl._GethWnd().longValue();
@@ -105,15 +103,12 @@ public abstract class OutlookFormRegion extends DispatchImpl implements FormRegi
 	}
 
 	public void onExpanded(Boolean Expand) throws ComException {
-		System.out.println("onExpanded " + Expand);
 	}
 
 	public void onClose() throws ComException {
-		System.out.println(getClass() + " onClose");
 	}
 
 	public void onLayout() throws ComException {
-		System.out.println(getClass() + " onLayout");
 	}
 
 }

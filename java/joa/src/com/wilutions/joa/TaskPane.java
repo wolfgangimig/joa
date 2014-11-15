@@ -79,7 +79,7 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 	 * Delete the task pane's view objects.
 	 * Call this function to close the task pane.	
 	 */
-	public void dispose() {
+	public void close() {
 		
 		if (customTaskPane != null) {
 			
@@ -105,7 +105,6 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 			// ? Platform.runLater(() -> fxFrame.dispose());
 		}
 		
-		System.out.println("TaskPane.dispose");
 	}
 
 	/**
@@ -142,7 +141,6 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 		// Get the native window handle of the JoaBridgeCtrl
 		Dispatch ctrl = taskPane.getContentControl();
 		final long hwndJoaCtrl = ((Number) ctrl._get("HWND")).longValue();
-		System.out.println("hwndJoaCtrl=" + hwndJoaCtrl);
 		
 		// Create the Java window as a child window of the JoaBridgeCtrl.
 		Platform.runLater(() -> {
@@ -224,27 +222,3 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 	}
 
 }
-
-
-
-/*
-
-WEmbeddedFrame frame = new JFXEmbeddedFrame(hwndJoaCtrl);
-frame.setSize(400,200);
-
-//final JPanel jpanel = new JPanel();
-//jpanel.setSize(350, 180);
-//jpanel.setVisible(true);
-//frame.add(jpanel);
-
-final JFXPanel fxPanel = new JoaPanel();
-fxPanel.setSize(330, 150);
-frame.add(fxPanel);
-
-Scene scene = TaskPane.this.createScene();
-fxPanel.setScene(scene);
-
-fxPanel.setVisible(true);
-
-frame.setVisible(true);
-*/

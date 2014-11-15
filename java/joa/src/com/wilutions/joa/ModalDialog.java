@@ -171,7 +171,7 @@ public abstract class ModalDialog<T> {
 	}
 
 	/**
-	 * Called when the dialog is closed over the system menu.
+	 * Called when the dialog is closed over its system menu.
 	 */
 	public void onSystemMenuClose() {
 		this.close();
@@ -298,8 +298,8 @@ public abstract class ModalDialog<T> {
 
 	/**
 	 * Set event handler for WindowEvent.WINDOW_SHOWN. Only one hander is
-	 * supported. Only WINDOW_SHOWN is supported. The handler receives null as
-	 * source parameter.
+	 * supported. Only the event type WINDOW_SHOWN is supported. The handler
+	 * receives null as source parameter.
 	 * 
 	 * @param eventType
 	 *            must be WindowEvent.WINDOW_SHOWN
@@ -320,25 +320,32 @@ public abstract class ModalDialog<T> {
 	@SuppressWarnings({ "rawtypes" })
 	private void internalShowAsync(Object _owner, AsyncResult<T> asyncResult) {
 
+		// Is the owner a COM object or another ModalDialog?
+		// A COM object has to implement IOleWindow.
 		Dispatch dispOwner = null;
 		long hwndOwner = 0;
-
 		if (_owner instanceof ModalDialog) {
 			hwndOwner = ((ModalDialog) _owner).joaDlg.getHWND();
 		} else if (_owner instanceof Dispatch) {
-			dispOwner = (Dispatch)_owner;
+			dispOwner = (Dispatch) _owner;
 		}
+		assert hwndOwner != 0 || dispOwner != null;
 
 		DialogEventHandler dialogHandler = null;
 		try {
-			Scene scene = createScene();
-			System.out.println("scene=" + scene);
-
-			maybeSetWidthAndHightFromSceneExtent(scene);
 			
-			System.out.println("CreateBridgeDialog...");
+			// Create the scene. Has to be implemented by subclass.
+			Scene scene = createScene();
+
+			// If width and height is not set, make the dialog 
+			// as large as the scene.
+			maybeSetWidthAndHightFromSceneExtent(scene);
+
+			// Create the native dialog object.
+			// This is the task of the JOA Util Add-in. Because 
+			// the dialog has to be created in the UI thread 
+			// inside Outlook. 
 			joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
-			System.out.println("CreateBridgeDialog=" + joaDlg);
 
 			joaDlg.setWidth(toWin(width));
 			joaDlg.setHeight(toWin(height));
@@ -354,36 +361,40 @@ public abstract class ModalDialog<T> {
 			joaDlg.setMinimizeBox(minimizeBox);
 			joaDlg.setMaximizeBox(maximizeBox);
 
+			// Assign event handler to native dialog.
 			dialogHandler = new DialogEventHandler();
 			Dispatch.withEvents(joaDlg, dialogHandler);
-			System.out.println("handler assigned");
 
 			// Show native dialog
 			if (dispOwner != null) {
 				joaDlg.ShowModal3(dispOwner);
-			}
-			else {
+			} else {
 				joaDlg.ShowModal2(hwndOwner);
 			}
-			System.out.println("ShowModal OK");
 
+			// Wait until the native dialog fires the onShow
+			// event which is implemented by the DialogEventHandler.
+			// The hander stores the native dialog's window handle in hwndParent
+			// and sets the state as State.HasParentHwnd
 			synchronized (this) {
 				while (state == State.Initialized) {
 					this.wait();
 				}
 			}
 
-			System.out.println("state=" + state);
-
+			// Native dialog initialized?
 			if (state == State.HasParentHwnd) {
 
+				// Create a JavaFX frame inside the native dialog
 				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndParent, scene);
-				System.out.println("embedded window OK");
 
 				Platform.runLater(() -> {
+					
+					// Ensure the JavaFX frame is in the foreground.
 					long hwndChild = fxFrame.getWindowHandle();
 					JoaDll.nativeActivateSceneInDialog(hwndChild);
 
+					// Call event handler for WINDOW_SHOW
 					if (eventHandlerWindowShown != null) {
 						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
 						eventHandlerWindowShown.handle(event);
@@ -398,7 +409,6 @@ public abstract class ModalDialog<T> {
 			}
 
 		} catch (Throwable ex) {
-			ex.printStackTrace();
 			if (asyncResult != null) {
 				asyncResult.setAsyncResult(null, ex);
 			}

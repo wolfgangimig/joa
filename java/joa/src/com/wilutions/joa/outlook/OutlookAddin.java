@@ -116,7 +116,6 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 
 	@Override
 	public final void BeforeFormRegionShow(final FormRegion formRegion) throws ComException {
-		System.out.println("BeforeFormRegionShow(" + formRegion);
 
 		BackgTask.run(() -> {
 			try {
@@ -127,12 +126,10 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 			}
 		});
 
-		System.out.println(")BeforeFormRegionShow");
 	}
 
 	@Override
 	public Object GetFormRegionManifest(String FormRegionName, Integer LCID) throws ComException {
-		System.out.println("GetFormRegionManifest " + FormRegionName);
 		ClassLoader classLoader = this.getClass().getClassLoader();
 		String ret = null;
 		try {
@@ -146,18 +143,15 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 
 	@Override
 	public Object GetFormRegionIcon(String FormRegionName, Integer LCID, OlFormRegionIcon Icon) throws ComException {
-		System.out.println("GetFormRegionIcon " + FormRegionName);
 		return null;
 	}
 
 	@Override
 	public void onStartup() throws ComException {
-		System.out.println(getClass() + " onStartup");
 	}
 
 	@Override
 	public void onQuit() throws ComException {
-		System.out.println(getClass() + " onQuit");
 		Platform.exit();
 	}
 

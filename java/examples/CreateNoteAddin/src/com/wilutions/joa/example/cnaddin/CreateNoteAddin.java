@@ -35,12 +35,10 @@ import com.wilutions.mslib.outlook.MailItem;
 import com.wilutions.mslib.outlook._Inspector;
 import com.wilutions.mslib.outlook._Inspectors;
 
-// http://msdn.microsoft.com/en-us/library/bb608622(v=vs.90).aspx
-//http://www.codeproject.com/Articles/1880/Building-an-Office-K-COM-addin-with-VC-ATL
-
 /**
- * This Add-in 
- *
+ * This Add-in displays a task pane in a mail inspector window.
+ * This example is based on the MSND article "How to: Display Custom Task Panes with E-Mail Messages in Outlook".
+ * @see http://msdn.microsoft.com/en-us/library/bb608622(v=vs.90).aspx
  */
 @CoClass(progId = "JoaExample2.Addin", guid = "{C2A41A22-7858-4C13-88D4-88192CAAEFCF}")
 @DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "Create Note Add-in", description = "Example for an Outlook Add-in developed in Java")
@@ -55,6 +53,8 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 	
 	public CreateNoteAddin() {
 		Globals.setThisAddin(this);
+		ribbonIcons = createRibbonIconsFromResources(this.getClass(), 
+				new String[] {"Ribbon-Note.png"});
 	}	
 
 	public List<TaskPane> getTaskPanes() {
@@ -72,10 +72,6 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 	public void onLoadRibbon(IRibbonUI ribbon) throws ComException {
 		System.out.println("onLoadRibbon " + ribbon);
 		this.ribbon = ribbon;
-		if (ribbonIcons == null) {
-			ribbonIcons = createRibbonIconsFromResources(this.getClass(), 
-					new String[] {"Ribbon-Note.png"});
-		}
 	}
 
 	public Object onGetImage(IRibbonControl control) {

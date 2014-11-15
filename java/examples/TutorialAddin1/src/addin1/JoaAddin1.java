@@ -21,6 +21,7 @@ import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.outlook.OutlookAddin;
 import com.wilutions.mslib.office.IRibbonControl;
+import com.wilutions.mslib.office.IRibbonUI;
 import com.wilutions.mslib.outlook.NoteItem;
 import com.wilutions.mslib.outlook.OlItemType;
 
@@ -30,26 +31,27 @@ public class JoaAddin1 extends OutlookAddin {
 
     final ExplorerTaskPane taskPane = new ExplorerTaskPane();
     final Map<String, Dispatch> ribbonIcons;
+	private IRibbonUI ribbon;
 
     public JoaAddin1() {
         Globals.setThisAddin(this);
         ribbonIcons = createRibbonIconsFromResources(this.getClass(), new String[] { "MyHappyFaceIcon.png" });
     }
 
-    public void onHappyButtonClicked2(Dispatch ribbonControl) {
+    public void onSmileButtonClicked2(Dispatch ribbonControl) {
     	Platform.runLater(() -> {
     		showDialog();
     	});
     }
     
-    public void onHappyButtonClicked1(IRibbonControl ribbonControl) {
+    public void onSmileButtonClicked1(IRibbonControl ribbonControl) {
     	Object owner = getApplication().ActiveWindow();
     	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
     		System.out.println("MessageBox closed by button=" + result);
     	});
     }
 
-    public void onHappyButtonClicked(Dispatch ribbonControl) {
+    public void onSmileButtonClicked(Dispatch ribbonControl) {
     	
         // Event functions triggered from Outlook should not immediately call
         // Outlook functions during processing. This can cause a deadlock.
@@ -71,7 +73,7 @@ public class JoaAddin1 extends OutlookAddin {
             });
     }
 
-    public Dispatch onHappyButton2GetImage(IRibbonControl control) {
+    public Dispatch onSmileButton2GetImage(IRibbonControl control) {
         Dispatch picdisp = ribbonIcons.get("MyHappyFaceIcon.png");
         return picdisp;
     }
@@ -92,6 +94,14 @@ public class JoaAddin1 extends OutlookAddin {
                 });
             }
         });
+    }
+    
+    public IRibbonUI getRibbon() {
+    	return ribbon;
+    }
+    
+    public void onLoadRibbon(IRibbonUI ribbon) {
+    	this.ribbon = ribbon;
     }
 
     public boolean onJoaTaskPaneGetPressed(IRibbonControl control) {
