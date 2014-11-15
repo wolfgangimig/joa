@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="deploy" xmlns:fx="javafx:com.sun.javafx.tools.ant">
+
+	<!-- 
+		This script produces an MSI for a self-contained Java application
+		(includes JVM).
+		See for more information: 
+		http://docs.oracle.com/javafx/2/deployment/self-contained-packaging.htm
+		
+		In order to create a 32bit or 64bit installer, start ANT under a
+		32bit resp. 64bit JDK.
+		
+		Special customizations for the WiX installer are defined in the 
+		file ./package/windows/${application.name}.wxs. This file describe custom
+		actions for registering and un-registering the Add-in.
+		
+		The deploy process for a 64bit installer might finish with error 
+		"Bundler "MSI Installer" (msi) failed to produce a bundle."
+		The MSI is created anyway and can be installed.  
+	 -->
+
+	<!--
+		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+		The following properties shoud be adapted.
+		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+	-->
+
+	<!-- 
+		Add-in name, title, vendor.
+		
+		After changing this values, the WiX configuration file has to be re-created.
+		
+		IMPORTANT: Property ${application.name} must also be the name of the 
+		WiX customization file at ./package/windows/${application.name}.wxs.
+	-->
+	<property name="application.name" value="Your Application Name" />
+	<property name="application.version" value="1.0" />
+	<property name="application.vendor" value="Your Vendor Name" />
+	<property name="application.title" value="${application.name}" />
+
+	<!--
+		Set this property "true", if the Add-in should be installed
+		for all users. In this case, administration permissions are 
+		requrired to install the package.
+	-->
+	<property name="install.all-users" value="false" />
+
+
+	<!--
+		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+		The following properties do not need to be modified 
+		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+	-->
+
+	<!-- 
+		Project directory.
+	-->
+	<property name="project.dir" value=".." />
+
+	<!-- 
+		lib.dir contains the JARs and DLLs from:
+		https://github.com/wolfgangimig/joa/tree/master/java/lib 
+	-->
+	<property name="lib.dir" value="${project.dir}/../../lib" />
+
+	<!-- 
+		Directory for 32/64 bit DLL 
+	-->
+	<property name="dll.dir" value="${lib.dir}/${sun.arch.data.model}" />
+
+	<!-- 
+		Target directory, the MSI will be placed in ./dist/32/bundles/ 
+	-->
+	<property name="dist.dir" value="${project.dir}/dist/${sun.arch.data.model}" />
+	
+	<!--
+		Directory with WiX installer configuration file.
+		
+		The wxs file must be stored in directory
+		./deploy/32/package/windows 
+		resp.
+		./deploy/64/package/windows
+	-->
+	<property name="wix.config.dir" value="${project.dir}/deploy" />
+
+	<!-- 
+		The application's main class is the same for all JOA Add-ins.
+	-->
+	<property name="javafx.main.class" value="com.wilutions.joa.AddinApplication" />
+
+	<property name="javafx.run.width" value="100" />
+	<property name="javafx.run.height" value="100" />
+
+	<property name="jdk.home" value="${java.home}/.." />
+	<property environment="env" />
+	
+	<!-- 
+		Define JavaFX ANT task for building packaged apps.
+		If this fails, you most likely started the ANT script under a JRE. A JDK is required.
+		
+		Added ";." to classpath in order to load the WiX configuration file ./package/windows/${application.name}.wxs 
+		
+		Check stdout during processing for the following line to be sure that the configuration file is applied:
+		  "Using custom package resource [WiX config file] ..." 
+				
+		This output line can be ignored:
+		  "Using default package resource [script to run after application image is populated] ..."
+		
+    -->
+	<taskdef resource="com/sun/javafx/tools/ant/antlib.xml" 
+		uri="javafx:com.sun.javafx.tools.ant" 
+		classpath="${jdk.home}/lib/ant-javafx.jar;${wix.config.dir}/${sun.arch.data.model}" />
+
+	<target name="build">
+
+		<echo message="jdk=${jdk.home}" />
+		<echo message="native=${dll.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<delete dir="${dist.dir}" verbose="true" />
+
+		<fx:application id="appid" 
+			name="${application.name}" 
+			version="${application.version}" 
+			mainClass="${javafx.main.class}" />
+
+		<fx:jar destfile="${dist.dir}/${application.name}.jar">
+
+			<!-- Define what to launch -->
+			<fx:application refid="appid" />
+
+			<manifest>
+				<attribute name="Implementation-Vendor" value="${application.vendor}" />
+				<attribute name="Implementation-Title" value="${application.title}" />
+				<attribute name="Implementation-Version" value="${application.version}" />
+				<attribute name="Class-Path" value="joa-without-dlls.jar" />
+			</manifest>
+
+			<!-- Define what files to include -->
+			<fileset dir="${project.dir}/bin" />
+		</fx:jar>
+
+		<fx:deploy verbose="true" width="${javafx.run.width}" height="${javafx.run.height}" nativeBundles="msi" outdir="${dist.dir}" outfile="${application.name}">
+
+			<fx:application refid="appid" />
+
+			<fx:resources>
+				<fx:fileset dir="${dist.dir}" includes="*.jar" />
+				<fx:fileset dir="${lib.dir}" includes="joa-without-dlls.jar" />
+				<fx:fileset dir="${dll.dir}" includes="*.dll" type="data" />
+			</fx:resources>
+
+			<!-- install per user -->
+			<fx:preferences shortcut="false" menu="false" install="${install.all-users}" />
+
+			<fx:info title="${application.title}" vendor="${application.vendor}" />
+		</fx:deploy>
+
+	</target>
+
+</project>
