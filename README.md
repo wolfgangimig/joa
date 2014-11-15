@@ -18,11 +18,6 @@ In order to develop Add-ins, the following additional software is required:
 - Java IDE, e.g. Eclipse Juno or newer
 
 
-The JOA library is split into a public and a private part. The public part is licensed under the MIT license 
-and provides Java sources, Eclipse project configurations, ANT scripts and two native DLLs. 
-
-The private part consists of C++ sources for the COM bridge and the Java source code of a frame window class that allows to place a JavaFX scene inside a native window. The private sources are not available for download. 
-
 Please give it a try and post your comments, questions, and bug reports in the [issues](https://github.com/wolfgangimig/joa/issues) section. The MIT license allows you to use JOA in any project (inclusive commercial products).
 
 More information can be found in the wiki. You may want to start reading with the  [Tutorial](https://github.com/wolfgangimig/joa/wiki/Tutorial).
