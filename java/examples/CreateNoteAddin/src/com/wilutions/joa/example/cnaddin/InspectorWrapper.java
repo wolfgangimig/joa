@@ -54,7 +54,7 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents {
 	public void onClose() throws ComException {
 		System.out.println("InspectorWrapper.onClose " + this);
 		if (taskPane != null) {
-			taskPane.dispose();
+			taskPane.close();
 			Globals.getThisAddin().getTaskPanes().remove(taskPane);
 		}
 		if (inspector != null) {

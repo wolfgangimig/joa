@@ -111,7 +111,7 @@ public class NoteTaskPane extends TaskPane {
 	}
 
 	@Override
-	public void dispose() {
+	public void close() {
 		// timer, ckDisplay, ckCatMail is null, if the inspector window was closed,
 		// before the scene has been created.
 		if (timer != null) {
@@ -119,7 +119,7 @@ public class NoteTaskPane extends TaskPane {
 			reg_displayNote = ckDisplay.isSelected();
 			reg_alsoCategorizeMail = ckCatMail.isSelected();
 		}
-		super.dispose();
+		super.close();
 		Globals.getThisAddin().getRegistry().writeFields(this);
 	}
 
