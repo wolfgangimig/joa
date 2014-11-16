@@ -33,9 +33,9 @@
 		IMPORTANT: Property ${application.name} must also be the name of the 
 		WiX customization file at ./package/windows/${application.name}.wxs.
 	-->
-	<property name="application.name" value="Your Application Name" />
+	<property name="application.name" value="CreateNoteAddin" />
 	<property name="application.version" value="1.0" />
-	<property name="application.vendor" value="Your Vendor Name" />
+	<property name="application.vendor" value="WILUTIONS" />
 	<property name="application.title" value="${application.name}" />
 
 	<!-- 
@@ -44,7 +44,7 @@
 		in this project. The main class must be included in the jar file generated 
 		with <fx:jar> later.
 	-->
-	<property name="javafx.main.class" value="Your Main Class" />
+	<property name="javafx.main.class" value="com.wilutions.joa.example.cnaddin.CreateNoteApplication" />
 	
 	<!-- 
 		Dependencies. A semicolon separated list of all JARs this project depends on.

@@ -24,6 +24,7 @@ import com.wilutions.com.reg.RegUtil;
 public class RegisterAddin {
 
 	public static void register(boolean perUserNotMachine, Class<?> addinClass) throws ComException {
+		System.out.println("register " + addinClass + " " + (perUserNotMachine ? "/user" : "/all") );
 		CoClass coClassAnnotation = addinClass.getAnnotation(CoClass.class);
 		if (coClassAnnotation == null)
 			throw new ComException("Failed to unregister Addin, missing annotation " + CoClass.class);
@@ -47,6 +48,8 @@ public class RegisterAddin {
 
 	private static void registerAddin(String officeApplication, String progId, String name, String desc,
 			int loadBehavior, boolean perUserNotMachine) {
+		System.out.println("registerAddin app=" + officeApplication + ", progId=" + progId);
+		
 		String key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
 		RegUtil.setRegistryValue(key, "FriendlyName", name);
 		RegUtil.setRegistryValue(key, "Description", desc);
