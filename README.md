@@ -18,7 +18,7 @@ In order to develop Add-ins, the following additional software is required:
 - Java IDE, e.g. Eclipse Juno or newer
 
 
-Please give it a try and post your comments, questions, and bug reports in the [issues](https://github.com/wolfgangimig/joa/issues) section. The MIT license allows you to use JOA in any project (inclusive commercial products).
+Please give it a try and post your comments, questions, and bug reports in the [issues](https://github.com/wolfgangimig/joa/issues) section. The MIT license allows you to use JOA in any project.
 
 More information can be found in the wiki. You may want to start reading with the  [Tutorial](https://github.com/wolfgangimig/joa/wiki/Tutorial).
 
