@@ -155,5 +155,6 @@ public class RegisterAddin {
 	private static final String JoaUtilAddin_name = "JOA Util Add-in";
 	private static final String JoaUtilAddin_desc = "This Add-in supports other Add-ins developed with JOA.";
 	private static final int JoaUtilAddin_loadBehavior = LoadBehavior.LoadOnStart.value;
+	public static final String JoaUtilAddin_clsid = "{7B57EC55-0A9C-4AB0-A2CC-AF81C680CFAC}";
 
 }

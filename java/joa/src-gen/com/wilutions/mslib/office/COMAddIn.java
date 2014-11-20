@@ -1,6 +1,10 @@
 /* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.mslib.office;
-import com.wilutions.com.*;
+import com.wilutions.com.CoInterface;
+import com.wilutions.com.ComException;
+import com.wilutions.com.DeclDISPID;
+import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 
 /**
  * COMAddIn.
@@ -17,6 +21,6 @@ public interface COMAddIn extends IDispatch {
   @DeclDISPID(6)  public Boolean getConnect() throws ComException;
   @DeclDISPID(6)  public void setConnect(Boolean value) throws ComException;
   @DeclDISPID(7)  public Dispatch getObject() throws ComException;
-  @DeclDISPID(7)  public void setObject(Dispatch value) throws ComException;
+  @DeclDISPID(7)  public void setObject(Object value) throws ComException;
   @DeclDISPID(8)  public Dispatch getParent() throws ComException;
 }

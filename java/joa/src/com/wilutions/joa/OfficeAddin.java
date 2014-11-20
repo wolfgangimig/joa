@@ -10,20 +10,29 @@
  */
 package com.wilutions.joa;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
 import javafx.application.Platform;
+import javafx.scene.Scene;
+import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
+import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
+import com.wilutions.joa.fx.EmbeddedWindow;
+import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.joactrllib.IJoaUtilAddin;
 import com.wilutions.mslib.office.COMAddIn;
 import com.wilutions.mslib.office.COMAddIns;
@@ -79,6 +88,9 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 			throws ComException {
 		applicationObject = app.as(applicationClass);
 		applicationObject.withEvents(this);
+
+		COMAddIn coAddin = addin.as(COMAddIn.class);
+		coAddin.setObject(this);
 	}
 
 	@Override
@@ -184,8 +196,73 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 
 	}
 
+	public void createWebView(final String hwndJoaCtrlStr, final String viewClassName, final String viewId) {
+
+		// Create the Java window as a child window of the JoaBridgeCtrl.
+		Platform.runLater(() -> {
+			try {
+				final Class<?> viewClass = Class.forName(viewClassName);
+				final WebView viewObject = (WebView) viewClass.newInstance();
+
+				viewObject.setId(viewId);
+
+				final Scene scene = viewObject.createScene();
+
+				long hwndJoaCtrl = Long.parseLong(hwndJoaCtrlStr);
+				EmbeddedWindow fxFrame = EmbeddedWindowFactory.getInstance().create(hwndJoaCtrl, scene);
+				
+				viewObject.setFxFrame(fxFrame);
+
+				Platform.runLater(() -> {
+					WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
+					viewObject.handleEvent(event);
+				});
+
+			} catch (Throwable e) {
+				e.printStackTrace();
+			}
+		});
+	}
+
+	public String registerWebView(Class<? extends WebView> viewType, String title, String viewId) throws ComException {
+		PrintWriter pr = null;
+		File webViewFile = null;
+
+		CoClass coclass = this.getClass().getAnnotation(CoClass.class);
+		if (coclass == null) {
+			throw new ComException("OfficeAddin misses annotation CoClass");
+		}
+
+		String progId = coclass.progId();
+
+		try {
+			File tempDir = JoaDll.getTempDir();
+			tempDir.mkdirs();
+			webViewFile = new File(tempDir, viewType.getName() + ".htm");
+
+			String html = OfficeAddinUtil.getResourceAsString(this.getClass().getClassLoader(),
+					"com/wilutions/joa/HomePage.html");
+
+			html = html.replace("__webview__title__", title);
+			html = html.replace("__addin__progid__", progId);
+			html = html.replace("__view__class__name__", viewType.getName());
+			html = html.replace("__view__id__", viewId);
+
+			pr = new PrintWriter(new OutputStreamWriter(new FileOutputStream(webViewFile), "UTF-8"));
+			pr.println(html);
+
+		} catch (Throwable e) {
+			throw new ComException(e.toString());
+		} finally {
+			if (pr != null) {
+				pr.close();
+			}
+		}
+
+		return webViewFile.getAbsolutePath();
+	}
+
 	public Dispatch createIPictureDisp(byte[] image, String contentType) throws ComException {
-		// return ensureJoaUtil().CreateIPictureDisp(image, contentType);
 		return (Dispatch) JoaDll.nativeCreateIPictureDisp(image);
 	}
 
@@ -242,25 +319,24 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 				return;
 
 			CoAppType app = getApplication();
-			if (app == null) return;
+			if (app == null)
+				return;
 			Object disp = getApplication()._get("COMAddIns");
-			if (disp == null) return;
-			
+			if (disp == null)
+				return;
+
 			COMAddIns addins = Dispatch.as(disp, COMAddIns.class);
-			if (addins == null) return;
-			
-			int n = addins.getCount();
-			for (int i = 1; i <= n; i++) {
-				COMAddIn addin = addins.Item(i);
-				if (addin.getProgId().equals("JoaUtilAddin.Class")) {
-					if (!addin.getConnect()) {
-						addin.setConnect(Boolean.TRUE);
-					}
-					IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
-					joaUtil = x;
-					OfficeAddin.class.notifyAll();
-					break;
+			if (addins == null)
+				return;
+
+			COMAddIn addin = addins.Item("JoaUtilAddin.Class");
+			if (addin != null) {
+				if (!addin.getConnect()) {
+					addin.setConnect(Boolean.TRUE);
 				}
+				IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
+				joaUtil = x;
+				OfficeAddin.class.notifyAll();
 			}
 		}
 	}

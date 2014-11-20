@@ -87,7 +87,7 @@ public class JoaDll {
 		return is64 ? "64" : "32";
 	}
 	
-	private static File getTempDir() throws IOException {
+	public static File getTempDir() throws IOException {
 		
 		File tempDir = new File(System.getProperty("java.io.tmpdir"));
 		tempDir = new File(tempDir, "joa_" + getVersion().replace('.', '_'));
