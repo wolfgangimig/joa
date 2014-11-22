@@ -125,7 +125,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     return com.wilutions.mslib.msforms.fmSpecialEffect.valueOf((Integer)obj);
   }
   public IImageImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{4C599243-6926-101B-9992-00000B65C6F9}");
   }
   protected IImageImpl(long ndisp) {
     super(ndisp);

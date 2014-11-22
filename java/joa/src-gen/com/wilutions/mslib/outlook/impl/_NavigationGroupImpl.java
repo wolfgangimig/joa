@@ -57,7 +57,7 @@ public class _NavigationGroupImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(64455,"Position", DISPATCH_PROPERTYPUT,value);
   }
   public _NavigationGroupImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630F0-0000-0000-C000-000000000046}");
   }
   protected _NavigationGroupImpl(long ndisp) {
     super(ndisp);

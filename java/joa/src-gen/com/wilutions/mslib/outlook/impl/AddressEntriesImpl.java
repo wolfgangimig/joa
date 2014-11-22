@@ -78,7 +78,7 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Order);
   }
   public AddressEntriesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006304A-0000-0000-C000-000000000046}");
   }
   protected AddressEntriesImpl(long ndisp) {
     super(ndisp);

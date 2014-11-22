@@ -41,7 +41,7 @@ public class ThemeFontSchemeImpl extends Dispatch implements com.wilutions.mslib
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.ThemeFontsImpl.class);
   }
   public ThemeFontSchemeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03A5-0000-0000-C000-000000000046}");
   }
   protected ThemeFontSchemeImpl(long ndisp) {
     super(ndisp);

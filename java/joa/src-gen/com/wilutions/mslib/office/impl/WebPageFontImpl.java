@@ -52,7 +52,7 @@ public class WebPageFontImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(13,"FixedWidthFontSize", DISPATCH_PROPERTYPUT,value);
   }
   public WebPageFontImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0913-0000-0000-C000-000000000046}");
   }
   protected WebPageFontImpl(long ndisp) {
     super(ndisp);

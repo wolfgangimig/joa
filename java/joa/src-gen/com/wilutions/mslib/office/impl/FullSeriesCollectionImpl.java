@@ -43,7 +43,7 @@ public class FullSeriesCollectionImpl extends Dispatch implements com.wilutions.
     return (com.wilutions.mslib.office.IMsoSeries)obj;
   }
   public FullSeriesCollectionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1732-0000-0000-C000-000000000046}");
   }
   protected FullSeriesCollectionImpl(long ndisp) {
     super(ndisp);

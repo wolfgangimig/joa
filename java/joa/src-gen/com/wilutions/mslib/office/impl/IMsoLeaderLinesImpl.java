@@ -39,7 +39,7 @@ public class IMsoLeaderLinesImpl extends Dispatch implements com.wilutions.mslib
     return (Dispatch)obj;
   }
   public IMsoLeaderLinesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1723-0000-0000-C000-000000000046}");
   }
   protected IMsoLeaderLinesImpl(long ndisp) {
     super(ndisp);

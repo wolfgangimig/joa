@@ -48,7 +48,7 @@ public class _ExplorersImpl extends Dispatch implements com.wilutions.mslib.outl
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ExplorerImpl.class);
   }
   public _ExplorersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006300A-0000-0000-C000-000000000046}");
   }
   protected _ExplorersImpl(long ndisp) {
     super(ndisp);

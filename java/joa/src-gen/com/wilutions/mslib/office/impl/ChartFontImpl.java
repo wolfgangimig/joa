@@ -147,7 +147,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Dispatch)obj;
   }
   public ChartFontImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1718-0000-0000-C000-000000000046}");
   }
   protected ChartFontImpl(long ndisp) {
     super(ndisp);

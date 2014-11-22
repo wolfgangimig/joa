@@ -288,7 +288,7 @@ public class IMdcListImpl extends Dispatch implements com.wilutions.mslib.msform
     return com.wilutions.mslib.msforms.fmTextAlign.valueOf((Integer)obj);
   }
   public IMdcListImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8BD21D23-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected IMdcListImpl(long ndisp) {
     super(ndisp);

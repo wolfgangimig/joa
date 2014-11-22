@@ -54,7 +54,7 @@ public class AddressRuleCondition extends Dispatch implements _AddressRuleCondit
     this._dispatchCall(64295,"Address", DISPATCH_PROPERTYPUT,value);
   }
   public AddressRuleCondition() throws ComException {
-    super("{000610FA-0000-0000-C000-000000000046}");
+    super("{000610FA-0000-0000-C000-000000000046}", "{000630FA-0000-0000-C000-000000000046}");
   }
   protected AddressRuleCondition(long ndisp) {
     super(ndisp);

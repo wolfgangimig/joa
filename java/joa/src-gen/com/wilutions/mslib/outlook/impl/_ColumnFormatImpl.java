@@ -69,7 +69,7 @@ public class _ColumnFormatImpl extends Dispatch implements com.wilutions.mslib.o
     return com.wilutions.mslib.outlook.OlUserPropertyType.valueOf((Integer)obj);
   }
   public _ColumnFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006309E-0000-0000-C000-000000000046}");
   }
   protected _ColumnFormatImpl(long ndisp) {
     super(ndisp);

@@ -37,7 +37,7 @@ public class FileDialogSelectedItemsImpl extends Dispatch implements com.wilutio
     return (String)obj;
   }
   public FileDialogSelectedItemsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0363-0000-0000-C000-000000000046}");
   }
   protected FileDialogSelectedItemsImpl(long ndisp) {
     super(ndisp);

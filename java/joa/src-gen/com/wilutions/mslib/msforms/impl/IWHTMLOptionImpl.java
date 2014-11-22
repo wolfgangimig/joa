@@ -33,7 +33,7 @@ public class IWHTMLOptionImpl extends Dispatch implements com.wilutions.mslib.ms
     return (Boolean)obj;
   }
   public IWHTMLOptionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D119-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLOptionImpl(long ndisp) {
     super(ndisp);

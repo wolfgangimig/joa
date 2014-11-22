@@ -139,7 +139,7 @@ public class IconView extends Dispatch implements _IconView {
     this._dispatchCall(64363,"IconPlacement", DISPATCH_PROPERTYPUT,value.value);
   }
   public IconView() throws ComException {
-    super("{00062004-0000-0000-C000-000000000046}");
+    super("{00062004-0000-0000-C000-000000000046}", "{00063097-0000-0000-C000-000000000046}");
   }
   protected IconView(long ndisp) {
     super(ndisp);

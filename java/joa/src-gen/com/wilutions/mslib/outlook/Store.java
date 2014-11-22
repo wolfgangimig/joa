@@ -123,7 +123,7 @@ public class Store extends Dispatch implements _Store {
     return disp.uncheckedAs(Categories.class);
   }
   public Store() throws ComException {
-    super("{000610C7-0000-0000-C000-000000000046}");
+    super("{000610C7-0000-0000-C000-000000000046}", "{000630C7-0000-0000-C000-000000000046}");
   }
   protected Store(long ndisp) {
     super(ndisp);

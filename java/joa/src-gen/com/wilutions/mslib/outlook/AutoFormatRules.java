@@ -68,7 +68,7 @@ public class AutoFormatRules extends Dispatch implements _AutoFormatRules {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
   public AutoFormatRules() throws ComException {
-    super("{0006F0A2-0000-0000-C000-000000000046}");
+    super("{0006F0A2-0000-0000-C000-000000000046}", "{00063094-0000-0000-C000-000000000046}");
   }
   protected AutoFormatRules(long ndisp) {
     super(ndisp);

@@ -338,7 +338,7 @@ public class Frame extends Dispatch implements IOptionFrame {
     this._dispatchCall(1610743898,"_GetGridY", DISPATCH_METHOD,null,GridY);
   }
   public Frame() throws ComException {
-    super("{6E182020-F460-11CE-9BCD-00AA00608E01}");
+    super("{6E182020-F460-11CE-9BCD-00AA00608E01}", "{29B86A70-F52E-11CE-9BCE-00AA00608E01}");
   }
   protected Frame(long ndisp) {
     super(ndisp);

@@ -466,7 +466,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Integer)obj;
   }
   public ILicAgentImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00194002-D9C3-11D3-8D59-0050048384E3}");
   }
   protected ILicAgentImpl(long ndisp) {
     super(ndisp);

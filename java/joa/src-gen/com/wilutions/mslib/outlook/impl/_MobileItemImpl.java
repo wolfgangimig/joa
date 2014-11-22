@@ -376,7 +376,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     return (String)obj;
   }
   public _MobileItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630FE-0000-0000-C000-000000000046}");
   }
   protected _MobileItemImpl(long ndisp) {
     super(ndisp);

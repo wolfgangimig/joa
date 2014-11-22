@@ -114,7 +114,7 @@ public class OlkCommandButton extends Dispatch implements _OlkCommandButton {
     this._dispatchCall(64544,"DisplayDropArrow", DISPATCH_PROPERTYPUT,value);
   }
   public OlkCommandButton() throws ComException {
-    super("{0006F04A-0000-0000-C000-000000000046}");
+    super("{0006F04A-0000-0000-C000-000000000046}", "{000672DB-0000-0000-C000-000000000046}");
   }
   protected OlkCommandButton(long ndisp) {
     super(ndisp);

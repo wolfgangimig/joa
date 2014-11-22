@@ -131,7 +131,7 @@ public class _OlkLabelImpl extends Dispatch implements com.wilutions.mslib.outlo
     this._dispatchCall(64537,"UseHeaderColor", DISPATCH_PROPERTYPUT,value);
   }
   public _OlkLabelImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672D9-0000-0000-C000-000000000046}");
   }
   protected _OlkLabelImpl(long ndisp) {
     super(ndisp);

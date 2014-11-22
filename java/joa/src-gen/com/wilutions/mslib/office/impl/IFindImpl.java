@@ -221,7 +221,7 @@ public class IFindImpl extends Dispatch implements com.wilutions.mslib.office.IF
     this._dispatchCall(1610743854,"FileType", DISPATCH_PROPERTYPUT,value);
   }
   public IFindImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0337-0000-0000-C000-000000000046}");
   }
   protected IFindImpl(long ndisp) {
     super(ndisp);

@@ -27,7 +27,7 @@ public class HTMLHidden extends Dispatch implements IWHTMLHidden {
     return (String)obj;
   }
   public HTMLHidden() throws ComException {
-    super("{5512D11C-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D11C-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D11D-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLHidden(long ndisp) {
     super(ndisp);

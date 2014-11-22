@@ -274,7 +274,7 @@ public class _OlkTextBoxImpl extends Dispatch implements com.wilutions.mslib.out
     this._dispatchCall(-554,"Clear", DISPATCH_METHOD,null);
   }
   public _OlkTextBoxImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672DA-0000-0000-C000-000000000046}");
   }
   protected _OlkTextBoxImpl(long ndisp) {
     super(ndisp);

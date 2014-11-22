@@ -64,7 +64,7 @@ public class NavigationPane extends Dispatch implements _NavigationPane {
     return disp.uncheckedAs(NavigationModules.class);
   }
   public NavigationPane() throws ComException {
-    super("{000610F3-0000-0000-C000-000000000046}");
+    super("{000610F3-0000-0000-C000-000000000046}", "{000630E6-0000-0000-C000-000000000046}");
   }
   protected NavigationPane(long ndisp) {
     super(ndisp);

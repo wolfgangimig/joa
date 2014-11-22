@@ -24,7 +24,7 @@ public class _OlkBusinessCardControlImpl extends Dispatch implements com.wilutio
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public _OlkBusinessCardControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672ED-0000-0000-C000-000000000046}");
   }
   protected _OlkBusinessCardControlImpl(long ndisp) {
     super(ndisp);

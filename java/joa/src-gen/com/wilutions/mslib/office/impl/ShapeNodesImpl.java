@@ -70,7 +70,7 @@ public class ShapeNodesImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(15,"SetSegmentType", DISPATCH_METHOD,null,Index,SegmentType.value);
   }
   public ShapeNodesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0319-0000-0000-C000-000000000046}");
   }
   protected ShapeNodesImpl(long ndisp) {
     super(ndisp);

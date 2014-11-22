@@ -77,7 +77,7 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     this._dispatchCall(9,"Delete", DISPATCH_METHOD,null);
   }
   public CustomTaskPane() throws ComException {
-    super("{C5771BE5-A188-466B-AB31-00A6A32B1B1C}");
+    super("{C5771BE5-A188-466B-AB31-00A6A32B1B1C}", "{000C033B-0000-0000-C000-000000000046}");
   }
   protected CustomTaskPane(long ndisp) {
     super(ndisp);

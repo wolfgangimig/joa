@@ -42,7 +42,7 @@ public class TabStop2Impl extends Dispatch implements com.wilutions.mslib.office
     this._dispatchCall(4,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
   public TabStop2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03BB-0000-0000-C000-000000000046}");
   }
   protected TabStop2Impl(long ndisp) {
     super(ndisp);

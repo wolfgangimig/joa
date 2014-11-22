@@ -66,7 +66,7 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(9,"Revert", DISPATCH_METHOD,null);
   }
   public WebComponentImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD100-0000-0000-C000-000000000046}");
   }
   protected WebComponentImpl(long ndisp) {
     super(ndisp);

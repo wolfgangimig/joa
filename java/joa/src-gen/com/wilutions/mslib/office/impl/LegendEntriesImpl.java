@@ -43,7 +43,7 @@ public class LegendEntriesImpl extends Dispatch implements com.wilutions.mslib.o
     return (com.wilutions.mslib.office.LegendEntry)obj;
   }
   public LegendEntriesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1719-0000-0000-C000-000000000046}");
   }
   protected LegendEntriesImpl(long ndisp) {
     super(ndisp);

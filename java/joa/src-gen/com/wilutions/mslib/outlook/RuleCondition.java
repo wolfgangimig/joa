@@ -45,7 +45,7 @@ public class RuleCondition extends Dispatch implements _RuleCondition {
     return OlRuleConditionType.valueOf((Integer)obj);
   }
   public RuleCondition() throws ComException {
-    super("{000610D9-0000-0000-C000-000000000046}");
+    super("{000610D9-0000-0000-C000-000000000046}", "{000630D9-0000-0000-C000-000000000046}");
   }
   protected RuleCondition(long ndisp) {
     super(ndisp);

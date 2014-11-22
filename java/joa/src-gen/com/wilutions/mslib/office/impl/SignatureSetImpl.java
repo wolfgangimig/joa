@@ -70,7 +70,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(1610809355,"ShowSignaturesPane", DISPATCH_PROPERTYPUT,value);
   }
   public SignatureSetImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0410-0000-0000-C000-000000000046}");
   }
   protected SignatureSetImpl(long ndisp) {
     super(ndisp);

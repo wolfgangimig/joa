@@ -165,7 +165,7 @@ public class Label extends Dispatch implements ILabelControl {
     return (String)obj;
   }
   public Label() throws ComException {
-    super("{978C9E23-D4B0-11CE-BF2D-00AA003F40D0}");
+    super("{978C9E23-D4B0-11CE-BF2D-00AA003F40D0}", "{04598FC1-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected Label(long ndisp) {
     super(ndisp);

@@ -10,20 +10,30 @@
  */
 package com.wilutions.joa;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
 import javafx.application.Platform;
+import javafx.scene.Scene;
+import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
+import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
+import com.wilutions.com.WindowsUtil;
+import com.wilutions.joa.fx.EmbeddedWindow;
+import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.joactrllib.IJoaUtilAddin;
 import com.wilutions.mslib.office.COMAddIn;
 import com.wilutions.mslib.office.COMAddIns;
@@ -31,6 +41,7 @@ import com.wilutions.mslib.office.CustomTaskPane;
 import com.wilutions.mslib.office.ICTPFactory;
 import com.wilutions.mslib.office.ICustomTaskPaneConsumer;
 import com.wilutions.mslib.office._CustomTaskPane;
+import com.wilutions.mslib.office.impl.COMAddInImpl;
 
 /**
  * Base class for Microsoft Office Addins.
@@ -79,6 +90,11 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 			throws ComException {
 		applicationObject = app.as(applicationClass);
 		applicationObject.withEvents(this);
+
+		COMAddInImpl coAddin = addin.as(COMAddInImpl.class);
+		// Currently, a DispatchImpl cannot be converted into a Dispatch.
+		// Thus, coAddin.setObject cannot be called. 
+		coAddin._put(7, this); // setObject()
 	}
 
 	@Override
@@ -185,7 +201,6 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	}
 
 	public Dispatch createIPictureDisp(byte[] image, String contentType) throws ComException {
-		// return ensureJoaUtil().CreateIPictureDisp(image, contentType);
 		return (Dispatch) JoaDll.nativeCreateIPictureDisp(image);
 	}
 
@@ -242,25 +257,24 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 				return;
 
 			CoAppType app = getApplication();
-			if (app == null) return;
+			if (app == null)
+				return;
 			Object disp = getApplication()._get("COMAddIns");
-			if (disp == null) return;
-			
+			if (disp == null)
+				return;
+
 			COMAddIns addins = Dispatch.as(disp, COMAddIns.class);
-			if (addins == null) return;
-			
-			int n = addins.getCount();
-			for (int i = 1; i <= n; i++) {
-				COMAddIn addin = addins.Item(i);
-				if (addin.getProgId().equals("JoaUtilAddin.Class")) {
-					if (!addin.getConnect()) {
-						addin.setConnect(Boolean.TRUE);
-					}
-					IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
-					joaUtil = x;
-					OfficeAddin.class.notifyAll();
-					break;
+			if (addins == null)
+				return;
+
+			COMAddIn addin = addins.Item("JoaUtilAddin.Class");
+			if (addin != null) {
+				if (!addin.getConnect()) {
+					addin.setConnect(Boolean.TRUE);
 				}
+				IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
+				joaUtil = x;
+				OfficeAddin.class.notifyAll();
 			}
 		}
 	}

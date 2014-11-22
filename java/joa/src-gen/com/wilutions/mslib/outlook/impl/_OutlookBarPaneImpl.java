@@ -48,7 +48,7 @@ public class _OutlookBarPaneImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(8451,"Visible", DISPATCH_PROPERTYPUT,value);
   }
   public _OutlookBarPaneImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063070-0000-0000-C000-000000000046}");
   }
   protected _OutlookBarPaneImpl(long ndisp) {
     super(ndisp);

@@ -125,7 +125,7 @@ public class OlkOptionButton extends Dispatch implements _OlkOptionButton {
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
   public OlkOptionButton() throws ComException {
-    super("{0006F04B-0000-0000-C000-000000000046}");
+    super("{0006F04B-0000-0000-C000-000000000046}", "{000672DC-0000-0000-C000-000000000046}");
   }
   protected OlkOptionButton(long ndisp) {
     super(ndisp);

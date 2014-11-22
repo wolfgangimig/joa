@@ -61,7 +61,7 @@ public class DiagramNodeChildrenImpl extends Dispatch implements com.wilutions.m
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   public DiagramNodeChildrenImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C036F-0000-0000-C000-000000000046}");
   }
   protected DiagramNodeChildrenImpl(long ndisp) {
     super(ndisp);

@@ -51,7 +51,7 @@ public class IWHTMLSubmitButtonImpl extends Dispatch implements com.wilutions.ms
     return (String)obj;
   }
   public IWHTMLSubmitButtonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D111-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLSubmitButtonImpl(long ndisp) {
     super(ndisp);

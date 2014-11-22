@@ -261,7 +261,7 @@ public class NameSpace extends Dispatch implements _NameSpace {
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.ContactCardImpl.class);
   }
   public NameSpace() throws ComException {
-    super("{0006308B-0000-0000-C000-000000000046}");
+    super("{0006308B-0000-0000-C000-000000000046}", "{00063002-0000-0000-C000-000000000046}");
   }
   protected NameSpace(long ndisp) {
     super(ndisp);

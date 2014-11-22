@@ -54,7 +54,7 @@ public class UserDefinedProperty extends Dispatch implements _UserDefinedPropert
     this._dispatchCall(64523,"Delete", DISPATCH_METHOD,null);
   }
   public UserDefinedProperty() throws ComException {
-    super("{0006105C-0000-0000-C000-000000000046}");
+    super("{0006105C-0000-0000-C000-000000000046}", "{0006305C-0000-0000-C000-000000000046}");
   }
   protected UserDefinedProperty(long ndisp) {
     super(ndisp);

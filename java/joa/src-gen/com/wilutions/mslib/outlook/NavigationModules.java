@@ -50,7 +50,7 @@ public class NavigationModules extends Dispatch implements _NavigationModules {
     return disp.uncheckedAs(NavigationModule.class);
   }
   public NavigationModules() throws ComException {
-    super("{000610E7-0000-0000-C000-000000000046}");
+    super("{000610E7-0000-0000-C000-000000000046}", "{000630E7-0000-0000-C000-000000000046}");
   }
   protected NavigationModules(long ndisp) {
     super(ndisp);

@@ -49,7 +49,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.outlook.P
     this._dispatchCall(301,"Remove", DISPATCH_METHOD,null,Index);
   }
   public PagesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006303F-0000-0000-C000-000000000046}");
   }
   protected PagesImpl(long ndisp) {
     super(ndisp);

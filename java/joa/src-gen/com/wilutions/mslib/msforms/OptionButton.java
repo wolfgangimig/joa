@@ -191,7 +191,7 @@ public class OptionButton extends Dispatch implements IMdcOptionButton {
     return fmTextAlign.valueOf((Integer)obj);
   }
   public OptionButton() throws ComException {
-    super("{8BD21D50-EC42-11CE-9E0D-00AA006002F3}");
+    super("{8BD21D50-EC42-11CE-9E0D-00AA006002F3}", "{8BD21D53-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected OptionButton(long ndisp) {
     super(ndisp);

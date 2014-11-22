@@ -57,7 +57,7 @@ public class Columns extends Dispatch implements _Columns {
     this._dispatchCall(83,"RemoveAll", DISPATCH_METHOD,null);
   }
   public Columns() throws ComException {
-    super("{000610E1-0000-0000-C000-000000000046}");
+    super("{000610E1-0000-0000-C000-000000000046}", "{000630E1-0000-0000-C000-000000000046}");
   }
   protected Columns(long ndisp) {
     super(ndisp);

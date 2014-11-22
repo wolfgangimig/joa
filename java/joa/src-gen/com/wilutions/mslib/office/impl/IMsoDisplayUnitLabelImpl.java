@@ -228,7 +228,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     return (String)obj;
   }
   public IMsoDisplayUnitLabelImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{6EA00553-9439-4D5A-B1E6-DC15A54DA8B2}");
   }
   protected IMsoDisplayUnitLabelImpl(long ndisp) {
     super(ndisp);

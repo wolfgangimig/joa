@@ -39,7 +39,7 @@ public class RulerLevel2Impl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(3,"LeftMargin", DISPATCH_PROPERTYPUT,value);
   }
   public RulerLevel2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C3-0000-0000-C000-000000000046}");
   }
   protected RulerLevel2Impl(long ndisp) {
     super(ndisp);

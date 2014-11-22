@@ -89,7 +89,7 @@ public class PropertyAccessor extends Dispatch implements _PropertyAccessor {
     return (Object)obj;
   }
   public PropertyAccessor() throws ComException {
-    super("{0006102D-0000-0000-C000-000000000046}");
+    super("{0006102D-0000-0000-C000-000000000046}", "{0006302D-0000-0000-C000-000000000046}");
   }
   protected PropertyAccessor(long ndisp) {
     super(ndisp);

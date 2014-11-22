@@ -84,7 +84,7 @@ public class IMsoChartFormatImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(201,"AutoShapeType", DISPATCH_PROPERTYPUT,value.value);
   }
   public IMsoChartFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1730-0000-0000-C000-000000000046}");
   }
   protected IMsoChartFormatImpl(long ndisp) {
     super(ndisp);

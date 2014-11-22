@@ -38,7 +38,7 @@ public class DocumentInspectorsImpl extends Dispatch implements com.wilutions.ms
     return (Dispatch)obj;
   }
   public DocumentInspectorsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0392-0000-0000-C000-000000000046}");
   }
   protected DocumentInspectorsImpl(long ndisp) {
     super(ndisp);

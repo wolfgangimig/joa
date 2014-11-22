@@ -86,7 +86,7 @@ public class _PropertyAccessorImpl extends Dispatch implements com.wilutions.msl
     return (Object)obj;
   }
   public _PropertyAccessorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006302D-0000-0000-C000-000000000046}");
   }
   protected _PropertyAccessorImpl(long ndisp) {
     super(ndisp);

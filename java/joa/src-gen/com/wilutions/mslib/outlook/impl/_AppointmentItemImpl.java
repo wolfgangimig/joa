@@ -609,7 +609,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   public _AppointmentItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063033-0000-0000-C000-000000000046}");
   }
   protected _AppointmentItemImpl(long ndisp) {
     super(ndisp);

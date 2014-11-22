@@ -25,7 +25,7 @@ public class IBlogPictureExtensibilityImpl extends Dispatch implements com.wilut
     this._dispatchCall(3,"PublishPicture", DISPATCH_METHOD,null,Account,ParentWindow,(Document!=null?Document:Dispatch.NULL),Image,PictureURI,ImageType);
   }
   public IBlogPictureExtensibilityImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C5-0000-0000-C000-000000000046}");
   }
   protected IBlogPictureExtensibilityImpl(long ndisp) {
     super(ndisp);

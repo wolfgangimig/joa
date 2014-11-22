@@ -121,7 +121,7 @@ public class PeopleView extends Dispatch implements _PeopleView {
     return disp.uncheckedAs(OrderFields.class);
   }
   public PeopleView() throws ComException {
-    super("{0006200C-0000-0000-C000-000000000046}");
+    super("{0006200C-0000-0000-C000-000000000046}", "{000630A3-0000-0000-C000-000000000046}");
   }
   protected PeopleView(long ndisp) {
     super(ndisp);

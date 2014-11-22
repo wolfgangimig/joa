@@ -102,7 +102,7 @@ public class StorageItem extends Dispatch implements _StorageItem {
     this._dispatchCall(34236,"Creator", DISPATCH_PROPERTYPUT,value);
   }
   public StorageItem() throws ComException {
-    super("{000610CB-0000-0000-C000-000000000046}");
+    super("{000610CB-0000-0000-C000-000000000046}", "{000630CB-0000-0000-C000-000000000046}");
   }
   protected StorageItem(long ndisp) {
     super(ndisp);

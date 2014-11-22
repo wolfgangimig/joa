@@ -38,7 +38,7 @@ public class CategoryCollectionImpl extends Dispatch implements com.wilutions.ms
     return (com.wilutions.mslib.office.IMsoCategory)obj;
   }
   public CategoryCollectionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1734-0000-0000-C000-000000000046}");
   }
   protected CategoryCollectionImpl(long ndisp) {
     super(ndisp);

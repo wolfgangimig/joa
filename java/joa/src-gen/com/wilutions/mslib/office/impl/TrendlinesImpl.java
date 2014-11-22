@@ -57,7 +57,7 @@ public class TrendlinesImpl extends Dispatch implements com.wilutions.mslib.offi
     return (com.wilutions.mslib.office.IMsoTrendline)obj;
   }
   public TrendlinesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1722-0000-0000-C000-000000000046}");
   }
   protected TrendlinesImpl(long ndisp) {
     super(ndisp);

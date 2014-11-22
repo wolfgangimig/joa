@@ -134,7 +134,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     this._dispatchCall(64537,"UseHeaderColor", DISPATCH_PROPERTYPUT,value);
   }
   public OlkLabel() throws ComException {
-    super("{0006F067-0000-0000-C000-000000000046}");
+    super("{0006F067-0000-0000-C000-000000000046}", "{000672D9-0000-0000-C000-000000000046}");
   }
   protected OlkLabel(long ndisp) {
     super(ndisp);

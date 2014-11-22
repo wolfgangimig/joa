@@ -94,7 +94,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(10,"AdditionalXml", DISPATCH_PROPERTYPUT,value);
   }
   public SignatureSetupImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD6A1-0000-0000-C000-000000000046}");
   }
   protected SignatureSetupImpl(long ndisp) {
     super(ndisp);

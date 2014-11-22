@@ -43,7 +43,7 @@ public class LinkImpl extends Dispatch implements com.wilutions.mslib.outlook.Li
     return (Dispatch)obj;
   }
   public LinkImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063089-0000-0000-C000-000000000046}");
   }
   protected LinkImpl(long ndisp) {
     super(ndisp);

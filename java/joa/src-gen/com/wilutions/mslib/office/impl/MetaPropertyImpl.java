@@ -60,7 +60,7 @@ public class MetaPropertyImpl extends Dispatch implements com.wilutions.mslib.of
     return (Dispatch)obj;
   }
   public MetaPropertyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C038F-0000-0000-C000-000000000046}");
   }
   protected MetaPropertyImpl(long ndisp) {
     super(ndisp);

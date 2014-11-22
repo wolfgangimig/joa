@@ -50,49 +50,6 @@ public class EmbeddedWindowFactory {
 
 	}
 
-//	public void showModal(long hwndParent, Scene dialog) {
-//		assert hwndParent != 0;
-//		assert dialog != null;
-//		assert Platform.isFxApplicationThread();
-//
-//		try {
-//			final long hwndApp = JoaDll.nativeGetApplicationWindow(hwndParent);
-//			
-//			dialog.addEventHandler(WindowEvent.WINDOW_SHOWN, new EventHandler<WindowEvent>()
-//			        {
-//			            @Override
-//			            public void handle(WindowEvent window)
-//			            {
-//			            	long hwndChild = WindowsUtil.getWindowHandle(dialog);
-//			            	//JoaDll.nativeSetOwnerWindow(hwndChild, hwndApp);
-//			            	//JoaDll.nativeEnableChildWindows(hwndApp, hwndChild, false);
-//			            	JoaDll.nativeEnableWindow(hwndApp, false);
-//			            }
-//			        });
-//
-//			dialog.showAndWait();
-//			JoaDll.nativeEnableWindow(hwndApp, true);
-//			//oaDll.nativeEnableChildWindows(hwndApp, hwndChild, false);
-//			
-////			Constructor<?> constructor = embeddedWindowClass.getConstructor(long.class, Scene.class);
-////			
-////			GridPane grid = new GridPane();
-////			Button clear = new Button("Klickme!");
-////			GridPane.setConstraints(clear, 0, 0);
-////			grid.getChildren().add(clear);
-////			Scene scene = new Scene(grid);
-////			
-////			EmbeddedWindow wnd = (EmbeddedWindow) constructor.newInstance(hwndParent, scene);
-////
-////			dialog.initModality(Modality.APPLICATION_MODAL);
-////			wnd.showModal(dialog);
-//
-//		} catch (Throwable e) {
-//			throw new IllegalStateException(e);
-//		}
-//
-//	}
-
 	private static EmbeddedWindowFactory instance;
 	private Class<?> embeddedWindowClass;
 }

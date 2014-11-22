@@ -180,7 +180,7 @@ public class ITabStripImpl extends Dispatch implements com.wilutions.mslib.msfor
     return (Float)obj;
   }
   public ITabStripImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC2-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected ITabStripImpl(long ndisp) {
     super(ndisp);

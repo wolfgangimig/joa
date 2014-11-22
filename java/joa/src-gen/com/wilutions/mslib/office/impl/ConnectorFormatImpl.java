@@ -76,7 +76,7 @@ public class ConnectorFormatImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(106,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
   public ConnectorFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0313-0000-0000-C000-000000000046}");
   }
   protected ConnectorFormatImpl(long ndisp) {
     super(ndisp);

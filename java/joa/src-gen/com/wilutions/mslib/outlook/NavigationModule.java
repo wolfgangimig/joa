@@ -59,7 +59,7 @@ public class NavigationModule extends Dispatch implements _NavigationModule {
     this._dispatchCall(64443,"Visible", DISPATCH_PROPERTYPUT,value);
   }
   public NavigationModule() throws ComException {
-    super("{000610E8-0000-0000-C000-000000000046}");
+    super("{000610E8-0000-0000-C000-000000000046}", "{000630E8-0000-0000-C000-000000000046}");
   }
   protected NavigationModule(long ndisp) {
     super(ndisp);

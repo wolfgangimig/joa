@@ -47,7 +47,7 @@ public class UserPermissionImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(4,"Remove", DISPATCH_METHOD,null);
   }
   public UserPermissionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0375-0000-0000-C000-000000000046}");
   }
   protected UserPermissionImpl(long ndisp) {
     super(ndisp);

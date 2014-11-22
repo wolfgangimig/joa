@@ -101,7 +101,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     return (Dispatch)obj;
   }
   public SharedWorkspaceTaskImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0379-0000-0000-C000-000000000046}");
   }
   protected SharedWorkspaceTaskImpl(long ndisp) {
     super(ndisp);

@@ -208,7 +208,7 @@ public class CalendarView extends Dispatch implements _CalendarView {
     return (java.util.Date)obj;
   }
   public CalendarView() throws ComException {
-    super("{00062003-0000-0000-C000-000000000046}");
+    super("{00062003-0000-0000-C000-000000000046}", "{00063099-0000-0000-C000-000000000046}");
   }
   protected CalendarView(long ndisp) {
     super(ndisp);

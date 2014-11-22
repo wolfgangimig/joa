@@ -38,7 +38,7 @@ public class ThemeFontsImpl extends Dispatch implements com.wilutions.mslib.offi
     return (Object)obj;
   }
   public ThemeFontsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03A4-0000-0000-C000-000000000046}");
   }
   protected ThemeFontsImpl(long ndisp) {
     super(ndisp);

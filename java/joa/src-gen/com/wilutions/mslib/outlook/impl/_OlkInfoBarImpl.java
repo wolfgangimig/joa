@@ -24,7 +24,7 @@ public class _OlkInfoBarImpl extends Dispatch implements com.wilutions.mslib.out
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public _OlkInfoBarImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672F6-0000-0000-C000-000000000046}");
   }
   protected _OlkInfoBarImpl(long ndisp) {
     super(ndisp);

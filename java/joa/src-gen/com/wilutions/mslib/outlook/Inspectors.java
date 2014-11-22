@@ -49,7 +49,7 @@ public class Inspectors extends Dispatch implements _Inspectors {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }
   public Inspectors() throws ComException {
-    super("{00063054-0000-0000-C000-000000000046}");
+    super("{00063054-0000-0000-C000-000000000046}", "{00063008-0000-0000-C000-000000000046}");
   }
   protected Inspectors(long ndisp) {
     super(ndisp);

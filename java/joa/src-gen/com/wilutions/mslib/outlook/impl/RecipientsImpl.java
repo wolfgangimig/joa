@@ -56,7 +56,7 @@ public class RecipientsImpl extends Dispatch implements com.wilutions.mslib.outl
     return (Boolean)obj;
   }
   public RecipientsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006303B-0000-0000-C000-000000000046}");
   }
   protected RecipientsImpl(long ndisp) {
     super(ndisp);

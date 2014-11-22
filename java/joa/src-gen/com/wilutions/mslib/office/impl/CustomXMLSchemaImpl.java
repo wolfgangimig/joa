@@ -37,7 +37,7 @@ public class CustomXMLSchemaImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(1610809348,"Reload", DISPATCH_METHOD,null);
   }
   public CustomXMLSchemaImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB01-0000-0000-C000-000000000046}");
   }
   protected CustomXMLSchemaImpl(long ndisp) {
     super(ndisp);

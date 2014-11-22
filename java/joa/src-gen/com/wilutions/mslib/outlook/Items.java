@@ -111,7 +111,7 @@ public class Items extends Dispatch implements _Items {
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);
   }
   public Items() throws ComException {
-    super("{00063052-0000-0000-C000-000000000046}");
+    super("{00063052-0000-0000-C000-000000000046}", "{00063041-0000-0000-C000-000000000046}");
   }
   protected Items(long ndisp) {
     super(ndisp);

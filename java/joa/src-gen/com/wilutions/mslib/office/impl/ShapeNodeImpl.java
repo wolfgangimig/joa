@@ -36,7 +36,7 @@ public class ShapeNodeImpl extends Dispatch implements com.wilutions.mslib.offic
     return com.wilutions.mslib.office.MsoSegmentType.valueOf((Integer)obj);
   }
   public ShapeNodeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0318-0000-0000-C000-000000000046}");
   }
   protected ShapeNodeImpl(long ndisp) {
     super(ndisp);

@@ -128,7 +128,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(110,"RotateWithShape", DISPATCH_PROPERTYPUT,value.value);
   }
   public ShadowFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C031B-0000-0000-C000-000000000046}");
   }
   protected ShadowFormatImpl(long ndisp) {
     super(ndisp);

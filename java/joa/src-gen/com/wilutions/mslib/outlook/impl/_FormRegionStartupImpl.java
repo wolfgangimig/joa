@@ -33,7 +33,7 @@ public class _FormRegionStartupImpl extends Dispatch implements com.wilutions.ms
     return (Object)obj;
   }
   public _FormRegionStartupImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063059-0000-0000-C000-000000000046}");
   }
   protected _FormRegionStartupImpl(long ndisp) {
     super(ndisp);

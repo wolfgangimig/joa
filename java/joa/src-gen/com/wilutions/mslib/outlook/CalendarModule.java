@@ -65,7 +65,7 @@ public class CalendarModule extends Dispatch implements _CalendarModule {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationGroupsImpl.class);
   }
   public CalendarModule() throws ComException {
-    super("{000610EA-0000-0000-C000-000000000046}");
+    super("{000610EA-0000-0000-C000-000000000046}", "{000630EA-0000-0000-C000-000000000046}");
   }
   protected CalendarModule(long ndisp) {
     super(ndisp);

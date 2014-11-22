@@ -423,7 +423,7 @@ public class ShapeRangeImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(156,"MergeShapes", DISPATCH_METHOD,null,MergeCmd.value,(PrimaryShape!=null?PrimaryShape:Dispatch.NULL));
   }
   public ShapeRangeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C031D-0000-0000-C000-000000000046}");
   }
   protected ShapeRangeImpl(long ndisp) {
     super(ndisp);

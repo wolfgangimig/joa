@@ -51,7 +51,7 @@ public class OutlookBarPane extends Dispatch implements _OutlookBarPane {
     this._dispatchCall(8451,"Visible", DISPATCH_PROPERTYPUT,value);
   }
   public OutlookBarPane() throws ComException {
-    super("{00063055-0000-0000-C000-000000000046}");
+    super("{00063055-0000-0000-C000-000000000046}", "{00063070-0000-0000-C000-000000000046}");
   }
   protected OutlookBarPane(long ndisp) {
     super(ndisp);

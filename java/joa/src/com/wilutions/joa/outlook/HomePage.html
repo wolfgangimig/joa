@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>__webview__title__</title>
+<style type="text/css">
+body {
+	overflow-y: hidden;
+}
+</style>
+</head>
+<body rightmargin='0' leftmargin='0' topmargin='0' bottommargin='0'
+	onload='OnBodyLoad()'>
+
+	<script>
+		var addinProgId = "__addin__progid__";
+		var viewClassName = "__view__class__name__";
+		var viewId = "__view__id__";
+
+		function OnBodyLoad() {
+
+			var oApp = window.external.OutlookApplication;
+			//document.getElementById("app").value = oApp;
+
+			var addins = oApp.COMAddIns;
+			//document.getElementById("comaddins").value = addins;
+
+			var myAddin = addins.Item(addinProgId);
+			//document.getElementById("myaddin").value = myAddin;
+
+			//document.getElementById("myaddinobj").value = myAddin.Object;
+
+			//document.getElementById("myaddinobjviewHWND").value = joaBridgeCtrl.HWND;
+
+			myAddin.Object.createWebView("" + joaBridgeCtrl.HWND,
+					viewClassName, viewId);
+		}
+	</script>
+	<!-- 
+	<input id="app" value="" />
+	<input id="comaddins" value="" />
+	<input id="myaddin" value="" />
+	<input id="myaddinobj" value="" />
+	<input id="myaddinobjview" value="" />
+	<input id="myaddinobjviewHWND" value="" />
+-->
+
+	<object classid='clsid:246D42EA-0513-447B-B7E6-86FE0400B3EA'
+		id='joaBridgeCtrl' width='100%' height='100%' VIEWASTEXT> </object>
+
+</body>
+</html>

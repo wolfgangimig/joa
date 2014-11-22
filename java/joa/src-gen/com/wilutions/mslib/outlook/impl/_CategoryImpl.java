@@ -78,7 +78,7 @@ public class _CategoryImpl extends Dispatch implements com.wilutions.mslib.outlo
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
   public _CategoryImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E3-0000-0000-C000-000000000046}");
   }
   protected _CategoryImpl(long ndisp) {
     super(ndisp);

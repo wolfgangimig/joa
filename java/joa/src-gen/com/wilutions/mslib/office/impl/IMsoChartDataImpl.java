@@ -25,7 +25,7 @@ public class IMsoChartDataImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(1610743812,"ActivateChartDataWindow", DISPATCH_METHOD,null);
   }
   public IMsoChartDataImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C172F-0000-0000-C000-000000000046}");
   }
   protected IMsoChartDataImpl(long ndisp) {
     super(ndisp);

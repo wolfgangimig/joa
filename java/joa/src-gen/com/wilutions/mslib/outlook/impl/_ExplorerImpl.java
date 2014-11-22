@@ -186,7 +186,7 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
     return (Dispatch)obj;
   }
   public _ExplorerImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063003-0000-0000-C000-000000000046}");
   }
   protected _ExplorerImpl(long ndisp) {
     super(ndisp);

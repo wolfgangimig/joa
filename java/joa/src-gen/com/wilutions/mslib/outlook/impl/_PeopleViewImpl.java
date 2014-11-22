@@ -118,7 +118,7 @@ public class _PeopleViewImpl extends Dispatch implements com.wilutions.mslib.out
     return disp.uncheckedAs(com.wilutions.mslib.outlook.OrderFields.class);
   }
   public _PeopleViewImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630A3-0000-0000-C000-000000000046}");
   }
   protected _PeopleViewImpl(long ndisp) {
     super(ndisp);

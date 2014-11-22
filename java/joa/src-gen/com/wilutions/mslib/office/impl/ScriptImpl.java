@@ -70,7 +70,7 @@ public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.S
     this._dispatchCall(0,"ScriptText", DISPATCH_PROPERTYPUT,value);
   }
   public ScriptImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0341-0000-0000-C000-000000000046}");
   }
   protected ScriptImpl(long ndisp) {
     super(ndisp);

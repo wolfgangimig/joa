@@ -87,7 +87,7 @@ public class JoaDll {
 		return is64 ? "64" : "32";
 	}
 	
-	private static File getTempDir() throws IOException {
+	public static File getTempDir() throws IOException {
 		
 		File tempDir = new File(System.getProperty("java.io.tmpdir"));
 		tempDir = new File(tempDir, "joa_" + getVersion().replace('.', '_'));
@@ -162,15 +162,15 @@ public class JoaDll {
 
 	public static native void dispatchReleaseEvents(Dispatch dispatch, DispatchImpl handler) throws ComException;
 
-	public static native Object dispatchAs(Dispatch dispatch, Class<?> clazz);
+	public static native Object dispatchAs(Object dispatch, Class<?> clazz);
 
-	public static native boolean dispatchIs(Dispatch dispatch, Class<?> interf);
+	public static native boolean dispatchIs(Object dispatch, Class<?> interf);
 
 	public static native void dumpComReferenceMap(String title);
 
 	public static native void releaseComObject(Dispatch dispatch);
 
-	public static native Dispatch nativeCoCreateInstance(String progId, Dispatch dispObj) throws ComException;
+	public static native Dispatch nativeCoCreateInstance(String progId, Dispatch dispObj, String iid) throws ComException;
 
 	public final static int GENERATOR_INCLUDE_REFERENCED_TYPELIBS = 1;
 	public final static int GENERATOR_EXCLUDE_REFERENCED_TYPELIBS = 0;

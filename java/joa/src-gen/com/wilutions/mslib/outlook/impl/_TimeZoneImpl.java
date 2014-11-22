@@ -73,7 +73,7 @@ public class _TimeZoneImpl extends Dispatch implements com.wilutions.mslib.outlo
     return (String)obj;
   }
   public _TimeZoneImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630FD-0000-0000-C000-000000000046}");
   }
   protected _TimeZoneImpl(long ndisp) {
     super(ndisp);

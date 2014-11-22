@@ -132,7 +132,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     this._dispatchCall(1610809368,"Close", DISPATCH_METHOD,null);
   }
   public BalloonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0324-0000-0000-C000-000000000046}");
   }
   protected BalloonImpl(long ndisp) {
     super(ndisp);

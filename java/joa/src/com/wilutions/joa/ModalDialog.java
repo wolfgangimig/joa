@@ -12,6 +12,8 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
+import com.wilutions.com.WindowHandle;
+import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.fx.EmbeddedWindow;
 import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
@@ -23,7 +25,7 @@ import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
  * @param <T>
  *            Result type of callback expression.
  */
-public abstract class ModalDialog<T> {
+public abstract class ModalDialog<T> implements WindowHandle {
 
 	/**
 	 * Helper object to show an empty modal dialog in the UI thread of Outlook.
@@ -124,7 +126,7 @@ public abstract class ModalDialog<T> {
 	 * Show the dialog box.
 	 * 
 	 * @param _owner
-	 *            Owner object, either explorer or inspector window.
+	 *            Owner object, explorer or inspector window, or an implementation of WindowHandle.
 	 * @param asyncResult
 	 *            Callback expression which is called, when the dialog is
 	 *            closed.
@@ -317,15 +319,14 @@ public abstract class ModalDialog<T> {
 		return Double.valueOf(x).intValue();
 	}
 
-	@SuppressWarnings({ "rawtypes" })
 	private void internalShowAsync(Object _owner, AsyncResult<T> asyncResult) {
 
-		// Is the owner a COM object or another ModalDialog?
+		// Is the owner a COM object or another WindowHandle?
 		// A COM object has to implement IOleWindow.
 		Dispatch dispOwner = null;
 		long hwndOwner = 0;
-		if (_owner instanceof ModalDialog) {
-			hwndOwner = ((ModalDialog) _owner).joaDlg.getHWND();
+		if (_owner instanceof WindowHandle) {
+			hwndOwner = ((WindowHandle)_owner).getWindowHandle();
 		} else if (_owner instanceof Dispatch) {
 			dispOwner = (Dispatch) _owner;
 		}
@@ -391,7 +392,7 @@ public abstract class ModalDialog<T> {
 				Platform.runLater(() -> {
 					
 					// Ensure the JavaFX frame is in the foreground.
-					long hwndChild = fxFrame.getWindowHandle();
+					long hwndChild = WindowsUtil.getWindowHandle(fxFrame);
 					JoaDll.nativeActivateSceneInDialog(hwndChild);
 
 					// Call event handler for WINDOW_SHOW
@@ -464,5 +465,10 @@ public abstract class ModalDialog<T> {
 			}
 		}
 
+	}
+	
+	@Override
+	public long getWindowHandle() {
+		return joaDlg.getHWND();
 	}
 }

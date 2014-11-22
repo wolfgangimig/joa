@@ -24,7 +24,7 @@ public class _DDocSiteControlImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(64483,"SuppressAttachments", DISPATCH_PROPERTYPUT,value);
   }
   public _DDocSiteControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006F026-0000-0000-C000-000000000046}");
   }
   protected _DDocSiteControlImpl(long ndisp) {
     super(ndisp);

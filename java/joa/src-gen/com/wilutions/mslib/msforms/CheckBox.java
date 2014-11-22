@@ -191,7 +191,7 @@ public class CheckBox extends Dispatch implements IMdcCheckBox {
     return fmTextAlign.valueOf((Integer)obj);
   }
   public CheckBox() throws ComException {
-    super("{8BD21D40-EC42-11CE-9E0D-00AA006002F3}");
+    super("{8BD21D40-EC42-11CE-9E0D-00AA006002F3}", "{8BD21D43-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected CheckBox(long ndisp) {
     super(ndisp);

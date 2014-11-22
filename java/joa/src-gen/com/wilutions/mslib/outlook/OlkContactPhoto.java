@@ -36,7 +36,7 @@ public class OlkContactPhoto extends Dispatch implements _OlkContactPhoto {
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkContactPhoto() throws ComException {
-    super("{0006F04F-0000-0000-C000-000000000046}");
+    super("{0006F04F-0000-0000-C000-000000000046}", "{000672EB-0000-0000-C000-000000000046}");
   }
   protected OlkContactPhoto(long ndisp) {
     super(ndisp);

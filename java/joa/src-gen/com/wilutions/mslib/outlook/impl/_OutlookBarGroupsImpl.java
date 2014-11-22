@@ -52,7 +52,7 @@ public class _OutlookBarGroupsImpl extends Dispatch implements com.wilutions.msl
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public _OutlookBarGroupsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063072-0000-0000-C000-000000000046}");
   }
   protected _OutlookBarGroupsImpl(long ndisp) {
     super(ndisp);

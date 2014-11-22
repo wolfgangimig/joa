@@ -15,7 +15,7 @@ public class IReturnStringImpl extends Dispatch implements com.wilutions.mslib.m
     return (String)obj;
   }
   public IReturnStringImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{82B02372-B5BC-11CF-810F-00A0C9030074}");
   }
   protected IReturnStringImpl(long ndisp) {
     super(ndisp);

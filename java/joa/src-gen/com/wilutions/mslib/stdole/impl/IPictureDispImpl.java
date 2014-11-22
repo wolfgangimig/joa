@@ -4,8 +4,8 @@ import com.wilutions.com.*;
 
 @SuppressWarnings("all")
 public class IPictureDispImpl extends com.wilutions.mslib.stdole.impl.PictureImpl implements com.wilutions.mslib.stdole.IPictureDisp {
-  public IPictureDispImpl() throws ComException {
-    super("{7BF80981-BF32-101A-8BBB-00AA00300CAB}");
+  public IPictureDispImpl(String progId) throws ComException {
+    super(progId);
   }
   protected IPictureDispImpl(long ndisp) {
     super(ndisp);

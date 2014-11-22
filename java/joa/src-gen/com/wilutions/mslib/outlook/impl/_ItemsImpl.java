@@ -108,7 +108,7 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);
   }
   public _ItemsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063041-0000-0000-C000-000000000046}");
   }
   protected _ItemsImpl(long ndisp) {
     super(ndisp);

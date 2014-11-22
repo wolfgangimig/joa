@@ -322,7 +322,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   public ExchangeUser() throws ComException {
-    super("{000610C9-0000-0000-C000-000000000046}");
+    super("{000610C9-0000-0000-C000-000000000046}", "{000630C9-0000-0000-C000-000000000046}");
   }
   protected ExchangeUser(long ndisp) {
     super(ndisp);

@@ -76,7 +76,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     this._dispatchCall(62,"Clear", DISPATCH_METHOD,null);
   }
   public PagesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{92E11A03-7358-11CE-80CB-00AA00611080}");
   }
   protected PagesImpl(long ndisp) {
     super(ndisp);

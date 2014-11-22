@@ -110,7 +110,7 @@ public class SpinButton extends Dispatch implements ISpinbutton {
     return (Integer)obj;
   }
   public SpinButton() throws ComException {
-    super("{79176FB0-B7F2-11CE-97EF-00AA006D2776}");
+    super("{79176FB0-B7F2-11CE-97EF-00AA006D2776}", "{79176FB3-B7F2-11CE-97EF-00AA006D2776}");
   }
   protected SpinButton(long ndisp) {
     super(ndisp);

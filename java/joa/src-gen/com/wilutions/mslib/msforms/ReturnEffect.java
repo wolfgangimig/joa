@@ -18,7 +18,7 @@ public class ReturnEffect extends Dispatch implements IReturnEffect {
     return fmDropEffect.valueOf((Integer)obj);
   }
   public ReturnEffect() throws ComException {
-    super("{8A683C93-BA84-11CF-8110-00A0C9030074}");
+    super("{8A683C93-BA84-11CF-8110-00A0C9030074}", "{8A683C91-BA84-11CF-8110-00A0C9030074}");
   }
   protected ReturnEffect(long ndisp) {
     super(ndisp);

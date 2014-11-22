@@ -132,7 +132,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(17,"RefreshScopes", DISPATCH_METHOD,null);
   }
   public FileSearchImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0332-0000-0000-C000-000000000046}");
   }
   protected FileSearchImpl(long ndisp) {
     super(ndisp);

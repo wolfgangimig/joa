@@ -114,7 +114,7 @@ public class AddressEntryImpl extends Dispatch implements com.wilutions.mslib.ou
     return disp.uncheckedAs(com.wilutions.mslib.outlook.PropertyAccessor.class);
   }
   public AddressEntryImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006304B-0000-0000-C000-000000000046}");
   }
   protected AddressEntryImpl(long ndisp) {
     super(ndisp);

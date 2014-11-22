@@ -57,7 +57,7 @@ public class _RowImpl extends Dispatch implements com.wilutions.mslib.outlook._R
     return (java.util.Date)obj;
   }
   public _RowImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D3-0000-0000-C000-000000000046}");
   }
   protected _RowImpl(long ndisp) {
     super(ndisp);

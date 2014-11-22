@@ -56,7 +56,7 @@ public class Views extends Dispatch implements _Views {
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public Views() throws ComException {
-    super("{0006F027-0000-0000-C000-000000000046}");
+    super("{0006F027-0000-0000-C000-000000000046}", "{0006308D-0000-0000-C000-000000000046}");
   }
   protected Views(long ndisp) {
     super(ndisp);

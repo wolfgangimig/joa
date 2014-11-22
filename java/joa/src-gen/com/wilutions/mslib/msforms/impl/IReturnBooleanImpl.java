@@ -15,7 +15,7 @@ public class IReturnBooleanImpl extends Dispatch implements com.wilutions.mslib.
     return (Boolean)obj;
   }
   public IReturnBooleanImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{82B02371-B5BC-11CF-810F-00A0C9030074}");
   }
   protected IReturnBooleanImpl(long ndisp) {
     super(ndisp);

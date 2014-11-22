@@ -184,7 +184,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(2649,"PictureUnit2", DISPATCH_PROPERTYPUT,RHS);
   }
   public IMsoLegendKeyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C171E-0000-0000-C000-000000000046}");
   }
   protected IMsoLegendKeyImpl(long ndisp) {
     super(ndisp);

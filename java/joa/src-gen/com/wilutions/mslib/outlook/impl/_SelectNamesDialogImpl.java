@@ -127,7 +127,7 @@ public class _SelectNamesDialogImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(64235,"SetDefaultDisplayMode", DISPATCH_METHOD,null,defaultMode.value);
   }
   public _SelectNamesDialogImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630C8-0000-0000-C000-000000000046}");
   }
   protected _SelectNamesDialogImpl(long ndisp) {
     super(ndisp);

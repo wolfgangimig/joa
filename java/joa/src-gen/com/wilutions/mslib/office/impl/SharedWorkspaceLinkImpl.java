@@ -74,7 +74,7 @@ public class SharedWorkspaceLinkImpl extends Dispatch implements com.wilutions.m
     return (Dispatch)obj;
   }
   public SharedWorkspaceLinkImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C037F-0000-0000-C000-000000000046}");
   }
   protected SharedWorkspaceLinkImpl(long ndisp) {
     super(ndisp);

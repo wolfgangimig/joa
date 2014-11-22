@@ -111,7 +111,7 @@ public class CalendarSharing extends Dispatch implements _CalendarSharing {
     this._dispatchCall(64417,"IncludeWholeCalendar", DISPATCH_PROPERTYPUT,value);
   }
   public CalendarSharing() throws ComException {
-    super("{000610E2-0000-0000-C000-000000000046}");
+    super("{000610E2-0000-0000-C000-000000000046}", "{000630E2-0000-0000-C000-000000000046}");
   }
   protected CalendarSharing(long ndisp) {
     super(ndisp);

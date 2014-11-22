@@ -24,7 +24,7 @@ public class IConverterUICallbackImpl extends Dispatch implements com.wilutions.
     this._dispatchCall(3,"HrInputBox", DISPATCH_METHOD,null,bstrText,bstrCaption,pbstrInput,fPassword);
   }
   public IConverterUICallbackImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D6-0000-0000-C000-000000000046}");
   }
   protected IConverterUICallbackImpl(long ndisp) {
     super(ndisp);

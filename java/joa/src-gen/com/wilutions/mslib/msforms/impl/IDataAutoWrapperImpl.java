@@ -38,7 +38,7 @@ public class IDataAutoWrapperImpl extends Dispatch implements com.wilutions.msli
     return com.wilutions.mslib.msforms.fmDropEffect.valueOf((Integer)obj);
   }
   public IDataAutoWrapperImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{EC72F590-F375-11CE-B9E8-00AA006B1A69}");
   }
   protected IDataAutoWrapperImpl(long ndisp) {
     super(ndisp);

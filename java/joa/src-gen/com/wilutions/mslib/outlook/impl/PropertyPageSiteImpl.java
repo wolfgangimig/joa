@@ -31,7 +31,7 @@ public class PropertyPageSiteImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(8448,"OnStatusChange", DISPATCH_METHOD,null);
   }
   public PropertyPageSiteImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006307F-0000-0000-C000-000000000046}");
   }
   protected PropertyPageSiteImpl(long ndisp) {
     super(ndisp);

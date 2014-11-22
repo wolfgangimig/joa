@@ -108,7 +108,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(12,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }
   public BulletFormat2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03B9-0000-0000-C000-000000000046}");
   }
   protected BulletFormat2Impl(long ndisp) {
     super(ndisp);

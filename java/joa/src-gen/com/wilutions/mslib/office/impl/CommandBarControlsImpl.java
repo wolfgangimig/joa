@@ -50,7 +50,7 @@ public class CommandBarControlsImpl extends Dispatch implements com.wilutions.ms
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
   public CommandBarControlsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0306-0000-0000-C000-000000000046}");
   }
   protected CommandBarControlsImpl(long ndisp) {
     super(ndisp);

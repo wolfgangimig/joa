@@ -54,7 +54,7 @@ public class MoveOrCopyRuleAction extends Dispatch implements _MoveOrCopyRuleAct
     this._dispatchCall(64273,"Folder", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public MoveOrCopyRuleAction() throws ComException {
-    super("{000610D0-0000-0000-C000-000000000046}");
+    super("{000610D0-0000-0000-C000-000000000046}", "{000630D0-0000-0000-C000-000000000046}");
   }
   protected MoveOrCopyRuleAction(long ndisp) {
     super(ndisp);

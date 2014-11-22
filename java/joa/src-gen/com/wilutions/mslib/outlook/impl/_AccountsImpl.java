@@ -40,7 +40,7 @@ public class _AccountsImpl extends Dispatch implements com.wilutions.mslib.outlo
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._AccountImpl.class);
   }
   public _AccountsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630C4-0000-0000-C000-000000000046}");
   }
   protected _AccountsImpl(long ndisp) {
     super(ndisp);

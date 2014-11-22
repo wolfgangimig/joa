@@ -60,7 +60,7 @@ public class _ReminderImpl extends Dispatch implements com.wilutions.mslib.outlo
     return (java.util.Date)obj;
   }
   public _ReminderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630B0-0000-0000-C000-000000000046}");
   }
   protected _ReminderImpl(long ndisp) {
     super(ndisp);

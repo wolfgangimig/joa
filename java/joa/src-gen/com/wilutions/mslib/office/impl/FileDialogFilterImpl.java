@@ -31,7 +31,7 @@ public class FileDialogFilterImpl extends Dispatch implements com.wilutions.msli
     return (String)obj;
   }
   public FileDialogFilterImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0364-0000-0000-C000-000000000046}");
   }
   protected FileDialogFilterImpl(long ndisp) {
     super(ndisp);

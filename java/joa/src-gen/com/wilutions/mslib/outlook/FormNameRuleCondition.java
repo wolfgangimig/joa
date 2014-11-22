@@ -54,7 +54,7 @@ public class FormNameRuleCondition extends Dispatch implements _FormNameRuleCond
     this._dispatchCall(64326,"FormName", DISPATCH_PROPERTYPUT,value);
   }
   public FormNameRuleCondition() throws ComException {
-    super("{000610DD-0000-0000-C000-000000000046}");
+    super("{000610DD-0000-0000-C000-000000000046}", "{000630DD-0000-0000-C000-000000000046}");
   }
   protected FormNameRuleCondition(long ndisp) {
     super(ndisp);

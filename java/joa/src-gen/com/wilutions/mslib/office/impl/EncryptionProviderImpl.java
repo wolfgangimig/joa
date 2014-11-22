@@ -64,7 +64,7 @@ public class EncryptionProviderImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(1610743816,"ShowSettings", DISPATCH_METHOD,null,SessionHandle,ParentWindow,ReadOnly,Remove);
   }
   public EncryptionProviderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD809-0000-0000-C000-000000000046}");
   }
   protected EncryptionProviderImpl(long ndisp) {
     super(ndisp);

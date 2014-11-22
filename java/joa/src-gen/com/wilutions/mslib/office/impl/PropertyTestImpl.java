@@ -41,7 +41,7 @@ public class PropertyTestImpl extends Dispatch implements com.wilutions.mslib.of
     return com.wilutions.mslib.office.MsoConnector.valueOf((Integer)obj);
   }
   public PropertyTestImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0333-0000-0000-C000-000000000046}");
   }
   protected PropertyTestImpl(long ndisp) {
     super(ndisp);

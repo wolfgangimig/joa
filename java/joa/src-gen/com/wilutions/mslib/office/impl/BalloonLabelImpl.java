@@ -40,7 +40,7 @@ public class BalloonLabelImpl extends Dispatch implements com.wilutions.mslib.of
     return (String)obj;
   }
   public BalloonLabelImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0330-0000-0000-C000-000000000046}");
   }
   protected BalloonLabelImpl(long ndisp) {
     super(ndisp);

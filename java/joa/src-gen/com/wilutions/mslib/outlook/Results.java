@@ -83,7 +83,7 @@ public class Results extends Dispatch implements _Results {
     this._dispatchCall(64143,"DefaultItemType", DISPATCH_PROPERTYPUT,value.value);
   }
   public Results() throws ComException {
-    super("{00061039-0000-0000-C000-000000000046}");
+    super("{00061039-0000-0000-C000-000000000046}", "{0006300C-0000-0000-C000-000000000046}");
   }
   protected Results(long ndisp) {
     super(ndisp);

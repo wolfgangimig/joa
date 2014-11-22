@@ -53,7 +53,7 @@ public class SharedWorkspaceFilesImpl extends Dispatch implements com.wilutions.
     return (Boolean)obj;
   }
   public SharedWorkspaceFilesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C037C-0000-0000-C000-000000000046}");
   }
   protected SharedWorkspaceFilesImpl(long ndisp) {
     super(ndisp);

@@ -50,7 +50,7 @@ public class _ConversationHeaderImpl extends Dispatch implements com.wilutions.m
     return disp.uncheckedAs(com.wilutions.mslib.outlook.SimpleItems.class);
   }
   public _ConversationHeaderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063107-0000-0000-C000-000000000046}");
   }
   protected _ConversationHeaderImpl(long ndisp) {
     super(ndisp);

@@ -51,7 +51,7 @@ public class _FormNameRuleConditionImpl extends Dispatch implements com.wilution
     this._dispatchCall(64326,"FormName", DISPATCH_PROPERTYPUT,value);
   }
   public _FormNameRuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630DD-0000-0000-C000-000000000046}");
   }
   protected _FormNameRuleConditionImpl(long ndisp) {
     super(ndisp);

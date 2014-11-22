@@ -42,7 +42,7 @@ public class IWHTMLPasswordImpl extends Dispatch implements com.wilutions.mslib.
     return (Integer)obj;
   }
   public IWHTMLPasswordImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D11F-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLPasswordImpl(long ndisp) {
     super(ndisp);

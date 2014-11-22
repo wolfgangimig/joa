@@ -15,7 +15,7 @@ public class IReturnIntegerImpl extends Dispatch implements com.wilutions.mslib.
     return (Integer)obj;
   }
   public IReturnIntegerImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{82B02370-B5BC-11CF-810F-00A0C9030074}");
   }
   protected IReturnIntegerImpl(long ndisp) {
     super(ndisp);

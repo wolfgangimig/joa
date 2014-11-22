@@ -38,7 +38,7 @@ public class RulerLevels2Impl extends Dispatch implements com.wilutions.mslib.of
     return (Object)obj;
   }
   public RulerLevels2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C2-0000-0000-C000-000000000046}");
   }
   protected RulerLevels2Impl(long ndisp) {
     super(ndisp);

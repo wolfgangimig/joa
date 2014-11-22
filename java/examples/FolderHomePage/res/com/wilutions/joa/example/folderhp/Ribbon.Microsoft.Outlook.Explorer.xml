@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+	<ribbon>
+		<tabs>
+			<tab id="ExplorerTab" label="Folder Home Page">
+				<group id="Group1" label="Folder Group">
+					<button id="SmileButton" imageMso="HappyFace" size="large"
+						label="Smile" onAction="onSmileButtonClicked" />
+					<toggleButton id="JoaTaskPane" imageMso="HappyFace"
+						size="large" label="Show/Hide" onAction="onJoaTaskPaneClicked" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

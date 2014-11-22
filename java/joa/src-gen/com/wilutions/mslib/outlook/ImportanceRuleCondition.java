@@ -54,7 +54,7 @@ public class ImportanceRuleCondition extends Dispatch implements _ImportanceRule
     this._dispatchCall(64299,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
   public ImportanceRuleCondition() throws ComException {
-    super("{000610DA-0000-0000-C000-000000000046}");
+    super("{000610DA-0000-0000-C000-000000000046}", "{000630DA-0000-0000-C000-000000000046}");
   }
   protected ImportanceRuleCondition(long ndisp) {
     super(ndisp);

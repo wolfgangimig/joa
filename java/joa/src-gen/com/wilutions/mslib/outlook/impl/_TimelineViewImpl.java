@@ -199,7 +199,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(64392,"TimelineViewMode", DISPATCH_PROPERTYPUT,value.value);
   }
   public _TimelineViewImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006309C-0000-0000-C000-000000000046}");
   }
   protected _TimelineViewImpl(long ndisp) {
     super(ndisp);

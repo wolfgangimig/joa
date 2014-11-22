@@ -37,7 +37,7 @@ public class IConverterImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(6,"HrGetErrorString", DISPATCH_METHOD,null,hrErr,pbstrErrorMsg,(pcap!=null?pcap:Dispatch.NULL));
   }
   public IConverterImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D7-0000-0000-C000-000000000046}");
   }
   protected IConverterImpl(long ndisp) {
     super(ndisp);

@@ -316,7 +316,7 @@ public class TableView extends Dispatch implements _TableView {
     this._dispatchCall(64649,"ShowConversationSendersAboveSubject", DISPATCH_PROPERTYPUT,value);
   }
   public TableView() throws ComException {
-    super("{00062000-0000-0000-C000-000000000046}");
+    super("{00062000-0000-0000-C000-000000000046}", "{00063096-0000-0000-C000-000000000046}");
   }
   protected TableView(long ndisp) {
     super(ndisp);

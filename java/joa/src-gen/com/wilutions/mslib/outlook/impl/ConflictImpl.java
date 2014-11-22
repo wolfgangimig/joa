@@ -43,7 +43,7 @@ public class ConflictImpl extends Dispatch implements com.wilutions.mslib.outloo
     return com.wilutions.mslib.outlook.OlObjectClass.valueOf((Integer)obj);
   }
   public ConflictImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630C3-0000-0000-C000-000000000046}");
   }
   protected ConflictImpl(long ndisp) {
     super(ndisp);

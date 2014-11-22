@@ -208,7 +208,7 @@ public class _CommandBarsImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(1610809381,"CommitRenderingTransaction", DISPATCH_METHOD,null,hwnd);
   }
   public _CommandBarsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0302-0000-0000-C000-000000000046}");
   }
   protected _CommandBarsImpl(long ndisp) {
     super(ndisp);

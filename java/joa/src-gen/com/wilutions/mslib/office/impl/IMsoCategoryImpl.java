@@ -25,7 +25,7 @@ public class IMsoCategoryImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(2887,"IsFiltered", DISPATCH_PROPERTYPUT,pfIsFiltered);
   }
   public IMsoCategoryImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1733-0000-0000-C000-000000000046}");
   }
   protected IMsoCategoryImpl(long ndisp) {
     super(ndisp);

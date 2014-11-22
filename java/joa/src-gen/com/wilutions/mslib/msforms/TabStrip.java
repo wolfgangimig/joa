@@ -183,7 +183,7 @@ public class TabStrip extends Dispatch implements ITabStrip {
     return (Float)obj;
   }
   public TabStrip() throws ComException {
-    super("{EAE50EB0-4A62-11CE-BED6-00AA00611080}");
+    super("{EAE50EB0-4A62-11CE-BED6-00AA00611080}", "{04598FC2-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected TabStrip(long ndisp) {
     super(ndisp);

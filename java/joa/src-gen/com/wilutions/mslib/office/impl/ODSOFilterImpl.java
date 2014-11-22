@@ -62,7 +62,7 @@ public class ODSOFilterImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(6,"Conjunction", DISPATCH_PROPERTYPUT,value.value);
   }
   public ODSOFilterImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1533-0000-0000-C000-000000000046}");
   }
   protected ODSOFilterImpl(long ndisp) {
     super(ndisp);

@@ -27,7 +27,7 @@ public class HTMLReset extends Dispatch implements IWHTMLReset {
     return (String)obj;
   }
   public HTMLReset() throws ComException {
-    super("{5512D114-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D114-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D115-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLReset(long ndisp) {
     super(ndisp);

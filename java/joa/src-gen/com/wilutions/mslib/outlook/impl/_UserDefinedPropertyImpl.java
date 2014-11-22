@@ -51,7 +51,7 @@ public class _UserDefinedPropertyImpl extends Dispatch implements com.wilutions.
     this._dispatchCall(64523,"Delete", DISPATCH_METHOD,null);
   }
   public _UserDefinedPropertyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006305C-0000-0000-C000-000000000046}");
   }
   protected _UserDefinedPropertyImpl(long ndisp) {
     super(ndisp);

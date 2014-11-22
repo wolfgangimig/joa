@@ -211,7 +211,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     this._dispatchCall(1610809381,"CommitRenderingTransaction", DISPATCH_METHOD,null,hwnd);
   }
   public CommandBars() throws ComException {
-    super("{55F88893-7708-11D1-ACEB-006008961DA5}");
+    super("{55F88893-7708-11D1-ACEB-006008961DA5}", "{000C0302-0000-0000-C000-000000000046}");
   }
   protected CommandBars(long ndisp) {
     super(ndisp);

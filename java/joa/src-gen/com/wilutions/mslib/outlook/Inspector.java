@@ -158,7 +158,7 @@ public class Inspector extends Dispatch implements _Inspector {
     this._dispatchCall(64647,"SetSchedulingStartTime", DISPATCH_METHOD,null,Start);
   }
   public Inspector() throws ComException {
-    super("{00063058-0000-0000-C000-000000000046}");
+    super("{00063058-0000-0000-C000-000000000046}", "{00063005-0000-0000-C000-000000000046}");
   }
   protected Inspector(long ndisp) {
     super(ndisp);

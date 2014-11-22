@@ -24,7 +24,7 @@ public class IAssistanceImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(1610743811,"ClearDefaultContext", DISPATCH_METHOD,null,HelpId);
   }
   public IAssistanceImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{4291224C-DEFE-485B-8E69-6CF8AA85CB76}");
   }
   protected IAssistanceImpl(long ndisp) {
     super(ndisp);

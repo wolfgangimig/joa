@@ -37,7 +37,7 @@ public class AccountSelector extends Dispatch implements _AccountSelector {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._AccountImpl.class);
   }
   public AccountSelector() throws ComException {
-    super("{00061103-0000-0000-C000-000000000046}");
+    super("{00061103-0000-0000-C000-000000000046}", "{00063103-0000-0000-C000-000000000046}");
   }
   protected AccountSelector(long ndisp) {
     super(ndisp);

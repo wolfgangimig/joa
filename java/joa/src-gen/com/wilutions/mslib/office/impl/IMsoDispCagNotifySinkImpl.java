@@ -14,7 +14,7 @@ public class IMsoDispCagNotifySinkImpl extends Dispatch implements com.wilutions
     this._dispatchCall(2,"WindowIsClosing", DISPATCH_METHOD,null);
   }
   public IMsoDispCagNotifySinkImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0359-0000-0000-C000-000000000046}");
   }
   protected IMsoDispCagNotifySinkImpl(long ndisp) {
     super(ndisp);

@@ -181,7 +181,7 @@ public class CardView extends Dispatch implements _CardView {
     return disp.uncheckedAs(AutoFormatRules.class);
   }
   public CardView() throws ComException {
-    super("{00062002-0000-0000-C000-000000000046}");
+    super("{00062002-0000-0000-C000-000000000046}", "{00063098-0000-0000-C000-000000000046}");
   }
   protected CardView(long ndisp) {
     super(ndisp);

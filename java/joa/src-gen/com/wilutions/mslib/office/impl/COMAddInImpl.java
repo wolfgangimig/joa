@@ -57,7 +57,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     return (Dispatch)obj;
   }
   public COMAddInImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C033A-0000-0000-C000-000000000046}");
   }
   protected COMAddInImpl(long ndisp) {
     super(ndisp);

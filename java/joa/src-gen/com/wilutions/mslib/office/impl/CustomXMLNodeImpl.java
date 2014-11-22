@@ -175,7 +175,7 @@ public class CustomXMLNodeImpl extends Dispatch implements com.wilutions.mslib.o
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.CustomXMLNodeImpl.class);
   }
   public CustomXMLNodeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB04-0000-0000-C000-000000000046}");
   }
   protected CustomXMLNodeImpl(long ndisp) {
     super(ndisp);

@@ -309,7 +309,7 @@ public class TaskRequestUpdateItem extends Dispatch implements _TaskRequestUpdat
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public TaskRequestUpdateItem() throws ComException {
-    super("{00061051-0000-0000-C000-000000000046}");
+    super("{00061051-0000-0000-C000-000000000046}", "{00063037-0000-0000-C000-000000000046}");
   }
   protected TaskRequestUpdateItem(long ndisp) {
     super(ndisp);

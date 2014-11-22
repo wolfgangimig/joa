@@ -65,7 +65,7 @@ public class JournalModule extends Dispatch implements _JournalModule {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationGroupsImpl.class);
   }
   public JournalModule() throws ComException {
-    super("{000610ED-0000-0000-C000-000000000046}");
+    super("{000610ED-0000-0000-C000-000000000046}", "{000630ED-0000-0000-C000-000000000046}");
   }
   protected JournalModule(long ndisp) {
     super(ndisp);

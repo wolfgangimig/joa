@@ -185,7 +185,7 @@ public class OlkListBox extends Dispatch implements _OlkListBox {
     this._dispatchCall(-555,"RemoveItem", DISPATCH_METHOD,null,Index);
   }
   public OlkListBox() throws ComException {
-    super("{0006F04E-0000-0000-C000-000000000046}");
+    super("{0006F04E-0000-0000-C000-000000000046}", "{000672DF-0000-0000-C000-000000000046}");
   }
   protected OlkListBox(long ndisp) {
     super(ndisp);

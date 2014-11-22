@@ -162,7 +162,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     return (String)obj;
   }
   public ILabelControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC1-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected ILabelControlImpl(long ndisp) {
     super(ndisp);

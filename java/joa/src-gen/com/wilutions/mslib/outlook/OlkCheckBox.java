@@ -125,7 +125,7 @@ public class OlkCheckBox extends Dispatch implements _OlkCheckBox {
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
   public OlkCheckBox() throws ComException {
-    super("{0006F04C-0000-0000-C000-000000000046}");
+    super("{0006F04C-0000-0000-C000-000000000046}", "{000672DD-0000-0000-C000-000000000046}");
   }
   protected OlkCheckBox(long ndisp) {
     super(ndisp);

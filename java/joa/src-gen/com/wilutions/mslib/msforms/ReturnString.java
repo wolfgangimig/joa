@@ -18,7 +18,7 @@ public class ReturnString extends Dispatch implements IReturnString {
     return (String)obj;
   }
   public ReturnString() throws ComException {
-    super("{82B02375-B5BC-11CF-810F-00A0C9030074}");
+    super("{82B02375-B5BC-11CF-810F-00A0C9030074}", "{82B02372-B5BC-11CF-810F-00A0C9030074}");
   }
   protected ReturnString(long ndisp) {
     super(ndisp);

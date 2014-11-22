@@ -84,7 +84,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     this._dispatchCall(1001,"DropDown", DISPATCH_METHOD,null);
   }
   public OlkTimeZoneControl() throws ComException {
-    super("{0006F059-0000-0000-C000-000000000046}");
+    super("{0006F059-0000-0000-C000-000000000046}", "{00067367-0000-0000-C000-000000000046}");
   }
   protected OlkTimeZoneControl(long ndisp) {
     super(ndisp);

@@ -63,7 +63,7 @@ public class MarkAsTaskRuleAction extends Dispatch implements _MarkAsTaskRuleAct
     this._dispatchCall(64293,"MarkInterval", DISPATCH_PROPERTYPUT,value.value);
   }
   public MarkAsTaskRuleAction() throws ComException {
-    super("{000610D6-0000-0000-C000-000000000046}");
+    super("{000610D6-0000-0000-C000-000000000046}", "{000630D6-0000-0000-C000-000000000046}");
   }
   protected MarkAsTaskRuleAction(long ndisp) {
     super(ndisp);

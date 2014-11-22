@@ -101,7 +101,7 @@ public class Conversation extends Dispatch implements _Conversation {
     return (String)obj;
   }
   public Conversation() throws ComException {
-    super("{00061101-0000-0000-C000-000000000046}");
+    super("{00061101-0000-0000-C000-000000000046}", "{00063101-0000-0000-C000-000000000046}");
   }
   protected Conversation(long ndisp) {
     super(ndisp);

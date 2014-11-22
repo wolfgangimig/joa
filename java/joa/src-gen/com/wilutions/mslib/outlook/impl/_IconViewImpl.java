@@ -136,7 +136,7 @@ public class _IconViewImpl extends Dispatch implements com.wilutions.mslib.outlo
     this._dispatchCall(64363,"IconPlacement", DISPATCH_PROPERTYPUT,value.value);
   }
   public _IconViewImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063097-0000-0000-C000-000000000046}");
   }
   protected _IconViewImpl(long ndisp) {
     super(ndisp);

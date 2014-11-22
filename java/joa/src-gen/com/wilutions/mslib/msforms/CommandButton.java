@@ -146,7 +146,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     return (Boolean)obj;
   }
   public CommandButton() throws ComException {
-    super("{D7053240-CE69-11CD-A777-00DD01143C57}");
+    super("{D7053240-CE69-11CD-A777-00DD01143C57}", "{04598FC4-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected CommandButton(long ndisp) {
     super(ndisp);

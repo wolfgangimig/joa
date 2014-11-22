@@ -189,7 +189,7 @@ public class Explorer extends Dispatch implements _Explorer {
     return (Dispatch)obj;
   }
   public Explorer() throws ComException {
-    super("{00063050-0000-0000-C000-000000000046}");
+    super("{00063050-0000-0000-C000-000000000046}", "{00063003-0000-0000-C000-000000000046}");
   }
   protected Explorer(long ndisp) {
     super(ndisp);

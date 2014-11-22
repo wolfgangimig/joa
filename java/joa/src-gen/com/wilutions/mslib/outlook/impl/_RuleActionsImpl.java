@@ -142,7 +142,7 @@ public class _RuleActionsImpl extends Dispatch implements com.wilutions.mslib.ou
     return disp.uncheckedAs(com.wilutions.mslib.outlook.RuleAction.class);
   }
   public _RuleActionsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630CE-0000-0000-C000-000000000046}");
   }
   protected _RuleActionsImpl(long ndisp) {
     super(ndisp);

@@ -183,7 +183,7 @@ public class Application extends Dispatch implements _Application {
     this._dispatchCall(64639,"RefreshFormRegionDefinition", DISPATCH_METHOD,null,RegionName);
   }
   public Application() throws ComException {
-    super("{0006F03A-0000-0000-C000-000000000046}");
+    super("{0006F03A-0000-0000-C000-000000000046}", "{00063001-0000-0000-C000-000000000046}");
   }
   protected Application(long ndisp) {
     super(ndisp);

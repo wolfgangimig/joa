@@ -52,7 +52,7 @@ public class ItemPropertyImpl extends Dispatch implements com.wilutions.mslib.ou
     return (Boolean)obj;
   }
   public ItemPropertyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630A7-0000-0000-C000-000000000046}");
   }
   protected ItemPropertyImpl(long ndisp) {
     super(ndisp);

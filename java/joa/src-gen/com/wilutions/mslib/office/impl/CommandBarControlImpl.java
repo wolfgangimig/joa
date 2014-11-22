@@ -221,7 +221,7 @@ public class CommandBarControlImpl extends Dispatch implements com.wilutions.msl
     return (Boolean)obj;
   }
   public CommandBarControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0308-0000-0000-C000-000000000046}");
   }
   protected CommandBarControlImpl(long ndisp) {
     super(ndisp);

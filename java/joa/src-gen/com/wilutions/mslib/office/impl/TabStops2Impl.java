@@ -55,7 +55,7 @@ public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.offic
     return (Object)obj;
   }
   public TabStops2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03BA-0000-0000-C000-000000000046}");
   }
   protected TabStops2Impl(long ndisp) {
     super(ndisp);

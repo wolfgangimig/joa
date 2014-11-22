@@ -33,7 +33,7 @@ public class SearchScopesImpl extends Dispatch implements com.wilutions.mslib.of
     return (Object)obj;
   }
   public SearchScopesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0366-0000-0000-C000-000000000046}");
   }
   protected SearchScopesImpl(long ndisp) {
     super(ndisp);

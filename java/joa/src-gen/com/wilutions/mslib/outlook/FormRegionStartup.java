@@ -36,7 +36,7 @@ public class FormRegionStartup extends Dispatch implements _FormRegionStartup {
     return (Object)obj;
   }
   public FormRegionStartup() throws ComException {
-    super("{00061059-0000-0000-C000-000000000046}");
+    super("{00061059-0000-0000-C000-000000000046}", "{00063059-0000-0000-C000-000000000046}");
   }
   protected FormRegionStartup(long ndisp) {
     super(ndisp);

@@ -437,7 +437,7 @@ public class DistListItem extends Dispatch implements _DistListItem {
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public DistListItem() throws ComException {
-    super("{0006103C-0000-0000-C000-000000000046}");
+    super("{0006103C-0000-0000-C000-000000000046}", "{00063081-0000-0000-C000-000000000046}");
   }
   protected DistListItem(long ndisp) {
     super(ndisp);

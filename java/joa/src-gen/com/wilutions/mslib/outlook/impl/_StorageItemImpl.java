@@ -99,7 +99,7 @@ public class _StorageItemImpl extends Dispatch implements com.wilutions.mslib.ou
     this._dispatchCall(34236,"Creator", DISPATCH_PROPERTYPUT,value);
   }
   public _StorageItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630CB-0000-0000-C000-000000000046}");
   }
   protected _StorageItemImpl(long ndisp) {
     super(ndisp);

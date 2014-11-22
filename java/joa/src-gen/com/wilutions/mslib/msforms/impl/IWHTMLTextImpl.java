@@ -42,7 +42,7 @@ public class IWHTMLTextImpl extends Dispatch implements com.wilutions.mslib.msfo
     return (Integer)obj;
   }
   public IWHTMLTextImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D11B-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLTextImpl(long ndisp) {
     super(ndisp);

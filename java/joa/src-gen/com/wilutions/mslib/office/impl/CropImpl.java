@@ -88,7 +88,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     this._dispatchCall(8,"ShapeHeight", DISPATCH_PROPERTYPUT,value);
   }
   public CropImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D3-0000-0000-C000-000000000046}");
   }
   protected CropImpl(long ndisp) {
     super(ndisp);

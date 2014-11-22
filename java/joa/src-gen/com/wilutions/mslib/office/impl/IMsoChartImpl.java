@@ -574,7 +574,7 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
     this._dispatchCall(2469,"ClearToMatchColorStyle", DISPATCH_METHOD,null);
   }
   public IMsoChartImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1709-0000-0000-C000-000000000046}");
   }
   protected IMsoChartImpl(long ndisp) {
     super(ndisp);

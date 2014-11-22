@@ -452,7 +452,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(2887,"IsFiltered", DISPATCH_PROPERTYPUT,RHS);
   }
   public IMsoSeriesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C170B-0000-0000-C000-000000000046}");
   }
   protected IMsoSeriesImpl(long ndisp) {
     super(ndisp);

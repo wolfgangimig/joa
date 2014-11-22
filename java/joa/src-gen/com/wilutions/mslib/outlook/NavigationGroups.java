@@ -60,7 +60,7 @@ public class NavigationGroups extends Dispatch implements _NavigationGroups {
     return disp.uncheckedAs(NavigationGroup.class);
   }
   public NavigationGroups() throws ComException {
-    super("{000610F4-0000-0000-C000-000000000046}");
+    super("{000610F4-0000-0000-C000-000000000046}", "{000630EF-0000-0000-C000-000000000046}");
   }
   protected NavigationGroups(long ndisp) {
     super(ndisp);

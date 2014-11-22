@@ -31,7 +31,7 @@ public class PickerPropertyImpl extends Dispatch implements com.wilutions.mslib.
     return com.wilutions.mslib.office.MsoPickerField.valueOf((Integer)obj);
   }
   public PickerPropertyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03E2-0000-0000-C000-000000000046}");
   }
   protected PickerPropertyImpl(long ndisp) {
     super(ndisp);

@@ -205,7 +205,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     return (java.util.Date)obj;
   }
   public _CalendarViewImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063099-0000-0000-C000-000000000046}");
   }
   protected _CalendarViewImpl(long ndisp) {
     super(ndisp);

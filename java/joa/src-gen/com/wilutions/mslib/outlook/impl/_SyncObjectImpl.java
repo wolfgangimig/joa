@@ -39,7 +39,7 @@ public class _SyncObjectImpl extends Dispatch implements com.wilutions.mslib.out
     this._dispatchCall(8450,"Stop", DISPATCH_METHOD,null);
   }
   public _SyncObjectImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063083-0000-0000-C000-000000000046}");
   }
   protected _SyncObjectImpl(long ndisp) {
     super(ndisp);

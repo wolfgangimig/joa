@@ -356,7 +356,7 @@ public class TextBox extends Dispatch implements IMdcText {
     return fmDragBehavior.valueOf((Integer)obj);
   }
   public TextBox() throws ComException {
-    super("{8BD21D10-EC42-11CE-9E0D-00AA006002F3}");
+    super("{8BD21D10-EC42-11CE-9E0D-00AA006002F3}", "{8BD21D13-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected TextBox(long ndisp) {
     super(ndisp);

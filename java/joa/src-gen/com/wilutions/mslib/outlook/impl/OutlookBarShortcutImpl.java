@@ -46,7 +46,7 @@ public class OutlookBarShortcutImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(64162,"SetIcon", DISPATCH_METHOD,null,Icon);
   }
   public OutlookBarShortcutImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063075-0000-0000-C000-000000000046}");
   }
   protected OutlookBarShortcutImpl(long ndisp) {
     super(ndisp);

@@ -303,7 +303,7 @@ public class _CommandBarComboBoxImpl extends Dispatch implements com.wilutions.m
     this._dispatchCall(1610940432,"Text", DISPATCH_PROPERTYPUT,value);
   }
   public _CommandBarComboBoxImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C030C-0000-0000-C000-000000000046}");
   }
   protected _CommandBarComboBoxImpl(long ndisp) {
     super(ndisp);

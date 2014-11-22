@@ -45,7 +45,7 @@ public class ODSOFiltersImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(1610809348,"Delete", DISPATCH_METHOD,null,Index,DeferUpdate);
   }
   public ODSOFiltersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1534-0000-0000-C000-000000000046}");
   }
   protected ODSOFiltersImpl(long ndisp) {
     super(ndisp);

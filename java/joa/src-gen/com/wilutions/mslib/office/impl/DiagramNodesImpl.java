@@ -41,7 +41,7 @@ public class DiagramNodesImpl extends Dispatch implements com.wilutions.mslib.of
     return (Integer)obj;
   }
   public DiagramNodesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C036E-0000-0000-C000-000000000046}");
   }
   protected DiagramNodesImpl(long ndisp) {
     super(ndisp);

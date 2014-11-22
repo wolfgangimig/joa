@@ -340,7 +340,7 @@ public class Page extends Dispatch implements IPage {
     return (Dispatch)obj;
   }
   public Page() throws ComException {
-    super("{5CEF5610-713D-11CE-80C9-00AA00611080}");
+    super("{5CEF5610-713D-11CE-80C9-00AA00611080}", "{5CEF5613-713D-11CE-80C9-00AA00611080}");
   }
   protected Page(long ndisp) {
     super(ndisp);

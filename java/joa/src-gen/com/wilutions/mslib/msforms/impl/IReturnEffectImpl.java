@@ -15,7 +15,7 @@ public class IReturnEffectImpl extends Dispatch implements com.wilutions.mslib.m
     return com.wilutions.mslib.msforms.fmDropEffect.valueOf((Integer)obj);
   }
   public IReturnEffectImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8A683C91-BA84-11CF-8110-00A0C9030074}");
   }
   protected IReturnEffectImpl(long ndisp) {
     super(ndisp);

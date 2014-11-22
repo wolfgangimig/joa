@@ -33,7 +33,7 @@ public class WorkflowTemplatesImpl extends Dispatch implements com.wilutions.msl
     return (Object)obj;
   }
   public WorkflowTemplatesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD903-0000-0000-C000-000000000046}");
   }
   protected WorkflowTemplatesImpl(long ndisp) {
     super(ndisp);

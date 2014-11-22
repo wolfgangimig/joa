@@ -193,7 +193,7 @@ public class RuleConditions extends Dispatch implements _RuleConditions {
     return disp.uncheckedAs(FromRssFeedRuleCondition.class);
   }
   public RuleConditions() throws ComException {
-    super("{000610D8-0000-0000-C000-000000000046}");
+    super("{000610D8-0000-0000-C000-000000000046}", "{000630D8-0000-0000-C000-000000000046}");
   }
   protected RuleConditions(long ndisp) {
     super(ndisp);

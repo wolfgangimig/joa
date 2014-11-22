@@ -310,7 +310,7 @@ public class _RemoteItemImpl extends Dispatch implements com.wilutions.mslib.out
     return (String)obj;
   }
   public _RemoteItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063023-0000-0000-C000-000000000046}");
   }
   protected _RemoteItemImpl(long ndisp) {
     super(ndisp);

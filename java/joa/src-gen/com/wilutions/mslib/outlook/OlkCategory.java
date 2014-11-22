@@ -74,7 +74,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkCategory() throws ComException {
-    super("{0006F053-0000-0000-C000-000000000046}");
+    super("{0006F053-0000-0000-C000-000000000046}", "{000672F4-0000-0000-C000-000000000046}");
   }
   protected OlkCategory(long ndisp) {
     super(ndisp);

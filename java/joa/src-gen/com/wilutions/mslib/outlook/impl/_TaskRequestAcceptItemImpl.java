@@ -306,7 +306,7 @@ public class _TaskRequestAcceptItemImpl extends Dispatch implements com.wilution
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public _TaskRequestAcceptItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063038-0000-0000-C000-000000000046}");
   }
   protected _TaskRequestAcceptItemImpl(long ndisp) {
     super(ndisp);

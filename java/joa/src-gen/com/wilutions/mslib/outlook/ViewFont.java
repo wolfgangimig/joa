@@ -103,7 +103,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     this._dispatchCall(64638,"ExtendedColor", DISPATCH_PROPERTYPUT,value.value);
   }
   public ViewFont() throws ComException {
-    super("{0006109D-0000-0000-C000-000000000046}");
+    super("{0006109D-0000-0000-C000-000000000046}", "{0006309D-0000-0000-C000-000000000046}");
   }
   protected ViewFont(long ndisp) {
     super(ndisp);

@@ -132,7 +132,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(111,"Tracking", DISPATCH_PROPERTYPUT,value);
   }
   public TextEffectFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C031F-0000-0000-C000-000000000046}");
   }
   protected TextEffectFormatImpl(long ndisp) {
     super(ndisp);

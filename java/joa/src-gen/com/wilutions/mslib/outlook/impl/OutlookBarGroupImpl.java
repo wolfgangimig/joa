@@ -52,7 +52,7 @@ public class OutlookBarGroupImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(8451,"ViewType", DISPATCH_PROPERTYPUT,value.value);
   }
   public OutlookBarGroupImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063073-0000-0000-C000-000000000046}");
   }
   protected OutlookBarGroupImpl(long ndisp) {
     super(ndisp);

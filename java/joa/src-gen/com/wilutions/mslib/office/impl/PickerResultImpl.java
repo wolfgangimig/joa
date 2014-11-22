@@ -80,7 +80,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(8,"Fields", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public PickerResultImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03E4-0000-0000-C000-000000000046}");
   }
   protected PickerResultImpl(long ndisp) {
     super(ndisp);

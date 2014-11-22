@@ -54,7 +54,7 @@ public class SignatureProviderImpl extends Dispatch implements com.wilutions.msl
     return (Byte[])obj;
   }
   public SignatureProviderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD6A3-0000-0000-C000-000000000046}");
   }
   protected SignatureProviderImpl(long ndisp) {
     super(ndisp);

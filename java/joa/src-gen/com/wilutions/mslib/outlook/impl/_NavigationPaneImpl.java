@@ -61,7 +61,7 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
     return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationModules.class);
   }
   public _NavigationPaneImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E6-0000-0000-C000-000000000046}");
   }
   protected _NavigationPaneImpl(long ndisp) {
     super(ndisp);

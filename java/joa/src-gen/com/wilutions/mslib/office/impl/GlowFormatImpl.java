@@ -40,7 +40,7 @@ public class GlowFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(3,"Transparency", DISPATCH_PROPERTYPUT,value);
   }
   public GlowFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03BD-0000-0000-C000-000000000046}");
   }
   protected GlowFormatImpl(long ndisp) {
     super(ndisp);

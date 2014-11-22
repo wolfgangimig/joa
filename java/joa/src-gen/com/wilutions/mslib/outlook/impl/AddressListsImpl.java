@@ -40,7 +40,7 @@ public class AddressListsImpl extends Dispatch implements com.wilutions.mslib.ou
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
   public AddressListsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063048-0000-0000-C000-000000000046}");
   }
   protected AddressListsImpl(long ndisp) {
     super(ndisp);

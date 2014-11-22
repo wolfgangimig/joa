@@ -51,7 +51,7 @@ public class Explorers extends Dispatch implements _Explorers {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ExplorerImpl.class);
   }
   public Explorers() throws ComException {
-    super("{00063053-0000-0000-C000-000000000046}");
+    super("{00063053-0000-0000-C000-000000000046}", "{0006300A-0000-0000-C000-000000000046}");
   }
   protected Explorers(long ndisp) {
     super(ndisp);

@@ -87,7 +87,7 @@ public class Table extends Dispatch implements _Table {
     return (Boolean)obj;
   }
   public Table() throws ComException {
-    super("{000610D2-0000-0000-C000-000000000046}");
+    super("{000610D2-0000-0000-C000-000000000046}", "{000630D2-0000-0000-C000-000000000046}");
   }
   protected Table(long ndisp) {
     super(ndisp);

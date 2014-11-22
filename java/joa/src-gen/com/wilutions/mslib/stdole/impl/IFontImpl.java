@@ -104,7 +104,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     this._dispatchCall(1610678293,"ReleaseHfont", DISPATCH_METHOD,null,hFont.getValue());
   }
   public IFontImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{BEF6E002-A874-101A-8BBA-00AA00300CAB}");
   }
   protected IFontImpl(long ndisp) {
     super(ndisp);

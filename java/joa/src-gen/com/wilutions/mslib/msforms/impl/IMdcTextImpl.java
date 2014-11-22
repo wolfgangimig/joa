@@ -353,7 +353,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     return com.wilutions.mslib.msforms.fmDragBehavior.valueOf((Integer)obj);
   }
   public IMdcTextImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8BD21D13-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected IMdcTextImpl(long ndisp) {
     super(ndisp);

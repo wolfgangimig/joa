@@ -56,7 +56,7 @@ public class MsoDebugOptionsImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(10,"RemoveIgnoredAssertTag", DISPATCH_METHOD,null,bstrTagToIgnore);
   }
   public MsoDebugOptionsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C035A-0000-0000-C000-000000000046}");
   }
   protected MsoDebugOptionsImpl(long ndisp) {
     super(ndisp);

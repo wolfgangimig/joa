@@ -43,7 +43,7 @@ public class Stores extends Dispatch implements _Stores {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._StoreImpl.class);
   }
   public Stores() throws ComException {
-    super("{000610C6-0000-0000-C000-000000000046}");
+    super("{000610C6-0000-0000-C000-000000000046}", "{000630C6-0000-0000-C000-000000000046}");
   }
   protected Stores(long ndisp) {
     super(ndisp);

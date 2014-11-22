@@ -43,7 +43,7 @@ public class _OlkSenderPhotoImpl extends Dispatch implements com.wilutions.mslib
     return (Integer)obj;
   }
   public _OlkSenderPhotoImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00067355-0000-0000-C000-000000000046}");
   }
   protected _OlkSenderPhotoImpl(long ndisp) {
     super(ndisp);

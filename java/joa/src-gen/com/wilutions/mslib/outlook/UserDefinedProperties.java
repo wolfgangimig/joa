@@ -67,7 +67,7 @@ public class UserDefinedProperties extends Dispatch implements _UserDefinedPrope
     this._dispatchCall(64069,"Refresh", DISPATCH_METHOD,null);
   }
   public UserDefinedProperties() throws ComException {
-    super("{00061047-0000-0000-C000-000000000046}");
+    super("{00061047-0000-0000-C000-000000000046}", "{00063047-0000-0000-C000-000000000046}");
   }
   protected UserDefinedProperties(long ndisp) {
     super(ndisp);

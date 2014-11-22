@@ -201,7 +201,7 @@ public class _NoteItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     return disp.uncheckedAs(com.wilutions.mslib.outlook.PropertyAccessor.class);
   }
   public _NoteItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063025-0000-0000-C000-000000000046}");
   }
   protected _NoteItemImpl(long ndisp) {
     super(ndisp);

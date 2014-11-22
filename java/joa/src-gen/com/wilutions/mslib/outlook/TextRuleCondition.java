@@ -54,7 +54,7 @@ public class TextRuleCondition extends Dispatch implements _TextRuleCondition {
     this._dispatchCall(64295,"Text", DISPATCH_PROPERTYPUT,value);
   }
   public TextRuleCondition() throws ComException {
-    super("{000610E0-0000-0000-C000-000000000046}");
+    super("{000610E0-0000-0000-C000-000000000046}", "{000630E0-0000-0000-C000-000000000046}");
   }
   protected TextRuleCondition(long ndisp) {
     super(ndisp);

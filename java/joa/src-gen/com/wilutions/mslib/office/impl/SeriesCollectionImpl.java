@@ -76,7 +76,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     return (com.wilutions.mslib.office.IMsoSeries)obj;
   }
   public SeriesCollectionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C170A-0000-0000-C000-000000000046}");
   }
   protected SeriesCollectionImpl(long ndisp) {
     super(ndisp);

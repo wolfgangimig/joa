@@ -179,7 +179,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(1001,"DropDown", DISPATCH_METHOD,null);
   }
   public _OlkTimeControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672EF-0000-0000-C000-000000000046}");
   }
   protected _OlkTimeControlImpl(long ndisp) {
     super(ndisp);

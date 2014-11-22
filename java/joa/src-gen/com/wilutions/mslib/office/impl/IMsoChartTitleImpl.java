@@ -228,7 +228,7 @@ public class IMsoChartTitleImpl extends Dispatch implements com.wilutions.mslib.
     return (String)obj;
   }
   public IMsoChartTitleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C170F-0000-0000-C000-000000000046}");
   }
   protected IMsoChartTitleImpl(long ndisp) {
     super(ndisp);

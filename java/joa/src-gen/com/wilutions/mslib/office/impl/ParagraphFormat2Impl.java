@@ -177,7 +177,7 @@ public class ParagraphFormat2Impl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(19,"WordWrap", DISPATCH_PROPERTYPUT,value.value);
   }
   public ParagraphFormat2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0399-0000-0000-C000-000000000046}");
   }
   protected ParagraphFormat2Impl(long ndisp) {
     super(ndisp);

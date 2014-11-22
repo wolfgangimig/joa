@@ -53,7 +53,7 @@ public class ConversationHeader extends Dispatch implements _ConversationHeader 
     return disp.uncheckedAs(SimpleItems.class);
   }
   public ConversationHeader() throws ComException {
-    super("{00061107-0000-0000-C000-000000000046}");
+    super("{00061107-0000-0000-C000-000000000046}", "{00063107-0000-0000-C000-000000000046}");
   }
   protected ConversationHeader(long ndisp) {
     super(ndisp);

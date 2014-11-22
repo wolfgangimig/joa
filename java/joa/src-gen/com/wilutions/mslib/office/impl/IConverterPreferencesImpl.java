@@ -18,7 +18,7 @@ public class IConverterPreferencesImpl extends Dispatch implements com.wilutions
     this._dispatchCall(3,"HrGetLossySave", DISPATCH_METHOD,null,pfLossySave);
   }
   public IConverterPreferencesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D4-0000-0000-C000-000000000046}");
   }
   protected IConverterPreferencesImpl(long ndisp) {
     super(ndisp);

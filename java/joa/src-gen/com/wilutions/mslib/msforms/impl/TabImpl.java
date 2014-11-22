@@ -78,7 +78,7 @@ public class TabImpl extends Dispatch implements com.wilutions.mslib.msforms.Tab
     return (String)obj;
   }
   public TabImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{A38BFFC3-A5A0-11CE-8107-00AA00611080}");
   }
   protected TabImpl(long ndisp) {
     super(ndisp);

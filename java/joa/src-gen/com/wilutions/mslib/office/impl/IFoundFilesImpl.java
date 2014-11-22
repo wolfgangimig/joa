@@ -22,7 +22,7 @@ public class IFoundFilesImpl extends Dispatch implements com.wilutions.mslib.off
     return (Object)obj;
   }
   public IFoundFilesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0338-0000-0000-C000-000000000046}");
   }
   protected IFoundFilesImpl(long ndisp) {
     super(ndisp);

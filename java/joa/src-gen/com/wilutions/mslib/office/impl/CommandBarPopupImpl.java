@@ -242,7 +242,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(1610940418,"OLEMenuGroup", DISPATCH_PROPERTYPUT,value.value);
   }
   public CommandBarPopupImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C030A-0000-0000-C000-000000000046}");
   }
   protected CommandBarPopupImpl(long ndisp) {
     super(ndisp);

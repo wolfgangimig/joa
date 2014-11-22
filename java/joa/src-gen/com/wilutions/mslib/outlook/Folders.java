@@ -79,7 +79,7 @@ public class Folders extends Dispatch implements _Folders {
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public Folders() throws ComException {
-    super("{00063051-0000-0000-C000-000000000046}");
+    super("{00063051-0000-0000-C000-000000000046}", "{00063040-0000-0000-C000-000000000046}");
   }
   protected Folders(long ndisp) {
     super(ndisp);

@@ -40,7 +40,7 @@ public class AnswerWizardFilesImpl extends Dispatch implements com.wilutions.msl
     this._dispatchCall(1610809348,"Delete", DISPATCH_METHOD,null,FileName);
   }
   public AnswerWizardFilesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0361-0000-0000-C000-000000000046}");
   }
   protected AnswerWizardFilesImpl(long ndisp) {
     super(ndisp);

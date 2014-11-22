@@ -74,7 +74,7 @@ public class _CustomTaskPaneImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(9,"Delete", DISPATCH_METHOD,null);
   }
   public _CustomTaskPaneImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C033B-0000-0000-C000-000000000046}");
   }
   protected _CustomTaskPaneImpl(long ndisp) {
     super(ndisp);

@@ -51,7 +51,7 @@ public class _SenderInAddressListRuleConditionImpl extends Dispatch implements c
     this._dispatchCall(64327,"AddressList", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public _SenderInAddressListRuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630DF-0000-0000-C000-000000000046}");
   }
   protected _SenderInAddressListRuleConditionImpl(long ndisp) {
     super(ndisp);

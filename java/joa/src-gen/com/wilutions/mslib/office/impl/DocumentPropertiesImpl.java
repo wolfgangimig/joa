@@ -49,7 +49,7 @@ public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.ms
     return (Integer)obj;
   }
   public DocumentPropertiesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{2DF8D04D-5BFA-101B-BDE5-00AA0044DE52}");
   }
   protected DocumentPropertiesImpl(long ndisp) {
     super(ndisp);

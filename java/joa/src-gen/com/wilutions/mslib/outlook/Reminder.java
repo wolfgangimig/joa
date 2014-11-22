@@ -63,7 +63,7 @@ public class Reminder extends Dispatch implements _Reminder {
     return (java.util.Date)obj;
   }
   public Reminder() throws ComException {
-    super("{0006F028-0000-0000-C000-000000000046}");
+    super("{0006F028-0000-0000-C000-000000000046}", "{000630B0-0000-0000-C000-000000000046}");
   }
   protected Reminder(long ndisp) {
     super(ndisp);

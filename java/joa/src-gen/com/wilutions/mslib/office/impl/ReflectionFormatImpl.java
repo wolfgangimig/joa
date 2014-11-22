@@ -61,7 +61,7 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(5,"Blur", DISPATCH_PROPERTYPUT,value);
   }
   public ReflectionFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03BE-0000-0000-C000-000000000046}");
   }
   protected ReflectionFormatImpl(long ndisp) {
     super(ndisp);

@@ -32,7 +32,7 @@ public class FoundFilesImpl extends Dispatch implements com.wilutions.mslib.offi
     return (Object)obj;
   }
   public FoundFilesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0331-0000-0000-C000-000000000046}");
   }
   protected FoundFilesImpl(long ndisp) {
     super(ndisp);

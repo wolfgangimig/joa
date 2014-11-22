@@ -36,7 +36,7 @@ public class ThemeColorImpl extends Dispatch implements com.wilutions.mslib.offi
     return com.wilutions.mslib.office.MsoThemeColorSchemeIndex.valueOf((Integer)obj);
   }
   public ThemeColorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03A1-0000-0000-C000-000000000046}");
   }
   protected ThemeColorImpl(long ndisp) {
     super(ndisp);

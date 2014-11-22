@@ -65,7 +65,7 @@ public class TasksModule extends Dispatch implements _TasksModule {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationGroupsImpl.class);
   }
   public TasksModule() throws ComException {
-    super("{000610EC-0000-0000-C000-000000000046}");
+    super("{000610EC-0000-0000-C000-000000000046}", "{000630EC-0000-0000-C000-000000000046}");
   }
   protected TasksModule(long ndisp) {
     super(ndisp);

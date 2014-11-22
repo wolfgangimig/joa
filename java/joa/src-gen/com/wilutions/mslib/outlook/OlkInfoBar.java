@@ -27,7 +27,7 @@ public class OlkInfoBar extends Dispatch implements _OlkInfoBar {
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkInfoBar() throws ComException {
-    super("{0006F054-0000-0000-C000-000000000046}");
+    super("{0006F054-0000-0000-C000-000000000046}", "{000672F6-0000-0000-C000-000000000046}");
   }
   protected OlkInfoBar(long ndisp) {
     super(ndisp);

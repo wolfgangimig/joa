@@ -27,7 +27,7 @@ public class OlkBusinessCardControl extends Dispatch implements _OlkBusinessCard
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkBusinessCardControl() throws ComException {
-    super("{0006F050-0000-0000-C000-000000000046}");
+    super("{0006F050-0000-0000-C000-000000000046}", "{000672ED-0000-0000-C000-000000000046}");
   }
   protected OlkBusinessCardControl(long ndisp) {
     super(ndisp);

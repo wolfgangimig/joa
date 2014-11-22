@@ -19,7 +19,7 @@ public class PictureImpl extends Dispatch implements com.wilutions.mslib.stdole.
     this._dispatchCall(6,"Render", DISPATCH_METHOD,null,hdc,x,y,cx,cy,xSrc.getValue(),ySrc.getValue(),cxSrc.getValue(),cySrc.getValue(),prcWBounds);
   }
   public PictureImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{7BF80981-BF32-101A-8BBB-00AA00300CAB}");
   }
   protected PictureImpl(long ndisp) {
     super(ndisp);

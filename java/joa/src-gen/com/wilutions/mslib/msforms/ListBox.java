@@ -291,7 +291,7 @@ public class ListBox extends Dispatch implements IMdcList {
     return fmTextAlign.valueOf((Integer)obj);
   }
   public ListBox() throws ComException {
-    super("{8BD21D20-EC42-11CE-9E0D-00AA006002F3}");
+    super("{8BD21D20-EC42-11CE-9E0D-00AA006002F3}", "{8BD21D23-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected ListBox(long ndisp) {
     super(ndisp);

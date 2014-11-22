@@ -44,7 +44,7 @@ public class ExceptionImpl extends Dispatch implements com.wilutions.mslib.outlo
     return (java.util.Date)obj;
   }
   public ExceptionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006304D-0000-0000-C000-000000000046}");
   }
   protected ExceptionImpl(long ndisp) {
     super(ndisp);

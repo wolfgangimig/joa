@@ -182,7 +182,7 @@ public class OlkTimeControl extends Dispatch implements _OlkTimeControl {
     this._dispatchCall(1001,"DropDown", DISPATCH_METHOD,null);
   }
   public OlkTimeControl() throws ComException {
-    super("{0006F051-0000-0000-C000-000000000046}");
+    super("{0006F051-0000-0000-C000-000000000046}", "{000672EF-0000-0000-C000-000000000046}");
   }
   protected OlkTimeControl(long ndisp) {
     super(ndisp);

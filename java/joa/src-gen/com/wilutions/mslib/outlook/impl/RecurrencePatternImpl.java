@@ -167,7 +167,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     return disp.uncheckedAs(com.wilutions.mslib.outlook.AppointmentItem.class);
   }
   public RecurrencePatternImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063044-0000-0000-C000-000000000046}");
   }
   protected RecurrencePatternImpl(long ndisp) {
     super(ndisp);

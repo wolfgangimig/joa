@@ -49,7 +49,7 @@ public class ChartColorFormatImpl extends Dispatch implements com.wilutions.msli
     return (Integer)obj;
   }
   public ChartColorFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C171D-0000-0000-C000-000000000046}");
   }
   protected ChartColorFormatImpl(long ndisp) {
     super(ndisp);

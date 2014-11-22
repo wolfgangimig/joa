@@ -54,7 +54,7 @@ public class AssignToCategoryRuleAction extends Dispatch implements _AssignToCat
     this._dispatchCall(64289,"Categories", DISPATCH_PROPERTYPUT,value);
   }
   public AssignToCategoryRuleAction() throws ComException {
-    super("{000610D4-0000-0000-C000-000000000046}");
+    super("{000610D4-0000-0000-C000-000000000046}", "{000630D4-0000-0000-C000-000000000046}");
   }
   protected AssignToCategoryRuleAction(long ndisp) {
     super(ndisp);

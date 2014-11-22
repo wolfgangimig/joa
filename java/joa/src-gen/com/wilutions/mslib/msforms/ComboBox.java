@@ -470,7 +470,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     return fmDragBehavior.valueOf((Integer)obj);
   }
   public ComboBox() throws ComException {
-    super("{8BD21D30-EC42-11CE-9E0D-00AA006002F3}");
+    super("{8BD21D30-EC42-11CE-9E0D-00AA006002F3}", "{8BD21D33-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected ComboBox(long ndisp) {
     super(ndisp);

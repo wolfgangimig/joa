@@ -143,7 +143,7 @@ public class ICommandButtonImpl extends Dispatch implements com.wilutions.mslib.
     return (Boolean)obj;
   }
   public ICommandButtonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC4-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected ICommandButtonImpl(long ndisp) {
     super(ndisp);

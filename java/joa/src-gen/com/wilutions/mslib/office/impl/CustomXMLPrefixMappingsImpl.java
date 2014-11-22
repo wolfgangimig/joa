@@ -55,7 +55,7 @@ public class CustomXMLPrefixMappingsImpl extends Dispatch implements com.wilutio
     return (Object)obj;
   }
   public CustomXMLPrefixMappingsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB00-0000-0000-C000-000000000046}");
   }
   protected CustomXMLPrefixMappingsImpl(long ndisp) {
     super(ndisp);

@@ -41,7 +41,7 @@ public class SmartArtLayoutImpl extends Dispatch implements com.wilutions.mslib.
     return (String)obj;
   }
   public SmartArtLayoutImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03CA-0000-0000-C000-000000000046}");
   }
   protected SmartArtLayoutImpl(long ndisp) {
     super(ndisp);

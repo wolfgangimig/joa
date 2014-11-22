@@ -274,7 +274,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(2029,"ShowRange", DISPATCH_PROPERTYPUT,RHS);
   }
   public IMsoDataLabelsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C171F-0000-0000-C000-000000000046}");
   }
   protected IMsoDataLabelsImpl(long ndisp) {
     super(ndisp);
