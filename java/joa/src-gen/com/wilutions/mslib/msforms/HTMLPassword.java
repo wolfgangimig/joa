@@ -45,7 +45,7 @@ public class HTMLPassword extends Dispatch implements IWHTMLPassword {
     return (Integer)obj;
   }
   public HTMLPassword() throws ComException {
-    super("{5512D11E-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D11E-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D11F-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLPassword(long ndisp) {
     super(ndisp);

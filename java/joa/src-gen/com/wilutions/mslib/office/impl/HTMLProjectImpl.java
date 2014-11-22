@@ -44,7 +44,7 @@ public class HTMLProjectImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(5,"Open", DISPATCH_METHOD,null,OpenKind.value);
   }
   public HTMLProjectImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0356-0000-0000-C000-000000000046}");
   }
   protected HTMLProjectImpl(long ndisp) {
     super(ndisp);

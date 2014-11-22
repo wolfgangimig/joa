@@ -84,7 +84,7 @@ public class _TableImpl extends Dispatch implements com.wilutions.mslib.outlook.
     return (Boolean)obj;
   }
   public _TableImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D2-0000-0000-C000-000000000046}");
   }
   protected _TableImpl(long ndisp) {
     super(ndisp);

@@ -51,7 +51,7 @@ public class _NewItemAlertRuleActionImpl extends Dispatch implements com.wilutio
     this._dispatchCall(64295,"Text", DISPATCH_PROPERTYPUT,value);
   }
   public _NewItemAlertRuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D7-0000-0000-C000-000000000046}");
   }
   protected _NewItemAlertRuleActionImpl(long ndisp) {
     super(ndisp);

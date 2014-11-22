@@ -18,7 +18,7 @@ public class ReturnBoolean extends Dispatch implements IReturnBoolean {
     return (Boolean)obj;
   }
   public ReturnBoolean() throws ComException {
-    super("{82B02374-B5BC-11CF-810F-00A0C9030074}");
+    super("{82B02374-B5BC-11CF-810F-00A0C9030074}", "{82B02371-B5BC-11CF-810F-00A0C9030074}");
   }
   protected ReturnBoolean(long ndisp) {
     super(ndisp);

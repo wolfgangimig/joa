@@ -769,7 +769,7 @@ public class SharingItem extends Dispatch implements _SharingItem {
     return (java.util.Date)obj;
   }
   public SharingItem() throws ComException {
-    super("{00061067-0000-0000-C000-000000000046}");
+    super("{00061067-0000-0000-C000-000000000046}", "{0006302F-0000-0000-C000-000000000046}");
   }
   protected SharingItem(long ndisp) {
     super(ndisp);

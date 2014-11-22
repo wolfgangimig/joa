@@ -151,7 +151,7 @@ public class _ExchangeDistributionListImpl extends Dispatch implements com.wilut
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
   }
   public _ExchangeDistributionListImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630CA-0000-0000-C000-000000000046}");
   }
   protected _ExchangeDistributionListImpl(long ndisp) {
     super(ndisp);

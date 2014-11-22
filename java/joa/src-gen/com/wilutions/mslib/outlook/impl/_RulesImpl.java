@@ -65,7 +65,7 @@ public class _RulesImpl extends Dispatch implements com.wilutions.mslib.outlook.
     this._dispatchCall(64533,"IsRssRulesProcessingEnabled", DISPATCH_PROPERTYPUT,value);
   }
   public _RulesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630CC-0000-0000-C000-000000000046}");
   }
   protected _RulesImpl(long ndisp) {
     super(ndisp);

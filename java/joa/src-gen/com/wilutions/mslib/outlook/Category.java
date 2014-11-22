@@ -81,7 +81,7 @@ public class Category extends Dispatch implements _Category {
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
   public Category() throws ComException {
-    super("{000610E3-0000-0000-C000-000000000046}");
+    super("{000610E3-0000-0000-C000-000000000046}", "{000630E3-0000-0000-C000-000000000046}");
   }
   protected Category(long ndisp) {
     super(ndisp);

@@ -388,7 +388,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     this._dispatchCall(158,"Title", DISPATCH_PROPERTYPUT,value);
   }
   public ShapeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C031C-0000-0000-C000-000000000046}");
   }
   protected ShapeImpl(long ndisp) {
     super(ndisp);

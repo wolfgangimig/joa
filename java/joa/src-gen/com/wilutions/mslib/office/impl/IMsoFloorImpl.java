@@ -81,7 +81,7 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Integer)obj;
   }
   public IMsoFloorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1716-0000-0000-C000-000000000046}");
   }
   protected IMsoFloorImpl(long ndisp) {
     super(ndisp);

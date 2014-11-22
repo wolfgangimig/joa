@@ -137,16 +137,6 @@ public class MessageBox {
 	 */
 	public static void show(Object owner, String title, String text, AsyncResult<Integer> asyncResult) {
 		
-		Object _owner;
-		
-		assert (owner instanceof Dispatch) || (owner instanceof ModalDialog);
-		if (owner instanceof ModalDialog) {
-			_owner = owner;
-		}
-		else {
-			_owner = Dispatch.as(owner, Dispatch.class);
-		}
-		
 		Button button = new Button("OK");
 		button.setMinWidth(DEFAULT_BUTTON_MIN_WIDTH);
 		button.setDefaultButton(true);
@@ -158,7 +148,7 @@ public class MessageBox {
 		buttonDefinitions.add(bd);
 		
 		DialogBox dialog = new DialogBox(title, text, buttonDefinitions);
-		dialog.showAsync(_owner, asyncResult);
+		dialog.showAsync(owner, asyncResult);
 	}
 
 	protected static class DialogBox extends ModalDialog<Integer> {

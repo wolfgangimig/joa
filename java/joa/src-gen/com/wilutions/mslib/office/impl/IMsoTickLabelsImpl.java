@@ -134,7 +134,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     return (Integer)obj;
   }
   public IMsoTickLabelsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1726-0000-0000-C000-000000000046}");
   }
   protected IMsoTickLabelsImpl(long ndisp) {
     super(ndisp);

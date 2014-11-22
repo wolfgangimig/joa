@@ -76,7 +76,7 @@ public class IBlogExtensibilityImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(8,"GetCategories", DISPATCH_METHOD,null,Account,ParentWindow,(Document!=null?Document:Dispatch.NULL),Categories);
   }
   public IBlogExtensibilityImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C4-0000-0000-C000-000000000046}");
   }
   protected IBlogExtensibilityImpl(long ndisp) {
     super(ndisp);

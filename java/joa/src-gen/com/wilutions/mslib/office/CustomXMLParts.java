@@ -63,7 +63,7 @@ public class CustomXMLParts extends Dispatch implements _CustomXMLParts {
     return (Object)obj;
   }
   public CustomXMLParts() throws ComException {
-    super("{000CDB0C-0000-0000-C000-000000000046}");
+    super("{000CDB0C-0000-0000-C000-000000000046}", "{000CDB09-0000-0000-C000-000000000046}");
   }
   protected CustomXMLParts(long ndisp) {
     super(ndisp);

@@ -54,7 +54,7 @@ public class _ColumnsImpl extends Dispatch implements com.wilutions.mslib.outloo
     this._dispatchCall(83,"RemoveAll", DISPATCH_METHOD,null);
   }
   public _ColumnsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E1-0000-0000-C000-000000000046}");
   }
   protected _ColumnsImpl(long ndisp) {
     super(ndisp);

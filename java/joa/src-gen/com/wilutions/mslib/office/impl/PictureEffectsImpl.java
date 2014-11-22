@@ -45,7 +45,7 @@ public class PictureEffectsImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(3,"Delete", DISPATCH_METHOD,null,Index);
   }
   public PictureEffectsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D2-0000-0000-C000-000000000046}");
   }
   protected PictureEffectsImpl(long ndisp) {
     super(ndisp);

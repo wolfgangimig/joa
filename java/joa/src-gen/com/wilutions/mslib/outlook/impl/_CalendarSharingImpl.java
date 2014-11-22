@@ -108,7 +108,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(64417,"IncludeWholeCalendar", DISPATCH_PROPERTYPUT,value);
   }
   public _CalendarSharingImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E2-0000-0000-C000-000000000046}");
   }
   protected _CalendarSharingImpl(long ndisp) {
     super(ndisp);

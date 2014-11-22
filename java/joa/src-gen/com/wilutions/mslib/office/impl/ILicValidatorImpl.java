@@ -20,7 +20,7 @@ public class ILicValidatorImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(2,"Selection", DISPATCH_PROPERTYPUT,value);
   }
   public ILicValidatorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{919AA22C-B9AD-11D3-8D59-0050048384E3}");
   }
   protected ILicValidatorImpl(long ndisp) {
     super(ndisp);

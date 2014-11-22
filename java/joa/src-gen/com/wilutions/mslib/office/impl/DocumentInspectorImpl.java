@@ -41,7 +41,7 @@ public class DocumentInspectorImpl extends Dispatch implements com.wilutions.msl
     return (Dispatch)obj;
   }
   public DocumentInspectorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0393-0000-0000-C000-000000000046}");
   }
   protected DocumentInspectorImpl(long ndisp) {
     super(ndisp);

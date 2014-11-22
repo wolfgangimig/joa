@@ -45,7 +45,7 @@ public class RuleAction extends Dispatch implements _RuleAction {
     return OlRuleActionType.valueOf((Integer)obj);
   }
   public RuleAction() throws ComException {
-    super("{000610CF-0000-0000-C000-000000000046}");
+    super("{000610CF-0000-0000-C000-000000000046}", "{000630CF-0000-0000-C000-000000000046}");
   }
   protected RuleAction(long ndisp) {
     super(ndisp);

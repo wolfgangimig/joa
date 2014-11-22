@@ -51,7 +51,7 @@ public class _ImportanceRuleConditionImpl extends Dispatch implements com.wiluti
     this._dispatchCall(64299,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
   public _ImportanceRuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630DA-0000-0000-C000-000000000046}");
   }
   protected _ImportanceRuleConditionImpl(long ndisp) {
     super(ndisp);

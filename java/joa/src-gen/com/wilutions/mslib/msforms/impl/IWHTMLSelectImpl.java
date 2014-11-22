@@ -60,7 +60,7 @@ public class IWHTMLSelectImpl extends Dispatch implements com.wilutions.mslib.ms
     return (Integer)obj;
   }
   public IWHTMLSelectImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D123-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLSelectImpl(long ndisp) {
     super(ndisp);

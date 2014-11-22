@@ -170,7 +170,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(118,"NoTextRotation", DISPATCH_PROPERTYPUT,value.value);
   }
   public TextFrame2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0398-0000-0000-C000-000000000046}");
   }
   protected TextFrame2Impl(long ndisp) {
     super(ndisp);

@@ -228,7 +228,7 @@ public class IMsoAxisTitleImpl extends Dispatch implements com.wilutions.mslib.o
     return (String)obj;
   }
   public IMsoAxisTitleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{ABFA087C-F703-4D53-946E-37FF82B2C994}");
   }
   protected IMsoAxisTitleImpl(long ndisp) {
     super(ndisp);

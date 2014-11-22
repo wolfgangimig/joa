@@ -344,7 +344,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     return (Integer)obj;
   }
   public _UserFormImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC8-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected _UserFormImpl(long ndisp) {
     super(ndisp);

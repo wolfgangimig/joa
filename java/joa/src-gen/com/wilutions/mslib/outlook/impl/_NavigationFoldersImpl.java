@@ -49,7 +49,7 @@ public class _NavigationFoldersImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(64451,"Remove", DISPATCH_METHOD,null,(RemovableFolder!=null?RemovableFolder:Dispatch.NULL));
   }
   public _NavigationFoldersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630F1-0000-0000-C000-000000000046}");
   }
   protected _NavigationFoldersImpl(long ndisp) {
     super(ndisp);

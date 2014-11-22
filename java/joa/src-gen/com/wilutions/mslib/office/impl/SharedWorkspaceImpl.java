@@ -101,7 +101,7 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(15,"Disconnect", DISPATCH_METHOD,null);
   }
   public SharedWorkspaceImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0385-0000-0000-C000-000000000046}");
   }
   protected SharedWorkspaceImpl(long ndisp) {
     super(ndisp);

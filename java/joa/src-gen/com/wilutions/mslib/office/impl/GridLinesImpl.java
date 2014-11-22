@@ -48,7 +48,7 @@ public class GridLinesImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Integer)obj;
   }
   public GridLinesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1725-0000-0000-C000-000000000046}");
   }
   protected GridLinesImpl(long ndisp) {
     super(ndisp);

@@ -16,7 +16,7 @@ public class _IMsoOleAccDispObjImpl extends Dispatch implements com.wilutions.ms
     return (Integer)obj;
   }
   public _IMsoOleAccDispObjImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0301-0000-0000-C000-000000000046}");
   }
   protected _IMsoOleAccDispObjImpl(long ndisp) {
     super(ndisp);

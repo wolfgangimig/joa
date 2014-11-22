@@ -81,7 +81,7 @@ public class _OlkTimeZoneControlImpl extends Dispatch implements com.wilutions.m
     this._dispatchCall(1001,"DropDown", DISPATCH_METHOD,null);
   }
   public _OlkTimeZoneControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00067367-0000-0000-C000-000000000046}");
   }
   protected _OlkTimeZoneControlImpl(long ndisp) {
     super(ndisp);

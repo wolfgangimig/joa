@@ -52,7 +52,7 @@ public class GradientStopsImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(12,"Insert2", DISPATCH_METHOD,null,RGB.getValue(),Position,Transparency,Index,Brightness);
   }
   public GradientStopsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C0-0000-0000-C000-000000000046}");
   }
   protected GradientStopsImpl(long ndisp) {
     super(ndisp);

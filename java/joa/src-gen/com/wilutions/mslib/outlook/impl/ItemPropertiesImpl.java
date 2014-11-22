@@ -54,7 +54,7 @@ public class ItemPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public ItemPropertiesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630A8-0000-0000-C000-000000000046}");
   }
   protected ItemPropertiesImpl(long ndisp) {
     super(ndisp);

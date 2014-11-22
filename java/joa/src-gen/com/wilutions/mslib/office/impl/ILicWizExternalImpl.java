@@ -131,7 +131,7 @@ public class ILicWizExternalImpl extends Dispatch implements com.wilutions.mslib
     return (String)obj;
   }
   public ILicWizExternalImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{4CAC6328-B9B0-11D3-8D59-0050048384E3}");
   }
   protected ILicWizExternalImpl(long ndisp) {
     super(ndisp);

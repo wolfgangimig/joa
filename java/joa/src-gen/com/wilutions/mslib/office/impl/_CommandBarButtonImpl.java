@@ -299,7 +299,7 @@ public class _CommandBarButtonImpl extends Dispatch implements com.wilutions.msl
     this._dispatchCall(1610940432,"Mask", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public _CommandBarButtonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C030E-0000-0000-C000-000000000046}");
   }
   protected _CommandBarButtonImpl(long ndisp) {
     super(ndisp);

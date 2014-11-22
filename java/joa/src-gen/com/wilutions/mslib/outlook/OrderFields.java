@@ -67,7 +67,7 @@ public class OrderFields extends Dispatch implements _OrderFields {
     return disp.uncheckedAs(OrderField.class);
   }
   public OrderFields() throws ComException {
-    super("{0006109A-0000-0000-C000-000000000046}");
+    super("{0006109A-0000-0000-C000-000000000046}", "{0006309A-0000-0000-C000-000000000046}");
   }
   protected OrderFields(long ndisp) {
     super(ndisp);

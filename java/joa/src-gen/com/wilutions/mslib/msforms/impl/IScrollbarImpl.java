@@ -125,7 +125,7 @@ public class IScrollbarImpl extends Dispatch implements com.wilutions.mslib.msfo
     return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   public IScrollbarImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC3-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected IScrollbarImpl(long ndisp) {
     super(ndisp);

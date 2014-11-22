@@ -306,7 +306,7 @@ public class _TaskRequestDeclineItemImpl extends Dispatch implements com.wilutio
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public _TaskRequestDeclineItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063039-0000-0000-C000-000000000046}");
   }
   protected _TaskRequestDeclineItemImpl(long ndisp) {
     super(ndisp);

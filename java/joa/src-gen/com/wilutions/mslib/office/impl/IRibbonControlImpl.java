@@ -21,7 +21,7 @@ public class IRibbonControlImpl extends Dispatch implements com.wilutions.mslib.
     return (String)obj;
   }
   public IRibbonControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0395-0000-0000-C000-000000000046}");
   }
   protected IRibbonControlImpl(long ndisp) {
     super(ndisp);

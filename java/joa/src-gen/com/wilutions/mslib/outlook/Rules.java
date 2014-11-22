@@ -68,7 +68,7 @@ public class Rules extends Dispatch implements _Rules {
     this._dispatchCall(64533,"IsRssRulesProcessingEnabled", DISPATCH_PROPERTYPUT,value);
   }
   public Rules() throws ComException {
-    super("{000610CC-0000-0000-C000-000000000046}");
+    super("{000610CC-0000-0000-C000-000000000046}", "{000630CC-0000-0000-C000-000000000046}");
   }
   protected Rules(long ndisp) {
     super(ndisp);

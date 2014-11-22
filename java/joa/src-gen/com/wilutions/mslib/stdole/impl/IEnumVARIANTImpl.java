@@ -23,7 +23,7 @@ public class IEnumVARIANTImpl extends Dispatch implements com.wilutions.mslib.st
     this._dispatchCall(1610678275,"Clone", DISPATCH_METHOD,null,ppenum);
   }
   public IEnumVARIANTImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00020404-0000-0000-C000-000000000046}");
   }
   protected IEnumVARIANTImpl(long ndisp) {
     super(ndisp);

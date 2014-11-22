@@ -34,7 +34,7 @@ public class OutlookBarStorageImpl extends Dispatch implements com.wilutions.msl
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._OutlookBarGroupsImpl.class);
   }
   public OutlookBarStorageImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063071-0000-0000-C000-000000000046}");
   }
   protected OutlookBarStorageImpl(long ndisp) {
     super(ndisp);

@@ -136,7 +136,7 @@ public class BusinessCardView extends Dispatch implements _BusinessCardView {
     this._dispatchCall(64474,"CardSize", DISPATCH_PROPERTYPUT,value);
   }
   public BusinessCardView() throws ComException {
-    super("{0006200B-0000-0000-C000-000000000046}");
+    super("{0006200B-0000-0000-C000-000000000046}", "{000630A2-0000-0000-C000-000000000046}");
   }
   protected BusinessCardView(long ndisp) {
     super(ndisp);

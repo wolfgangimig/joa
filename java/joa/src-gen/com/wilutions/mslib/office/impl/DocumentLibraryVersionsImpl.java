@@ -43,7 +43,7 @@ public class DocumentLibraryVersionsImpl extends Dispatch implements com.wilutio
     return (Object)obj;
   }
   public DocumentLibraryVersionsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0388-0000-0000-C000-000000000046}");
   }
   protected DocumentLibraryVersionsImpl(long ndisp) {
     super(ndisp);

@@ -107,7 +107,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     return (Integer)obj;
   }
   public ISpinbuttonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{79176FB3-B7F2-11CE-97EF-00AA006D2776}");
   }
   protected ISpinbuttonImpl(long ndisp) {
     super(ndisp);

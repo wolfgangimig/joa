@@ -76,7 +76,7 @@ public class _FoldersImpl extends Dispatch implements com.wilutions.mslib.outloo
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public _FoldersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063040-0000-0000-C000-000000000046}");
   }
   protected _FoldersImpl(long ndisp) {
     super(ndisp);

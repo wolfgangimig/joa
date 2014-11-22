@@ -55,7 +55,7 @@ public class OutlookBarGroups extends Dispatch implements _OutlookBarGroups {
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public OutlookBarGroups() throws ComException {
-    super("{00063056-0000-0000-C000-000000000046}");
+    super("{00063056-0000-0000-C000-000000000046}", "{00063072-0000-0000-C000-000000000046}");
   }
   protected OutlookBarGroups(long ndisp) {
     super(ndisp);

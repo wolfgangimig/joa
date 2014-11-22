@@ -404,7 +404,7 @@ public class JournalItem extends Dispatch implements _JournalItem {
     return (String)obj;
   }
   public JournalItem() throws ComException {
-    super("{00061037-0000-0000-C000-000000000046}");
+    super("{00061037-0000-0000-C000-000000000046}", "{00063022-0000-0000-C000-000000000046}");
   }
   protected JournalItem(long ndisp) {
     super(ndisp);

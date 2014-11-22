@@ -94,7 +94,7 @@ public class AttachmentImpl extends Dispatch implements com.wilutions.mslib.outl
     return (String)obj;
   }
   public AttachmentImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063007-0000-0000-C000-000000000046}");
   }
   protected AttachmentImpl(long ndisp) {
     super(ndisp);

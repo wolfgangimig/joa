@@ -48,7 +48,7 @@ public class IMsoSeriesLinesImpl extends Dispatch implements com.wilutions.mslib
     return (Integer)obj;
   }
   public IMsoSeriesLinesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1729-0000-0000-C000-000000000046}");
   }
   protected IMsoSeriesLinesImpl(long ndisp) {
     super(ndisp);

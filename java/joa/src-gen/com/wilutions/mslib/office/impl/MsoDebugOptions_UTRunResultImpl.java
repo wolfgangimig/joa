@@ -26,7 +26,7 @@ public class MsoDebugOptions_UTRunResultImpl extends Dispatch implements com.wil
     return (String)obj;
   }
   public MsoDebugOptions_UTRunResultImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C038C-0000-0000-C000-000000000046}");
   }
   protected MsoDebugOptions_UTRunResultImpl(long ndisp) {
     super(ndisp);

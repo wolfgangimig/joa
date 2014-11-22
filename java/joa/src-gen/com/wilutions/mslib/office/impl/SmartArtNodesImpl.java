@@ -44,7 +44,7 @@ public class SmartArtNodesImpl extends Dispatch implements com.wilutions.mslib.o
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.SmartArtNodeImpl.class);
   }
   public SmartArtNodesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C7-0000-0000-C000-000000000046}");
   }
   protected SmartArtNodesImpl(long ndisp) {
     super(ndisp);

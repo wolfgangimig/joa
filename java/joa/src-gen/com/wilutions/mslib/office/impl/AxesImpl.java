@@ -47,7 +47,7 @@ public class AxesImpl extends Dispatch implements com.wilutions.mslib.office.Axe
     return (Dispatch)obj;
   }
   public AxesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1712-0000-0000-C000-000000000046}");
   }
   protected AxesImpl(long ndisp) {
     super(ndisp);

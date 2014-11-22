@@ -54,7 +54,7 @@ public class PlaySoundRuleAction extends Dispatch implements _PlaySoundRuleActio
     this._dispatchCall(64221,"FilePath", DISPATCH_PROPERTYPUT,value);
   }
   public PlaySoundRuleAction() throws ComException {
-    super("{000610D5-0000-0000-C000-000000000046}");
+    super("{000610D5-0000-0000-C000-000000000046}", "{000630D5-0000-0000-C000-000000000046}");
   }
   protected PlaySoundRuleAction(long ndisp) {
     super(ndisp);

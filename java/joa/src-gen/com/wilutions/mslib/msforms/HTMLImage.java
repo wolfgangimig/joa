@@ -54,7 +54,7 @@ public class HTMLImage extends Dispatch implements IWHTMLImage {
     return (String)obj;
   }
   public HTMLImage() throws ComException {
-    super("{5512D112-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D112-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D113-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLImage(long ndisp) {
     super(ndisp);

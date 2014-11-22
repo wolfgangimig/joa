@@ -32,7 +32,7 @@ public class MsoDebugOptions_UTImpl extends Dispatch implements com.wilutions.ms
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.MsoDebugOptions_UTRunResultImpl.class);
   }
   public MsoDebugOptions_UTImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C038B-0000-0000-C000-000000000046}");
   }
   protected MsoDebugOptions_UTImpl(long ndisp) {
     super(ndisp);

@@ -38,7 +38,7 @@ public class SmartArtQuickStylesImpl extends Dispatch implements com.wilutions.m
     return (Integer)obj;
   }
   public SmartArtQuickStylesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03CB-0000-0000-C000-000000000046}");
   }
   protected SmartArtQuickStylesImpl(long ndisp) {
     super(ndisp);

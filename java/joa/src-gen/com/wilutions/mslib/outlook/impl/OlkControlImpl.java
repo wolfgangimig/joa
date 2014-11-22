@@ -87,7 +87,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     this._dispatchCall(-2147356651,"VerticalLayout", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00067366-0000-0000-C000-000000000046}");
   }
   protected OlkControlImpl(long ndisp) {
     super(ndisp);

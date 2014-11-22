@@ -279,7 +279,7 @@ public class _DocumentItemImpl extends Dispatch implements com.wilutions.mslib.o
     return disp.uncheckedAs(com.wilutions.mslib.outlook.PropertyAccessor.class);
   }
   public _DocumentItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063020-0000-0000-C000-000000000046}");
   }
   protected _DocumentItemImpl(long ndisp) {
     super(ndisp);

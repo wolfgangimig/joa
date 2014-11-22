@@ -64,7 +64,7 @@ public class _UserDefinedPropertiesImpl extends Dispatch implements com.wilution
     this._dispatchCall(64069,"Refresh", DISPATCH_METHOD,null);
   }
   public _UserDefinedPropertiesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063047-0000-0000-C000-000000000046}");
   }
   protected _UserDefinedPropertiesImpl(long ndisp) {
     super(ndisp);

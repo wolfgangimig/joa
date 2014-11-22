@@ -126,7 +126,7 @@ public class IMultiPageImpl extends Dispatch implements com.wilutions.mslib.msfo
     return (Float)obj;
   }
   public IMultiPageImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC9-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected IMultiPageImpl(long ndisp) {
     super(ndisp);

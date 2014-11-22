@@ -120,7 +120,7 @@ public class _StoreImpl extends Dispatch implements com.wilutions.mslib.outlook.
     return disp.uncheckedAs(com.wilutions.mslib.outlook.Categories.class);
   }
   public _StoreImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630C7-0000-0000-C000-000000000046}");
   }
   protected _StoreImpl(long ndisp) {
     super(ndisp);

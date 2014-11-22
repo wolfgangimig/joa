@@ -24,7 +24,7 @@ public class IWHTMLHiddenImpl extends Dispatch implements com.wilutions.mslib.ms
     return (String)obj;
   }
   public IWHTMLHiddenImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D11D-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLHiddenImpl(long ndisp) {
     super(ndisp);

@@ -230,7 +230,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(123,"GradientAngle", DISPATCH_PROPERTYPUT,value);
   }
   public FillFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0314-0000-0000-C000-000000000046}");
   }
   protected FillFormatImpl(long ndisp) {
     super(ndisp);

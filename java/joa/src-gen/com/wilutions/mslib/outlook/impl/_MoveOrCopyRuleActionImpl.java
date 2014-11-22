@@ -51,7 +51,7 @@ public class _MoveOrCopyRuleActionImpl extends Dispatch implements com.wilutions
     this._dispatchCall(64273,"Folder", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public _MoveOrCopyRuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D0-0000-0000-C000-000000000046}");
   }
   protected _MoveOrCopyRuleActionImpl(long ndisp) {
     super(ndisp);

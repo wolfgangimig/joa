@@ -6,7 +6,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{7E617968-0C17-CB5B-1614-694DA5C7F051}")
 public class FontImpl extends Dispatch implements com.wilutions.mslib.stdole.Font {
   public FontImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{BEF6E003-A874-101A-8BBA-00AA00300CAB}");
   }
   protected FontImpl(long ndisp) {
     super(ndisp);

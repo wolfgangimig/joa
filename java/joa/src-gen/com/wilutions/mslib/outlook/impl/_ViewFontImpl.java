@@ -100,7 +100,7 @@ public class _ViewFontImpl extends Dispatch implements com.wilutions.mslib.outlo
     this._dispatchCall(64638,"ExtendedColor", DISPATCH_PROPERTYPUT,value.value);
   }
   public _ViewFontImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006309D-0000-0000-C000-000000000046}");
   }
   protected _ViewFontImpl(long ndisp) {
     super(ndisp);

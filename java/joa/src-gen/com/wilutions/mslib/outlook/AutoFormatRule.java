@@ -72,7 +72,7 @@ public class AutoFormatRule extends Dispatch implements _AutoFormatRule {
     return (Boolean)obj;
   }
   public AutoFormatRule() throws ComException {
-    super("{0006F0A1-0000-0000-C000-000000000046}");
+    super("{0006F0A1-0000-0000-C000-000000000046}", "{00063093-0000-0000-C000-000000000046}");
   }
   protected AutoFormatRule(long ndisp) {
     super(ndisp);

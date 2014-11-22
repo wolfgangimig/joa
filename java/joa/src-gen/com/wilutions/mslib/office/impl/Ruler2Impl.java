@@ -33,7 +33,7 @@ public class Ruler2Impl extends Dispatch implements com.wilutions.mslib.office.R
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.TabStops2Impl.class);
   }
   public Ruler2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C1-0000-0000-C000-000000000046}");
   }
   protected Ruler2Impl(long ndisp) {
     super(ndisp);

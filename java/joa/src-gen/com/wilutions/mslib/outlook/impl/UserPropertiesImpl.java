@@ -62,7 +62,7 @@ public class UserPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public UserPropertiesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006303D-0000-0000-C000-000000000046}");
   }
   protected UserPropertiesImpl(long ndisp) {
     super(ndisp);

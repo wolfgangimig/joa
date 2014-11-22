@@ -52,7 +52,7 @@ public class _AttachmentSelectionImpl extends Dispatch implements com.wilutions.
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.SelectionImpl.class);
   }
   public _AttachmentSelectionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630F9-0000-0000-C000-000000000046}");
   }
   protected _AttachmentSelectionImpl(long ndisp) {
     super(ndisp);

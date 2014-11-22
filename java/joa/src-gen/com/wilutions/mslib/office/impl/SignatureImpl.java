@@ -71,7 +71,7 @@ public class SignatureImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Integer)obj;
   }
   public SignatureImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0411-0000-0000-C000-000000000046}");
   }
   protected SignatureImpl(long ndisp) {
     super(ndisp);

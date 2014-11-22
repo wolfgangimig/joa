@@ -178,7 +178,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(107,"PublishForm", DISPATCH_METHOD,null,Registry.value,Folder);
   }
   public FormDescriptionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063046-0000-0000-C000-000000000046}");
   }
   protected FormDescriptionImpl(long ndisp) {
     super(ndisp);

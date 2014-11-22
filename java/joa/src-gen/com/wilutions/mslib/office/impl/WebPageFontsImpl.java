@@ -33,7 +33,7 @@ public class WebPageFontsImpl extends Dispatch implements com.wilutions.mslib.of
     return (Object)obj;
   }
   public WebPageFontsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0914-0000-0000-C000-000000000046}");
   }
   protected WebPageFontsImpl(long ndisp) {
     super(ndisp);

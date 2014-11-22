@@ -154,7 +154,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
   }
   public ExchangeDistributionList() throws ComException {
-    super("{000610CA-0000-0000-C000-000000000046}");
+    super("{000610CA-0000-0000-C000-000000000046}", "{000630CA-0000-0000-C000-000000000046}");
   }
   protected ExchangeDistributionList(long ndisp) {
     super(ndisp);

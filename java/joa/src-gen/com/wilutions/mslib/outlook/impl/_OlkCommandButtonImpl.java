@@ -111,7 +111,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     this._dispatchCall(64544,"DisplayDropArrow", DISPATCH_PROPERTYPUT,value);
   }
   public _OlkCommandButtonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672DB-0000-0000-C000-000000000046}");
   }
   protected _OlkCommandButtonImpl(long ndisp) {
     super(ndisp);

@@ -73,7 +73,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(9,"LaunchPropertiesWindow", DISPATCH_METHOD,null);
   }
   public WebComponentFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD102-0000-0000-C000-000000000046}");
   }
   protected WebComponentFormatImpl(long ndisp) {
     super(ndisp);

@@ -75,7 +75,7 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     this._dispatchCall(1610743820,"ApplyFilter", DISPATCH_METHOD,null);
   }
   public OfficeDataSourceObjectImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1530-0000-0000-C000-000000000046}");
   }
   protected OfficeDataSourceObjectImpl(long ndisp) {
     super(ndisp);

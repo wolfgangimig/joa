@@ -65,7 +65,7 @@ public class CustomXMLSchemaCollection extends Dispatch implements _CustomXMLSch
     return (Object)obj;
   }
   public CustomXMLSchemaCollection() throws ComException {
-    super("{000CDB0D-0000-0000-C000-000000000046}");
+    super("{000CDB0D-0000-0000-C000-000000000046}", "{000CDB02-0000-0000-C000-000000000046}");
   }
   protected CustomXMLSchemaCollection(long ndisp) {
     super(ndisp);

@@ -188,7 +188,7 @@ public class IMdcCheckBoxImpl extends Dispatch implements com.wilutions.mslib.ms
     return com.wilutions.mslib.msforms.fmTextAlign.valueOf((Integer)obj);
   }
   public IMdcCheckBoxImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8BD21D43-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected IMdcCheckBoxImpl(long ndisp) {
     super(ndisp);

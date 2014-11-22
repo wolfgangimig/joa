@@ -36,7 +36,7 @@ public class HTMLOption extends Dispatch implements IWHTMLOption {
     return (Boolean)obj;
   }
   public HTMLOption() throws ComException {
-    super("{5512D118-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D118-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D119-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLOption(long ndisp) {
     super(ndisp);

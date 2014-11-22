@@ -36,7 +36,7 @@ public class Column extends Dispatch implements _Column {
     return (String)obj;
   }
   public Column() throws ComException {
-    super("{000610E5-0000-0000-C000-000000000046}");
+    super("{000610E5-0000-0000-C000-000000000046}", "{000630E5-0000-0000-C000-000000000046}");
   }
   protected Column(long ndisp) {
     super(ndisp);

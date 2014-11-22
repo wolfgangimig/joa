@@ -46,7 +46,20 @@ public class Dispatch implements IDispatch {
 	 * @throws ComException
 	 */
 	public Dispatch(String progId) throws ComException {
-		JoaDll.nativeCoCreateInstance(progId, this);
+		JoaDll.nativeCoCreateInstance(progId, this, "");
+	}
+
+	/**
+	 * Instantiate the COM object and assign its native pointer to this.
+	 * 
+	 * @param progId
+	 *            Registered program ID.
+	 * @param iid
+	 *            COM interface GUID
+	 * @throws ComException
+	 */
+	public Dispatch(String progId, String iid) throws ComException {
+		JoaDll.nativeCoCreateInstance(progId, this, iid);
 	}
 
 	/**
@@ -117,12 +130,12 @@ public class Dispatch implements IDispatch {
 	 *            Class
 	 * @return Casted object or null, if idisp is null.
 	 */
+	@SuppressWarnings("unchecked")
 	public static <T> T as(Object idisp, Class<T> clazz) {
 		T ret = null;
 		if (idisp != null) {
 			assert idisp instanceof Dispatch;
-			Dispatch pthis = ((Dispatch) idisp);
-			ret = pthis.as(clazz);
+			ret = (T) JoaDll.dispatchAs(idisp, clazz);
 		}
 		return ret;
 	}
@@ -168,10 +181,9 @@ public class Dispatch implements IDispatch {
 	}
 
 	/**
-	 * Delete internal IDispatch pointer to the COM object.
-	 * Other Java objects might still reference the COM object.
-	 * If the COM object should be released from all Java objects,
-	 * call function {@link #releaseComObject()}
+	 * Delete internal IDispatch pointer to the COM object. Other Java objects
+	 * might still reference the COM object. If the COM object should be
+	 * released from all Java objects, call function {@link #releaseComObject()}
 	 */
 	public synchronized void releaseDispatch() {
 		JoaDll.deleteDispatch(this);
@@ -244,9 +256,10 @@ public class Dispatch implements IDispatch {
 	}
 
 	/**
-	 * Attach an event handler object.
-	 * This function "advises" the handler's interfaces to the matching interfaces of the connection points. 
-	 * @param handler 
+	 * Attach an event handler object. This function "advises" the handler's
+	 * interfaces to the matching interfaces of the connection points.
+	 * 
+	 * @param handler
 	 * @throws ComException
 	 * @see {@link releaseEvents}
 	 */
@@ -256,8 +269,11 @@ public class Dispatch implements IDispatch {
 
 	/**
 	 * Static version of {@link #withEvents(DispatchImpl)}.
-	 * @param disp Dispatch object
-	 * @param handler Handler object
+	 * 
+	 * @param disp
+	 *            Dispatch object
+	 * @param handler
+	 *            Handler object
 	 * @throws ComException
 	 */
 	public static void withEvents(IDispatch disp, DispatchImpl handler) throws ComException {
@@ -270,7 +286,9 @@ public class Dispatch implements IDispatch {
 
 	/**
 	 * Disconnects the event handler.
-	 * @param handler Handler object
+	 * 
+	 * @param handler
+	 *            Handler object
 	 * @throws ComException
 	 */
 	public void releaseEvents(DispatchImpl handler) throws ComException {
@@ -279,8 +297,11 @@ public class Dispatch implements IDispatch {
 
 	/**
 	 * Static version of {@link #releaseEvents(DispatchImpl)}.
-	 * @param disp Dispatch object
-	 * @param handler Handler object
+	 * 
+	 * @param disp
+	 *            Dispatch object
+	 * @param handler
+	 *            Handler object
 	 * @throws ComException
 	 */
 	public static void releaseEvents(IDispatch disp, DispatchImpl handler) throws ComException {
@@ -304,7 +325,8 @@ public class Dispatch implements IDispatch {
 	 * Release all internal references to the COM object. This function effects
 	 * other Dispatch objects that refer to the same COM object.
 	 * 
-	 * @param disp COM object to be released.
+	 * @param disp
+	 *            COM object to be released.
 	 */
 	public static void releaseComObject(IDispatch disp) {
 		assert (disp != null);
@@ -314,8 +336,10 @@ public class Dispatch implements IDispatch {
 	}
 
 	/**
-	 * This function tells the native library to call the interface from a background thread.
-	 * Calling from a background thread should reduce deadlock situations in COM.
+	 * This function tells the native library to call the interface from a
+	 * background thread. Calling from a background thread should reduce
+	 * deadlock situations in COM.
+	 * 
 	 * @param eventInterface
 	 * @param memberName
 	 */

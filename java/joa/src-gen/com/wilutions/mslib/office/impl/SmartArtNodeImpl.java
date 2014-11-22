@@ -98,7 +98,7 @@ public class SmartArtNodeImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(17,"ReorderDown", DISPATCH_METHOD,null);
   }
   public SmartArtNodeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03C8-0000-0000-C000-000000000046}");
   }
   protected SmartArtNodeImpl(long ndisp) {
     super(ndisp);

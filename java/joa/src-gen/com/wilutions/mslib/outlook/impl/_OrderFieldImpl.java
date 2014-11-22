@@ -42,7 +42,7 @@ public class _OrderFieldImpl extends Dispatch implements com.wilutions.mslib.out
     this._dispatchCall(64394,"IsDescending", DISPATCH_PROPERTYPUT,value);
   }
   public _OrderFieldImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006309B-0000-0000-C000-000000000046}");
   }
   protected _OrderFieldImpl(long ndisp) {
     super(ndisp);

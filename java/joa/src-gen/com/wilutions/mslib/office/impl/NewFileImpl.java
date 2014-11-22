@@ -34,7 +34,7 @@ public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.
     return (Boolean)obj;
   }
   public NewFileImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0936-0000-0000-C000-000000000046}");
   }
   protected NewFileImpl(long ndisp) {
     super(ndisp);

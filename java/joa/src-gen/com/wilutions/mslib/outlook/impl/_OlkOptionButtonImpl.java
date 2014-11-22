@@ -122,7 +122,7 @@ public class _OlkOptionButtonImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
   public _OlkOptionButtonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672DC-0000-0000-C000-000000000046}");
   }
   protected _OlkOptionButtonImpl(long ndisp) {
     super(ndisp);

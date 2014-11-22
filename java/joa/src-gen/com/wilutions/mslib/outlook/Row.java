@@ -60,7 +60,7 @@ public class Row extends Dispatch implements _Row {
     return (java.util.Date)obj;
   }
   public Row() throws ComException {
-    super("{000610D3-0000-0000-C000-000000000046}");
+    super("{000610D3-0000-0000-C000-000000000046}", "{000630D3-0000-0000-C000-000000000046}");
   }
   protected Row(long ndisp) {
     super(ndisp);

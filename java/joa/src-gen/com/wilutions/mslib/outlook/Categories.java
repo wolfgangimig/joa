@@ -56,7 +56,7 @@ public class Categories extends Dispatch implements _Categories {
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public Categories() throws ComException {
-    super("{000610E4-0000-0000-C000-000000000046}");
+    super("{000610E4-0000-0000-C000-000000000046}", "{000630E4-0000-0000-C000-000000000046}");
   }
   protected Categories(long ndisp) {
     super(ndisp);

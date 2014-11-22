@@ -80,7 +80,7 @@ public class _ResultsImpl extends Dispatch implements com.wilutions.mslib.outloo
     this._dispatchCall(64143,"DefaultItemType", DISPATCH_PROPERTYPUT,value.value);
   }
   public _ResultsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006300C-0000-0000-C000-000000000046}");
   }
   protected _ResultsImpl(long ndisp) {
     super(ndisp);

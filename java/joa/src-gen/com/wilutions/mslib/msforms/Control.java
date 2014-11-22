@@ -272,7 +272,7 @@ public class Control extends Dispatch implements IControl {
     this._dispatchCall(1610743870,"_ZOrder", DISPATCH_METHOD,null,zPosition.value);
   }
   public Control() throws ComException {
-    super("{909E0AE0-16DC-11CE-9E98-00AA00574A4F}");
+    super("{909E0AE0-16DC-11CE-9E98-00AA00574A4F}", "{04598FC6-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected Control(long ndisp) {
     super(ndisp);

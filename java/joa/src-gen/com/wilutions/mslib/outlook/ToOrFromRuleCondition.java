@@ -51,7 +51,7 @@ public class ToOrFromRuleCondition extends Dispatch implements _ToOrFromRuleCond
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   public ToOrFromRuleCondition() throws ComException {
-    super("{000610DE-0000-0000-C000-000000000046}");
+    super("{000610DE-0000-0000-C000-000000000046}", "{000630DE-0000-0000-C000-000000000046}");
   }
   protected ToOrFromRuleCondition(long ndisp) {
     super(ndisp);

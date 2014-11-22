@@ -118,7 +118,7 @@ public class FormRegion extends Dispatch implements _FormRegion {
     this._dispatchCall(8451,"Visible", DISPATCH_PROPERTYPUT,value);
   }
   public FormRegion() throws ComException {
-    super("{0006315A-0000-0000-C000-000000000046}");
+    super("{0006315A-0000-0000-C000-000000000046}", "{0006305A-0000-0000-C000-000000000046}");
   }
   protected FormRegion(long ndisp) {
     super(ndisp);

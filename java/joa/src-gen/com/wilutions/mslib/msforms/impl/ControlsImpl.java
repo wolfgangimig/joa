@@ -87,7 +87,7 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     this._dispatchCall(67,"Remove", DISPATCH_METHOD,null,varg);
   }
   public ControlsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC7-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected ControlsImpl(long ndisp) {
     super(ndisp);

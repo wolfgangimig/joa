@@ -173,7 +173,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(2651,"Forward2", DISPATCH_PROPERTYPUT,RHS);
   }
   public IMsoTrendlineImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C170E-0000-0000-C000-000000000046}");
   }
   protected IMsoTrendlineImpl(long ndisp) {
     super(ndisp);

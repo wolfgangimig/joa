@@ -107,7 +107,7 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(16,"SelectCertificateDetailByThumbprint", DISPATCH_METHOD,null,bstrThumbprint);
   }
   public SignatureInfoImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD6A2-0000-0000-C000-000000000046}");
   }
   protected SignatureInfoImpl(long ndisp) {
     super(ndisp);

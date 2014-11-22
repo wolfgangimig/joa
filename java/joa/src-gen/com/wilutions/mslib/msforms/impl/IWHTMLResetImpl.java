@@ -24,7 +24,7 @@ public class IWHTMLResetImpl extends Dispatch implements com.wilutions.mslib.msf
     return (String)obj;
   }
   public IWHTMLResetImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D115-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLResetImpl(long ndisp) {
     super(ndisp);

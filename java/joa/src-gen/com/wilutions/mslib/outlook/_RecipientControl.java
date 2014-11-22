@@ -62,7 +62,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value);
   }
   public _RecipientControl() throws ComException {
-    super("{0006F023-0000-0000-C000-000000000046}");
+    super("{0006F023-0000-0000-C000-000000000046}", "{0006F025-0000-0000-C000-000000000046}");
   }
   protected _RecipientControl(long ndisp) {
     super(ndisp);

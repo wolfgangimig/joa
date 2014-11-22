@@ -22,7 +22,7 @@ public class IConverterApplicationPreferencesImpl extends Dispatch implements co
     this._dispatchCall(4,"HrCheckFormat", DISPATCH_METHOD,null,pFormat);
   }
   public IConverterApplicationPreferencesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D5-0000-0000-C000-000000000046}");
   }
   protected IConverterApplicationPreferencesImpl(long ndisp) {
     super(ndisp);

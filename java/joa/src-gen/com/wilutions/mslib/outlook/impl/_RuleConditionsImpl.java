@@ -190,7 +190,7 @@ public class _RuleConditionsImpl extends Dispatch implements com.wilutions.mslib
     return disp.uncheckedAs(com.wilutions.mslib.outlook.FromRssFeedRuleCondition.class);
   }
   public _RuleConditionsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D8-0000-0000-C000-000000000046}");
   }
   protected _RuleConditionsImpl(long ndisp) {
     super(ndisp);

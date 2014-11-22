@@ -41,7 +41,7 @@ public class SmartDocumentImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(4,"RefreshPane", DISPATCH_METHOD,null);
   }
   public SmartDocumentImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0377-0000-0000-C000-000000000046}");
   }
   protected SmartDocumentImpl(long ndisp) {
     super(ndisp);

@@ -54,7 +54,7 @@ public class FromRssFeedRuleCondition extends Dispatch implements _FromRssFeedRu
     this._dispatchCall(64295,"FromRssFeed", DISPATCH_PROPERTYPUT,value);
   }
   public FromRssFeedRuleCondition() throws ComException {
-    super("{000610FB-0000-0000-C000-000000000046}");
+    super("{000610FB-0000-0000-C000-000000000046}", "{000630FB-0000-0000-C000-000000000046}");
   }
   protected FromRssFeedRuleCondition(long ndisp) {
     super(ndisp);

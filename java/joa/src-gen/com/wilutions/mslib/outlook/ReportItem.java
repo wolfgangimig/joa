@@ -303,7 +303,7 @@ public class ReportItem extends Dispatch implements _ReportItem {
     return (java.util.Date)obj;
   }
   public ReportItem() throws ComException {
-    super("{00061035-0000-0000-C000-000000000046}");
+    super("{00061035-0000-0000-C000-000000000046}", "{00063026-0000-0000-C000-000000000046}");
   }
   protected ReportItem(long ndisp) {
     super(ndisp);

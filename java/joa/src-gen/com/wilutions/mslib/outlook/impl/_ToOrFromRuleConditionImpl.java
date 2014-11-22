@@ -48,7 +48,7 @@ public class _ToOrFromRuleConditionImpl extends Dispatch implements com.wilution
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   public _ToOrFromRuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630DE-0000-0000-C000-000000000046}");
   }
   protected _ToOrFromRuleConditionImpl(long ndisp) {
     super(ndisp);

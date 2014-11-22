@@ -50,7 +50,7 @@ public class CustomXMLValidationErrorImpl extends Dispatch implements com.wiluti
     return (Integer)obj;
   }
   public CustomXMLValidationErrorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB0E-0000-0000-C000-000000000046}");
   }
   protected CustomXMLValidationErrorImpl(long ndisp) {
     super(ndisp);

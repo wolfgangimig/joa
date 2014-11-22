@@ -51,7 +51,7 @@ public class SelectionImpl extends Dispatch implements com.wilutions.mslib.outlo
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.SelectionImpl.class);
   }
   public SelectionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063087-0000-0000-C000-000000000046}");
   }
   protected SelectionImpl(long ndisp) {
     super(ndisp);

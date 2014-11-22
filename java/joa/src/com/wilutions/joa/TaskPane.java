@@ -21,6 +21,8 @@ import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.WindowHandle;
+import com.wilutions.com.WindowsUtil;
 import com.wilutions.com.reg.DeclRegistryValue;
 import com.wilutions.joa.fx.EmbeddedWindow;
 import com.wilutions.joa.fx.EmbeddedWindowFactory;
@@ -38,7 +40,7 @@ import com.wilutions.mslib.office._CustomTaskPaneEvents;
  * http://msdn.microsoft.com/en-us/library/microsoft.office.core._customtaskpaneevents_members.aspx
  * @see http://msdn.microsoft.com/en-us/library/aa942864.aspx
  */
-public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEvents {
+public abstract class TaskPane extends DispatchImpl implements WindowHandle, _CustomTaskPaneEvents {
 
 	/**
 	 * Task pane object of the Office application.
@@ -221,4 +223,8 @@ public abstract class TaskPane extends DispatchImpl implements _CustomTaskPaneEv
 		eventHandlerWindowShown = (EventHandler<WindowEvent>)eventHandler;
 	}
 
+	@Override
+	public long getWindowHandle() {
+		return WindowsUtil.getWindowHandle(fxFrame);
+	}
 }

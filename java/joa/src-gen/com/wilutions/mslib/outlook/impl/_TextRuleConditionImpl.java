@@ -51,7 +51,7 @@ public class _TextRuleConditionImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(64295,"Text", DISPATCH_PROPERTYPUT,value);
   }
   public _TextRuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E0-0000-0000-C000-000000000046}");
   }
   protected _TextRuleConditionImpl(long ndisp) {
     super(ndisp);

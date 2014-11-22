@@ -43,7 +43,7 @@ public class PointsImpl extends Dispatch implements com.wilutions.mslib.office.P
     return (com.wilutions.mslib.office.ChartPoint)obj;
   }
   public PointsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C170D-0000-0000-C000-000000000046}");
   }
   protected PointsImpl(long ndisp) {
     super(ndisp);

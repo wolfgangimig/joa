@@ -202,7 +202,7 @@ public class TimelineView extends Dispatch implements _TimelineView {
     this._dispatchCall(64392,"TimelineViewMode", DISPATCH_PROPERTYPUT,value.value);
   }
   public TimelineView() throws ComException {
-    super("{00062001-0000-0000-C000-000000000046}");
+    super("{00062001-0000-0000-C000-000000000046}", "{0006309C-0000-0000-C000-000000000046}");
   }
   protected TimelineView(long ndisp) {
     super(ndisp);

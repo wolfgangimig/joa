@@ -115,7 +115,7 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
     this._dispatchCall(8451,"Visible", DISPATCH_PROPERTYPUT,value);
   }
   public _FormRegionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006305A-0000-0000-C000-000000000046}");
   }
   protected _FormRegionImpl(long ndisp) {
     super(ndisp);

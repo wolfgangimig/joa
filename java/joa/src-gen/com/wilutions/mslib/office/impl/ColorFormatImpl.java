@@ -72,7 +72,7 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(105,"Brightness", DISPATCH_PROPERTYPUT,value);
   }
   public ColorFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0312-0000-0000-C000-000000000046}");
   }
   protected ColorFormatImpl(long ndisp) {
     super(ndisp);

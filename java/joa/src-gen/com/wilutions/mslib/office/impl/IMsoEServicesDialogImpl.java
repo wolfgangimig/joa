@@ -34,7 +34,7 @@ public class IMsoEServicesDialogImpl extends Dispatch implements com.wilutions.m
     return (Dispatch)obj;
   }
   public IMsoEServicesDialogImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0372-0000-0000-C000-000000000046}");
   }
   protected IMsoEServicesDialogImpl(long ndisp) {
     super(ndisp);

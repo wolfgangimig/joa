@@ -467,7 +467,7 @@ public class IMdcComboImpl extends Dispatch implements com.wilutions.mslib.msfor
     return com.wilutions.mslib.msforms.fmDragBehavior.valueOf((Integer)obj);
   }
   public IMdcComboImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8BD21D33-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected IMdcComboImpl(long ndisp) {
     super(ndisp);

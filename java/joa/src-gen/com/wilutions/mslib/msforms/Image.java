@@ -128,7 +128,7 @@ public class Image extends Dispatch implements IImage {
     return fmSpecialEffect.valueOf((Integer)obj);
   }
   public Image() throws ComException {
-    super("{4C599241-6926-101B-9992-00000B65C6F9}");
+    super("{4C599241-6926-101B-9992-00000B65C6F9}", "{4C599243-6926-101B-9992-00000B65C6F9}");
   }
   protected Image(long ndisp) {
     super(ndisp);

@@ -38,7 +38,7 @@ public class CustomXMLNodesImpl extends Dispatch implements com.wilutions.mslib.
     return (Object)obj;
   }
   public CustomXMLNodesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB03-0000-0000-C000-000000000046}");
   }
   protected CustomXMLNodesImpl(long ndisp) {
     super(ndisp);

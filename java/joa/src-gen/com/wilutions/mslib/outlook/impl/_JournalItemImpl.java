@@ -401,7 +401,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     return (String)obj;
   }
   public _JournalItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063022-0000-0000-C000-000000000046}");
   }
   protected _JournalItemImpl(long ndisp) {
     super(ndisp);

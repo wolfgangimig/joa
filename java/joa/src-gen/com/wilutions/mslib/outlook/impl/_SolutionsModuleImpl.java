@@ -60,7 +60,7 @@ public class _SolutionsModuleImpl extends Dispatch implements com.wilutions.msli
     this._dispatchCall(64574,"AddSolution", DISPATCH_METHOD,null,(Solution!=null?Solution:Dispatch.NULL),Scope.value);
   }
   public _SolutionsModuleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630FF-0000-0000-C000-000000000046}");
   }
   protected _SolutionsModuleImpl(long ndisp) {
     super(ndisp);

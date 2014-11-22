@@ -75,7 +75,7 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
     return disp.uncheckedAs(com.wilutions.mslib.outlook.Table.class);
   }
   public SearchImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006300B-0000-0000-C000-000000000046}");
   }
   protected SearchImpl(long ndisp) {
     super(ndisp);

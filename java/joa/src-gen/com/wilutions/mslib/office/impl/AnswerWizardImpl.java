@@ -33,7 +33,7 @@ public class AnswerWizardImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(1610809347,"ResetFileList", DISPATCH_METHOD,null);
   }
   public AnswerWizardImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0360-0000-0000-C000-000000000046}");
   }
   protected AnswerWizardImpl(long ndisp) {
     super(ndisp);

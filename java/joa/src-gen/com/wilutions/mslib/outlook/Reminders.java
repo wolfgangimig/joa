@@ -47,7 +47,7 @@ public class Reminders extends Dispatch implements _Reminders {
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public Reminders() throws ComException {
-    super("{0006F029-0000-0000-C000-000000000046}");
+    super("{0006F029-0000-0000-C000-000000000046}", "{000630B1-0000-0000-C000-000000000046}");
   }
   protected Reminders(long ndisp) {
     super(ndisp);

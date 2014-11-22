@@ -347,7 +347,7 @@ public class UserForm extends Dispatch implements _UserForm {
     return (Integer)obj;
   }
   public UserForm() throws ComException {
-    super("{C62A69F0-16DC-11CE-9E98-00AA00574A4F}");
+    super("{C62A69F0-16DC-11CE-9E98-00AA00574A4F}", "{04598FC8-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected UserForm(long ndisp) {
     super(ndisp);

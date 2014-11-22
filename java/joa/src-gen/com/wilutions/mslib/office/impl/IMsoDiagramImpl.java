@@ -66,7 +66,7 @@ public class IMsoDiagramImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(11,"FitText", DISPATCH_METHOD,null);
   }
   public IMsoDiagramImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C036D-0000-0000-C000-000000000046}");
   }
   protected IMsoDiagramImpl(long ndisp) {
     super(ndisp);

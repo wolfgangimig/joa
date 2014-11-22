@@ -46,7 +46,7 @@ public class PickerPropertiesImpl extends Dispatch implements com.wilutions.msli
     return (Object)obj;
   }
   public PickerPropertiesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03E3-0000-0000-C000-000000000046}");
   }
   protected PickerPropertiesImpl(long ndisp) {
     super(ndisp);

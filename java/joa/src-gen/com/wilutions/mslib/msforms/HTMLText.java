@@ -45,7 +45,7 @@ public class HTMLText extends Dispatch implements IWHTMLText {
     return (Integer)obj;
   }
   public HTMLText() throws ComException {
-    super("{5512D11A-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D11A-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D11B-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLText(long ndisp) {
     super(ndisp);

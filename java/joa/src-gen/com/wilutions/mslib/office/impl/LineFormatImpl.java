@@ -156,7 +156,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(114,"InsetPen", DISPATCH_PROPERTYPUT,value.value);
   }
   public LineFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0317-0000-0000-C000-000000000046}");
   }
   protected LineFormatImpl(long ndisp) {
     super(ndisp);

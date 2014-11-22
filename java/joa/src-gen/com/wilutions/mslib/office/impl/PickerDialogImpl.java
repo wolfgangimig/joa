@@ -61,7 +61,7 @@ public class PickerDialogImpl extends Dispatch implements com.wilutions.mslib.of
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.PickerResultsImpl.class);
   }
   public PickerDialogImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03E6-0000-0000-C000-000000000046}");
   }
   protected PickerDialogImpl(long ndisp) {
     super(ndisp);

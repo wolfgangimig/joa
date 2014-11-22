@@ -50,7 +50,7 @@ public class ActionsImpl extends Dispatch implements com.wilutions.mslib.outlook
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public ActionsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006303E-0000-0000-C000-000000000046}");
   }
   protected ActionsImpl(long ndisp) {
     super(ndisp);

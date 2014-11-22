@@ -55,7 +55,7 @@ public class AttachmentSelection extends Dispatch implements _AttachmentSelectio
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.SelectionImpl.class);
   }
   public AttachmentSelection() throws ComException {
-    super("{000610F9-0000-0000-C000-000000000046}");
+    super("{000610F9-0000-0000-C000-000000000046}", "{000630F9-0000-0000-C000-000000000046}");
   }
   protected AttachmentSelection(long ndisp) {
     super(ndisp);

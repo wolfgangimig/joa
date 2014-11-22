@@ -58,7 +58,7 @@ public class SyncImpl extends Dispatch implements com.wilutions.mslib.office.Syn
     return (Dispatch)obj;
   }
   public SyncImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0386-0000-0000-C000-000000000046}");
   }
   protected SyncImpl(long ndisp) {
     super(ndisp);

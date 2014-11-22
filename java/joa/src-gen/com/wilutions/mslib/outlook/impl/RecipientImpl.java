@@ -139,7 +139,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     this._dispatchCall(64628,"Sendable", DISPATCH_PROPERTYPUT,value);
   }
   public RecipientImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063045-0000-0000-C000-000000000046}");
   }
   protected RecipientImpl(long ndisp) {
     super(ndisp);

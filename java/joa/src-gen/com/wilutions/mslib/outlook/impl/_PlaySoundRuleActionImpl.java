@@ -51,7 +51,7 @@ public class _PlaySoundRuleActionImpl extends Dispatch implements com.wilutions.
     this._dispatchCall(64221,"FilePath", DISPATCH_PROPERTYPUT,value);
   }
   public _PlaySoundRuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D5-0000-0000-C000-000000000046}");
   }
   protected _PlaySoundRuleActionImpl(long ndisp) {
     super(ndisp);

@@ -76,7 +76,7 @@ public class TimeZone extends Dispatch implements _TimeZone {
     return (String)obj;
   }
   public TimeZone() throws ComException {
-    super("{000610FD-0000-0000-C000-000000000046}");
+    super("{000610FD-0000-0000-C000-000000000046}", "{000630FD-0000-0000-C000-000000000046}");
   }
   protected TimeZone(long ndisp) {
     super(ndisp);

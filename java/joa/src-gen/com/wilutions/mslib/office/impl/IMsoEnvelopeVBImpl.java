@@ -30,7 +30,7 @@ public class IMsoEnvelopeVBImpl extends Dispatch implements com.wilutions.mslib.
     return (Dispatch)obj;
   }
   public IMsoEnvelopeVBImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672AC-0000-0000-C000-000000000046}");
   }
   protected IMsoEnvelopeVBImpl(long ndisp) {
     super(ndisp);

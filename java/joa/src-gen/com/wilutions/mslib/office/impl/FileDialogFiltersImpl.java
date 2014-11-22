@@ -54,7 +54,7 @@ public class FileDialogFiltersImpl extends Dispatch implements com.wilutions.msl
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.FileDialogFilterImpl.class);
   }
   public FileDialogFiltersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0365-0000-0000-C000-000000000046}");
   }
   protected FileDialogFiltersImpl(long ndisp) {
     super(ndisp);

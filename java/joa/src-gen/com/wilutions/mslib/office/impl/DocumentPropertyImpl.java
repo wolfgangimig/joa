@@ -75,7 +75,7 @@ public class DocumentPropertyImpl extends Dispatch implements com.wilutions.msli
     return (Integer)obj;
   }
   public DocumentPropertyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{2DF8D04E-5BFA-101B-BDE5-00AA0044DE52}");
   }
   protected DocumentPropertyImpl(long ndisp) {
     super(ndisp);

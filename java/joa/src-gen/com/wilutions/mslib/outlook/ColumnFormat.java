@@ -72,7 +72,7 @@ public class ColumnFormat extends Dispatch implements _ColumnFormat {
     return OlUserPropertyType.valueOf((Integer)obj);
   }
   public ColumnFormat() throws ComException {
-    super("{0006109E-0000-0000-C000-000000000046}");
+    super("{0006109E-0000-0000-C000-000000000046}", "{0006309E-0000-0000-C000-000000000046}");
   }
   protected ColumnFormat(long ndisp) {
     super(ndisp);

@@ -33,7 +33,7 @@ public class EffectParametersImpl extends Dispatch implements com.wilutions.msli
     return (Object)obj;
   }
   public EffectParametersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D0-0000-0000-C000-000000000046}");
   }
   protected EffectParametersImpl(long ndisp) {
     super(ndisp);

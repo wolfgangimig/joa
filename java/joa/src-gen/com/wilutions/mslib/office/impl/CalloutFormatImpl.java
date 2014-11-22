@@ -110,7 +110,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(109,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
   public CalloutFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0311-0000-0000-C000-000000000046}");
   }
   protected CalloutFormatImpl(long ndisp) {
     super(ndisp);

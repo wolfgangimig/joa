@@ -51,7 +51,7 @@ public class _FromRssFeedRuleConditionImpl extends Dispatch implements com.wilut
     this._dispatchCall(64295,"FromRssFeed", DISPATCH_PROPERTYPUT,value);
   }
   public _FromRssFeedRuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630FB-0000-0000-C000-000000000046}");
   }
   protected _FromRssFeedRuleConditionImpl(long ndisp) {
     super(ndisp);

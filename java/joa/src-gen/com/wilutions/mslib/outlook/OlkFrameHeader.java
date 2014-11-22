@@ -70,7 +70,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkFrameHeader() throws ComException {
-    super("{0006F057-0000-0000-C000-000000000046}");
+    super("{0006F057-0000-0000-C000-000000000046}", "{00067352-0000-0000-C000-000000000046}");
   }
   protected OlkFrameHeader(long ndisp) {
     super(ndisp);

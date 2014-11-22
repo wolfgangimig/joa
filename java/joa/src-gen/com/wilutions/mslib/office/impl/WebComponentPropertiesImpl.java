@@ -83,7 +83,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     this._dispatchCall(9,"Tag", DISPATCH_PROPERTYPUT,value);
   }
   public WebComponentPropertiesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0373-0000-0000-C000-000000000046}");
   }
   protected WebComponentPropertiesImpl(long ndisp) {
     super(ndisp);

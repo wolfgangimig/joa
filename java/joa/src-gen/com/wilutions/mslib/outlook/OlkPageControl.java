@@ -18,7 +18,7 @@ public class OlkPageControl extends Dispatch implements _OlkPageControl {
     this._dispatchCall(64465,"Page", DISPATCH_PROPERTYPUT,value.value);
   }
   public OlkPageControl() throws ComException {
-    super("{0006F055-0000-0000-C000-000000000046}");
+    super("{0006F055-0000-0000-C000-000000000046}", "{000672F8-0000-0000-C000-000000000046}");
   }
   protected OlkPageControl(long ndisp) {
     super(ndisp);

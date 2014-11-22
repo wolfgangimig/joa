@@ -33,7 +33,7 @@ public class MsoEnvelope extends Dispatch implements IMsoEnvelopeVB {
     return (Dispatch)obj;
   }
   public MsoEnvelope() throws ComException {
-    super("{0006F01A-0000-0000-C000-000000000046}");
+    super("{0006F01A-0000-0000-C000-000000000046}", "{000672AC-0000-0000-C000-000000000046}");
   }
   protected MsoEnvelope(long ndisp) {
     super(ndisp);

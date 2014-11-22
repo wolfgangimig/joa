@@ -36,7 +36,7 @@ public class HTMLCheckbox extends Dispatch implements IWHTMLCheckbox {
     return (Boolean)obj;
   }
   public HTMLCheckbox() throws ComException {
-    super("{5512D116-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D116-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D117-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLCheckbox(long ndisp) {
     super(ndisp);

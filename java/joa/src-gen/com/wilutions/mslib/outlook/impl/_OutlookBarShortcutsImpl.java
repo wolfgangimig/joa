@@ -53,7 +53,7 @@ public class _OutlookBarShortcutsImpl extends Dispatch implements com.wilutions.
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public _OutlookBarShortcutsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063074-0000-0000-C000-000000000046}");
   }
   protected _OutlookBarShortcutsImpl(long ndisp) {
     super(ndisp);

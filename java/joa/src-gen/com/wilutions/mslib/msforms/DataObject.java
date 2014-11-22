@@ -41,7 +41,7 @@ public class DataObject extends Dispatch implements IDataAutoWrapper {
     return fmDropEffect.valueOf((Integer)obj);
   }
   public DataObject() throws ComException {
-    super("{1C3B4210-F441-11CE-B9EA-00AA006B1A69}");
+    super("{1C3B4210-F441-11CE-B9EA-00AA006B1A69}", "{EC72F590-F375-11CE-B9E8-00AA006B1A69}");
   }
   protected DataObject(long ndisp) {
     super(ndisp);

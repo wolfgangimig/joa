@@ -245,7 +245,7 @@ public class DoNotUseMeFolder extends Dispatch implements MAPIFolder {
     this._dispatchCall(64573,"SetCustomIcon", DISPATCH_METHOD,null,(Picture!=null?Picture:Dispatch.NULL));
   }
   public DoNotUseMeFolder() throws ComException {
-    super("{000610F8-0000-0000-C000-000000000046}");
+    super("{000610F8-0000-0000-C000-000000000046}", "{00063006-0000-0000-C000-000000000046}");
   }
   protected DoNotUseMeFolder(long ndisp) {
     super(ndisp);

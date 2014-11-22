@@ -102,7 +102,7 @@ public class Account extends Dispatch implements _Account {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
   public Account() throws ComException {
-    super("{000610C5-0000-0000-C000-000000000046}");
+    super("{000610C5-0000-0000-C000-000000000046}", "{000630C5-0000-0000-C000-000000000046}");
   }
   protected Account(long ndisp) {
     super(ndisp);

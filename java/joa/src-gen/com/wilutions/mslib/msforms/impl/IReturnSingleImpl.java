@@ -15,7 +15,7 @@ public class IReturnSingleImpl extends Dispatch implements com.wilutions.mslib.m
     return (Float)obj;
   }
   public IReturnSingleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8A683C90-BA84-11CF-8110-00A0C9030074}");
   }
   protected IReturnSingleImpl(long ndisp) {
     super(ndisp);

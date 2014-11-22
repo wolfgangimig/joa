@@ -71,7 +71,7 @@ public class _NavigationFolderImpl extends Dispatch implements com.wilutions.msl
     return (String)obj;
   }
   public _NavigationFolderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630F2-0000-0000-C000-000000000046}");
   }
   protected _NavigationFolderImpl(long ndisp) {
     super(ndisp);

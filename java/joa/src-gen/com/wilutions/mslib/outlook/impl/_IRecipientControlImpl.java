@@ -59,7 +59,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,Effect);
   }
   public _IRecipientControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{D87E7E16-6897-11CE-A6C0-00AA00608FAA}");
   }
   protected _IRecipientControlImpl(long ndisp) {
     super(ndisp);

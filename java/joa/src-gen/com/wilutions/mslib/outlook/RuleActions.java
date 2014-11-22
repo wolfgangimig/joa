@@ -145,7 +145,7 @@ public class RuleActions extends Dispatch implements _RuleActions {
     return disp.uncheckedAs(RuleAction.class);
   }
   public RuleActions() throws ComException {
-    super("{000610CE-0000-0000-C000-000000000046}");
+    super("{000610CE-0000-0000-C000-000000000046}", "{000630CE-0000-0000-C000-000000000046}");
   }
   protected RuleActions(long ndisp) {
     super(ndisp);

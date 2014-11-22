@@ -66,7 +66,7 @@ public class WorkflowTaskImpl extends Dispatch implements com.wilutions.mslib.of
     return (Integer)obj;
   }
   public WorkflowTaskImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD900-0000-0000-C000-000000000046}");
   }
   protected WorkflowTaskImpl(long ndisp) {
     super(ndisp);

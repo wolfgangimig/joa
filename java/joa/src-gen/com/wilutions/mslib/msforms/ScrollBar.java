@@ -128,7 +128,7 @@ public class ScrollBar extends Dispatch implements IScrollbar {
     return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   public ScrollBar() throws ComException {
-    super("{DFD181E0-5E2F-11CE-A449-00AA004A803D}");
+    super("{DFD181E0-5E2F-11CE-A449-00AA004A803D}", "{04598FC3-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected ScrollBar(long ndisp) {
     super(ndisp);

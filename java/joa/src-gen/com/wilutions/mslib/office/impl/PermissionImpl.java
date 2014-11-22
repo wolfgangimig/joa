@@ -114,7 +114,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     return (Object)obj;
   }
   public PermissionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0376-0000-0000-C000-000000000046}");
   }
   protected PermissionImpl(long ndisp) {
     super(ndisp);

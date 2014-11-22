@@ -55,7 +55,7 @@ public class TimeZones extends Dispatch implements _TimeZones {
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._TimeZoneImpl.class);
   }
   public TimeZones() throws ComException {
-    super("{000610FC-0000-0000-C000-000000000046}");
+    super("{000610FC-0000-0000-C000-000000000046}", "{000630FC-0000-0000-C000-000000000046}");
   }
   protected TimeZones(long ndisp) {
     super(ndisp);

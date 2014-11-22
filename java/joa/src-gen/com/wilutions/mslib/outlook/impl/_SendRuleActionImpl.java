@@ -48,7 +48,7 @@ public class _SendRuleActionImpl extends Dispatch implements com.wilutions.mslib
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   public _SendRuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D1-0000-0000-C000-000000000046}");
   }
   protected _SendRuleActionImpl(long ndisp) {
     super(ndisp);

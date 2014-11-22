@@ -309,7 +309,7 @@ public class TaskRequestDeclineItem extends Dispatch implements _TaskRequestDecl
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public TaskRequestDeclineItem() throws ComException {
-    super("{00061053-0000-0000-C000-000000000046}");
+    super("{00061053-0000-0000-C000-000000000046}", "{00063039-0000-0000-C000-000000000046}");
   }
   protected TaskRequestDeclineItem(long ndisp) {
     super(ndisp);

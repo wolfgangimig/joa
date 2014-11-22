@@ -54,7 +54,7 @@ public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
     return (String)obj;
   }
   public HTMLTextArea() throws ComException {
-    super("{5512D124-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D124-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D125-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLTextArea(long ndisp) {
     super(ndisp);

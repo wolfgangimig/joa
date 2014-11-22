@@ -54,7 +54,7 @@ public class CategoryRuleCondition extends Dispatch implements _CategoryRuleCond
     this._dispatchCall(64325,"Categories", DISPATCH_PROPERTYPUT,value);
   }
   public CategoryRuleCondition() throws ComException {
-    super("{000610DC-0000-0000-C000-000000000046}");
+    super("{000610DC-0000-0000-C000-000000000046}", "{000630DC-0000-0000-C000-000000000046}");
   }
   protected CategoryRuleCondition(long ndisp) {
     super(ndisp);

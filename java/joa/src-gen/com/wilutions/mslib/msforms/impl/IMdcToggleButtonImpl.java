@@ -188,7 +188,7 @@ public class IMdcToggleButtonImpl extends Dispatch implements com.wilutions.msli
     return com.wilutions.mslib.msforms.fmTextAlign.valueOf((Integer)obj);
   }
   public IMdcToggleButtonImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8BD21D63-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected IMdcToggleButtonImpl(long ndisp) {
     super(ndisp);

@@ -46,7 +46,7 @@ public class _InspectorsImpl extends Dispatch implements com.wilutions.mslib.out
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }
   public _InspectorsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063008-0000-0000-C000-000000000046}");
   }
   protected _InspectorsImpl(long ndisp) {
     super(ndisp);

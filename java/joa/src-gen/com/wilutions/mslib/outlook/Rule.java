@@ -93,7 +93,7 @@ public class Rule extends Dispatch implements _Rule {
     return disp.uncheckedAs(RuleConditions.class);
   }
   public Rule() throws ComException {
-    super("{000610CD-0000-0000-C000-000000000046}");
+    super("{000610CD-0000-0000-C000-000000000046}", "{000630CD-0000-0000-C000-000000000046}");
   }
   protected Rule(long ndisp) {
     super(ndisp);

@@ -42,7 +42,7 @@ public class _RuleConditionImpl extends Dispatch implements com.wilutions.mslib.
     return com.wilutions.mslib.outlook.OlRuleConditionType.valueOf((Integer)obj);
   }
   public _RuleConditionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D9-0000-0000-C000-000000000046}");
   }
   protected _RuleConditionImpl(long ndisp) {
     super(ndisp);

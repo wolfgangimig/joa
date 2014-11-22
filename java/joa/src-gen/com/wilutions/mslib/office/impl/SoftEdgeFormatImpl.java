@@ -34,7 +34,7 @@ public class SoftEdgeFormatImpl extends Dispatch implements com.wilutions.mslib.
     this._dispatchCall(2,"Radius", DISPATCH_PROPERTYPUT,value);
   }
   public SoftEdgeFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03BC-0000-0000-C000-000000000046}");
   }
   protected SoftEdgeFormatImpl(long ndisp) {
     super(ndisp);

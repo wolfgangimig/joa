@@ -52,7 +52,7 @@ public class NavigationFolders extends Dispatch implements _NavigationFolders {
     this._dispatchCall(64451,"Remove", DISPATCH_METHOD,null,(RemovableFolder!=null?RemovableFolder:Dispatch.NULL));
   }
   public NavigationFolders() throws ComException {
-    super("{000610F1-0000-0000-C000-000000000046}");
+    super("{000610F1-0000-0000-C000-000000000046}", "{000630F1-0000-0000-C000-000000000046}");
   }
   protected NavigationFolders(long ndisp) {
     super(ndisp);

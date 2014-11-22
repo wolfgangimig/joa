@@ -46,7 +46,7 @@ public class OlkSenderPhoto extends Dispatch implements _OlkSenderPhoto {
     return (Integer)obj;
   }
   public OlkSenderPhoto() throws ComException {
-    super("{0006F058-0000-0000-C000-000000000046}");
+    super("{0006F058-0000-0000-C000-000000000046}", "{00067355-0000-0000-C000-000000000046}");
   }
   protected OlkSenderPhoto(long ndisp) {
     super(ndisp);

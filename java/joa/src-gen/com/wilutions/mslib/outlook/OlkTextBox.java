@@ -277,7 +277,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     this._dispatchCall(-554,"Clear", DISPATCH_METHOD,null);
   }
   public OlkTextBox() throws ComException {
-    super("{0006F068-0000-0000-C000-000000000046}");
+    super("{0006F068-0000-0000-C000-000000000046}", "{000672DA-0000-0000-C000-000000000046}");
   }
   protected OlkTextBox(long ndisp) {
     super(ndisp);

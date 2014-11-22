@@ -74,7 +74,7 @@ public class NavigationFolder extends Dispatch implements _NavigationFolder {
     return (String)obj;
   }
   public NavigationFolder() throws ComException {
-    super("{000610F2-0000-0000-C000-000000000046}");
+    super("{000610F2-0000-0000-C000-000000000046}", "{000630F2-0000-0000-C000-000000000046}");
   }
   protected NavigationFolder(long ndisp) {
     super(ndisp);

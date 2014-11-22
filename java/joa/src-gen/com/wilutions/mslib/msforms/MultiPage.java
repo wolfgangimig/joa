@@ -129,7 +129,7 @@ public class MultiPage extends Dispatch implements IMultiPage {
     return (Float)obj;
   }
   public MultiPage() throws ComException {
-    super("{46E31370-3F7A-11CE-BED6-00AA00611080}");
+    super("{46E31370-3F7A-11CE-BED6-00AA00611080}", "{04598FC9-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected MultiPage(long ndisp) {
     super(ndisp);

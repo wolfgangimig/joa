@@ -15,7 +15,7 @@ public class _OlkPageControlImpl extends Dispatch implements com.wilutions.mslib
     this._dispatchCall(64465,"Page", DISPATCH_PROPERTYPUT,value.value);
   }
   public _OlkPageControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672F8-0000-0000-C000-000000000046}");
   }
   protected _OlkPageControlImpl(long ndisp) {
     super(ndisp);

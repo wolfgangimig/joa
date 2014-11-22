@@ -35,7 +35,7 @@ public class ScopeFolderImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(4,"AddToSearchFolders", DISPATCH_METHOD,null);
   }
   public ScopeFolderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0368-0000-0000-C000-000000000046}");
   }
   protected ScopeFolderImpl(long ndisp) {
     super(ndisp);

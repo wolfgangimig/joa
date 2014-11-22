@@ -130,7 +130,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     this._dispatchCall(64235,"SetDefaultDisplayMode", DISPATCH_METHOD,null,defaultMode.value);
   }
   public SelectNamesDialog() throws ComException {
-    super("{000610C8-0000-0000-C000-000000000046}");
+    super("{000610C8-0000-0000-C000-000000000046}", "{000630C8-0000-0000-C000-000000000046}");
   }
   protected SelectNamesDialog(long ndisp) {
     super(ndisp);

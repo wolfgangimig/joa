@@ -483,7 +483,7 @@ public class PostItem extends Dispatch implements _PostItem {
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public PostItem() throws ComException {
-    super("{0006103A-0000-0000-C000-000000000046}");
+    super("{0006103A-0000-0000-C000-000000000046}", "{00063024-0000-0000-C000-000000000046}");
   }
   protected PostItem(long ndisp) {
     super(ndisp);

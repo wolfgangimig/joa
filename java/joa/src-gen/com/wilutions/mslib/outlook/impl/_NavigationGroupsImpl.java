@@ -57,7 +57,7 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
     return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationGroup.class);
   }
   public _NavigationGroupsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630EF-0000-0000-C000-000000000046}");
   }
   protected _NavigationGroupsImpl(long ndisp) {
     super(ndisp);

@@ -180,7 +180,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     this._dispatchCall(64639,"RefreshFormRegionDefinition", DISPATCH_METHOD,null,RegionName);
   }
   public _ApplicationImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063001-0000-0000-C000-000000000046}");
   }
   protected _ApplicationImpl(long ndisp) {
     super(ndisp);

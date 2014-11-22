@@ -37,7 +37,7 @@ public class MsoDebugOptions_UTManagerImpl extends Dispatch implements com.wilut
     this._dispatchCall(3,"ReportErrors", DISPATCH_PROPERTYPUT,value);
   }
   public MsoDebugOptions_UTManagerImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0389-0000-0000-C000-000000000046}");
   }
   protected MsoDebugOptions_UTManagerImpl(long ndisp) {
     super(ndisp);

@@ -38,7 +38,7 @@ public class FreeformBuilderImpl extends Dispatch implements com.wilutions.mslib
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
   public FreeformBuilderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0315-0000-0000-C000-000000000046}");
   }
   protected FreeformBuilderImpl(long ndisp) {
     super(ndisp);

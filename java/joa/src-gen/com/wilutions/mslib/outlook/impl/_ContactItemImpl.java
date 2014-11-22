@@ -1452,7 +1452,7 @@ public class _ContactItemImpl extends Dispatch implements com.wilutions.mslib.ou
     this._dispatchCall(64656,"ShowCheckAddressDialog", DISPATCH_METHOD,null,MailingAddress.value);
   }
   public _ContactItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063021-0000-0000-C000-000000000046}");
   }
   protected _ContactItemImpl(long ndisp) {
     super(ndisp);

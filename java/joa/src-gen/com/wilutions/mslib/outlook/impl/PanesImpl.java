@@ -39,7 +39,7 @@ public class PanesImpl extends Dispatch implements com.wilutions.mslib.outlook.P
     return (Dispatch)obj;
   }
   public PanesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063009-0000-0000-C000-000000000046}");
   }
   protected PanesImpl(long ndisp) {
     super(ndisp);

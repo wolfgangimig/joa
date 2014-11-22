@@ -14,6 +14,8 @@ import java.lang.reflect.Method;
 
 import sun.awt.windows.WComponentPeer;
 
+import com.wilutions.joa.fx.EmbeddedWindow;
+
 public class WindowsUtil {
 	
 	public static long getWindowHandle(javafx.stage.Window window) {
@@ -37,5 +39,22 @@ public class WindowsUtil {
 	@SuppressWarnings("deprecation")
 	public static long getWindowHandle(java.awt.Window window) {
 		return window.getPeer() != null ? ((WComponentPeer) window.getPeer()).getHWnd() : 0;
+	}
+	
+	public static long getWindowHandle(EmbeddedWindow fxFrame) {
+		return getWindowHandle((java.awt.Window)fxFrame);
+	}
+	
+	/**
+	 * Replace forbidden characters for file names with underscore.
+	 * @param fname
+	 * @return
+	 */
+	public static String replaceForbiddenFileNameCharsWithUnderscore(String fname) {
+		final String forbiddenChars = "<>:\"/\\|?*";
+		for (int i = 0; i < forbiddenChars.length(); i++) {
+			fname = fname.replace(forbiddenChars.charAt(i), '_');
+		}
+		return fname;
 	}
 }

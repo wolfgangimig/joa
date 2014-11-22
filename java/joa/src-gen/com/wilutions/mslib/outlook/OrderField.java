@@ -45,7 +45,7 @@ public class OrderField extends Dispatch implements _OrderField {
     this._dispatchCall(64394,"IsDescending", DISPATCH_PROPERTYPUT,value);
   }
   public OrderField() throws ComException {
-    super("{0006109B-0000-0000-C000-000000000046}");
+    super("{0006109B-0000-0000-C000-000000000046}", "{0006309B-0000-0000-C000-000000000046}");
   }
   protected OrderField(long ndisp) {
     super(ndisp);

@@ -42,7 +42,7 @@ public class ViewField extends Dispatch implements _ViewField {
     return disp.uncheckedAs(ColumnFormat.class);
   }
   public ViewField() throws ComException {
-    super("{0006F09F-0000-0000-C000-000000000046}");
+    super("{0006F09F-0000-0000-C000-000000000046}", "{000630A0-0000-0000-C000-000000000046}");
   }
   protected ViewField(long ndisp) {
     super(ndisp);

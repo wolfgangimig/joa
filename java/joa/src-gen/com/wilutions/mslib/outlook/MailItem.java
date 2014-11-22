@@ -738,7 +738,7 @@ public class MailItem extends Dispatch implements _MailItem {
     return (java.util.Date)obj;
   }
   public MailItem() throws ComException {
-    super("{00061033-0000-0000-C000-000000000046}");
+    super("{00061033-0000-0000-C000-000000000046}", "{00063034-0000-0000-C000-000000000046}");
   }
   protected MailItem(long ndisp) {
     super(ndisp);

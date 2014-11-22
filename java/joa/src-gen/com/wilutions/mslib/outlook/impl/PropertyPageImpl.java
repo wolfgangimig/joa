@@ -19,7 +19,7 @@ public class PropertyPageImpl extends Dispatch implements com.wilutions.mslib.ou
     this._dispatchCall(8450,"Apply", DISPATCH_METHOD,null);
   }
   public PropertyPageImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006307E-0000-0000-C000-000000000046}");
   }
   protected PropertyPageImpl(long ndisp) {
     super(ndisp);

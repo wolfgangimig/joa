@@ -48,7 +48,7 @@ public class PictureEffectImpl extends Dispatch implements com.wilutions.mslib.o
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
   public PictureEffectImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03D1-0000-0000-C000-000000000046}");
   }
   protected PictureEffectImpl(long ndisp) {
     super(ndisp);

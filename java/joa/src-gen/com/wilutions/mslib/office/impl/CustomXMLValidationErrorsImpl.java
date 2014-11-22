@@ -44,7 +44,7 @@ public class CustomXMLValidationErrorsImpl extends Dispatch implements com.wilut
     return (Object)obj;
   }
   public CustomXMLValidationErrorsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB0F-0000-0000-C000-000000000046}");
   }
   protected CustomXMLValidationErrorsImpl(long ndisp) {
     super(ndisp);

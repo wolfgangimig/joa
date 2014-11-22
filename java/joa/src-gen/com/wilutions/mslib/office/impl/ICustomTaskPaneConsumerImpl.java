@@ -9,7 +9,7 @@ public class ICustomTaskPaneConsumerImpl extends Dispatch implements com.wilutio
     this._dispatchCall(1,"CTPFactoryAvailable", DISPATCH_METHOD,null,(CTPFactoryInst!=null?CTPFactoryInst:Dispatch.NULL));
   }
   public ICustomTaskPaneConsumerImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C033E-0000-0000-C000-000000000046}");
   }
   protected ICustomTaskPaneConsumerImpl(long ndisp) {
     super(ndisp);

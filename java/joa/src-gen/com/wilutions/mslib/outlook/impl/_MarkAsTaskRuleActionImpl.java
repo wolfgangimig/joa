@@ -60,7 +60,7 @@ public class _MarkAsTaskRuleActionImpl extends Dispatch implements com.wilutions
     this._dispatchCall(64293,"MarkInterval", DISPATCH_PROPERTYPUT,value.value);
   }
   public _MarkAsTaskRuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D6-0000-0000-C000-000000000046}");
   }
   protected _MarkAsTaskRuleActionImpl(long ndisp) {
     super(ndisp);

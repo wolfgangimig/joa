@@ -38,7 +38,7 @@ public class SmartArtColorsImpl extends Dispatch implements com.wilutions.mslib.
     return (Integer)obj;
   }
   public SmartArtColorsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03CD-0000-0000-C000-000000000046}");
   }
   protected SmartArtColorsImpl(long ndisp) {
     super(ndisp);

@@ -141,7 +141,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     return (Integer)obj;
   }
   public IMsoPlotAreaImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1724-0000-0000-C000-000000000046}");
   }
   protected IMsoPlotAreaImpl(long ndisp) {
     super(ndisp);

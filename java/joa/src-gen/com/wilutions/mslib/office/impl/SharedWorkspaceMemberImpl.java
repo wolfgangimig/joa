@@ -39,7 +39,7 @@ public class SharedWorkspaceMemberImpl extends Dispatch implements com.wilutions
     return (Dispatch)obj;
   }
   public SharedWorkspaceMemberImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0381-0000-0000-C000-000000000046}");
   }
   protected SharedWorkspaceMemberImpl(long ndisp) {
     super(ndisp);

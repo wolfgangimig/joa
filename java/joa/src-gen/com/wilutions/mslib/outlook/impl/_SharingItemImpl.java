@@ -766,7 +766,7 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     return (java.util.Date)obj;
   }
   public _SharingItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006302F-0000-0000-C000-000000000046}");
   }
   protected _SharingItemImpl(long ndisp) {
     super(ndisp);

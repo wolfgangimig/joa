@@ -42,7 +42,7 @@ public class _RuleActionImpl extends Dispatch implements com.wilutions.mslib.out
     return com.wilutions.mslib.outlook.OlRuleActionType.valueOf((Integer)obj);
   }
   public _RuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630CF-0000-0000-C000-000000000046}");
   }
   protected _RuleActionImpl(long ndisp) {
     super(ndisp);

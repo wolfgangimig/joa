@@ -40,7 +40,7 @@ public class FileTypesImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Object)obj;
   }
   public FileTypesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C036C-0000-0000-C000-000000000046}");
   }
   protected FileTypesImpl(long ndisp) {
     super(ndisp);

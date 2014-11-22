@@ -44,7 +44,7 @@ public class _RemindersImpl extends Dispatch implements com.wilutions.mslib.outl
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public _RemindersImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630B1-0000-0000-C000-000000000046}");
   }
   protected _RemindersImpl(long ndisp) {
     super(ndisp);

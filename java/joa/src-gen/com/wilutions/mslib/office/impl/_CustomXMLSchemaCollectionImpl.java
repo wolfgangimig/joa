@@ -62,7 +62,7 @@ public class _CustomXMLSchemaCollectionImpl extends Dispatch implements com.wilu
     return (Object)obj;
   }
   public _CustomXMLSchemaCollectionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB02-0000-0000-C000-000000000046}");
   }
   protected _CustomXMLSchemaCollectionImpl(long ndisp) {
     super(ndisp);

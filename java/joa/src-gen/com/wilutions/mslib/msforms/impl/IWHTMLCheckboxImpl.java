@@ -33,7 +33,7 @@ public class IWHTMLCheckboxImpl extends Dispatch implements com.wilutions.mslib.
     return (Boolean)obj;
   }
   public IWHTMLCheckboxImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D117-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLCheckboxImpl(long ndisp) {
     super(ndisp);

@@ -33,7 +33,7 @@ public class LanguageSettingsImpl extends Dispatch implements com.wilutions.msli
     return (Dispatch)obj;
   }
   public LanguageSettingsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0353-0000-0000-C000-000000000046}");
   }
   protected LanguageSettingsImpl(long ndisp) {
     super(ndisp);

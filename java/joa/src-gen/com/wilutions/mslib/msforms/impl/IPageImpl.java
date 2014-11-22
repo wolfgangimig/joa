@@ -337,7 +337,7 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
     return (Dispatch)obj;
   }
   public IPageImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5CEF5613-713D-11CE-80C9-00AA00611080}");
   }
   protected IPageImpl(long ndisp) {
     super(ndisp);

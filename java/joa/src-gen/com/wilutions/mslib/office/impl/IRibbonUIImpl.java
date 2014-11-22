@@ -30,7 +30,7 @@ public class IRibbonUIImpl extends Dispatch implements com.wilutions.mslib.offic
     this._dispatchCall(6,"ActivateTabQ", DISPATCH_METHOD,null,ControlID,Namespace);
   }
   public IRibbonUIImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03A7-0000-0000-C000-000000000046}");
   }
   protected IRibbonUIImpl(long ndisp) {
     super(ndisp);

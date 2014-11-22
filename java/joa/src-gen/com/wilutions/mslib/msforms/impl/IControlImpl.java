@@ -269,7 +269,7 @@ public class IControlImpl extends Dispatch implements com.wilutions.mslib.msform
     this._dispatchCall(1610743870,"_ZOrder", DISPATCH_METHOD,null,zPosition.value);
   }
   public IControlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{04598FC6-866C-11CF-AB7C-00AA00C08FCF}");
   }
   protected IControlImpl(long ndisp) {
     super(ndisp);

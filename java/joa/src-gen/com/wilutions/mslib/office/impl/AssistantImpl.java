@@ -262,7 +262,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     return (Integer)obj;
   }
   public AssistantImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0322-0000-0000-C000-000000000046}");
   }
   protected AssistantImpl(long ndisp) {
     super(ndisp);

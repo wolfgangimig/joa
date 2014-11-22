@@ -57,7 +57,7 @@ public class IMsoBorderImpl extends Dispatch implements com.wilutions.mslib.offi
     return (Dispatch)obj;
   }
   public IMsoBorderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1717-0000-0000-C000-000000000046}");
   }
   protected IMsoBorderImpl(long ndisp) {
     super(ndisp);

@@ -46,7 +46,7 @@ public class SyncObjectsImpl extends Dispatch implements com.wilutions.mslib.out
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._SyncObjectImpl.class);
   }
   public SyncObjectsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063086-0000-0000-C000-000000000046}");
   }
   protected SyncObjectsImpl(long ndisp) {
     super(ndisp);

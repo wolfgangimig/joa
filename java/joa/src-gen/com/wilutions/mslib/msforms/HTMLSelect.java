@@ -63,7 +63,7 @@ public class HTMLSelect extends Dispatch implements IWHTMLSelect {
     return (Integer)obj;
   }
   public HTMLSelect() throws ComException {
-    super("{5512D122-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D122-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D123-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLSelect(long ndisp) {
     super(ndisp);

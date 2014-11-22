@@ -313,7 +313,7 @@ public class _TableViewImpl extends Dispatch implements com.wilutions.mslib.outl
     this._dispatchCall(64649,"ShowConversationSendersAboveSubject", DISPATCH_PROPERTYPUT,value);
   }
   public _TableViewImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063096-0000-0000-C000-000000000046}");
   }
   protected _TableViewImpl(long ndisp) {
     super(ndisp);

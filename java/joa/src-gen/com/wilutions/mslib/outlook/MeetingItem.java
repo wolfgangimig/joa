@@ -482,7 +482,7 @@ public class MeetingItem extends Dispatch implements _MeetingItem {
     return (String)obj;
   }
   public MeetingItem() throws ComException {
-    super("{00061036-0000-0000-C000-000000000046}");
+    super("{00061036-0000-0000-C000-000000000046}", "{00063062-0000-0000-C000-000000000046}");
   }
   protected MeetingItem(long ndisp) {
     super(ndisp);

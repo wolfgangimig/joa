@@ -50,7 +50,7 @@ public class LinksImpl extends Dispatch implements com.wilutions.mslib.outlook.L
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public LinksImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006308A-0000-0000-C000-000000000046}");
   }
   protected LinksImpl(long ndisp) {
     super(ndisp);

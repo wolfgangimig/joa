@@ -434,7 +434,7 @@ public class _DistListItemImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   public _DistListItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063081-0000-0000-C000-000000000046}");
   }
   protected _DistListItemImpl(long ndisp) {
     super(ndisp);

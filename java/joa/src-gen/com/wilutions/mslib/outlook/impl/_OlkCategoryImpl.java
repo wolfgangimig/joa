@@ -71,7 +71,7 @@ public class _OlkCategoryImpl extends Dispatch implements com.wilutions.mslib.ou
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
   public _OlkCategoryImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000672F4-0000-0000-C000-000000000046}");
   }
   protected _OlkCategoryImpl(long ndisp) {
     super(ndisp);

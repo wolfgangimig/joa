@@ -10,18 +10,30 @@
  */
 package com.wilutions.joa.outlook;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 
 import javafx.application.Platform;
+import javafx.scene.Scene;
+import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
+import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.JoaDll;
+import com.wilutions.com.WindowsUtil;
+import com.wilutions.joa.FolderView;
 import com.wilutions.joa.ModalDialog;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joa.OfficeAddinUtil;
+import com.wilutions.joa.fx.EmbeddedWindow;
+import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.mslib.outlook.ApplicationEvents_11;
 import com.wilutions.mslib.outlook.FormRegion;
 import com.wilutions.mslib.outlook.MAPIFolder;
@@ -194,5 +206,104 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	@Override
 	public void onBeforeFolderSharingDialog(MAPIFolder FolderToShare, ByRef<Boolean> Cancel) throws ComException {
 	}
+
+	/**
+	 * Assign the viewType as view for the folder.
+	 * @param folder Outlook folder
+	 * @param viewType FolderView class.
+	 * @param title Folder view title. This title is displayed in the caption bar of Outlook.
+	 * @param viewId Arbitrary string to be passed in {@link FolderView#setId(String)}. 
+	 * @throws IOException
+	 */
+	public void assignFolderView(MAPIFolder folder, Class<? extends FolderView> viewType, String title, String viewId) throws IOException {
+		String webViewFile = createFolderViewHtml(viewType, title, viewId);
+		folder.setWebViewURL(webViewFile);
+		folder.setWebViewOn(true);
+	}
+
+	/**
+	 * Create an HTML file to display the given view in a folder.
+	 * @param viewType FolderView class. The explorer will call createWebView() to create an instance.
+	 * @param title Folder view title. This title is displayed in the caption bar of Outlook.
+	 * @param viewId Arbitrary string to be passed in {@link FolderView#setId(String)}. 
+	 * @return Temporary file that defines the folder's view.
+	 * @throws ComException
+	 */
+	protected String createFolderViewHtml(Class<? extends FolderView> viewType, String title, String viewId) throws ComException {
+		PrintWriter pr = null;
+		File webViewFile = null;
+
+		CoClass coclass = this.getClass().getAnnotation(CoClass.class);
+		if (coclass == null) {
+			throw new ComException("OfficeAddin misses annotation CoClass");
+		}
+
+		String progId = coclass.progId();
+
+		try {
+			File tempDir = JoaDll.getTempDir();
+			tempDir.mkdirs();
+			String fileName = viewType.getName() + "-" + viewId + ".htm";
+			fileName = WindowsUtil.replaceForbiddenFileNameCharsWithUnderscore(fileName);
+			webViewFile = new File(tempDir, fileName);
+
+			String html = OfficeAddinUtil.getResourceAsString(this.getClass().getClassLoader(),
+					"com/wilutions/joa/outlook/HomePage.html");
+
+			html = html.replace("__webview__title__", title);
+			html = html.replace("__addin__progid__", progId);
+			html = html.replace("__view__class__name__", viewType.getName());
+			html = html.replace("__view__id__", viewId);
+
+			pr = new PrintWriter(new OutputStreamWriter(new FileOutputStream(webViewFile), "UTF-8"));
+			pr.println(html);
+
+		} catch (Throwable e) {
+			throw new ComException(e.toString());
+		} finally {
+			if (pr != null) {
+				pr.close();
+			}
+		}
+
+		return webViewFile.getAbsolutePath();
+	}
+
+	/**
+	 * This function is called from the HTML page of a folder view.
+	 * Do not call this function directly. The HTML page has been created by {@link #createFolderViewHtml(Class, String, String)}.
+	 * @param hwndJoaCtrlStr JoaBridgeCtrl window handle
+	 * @param viewClassName Class name passed to {@link #createFolderViewHtml(Class, String, String)}
+	 * @param viewId View ID passed to {@link #createFolderViewHtml(Class, String, String)}
+	 */
+	@Deprecated
+	public void createWebView(final String hwndJoaCtrlStr, final String viewClassName, final String viewId) {
+
+		// Create the Java window as a child window of the JoaBridgeCtrl.
+		Platform.runLater(() -> {
+			try {
+				final Class<?> viewClass = Class.forName(viewClassName);
+				final FolderView viewObject = (FolderView) viewClass.newInstance();
+
+				viewObject.setId(viewId);
+
+				final Scene scene = viewObject.createScene();
+
+				long hwndJoaCtrl = Long.parseLong(hwndJoaCtrlStr);
+				EmbeddedWindow fxFrame = EmbeddedWindowFactory.getInstance().create(hwndJoaCtrl, scene);
+				
+				viewObject.setFxFrame(fxFrame);
+
+				Platform.runLater(() -> {
+					WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
+					viewObject.handleEvent(event);
+				});
+
+			} catch (Throwable e) {
+				e.printStackTrace();
+			}
+		});
+	}
+
 
 }

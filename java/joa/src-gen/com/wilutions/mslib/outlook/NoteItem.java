@@ -204,7 +204,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     return disp.uncheckedAs(PropertyAccessor.class);
   }
   public NoteItem() throws ComException {
-    super("{00061034-0000-0000-C000-000000000046}");
+    super("{00061034-0000-0000-C000-000000000046}", "{00063025-0000-0000-C000-000000000046}");
   }
   protected NoteItem(long ndisp) {
     super(ndisp);

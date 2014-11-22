@@ -53,7 +53,7 @@ public class _ViewsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public _ViewsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006308D-0000-0000-C000-000000000046}");
   }
   protected _ViewsImpl(long ndisp) {
     super(ndisp);

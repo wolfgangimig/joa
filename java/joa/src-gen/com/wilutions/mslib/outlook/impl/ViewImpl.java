@@ -112,7 +112,7 @@ public class ViewImpl extends Dispatch implements com.wilutions.mslib.outlook.Vi
     this._dispatchCall(409,"Filter", DISPATCH_PROPERTYPUT,value);
   }
   public ViewImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063095-0000-0000-C000-000000000046}");
   }
   protected ViewImpl(long ndisp) {
     super(ndisp);

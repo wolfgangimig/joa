@@ -60,7 +60,7 @@ public class IMsoErrorBarsImpl extends Dispatch implements com.wilutions.mslib.o
     return (Integer)obj;
   }
   public IMsoErrorBarsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1721-0000-0000-C000-000000000046}");
   }
   protected IMsoErrorBarsImpl(long ndisp) {
     super(ndisp);

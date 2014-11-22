@@ -69,7 +69,7 @@ public class _AutoFormatRuleImpl extends Dispatch implements com.wilutions.mslib
     return (Boolean)obj;
   }
   public _AutoFormatRuleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063093-0000-0000-C000-000000000046}");
   }
   protected _AutoFormatRuleImpl(long ndisp) {
     super(ndisp);

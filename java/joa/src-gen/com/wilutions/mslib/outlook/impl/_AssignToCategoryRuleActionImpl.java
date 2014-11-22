@@ -51,7 +51,7 @@ public class _AssignToCategoryRuleActionImpl extends Dispatch implements com.wil
     this._dispatchCall(64289,"Categories", DISPATCH_PROPERTYPUT,value);
   }
   public _AssignToCategoryRuleActionImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630D4-0000-0000-C000-000000000046}");
   }
   protected _AssignToCategoryRuleActionImpl(long ndisp) {
     super(ndisp);

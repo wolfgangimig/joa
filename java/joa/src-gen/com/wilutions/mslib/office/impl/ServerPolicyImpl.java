@@ -58,7 +58,7 @@ public class ServerPolicyImpl extends Dispatch implements com.wilutions.mslib.of
     return (Dispatch)obj;
   }
   public ServerPolicyImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0390-0000-0000-C000-000000000046}");
   }
   protected ServerPolicyImpl(long ndisp) {
     super(ndisp);

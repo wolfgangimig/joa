@@ -181,7 +181,7 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
     this._dispatchCall(1610874914,"AdaptiveMenu", DISPATCH_PROPERTYPUT,value);
   }
   public CommandBarImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0304-0000-0000-C000-000000000046}");
   }
   protected CommandBarImpl(long ndisp) {
     super(ndisp);

@@ -34,7 +34,7 @@ public class _AccountSelectorImpl extends Dispatch implements com.wilutions.msli
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._AccountImpl.class);
   }
   public _AccountSelectorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063103-0000-0000-C000-000000000046}");
   }
   protected _AccountSelectorImpl(long ndisp) {
     super(ndisp);

@@ -265,7 +265,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     return disp.uncheckedAs(com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
   public TextRange2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0397-0000-0000-C000-000000000046}");
   }
   protected TextRange2Impl(long ndisp) {
     super(ndisp);

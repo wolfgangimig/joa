@@ -247,7 +247,7 @@ public class _CommandBarActiveXImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(1610940421,"InitWith", DISPATCH_PROPERTYPUT,value);
   }
   public _CommandBarActiveXImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C030D-0000-0000-C000-000000000046}");
   }
   protected _CommandBarActiveXImpl(long ndisp) {
     super(ndisp);

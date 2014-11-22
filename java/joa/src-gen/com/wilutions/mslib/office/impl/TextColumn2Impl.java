@@ -43,7 +43,7 @@ public class TextColumn2Impl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(3,"TextDirection", DISPATCH_PROPERTYPUT,value.value);
   }
   public TextColumn2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03B2-0000-0000-C000-000000000046}");
   }
   protected TextColumn2Impl(long ndisp) {
     super(ndisp);

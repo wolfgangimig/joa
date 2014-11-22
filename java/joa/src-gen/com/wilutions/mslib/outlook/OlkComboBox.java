@@ -269,7 +269,7 @@ public class OlkComboBox extends Dispatch implements _OlkComboBox {
     this._dispatchCall(1001,"DropDown", DISPATCH_METHOD,null);
   }
   public OlkComboBox() throws ComException {
-    super("{0006F04D-0000-0000-C000-000000000046}");
+    super("{0006F04D-0000-0000-C000-000000000046}", "{000672DE-0000-0000-C000-000000000046}");
   }
   protected OlkComboBox(long ndisp) {
     super(ndisp);

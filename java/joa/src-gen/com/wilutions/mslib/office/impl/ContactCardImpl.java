@@ -29,7 +29,7 @@ public class ContactCardImpl extends Dispatch implements com.wilutions.mslib.off
     this._dispatchCall(2,"Show", DISPATCH_METHOD,null,CardStyle.value,RectangleLeft,RectangleRight,RectangleTop,RectangleBottom,HorizontalPosition,ShowWithDelay);
   }
   public ContactCardImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03F1-0000-0000-C000-000000000046}");
   }
   protected ContactCardImpl(long ndisp) {
     super(ndisp);

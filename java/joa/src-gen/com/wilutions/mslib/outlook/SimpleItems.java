@@ -42,7 +42,7 @@ public class SimpleItems extends Dispatch implements _SimpleItems {
     return (Dispatch)obj;
   }
   public SimpleItems() throws ComException {
-    super("{00061102-0000-0000-C000-000000000046}");
+    super("{00061102-0000-0000-C000-000000000046}", "{00063102-0000-0000-C000-000000000046}");
   }
   protected SimpleItems(long ndisp) {
     super(ndisp);

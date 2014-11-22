@@ -90,7 +90,7 @@ public class IPictureImpl extends Dispatch implements com.wilutions.mslib.stdole
     this._dispatchCall(1610678286,"SetHdc", DISPATCH_METHOD,null,hdc.getValue());
   }
   public IPictureImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{7BF80980-BF32-101A-8BBB-00AA00300CAB}");
   }
   protected IPictureImpl(long ndisp) {
     super(ndisp);

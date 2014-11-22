@@ -56,7 +56,7 @@ public class OutlookBarShortcuts extends Dispatch implements _OutlookBarShortcut
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   public OutlookBarShortcuts() throws ComException {
-    super("{00063057-0000-0000-C000-000000000046}");
+    super("{00063057-0000-0000-C000-000000000046}", "{00063074-0000-0000-C000-000000000046}");
   }
   protected OutlookBarShortcuts(long ndisp) {
     super(ndisp);

@@ -62,7 +62,7 @@ public class _NotesModuleImpl extends Dispatch implements com.wilutions.mslib.ou
     return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationGroupsImpl.class);
   }
   public _NotesModuleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630EE-0000-0000-C000-000000000046}");
   }
   protected _NotesModuleImpl(long ndisp) {
     super(ndisp);

@@ -53,7 +53,7 @@ public class ThemeColorSchemeImpl extends Dispatch implements com.wilutions.msli
     return new com.wilutions.mslib.office.MsoRGBType(als);
   }
   public ThemeColorSchemeImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03A2-0000-0000-C000-000000000046}");
   }
   protected ThemeColorSchemeImpl(long ndisp) {
     super(ndisp);

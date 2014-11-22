@@ -64,7 +64,7 @@ public class _OrderFieldsImpl extends Dispatch implements com.wilutions.mslib.ou
     return disp.uncheckedAs(com.wilutions.mslib.outlook.OrderField.class);
   }
   public _OrderFieldsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{0006309A-0000-0000-C000-000000000046}");
   }
   protected _OrderFieldsImpl(long ndisp) {
     super(ndisp);

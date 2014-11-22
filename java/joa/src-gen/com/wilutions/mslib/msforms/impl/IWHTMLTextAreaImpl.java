@@ -51,7 +51,7 @@ public class IWHTMLTextAreaImpl extends Dispatch implements com.wilutions.mslib.
     return (String)obj;
   }
   public IWHTMLTextAreaImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{5512D125-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected IWHTMLTextAreaImpl(long ndisp) {
     super(ndisp);

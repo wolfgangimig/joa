@@ -62,7 +62,7 @@ public class ViewFields extends Dispatch implements _ViewFields {
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   public ViewFields() throws ComException {
-    super("{000610A1-0000-0000-C000-000000000046}");
+    super("{000610A1-0000-0000-C000-000000000046}", "{000630A1-0000-0000-C000-000000000046}");
   }
   protected ViewFields(long ndisp) {
     super(ndisp);

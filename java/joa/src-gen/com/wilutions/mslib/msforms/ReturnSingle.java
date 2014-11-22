@@ -18,7 +18,7 @@ public class ReturnSingle extends Dispatch implements IReturnSingle {
     return (Float)obj;
   }
   public ReturnSingle() throws ComException {
-    super("{8A683C92-BA84-11CF-8110-00A0C9030074}");
+    super("{8A683C92-BA84-11CF-8110-00A0C9030074}", "{8A683C90-BA84-11CF-8110-00A0C9030074}");
   }
   protected ReturnSingle(long ndisp) {
     super(ndisp);

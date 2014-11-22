@@ -49,7 +49,7 @@ public class BalloonCheckboxImpl extends Dispatch implements com.wilutions.mslib
     return (String)obj;
   }
   public BalloonCheckboxImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0328-0000-0000-C000-000000000046}");
   }
   protected BalloonCheckboxImpl(long ndisp) {
     super(ndisp);

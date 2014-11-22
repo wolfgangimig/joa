@@ -104,7 +104,7 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
     return (Boolean)obj;
   }
   public _CustomXMLPartImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CDB05-0000-0000-C000-000000000046}");
   }
   protected _CustomXMLPartImpl(long ndisp) {
     super(ndisp);

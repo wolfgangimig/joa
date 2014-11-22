@@ -40,7 +40,7 @@ public class GradientStopImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(3,"Transparency", DISPATCH_PROPERTYPUT,value);
   }
   public GradientStopImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03BF-0000-0000-C000-000000000046}");
   }
   protected GradientStopImpl(long ndisp) {
     super(ndisp);

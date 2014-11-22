@@ -56,7 +56,7 @@ public class _NavigationModuleImpl extends Dispatch implements com.wilutions.msl
     this._dispatchCall(64443,"Visible", DISPATCH_PROPERTYPUT,value);
   }
   public _NavigationModuleImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E8-0000-0000-C000-000000000046}");
   }
   protected _NavigationModuleImpl(long ndisp) {
     super(ndisp);

@@ -36,7 +36,7 @@ public class ODSOColumnImpl extends Dispatch implements com.wilutions.mslib.offi
     return (String)obj;
   }
   public ODSOColumnImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C1531-0000-0000-C000-000000000046}");
   }
   protected ODSOColumnImpl(long ndisp) {
     super(ndisp);

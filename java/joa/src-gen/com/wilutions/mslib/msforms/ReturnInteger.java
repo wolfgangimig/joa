@@ -18,7 +18,7 @@ public class ReturnInteger extends Dispatch implements IReturnInteger {
     return (Integer)obj;
   }
   public ReturnInteger() throws ComException {
-    super("{82B02373-B5BC-11CF-810F-00A0C9030074}");
+    super("{82B02373-B5BC-11CF-810F-00A0C9030074}", "{82B02370-B5BC-11CF-810F-00A0C9030074}");
   }
   protected ReturnInteger(long ndisp) {
     super(ndisp);

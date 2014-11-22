@@ -479,7 +479,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     return (String)obj;
   }
   public _MeetingItemImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063062-0000-0000-C000-000000000046}");
   }
   protected _MeetingItemImpl(long ndisp) {
     super(ndisp);

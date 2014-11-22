@@ -1,9 +1,6 @@
 /* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.mslib.office.impl;
-import com.wilutions.com.CoClass;
-import com.wilutions.com.ComException;
-import com.wilutions.com.DeclDISPID;
-import com.wilutions.com.Dispatch;
+import com.wilutions.com.*;
 
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A51-A463-DB41-5DAE-69E7A5F7FCBC}")
@@ -51,7 +48,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Dispatch)obj;
   }
-  @DeclDISPID(7)  public void setObject(Object value) throws ComException {
+  @DeclDISPID(7)  public void setObject(Dispatch value) throws ComException {
     this._dispatchCall(7,"Object", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(8)  public Dispatch getParent() throws ComException {
@@ -60,7 +57,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     return (Dispatch)obj;
   }
   public COMAddInImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C033A-0000-0000-C000-000000000046}");
   }
   protected COMAddInImpl(long ndisp) {
     super(ndisp);

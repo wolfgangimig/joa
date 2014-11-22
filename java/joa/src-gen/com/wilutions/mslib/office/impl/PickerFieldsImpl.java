@@ -33,7 +33,7 @@ public class PickerFieldsImpl extends Dispatch implements com.wilutions.mslib.of
     return (Object)obj;
   }
   public PickerFieldsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03E1-0000-0000-C000-000000000046}");
   }
   protected PickerFieldsImpl(long ndisp) {
     super(ndisp);

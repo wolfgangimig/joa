@@ -27,7 +27,7 @@ public class _DocSiteControl extends Dispatch implements _DDocSiteControl {
     this._dispatchCall(64483,"SuppressAttachments", DISPATCH_PROPERTYPUT,value);
   }
   public _DocSiteControl() throws ComException {
-    super("{0006F024-0000-0000-C000-000000000046}");
+    super("{0006F024-0000-0000-C000-000000000046}", "{0006F026-0000-0000-C000-000000000046}");
   }
   protected _DocSiteControl(long ndisp) {
     super(ndisp);

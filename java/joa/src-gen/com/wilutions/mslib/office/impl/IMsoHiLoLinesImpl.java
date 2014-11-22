@@ -44,7 +44,7 @@ public class IMsoHiLoLinesImpl extends Dispatch implements com.wilutions.mslib.o
     return (Integer)obj;
   }
   public IMsoHiLoLinesImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C172E-0000-0000-C000-000000000046}");
   }
   protected IMsoHiLoLinesImpl(long ndisp) {
     super(ndisp);

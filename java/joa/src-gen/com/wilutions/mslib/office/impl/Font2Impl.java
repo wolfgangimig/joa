@@ -289,7 +289,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     this._dispatchCall(34,"NameOther", DISPATCH_PROPERTYPUT,value);
   }
   public Font2Impl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C039A-0000-0000-C000-000000000046}");
   }
   protected Font2Impl(long ndisp) {
     super(ndisp);

@@ -107,7 +107,7 @@ public class CustomXMLPart extends Dispatch implements _CustomXMLPart {
     return (Boolean)obj;
   }
   public CustomXMLPart() throws ComException {
-    super("{000CDB08-0000-0000-C000-000000000046}");
+    super("{000CDB08-0000-0000-C000-000000000046}", "{000CDB05-0000-0000-C000-000000000046}");
   }
   protected CustomXMLPart(long ndisp) {
     super(ndisp);

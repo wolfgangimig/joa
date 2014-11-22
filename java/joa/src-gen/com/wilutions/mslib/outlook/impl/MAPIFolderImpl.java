@@ -242,7 +242,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     this._dispatchCall(64573,"SetCustomIcon", DISPATCH_METHOD,null,(Picture!=null?Picture:Dispatch.NULL));
   }
   public MAPIFolderImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{00063006-0000-0000-C000-000000000046}");
   }
   protected MAPIFolderImpl(long ndisp) {
     super(ndisp);

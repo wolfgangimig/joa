@@ -23,7 +23,7 @@ public class IDocumentInspectorImpl extends Dispatch implements com.wilutions.ms
     this._dispatchCall(1610678274,"Fix", DISPATCH_METHOD,null,(Doc!=null?Doc:Dispatch.NULL),hwnd,Status,Result);
   }
   public IDocumentInspectorImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000CD706-0000-0000-C000-000000000046}");
   }
   protected IDocumentInspectorImpl(long ndisp) {
     super(ndisp);

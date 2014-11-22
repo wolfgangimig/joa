@@ -3,14 +3,16 @@ package com.wilutions.joa;
 import javafx.event.Event;
 import javafx.scene.Scene;
 
+import com.wilutions.com.WindowHandle;
+import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.fx.EmbeddedWindow;
 
-public abstract class WebView {
+public abstract class FolderView implements WindowHandle {
 	
 	private String id;
 	private EmbeddedWindow fxFrame;
 
-	public WebView() {
+	public FolderView() {
 	}
 
 	public String getId() {
@@ -39,4 +41,10 @@ public abstract class WebView {
 	public void setFxFrame(EmbeddedWindow fxFrame) {
 		this.fxFrame = fxFrame;
 	}
+	
+	@Override
+	public long getWindowHandle() {
+		return WindowsUtil.getWindowHandle(fxFrame);
+	}
+
 }

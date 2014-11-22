@@ -335,7 +335,7 @@ public class IOptionFrameImpl extends Dispatch implements com.wilutions.mslib.ms
     this._dispatchCall(1610743898,"_GetGridY", DISPATCH_METHOD,null,GridY);
   }
   public IOptionFrameImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{29B86A70-F52E-11CE-9BCE-00AA00608E01}");
   }
   protected IOptionFrameImpl(long ndisp) {
     super(ndisp);

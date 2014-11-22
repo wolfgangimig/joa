@@ -54,7 +54,7 @@ public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
     return (String)obj;
   }
   public HTMLSubmit() throws ComException {
-    super("{5512D110-5CC6-11CF-8D67-00AA00BDCE1D}");
+    super("{5512D110-5CC6-11CF-8D67-00AA00BDCE1D}", "{5512D111-5CC6-11CF-8D67-00AA00BDCE1D}");
   }
   protected HTMLSubmit(long ndisp) {
     super(ndisp);

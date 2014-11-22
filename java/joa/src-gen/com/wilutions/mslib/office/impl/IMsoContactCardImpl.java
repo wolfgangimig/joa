@@ -36,7 +36,7 @@ public class IMsoContactCardImpl extends Dispatch implements com.wilutions.mslib
     return (Dispatch)obj;
   }
   public IMsoContactCardImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C03F0-0000-0000-C000-000000000046}");
   }
   protected IMsoContactCardImpl(long ndisp) {
     super(ndisp);

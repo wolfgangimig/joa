@@ -33,7 +33,7 @@ public class _ColumnImpl extends Dispatch implements com.wilutions.mslib.outlook
     return (String)obj;
   }
   public _ColumnImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000630E5-0000-0000-C000-000000000046}");
   }
   protected _ColumnImpl(long ndisp) {
     super(ndisp);

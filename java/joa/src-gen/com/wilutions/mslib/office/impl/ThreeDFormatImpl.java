@@ -281,7 +281,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     this._dispatchCall(126,"LightAngle", DISPATCH_PROPERTYPUT,value);
   }
   public ThreeDFormatImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0321-0000-0000-C000-000000000046}");
   }
   protected ThreeDFormatImpl(long ndisp) {
     super(ndisp);

@@ -191,7 +191,7 @@ public class ToggleButton extends Dispatch implements IMdcToggleButton {
     return fmTextAlign.valueOf((Integer)obj);
   }
   public ToggleButton() throws ComException {
-    super("{8BD21D60-EC42-11CE-9E0D-00AA006002F3}");
+    super("{8BD21D60-EC42-11CE-9E0D-00AA006002F3}", "{8BD21D63-EC42-11CE-9E0D-00AA006002F3}");
   }
   protected ToggleButton(long ndisp) {
     super(ndisp);

@@ -52,7 +52,7 @@ public class ScriptsImpl extends Dispatch implements com.wilutions.mslib.office.
     this._dispatchCall(1610809349,"Delete", DISPATCH_METHOD,null);
   }
   public ScriptsImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{000C0340-0000-0000-C000-000000000046}");
   }
   protected ScriptsImpl(long ndisp) {
     super(ndisp);
