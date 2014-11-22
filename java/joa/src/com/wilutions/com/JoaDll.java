@@ -181,7 +181,7 @@ public class JoaDll {
 	public static native void nativeSetParent(Object fxstage, long joaCtrlHandle, long javaWindowHandle,
 			int framePaddingX, int framePaddingY) throws ComException;
 
-	public static native void nativeGetWindowPos(long hwnd, int[] xy);
+	public static native void nativeGetWindowClientAreaPos(long hwnd, int[] xy);
 
 	public static native Object nativeGetRegistryValue(String key, String name, Object defaultValue);
 
