@@ -40,8 +40,8 @@ public class FolderHomePageAddin extends OutlookAddin {
 	public void createHomePageFolder() throws IOException {
 		_NameSpace session = getApplication().getSession();
 		MAPIFolder root = Utility.Folder.GetRootFolder(session);
-		MAPIFolder crmFolder = Utility.Folder.CreateFolder(root, Properties.Resources.CRMFolderName);
-		super.assignFolderView(crmFolder, CRMTodayView.class, "CRM Today", "1:2/3");
+		MAPIFolder crmFolder = Utility.Folder.CreateFolder(root, "JOA Folder");
+		super.assignFolderView(crmFolder, MyFolderView.class, "My Folder View", "1:2/3");
 	}
 
 	public void onJoaTaskPaneClicked(Dispatch control, Boolean pressed) {
