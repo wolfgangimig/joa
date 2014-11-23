@@ -28,7 +28,6 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowsUtil;
-import com.wilutions.joa.FolderView;
 import com.wilutions.joa.ModalDialog;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joa.OfficeAddinUtil;
@@ -206,7 +205,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	@Override
 	public void onBeforeFolderSharingDialog(MAPIFolder FolderToShare, ByRef<Boolean> Cancel) throws ComException {
 	}
-
+	
 	/**
 	 * Assign the viewType as view for the folder.
 	 * @param folder Outlook folder
@@ -305,5 +304,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 		});
 	}
 
+	protected void onCreateFolderView(FolderView viewObject, String viewId) {
+	}
 
 }
