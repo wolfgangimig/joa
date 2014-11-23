@@ -1,11 +1,14 @@
 package com.wilutions.joa.example.folderhp;
 
-import com.wilutions.com.Missing;
 import com.wilutions.mslib.outlook.MAPIFolder;
 import com.wilutions.mslib.outlook.OlDefaultFolders;
 import com.wilutions.mslib.outlook._Folders;
 import com.wilutions.mslib.outlook._NameSpace;
 
+/**
+ * Helper class ported from the C# code of the MSDN example
+ * "Outlook Customization for Integrating with Enterprise Applications".
+ */
 public class FolderClass {
 
 	// / <summary>

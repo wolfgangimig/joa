@@ -304,7 +304,4 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 		});
 	}
 
-	protected void onCreateFolderView(FolderView viewObject, String viewId) {
-	}
-
 }

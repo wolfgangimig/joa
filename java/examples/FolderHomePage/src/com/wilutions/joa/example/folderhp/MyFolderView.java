@@ -1,5 +1,6 @@
 package com.wilutions.joa.example.folderhp;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -17,8 +18,12 @@ import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.outlook.FolderView;
 
 public class MyFolderView extends FolderView {
+
+	CheckBox ckSyncToggleButton;
 	
-	
+	public MyFolderView() {
+		Globals.getThisAddin().setFolderView(this);
+	}
 
 	@Override
 	public Scene createScene() {
@@ -30,7 +35,7 @@ public class MyFolderView extends FolderView {
 
 		Text text = new Text("JavaFX Folder View");
 		text.setId("welcome-text");
-		
+
 		grid.add(text, 0, 0, 2, 1);
 
 		TextField textField = new TextField();
@@ -40,9 +45,9 @@ public class MyFolderView extends FolderView {
 		grid.add(cb, 0, 2);
 		ChoiceBox<String> cb2 = new ChoiceBox<String>(FXCollections.observableArrayList("Alpha", "Beta", "Gamma"));
 		grid.add(cb2, 1, 2);
-		
-		CheckBox ck = new CheckBox("Check Toggle Button on Ribbon Bar");
-		grid.add(ck, 0, 3, 2, 1);
+
+		ckSyncToggleButton = new CheckBox("Check Toggle Button on Ribbon Bar");
+		grid.add(ckSyncToggleButton, 0, 3, 2, 1);
 
 		Button btn = new Button("Button");
 		grid.add(btn, 0, 4);
@@ -58,14 +63,19 @@ public class MyFolderView extends FolderView {
 			MessageBox.show(this, "Message", "You pressed a button.", (result, ex) -> {
 				System.out.println("MessageBox closed by button=" + result);
 			});
-
 		});
-		
-		ck.setOnAction((e) -> {
-			Globals.getThisAddin().setFvButtonPressed(ck.isSelected());
+
+		ckSyncToggleButton.setOnAction((e) -> {
+			boolean pressed = ckSyncToggleButton.isSelected();
+			Globals.getThisAddin().setFvButtonPressed(pressed);
 		});
 
 		return scene;
 	}
 
+	public void setFvButtonPressed(boolean pressed) {
+		Platform.runLater(() -> {
+			ckSyncToggleButton.setSelected(pressed);
+		});
+	}
 }

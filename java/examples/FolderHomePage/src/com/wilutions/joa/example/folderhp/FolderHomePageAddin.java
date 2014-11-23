@@ -18,14 +18,15 @@ import com.wilutions.mslib.outlook._NameSpace;
 @CoClass(progId = "FolderHomePageAddin.Class", guid = "{eb7a37de-e328-46b7-bfe6-3e09b95402c7}")
 @DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "JOA Folder Home Page", description = "Displays JavaFX scene on a folder's home page")
 public class FolderHomePageAddin extends OutlookAddin {
-	
+
 	private boolean fvButtonPressed;
 	private IRibbonUI ribbon;
+	private MyFolderView folderView;
 
 	public FolderHomePageAddin() {
 		Globals.setThisAddin(this);
 	}
-	
+
 	@Override
 	public void onStartup() throws ComException {
 		super.onStartup();
@@ -50,11 +51,11 @@ public class FolderHomePageAddin extends OutlookAddin {
 	public void onLoadRibbon(IRibbonUI ribbon) throws ComException {
 		this.ribbon = ribbon;
 	}
-	
+
 	public void FVButton_onAction(Dispatch control, Boolean pressed) throws ComException {
 		setFvButtonPressed(pressed);
 	}
-	
+
 	public boolean FVButton_getPressed(IRibbonControl control) throws ComException {
 		return isFvButtonPressed();
 	}
@@ -70,6 +71,17 @@ public class FolderHomePageAddin extends OutlookAddin {
 	public void setFvButtonPressed(boolean fvButtonPressed) {
 		this.fvButtonPressed = fvButtonPressed;
 		ribbon.InvalidateControl("FVButton");
+		if (folderView != null) {
+			folderView.setFvButtonPressed(fvButtonPressed);
+		}
+	}
+
+	public MyFolderView getFolderView() {
+		return folderView;
+	}
+
+	public void setFolderView(MyFolderView folderView) {
+		this.folderView = folderView;
 	}
 
 }
