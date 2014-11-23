@@ -7,6 +7,5 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type for Font
 public interface IFontDisp extends Font {
 }

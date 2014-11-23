@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class OLE_OPTEXCLUSIVE {
   private Boolean value;
   public OLE_OPTEXCLUSIVE() {}

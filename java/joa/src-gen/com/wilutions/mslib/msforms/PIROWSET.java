@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class PIROWSET {
   private Object value;
   public PIROWSET() {}

@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class OLE_XPOS_PIXELS {
   private Integer value;
   public OLE_XPOS_PIXELS() {}

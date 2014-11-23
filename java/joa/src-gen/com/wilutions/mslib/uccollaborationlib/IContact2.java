@@ -1,0 +1,15 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
+package com.wilutions.mslib.uccollaborationlib;
+import com.wilutions.com.*;
+
+/**
+ * IContact2.
+ * IContact2 Interface 
+ */
+@CoInterface(guid="{10FDD9BA-0CBA-4958-B6C8-D0912BF2703F}")
+public interface IContact2 extends IDispatch {
+  @DeclDISPID(268435457)  public void SetAdditionalUris(String[] _contactUris) throws ComException;
+  @DeclDISPID(268435458)  public IContact GetRawContactbyUri(String _contactUri) throws ComException;
+  @DeclDISPID(268435459)  public Boolean IsAnonymous() throws ComException;
+  @DeclDISPID(268435460)  public Object[] BatchGetContactInformation2(Long _contactInformationTypes) throws ComException;
+}

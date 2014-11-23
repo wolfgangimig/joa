@@ -7,6 +7,5 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type for Picture
 public interface IPictureDisp extends Picture {
 }

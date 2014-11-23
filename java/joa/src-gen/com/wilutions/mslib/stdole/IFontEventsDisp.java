@@ -7,6 +7,5 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type for FontEvents
 public interface IFontEventsDisp extends FontEvents {
 }

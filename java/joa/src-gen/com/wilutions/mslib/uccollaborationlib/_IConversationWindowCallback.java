@@ -1,0 +1,12 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
+package com.wilutions.mslib.uccollaborationlib;
+import com.wilutions.com.*;
+
+/**
+ * _IConversationWindowCallback.
+ * _IConversationWindowCallback Interface 
+ */
+@CoInterface(guid="{76428270-36FA-4236-8BDF-AADB39FD1371}")
+public interface _IConversationWindowCallback extends IDispatch {
+  @DeclDISPID(4050)  public void OnOpenExtensibilityWindow(IConversationWindow _source, IAsynchronousOperation _asyncOperation) throws ComException;
+}

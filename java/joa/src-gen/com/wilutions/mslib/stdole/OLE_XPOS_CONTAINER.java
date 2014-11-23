@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class OLE_XPOS_CONTAINER {
   private Float value;
   public OLE_XPOS_CONTAINER() {}

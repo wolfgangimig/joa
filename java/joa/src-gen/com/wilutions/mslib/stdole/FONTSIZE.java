@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class FONTSIZE {
   private Long value;
   public FONTSIZE() {}

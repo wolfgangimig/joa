@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class FONTSTRIKETHROUGH {
   private Boolean value;
   public FONTSTRIKETHROUGH() {}
