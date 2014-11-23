@@ -21,7 +21,6 @@ public class FolderHomePageAddin extends OutlookAddin {
 	
 	private boolean fvButtonPressed;
 	private IRibbonUI ribbon;
-	private MyFolderView myFolderView;
 
 	public FolderHomePageAddin() {
 		Globals.setThisAddin(this);
@@ -73,13 +72,4 @@ public class FolderHomePageAddin extends OutlookAddin {
 		ribbon.InvalidateControl("FVButton");
 	}
 
-	public MyFolderView getMyFolderView() {
-		return myFolderView;
-	}
-
-	public void setMyFolderView(MyFolderView myFolderView) {
-		this.myFolderView = myFolderView;
-	}
-	
-	
 }
