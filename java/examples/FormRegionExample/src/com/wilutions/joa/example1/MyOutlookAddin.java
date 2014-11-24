@@ -3,6 +3,7 @@ package com.wilutions.joa.example1;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.TaskPane;
@@ -209,7 +210,7 @@ public class MyOutlookAddin extends OutlookAddin {
 	}
 
 	@Override
-	public void onItemLoad(Dispatch Item) throws ComException {
+	public void onItemLoad(IDispatch Item) throws ComException {
 		
 
 	}

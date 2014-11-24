@@ -19,6 +19,7 @@ import com.wilutions.com.BackgTask;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.reg.Registry;
 import com.wilutions.joa.DeclAddin;
@@ -87,7 +88,7 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 
 	public boolean ShowHideTP_getPressed(IRibbonControl control) throws ComException {
 		System.out.println("ShowHideTP_getPressed " + control);
-		Dispatch ctx = control.getContext();
+		IDispatch ctx = control.getContext();
 		boolean ret = false;
 		if (ctx != null) {
 			Inspector inspector = ctx.as(Inspector.class);
@@ -146,7 +147,7 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 		System.out.println("Ctp4IptorOutlookAddin.onNewInspector " + inspector);
 		BackgTask.run(() -> {
 			try {
-				Dispatch dispItem = inspector.getCurrentItem();
+				IDispatch dispItem = inspector.getCurrentItem();
 				if (dispItem.is(MailItem.class)) {
 					MailItem mailItem = dispItem.as(MailItem.class);
 					String id = mailItem.getEntryID();

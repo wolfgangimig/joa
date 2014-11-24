@@ -12,6 +12,7 @@ package com.wilutions.joa.example.cnaddin;
 
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.OlObjectClass;
 import com.wilutions.mslib.outlook._Application;
@@ -58,7 +59,7 @@ public class InspectorsDummy implements _Inspectors {
 	}
 
 	@Override
-	public _Inspector Add(Dispatch Item) throws ComException {
+	public _Inspector Add(IDispatch Item) throws ComException {
 		
 		return null;
 	}
