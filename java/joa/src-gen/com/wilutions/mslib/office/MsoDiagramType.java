@@ -8,17 +8,33 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoDiagramType {
-  msoDiagramMixed(-2),
-  msoDiagramOrgChart(1),
-  msoDiagramCycle(2),
-  msoDiagramRadial(3),
-  msoDiagramPyramid(4),
-  msoDiagramVenn(5),
-  msoDiagramTarget(6);
+public class MsoDiagramType {
 
+  // Typed constants
+  public final static MsoDiagramType msoDiagramMixed = new MsoDiagramType(-2);
+  public final static MsoDiagramType msoDiagramOrgChart = new MsoDiagramType(1);
+  public final static MsoDiagramType msoDiagramCycle = new MsoDiagramType(2);
+  public final static MsoDiagramType msoDiagramRadial = new MsoDiagramType(3);
+  public final static MsoDiagramType msoDiagramPyramid = new MsoDiagramType(4);
+  public final static MsoDiagramType msoDiagramVenn = new MsoDiagramType(5);
+  public final static MsoDiagramType msoDiagramTarget = new MsoDiagramType(6);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoDiagramMixed = -2;
+  public final static int _msoDiagramOrgChart = 1;
+  public final static int _msoDiagramCycle = 2;
+  public final static int _msoDiagramRadial = 3;
+  public final static int _msoDiagramPyramid = 4;
+  public final static int _msoDiagramVenn = 5;
+  public final static int _msoDiagramTarget = 6;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoDiagramType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoDiagramType valueOf(int value) {
     switch(value) {
     case -2: return msoDiagramMixed;
@@ -28,7 +44,7 @@ public enum MsoDiagramType {
     case 4: return msoDiagramPyramid;
     case 5: return msoDiagramVenn;
     case 6: return msoDiagramTarget;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoDiagramType.class);
+    default: return new MsoDiagramType(value);
     }
   }
 }

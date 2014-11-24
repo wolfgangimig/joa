@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoBalloonType {
-  msoBalloonTypeButtons(0),
-  msoBalloonTypeBullets(1),
-  msoBalloonTypeNumbers(2);
+public class MsoBalloonType {
 
+  // Typed constants
+  public final static MsoBalloonType msoBalloonTypeButtons = new MsoBalloonType(0);
+  public final static MsoBalloonType msoBalloonTypeBullets = new MsoBalloonType(1);
+  public final static MsoBalloonType msoBalloonTypeNumbers = new MsoBalloonType(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoBalloonTypeButtons = 0;
+  public final static int _msoBalloonTypeBullets = 1;
+  public final static int _msoBalloonTypeNumbers = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoBalloonType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoBalloonType valueOf(int value) {
     switch(value) {
     case 0: return msoBalloonTypeButtons;
     case 1: return msoBalloonTypeBullets;
     case 2: return msoBalloonTypeNumbers;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoBalloonType.class);
+    default: return new MsoBalloonType(value);
     }
   }
 }

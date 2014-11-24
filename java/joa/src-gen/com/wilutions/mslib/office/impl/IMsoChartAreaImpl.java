@@ -15,16 +15,15 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(128)  public com.wilutions.mslib.office.IMsoBorder getBorder() throws ComException {
     final Object obj = this._dispatchCall(128,"Border", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
   }
   @DeclDISPID(111)  public Object Clear() throws ComException {
     final Object obj = this._dispatchCall(111,"Clear", DISPATCH_METHOD,null);
@@ -44,8 +43,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(146)  public com.wilutions.mslib.office.ChartFont getFont() throws ComException {
     final Object obj = this._dispatchCall(146,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ChartFontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFontImpl.class);
   }
   @DeclDISPID(103)  public Boolean getShadow() throws ComException {
     final Object obj = this._dispatchCall(103,"Shadow", DISPATCH_PROPERTYGET,null);
@@ -73,14 +71,12 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(129)  public com.wilutions.mslib.office.IMsoInterior getInterior() throws ComException {
     final Object obj = this._dispatchCall(129,"Interior", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoInteriorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoInteriorImpl.class);
   }
   @DeclDISPID(1663)  public com.wilutions.mslib.office.ChartFillFormat getFill() throws ComException {
     final Object obj = this._dispatchCall(1663,"Fill", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ChartFillFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFillFormatImpl.class);
   }
   @DeclDISPID(127)  public Double getLeft() throws ComException {
     final Object obj = this._dispatchCall(127,"Left", DISPATCH_PROPERTYGET,null);
@@ -121,8 +117,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(1610743831)  public com.wilutions.mslib.office.IMsoChartFormat getFormat() throws ComException {
     final Object obj = this._dispatchCall(1610743831,"Format", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
   }
   @DeclDISPID(1610743832)  public Boolean getRoundedCorners() throws ComException {
     final Object obj = this._dispatchCall(1610743832,"RoundedCorners", DISPATCH_PROPERTYGET,null);
@@ -133,10 +128,10 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     assert(value != null);
     this._dispatchCall(1610743832,"RoundedCorners", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

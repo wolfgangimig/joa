@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoBroadcastCapabilities {
-  BroadcastCapFileSizeLimited(1),
-  BroadcastCapSupportsMeetingNotes(2),
-  BroadcastCapSupportsUpdateDoc(4);
+public class MsoBroadcastCapabilities {
 
+  // Typed constants
+  public final static MsoBroadcastCapabilities BroadcastCapFileSizeLimited = new MsoBroadcastCapabilities(1);
+  public final static MsoBroadcastCapabilities BroadcastCapSupportsMeetingNotes = new MsoBroadcastCapabilities(2);
+  public final static MsoBroadcastCapabilities BroadcastCapSupportsUpdateDoc = new MsoBroadcastCapabilities(4);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _BroadcastCapFileSizeLimited = 1;
+  public final static int _BroadcastCapSupportsMeetingNotes = 2;
+  public final static int _BroadcastCapSupportsUpdateDoc = 4;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoBroadcastCapabilities(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoBroadcastCapabilities valueOf(int value) {
     switch(value) {
     case 1: return BroadcastCapFileSizeLimited;
     case 2: return BroadcastCapSupportsMeetingNotes;
     case 4: return BroadcastCapSupportsUpdateDoc;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoBroadcastCapabilities.class);
+    default: return new MsoBroadcastCapabilities(value);
     }
   }
 }

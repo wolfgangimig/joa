@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{82074C80-EA51-11CE-8043-00AA006009FA}")
-public enum fmDragState {
-  fmDragStateEnter(0),
-  fmDragStateLeave(1),
-  fmDragStateOver(2);
+public class fmDragState {
 
+  // Typed constants
+  public final static fmDragState fmDragStateEnter = new fmDragState(0);
+  public final static fmDragState fmDragStateLeave = new fmDragState(1);
+  public final static fmDragState fmDragStateOver = new fmDragState(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmDragStateEnter = 0;
+  public final static int _fmDragStateLeave = 1;
+  public final static int _fmDragStateOver = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmDragState(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmDragState valueOf(int value) {
     switch(value) {
     case 0: return fmDragStateEnter;
     case 1: return fmDragStateLeave;
     case 2: return fmDragStateOver;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmDragState.class);
+    default: return new fmDragState(value);
     }
   }
 }

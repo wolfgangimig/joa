@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlBodyFormat {
-  olFormatUnspecified(0),
-  olFormatPlain(1),
-  olFormatHTML(2),
-  olFormatRichText(3);
+public class OlBodyFormat {
 
+  // Typed constants
+  public final static OlBodyFormat olFormatUnspecified = new OlBodyFormat(0);
+  public final static OlBodyFormat olFormatPlain = new OlBodyFormat(1);
+  public final static OlBodyFormat olFormatHTML = new OlBodyFormat(2);
+  public final static OlBodyFormat olFormatRichText = new OlBodyFormat(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olFormatUnspecified = 0;
+  public final static int _olFormatPlain = 1;
+  public final static int _olFormatHTML = 2;
+  public final static int _olFormatRichText = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlBodyFormat(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlBodyFormat valueOf(int value) {
     switch(value) {
     case 0: return olFormatUnspecified;
     case 1: return olFormatPlain;
     case 2: return olFormatHTML;
     case 3: return olFormatRichText;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlBodyFormat.class);
+    default: return new OlBodyFormat(value);
     }
   }
 }

@@ -11,8 +11,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,13 +21,12 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64226)  public String getCaption() throws ComException {
     final Object obj = this._dispatchCall(64226,"Caption", DISPATCH_PROPERTYGET,null);
@@ -47,8 +45,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
   @DeclDISPID(63508)  public Recipients getRecipients() throws ComException {
     final Object obj = this._dispatchCall(63508,"Recipients", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   @DeclDISPID(63508)  public void setRecipients(Recipients value) throws ComException {
     this._dispatchCall(63508,"Recipients", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -119,8 +116,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
   @DeclDISPID(64234)  public AddressList getInitialAddressList() throws ComException {
     final Object obj = this._dispatchCall(64234,"InitialAddressList", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressListImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
   @DeclDISPID(64234)  public void setInitialAddressList(AddressList value) throws ComException {
     this._dispatchCall(64234,"InitialAddressList", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));

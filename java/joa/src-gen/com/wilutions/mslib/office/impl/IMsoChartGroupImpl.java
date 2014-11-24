@@ -26,14 +26,12 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(1610743812)  public com.wilutions.mslib.office.IMsoDownBars getDownBars() throws ComException {
     final Object obj = this._dispatchCall(1610743812,"DownBars", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoDownBarsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoDownBarsImpl.class);
   }
   @DeclDISPID(1610743813)  public com.wilutions.mslib.office.IMsoDropLines getDropLines() throws ComException {
     final Object obj = this._dispatchCall(1610743813,"DropLines", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoDropLinesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoDropLinesImpl.class);
   }
   @DeclDISPID(1610743814)  public void setFirstSliceAngle(Integer value) throws ComException {
     assert(value != null);
@@ -101,8 +99,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(1610743828)  public com.wilutions.mslib.office.IMsoHiLoLines getHiLoLines() throws ComException {
     final Object obj = this._dispatchCall(1610743828,"HiLoLines", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoHiLoLinesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoHiLoLinesImpl.class);
   }
   @DeclDISPID(1610743829)  public Integer getIndex() throws ComException {
     final Object obj = this._dispatchCall(1610743829,"Index", DISPATCH_PROPERTYGET,null);
@@ -118,28 +115,26 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743832)  public Dispatch getRadarAxisLabels() throws ComException {
+  @DeclDISPID(1610743832)  public IDispatch getRadarAxisLabels() throws ComException {
     final Object obj = this._dispatchCall(1610743832,"RadarAxisLabels", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(1610743833)  public Dispatch SeriesCollection(Object Index) throws ComException {
+  @DeclDISPID(1610743833)  public IDispatch SeriesCollection(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(1610743833,"SeriesCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743834)  public com.wilutions.mslib.office.IMsoSeriesLines getSeriesLines() throws ComException {
     final Object obj = this._dispatchCall(1610743834,"SeriesLines", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoSeriesLinesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoSeriesLinesImpl.class);
   }
   @DeclDISPID(1610743839)  public com.wilutions.mslib.office.IMsoUpBars getUpBars() throws ComException {
     final Object obj = this._dispatchCall(1610743839,"UpBars", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoUpBarsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoUpBarsImpl.class);
   }
   @DeclDISPID(1610743840)  public void setVaryByCategories(Boolean value) throws ComException {
     assert(value != null);
@@ -213,32 +208,32 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     assert(value != null);
     this._dispatchCall(1610743854,"Has3DShading", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(151)  public Dispatch CategoryCollection(Object Index) throws ComException {
+  @DeclDISPID(151)  public IDispatch CategoryCollection(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(151,"CategoryCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(152)  public Dispatch FullCategoryCollection(Object Index) throws ComException {
+  @DeclDISPID(152)  public IDispatch FullCategoryCollection(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(152,"FullCategoryCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public IMsoChartGroupImpl(String progId) throws ComException {
     super(progId, "{000C1727-0000-0000-C000-000000000046}");

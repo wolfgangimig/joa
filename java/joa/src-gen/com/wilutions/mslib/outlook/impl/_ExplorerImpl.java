@@ -8,8 +8,7 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,19 +18,17 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(8449)  public com.wilutions.mslib.outlook.MAPIFolder getCurrentFolder() throws ComException {
     final Object obj = this._dispatchCall(8449,"CurrentFolder", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(8449)  public void setCurrentFolder(com.wilutions.mslib.outlook.MAPIFolder value) throws ComException {
     this._dispatchCall(8449,"CurrentFolder", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
@@ -77,14 +74,12 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(8705)  public com.wilutions.mslib.outlook.Panes getPanes() throws ComException {
     final Object obj = this._dispatchCall(8705,"Panes", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.PanesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.PanesImpl.class);
   }
   @DeclDISPID(8706)  public com.wilutions.mslib.outlook.Selection getSelection() throws ComException {
     final Object obj = this._dispatchCall(8706,"Selection", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.SelectionImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.SelectionImpl.class);
   }
   @DeclDISPID(8470)  public Integer getTop() throws ComException {
     final Object obj = this._dispatchCall(8470,"Top", DISPATCH_PROPERTYGET,null);
@@ -127,16 +122,15 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
     assert(Visible != null);
     this._dispatchCall(8708,"ShowPane", DISPATCH_METHOD,null,Pane.value,Visible);
   }
-  @DeclDISPID(64146)  public Dispatch getHTMLDocument() throws ComException {
+  @DeclDISPID(64146)  public IDispatch getHTMLDocument() throws ComException {
     final Object obj = this._dispatchCall(64146,"HTMLDocument", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64435)  public com.wilutions.mslib.outlook._NavigationPane getNavigationPane() throws ComException {
     final Object obj = this._dispatchCall(64435,"NavigationPane", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationPaneImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationPaneImpl.class);
   }
   @DeclDISPID(64461)  public void ClearSearch() throws ComException {
     this._dispatchCall(64461,"ClearSearch", DISPATCH_METHOD,null);
@@ -146,15 +140,15 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
     assert(SearchScope != null);
     this._dispatchCall(64101,"Search", DISPATCH_METHOD,null,Query,SearchScope.value);
   }
-  @DeclDISPID(64565)  public Boolean IsItemSelectableInView(Dispatch Item) throws ComException {
+  @DeclDISPID(64565)  public Boolean IsItemSelectableInView(IDispatch Item) throws ComException {
     final Object obj = this._dispatchCall(64565,"IsItemSelectableInView", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64566)  public void AddToSelection(Dispatch Item) throws ComException {
+  @DeclDISPID(64566)  public void AddToSelection(IDispatch Item) throws ComException {
     this._dispatchCall(64566,"AddToSelection", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
   }
-  @DeclDISPID(64567)  public void RemoveFromSelection(Dispatch Item) throws ComException {
+  @DeclDISPID(64567)  public void RemoveFromSelection(IDispatch Item) throws ComException {
     this._dispatchCall(64567,"RemoveFromSelection", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
   }
   @DeclDISPID(64568)  public void SelectAllItems() throws ComException {
@@ -166,24 +160,22 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(64625)  public com.wilutions.mslib.outlook._AccountSelector getAccountSelector() throws ComException {
     final Object obj = this._dispatchCall(64625,"AccountSelector", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._AccountSelectorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._AccountSelectorImpl.class);
   }
   @DeclDISPID(64632)  public com.wilutions.mslib.outlook._AttachmentSelection getAttachmentSelection() throws ComException {
     final Object obj = this._dispatchCall(64632,"AttachmentSelection", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._AttachmentSelectionImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._AttachmentSelectionImpl.class);
   }
-  @DeclDISPID(64659)  public Dispatch getActiveInlineResponse() throws ComException {
+  @DeclDISPID(64659)  public IDispatch getActiveInlineResponse() throws ComException {
     final Object obj = this._dispatchCall(64659,"ActiveInlineResponse", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(64660)  public Dispatch getActiveInlineResponseWordEditor() throws ComException {
+  @DeclDISPID(64660)  public IDispatch getActiveInlineResponseWordEditor() throws ComException {
     final Object obj = this._dispatchCall(64660,"ActiveInlineResponseWordEditor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public _ExplorerImpl(String progId) throws ComException {
     super(progId, "{00063003-0000-0000-C000-000000000046}");

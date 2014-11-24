@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171F-0000-0000-C000-000000000046}")
 public interface IMsoDataLabels extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(110)  public String getName() throws ComException;
   @DeclDISPID(235)  public Object Select() throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
@@ -59,7 +59,7 @@ public interface IMsoDataLabels extends IDispatch {
   @DeclDISPID(170)  public IMsoDataLabel Item(Object Index) throws ComException;
   @DeclDISPID(-4)  public Object _NewEnum() throws ComException;
   @DeclDISPID(1610743858)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public IMsoDataLabel get_Default(Object Index) throws ComException;
   @DeclDISPID(2028)  public void Propagate(Object Index) throws ComException;

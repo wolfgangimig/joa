@@ -11,8 +11,8 @@ public interface Link extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(109)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(109)  public IDispatch getParent() throws ComException;
   @DeclDISPID(12289)  public String getName() throws ComException;
   @DeclDISPID(8449)  public OlObjectClass getType() throws ComException;
-  @DeclDISPID(8450)  public Dispatch getItem() throws ComException;
+  @DeclDISPID(8450)  public IDispatch getItem() throws ComException;
 }

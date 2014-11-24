@@ -76,8 +76,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -85,8 +84,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(27)  public void setPictureSizeMode(com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
     assert(value != null);

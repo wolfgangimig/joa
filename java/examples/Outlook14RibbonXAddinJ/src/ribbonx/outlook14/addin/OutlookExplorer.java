@@ -8,6 +8,7 @@ import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.IDispatch;
 import com.wilutions.mslib.outlook.Explorer;
 import com.wilutions.mslib.outlook.ExplorerEvents;
 import com.wilutions.mslib.outlook._Explorer;
@@ -52,7 +53,7 @@ public class OutlookExplorer extends DispatchImpl implements ExplorerEvents {
 	}
 
 	@Override
-	public void onBeforeFolderSwitch(Dispatch NewFolder, ByRef<Boolean> Cancel) throws ComException {
+	public void onBeforeFolderSwitch(IDispatch NewFolder, ByRef<Boolean> Cancel) throws ComException {
 	}
 
 	@Override

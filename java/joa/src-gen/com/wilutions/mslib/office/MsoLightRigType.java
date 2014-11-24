@@ -8,38 +8,75 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoLightRigType {
-  msoLightRigMixed(-2),
-  msoLightRigLegacyFlat1(1),
-  msoLightRigLegacyFlat2(2),
-  msoLightRigLegacyFlat3(3),
-  msoLightRigLegacyFlat4(4),
-  msoLightRigLegacyNormal1(5),
-  msoLightRigLegacyNormal2(6),
-  msoLightRigLegacyNormal3(7),
-  msoLightRigLegacyNormal4(8),
-  msoLightRigLegacyHarsh1(9),
-  msoLightRigLegacyHarsh2(10),
-  msoLightRigLegacyHarsh3(11),
-  msoLightRigLegacyHarsh4(12),
-  msoLightRigThreePoint(13),
-  msoLightRigBalanced(14),
-  msoLightRigSoft(15),
-  msoLightRigHarsh(16),
-  msoLightRigFlood(17),
-  msoLightRigContrasting(18),
-  msoLightRigMorning(19),
-  msoLightRigSunrise(20),
-  msoLightRigSunset(21),
-  msoLightRigChilly(22),
-  msoLightRigFreezing(23),
-  msoLightRigFlat(24),
-  msoLightRigTwoPoint(25),
-  msoLightRigGlow(26),
-  msoLightRigBrightRoom(27);
+public class MsoLightRigType {
 
+  // Typed constants
+  public final static MsoLightRigType msoLightRigMixed = new MsoLightRigType(-2);
+  public final static MsoLightRigType msoLightRigLegacyFlat1 = new MsoLightRigType(1);
+  public final static MsoLightRigType msoLightRigLegacyFlat2 = new MsoLightRigType(2);
+  public final static MsoLightRigType msoLightRigLegacyFlat3 = new MsoLightRigType(3);
+  public final static MsoLightRigType msoLightRigLegacyFlat4 = new MsoLightRigType(4);
+  public final static MsoLightRigType msoLightRigLegacyNormal1 = new MsoLightRigType(5);
+  public final static MsoLightRigType msoLightRigLegacyNormal2 = new MsoLightRigType(6);
+  public final static MsoLightRigType msoLightRigLegacyNormal3 = new MsoLightRigType(7);
+  public final static MsoLightRigType msoLightRigLegacyNormal4 = new MsoLightRigType(8);
+  public final static MsoLightRigType msoLightRigLegacyHarsh1 = new MsoLightRigType(9);
+  public final static MsoLightRigType msoLightRigLegacyHarsh2 = new MsoLightRigType(10);
+  public final static MsoLightRigType msoLightRigLegacyHarsh3 = new MsoLightRigType(11);
+  public final static MsoLightRigType msoLightRigLegacyHarsh4 = new MsoLightRigType(12);
+  public final static MsoLightRigType msoLightRigThreePoint = new MsoLightRigType(13);
+  public final static MsoLightRigType msoLightRigBalanced = new MsoLightRigType(14);
+  public final static MsoLightRigType msoLightRigSoft = new MsoLightRigType(15);
+  public final static MsoLightRigType msoLightRigHarsh = new MsoLightRigType(16);
+  public final static MsoLightRigType msoLightRigFlood = new MsoLightRigType(17);
+  public final static MsoLightRigType msoLightRigContrasting = new MsoLightRigType(18);
+  public final static MsoLightRigType msoLightRigMorning = new MsoLightRigType(19);
+  public final static MsoLightRigType msoLightRigSunrise = new MsoLightRigType(20);
+  public final static MsoLightRigType msoLightRigSunset = new MsoLightRigType(21);
+  public final static MsoLightRigType msoLightRigChilly = new MsoLightRigType(22);
+  public final static MsoLightRigType msoLightRigFreezing = new MsoLightRigType(23);
+  public final static MsoLightRigType msoLightRigFlat = new MsoLightRigType(24);
+  public final static MsoLightRigType msoLightRigTwoPoint = new MsoLightRigType(25);
+  public final static MsoLightRigType msoLightRigGlow = new MsoLightRigType(26);
+  public final static MsoLightRigType msoLightRigBrightRoom = new MsoLightRigType(27);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoLightRigMixed = -2;
+  public final static int _msoLightRigLegacyFlat1 = 1;
+  public final static int _msoLightRigLegacyFlat2 = 2;
+  public final static int _msoLightRigLegacyFlat3 = 3;
+  public final static int _msoLightRigLegacyFlat4 = 4;
+  public final static int _msoLightRigLegacyNormal1 = 5;
+  public final static int _msoLightRigLegacyNormal2 = 6;
+  public final static int _msoLightRigLegacyNormal3 = 7;
+  public final static int _msoLightRigLegacyNormal4 = 8;
+  public final static int _msoLightRigLegacyHarsh1 = 9;
+  public final static int _msoLightRigLegacyHarsh2 = 10;
+  public final static int _msoLightRigLegacyHarsh3 = 11;
+  public final static int _msoLightRigLegacyHarsh4 = 12;
+  public final static int _msoLightRigThreePoint = 13;
+  public final static int _msoLightRigBalanced = 14;
+  public final static int _msoLightRigSoft = 15;
+  public final static int _msoLightRigHarsh = 16;
+  public final static int _msoLightRigFlood = 17;
+  public final static int _msoLightRigContrasting = 18;
+  public final static int _msoLightRigMorning = 19;
+  public final static int _msoLightRigSunrise = 20;
+  public final static int _msoLightRigSunset = 21;
+  public final static int _msoLightRigChilly = 22;
+  public final static int _msoLightRigFreezing = 23;
+  public final static int _msoLightRigFlat = 24;
+  public final static int _msoLightRigTwoPoint = 25;
+  public final static int _msoLightRigGlow = 26;
+  public final static int _msoLightRigBrightRoom = 27;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoLightRigType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoLightRigType valueOf(int value) {
     switch(value) {
     case -2: return msoLightRigMixed;
@@ -70,7 +107,7 @@ public enum MsoLightRigType {
     case 25: return msoLightRigTwoPoint;
     case 26: return msoLightRigGlow;
     case 27: return msoLightRigBrightRoom;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoLightRigType.class);
+    default: return new MsoLightRigType(value);
     }
   }
 }

@@ -8,13 +8,13 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C170B-0000-0000-C000-000000000046}")
 public interface IMsoSeries extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(47)  public XlAxisGroup getAxisGroup() throws ComException;
   @DeclDISPID(47)  public void setAxisGroup(XlAxisGroup RHS) throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(112)  public Object ClearFormats() throws ComException;
   @DeclDISPID(551)  public Object Copy() throws ComException;
-  @DeclDISPID(157)  public Dispatch DataLabels(Object Index) throws ComException;
+  @DeclDISPID(157)  public IDispatch DataLabels(Object Index) throws ComException;
   @DeclDISPID(117)  public Object Delete() throws ComException;
   @DeclDISPID(152)  public Object ErrorBar(XlErrorBarDirection Direction, XlErrorBarInclude Include, XlErrorBarType Type, Object Amount, Object MinusValues) throws ComException;
   @DeclDISPID(159)  public IMsoErrorBars getErrorBars() throws ComException;
@@ -57,11 +57,11 @@ public interface IMsoSeries extends IDispatch {
   @DeclDISPID(162)  public void setPictureUnit(Double RHS) throws ComException;
   @DeclDISPID(228)  public Integer getPlotOrder() throws ComException;
   @DeclDISPID(228)  public void setPlotOrder(Integer RHS) throws ComException;
-  @DeclDISPID(70)  public Dispatch Points(Object Index) throws ComException;
+  @DeclDISPID(70)  public IDispatch Points(Object Index) throws ComException;
   @DeclDISPID(235)  public Object Select() throws ComException;
   @DeclDISPID(163)  public Boolean getSmooth() throws ComException;
   @DeclDISPID(163)  public void setSmooth(Boolean RHS) throws ComException;
-  @DeclDISPID(154)  public Dispatch Trendlines(Object Index) throws ComException;
+  @DeclDISPID(154)  public IDispatch Trendlines(Object Index) throws ComException;
   @DeclDISPID(108)  public Integer getType() throws ComException;
   @DeclDISPID(108)  public void setType(Integer RHS) throws ComException;
   @DeclDISPID(1400)  public XlChartType getChartType() throws ComException;
@@ -90,7 +90,7 @@ public interface IMsoSeries extends IDispatch {
   @DeclDISPID(1666)  public IMsoLeaderLines getLeaderLines() throws ComException;
   @DeclDISPID(1922)  public Object ApplyDataLabels(XlDataLabelsType Type, Object IMsoLegendKey, Object AutoText, Object HasLeaderLines, Object ShowSeriesName, Object ShowCategoryName, Object ShowValue, Object ShowPercentage, Object ShowBubbleSize, Object Separator) throws ComException;
   @DeclDISPID(1610743890)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(2649)  public Double getPictureUnit2() throws ComException;
   @DeclDISPID(2649)  public void setPictureUnit2(Double RHS) throws ComException;

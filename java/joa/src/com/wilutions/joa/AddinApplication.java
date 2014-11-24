@@ -40,7 +40,7 @@ public class AddinApplication extends javafx.application.Application {
 			String[] args) {
 
 		try {
-			if (parseCommandLine(mainClass, args)) {
+			if (invokeParseCommandLine(mainClass, args)) {
 				Platform.exit();
 			} else {
 				try {
@@ -76,8 +76,11 @@ public class AddinApplication extends javafx.application.Application {
 
 	}
 
-	public static boolean parseCommandLine(Class<? extends AddinApplication> addinMain, String[] args)
-			throws ComException, IOException {
+	private static boolean invokeParseCommandLine(Class<? extends AddinApplication> addinMain, String[] args) throws ComException, InstantiationException, IllegalAccessException, IOException {
+		return addinMain.newInstance().parseCommandLine(args);
+	}
+
+	public boolean parseCommandLine(String[] args) throws ComException, IOException {
 
 		Command command = Command.Run;
 		boolean userNotMachine = false;
@@ -126,16 +129,13 @@ public class AddinApplication extends javafx.application.Application {
 		case Version:
 			break;
 		case RegisterServer: {
+			Class<?> addinMain = this.getClass();
 			String path = RegUtil.getExecPath(addinMain);
-			String regfor = userNotMachine ? "user" : "machine";
-			System.out.println("Register Addin for " + regfor + " at path=" + path);
-			ComModule.getInstance().register(userNotMachine, path);
+			register(userNotMachine, path);
 		}
 			break;
 		case UnregisterServer: {
-			String regfor = userNotMachine ? "user" : "machine";
-			System.out.println("Unregister Addin for " + regfor);
-			ComModule.getInstance().unregister(userNotMachine);
+			unregister(userNotMachine);
 		}
 			break;
 		case Run:
@@ -148,7 +148,19 @@ public class AddinApplication extends javafx.application.Application {
 		return command != Command.Run;
 	}
 
-	public static void activateDisabledAddin(Class<?> addinClass) throws ComException {
+	protected void unregister(boolean userNotMachine) {
+		String regfor = userNotMachine ? "user" : "machine";
+		System.out.println("Unregister for " + regfor);
+		ComModule.getInstance().unregister(userNotMachine);
+	}
+
+	protected void register(boolean userNotMachine, String execPath) {
+		String regfor = userNotMachine ? "user" : "machine";
+		System.out.println("Register for " + regfor + " at path=" + execPath);
+		ComModule.getInstance().register(userNotMachine, execPath);
+	}
+
+	public void activateDisabledAddin(Class<?> addinClass) throws ComException {
 		OfficeApplication application = addinClass.getDeclaredAnnotation(DeclAddin.class).application();
 		if (application != null && application == OfficeApplication.Outlook) {
 			String progId = addinClass.getDeclaredAnnotation(CoClass.class).progId();
@@ -158,9 +170,9 @@ public class AddinApplication extends javafx.application.Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		
+
 		javafx.application.Application.setUserAgentStylesheet(null);
-		
+
 		// A primary stage is only needed in order to keep the
 		// javafx alive when the last TaskPane or FormRegion
 		// is closed.

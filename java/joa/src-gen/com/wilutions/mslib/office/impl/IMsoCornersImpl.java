@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E7F-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoCornersImpl extends Dispatch implements com.wilutions.mslib.office.IMsoCorners {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(110)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(110,"Name", DISPATCH_PROPERTYGET,null);
@@ -20,10 +20,10 @@ public class IMsoCornersImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

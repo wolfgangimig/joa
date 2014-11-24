@@ -11,7 +11,7 @@ public interface _NameSpace extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(8449)  public Recipient getCurrentUser() throws ComException;
   @DeclDISPID(8451)  public _Folders getFolders() throws ComException;
   @DeclDISPID(8452)  public String getType() throws ComException;
@@ -19,7 +19,7 @@ public interface _NameSpace extends IDispatch {
   @DeclDISPID(8458)  public Recipient CreateRecipient(String RecipientName) throws ComException;
   @DeclDISPID(8459)  public MAPIFolder GetDefaultFolder(OlDefaultFolders FolderType) throws ComException;
   @DeclDISPID(8456)  public MAPIFolder GetFolderFromID(String EntryIDFolder, Object EntryIDStore) throws ComException;
-  @DeclDISPID(8457)  public Dispatch GetItemFromID(String EntryIDItem, Object EntryIDStore) throws ComException;
+  @DeclDISPID(8457)  public IDispatch GetItemFromID(String EntryIDItem, Object EntryIDStore) throws ComException;
   @DeclDISPID(8455)  public Recipient GetRecipientFromID(String EntryID) throws ComException;
   @DeclDISPID(8460)  public MAPIFolder GetSharedDefaultFolder(Recipient Recipient, OlDefaultFolders FolderType) throws ComException;
   @DeclDISPID(8454)  public void Logoff() throws ComException;
@@ -43,7 +43,7 @@ public interface _NameSpace extends IDispatch {
   @DeclDISPID(64262)  public Store GetStoreFromID(String ID) throws ComException;
   @DeclDISPID(64421)  public Categories getCategories() throws ComException;
   @DeclDISPID(64502)  public MAPIFolder OpenSharedFolder(String Path, Object Name, Object DownloadAttachments, Object UseTTL) throws ComException;
-  @DeclDISPID(64503)  public Dispatch OpenSharedItem(String Path) throws ComException;
+  @DeclDISPID(64503)  public IDispatch OpenSharedItem(String Path) throws ComException;
   @DeclDISPID(64484)  public SharingItem CreateSharingItem(Object Context, Object Provider) throws ComException;
   @DeclDISPID(64517)  public String getExchangeMailboxServerName() throws ComException;
   @DeclDISPID(64516)  public String getExchangeMailboxServerVersion() throws ComException;

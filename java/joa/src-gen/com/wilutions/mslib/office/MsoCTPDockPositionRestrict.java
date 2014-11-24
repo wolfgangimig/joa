@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoCTPDockPositionRestrict {
-  msoCTPDockPositionRestrictNone(0),
-  msoCTPDockPositionRestrictNoChange(1),
-  msoCTPDockPositionRestrictNoHorizontal(2),
-  msoCTPDockPositionRestrictNoVertical(3);
+public class MsoCTPDockPositionRestrict {
 
+  // Typed constants
+  public final static MsoCTPDockPositionRestrict msoCTPDockPositionRestrictNone = new MsoCTPDockPositionRestrict(0);
+  public final static MsoCTPDockPositionRestrict msoCTPDockPositionRestrictNoChange = new MsoCTPDockPositionRestrict(1);
+  public final static MsoCTPDockPositionRestrict msoCTPDockPositionRestrictNoHorizontal = new MsoCTPDockPositionRestrict(2);
+  public final static MsoCTPDockPositionRestrict msoCTPDockPositionRestrictNoVertical = new MsoCTPDockPositionRestrict(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoCTPDockPositionRestrictNone = 0;
+  public final static int _msoCTPDockPositionRestrictNoChange = 1;
+  public final static int _msoCTPDockPositionRestrictNoHorizontal = 2;
+  public final static int _msoCTPDockPositionRestrictNoVertical = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoCTPDockPositionRestrict(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoCTPDockPositionRestrict valueOf(int value) {
     switch(value) {
     case 0: return msoCTPDockPositionRestrictNone;
     case 1: return msoCTPDockPositionRestrictNoChange;
     case 2: return msoCTPDockPositionRestrictNoHorizontal;
     case 3: return msoCTPDockPositionRestrictNoVertical;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoCTPDockPositionRestrict.class);
+    default: return new MsoCTPDockPositionRestrict(value);
     }
   }
 }

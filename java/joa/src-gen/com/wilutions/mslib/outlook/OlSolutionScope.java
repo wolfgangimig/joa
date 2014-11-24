@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlSolutionScope {
-  olHideInDefaultModules(0),
-  olShowInDefaultModules(1);
+public class OlSolutionScope {
 
+  // Typed constants
+  public final static OlSolutionScope olHideInDefaultModules = new OlSolutionScope(0);
+  public final static OlSolutionScope olShowInDefaultModules = new OlSolutionScope(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olHideInDefaultModules = 0;
+  public final static int _olShowInDefaultModules = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlSolutionScope(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlSolutionScope valueOf(int value) {
     switch(value) {
     case 0: return olHideInDefaultModules;
     case 1: return olShowInDefaultModules;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlSolutionScope.class);
+    default: return new OlSolutionScope(value);
     }
   }
 }

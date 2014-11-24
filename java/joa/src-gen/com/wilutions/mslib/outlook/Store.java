@@ -11,8 +11,7 @@ public class Store extends Dispatch implements _Store {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,13 +21,12 @@ public class Store extends Dispatch implements _Store {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(12289)  public String getDisplayName() throws ComException {
     final Object obj = this._dispatchCall(12289,"DisplayName", DISPATCH_PROPERTYGET,null);
@@ -63,14 +61,12 @@ public class Store extends Dispatch implements _Store {
   @DeclDISPID(64219)  public MAPIFolder GetRootFolder() throws ComException {
     final Object obj = this._dispatchCall(64219,"GetRootFolder", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64220)  public _Folders GetSearchFolders() throws ComException {
     final Object obj = this._dispatchCall(64220,"GetSearchFolders", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._FoldersImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._FoldersImpl.class);
   }
   @DeclDISPID(64224)  public Boolean getIsOpen() throws ComException {
     final Object obj = this._dispatchCall(64224,"IsOpen", DISPATCH_PROPERTYGET,null);
@@ -81,20 +77,19 @@ public class Store extends Dispatch implements _Store {
     final Object obj = this._dispatchCall(64265,"GetRules", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Rules.class);
+    return disp.as(Rules.class);
   }
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException {
     final Object obj = this._dispatchCall(64253,"PropertyAccessor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(PropertyAccessor.class);
+    return disp.as(PropertyAccessor.class);
   }
   @DeclDISPID(8456)  public MAPIFolder GetSpecialFolder(OlSpecialFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(8456,"GetSpecialFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64532)  public Boolean getIsInstantSearchEnabled() throws ComException {
     final Object obj = this._dispatchCall(64532,"IsInstantSearchEnabled", DISPATCH_PROPERTYGET,null);
@@ -108,8 +103,7 @@ public class Store extends Dispatch implements _Store {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(64621,"GetDefaultFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64630)  public Boolean getIsConversationEnabled() throws ComException {
     final Object obj = this._dispatchCall(64630,"IsConversationEnabled", DISPATCH_PROPERTYGET,null);
@@ -120,7 +114,7 @@ public class Store extends Dispatch implements _Store {
     final Object obj = this._dispatchCall(64421,"Categories", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Categories.class);
+    return disp.as(Categories.class);
   }
   public Store() throws ComException {
     super("{000610C7-0000-0000-C000-000000000046}", "{000630C7-0000-0000-C000-000000000046}");

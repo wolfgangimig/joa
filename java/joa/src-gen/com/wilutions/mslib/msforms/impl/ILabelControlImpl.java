@@ -76,8 +76,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
@@ -95,8 +94,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
@@ -113,8 +111,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(11)  public void setPicturePosition(com.wilutions.mslib.msforms.fmPicturePosition value) throws ComException {
     assert(value != null);

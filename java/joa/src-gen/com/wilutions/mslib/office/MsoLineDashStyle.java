@@ -8,23 +8,45 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoLineDashStyle {
-  msoLineDashStyleMixed(-2),
-  msoLineSolid(1),
-  msoLineSquareDot(2),
-  msoLineRoundDot(3),
-  msoLineDash(4),
-  msoLineDashDot(5),
-  msoLineDashDotDot(6),
-  msoLineLongDash(7),
-  msoLineLongDashDot(8),
-  msoLineLongDashDotDot(9),
-  msoLineSysDash(10),
-  msoLineSysDot(11),
-  msoLineSysDashDot(12);
+public class MsoLineDashStyle {
 
+  // Typed constants
+  public final static MsoLineDashStyle msoLineDashStyleMixed = new MsoLineDashStyle(-2);
+  public final static MsoLineDashStyle msoLineSolid = new MsoLineDashStyle(1);
+  public final static MsoLineDashStyle msoLineSquareDot = new MsoLineDashStyle(2);
+  public final static MsoLineDashStyle msoLineRoundDot = new MsoLineDashStyle(3);
+  public final static MsoLineDashStyle msoLineDash = new MsoLineDashStyle(4);
+  public final static MsoLineDashStyle msoLineDashDot = new MsoLineDashStyle(5);
+  public final static MsoLineDashStyle msoLineDashDotDot = new MsoLineDashStyle(6);
+  public final static MsoLineDashStyle msoLineLongDash = new MsoLineDashStyle(7);
+  public final static MsoLineDashStyle msoLineLongDashDot = new MsoLineDashStyle(8);
+  public final static MsoLineDashStyle msoLineLongDashDotDot = new MsoLineDashStyle(9);
+  public final static MsoLineDashStyle msoLineSysDash = new MsoLineDashStyle(10);
+  public final static MsoLineDashStyle msoLineSysDot = new MsoLineDashStyle(11);
+  public final static MsoLineDashStyle msoLineSysDashDot = new MsoLineDashStyle(12);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoLineDashStyleMixed = -2;
+  public final static int _msoLineSolid = 1;
+  public final static int _msoLineSquareDot = 2;
+  public final static int _msoLineRoundDot = 3;
+  public final static int _msoLineDash = 4;
+  public final static int _msoLineDashDot = 5;
+  public final static int _msoLineDashDotDot = 6;
+  public final static int _msoLineLongDash = 7;
+  public final static int _msoLineLongDashDot = 8;
+  public final static int _msoLineLongDashDotDot = 9;
+  public final static int _msoLineSysDash = 10;
+  public final static int _msoLineSysDot = 11;
+  public final static int _msoLineSysDashDot = 12;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoLineDashStyle(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoLineDashStyle valueOf(int value) {
     switch(value) {
     case -2: return msoLineDashStyleMixed;
@@ -40,7 +62,7 @@ public enum MsoLineDashStyle {
     case 10: return msoLineSysDash;
     case 11: return msoLineSysDot;
     case 12: return msoLineSysDashDot;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoLineDashStyle.class);
+    default: return new MsoLineDashStyle(value);
     }
   }
 }

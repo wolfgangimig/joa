@@ -31,8 +31,7 @@ public class ITabStripImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
     assert(value != null);
@@ -49,8 +48,7 @@ public class ITabStripImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
@@ -143,14 +141,12 @@ public class ITabStripImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(0)  public com.wilutions.mslib.msforms.Tabs getTabs() throws ComException {
     final Object obj = this._dispatchCall(0,"Tabs", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabsImpl.class);
   }
   @DeclDISPID(545)  public com.wilutions.mslib.msforms.Tab getSelectedItem() throws ComException {
     final Object obj = this._dispatchCall(545,"SelectedItem", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
   @DeclDISPID(528)  public void setValue(Integer value) throws ComException {
     assert(value != null);

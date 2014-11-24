@@ -19,21 +19,19 @@ public class TabsImpl extends Dispatch implements com.wilutions.mslib.msforms.Ta
     assert(lIndex != null);
     final Object obj = this._dispatchCall(1610743810,"_GetItemByIndex", DISPATCH_METHOD,null,lIndex);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
   @DeclDISPID(1610743811)  public com.wilutions.mslib.msforms.Tab _GetItemByName(String bstr) throws ComException {
     assert(bstr != null);
     final Object obj = this._dispatchCall(1610743811,"_GetItemByName", DISPATCH_METHOD,null,bstr);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
-  @DeclDISPID(0)  public Dispatch Item(Object varg) throws ComException {
+  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException {
     assert(varg != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,varg);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743813)  public Object Enum() throws ComException {
     final Object obj = this._dispatchCall(1610743813,"Enum", DISPATCH_METHOD,null);
@@ -46,16 +44,14 @@ public class TabsImpl extends Dispatch implements com.wilutions.mslib.msforms.Ta
     assert(lIndex != null);
     final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,bstrName,bstrCaption,lIndex);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
   @DeclDISPID(1610743815)  public com.wilutions.mslib.msforms.Tab _Add(String bstrName, String bstrCaption) throws ComException {
     assert(bstrName != null);
     assert(bstrCaption != null);
     final Object obj = this._dispatchCall(1610743815,"_Add", DISPATCH_METHOD,null,bstrName,bstrCaption);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
   @DeclDISPID(1610743816)  public com.wilutions.mslib.msforms.Tab _Insert(String bstrName, String bstrCaption, Integer lIndex) throws ComException {
     assert(bstrName != null);
@@ -63,8 +59,7 @@ public class TabsImpl extends Dispatch implements com.wilutions.mslib.msforms.Ta
     assert(lIndex != null);
     final Object obj = this._dispatchCall(1610743816,"_Insert", DISPATCH_METHOD,null,bstrName,bstrCaption,lIndex);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
   @DeclDISPID(67)  public void Remove(Object varg) throws ComException {
     assert(varg != null);

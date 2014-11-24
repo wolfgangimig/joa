@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoSyncConflictResolutionType {
-  msoSyncConflictClientWins(0),
-  msoSyncConflictServerWins(1),
-  msoSyncConflictMerge(2);
+public class MsoSyncConflictResolutionType {
 
+  // Typed constants
+  public final static MsoSyncConflictResolutionType msoSyncConflictClientWins = new MsoSyncConflictResolutionType(0);
+  public final static MsoSyncConflictResolutionType msoSyncConflictServerWins = new MsoSyncConflictResolutionType(1);
+  public final static MsoSyncConflictResolutionType msoSyncConflictMerge = new MsoSyncConflictResolutionType(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoSyncConflictClientWins = 0;
+  public final static int _msoSyncConflictServerWins = 1;
+  public final static int _msoSyncConflictMerge = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoSyncConflictResolutionType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoSyncConflictResolutionType valueOf(int value) {
     switch(value) {
     case 0: return msoSyncConflictClientWins;
     case 1: return msoSyncConflictServerWins;
     case 2: return msoSyncConflictMerge;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoSyncConflictResolutionType.class);
+    default: return new MsoSyncConflictResolutionType(value);
     }
   }
 }

@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A6F-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.office.CommandBar {
-  @DeclDISPID(1610809344)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610809344)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610809344,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610809345)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610809345,"Creator", DISPATCH_PROPERTYGET,null);
@@ -32,8 +32,7 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(1610874883)  public com.wilutions.mslib.office.CommandBarControls getControls() throws ComException {
     final Object obj = this._dispatchCall(1610874883,"Controls", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlsImpl.class);
   }
   @DeclDISPID(1610874884)  public void Delete() throws ComException {
     this._dispatchCall(1610874884,"Delete", DISPATCH_METHOD,null);
@@ -55,8 +54,7 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(Recursive != null);
     final Object obj = this._dispatchCall(1610874887,"FindControl", DISPATCH_METHOD,null,Type,Id,Tag,Visible,Recursive);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
   @DeclDISPID(1610874888)  public Integer getHeight() throws ComException {
     final Object obj = this._dispatchCall(1610874888,"Height", DISPATCH_PROPERTYGET,null);
@@ -99,10 +97,10 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(value != null);
     this._dispatchCall(1610874896,"NameLocal", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610874898)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1610874898)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1610874898,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610874899)  public com.wilutions.mslib.office.MsoBarPosition getPosition() throws ComException {
     final Object obj = this._dispatchCall(1610874899,"Position", DISPATCH_PROPERTYGET,null);

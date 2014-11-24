@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlSharingMsgType {
-  olSharingMsgTypeUnknown(0),
-  olSharingMsgTypeRequest(1),
-  olSharingMsgTypeInvite(2),
-  olSharingMsgTypeInviteAndRequest(3),
-  olSharingMsgTypeResponseAllow(4),
-  olSharingMsgTypeResponseDeny(5);
+public class OlSharingMsgType {
 
+  // Typed constants
+  public final static OlSharingMsgType olSharingMsgTypeUnknown = new OlSharingMsgType(0);
+  public final static OlSharingMsgType olSharingMsgTypeRequest = new OlSharingMsgType(1);
+  public final static OlSharingMsgType olSharingMsgTypeInvite = new OlSharingMsgType(2);
+  public final static OlSharingMsgType olSharingMsgTypeInviteAndRequest = new OlSharingMsgType(3);
+  public final static OlSharingMsgType olSharingMsgTypeResponseAllow = new OlSharingMsgType(4);
+  public final static OlSharingMsgType olSharingMsgTypeResponseDeny = new OlSharingMsgType(5);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olSharingMsgTypeUnknown = 0;
+  public final static int _olSharingMsgTypeRequest = 1;
+  public final static int _olSharingMsgTypeInvite = 2;
+  public final static int _olSharingMsgTypeInviteAndRequest = 3;
+  public final static int _olSharingMsgTypeResponseAllow = 4;
+  public final static int _olSharingMsgTypeResponseDeny = 5;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlSharingMsgType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlSharingMsgType valueOf(int value) {
     switch(value) {
     case 0: return olSharingMsgTypeUnknown;
@@ -26,7 +41,7 @@ public enum OlSharingMsgType {
     case 3: return olSharingMsgTypeInviteAndRequest;
     case 4: return olSharingMsgTypeResponseAllow;
     case 5: return olSharingMsgTypeResponseDeny;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlSharingMsgType.class);
+    default: return new OlSharingMsgType(value);
     }
   }
 }

@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoBroadcastState {
-  NoBroadcast(0),
-  BroadcastStarted(1),
-  BroadcastPaused(2);
+public class MsoBroadcastState {
 
+  // Typed constants
+  public final static MsoBroadcastState NoBroadcast = new MsoBroadcastState(0);
+  public final static MsoBroadcastState BroadcastStarted = new MsoBroadcastState(1);
+  public final static MsoBroadcastState BroadcastPaused = new MsoBroadcastState(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _NoBroadcast = 0;
+  public final static int _BroadcastStarted = 1;
+  public final static int _BroadcastPaused = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoBroadcastState(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoBroadcastState valueOf(int value) {
     switch(value) {
     case 0: return NoBroadcast;
     case 1: return BroadcastStarted;
     case 2: return BroadcastPaused;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoBroadcastState.class);
+    default: return new MsoBroadcastState(value);
     }
   }
 }

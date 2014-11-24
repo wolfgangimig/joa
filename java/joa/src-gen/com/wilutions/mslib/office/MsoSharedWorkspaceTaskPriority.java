@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoSharedWorkspaceTaskPriority {
-  msoSharedWorkspaceTaskPriorityHigh(1),
-  msoSharedWorkspaceTaskPriorityNormal(2),
-  msoSharedWorkspaceTaskPriorityLow(3);
+public class MsoSharedWorkspaceTaskPriority {
 
+  // Typed constants
+  public final static MsoSharedWorkspaceTaskPriority msoSharedWorkspaceTaskPriorityHigh = new MsoSharedWorkspaceTaskPriority(1);
+  public final static MsoSharedWorkspaceTaskPriority msoSharedWorkspaceTaskPriorityNormal = new MsoSharedWorkspaceTaskPriority(2);
+  public final static MsoSharedWorkspaceTaskPriority msoSharedWorkspaceTaskPriorityLow = new MsoSharedWorkspaceTaskPriority(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoSharedWorkspaceTaskPriorityHigh = 1;
+  public final static int _msoSharedWorkspaceTaskPriorityNormal = 2;
+  public final static int _msoSharedWorkspaceTaskPriorityLow = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoSharedWorkspaceTaskPriority(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoSharedWorkspaceTaskPriority valueOf(int value) {
     switch(value) {
     case 1: return msoSharedWorkspaceTaskPriorityHigh;
     case 2: return msoSharedWorkspaceTaskPriorityNormal;
     case 3: return msoSharedWorkspaceTaskPriorityLow;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoSharedWorkspaceTaskPriority.class);
+    default: return new MsoSharedWorkspaceTaskPriority(value);
     }
   }
 }

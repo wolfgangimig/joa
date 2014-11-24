@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum XlBorderWeight {
-  xlHairline(1),
-  xlMedium(-4138),
-  xlThick(4),
-  xlThin(2);
+public class XlBorderWeight {
 
+  // Typed constants
+  public final static XlBorderWeight xlHairline = new XlBorderWeight(1);
+  public final static XlBorderWeight xlMedium = new XlBorderWeight(-4138);
+  public final static XlBorderWeight xlThick = new XlBorderWeight(4);
+  public final static XlBorderWeight xlThin = new XlBorderWeight(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _xlHairline = 1;
+  public final static int _xlMedium = -4138;
+  public final static int _xlThick = 4;
+  public final static int _xlThin = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private XlBorderWeight(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  XlBorderWeight valueOf(int value) {
     switch(value) {
     case 1: return xlHairline;
     case -4138: return xlMedium;
     case 4: return xlThick;
     case 2: return xlThin;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + XlBorderWeight.class);
+    default: return new XlBorderWeight(value);
     }
   }
 }

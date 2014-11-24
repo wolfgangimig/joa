@@ -8,229 +8,457 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoLanguageID {
-  msoLanguageIDMixed(-2),
-  msoLanguageIDNone(0),
-  msoLanguageIDNoProofing(1024),
-  msoLanguageIDAfrikaans(1078),
-  msoLanguageIDAlbanian(1052),
-  msoLanguageIDAmharic(1118),
-  msoLanguageIDArabicAlgeria(5121),
-  msoLanguageIDArabicBahrain(15361),
-  msoLanguageIDArabicEgypt(3073),
-  msoLanguageIDArabicIraq(2049),
-  msoLanguageIDArabicJordan(11265),
-  msoLanguageIDArabicKuwait(13313),
-  msoLanguageIDArabicLebanon(12289),
-  msoLanguageIDArabicLibya(4097),
-  msoLanguageIDArabicMorocco(6145),
-  msoLanguageIDArabicOman(8193),
-  msoLanguageIDArabicQatar(16385),
-  msoLanguageIDArabic(1025),
-  msoLanguageIDArabicSyria(10241),
-  msoLanguageIDArabicTunisia(7169),
-  msoLanguageIDArabicUAE(14337),
-  msoLanguageIDArabicYemen(9217),
-  msoLanguageIDArmenian(1067),
-  msoLanguageIDAssamese(1101),
-  msoLanguageIDAzeriCyrillic(2092),
-  msoLanguageIDAzeriLatin(1068),
-  msoLanguageIDBasque(1069),
-  msoLanguageIDByelorussian(1059),
-  msoLanguageIDBengali(1093),
-  msoLanguageIDBosnian(4122),
-  msoLanguageIDBosnianBosniaHerzegovinaCyrillic(8218),
-  msoLanguageIDBosnianBosniaHerzegovinaLatin(5146),
-  msoLanguageIDBulgarian(1026),
-  msoLanguageIDBurmese(1109),
-  msoLanguageIDCatalan(1027),
-  msoLanguageIDChineseHongKongSAR(3076),
-  msoLanguageIDChineseMacaoSAR(5124),
-  msoLanguageIDSimplifiedChinese(2052),
-  msoLanguageIDChineseSingapore(4100),
-  msoLanguageIDTraditionalChinese(1028),
-  msoLanguageIDCherokee(1116),
-  msoLanguageIDCroatian(1050),
-  msoLanguageIDCzech(1029),
-  msoLanguageIDDanish(1030),
-  msoLanguageIDDivehi(1125),
-  msoLanguageIDBelgianDutch(2067),
-  msoLanguageIDDutch(1043),
-  msoLanguageIDDzongkhaBhutan(2129),
-  msoLanguageIDEdo(1126),
-  msoLanguageIDEnglishAUS(3081),
-  msoLanguageIDEnglishBelize(10249),
-  msoLanguageIDEnglishCanadian(4105),
-  msoLanguageIDEnglishCaribbean(9225),
-  msoLanguageIDEnglishIndonesia(14345),
-  msoLanguageIDEnglishIreland(6153),
-  msoLanguageIDEnglishJamaica(8201),
-  msoLanguageIDEnglishNewZealand(5129),
-  msoLanguageIDEnglishPhilippines(13321),
-  msoLanguageIDEnglishSouthAfrica(7177),
-  msoLanguageIDEnglishTrinidadTobago(11273),
-  msoLanguageIDEnglishUK(2057),
-  msoLanguageIDEnglishUS(1033),
-  msoLanguageIDEnglishZimbabwe(12297),
-  msoLanguageIDEstonian(1061),
-  msoLanguageIDFaeroese(1080),
-  msoLanguageIDFarsi(1065),
-  msoLanguageIDFilipino(1124),
-  msoLanguageIDFinnish(1035),
-  msoLanguageIDBelgianFrench(2060),
-  msoLanguageIDFrenchCameroon(11276),
-  msoLanguageIDFrenchCanadian(3084),
-  msoLanguageIDFrenchCotedIvoire(12300),
-  msoLanguageIDFrench(1036),
-  msoLanguageIDFrenchHaiti(15372),
-  msoLanguageIDFrenchLuxembourg(5132),
-  msoLanguageIDFrenchMali(13324),
-  msoLanguageIDFrenchMonaco(6156),
-  msoLanguageIDFrenchMorocco(14348),
-  msoLanguageIDFrenchReunion(8204),
-  msoLanguageIDFrenchSenegal(10252),
-  msoLanguageIDSwissFrench(4108),
-  msoLanguageIDFrenchWestIndies(7180),
-  msoLanguageIDFrenchZaire(9228),
-  msoLanguageIDFrenchCongoDRC(9228),
-  msoLanguageIDFrisianNetherlands(1122),
-  msoLanguageIDFulfulde(1127),
-  msoLanguageIDGaelicIreland(2108),
-  msoLanguageIDGaelicScotland(1084),
-  msoLanguageIDGalician(1110),
-  msoLanguageIDGeorgian(1079),
-  msoLanguageIDGermanAustria(3079),
-  msoLanguageIDGerman(1031),
-  msoLanguageIDGermanLiechtenstein(5127),
-  msoLanguageIDGermanLuxembourg(4103),
-  msoLanguageIDSwissGerman(2055),
-  msoLanguageIDGreek(1032),
-  msoLanguageIDGuarani(1140),
-  msoLanguageIDGujarati(1095),
-  msoLanguageIDHausa(1128),
-  msoLanguageIDHawaiian(1141),
-  msoLanguageIDHebrew(1037),
-  msoLanguageIDHindi(1081),
-  msoLanguageIDHungarian(1038),
-  msoLanguageIDIbibio(1129),
-  msoLanguageIDIcelandic(1039),
-  msoLanguageIDIgbo(1136),
-  msoLanguageIDIndonesian(1057),
-  msoLanguageIDInuktitut(1117),
-  msoLanguageIDItalian(1040),
-  msoLanguageIDSwissItalian(2064),
-  msoLanguageIDJapanese(1041),
-  msoLanguageIDKannada(1099),
-  msoLanguageIDKanuri(1137),
-  msoLanguageIDKashmiri(1120),
-  msoLanguageIDKashmiriDevanagari(2144),
-  msoLanguageIDKazakh(1087),
-  msoLanguageIDKhmer(1107),
-  msoLanguageIDKirghiz(1088),
-  msoLanguageIDKonkani(1111),
-  msoLanguageIDKorean(1042),
-  msoLanguageIDKyrgyz(1088),
-  msoLanguageIDLatin(1142),
-  msoLanguageIDLao(1108),
-  msoLanguageIDLatvian(1062),
-  msoLanguageIDLithuanian(1063),
-  msoLanguageIDMacedonian(1071),
-  msoLanguageIDMacedonianFYROM(1071),
-  msoLanguageIDMalaysian(1086),
-  msoLanguageIDMalayBruneiDarussalam(2110),
-  msoLanguageIDMalayalam(1100),
-  msoLanguageIDMaltese(1082),
-  msoLanguageIDManipuri(1112),
-  msoLanguageIDMaori(1153),
-  msoLanguageIDMarathi(1102),
-  msoLanguageIDMongolian(1104),
-  msoLanguageIDNepali(1121),
-  msoLanguageIDNorwegianBokmol(1044),
-  msoLanguageIDNorwegianNynorsk(2068),
-  msoLanguageIDOriya(1096),
-  msoLanguageIDOromo(1138),
-  msoLanguageIDPashto(1123),
-  msoLanguageIDPolish(1045),
-  msoLanguageIDBrazilianPortuguese(1046),
-  msoLanguageIDPortuguese(2070),
-  msoLanguageIDPunjabi(1094),
-  msoLanguageIDQuechuaBolivia(1131),
-  msoLanguageIDQuechuaEcuador(2155),
-  msoLanguageIDQuechuaPeru(3179),
-  msoLanguageIDRhaetoRomanic(1047),
-  msoLanguageIDRomanianMoldova(2072),
-  msoLanguageIDRomanian(1048),
-  msoLanguageIDRussianMoldova(2073),
-  msoLanguageIDRussian(1049),
-  msoLanguageIDSamiLappish(1083),
-  msoLanguageIDSanskrit(1103),
-  msoLanguageIDSepedi(1132),
-  msoLanguageIDSerbianBosniaHerzegovinaCyrillic(7194),
-  msoLanguageIDSerbianBosniaHerzegovinaLatin(6170),
-  msoLanguageIDSerbianCyrillic(3098),
-  msoLanguageIDSerbianLatin(2074),
-  msoLanguageIDSesotho(1072),
-  msoLanguageIDSindhi(1113),
-  msoLanguageIDSindhiPakistan(2137),
-  msoLanguageIDSinhalese(1115),
-  msoLanguageIDSlovak(1051),
-  msoLanguageIDSlovenian(1060),
-  msoLanguageIDSomali(1143),
-  msoLanguageIDSorbian(1070),
-  msoLanguageIDSpanishArgentina(11274),
-  msoLanguageIDSpanishBolivia(16394),
-  msoLanguageIDSpanishChile(13322),
-  msoLanguageIDSpanishColombia(9226),
-  msoLanguageIDSpanishCostaRica(5130),
-  msoLanguageIDSpanishDominicanRepublic(7178),
-  msoLanguageIDSpanishEcuador(12298),
-  msoLanguageIDSpanishElSalvador(17418),
-  msoLanguageIDSpanishGuatemala(4106),
-  msoLanguageIDSpanishHonduras(18442),
-  msoLanguageIDMexicanSpanish(2058),
-  msoLanguageIDSpanishNicaragua(19466),
-  msoLanguageIDSpanishPanama(6154),
-  msoLanguageIDSpanishParaguay(15370),
-  msoLanguageIDSpanishPeru(10250),
-  msoLanguageIDSpanishPuertoRico(20490),
-  msoLanguageIDSpanishModernSort(3082),
-  msoLanguageIDSpanish(1034),
-  msoLanguageIDSpanishUruguay(14346),
-  msoLanguageIDSpanishVenezuela(8202),
-  msoLanguageIDSutu(1072),
-  msoLanguageIDSwahili(1089),
-  msoLanguageIDSwedishFinland(2077),
-  msoLanguageIDSwedish(1053),
-  msoLanguageIDSyriac(1114),
-  msoLanguageIDTajik(1064),
-  msoLanguageIDTamil(1097),
-  msoLanguageIDTamazight(1119),
-  msoLanguageIDTamazightLatin(2143),
-  msoLanguageIDTatar(1092),
-  msoLanguageIDTelugu(1098),
-  msoLanguageIDThai(1054),
-  msoLanguageIDTibetan(1105),
-  msoLanguageIDTigrignaEthiopic(1139),
-  msoLanguageIDTigrignaEritrea(2163),
-  msoLanguageIDTsonga(1073),
-  msoLanguageIDTswana(1074),
-  msoLanguageIDTurkish(1055),
-  msoLanguageIDTurkmen(1090),
-  msoLanguageIDUkrainian(1058),
-  msoLanguageIDUrdu(1056),
-  msoLanguageIDUzbekCyrillic(2115),
-  msoLanguageIDUzbekLatin(1091),
-  msoLanguageIDVenda(1075),
-  msoLanguageIDVietnamese(1066),
-  msoLanguageIDWelsh(1106),
-  msoLanguageIDXhosa(1076),
-  msoLanguageIDYi(1144),
-  msoLanguageIDYiddish(1085),
-  msoLanguageIDYoruba(1130),
-  msoLanguageIDZulu(1077);
+public class MsoLanguageID {
 
+  // Typed constants
+  public final static MsoLanguageID msoLanguageIDMixed = new MsoLanguageID(-2);
+  public final static MsoLanguageID msoLanguageIDNone = new MsoLanguageID(0);
+  public final static MsoLanguageID msoLanguageIDNoProofing = new MsoLanguageID(1024);
+  public final static MsoLanguageID msoLanguageIDAfrikaans = new MsoLanguageID(1078);
+  public final static MsoLanguageID msoLanguageIDAlbanian = new MsoLanguageID(1052);
+  public final static MsoLanguageID msoLanguageIDAmharic = new MsoLanguageID(1118);
+  public final static MsoLanguageID msoLanguageIDArabicAlgeria = new MsoLanguageID(5121);
+  public final static MsoLanguageID msoLanguageIDArabicBahrain = new MsoLanguageID(15361);
+  public final static MsoLanguageID msoLanguageIDArabicEgypt = new MsoLanguageID(3073);
+  public final static MsoLanguageID msoLanguageIDArabicIraq = new MsoLanguageID(2049);
+  public final static MsoLanguageID msoLanguageIDArabicJordan = new MsoLanguageID(11265);
+  public final static MsoLanguageID msoLanguageIDArabicKuwait = new MsoLanguageID(13313);
+  public final static MsoLanguageID msoLanguageIDArabicLebanon = new MsoLanguageID(12289);
+  public final static MsoLanguageID msoLanguageIDArabicLibya = new MsoLanguageID(4097);
+  public final static MsoLanguageID msoLanguageIDArabicMorocco = new MsoLanguageID(6145);
+  public final static MsoLanguageID msoLanguageIDArabicOman = new MsoLanguageID(8193);
+  public final static MsoLanguageID msoLanguageIDArabicQatar = new MsoLanguageID(16385);
+  public final static MsoLanguageID msoLanguageIDArabic = new MsoLanguageID(1025);
+  public final static MsoLanguageID msoLanguageIDArabicSyria = new MsoLanguageID(10241);
+  public final static MsoLanguageID msoLanguageIDArabicTunisia = new MsoLanguageID(7169);
+  public final static MsoLanguageID msoLanguageIDArabicUAE = new MsoLanguageID(14337);
+  public final static MsoLanguageID msoLanguageIDArabicYemen = new MsoLanguageID(9217);
+  public final static MsoLanguageID msoLanguageIDArmenian = new MsoLanguageID(1067);
+  public final static MsoLanguageID msoLanguageIDAssamese = new MsoLanguageID(1101);
+  public final static MsoLanguageID msoLanguageIDAzeriCyrillic = new MsoLanguageID(2092);
+  public final static MsoLanguageID msoLanguageIDAzeriLatin = new MsoLanguageID(1068);
+  public final static MsoLanguageID msoLanguageIDBasque = new MsoLanguageID(1069);
+  public final static MsoLanguageID msoLanguageIDByelorussian = new MsoLanguageID(1059);
+  public final static MsoLanguageID msoLanguageIDBengali = new MsoLanguageID(1093);
+  public final static MsoLanguageID msoLanguageIDBosnian = new MsoLanguageID(4122);
+  public final static MsoLanguageID msoLanguageIDBosnianBosniaHerzegovinaCyrillic = new MsoLanguageID(8218);
+  public final static MsoLanguageID msoLanguageIDBosnianBosniaHerzegovinaLatin = new MsoLanguageID(5146);
+  public final static MsoLanguageID msoLanguageIDBulgarian = new MsoLanguageID(1026);
+  public final static MsoLanguageID msoLanguageIDBurmese = new MsoLanguageID(1109);
+  public final static MsoLanguageID msoLanguageIDCatalan = new MsoLanguageID(1027);
+  public final static MsoLanguageID msoLanguageIDChineseHongKongSAR = new MsoLanguageID(3076);
+  public final static MsoLanguageID msoLanguageIDChineseMacaoSAR = new MsoLanguageID(5124);
+  public final static MsoLanguageID msoLanguageIDSimplifiedChinese = new MsoLanguageID(2052);
+  public final static MsoLanguageID msoLanguageIDChineseSingapore = new MsoLanguageID(4100);
+  public final static MsoLanguageID msoLanguageIDTraditionalChinese = new MsoLanguageID(1028);
+  public final static MsoLanguageID msoLanguageIDCherokee = new MsoLanguageID(1116);
+  public final static MsoLanguageID msoLanguageIDCroatian = new MsoLanguageID(1050);
+  public final static MsoLanguageID msoLanguageIDCzech = new MsoLanguageID(1029);
+  public final static MsoLanguageID msoLanguageIDDanish = new MsoLanguageID(1030);
+  public final static MsoLanguageID msoLanguageIDDivehi = new MsoLanguageID(1125);
+  public final static MsoLanguageID msoLanguageIDBelgianDutch = new MsoLanguageID(2067);
+  public final static MsoLanguageID msoLanguageIDDutch = new MsoLanguageID(1043);
+  public final static MsoLanguageID msoLanguageIDDzongkhaBhutan = new MsoLanguageID(2129);
+  public final static MsoLanguageID msoLanguageIDEdo = new MsoLanguageID(1126);
+  public final static MsoLanguageID msoLanguageIDEnglishAUS = new MsoLanguageID(3081);
+  public final static MsoLanguageID msoLanguageIDEnglishBelize = new MsoLanguageID(10249);
+  public final static MsoLanguageID msoLanguageIDEnglishCanadian = new MsoLanguageID(4105);
+  public final static MsoLanguageID msoLanguageIDEnglishCaribbean = new MsoLanguageID(9225);
+  public final static MsoLanguageID msoLanguageIDEnglishIndonesia = new MsoLanguageID(14345);
+  public final static MsoLanguageID msoLanguageIDEnglishIreland = new MsoLanguageID(6153);
+  public final static MsoLanguageID msoLanguageIDEnglishJamaica = new MsoLanguageID(8201);
+  public final static MsoLanguageID msoLanguageIDEnglishNewZealand = new MsoLanguageID(5129);
+  public final static MsoLanguageID msoLanguageIDEnglishPhilippines = new MsoLanguageID(13321);
+  public final static MsoLanguageID msoLanguageIDEnglishSouthAfrica = new MsoLanguageID(7177);
+  public final static MsoLanguageID msoLanguageIDEnglishTrinidadTobago = new MsoLanguageID(11273);
+  public final static MsoLanguageID msoLanguageIDEnglishUK = new MsoLanguageID(2057);
+  public final static MsoLanguageID msoLanguageIDEnglishUS = new MsoLanguageID(1033);
+  public final static MsoLanguageID msoLanguageIDEnglishZimbabwe = new MsoLanguageID(12297);
+  public final static MsoLanguageID msoLanguageIDEstonian = new MsoLanguageID(1061);
+  public final static MsoLanguageID msoLanguageIDFaeroese = new MsoLanguageID(1080);
+  public final static MsoLanguageID msoLanguageIDFarsi = new MsoLanguageID(1065);
+  public final static MsoLanguageID msoLanguageIDFilipino = new MsoLanguageID(1124);
+  public final static MsoLanguageID msoLanguageIDFinnish = new MsoLanguageID(1035);
+  public final static MsoLanguageID msoLanguageIDBelgianFrench = new MsoLanguageID(2060);
+  public final static MsoLanguageID msoLanguageIDFrenchCameroon = new MsoLanguageID(11276);
+  public final static MsoLanguageID msoLanguageIDFrenchCanadian = new MsoLanguageID(3084);
+  public final static MsoLanguageID msoLanguageIDFrenchCotedIvoire = new MsoLanguageID(12300);
+  public final static MsoLanguageID msoLanguageIDFrench = new MsoLanguageID(1036);
+  public final static MsoLanguageID msoLanguageIDFrenchHaiti = new MsoLanguageID(15372);
+  public final static MsoLanguageID msoLanguageIDFrenchLuxembourg = new MsoLanguageID(5132);
+  public final static MsoLanguageID msoLanguageIDFrenchMali = new MsoLanguageID(13324);
+  public final static MsoLanguageID msoLanguageIDFrenchMonaco = new MsoLanguageID(6156);
+  public final static MsoLanguageID msoLanguageIDFrenchMorocco = new MsoLanguageID(14348);
+  public final static MsoLanguageID msoLanguageIDFrenchReunion = new MsoLanguageID(8204);
+  public final static MsoLanguageID msoLanguageIDFrenchSenegal = new MsoLanguageID(10252);
+  public final static MsoLanguageID msoLanguageIDSwissFrench = new MsoLanguageID(4108);
+  public final static MsoLanguageID msoLanguageIDFrenchWestIndies = new MsoLanguageID(7180);
+  public final static MsoLanguageID msoLanguageIDFrenchZaire = new MsoLanguageID(9228);
+  public final static MsoLanguageID msoLanguageIDFrenchCongoDRC = new MsoLanguageID(9228);
+  public final static MsoLanguageID msoLanguageIDFrisianNetherlands = new MsoLanguageID(1122);
+  public final static MsoLanguageID msoLanguageIDFulfulde = new MsoLanguageID(1127);
+  public final static MsoLanguageID msoLanguageIDGaelicIreland = new MsoLanguageID(2108);
+  public final static MsoLanguageID msoLanguageIDGaelicScotland = new MsoLanguageID(1084);
+  public final static MsoLanguageID msoLanguageIDGalician = new MsoLanguageID(1110);
+  public final static MsoLanguageID msoLanguageIDGeorgian = new MsoLanguageID(1079);
+  public final static MsoLanguageID msoLanguageIDGermanAustria = new MsoLanguageID(3079);
+  public final static MsoLanguageID msoLanguageIDGerman = new MsoLanguageID(1031);
+  public final static MsoLanguageID msoLanguageIDGermanLiechtenstein = new MsoLanguageID(5127);
+  public final static MsoLanguageID msoLanguageIDGermanLuxembourg = new MsoLanguageID(4103);
+  public final static MsoLanguageID msoLanguageIDSwissGerman = new MsoLanguageID(2055);
+  public final static MsoLanguageID msoLanguageIDGreek = new MsoLanguageID(1032);
+  public final static MsoLanguageID msoLanguageIDGuarani = new MsoLanguageID(1140);
+  public final static MsoLanguageID msoLanguageIDGujarati = new MsoLanguageID(1095);
+  public final static MsoLanguageID msoLanguageIDHausa = new MsoLanguageID(1128);
+  public final static MsoLanguageID msoLanguageIDHawaiian = new MsoLanguageID(1141);
+  public final static MsoLanguageID msoLanguageIDHebrew = new MsoLanguageID(1037);
+  public final static MsoLanguageID msoLanguageIDHindi = new MsoLanguageID(1081);
+  public final static MsoLanguageID msoLanguageIDHungarian = new MsoLanguageID(1038);
+  public final static MsoLanguageID msoLanguageIDIbibio = new MsoLanguageID(1129);
+  public final static MsoLanguageID msoLanguageIDIcelandic = new MsoLanguageID(1039);
+  public final static MsoLanguageID msoLanguageIDIgbo = new MsoLanguageID(1136);
+  public final static MsoLanguageID msoLanguageIDIndonesian = new MsoLanguageID(1057);
+  public final static MsoLanguageID msoLanguageIDInuktitut = new MsoLanguageID(1117);
+  public final static MsoLanguageID msoLanguageIDItalian = new MsoLanguageID(1040);
+  public final static MsoLanguageID msoLanguageIDSwissItalian = new MsoLanguageID(2064);
+  public final static MsoLanguageID msoLanguageIDJapanese = new MsoLanguageID(1041);
+  public final static MsoLanguageID msoLanguageIDKannada = new MsoLanguageID(1099);
+  public final static MsoLanguageID msoLanguageIDKanuri = new MsoLanguageID(1137);
+  public final static MsoLanguageID msoLanguageIDKashmiri = new MsoLanguageID(1120);
+  public final static MsoLanguageID msoLanguageIDKashmiriDevanagari = new MsoLanguageID(2144);
+  public final static MsoLanguageID msoLanguageIDKazakh = new MsoLanguageID(1087);
+  public final static MsoLanguageID msoLanguageIDKhmer = new MsoLanguageID(1107);
+  public final static MsoLanguageID msoLanguageIDKirghiz = new MsoLanguageID(1088);
+  public final static MsoLanguageID msoLanguageIDKonkani = new MsoLanguageID(1111);
+  public final static MsoLanguageID msoLanguageIDKorean = new MsoLanguageID(1042);
+  public final static MsoLanguageID msoLanguageIDKyrgyz = new MsoLanguageID(1088);
+  public final static MsoLanguageID msoLanguageIDLatin = new MsoLanguageID(1142);
+  public final static MsoLanguageID msoLanguageIDLao = new MsoLanguageID(1108);
+  public final static MsoLanguageID msoLanguageIDLatvian = new MsoLanguageID(1062);
+  public final static MsoLanguageID msoLanguageIDLithuanian = new MsoLanguageID(1063);
+  public final static MsoLanguageID msoLanguageIDMacedonian = new MsoLanguageID(1071);
+  public final static MsoLanguageID msoLanguageIDMacedonianFYROM = new MsoLanguageID(1071);
+  public final static MsoLanguageID msoLanguageIDMalaysian = new MsoLanguageID(1086);
+  public final static MsoLanguageID msoLanguageIDMalayBruneiDarussalam = new MsoLanguageID(2110);
+  public final static MsoLanguageID msoLanguageIDMalayalam = new MsoLanguageID(1100);
+  public final static MsoLanguageID msoLanguageIDMaltese = new MsoLanguageID(1082);
+  public final static MsoLanguageID msoLanguageIDManipuri = new MsoLanguageID(1112);
+  public final static MsoLanguageID msoLanguageIDMaori = new MsoLanguageID(1153);
+  public final static MsoLanguageID msoLanguageIDMarathi = new MsoLanguageID(1102);
+  public final static MsoLanguageID msoLanguageIDMongolian = new MsoLanguageID(1104);
+  public final static MsoLanguageID msoLanguageIDNepali = new MsoLanguageID(1121);
+  public final static MsoLanguageID msoLanguageIDNorwegianBokmol = new MsoLanguageID(1044);
+  public final static MsoLanguageID msoLanguageIDNorwegianNynorsk = new MsoLanguageID(2068);
+  public final static MsoLanguageID msoLanguageIDOriya = new MsoLanguageID(1096);
+  public final static MsoLanguageID msoLanguageIDOromo = new MsoLanguageID(1138);
+  public final static MsoLanguageID msoLanguageIDPashto = new MsoLanguageID(1123);
+  public final static MsoLanguageID msoLanguageIDPolish = new MsoLanguageID(1045);
+  public final static MsoLanguageID msoLanguageIDBrazilianPortuguese = new MsoLanguageID(1046);
+  public final static MsoLanguageID msoLanguageIDPortuguese = new MsoLanguageID(2070);
+  public final static MsoLanguageID msoLanguageIDPunjabi = new MsoLanguageID(1094);
+  public final static MsoLanguageID msoLanguageIDQuechuaBolivia = new MsoLanguageID(1131);
+  public final static MsoLanguageID msoLanguageIDQuechuaEcuador = new MsoLanguageID(2155);
+  public final static MsoLanguageID msoLanguageIDQuechuaPeru = new MsoLanguageID(3179);
+  public final static MsoLanguageID msoLanguageIDRhaetoRomanic = new MsoLanguageID(1047);
+  public final static MsoLanguageID msoLanguageIDRomanianMoldova = new MsoLanguageID(2072);
+  public final static MsoLanguageID msoLanguageIDRomanian = new MsoLanguageID(1048);
+  public final static MsoLanguageID msoLanguageIDRussianMoldova = new MsoLanguageID(2073);
+  public final static MsoLanguageID msoLanguageIDRussian = new MsoLanguageID(1049);
+  public final static MsoLanguageID msoLanguageIDSamiLappish = new MsoLanguageID(1083);
+  public final static MsoLanguageID msoLanguageIDSanskrit = new MsoLanguageID(1103);
+  public final static MsoLanguageID msoLanguageIDSepedi = new MsoLanguageID(1132);
+  public final static MsoLanguageID msoLanguageIDSerbianBosniaHerzegovinaCyrillic = new MsoLanguageID(7194);
+  public final static MsoLanguageID msoLanguageIDSerbianBosniaHerzegovinaLatin = new MsoLanguageID(6170);
+  public final static MsoLanguageID msoLanguageIDSerbianCyrillic = new MsoLanguageID(3098);
+  public final static MsoLanguageID msoLanguageIDSerbianLatin = new MsoLanguageID(2074);
+  public final static MsoLanguageID msoLanguageIDSesotho = new MsoLanguageID(1072);
+  public final static MsoLanguageID msoLanguageIDSindhi = new MsoLanguageID(1113);
+  public final static MsoLanguageID msoLanguageIDSindhiPakistan = new MsoLanguageID(2137);
+  public final static MsoLanguageID msoLanguageIDSinhalese = new MsoLanguageID(1115);
+  public final static MsoLanguageID msoLanguageIDSlovak = new MsoLanguageID(1051);
+  public final static MsoLanguageID msoLanguageIDSlovenian = new MsoLanguageID(1060);
+  public final static MsoLanguageID msoLanguageIDSomali = new MsoLanguageID(1143);
+  public final static MsoLanguageID msoLanguageIDSorbian = new MsoLanguageID(1070);
+  public final static MsoLanguageID msoLanguageIDSpanishArgentina = new MsoLanguageID(11274);
+  public final static MsoLanguageID msoLanguageIDSpanishBolivia = new MsoLanguageID(16394);
+  public final static MsoLanguageID msoLanguageIDSpanishChile = new MsoLanguageID(13322);
+  public final static MsoLanguageID msoLanguageIDSpanishColombia = new MsoLanguageID(9226);
+  public final static MsoLanguageID msoLanguageIDSpanishCostaRica = new MsoLanguageID(5130);
+  public final static MsoLanguageID msoLanguageIDSpanishDominicanRepublic = new MsoLanguageID(7178);
+  public final static MsoLanguageID msoLanguageIDSpanishEcuador = new MsoLanguageID(12298);
+  public final static MsoLanguageID msoLanguageIDSpanishElSalvador = new MsoLanguageID(17418);
+  public final static MsoLanguageID msoLanguageIDSpanishGuatemala = new MsoLanguageID(4106);
+  public final static MsoLanguageID msoLanguageIDSpanishHonduras = new MsoLanguageID(18442);
+  public final static MsoLanguageID msoLanguageIDMexicanSpanish = new MsoLanguageID(2058);
+  public final static MsoLanguageID msoLanguageIDSpanishNicaragua = new MsoLanguageID(19466);
+  public final static MsoLanguageID msoLanguageIDSpanishPanama = new MsoLanguageID(6154);
+  public final static MsoLanguageID msoLanguageIDSpanishParaguay = new MsoLanguageID(15370);
+  public final static MsoLanguageID msoLanguageIDSpanishPeru = new MsoLanguageID(10250);
+  public final static MsoLanguageID msoLanguageIDSpanishPuertoRico = new MsoLanguageID(20490);
+  public final static MsoLanguageID msoLanguageIDSpanishModernSort = new MsoLanguageID(3082);
+  public final static MsoLanguageID msoLanguageIDSpanish = new MsoLanguageID(1034);
+  public final static MsoLanguageID msoLanguageIDSpanishUruguay = new MsoLanguageID(14346);
+  public final static MsoLanguageID msoLanguageIDSpanishVenezuela = new MsoLanguageID(8202);
+  public final static MsoLanguageID msoLanguageIDSutu = new MsoLanguageID(1072);
+  public final static MsoLanguageID msoLanguageIDSwahili = new MsoLanguageID(1089);
+  public final static MsoLanguageID msoLanguageIDSwedishFinland = new MsoLanguageID(2077);
+  public final static MsoLanguageID msoLanguageIDSwedish = new MsoLanguageID(1053);
+  public final static MsoLanguageID msoLanguageIDSyriac = new MsoLanguageID(1114);
+  public final static MsoLanguageID msoLanguageIDTajik = new MsoLanguageID(1064);
+  public final static MsoLanguageID msoLanguageIDTamil = new MsoLanguageID(1097);
+  public final static MsoLanguageID msoLanguageIDTamazight = new MsoLanguageID(1119);
+  public final static MsoLanguageID msoLanguageIDTamazightLatin = new MsoLanguageID(2143);
+  public final static MsoLanguageID msoLanguageIDTatar = new MsoLanguageID(1092);
+  public final static MsoLanguageID msoLanguageIDTelugu = new MsoLanguageID(1098);
+  public final static MsoLanguageID msoLanguageIDThai = new MsoLanguageID(1054);
+  public final static MsoLanguageID msoLanguageIDTibetan = new MsoLanguageID(1105);
+  public final static MsoLanguageID msoLanguageIDTigrignaEthiopic = new MsoLanguageID(1139);
+  public final static MsoLanguageID msoLanguageIDTigrignaEritrea = new MsoLanguageID(2163);
+  public final static MsoLanguageID msoLanguageIDTsonga = new MsoLanguageID(1073);
+  public final static MsoLanguageID msoLanguageIDTswana = new MsoLanguageID(1074);
+  public final static MsoLanguageID msoLanguageIDTurkish = new MsoLanguageID(1055);
+  public final static MsoLanguageID msoLanguageIDTurkmen = new MsoLanguageID(1090);
+  public final static MsoLanguageID msoLanguageIDUkrainian = new MsoLanguageID(1058);
+  public final static MsoLanguageID msoLanguageIDUrdu = new MsoLanguageID(1056);
+  public final static MsoLanguageID msoLanguageIDUzbekCyrillic = new MsoLanguageID(2115);
+  public final static MsoLanguageID msoLanguageIDUzbekLatin = new MsoLanguageID(1091);
+  public final static MsoLanguageID msoLanguageIDVenda = new MsoLanguageID(1075);
+  public final static MsoLanguageID msoLanguageIDVietnamese = new MsoLanguageID(1066);
+  public final static MsoLanguageID msoLanguageIDWelsh = new MsoLanguageID(1106);
+  public final static MsoLanguageID msoLanguageIDXhosa = new MsoLanguageID(1076);
+  public final static MsoLanguageID msoLanguageIDYi = new MsoLanguageID(1144);
+  public final static MsoLanguageID msoLanguageIDYiddish = new MsoLanguageID(1085);
+  public final static MsoLanguageID msoLanguageIDYoruba = new MsoLanguageID(1130);
+  public final static MsoLanguageID msoLanguageIDZulu = new MsoLanguageID(1077);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoLanguageIDMixed = -2;
+  public final static int _msoLanguageIDNone = 0;
+  public final static int _msoLanguageIDNoProofing = 1024;
+  public final static int _msoLanguageIDAfrikaans = 1078;
+  public final static int _msoLanguageIDAlbanian = 1052;
+  public final static int _msoLanguageIDAmharic = 1118;
+  public final static int _msoLanguageIDArabicAlgeria = 5121;
+  public final static int _msoLanguageIDArabicBahrain = 15361;
+  public final static int _msoLanguageIDArabicEgypt = 3073;
+  public final static int _msoLanguageIDArabicIraq = 2049;
+  public final static int _msoLanguageIDArabicJordan = 11265;
+  public final static int _msoLanguageIDArabicKuwait = 13313;
+  public final static int _msoLanguageIDArabicLebanon = 12289;
+  public final static int _msoLanguageIDArabicLibya = 4097;
+  public final static int _msoLanguageIDArabicMorocco = 6145;
+  public final static int _msoLanguageIDArabicOman = 8193;
+  public final static int _msoLanguageIDArabicQatar = 16385;
+  public final static int _msoLanguageIDArabic = 1025;
+  public final static int _msoLanguageIDArabicSyria = 10241;
+  public final static int _msoLanguageIDArabicTunisia = 7169;
+  public final static int _msoLanguageIDArabicUAE = 14337;
+  public final static int _msoLanguageIDArabicYemen = 9217;
+  public final static int _msoLanguageIDArmenian = 1067;
+  public final static int _msoLanguageIDAssamese = 1101;
+  public final static int _msoLanguageIDAzeriCyrillic = 2092;
+  public final static int _msoLanguageIDAzeriLatin = 1068;
+  public final static int _msoLanguageIDBasque = 1069;
+  public final static int _msoLanguageIDByelorussian = 1059;
+  public final static int _msoLanguageIDBengali = 1093;
+  public final static int _msoLanguageIDBosnian = 4122;
+  public final static int _msoLanguageIDBosnianBosniaHerzegovinaCyrillic = 8218;
+  public final static int _msoLanguageIDBosnianBosniaHerzegovinaLatin = 5146;
+  public final static int _msoLanguageIDBulgarian = 1026;
+  public final static int _msoLanguageIDBurmese = 1109;
+  public final static int _msoLanguageIDCatalan = 1027;
+  public final static int _msoLanguageIDChineseHongKongSAR = 3076;
+  public final static int _msoLanguageIDChineseMacaoSAR = 5124;
+  public final static int _msoLanguageIDSimplifiedChinese = 2052;
+  public final static int _msoLanguageIDChineseSingapore = 4100;
+  public final static int _msoLanguageIDTraditionalChinese = 1028;
+  public final static int _msoLanguageIDCherokee = 1116;
+  public final static int _msoLanguageIDCroatian = 1050;
+  public final static int _msoLanguageIDCzech = 1029;
+  public final static int _msoLanguageIDDanish = 1030;
+  public final static int _msoLanguageIDDivehi = 1125;
+  public final static int _msoLanguageIDBelgianDutch = 2067;
+  public final static int _msoLanguageIDDutch = 1043;
+  public final static int _msoLanguageIDDzongkhaBhutan = 2129;
+  public final static int _msoLanguageIDEdo = 1126;
+  public final static int _msoLanguageIDEnglishAUS = 3081;
+  public final static int _msoLanguageIDEnglishBelize = 10249;
+  public final static int _msoLanguageIDEnglishCanadian = 4105;
+  public final static int _msoLanguageIDEnglishCaribbean = 9225;
+  public final static int _msoLanguageIDEnglishIndonesia = 14345;
+  public final static int _msoLanguageIDEnglishIreland = 6153;
+  public final static int _msoLanguageIDEnglishJamaica = 8201;
+  public final static int _msoLanguageIDEnglishNewZealand = 5129;
+  public final static int _msoLanguageIDEnglishPhilippines = 13321;
+  public final static int _msoLanguageIDEnglishSouthAfrica = 7177;
+  public final static int _msoLanguageIDEnglishTrinidadTobago = 11273;
+  public final static int _msoLanguageIDEnglishUK = 2057;
+  public final static int _msoLanguageIDEnglishUS = 1033;
+  public final static int _msoLanguageIDEnglishZimbabwe = 12297;
+  public final static int _msoLanguageIDEstonian = 1061;
+  public final static int _msoLanguageIDFaeroese = 1080;
+  public final static int _msoLanguageIDFarsi = 1065;
+  public final static int _msoLanguageIDFilipino = 1124;
+  public final static int _msoLanguageIDFinnish = 1035;
+  public final static int _msoLanguageIDBelgianFrench = 2060;
+  public final static int _msoLanguageIDFrenchCameroon = 11276;
+  public final static int _msoLanguageIDFrenchCanadian = 3084;
+  public final static int _msoLanguageIDFrenchCotedIvoire = 12300;
+  public final static int _msoLanguageIDFrench = 1036;
+  public final static int _msoLanguageIDFrenchHaiti = 15372;
+  public final static int _msoLanguageIDFrenchLuxembourg = 5132;
+  public final static int _msoLanguageIDFrenchMali = 13324;
+  public final static int _msoLanguageIDFrenchMonaco = 6156;
+  public final static int _msoLanguageIDFrenchMorocco = 14348;
+  public final static int _msoLanguageIDFrenchReunion = 8204;
+  public final static int _msoLanguageIDFrenchSenegal = 10252;
+  public final static int _msoLanguageIDSwissFrench = 4108;
+  public final static int _msoLanguageIDFrenchWestIndies = 7180;
+  public final static int _msoLanguageIDFrenchZaire = 9228;
+  public final static int _msoLanguageIDFrenchCongoDRC = 9228;
+  public final static int _msoLanguageIDFrisianNetherlands = 1122;
+  public final static int _msoLanguageIDFulfulde = 1127;
+  public final static int _msoLanguageIDGaelicIreland = 2108;
+  public final static int _msoLanguageIDGaelicScotland = 1084;
+  public final static int _msoLanguageIDGalician = 1110;
+  public final static int _msoLanguageIDGeorgian = 1079;
+  public final static int _msoLanguageIDGermanAustria = 3079;
+  public final static int _msoLanguageIDGerman = 1031;
+  public final static int _msoLanguageIDGermanLiechtenstein = 5127;
+  public final static int _msoLanguageIDGermanLuxembourg = 4103;
+  public final static int _msoLanguageIDSwissGerman = 2055;
+  public final static int _msoLanguageIDGreek = 1032;
+  public final static int _msoLanguageIDGuarani = 1140;
+  public final static int _msoLanguageIDGujarati = 1095;
+  public final static int _msoLanguageIDHausa = 1128;
+  public final static int _msoLanguageIDHawaiian = 1141;
+  public final static int _msoLanguageIDHebrew = 1037;
+  public final static int _msoLanguageIDHindi = 1081;
+  public final static int _msoLanguageIDHungarian = 1038;
+  public final static int _msoLanguageIDIbibio = 1129;
+  public final static int _msoLanguageIDIcelandic = 1039;
+  public final static int _msoLanguageIDIgbo = 1136;
+  public final static int _msoLanguageIDIndonesian = 1057;
+  public final static int _msoLanguageIDInuktitut = 1117;
+  public final static int _msoLanguageIDItalian = 1040;
+  public final static int _msoLanguageIDSwissItalian = 2064;
+  public final static int _msoLanguageIDJapanese = 1041;
+  public final static int _msoLanguageIDKannada = 1099;
+  public final static int _msoLanguageIDKanuri = 1137;
+  public final static int _msoLanguageIDKashmiri = 1120;
+  public final static int _msoLanguageIDKashmiriDevanagari = 2144;
+  public final static int _msoLanguageIDKazakh = 1087;
+  public final static int _msoLanguageIDKhmer = 1107;
+  public final static int _msoLanguageIDKirghiz = 1088;
+  public final static int _msoLanguageIDKonkani = 1111;
+  public final static int _msoLanguageIDKorean = 1042;
+  public final static int _msoLanguageIDKyrgyz = 1088;
+  public final static int _msoLanguageIDLatin = 1142;
+  public final static int _msoLanguageIDLao = 1108;
+  public final static int _msoLanguageIDLatvian = 1062;
+  public final static int _msoLanguageIDLithuanian = 1063;
+  public final static int _msoLanguageIDMacedonian = 1071;
+  public final static int _msoLanguageIDMacedonianFYROM = 1071;
+  public final static int _msoLanguageIDMalaysian = 1086;
+  public final static int _msoLanguageIDMalayBruneiDarussalam = 2110;
+  public final static int _msoLanguageIDMalayalam = 1100;
+  public final static int _msoLanguageIDMaltese = 1082;
+  public final static int _msoLanguageIDManipuri = 1112;
+  public final static int _msoLanguageIDMaori = 1153;
+  public final static int _msoLanguageIDMarathi = 1102;
+  public final static int _msoLanguageIDMongolian = 1104;
+  public final static int _msoLanguageIDNepali = 1121;
+  public final static int _msoLanguageIDNorwegianBokmol = 1044;
+  public final static int _msoLanguageIDNorwegianNynorsk = 2068;
+  public final static int _msoLanguageIDOriya = 1096;
+  public final static int _msoLanguageIDOromo = 1138;
+  public final static int _msoLanguageIDPashto = 1123;
+  public final static int _msoLanguageIDPolish = 1045;
+  public final static int _msoLanguageIDBrazilianPortuguese = 1046;
+  public final static int _msoLanguageIDPortuguese = 2070;
+  public final static int _msoLanguageIDPunjabi = 1094;
+  public final static int _msoLanguageIDQuechuaBolivia = 1131;
+  public final static int _msoLanguageIDQuechuaEcuador = 2155;
+  public final static int _msoLanguageIDQuechuaPeru = 3179;
+  public final static int _msoLanguageIDRhaetoRomanic = 1047;
+  public final static int _msoLanguageIDRomanianMoldova = 2072;
+  public final static int _msoLanguageIDRomanian = 1048;
+  public final static int _msoLanguageIDRussianMoldova = 2073;
+  public final static int _msoLanguageIDRussian = 1049;
+  public final static int _msoLanguageIDSamiLappish = 1083;
+  public final static int _msoLanguageIDSanskrit = 1103;
+  public final static int _msoLanguageIDSepedi = 1132;
+  public final static int _msoLanguageIDSerbianBosniaHerzegovinaCyrillic = 7194;
+  public final static int _msoLanguageIDSerbianBosniaHerzegovinaLatin = 6170;
+  public final static int _msoLanguageIDSerbianCyrillic = 3098;
+  public final static int _msoLanguageIDSerbianLatin = 2074;
+  public final static int _msoLanguageIDSesotho = 1072;
+  public final static int _msoLanguageIDSindhi = 1113;
+  public final static int _msoLanguageIDSindhiPakistan = 2137;
+  public final static int _msoLanguageIDSinhalese = 1115;
+  public final static int _msoLanguageIDSlovak = 1051;
+  public final static int _msoLanguageIDSlovenian = 1060;
+  public final static int _msoLanguageIDSomali = 1143;
+  public final static int _msoLanguageIDSorbian = 1070;
+  public final static int _msoLanguageIDSpanishArgentina = 11274;
+  public final static int _msoLanguageIDSpanishBolivia = 16394;
+  public final static int _msoLanguageIDSpanishChile = 13322;
+  public final static int _msoLanguageIDSpanishColombia = 9226;
+  public final static int _msoLanguageIDSpanishCostaRica = 5130;
+  public final static int _msoLanguageIDSpanishDominicanRepublic = 7178;
+  public final static int _msoLanguageIDSpanishEcuador = 12298;
+  public final static int _msoLanguageIDSpanishElSalvador = 17418;
+  public final static int _msoLanguageIDSpanishGuatemala = 4106;
+  public final static int _msoLanguageIDSpanishHonduras = 18442;
+  public final static int _msoLanguageIDMexicanSpanish = 2058;
+  public final static int _msoLanguageIDSpanishNicaragua = 19466;
+  public final static int _msoLanguageIDSpanishPanama = 6154;
+  public final static int _msoLanguageIDSpanishParaguay = 15370;
+  public final static int _msoLanguageIDSpanishPeru = 10250;
+  public final static int _msoLanguageIDSpanishPuertoRico = 20490;
+  public final static int _msoLanguageIDSpanishModernSort = 3082;
+  public final static int _msoLanguageIDSpanish = 1034;
+  public final static int _msoLanguageIDSpanishUruguay = 14346;
+  public final static int _msoLanguageIDSpanishVenezuela = 8202;
+  public final static int _msoLanguageIDSutu = 1072;
+  public final static int _msoLanguageIDSwahili = 1089;
+  public final static int _msoLanguageIDSwedishFinland = 2077;
+  public final static int _msoLanguageIDSwedish = 1053;
+  public final static int _msoLanguageIDSyriac = 1114;
+  public final static int _msoLanguageIDTajik = 1064;
+  public final static int _msoLanguageIDTamil = 1097;
+  public final static int _msoLanguageIDTamazight = 1119;
+  public final static int _msoLanguageIDTamazightLatin = 2143;
+  public final static int _msoLanguageIDTatar = 1092;
+  public final static int _msoLanguageIDTelugu = 1098;
+  public final static int _msoLanguageIDThai = 1054;
+  public final static int _msoLanguageIDTibetan = 1105;
+  public final static int _msoLanguageIDTigrignaEthiopic = 1139;
+  public final static int _msoLanguageIDTigrignaEritrea = 2163;
+  public final static int _msoLanguageIDTsonga = 1073;
+  public final static int _msoLanguageIDTswana = 1074;
+  public final static int _msoLanguageIDTurkish = 1055;
+  public final static int _msoLanguageIDTurkmen = 1090;
+  public final static int _msoLanguageIDUkrainian = 1058;
+  public final static int _msoLanguageIDUrdu = 1056;
+  public final static int _msoLanguageIDUzbekCyrillic = 2115;
+  public final static int _msoLanguageIDUzbekLatin = 1091;
+  public final static int _msoLanguageIDVenda = 1075;
+  public final static int _msoLanguageIDVietnamese = 1066;
+  public final static int _msoLanguageIDWelsh = 1106;
+  public final static int _msoLanguageIDXhosa = 1076;
+  public final static int _msoLanguageIDYi = 1144;
+  public final static int _msoLanguageIDYiddish = 1085;
+  public final static int _msoLanguageIDYoruba = 1130;
+  public final static int _msoLanguageIDZulu = 1077;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoLanguageID(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoLanguageID valueOf(int value) {
     switch(value) {
     case -2: return msoLanguageIDMixed;
@@ -452,7 +680,7 @@ public enum MsoLanguageID {
     case 1085: return msoLanguageIDYiddish;
     case 1130: return msoLanguageIDYoruba;
     case 1077: return msoLanguageIDZulu;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoLanguageID.class);
+    default: return new MsoLanguageID(value);
     }
   }
 }

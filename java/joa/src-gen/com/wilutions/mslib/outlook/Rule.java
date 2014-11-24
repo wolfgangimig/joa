@@ -11,8 +11,7 @@ public class Rule extends Dispatch implements _Rule {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,13 +21,12 @@ public class Rule extends Dispatch implements _Rule {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(8450)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(8450,"Name", DISPATCH_PROPERTYGET,null);
@@ -78,19 +76,19 @@ public class Rule extends Dispatch implements _Rule {
     final Object obj = this._dispatchCall(64272,"Actions", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(RuleActions.class);
+    return disp.as(RuleActions.class);
   }
   @DeclDISPID(64297)  public RuleConditions getConditions() throws ComException {
     final Object obj = this._dispatchCall(64297,"Conditions", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(RuleConditions.class);
+    return disp.as(RuleConditions.class);
   }
   @DeclDISPID(64307)  public RuleConditions getExceptions() throws ComException {
     final Object obj = this._dispatchCall(64307,"Exceptions", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(RuleConditions.class);
+    return disp.as(RuleConditions.class);
   }
   public Rule() throws ComException {
     super("{000610CD-0000-0000-C000-000000000046}", "{000630CD-0000-0000-C000-000000000046}");

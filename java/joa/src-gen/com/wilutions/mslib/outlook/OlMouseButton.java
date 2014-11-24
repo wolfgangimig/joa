@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{0DCB2F52-1065-4FD4-BC45-1C11E6D1B279}")
-public enum OlMouseButton {
-  olMouseButtonLeft(1),
-  olMouseButtonRight(2),
-  olMouseButtonMiddle(4);
+public class OlMouseButton {
 
+  // Typed constants
+  public final static OlMouseButton olMouseButtonLeft = new OlMouseButton(1);
+  public final static OlMouseButton olMouseButtonRight = new OlMouseButton(2);
+  public final static OlMouseButton olMouseButtonMiddle = new OlMouseButton(4);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olMouseButtonLeft = 1;
+  public final static int _olMouseButtonRight = 2;
+  public final static int _olMouseButtonMiddle = 4;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlMouseButton(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlMouseButton valueOf(int value) {
     switch(value) {
     case 1: return olMouseButtonLeft;
     case 2: return olMouseButtonRight;
     case 4: return olMouseButtonMiddle;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlMouseButton.class);
+    default: return new OlMouseButton(value);
     }
   }
 }

@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface IMsoFloor extends IDispatch {
   @DeclDISPID(110)  public String getName() throws ComException;
   @DeclDISPID(235)  public Object Select() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(112)  public Object ClearFormats() throws ComException;
   @DeclDISPID(129)  public IMsoInterior getInterior() throws ComException;
@@ -21,6 +21,6 @@ public interface IMsoFloor extends IDispatch {
   @DeclDISPID(2419)  public Integer getThickness() throws ComException;
   @DeclDISPID(2419)  public void setThickness(Integer value) throws ComException;
   @DeclDISPID(1610743820)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
 }

@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlFormatCurrency {
-  olFormatCurrencyDecimal(1),
-  olFormatCurrencyNonDecimal(2);
+public class OlFormatCurrency {
 
+  // Typed constants
+  public final static OlFormatCurrency olFormatCurrencyDecimal = new OlFormatCurrency(1);
+  public final static OlFormatCurrency olFormatCurrencyNonDecimal = new OlFormatCurrency(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olFormatCurrencyDecimal = 1;
+  public final static int _olFormatCurrencyNonDecimal = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlFormatCurrency(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlFormatCurrency valueOf(int value) {
     switch(value) {
     case 1: return olFormatCurrencyDecimal;
     case 2: return olFormatCurrencyNonDecimal;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlFormatCurrency.class);
+    default: return new OlFormatCurrency(value);
     }
   }
 }

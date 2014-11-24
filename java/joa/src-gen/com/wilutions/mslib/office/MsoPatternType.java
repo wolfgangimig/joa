@@ -8,65 +8,129 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoPatternType {
-  msoPatternMixed(-2),
-  msoPattern5Percent(1),
-  msoPattern10Percent(2),
-  msoPattern20Percent(3),
-  msoPattern25Percent(4),
-  msoPattern30Percent(5),
-  msoPattern40Percent(6),
-  msoPattern50Percent(7),
-  msoPattern60Percent(8),
-  msoPattern70Percent(9),
-  msoPattern75Percent(10),
-  msoPattern80Percent(11),
-  msoPattern90Percent(12),
-  msoPatternDarkHorizontal(13),
-  msoPatternDarkVertical(14),
-  msoPatternDarkDownwardDiagonal(15),
-  msoPatternDarkUpwardDiagonal(16),
-  msoPatternSmallCheckerBoard(17),
-  msoPatternTrellis(18),
-  msoPatternLightHorizontal(19),
-  msoPatternLightVertical(20),
-  msoPatternLightDownwardDiagonal(21),
-  msoPatternLightUpwardDiagonal(22),
-  msoPatternSmallGrid(23),
-  msoPatternDottedDiamond(24),
-  msoPatternWideDownwardDiagonal(25),
-  msoPatternWideUpwardDiagonal(26),
-  msoPatternDashedUpwardDiagonal(27),
-  msoPatternDashedDownwardDiagonal(28),
-  msoPatternNarrowVertical(29),
-  msoPatternNarrowHorizontal(30),
-  msoPatternDashedVertical(31),
-  msoPatternDashedHorizontal(32),
-  msoPatternLargeConfetti(33),
-  msoPatternLargeGrid(34),
-  msoPatternHorizontalBrick(35),
-  msoPatternLargeCheckerBoard(36),
-  msoPatternSmallConfetti(37),
-  msoPatternZigZag(38),
-  msoPatternSolidDiamond(39),
-  msoPatternDiagonalBrick(40),
-  msoPatternOutlinedDiamond(41),
-  msoPatternPlaid(42),
-  msoPatternSphere(43),
-  msoPatternWeave(44),
-  msoPatternDottedGrid(45),
-  msoPatternDivot(46),
-  msoPatternShingle(47),
-  msoPatternWave(48),
-  msoPatternHorizontal(49),
-  msoPatternVertical(50),
-  msoPatternCross(51),
-  msoPatternDownwardDiagonal(52),
-  msoPatternUpwardDiagonal(53),
-  msoPatternDiagonalCross(54);
+public class MsoPatternType {
 
+  // Typed constants
+  public final static MsoPatternType msoPatternMixed = new MsoPatternType(-2);
+  public final static MsoPatternType msoPattern5Percent = new MsoPatternType(1);
+  public final static MsoPatternType msoPattern10Percent = new MsoPatternType(2);
+  public final static MsoPatternType msoPattern20Percent = new MsoPatternType(3);
+  public final static MsoPatternType msoPattern25Percent = new MsoPatternType(4);
+  public final static MsoPatternType msoPattern30Percent = new MsoPatternType(5);
+  public final static MsoPatternType msoPattern40Percent = new MsoPatternType(6);
+  public final static MsoPatternType msoPattern50Percent = new MsoPatternType(7);
+  public final static MsoPatternType msoPattern60Percent = new MsoPatternType(8);
+  public final static MsoPatternType msoPattern70Percent = new MsoPatternType(9);
+  public final static MsoPatternType msoPattern75Percent = new MsoPatternType(10);
+  public final static MsoPatternType msoPattern80Percent = new MsoPatternType(11);
+  public final static MsoPatternType msoPattern90Percent = new MsoPatternType(12);
+  public final static MsoPatternType msoPatternDarkHorizontal = new MsoPatternType(13);
+  public final static MsoPatternType msoPatternDarkVertical = new MsoPatternType(14);
+  public final static MsoPatternType msoPatternDarkDownwardDiagonal = new MsoPatternType(15);
+  public final static MsoPatternType msoPatternDarkUpwardDiagonal = new MsoPatternType(16);
+  public final static MsoPatternType msoPatternSmallCheckerBoard = new MsoPatternType(17);
+  public final static MsoPatternType msoPatternTrellis = new MsoPatternType(18);
+  public final static MsoPatternType msoPatternLightHorizontal = new MsoPatternType(19);
+  public final static MsoPatternType msoPatternLightVertical = new MsoPatternType(20);
+  public final static MsoPatternType msoPatternLightDownwardDiagonal = new MsoPatternType(21);
+  public final static MsoPatternType msoPatternLightUpwardDiagonal = new MsoPatternType(22);
+  public final static MsoPatternType msoPatternSmallGrid = new MsoPatternType(23);
+  public final static MsoPatternType msoPatternDottedDiamond = new MsoPatternType(24);
+  public final static MsoPatternType msoPatternWideDownwardDiagonal = new MsoPatternType(25);
+  public final static MsoPatternType msoPatternWideUpwardDiagonal = new MsoPatternType(26);
+  public final static MsoPatternType msoPatternDashedUpwardDiagonal = new MsoPatternType(27);
+  public final static MsoPatternType msoPatternDashedDownwardDiagonal = new MsoPatternType(28);
+  public final static MsoPatternType msoPatternNarrowVertical = new MsoPatternType(29);
+  public final static MsoPatternType msoPatternNarrowHorizontal = new MsoPatternType(30);
+  public final static MsoPatternType msoPatternDashedVertical = new MsoPatternType(31);
+  public final static MsoPatternType msoPatternDashedHorizontal = new MsoPatternType(32);
+  public final static MsoPatternType msoPatternLargeConfetti = new MsoPatternType(33);
+  public final static MsoPatternType msoPatternLargeGrid = new MsoPatternType(34);
+  public final static MsoPatternType msoPatternHorizontalBrick = new MsoPatternType(35);
+  public final static MsoPatternType msoPatternLargeCheckerBoard = new MsoPatternType(36);
+  public final static MsoPatternType msoPatternSmallConfetti = new MsoPatternType(37);
+  public final static MsoPatternType msoPatternZigZag = new MsoPatternType(38);
+  public final static MsoPatternType msoPatternSolidDiamond = new MsoPatternType(39);
+  public final static MsoPatternType msoPatternDiagonalBrick = new MsoPatternType(40);
+  public final static MsoPatternType msoPatternOutlinedDiamond = new MsoPatternType(41);
+  public final static MsoPatternType msoPatternPlaid = new MsoPatternType(42);
+  public final static MsoPatternType msoPatternSphere = new MsoPatternType(43);
+  public final static MsoPatternType msoPatternWeave = new MsoPatternType(44);
+  public final static MsoPatternType msoPatternDottedGrid = new MsoPatternType(45);
+  public final static MsoPatternType msoPatternDivot = new MsoPatternType(46);
+  public final static MsoPatternType msoPatternShingle = new MsoPatternType(47);
+  public final static MsoPatternType msoPatternWave = new MsoPatternType(48);
+  public final static MsoPatternType msoPatternHorizontal = new MsoPatternType(49);
+  public final static MsoPatternType msoPatternVertical = new MsoPatternType(50);
+  public final static MsoPatternType msoPatternCross = new MsoPatternType(51);
+  public final static MsoPatternType msoPatternDownwardDiagonal = new MsoPatternType(52);
+  public final static MsoPatternType msoPatternUpwardDiagonal = new MsoPatternType(53);
+  public final static MsoPatternType msoPatternDiagonalCross = new MsoPatternType(54);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoPatternMixed = -2;
+  public final static int _msoPattern5Percent = 1;
+  public final static int _msoPattern10Percent = 2;
+  public final static int _msoPattern20Percent = 3;
+  public final static int _msoPattern25Percent = 4;
+  public final static int _msoPattern30Percent = 5;
+  public final static int _msoPattern40Percent = 6;
+  public final static int _msoPattern50Percent = 7;
+  public final static int _msoPattern60Percent = 8;
+  public final static int _msoPattern70Percent = 9;
+  public final static int _msoPattern75Percent = 10;
+  public final static int _msoPattern80Percent = 11;
+  public final static int _msoPattern90Percent = 12;
+  public final static int _msoPatternDarkHorizontal = 13;
+  public final static int _msoPatternDarkVertical = 14;
+  public final static int _msoPatternDarkDownwardDiagonal = 15;
+  public final static int _msoPatternDarkUpwardDiagonal = 16;
+  public final static int _msoPatternSmallCheckerBoard = 17;
+  public final static int _msoPatternTrellis = 18;
+  public final static int _msoPatternLightHorizontal = 19;
+  public final static int _msoPatternLightVertical = 20;
+  public final static int _msoPatternLightDownwardDiagonal = 21;
+  public final static int _msoPatternLightUpwardDiagonal = 22;
+  public final static int _msoPatternSmallGrid = 23;
+  public final static int _msoPatternDottedDiamond = 24;
+  public final static int _msoPatternWideDownwardDiagonal = 25;
+  public final static int _msoPatternWideUpwardDiagonal = 26;
+  public final static int _msoPatternDashedUpwardDiagonal = 27;
+  public final static int _msoPatternDashedDownwardDiagonal = 28;
+  public final static int _msoPatternNarrowVertical = 29;
+  public final static int _msoPatternNarrowHorizontal = 30;
+  public final static int _msoPatternDashedVertical = 31;
+  public final static int _msoPatternDashedHorizontal = 32;
+  public final static int _msoPatternLargeConfetti = 33;
+  public final static int _msoPatternLargeGrid = 34;
+  public final static int _msoPatternHorizontalBrick = 35;
+  public final static int _msoPatternLargeCheckerBoard = 36;
+  public final static int _msoPatternSmallConfetti = 37;
+  public final static int _msoPatternZigZag = 38;
+  public final static int _msoPatternSolidDiamond = 39;
+  public final static int _msoPatternDiagonalBrick = 40;
+  public final static int _msoPatternOutlinedDiamond = 41;
+  public final static int _msoPatternPlaid = 42;
+  public final static int _msoPatternSphere = 43;
+  public final static int _msoPatternWeave = 44;
+  public final static int _msoPatternDottedGrid = 45;
+  public final static int _msoPatternDivot = 46;
+  public final static int _msoPatternShingle = 47;
+  public final static int _msoPatternWave = 48;
+  public final static int _msoPatternHorizontal = 49;
+  public final static int _msoPatternVertical = 50;
+  public final static int _msoPatternCross = 51;
+  public final static int _msoPatternDownwardDiagonal = 52;
+  public final static int _msoPatternUpwardDiagonal = 53;
+  public final static int _msoPatternDiagonalCross = 54;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPatternType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPatternType valueOf(int value) {
     switch(value) {
     case -2: return msoPatternMixed;
@@ -124,7 +188,7 @@ public enum MsoPatternType {
     case 52: return msoPatternDownwardDiagonal;
     case 53: return msoPatternUpwardDiagonal;
     case 54: return msoPatternDiagonalCross;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPatternType.class);
+    default: return new MsoPatternType(value);
     }
   }
 }

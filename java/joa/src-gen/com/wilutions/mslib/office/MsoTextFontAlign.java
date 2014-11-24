@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoTextFontAlign {
-  msoFontAlignMixed(-2),
-  msoFontAlignAuto(0),
-  msoFontAlignTop(1),
-  msoFontAlignCenter(2),
-  msoFontAlignBaseline(3),
-  msoFontAlignBottom(4);
+public class MsoTextFontAlign {
 
+  // Typed constants
+  public final static MsoTextFontAlign msoFontAlignMixed = new MsoTextFontAlign(-2);
+  public final static MsoTextFontAlign msoFontAlignAuto = new MsoTextFontAlign(0);
+  public final static MsoTextFontAlign msoFontAlignTop = new MsoTextFontAlign(1);
+  public final static MsoTextFontAlign msoFontAlignCenter = new MsoTextFontAlign(2);
+  public final static MsoTextFontAlign msoFontAlignBaseline = new MsoTextFontAlign(3);
+  public final static MsoTextFontAlign msoFontAlignBottom = new MsoTextFontAlign(4);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoFontAlignMixed = -2;
+  public final static int _msoFontAlignAuto = 0;
+  public final static int _msoFontAlignTop = 1;
+  public final static int _msoFontAlignCenter = 2;
+  public final static int _msoFontAlignBaseline = 3;
+  public final static int _msoFontAlignBottom = 4;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoTextFontAlign(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoTextFontAlign valueOf(int value) {
     switch(value) {
     case -2: return msoFontAlignMixed;
@@ -26,7 +41,7 @@ public enum MsoTextFontAlign {
     case 2: return msoFontAlignCenter;
     case 3: return msoFontAlignBaseline;
     case 4: return msoFontAlignBottom;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoTextFontAlign.class);
+    default: return new MsoTextFontAlign(value);
     }
   }
 }

@@ -11,8 +11,7 @@ public class Conversation extends Dispatch implements _Conversation {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,36 +21,35 @@ public class Conversation extends Dispatch implements _Conversation {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64591)  public Table GetTable() throws ComException {
     final Object obj = this._dispatchCall(64591,"GetTable", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Table.class);
+    return disp.as(Table.class);
   }
-  @DeclDISPID(64592)  public SimpleItems GetChildren(Dispatch Item) throws ComException {
+  @DeclDISPID(64592)  public SimpleItems GetChildren(IDispatch Item) throws ComException {
     final Object obj = this._dispatchCall(64592,"GetChildren", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(SimpleItems.class);
+    return disp.as(SimpleItems.class);
   }
-  @DeclDISPID(64594)  public Dispatch GetParent(Dispatch Item) throws ComException {
+  @DeclDISPID(64594)  public IDispatch GetParent(IDispatch Item) throws ComException {
     final Object obj = this._dispatchCall(64594,"GetParent", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64595)  public SimpleItems GetRootItems() throws ComException {
     final Object obj = this._dispatchCall(64595,"GetRootItems", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(SimpleItems.class);
+    return disp.as(SimpleItems.class);
   }
   @DeclDISPID(64602)  public String GetAlwaysAssignCategories(_Store Store) throws ComException {
     final Object obj = this._dispatchCall(64602,"GetAlwaysAssignCategories", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
@@ -66,8 +64,7 @@ public class Conversation extends Dispatch implements _Conversation {
   @DeclDISPID(64604)  public MAPIFolder GetAlwaysMoveToFolder(_Store Store) throws ComException {
     final Object obj = this._dispatchCall(64604,"GetAlwaysMoveToFolder", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64605)  public void MarkAsRead() throws ComException {
     this._dispatchCall(64605,"MarkAsRead", DISPATCH_METHOD,null);

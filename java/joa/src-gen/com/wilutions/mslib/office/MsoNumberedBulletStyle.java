@@ -8,52 +8,103 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoNumberedBulletStyle {
-  msoBulletStyleMixed(-2),
-  msoBulletAlphaLCPeriod(0),
-  msoBulletAlphaUCPeriod(1),
-  msoBulletArabicParenRight(2),
-  msoBulletArabicPeriod(3),
-  msoBulletRomanLCParenBoth(4),
-  msoBulletRomanLCParenRight(5),
-  msoBulletRomanLCPeriod(6),
-  msoBulletRomanUCPeriod(7),
-  msoBulletAlphaLCParenBoth(8),
-  msoBulletAlphaLCParenRight(9),
-  msoBulletAlphaUCParenBoth(10),
-  msoBulletAlphaUCParenRight(11),
-  msoBulletArabicParenBoth(12),
-  msoBulletArabicPlain(13),
-  msoBulletRomanUCParenBoth(14),
-  msoBulletRomanUCParenRight(15),
-  msoBulletSimpChinPlain(16),
-  msoBulletSimpChinPeriod(17),
-  msoBulletCircleNumDBPlain(18),
-  msoBulletCircleNumWDWhitePlain(19),
-  msoBulletCircleNumWDBlackPlain(20),
-  msoBulletTradChinPlain(21),
-  msoBulletTradChinPeriod(22),
-  msoBulletArabicAlphaDash(23),
-  msoBulletArabicAbjadDash(24),
-  msoBulletHebrewAlphaDash(25),
-  msoBulletKanjiKoreanPlain(26),
-  msoBulletKanjiKoreanPeriod(27),
-  msoBulletArabicDBPlain(28),
-  msoBulletArabicDBPeriod(29),
-  msoBulletThaiAlphaPeriod(30),
-  msoBulletThaiAlphaParenRight(31),
-  msoBulletThaiAlphaParenBoth(32),
-  msoBulletThaiNumPeriod(33),
-  msoBulletThaiNumParenRight(34),
-  msoBulletThaiNumParenBoth(35),
-  msoBulletHindiAlphaPeriod(36),
-  msoBulletHindiNumPeriod(37),
-  msoBulletKanjiSimpChinDBPeriod(38),
-  msoBulletHindiNumParenRight(39),
-  msoBulletHindiAlpha1Period(40);
+public class MsoNumberedBulletStyle {
 
+  // Typed constants
+  public final static MsoNumberedBulletStyle msoBulletStyleMixed = new MsoNumberedBulletStyle(-2);
+  public final static MsoNumberedBulletStyle msoBulletAlphaLCPeriod = new MsoNumberedBulletStyle(0);
+  public final static MsoNumberedBulletStyle msoBulletAlphaUCPeriod = new MsoNumberedBulletStyle(1);
+  public final static MsoNumberedBulletStyle msoBulletArabicParenRight = new MsoNumberedBulletStyle(2);
+  public final static MsoNumberedBulletStyle msoBulletArabicPeriod = new MsoNumberedBulletStyle(3);
+  public final static MsoNumberedBulletStyle msoBulletRomanLCParenBoth = new MsoNumberedBulletStyle(4);
+  public final static MsoNumberedBulletStyle msoBulletRomanLCParenRight = new MsoNumberedBulletStyle(5);
+  public final static MsoNumberedBulletStyle msoBulletRomanLCPeriod = new MsoNumberedBulletStyle(6);
+  public final static MsoNumberedBulletStyle msoBulletRomanUCPeriod = new MsoNumberedBulletStyle(7);
+  public final static MsoNumberedBulletStyle msoBulletAlphaLCParenBoth = new MsoNumberedBulletStyle(8);
+  public final static MsoNumberedBulletStyle msoBulletAlphaLCParenRight = new MsoNumberedBulletStyle(9);
+  public final static MsoNumberedBulletStyle msoBulletAlphaUCParenBoth = new MsoNumberedBulletStyle(10);
+  public final static MsoNumberedBulletStyle msoBulletAlphaUCParenRight = new MsoNumberedBulletStyle(11);
+  public final static MsoNumberedBulletStyle msoBulletArabicParenBoth = new MsoNumberedBulletStyle(12);
+  public final static MsoNumberedBulletStyle msoBulletArabicPlain = new MsoNumberedBulletStyle(13);
+  public final static MsoNumberedBulletStyle msoBulletRomanUCParenBoth = new MsoNumberedBulletStyle(14);
+  public final static MsoNumberedBulletStyle msoBulletRomanUCParenRight = new MsoNumberedBulletStyle(15);
+  public final static MsoNumberedBulletStyle msoBulletSimpChinPlain = new MsoNumberedBulletStyle(16);
+  public final static MsoNumberedBulletStyle msoBulletSimpChinPeriod = new MsoNumberedBulletStyle(17);
+  public final static MsoNumberedBulletStyle msoBulletCircleNumDBPlain = new MsoNumberedBulletStyle(18);
+  public final static MsoNumberedBulletStyle msoBulletCircleNumWDWhitePlain = new MsoNumberedBulletStyle(19);
+  public final static MsoNumberedBulletStyle msoBulletCircleNumWDBlackPlain = new MsoNumberedBulletStyle(20);
+  public final static MsoNumberedBulletStyle msoBulletTradChinPlain = new MsoNumberedBulletStyle(21);
+  public final static MsoNumberedBulletStyle msoBulletTradChinPeriod = new MsoNumberedBulletStyle(22);
+  public final static MsoNumberedBulletStyle msoBulletArabicAlphaDash = new MsoNumberedBulletStyle(23);
+  public final static MsoNumberedBulletStyle msoBulletArabicAbjadDash = new MsoNumberedBulletStyle(24);
+  public final static MsoNumberedBulletStyle msoBulletHebrewAlphaDash = new MsoNumberedBulletStyle(25);
+  public final static MsoNumberedBulletStyle msoBulletKanjiKoreanPlain = new MsoNumberedBulletStyle(26);
+  public final static MsoNumberedBulletStyle msoBulletKanjiKoreanPeriod = new MsoNumberedBulletStyle(27);
+  public final static MsoNumberedBulletStyle msoBulletArabicDBPlain = new MsoNumberedBulletStyle(28);
+  public final static MsoNumberedBulletStyle msoBulletArabicDBPeriod = new MsoNumberedBulletStyle(29);
+  public final static MsoNumberedBulletStyle msoBulletThaiAlphaPeriod = new MsoNumberedBulletStyle(30);
+  public final static MsoNumberedBulletStyle msoBulletThaiAlphaParenRight = new MsoNumberedBulletStyle(31);
+  public final static MsoNumberedBulletStyle msoBulletThaiAlphaParenBoth = new MsoNumberedBulletStyle(32);
+  public final static MsoNumberedBulletStyle msoBulletThaiNumPeriod = new MsoNumberedBulletStyle(33);
+  public final static MsoNumberedBulletStyle msoBulletThaiNumParenRight = new MsoNumberedBulletStyle(34);
+  public final static MsoNumberedBulletStyle msoBulletThaiNumParenBoth = new MsoNumberedBulletStyle(35);
+  public final static MsoNumberedBulletStyle msoBulletHindiAlphaPeriod = new MsoNumberedBulletStyle(36);
+  public final static MsoNumberedBulletStyle msoBulletHindiNumPeriod = new MsoNumberedBulletStyle(37);
+  public final static MsoNumberedBulletStyle msoBulletKanjiSimpChinDBPeriod = new MsoNumberedBulletStyle(38);
+  public final static MsoNumberedBulletStyle msoBulletHindiNumParenRight = new MsoNumberedBulletStyle(39);
+  public final static MsoNumberedBulletStyle msoBulletHindiAlpha1Period = new MsoNumberedBulletStyle(40);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoBulletStyleMixed = -2;
+  public final static int _msoBulletAlphaLCPeriod = 0;
+  public final static int _msoBulletAlphaUCPeriod = 1;
+  public final static int _msoBulletArabicParenRight = 2;
+  public final static int _msoBulletArabicPeriod = 3;
+  public final static int _msoBulletRomanLCParenBoth = 4;
+  public final static int _msoBulletRomanLCParenRight = 5;
+  public final static int _msoBulletRomanLCPeriod = 6;
+  public final static int _msoBulletRomanUCPeriod = 7;
+  public final static int _msoBulletAlphaLCParenBoth = 8;
+  public final static int _msoBulletAlphaLCParenRight = 9;
+  public final static int _msoBulletAlphaUCParenBoth = 10;
+  public final static int _msoBulletAlphaUCParenRight = 11;
+  public final static int _msoBulletArabicParenBoth = 12;
+  public final static int _msoBulletArabicPlain = 13;
+  public final static int _msoBulletRomanUCParenBoth = 14;
+  public final static int _msoBulletRomanUCParenRight = 15;
+  public final static int _msoBulletSimpChinPlain = 16;
+  public final static int _msoBulletSimpChinPeriod = 17;
+  public final static int _msoBulletCircleNumDBPlain = 18;
+  public final static int _msoBulletCircleNumWDWhitePlain = 19;
+  public final static int _msoBulletCircleNumWDBlackPlain = 20;
+  public final static int _msoBulletTradChinPlain = 21;
+  public final static int _msoBulletTradChinPeriod = 22;
+  public final static int _msoBulletArabicAlphaDash = 23;
+  public final static int _msoBulletArabicAbjadDash = 24;
+  public final static int _msoBulletHebrewAlphaDash = 25;
+  public final static int _msoBulletKanjiKoreanPlain = 26;
+  public final static int _msoBulletKanjiKoreanPeriod = 27;
+  public final static int _msoBulletArabicDBPlain = 28;
+  public final static int _msoBulletArabicDBPeriod = 29;
+  public final static int _msoBulletThaiAlphaPeriod = 30;
+  public final static int _msoBulletThaiAlphaParenRight = 31;
+  public final static int _msoBulletThaiAlphaParenBoth = 32;
+  public final static int _msoBulletThaiNumPeriod = 33;
+  public final static int _msoBulletThaiNumParenRight = 34;
+  public final static int _msoBulletThaiNumParenBoth = 35;
+  public final static int _msoBulletHindiAlphaPeriod = 36;
+  public final static int _msoBulletHindiNumPeriod = 37;
+  public final static int _msoBulletKanjiSimpChinDBPeriod = 38;
+  public final static int _msoBulletHindiNumParenRight = 39;
+  public final static int _msoBulletHindiAlpha1Period = 40;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoNumberedBulletStyle(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoNumberedBulletStyle valueOf(int value) {
     switch(value) {
     case -2: return msoBulletStyleMixed;
@@ -98,7 +149,7 @@ public enum MsoNumberedBulletStyle {
     case 38: return msoBulletKanjiSimpChinDBPeriod;
     case 39: return msoBulletHindiNumParenRight;
     case 40: return msoBulletHindiAlpha1Period;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoNumberedBulletStyle.class);
+    default: return new MsoNumberedBulletStyle(value);
     }
   }
 }

@@ -8,21 +8,41 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoBlackWhiteMode {
-  msoBlackWhiteMixed(-2),
-  msoBlackWhiteAutomatic(1),
-  msoBlackWhiteGrayScale(2),
-  msoBlackWhiteLightGrayScale(3),
-  msoBlackWhiteInverseGrayScale(4),
-  msoBlackWhiteGrayOutline(5),
-  msoBlackWhiteBlackTextAndLine(6),
-  msoBlackWhiteHighContrast(7),
-  msoBlackWhiteBlack(8),
-  msoBlackWhiteWhite(9),
-  msoBlackWhiteDontShow(10);
+public class MsoBlackWhiteMode {
 
+  // Typed constants
+  public final static MsoBlackWhiteMode msoBlackWhiteMixed = new MsoBlackWhiteMode(-2);
+  public final static MsoBlackWhiteMode msoBlackWhiteAutomatic = new MsoBlackWhiteMode(1);
+  public final static MsoBlackWhiteMode msoBlackWhiteGrayScale = new MsoBlackWhiteMode(2);
+  public final static MsoBlackWhiteMode msoBlackWhiteLightGrayScale = new MsoBlackWhiteMode(3);
+  public final static MsoBlackWhiteMode msoBlackWhiteInverseGrayScale = new MsoBlackWhiteMode(4);
+  public final static MsoBlackWhiteMode msoBlackWhiteGrayOutline = new MsoBlackWhiteMode(5);
+  public final static MsoBlackWhiteMode msoBlackWhiteBlackTextAndLine = new MsoBlackWhiteMode(6);
+  public final static MsoBlackWhiteMode msoBlackWhiteHighContrast = new MsoBlackWhiteMode(7);
+  public final static MsoBlackWhiteMode msoBlackWhiteBlack = new MsoBlackWhiteMode(8);
+  public final static MsoBlackWhiteMode msoBlackWhiteWhite = new MsoBlackWhiteMode(9);
+  public final static MsoBlackWhiteMode msoBlackWhiteDontShow = new MsoBlackWhiteMode(10);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoBlackWhiteMixed = -2;
+  public final static int _msoBlackWhiteAutomatic = 1;
+  public final static int _msoBlackWhiteGrayScale = 2;
+  public final static int _msoBlackWhiteLightGrayScale = 3;
+  public final static int _msoBlackWhiteInverseGrayScale = 4;
+  public final static int _msoBlackWhiteGrayOutline = 5;
+  public final static int _msoBlackWhiteBlackTextAndLine = 6;
+  public final static int _msoBlackWhiteHighContrast = 7;
+  public final static int _msoBlackWhiteBlack = 8;
+  public final static int _msoBlackWhiteWhite = 9;
+  public final static int _msoBlackWhiteDontShow = 10;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoBlackWhiteMode(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoBlackWhiteMode valueOf(int value) {
     switch(value) {
     case -2: return msoBlackWhiteMixed;
@@ -36,7 +56,7 @@ public enum MsoBlackWhiteMode {
     case 8: return msoBlackWhiteBlack;
     case 9: return msoBlackWhiteWhite;
     case 10: return msoBlackWhiteDontShow;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoBlackWhiteMode.class);
+    default: return new MsoBlackWhiteMode(value);
     }
   }
 }

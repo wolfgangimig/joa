@@ -75,8 +75,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
   @DeclDISPID(-512)  public com.wilutions.mslib.stdole.Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.FontImpl.class);
   }
   @DeclDISPID(-513)  public com.wilutions.mslib.stdole.OLE_COLOR getForeColor() throws ComException {
     final Object obj = this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYGET,null);
@@ -91,8 +90,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));

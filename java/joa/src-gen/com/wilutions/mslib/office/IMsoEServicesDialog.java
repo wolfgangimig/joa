@@ -11,7 +11,7 @@ public interface IMsoEServicesDialog extends IDispatch {
   @DeclDISPID(1610743808)  public void Close(Boolean ApplyWebComponentChanges) throws ComException;
   @DeclDISPID(1610743809)  public void AddTrustedDomain(String Domain) throws ComException;
   @DeclDISPID(1610743810)  public String getApplicationName() throws ComException;
-  @DeclDISPID(1610743811)  public Dispatch getApplication() throws ComException;
-  @DeclDISPID(1610743812)  public Dispatch getWebComponent() throws ComException;
-  @DeclDISPID(1610743813)  public Dispatch getClipArt() throws ComException;
+  @DeclDISPID(1610743811)  public IDispatch getApplication() throws ComException;
+  @DeclDISPID(1610743812)  public IDispatch getWebComponent() throws ComException;
+  @DeclDISPID(1610743813)  public IDispatch getClipArt() throws ComException;
 }

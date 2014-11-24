@@ -20,10 +20,10 @@ public interface IMsoDataTable extends IDispatch {
   @DeclDISPID(1610743817)  public ChartFont getFont() throws ComException;
   @DeclDISPID(1610743818)  public void Select() throws ComException;
   @DeclDISPID(1610743819)  public void Delete() throws ComException;
-  @DeclDISPID(1610743820)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1610743820)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610743821)  public Object getAutoScaleFont() throws ComException;
   @DeclDISPID(1610743821)  public void setAutoScaleFont(Object value) throws ComException;
   @DeclDISPID(1610743823)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
 }

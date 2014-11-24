@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoAutoSize {
-  msoAutoSizeMixed(-2),
-  msoAutoSizeNone(0),
-  msoAutoSizeShapeToFitText(1),
-  msoAutoSizeTextToFitShape(2);
+public class MsoAutoSize {
 
+  // Typed constants
+  public final static MsoAutoSize msoAutoSizeMixed = new MsoAutoSize(-2);
+  public final static MsoAutoSize msoAutoSizeNone = new MsoAutoSize(0);
+  public final static MsoAutoSize msoAutoSizeShapeToFitText = new MsoAutoSize(1);
+  public final static MsoAutoSize msoAutoSizeTextToFitShape = new MsoAutoSize(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoAutoSizeMixed = -2;
+  public final static int _msoAutoSizeNone = 0;
+  public final static int _msoAutoSizeShapeToFitText = 1;
+  public final static int _msoAutoSizeTextToFitShape = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoAutoSize(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoAutoSize valueOf(int value) {
     switch(value) {
     case -2: return msoAutoSizeMixed;
     case 0: return msoAutoSizeNone;
     case 1: return msoAutoSizeShapeToFitText;
     case 2: return msoAutoSizeTextToFitShape;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoAutoSize.class);
+    default: return new MsoAutoSize(value);
     }
   }
 }

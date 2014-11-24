@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlDownloadState {
-  olHeaderOnly(0),
-  olFullItem(1);
+public class OlDownloadState {
 
+  // Typed constants
+  public final static OlDownloadState olHeaderOnly = new OlDownloadState(0);
+  public final static OlDownloadState olFullItem = new OlDownloadState(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olHeaderOnly = 0;
+  public final static int _olFullItem = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlDownloadState(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlDownloadState valueOf(int value) {
     switch(value) {
     case 0: return olHeaderOnly;
     case 1: return olFullItem;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlDownloadState.class);
+    default: return new OlDownloadState(value);
     }
   }
 }

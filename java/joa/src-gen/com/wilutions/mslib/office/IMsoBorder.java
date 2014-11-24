@@ -16,7 +16,7 @@ public interface IMsoBorder extends IDispatch {
   @DeclDISPID(1610743812)  public Object getLineStyle() throws ComException;
   @DeclDISPID(1610743814)  public void setWeight(Object value) throws ComException;
   @DeclDISPID(1610743814)  public Object getWeight() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
 }

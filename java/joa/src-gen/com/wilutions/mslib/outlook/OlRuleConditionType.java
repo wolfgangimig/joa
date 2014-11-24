@@ -8,42 +8,83 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlRuleConditionType {
-  olConditionUnknown(0),
-  olConditionFrom(1),
-  olConditionSubject(2),
-  olConditionAccount(3),
-  olConditionOnlyToMe(4),
-  olConditionTo(5),
-  olConditionImportance(6),
-  olConditionSensitivity(7),
-  olConditionFlaggedForAction(8),
-  olConditionCc(9),
-  olConditionToOrCc(10),
-  olConditionNotTo(11),
-  olConditionSentTo(12),
-  olConditionBody(13),
-  olConditionBodyOrSubject(14),
-  olConditionMessageHeader(15),
-  olConditionRecipientAddress(16),
-  olConditionSenderAddress(17),
-  olConditionCategory(18),
-  olConditionOOF(19),
-  olConditionHasAttachment(20),
-  olConditionSizeRange(21),
-  olConditionDateRange(22),
-  olConditionFormName(23),
-  olConditionProperty(24),
-  olConditionSenderInAddressBook(25),
-  olConditionMeetingInviteOrUpdate(26),
-  olConditionLocalMachineOnly(27),
-  olConditionOtherMachine(28),
-  olConditionAnyCategory(29),
-  olConditionFromRssFeed(30),
-  olConditionFromAnyRssFeed(31);
+public class OlRuleConditionType {
 
+  // Typed constants
+  public final static OlRuleConditionType olConditionUnknown = new OlRuleConditionType(0);
+  public final static OlRuleConditionType olConditionFrom = new OlRuleConditionType(1);
+  public final static OlRuleConditionType olConditionSubject = new OlRuleConditionType(2);
+  public final static OlRuleConditionType olConditionAccount = new OlRuleConditionType(3);
+  public final static OlRuleConditionType olConditionOnlyToMe = new OlRuleConditionType(4);
+  public final static OlRuleConditionType olConditionTo = new OlRuleConditionType(5);
+  public final static OlRuleConditionType olConditionImportance = new OlRuleConditionType(6);
+  public final static OlRuleConditionType olConditionSensitivity = new OlRuleConditionType(7);
+  public final static OlRuleConditionType olConditionFlaggedForAction = new OlRuleConditionType(8);
+  public final static OlRuleConditionType olConditionCc = new OlRuleConditionType(9);
+  public final static OlRuleConditionType olConditionToOrCc = new OlRuleConditionType(10);
+  public final static OlRuleConditionType olConditionNotTo = new OlRuleConditionType(11);
+  public final static OlRuleConditionType olConditionSentTo = new OlRuleConditionType(12);
+  public final static OlRuleConditionType olConditionBody = new OlRuleConditionType(13);
+  public final static OlRuleConditionType olConditionBodyOrSubject = new OlRuleConditionType(14);
+  public final static OlRuleConditionType olConditionMessageHeader = new OlRuleConditionType(15);
+  public final static OlRuleConditionType olConditionRecipientAddress = new OlRuleConditionType(16);
+  public final static OlRuleConditionType olConditionSenderAddress = new OlRuleConditionType(17);
+  public final static OlRuleConditionType olConditionCategory = new OlRuleConditionType(18);
+  public final static OlRuleConditionType olConditionOOF = new OlRuleConditionType(19);
+  public final static OlRuleConditionType olConditionHasAttachment = new OlRuleConditionType(20);
+  public final static OlRuleConditionType olConditionSizeRange = new OlRuleConditionType(21);
+  public final static OlRuleConditionType olConditionDateRange = new OlRuleConditionType(22);
+  public final static OlRuleConditionType olConditionFormName = new OlRuleConditionType(23);
+  public final static OlRuleConditionType olConditionProperty = new OlRuleConditionType(24);
+  public final static OlRuleConditionType olConditionSenderInAddressBook = new OlRuleConditionType(25);
+  public final static OlRuleConditionType olConditionMeetingInviteOrUpdate = new OlRuleConditionType(26);
+  public final static OlRuleConditionType olConditionLocalMachineOnly = new OlRuleConditionType(27);
+  public final static OlRuleConditionType olConditionOtherMachine = new OlRuleConditionType(28);
+  public final static OlRuleConditionType olConditionAnyCategory = new OlRuleConditionType(29);
+  public final static OlRuleConditionType olConditionFromRssFeed = new OlRuleConditionType(30);
+  public final static OlRuleConditionType olConditionFromAnyRssFeed = new OlRuleConditionType(31);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olConditionUnknown = 0;
+  public final static int _olConditionFrom = 1;
+  public final static int _olConditionSubject = 2;
+  public final static int _olConditionAccount = 3;
+  public final static int _olConditionOnlyToMe = 4;
+  public final static int _olConditionTo = 5;
+  public final static int _olConditionImportance = 6;
+  public final static int _olConditionSensitivity = 7;
+  public final static int _olConditionFlaggedForAction = 8;
+  public final static int _olConditionCc = 9;
+  public final static int _olConditionToOrCc = 10;
+  public final static int _olConditionNotTo = 11;
+  public final static int _olConditionSentTo = 12;
+  public final static int _olConditionBody = 13;
+  public final static int _olConditionBodyOrSubject = 14;
+  public final static int _olConditionMessageHeader = 15;
+  public final static int _olConditionRecipientAddress = 16;
+  public final static int _olConditionSenderAddress = 17;
+  public final static int _olConditionCategory = 18;
+  public final static int _olConditionOOF = 19;
+  public final static int _olConditionHasAttachment = 20;
+  public final static int _olConditionSizeRange = 21;
+  public final static int _olConditionDateRange = 22;
+  public final static int _olConditionFormName = 23;
+  public final static int _olConditionProperty = 24;
+  public final static int _olConditionSenderInAddressBook = 25;
+  public final static int _olConditionMeetingInviteOrUpdate = 26;
+  public final static int _olConditionLocalMachineOnly = 27;
+  public final static int _olConditionOtherMachine = 28;
+  public final static int _olConditionAnyCategory = 29;
+  public final static int _olConditionFromRssFeed = 30;
+  public final static int _olConditionFromAnyRssFeed = 31;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlRuleConditionType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlRuleConditionType valueOf(int value) {
     switch(value) {
     case 0: return olConditionUnknown;
@@ -78,7 +119,7 @@ public enum OlRuleConditionType {
     case 29: return olConditionAnyCategory;
     case 30: return olConditionFromRssFeed;
     case 31: return olConditionFromAnyRssFeed;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlRuleConditionType.class);
+    default: return new OlRuleConditionType(value);
     }
   }
 }

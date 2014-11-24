@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0386-0000-0000-C000-000000000046}")
 public interface Sync extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public MsoSyncStatusType getStatus() throws ComException;
   @DeclDISPID(1)  public String getWorkspaceLastChangedBy() throws ComException;
@@ -19,5 +19,5 @@ public interface Sync extends IDispatch {
   @DeclDISPID(8)  public void OpenVersion(MsoSyncVersionType SyncVersionType) throws ComException;
   @DeclDISPID(9)  public void ResolveConflict(MsoSyncConflictResolutionType SyncConflictResolution) throws ComException;
   @DeclDISPID(10)  public void Unsuspend() throws ComException;
-  @DeclDISPID(14)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(14)  public IDispatch getParent() throws ComException;
 }

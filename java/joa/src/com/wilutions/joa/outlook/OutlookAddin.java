@@ -26,6 +26,7 @@ import com.wilutions.com.ByRef;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.ModalDialog;
@@ -101,7 +102,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	}
 
 	@Override
-	public Object GetFormRegionStorage(String FormRegionName, Dispatch Item, Integer LCID,
+	public Object GetFormRegionStorage(String FormRegionName, IDispatch Item, Integer LCID,
 			OlFormRegionMode FormRegionMode, OlFormRegionSize FormRegionSize) throws ComException {
 		try {
 			return OutlookFormRegion.getFormRegionOfs();
@@ -167,7 +168,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	}
 
 	@Override
-	public void onItemSend(Dispatch Item, ByRef<Boolean> Cancel) throws ComException {
+	public void onItemSend(IDispatch Item, ByRef<Boolean> Cancel) throws ComException {
 	}
 
 	@Override
@@ -175,7 +176,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	}
 
 	@Override
-	public void onReminder(Dispatch Item) throws ComException {
+	public void onReminder(IDispatch Item) throws ComException {
 	}
 
 	@Override
@@ -199,7 +200,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	}
 
 	@Override
-	public void onItemLoad(Dispatch Item) throws ComException {
+	public void onItemLoad(IDispatch Item) throws ComException {
 	}
 
 	@Override

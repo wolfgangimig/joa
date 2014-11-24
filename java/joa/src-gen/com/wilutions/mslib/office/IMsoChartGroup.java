@@ -32,8 +32,8 @@ public interface IMsoChartGroup extends IDispatch {
   @DeclDISPID(1610743829)  public Integer getIndex() throws ComException;
   @DeclDISPID(1610743830)  public void setOverlap(Integer value) throws ComException;
   @DeclDISPID(1610743830)  public Integer getOverlap() throws ComException;
-  @DeclDISPID(1610743832)  public Dispatch getRadarAxisLabels() throws ComException;
-  @DeclDISPID(1610743833)  public Dispatch SeriesCollection(Object Index) throws ComException;
+  @DeclDISPID(1610743832)  public IDispatch getRadarAxisLabels() throws ComException;
+  @DeclDISPID(1610743833)  public IDispatch SeriesCollection(Object Index) throws ComException;
   @DeclDISPID(1610743834)  public IMsoSeriesLines getSeriesLines() throws ComException;
   @DeclDISPID(1610743839)  public IMsoUpBars getUpBars() throws ComException;
   @DeclDISPID(1610743840)  public void setVaryByCategories(Boolean value) throws ComException;
@@ -52,9 +52,9 @@ public interface IMsoChartGroup extends IDispatch {
   @DeclDISPID(1610743852)  public void setSecondPlotSize(Integer value) throws ComException;
   @DeclDISPID(1610743854)  public Boolean getHas3DShading() throws ComException;
   @DeclDISPID(1610743854)  public void setHas3DShading(Boolean value) throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
-  @DeclDISPID(151)  public Dispatch CategoryCollection(Object Index) throws ComException;
-  @DeclDISPID(152)  public Dispatch FullCategoryCollection(Object Index) throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
+  @DeclDISPID(151)  public IDispatch CategoryCollection(Object Index) throws ComException;
+  @DeclDISPID(152)  public IDispatch FullCategoryCollection(Object Index) throws ComException;
 }

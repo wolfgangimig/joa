@@ -34,8 +34,7 @@ public class MultiPage extends Dispatch implements IMultiPage {
   @DeclDISPID(-512)  public Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(514)  public void setMultiRow(Boolean value) throws ComException {
     assert(value != null);
@@ -93,13 +92,12 @@ public class MultiPage extends Dispatch implements IMultiPage {
     final Object obj = this._dispatchCall(545,"SelectedItem", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Page.class);
+    return disp.as(Page.class);
   }
   @DeclDISPID(0)  public Pages getPages() throws ComException {
     final Object obj = this._dispatchCall(0,"Pages", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.PagesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.PagesImpl.class);
   }
   @DeclDISPID(528)  public void setValue(Integer value) throws ComException {
     assert(value != null);

@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{EA33F29D-6159-4E76-8A14-BCEAA808FA91}")
-public enum OlVerticalLayout {
-  olVerticalLayoutAlignTop(0),
-  olVerticalLayoutAlignMiddle(1),
-  olVerticalLayoutAlignBottom(2),
-  olVerticalLayoutGrow(3);
+public class OlVerticalLayout {
 
+  // Typed constants
+  public final static OlVerticalLayout olVerticalLayoutAlignTop = new OlVerticalLayout(0);
+  public final static OlVerticalLayout olVerticalLayoutAlignMiddle = new OlVerticalLayout(1);
+  public final static OlVerticalLayout olVerticalLayoutAlignBottom = new OlVerticalLayout(2);
+  public final static OlVerticalLayout olVerticalLayoutGrow = new OlVerticalLayout(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olVerticalLayoutAlignTop = 0;
+  public final static int _olVerticalLayoutAlignMiddle = 1;
+  public final static int _olVerticalLayoutAlignBottom = 2;
+  public final static int _olVerticalLayoutGrow = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlVerticalLayout(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlVerticalLayout valueOf(int value) {
     switch(value) {
     case 0: return olVerticalLayoutAlignTop;
     case 1: return olVerticalLayoutAlignMiddle;
     case 2: return olVerticalLayoutAlignBottom;
     case 3: return olVerticalLayoutGrow;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlVerticalLayout.class);
+    default: return new OlVerticalLayout(value);
     }
   }
 }

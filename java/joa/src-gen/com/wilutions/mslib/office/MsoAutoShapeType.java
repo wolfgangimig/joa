@@ -8,194 +8,387 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoAutoShapeType {
-  msoShapeMixed(-2),
-  msoShapeRectangle(1),
-  msoShapeParallelogram(2),
-  msoShapeTrapezoid(3),
-  msoShapeDiamond(4),
-  msoShapeRoundedRectangle(5),
-  msoShapeOctagon(6),
-  msoShapeIsoscelesTriangle(7),
-  msoShapeRightTriangle(8),
-  msoShapeOval(9),
-  msoShapeHexagon(10),
-  msoShapeCross(11),
-  msoShapeRegularPentagon(12),
-  msoShapeCan(13),
-  msoShapeCube(14),
-  msoShapeBevel(15),
-  msoShapeFoldedCorner(16),
-  msoShapeSmileyFace(17),
-  msoShapeDonut(18),
-  msoShapeNoSymbol(19),
-  msoShapeBlockArc(20),
-  msoShapeHeart(21),
-  msoShapeLightningBolt(22),
-  msoShapeSun(23),
-  msoShapeMoon(24),
-  msoShapeArc(25),
-  msoShapeDoubleBracket(26),
-  msoShapeDoubleBrace(27),
-  msoShapePlaque(28),
-  msoShapeLeftBracket(29),
-  msoShapeRightBracket(30),
-  msoShapeLeftBrace(31),
-  msoShapeRightBrace(32),
-  msoShapeRightArrow(33),
-  msoShapeLeftArrow(34),
-  msoShapeUpArrow(35),
-  msoShapeDownArrow(36),
-  msoShapeLeftRightArrow(37),
-  msoShapeUpDownArrow(38),
-  msoShapeQuadArrow(39),
-  msoShapeLeftRightUpArrow(40),
-  msoShapeBentArrow(41),
-  msoShapeUTurnArrow(42),
-  msoShapeLeftUpArrow(43),
-  msoShapeBentUpArrow(44),
-  msoShapeCurvedRightArrow(45),
-  msoShapeCurvedLeftArrow(46),
-  msoShapeCurvedUpArrow(47),
-  msoShapeCurvedDownArrow(48),
-  msoShapeStripedRightArrow(49),
-  msoShapeNotchedRightArrow(50),
-  msoShapePentagon(51),
-  msoShapeChevron(52),
-  msoShapeRightArrowCallout(53),
-  msoShapeLeftArrowCallout(54),
-  msoShapeUpArrowCallout(55),
-  msoShapeDownArrowCallout(56),
-  msoShapeLeftRightArrowCallout(57),
-  msoShapeUpDownArrowCallout(58),
-  msoShapeQuadArrowCallout(59),
-  msoShapeCircularArrow(60),
-  msoShapeFlowchartProcess(61),
-  msoShapeFlowchartAlternateProcess(62),
-  msoShapeFlowchartDecision(63),
-  msoShapeFlowchartData(64),
-  msoShapeFlowchartPredefinedProcess(65),
-  msoShapeFlowchartInternalStorage(66),
-  msoShapeFlowchartDocument(67),
-  msoShapeFlowchartMultidocument(68),
-  msoShapeFlowchartTerminator(69),
-  msoShapeFlowchartPreparation(70),
-  msoShapeFlowchartManualInput(71),
-  msoShapeFlowchartManualOperation(72),
-  msoShapeFlowchartConnector(73),
-  msoShapeFlowchartOffpageConnector(74),
-  msoShapeFlowchartCard(75),
-  msoShapeFlowchartPunchedTape(76),
-  msoShapeFlowchartSummingJunction(77),
-  msoShapeFlowchartOr(78),
-  msoShapeFlowchartCollate(79),
-  msoShapeFlowchartSort(80),
-  msoShapeFlowchartExtract(81),
-  msoShapeFlowchartMerge(82),
-  msoShapeFlowchartStoredData(83),
-  msoShapeFlowchartDelay(84),
-  msoShapeFlowchartSequentialAccessStorage(85),
-  msoShapeFlowchartMagneticDisk(86),
-  msoShapeFlowchartDirectAccessStorage(87),
-  msoShapeFlowchartDisplay(88),
-  msoShapeExplosion1(89),
-  msoShapeExplosion2(90),
-  msoShape4pointStar(91),
-  msoShape5pointStar(92),
-  msoShape8pointStar(93),
-  msoShape16pointStar(94),
-  msoShape24pointStar(95),
-  msoShape32pointStar(96),
-  msoShapeUpRibbon(97),
-  msoShapeDownRibbon(98),
-  msoShapeCurvedUpRibbon(99),
-  msoShapeCurvedDownRibbon(100),
-  msoShapeVerticalScroll(101),
-  msoShapeHorizontalScroll(102),
-  msoShapeWave(103),
-  msoShapeDoubleWave(104),
-  msoShapeRectangularCallout(105),
-  msoShapeRoundedRectangularCallout(106),
-  msoShapeOvalCallout(107),
-  msoShapeCloudCallout(108),
-  msoShapeLineCallout1(109),
-  msoShapeLineCallout2(110),
-  msoShapeLineCallout3(111),
-  msoShapeLineCallout4(112),
-  msoShapeLineCallout1AccentBar(113),
-  msoShapeLineCallout2AccentBar(114),
-  msoShapeLineCallout3AccentBar(115),
-  msoShapeLineCallout4AccentBar(116),
-  msoShapeLineCallout1NoBorder(117),
-  msoShapeLineCallout2NoBorder(118),
-  msoShapeLineCallout3NoBorder(119),
-  msoShapeLineCallout4NoBorder(120),
-  msoShapeLineCallout1BorderandAccentBar(121),
-  msoShapeLineCallout2BorderandAccentBar(122),
-  msoShapeLineCallout3BorderandAccentBar(123),
-  msoShapeLineCallout4BorderandAccentBar(124),
-  msoShapeActionButtonCustom(125),
-  msoShapeActionButtonHome(126),
-  msoShapeActionButtonHelp(127),
-  msoShapeActionButtonInformation(128),
-  msoShapeActionButtonBackorPrevious(129),
-  msoShapeActionButtonForwardorNext(130),
-  msoShapeActionButtonBeginning(131),
-  msoShapeActionButtonEnd(132),
-  msoShapeActionButtonReturn(133),
-  msoShapeActionButtonDocument(134),
-  msoShapeActionButtonSound(135),
-  msoShapeActionButtonMovie(136),
-  msoShapeBalloon(137),
-  msoShapeNotPrimitive(138),
-  msoShapeFlowchartOfflineStorage(139),
-  msoShapeLeftRightRibbon(140),
-  msoShapeDiagonalStripe(141),
-  msoShapePie(142),
-  msoShapeNonIsoscelesTrapezoid(143),
-  msoShapeDecagon(144),
-  msoShapeHeptagon(145),
-  msoShapeDodecagon(146),
-  msoShape6pointStar(147),
-  msoShape7pointStar(148),
-  msoShape10pointStar(149),
-  msoShape12pointStar(150),
-  msoShapeRound1Rectangle(151),
-  msoShapeRound2SameRectangle(152),
-  msoShapeRound2DiagRectangle(153),
-  msoShapeSnipRoundRectangle(154),
-  msoShapeSnip1Rectangle(155),
-  msoShapeSnip2SameRectangle(156),
-  msoShapeSnip2DiagRectangle(157),
-  msoShapeFrame(158),
-  msoShapeHalfFrame(159),
-  msoShapeTear(160),
-  msoShapeChord(161),
-  msoShapeCorner(162),
-  msoShapeMathPlus(163),
-  msoShapeMathMinus(164),
-  msoShapeMathMultiply(165),
-  msoShapeMathDivide(166),
-  msoShapeMathEqual(167),
-  msoShapeMathNotEqual(168),
-  msoShapeCornerTabs(169),
-  msoShapeSquareTabs(170),
-  msoShapePlaqueTabs(171),
-  msoShapeGear6(172),
-  msoShapeGear9(173),
-  msoShapeFunnel(174),
-  msoShapePieWedge(175),
-  msoShapeLeftCircularArrow(176),
-  msoShapeLeftRightCircularArrow(177),
-  msoShapeSwooshArrow(178),
-  msoShapeCloud(179),
-  msoShapeChartX(180),
-  msoShapeChartStar(181),
-  msoShapeChartPlus(182),
-  msoShapeLineInverse(183);
+public class MsoAutoShapeType {
 
+  // Typed constants
+  public final static MsoAutoShapeType msoShapeMixed = new MsoAutoShapeType(-2);
+  public final static MsoAutoShapeType msoShapeRectangle = new MsoAutoShapeType(1);
+  public final static MsoAutoShapeType msoShapeParallelogram = new MsoAutoShapeType(2);
+  public final static MsoAutoShapeType msoShapeTrapezoid = new MsoAutoShapeType(3);
+  public final static MsoAutoShapeType msoShapeDiamond = new MsoAutoShapeType(4);
+  public final static MsoAutoShapeType msoShapeRoundedRectangle = new MsoAutoShapeType(5);
+  public final static MsoAutoShapeType msoShapeOctagon = new MsoAutoShapeType(6);
+  public final static MsoAutoShapeType msoShapeIsoscelesTriangle = new MsoAutoShapeType(7);
+  public final static MsoAutoShapeType msoShapeRightTriangle = new MsoAutoShapeType(8);
+  public final static MsoAutoShapeType msoShapeOval = new MsoAutoShapeType(9);
+  public final static MsoAutoShapeType msoShapeHexagon = new MsoAutoShapeType(10);
+  public final static MsoAutoShapeType msoShapeCross = new MsoAutoShapeType(11);
+  public final static MsoAutoShapeType msoShapeRegularPentagon = new MsoAutoShapeType(12);
+  public final static MsoAutoShapeType msoShapeCan = new MsoAutoShapeType(13);
+  public final static MsoAutoShapeType msoShapeCube = new MsoAutoShapeType(14);
+  public final static MsoAutoShapeType msoShapeBevel = new MsoAutoShapeType(15);
+  public final static MsoAutoShapeType msoShapeFoldedCorner = new MsoAutoShapeType(16);
+  public final static MsoAutoShapeType msoShapeSmileyFace = new MsoAutoShapeType(17);
+  public final static MsoAutoShapeType msoShapeDonut = new MsoAutoShapeType(18);
+  public final static MsoAutoShapeType msoShapeNoSymbol = new MsoAutoShapeType(19);
+  public final static MsoAutoShapeType msoShapeBlockArc = new MsoAutoShapeType(20);
+  public final static MsoAutoShapeType msoShapeHeart = new MsoAutoShapeType(21);
+  public final static MsoAutoShapeType msoShapeLightningBolt = new MsoAutoShapeType(22);
+  public final static MsoAutoShapeType msoShapeSun = new MsoAutoShapeType(23);
+  public final static MsoAutoShapeType msoShapeMoon = new MsoAutoShapeType(24);
+  public final static MsoAutoShapeType msoShapeArc = new MsoAutoShapeType(25);
+  public final static MsoAutoShapeType msoShapeDoubleBracket = new MsoAutoShapeType(26);
+  public final static MsoAutoShapeType msoShapeDoubleBrace = new MsoAutoShapeType(27);
+  public final static MsoAutoShapeType msoShapePlaque = new MsoAutoShapeType(28);
+  public final static MsoAutoShapeType msoShapeLeftBracket = new MsoAutoShapeType(29);
+  public final static MsoAutoShapeType msoShapeRightBracket = new MsoAutoShapeType(30);
+  public final static MsoAutoShapeType msoShapeLeftBrace = new MsoAutoShapeType(31);
+  public final static MsoAutoShapeType msoShapeRightBrace = new MsoAutoShapeType(32);
+  public final static MsoAutoShapeType msoShapeRightArrow = new MsoAutoShapeType(33);
+  public final static MsoAutoShapeType msoShapeLeftArrow = new MsoAutoShapeType(34);
+  public final static MsoAutoShapeType msoShapeUpArrow = new MsoAutoShapeType(35);
+  public final static MsoAutoShapeType msoShapeDownArrow = new MsoAutoShapeType(36);
+  public final static MsoAutoShapeType msoShapeLeftRightArrow = new MsoAutoShapeType(37);
+  public final static MsoAutoShapeType msoShapeUpDownArrow = new MsoAutoShapeType(38);
+  public final static MsoAutoShapeType msoShapeQuadArrow = new MsoAutoShapeType(39);
+  public final static MsoAutoShapeType msoShapeLeftRightUpArrow = new MsoAutoShapeType(40);
+  public final static MsoAutoShapeType msoShapeBentArrow = new MsoAutoShapeType(41);
+  public final static MsoAutoShapeType msoShapeUTurnArrow = new MsoAutoShapeType(42);
+  public final static MsoAutoShapeType msoShapeLeftUpArrow = new MsoAutoShapeType(43);
+  public final static MsoAutoShapeType msoShapeBentUpArrow = new MsoAutoShapeType(44);
+  public final static MsoAutoShapeType msoShapeCurvedRightArrow = new MsoAutoShapeType(45);
+  public final static MsoAutoShapeType msoShapeCurvedLeftArrow = new MsoAutoShapeType(46);
+  public final static MsoAutoShapeType msoShapeCurvedUpArrow = new MsoAutoShapeType(47);
+  public final static MsoAutoShapeType msoShapeCurvedDownArrow = new MsoAutoShapeType(48);
+  public final static MsoAutoShapeType msoShapeStripedRightArrow = new MsoAutoShapeType(49);
+  public final static MsoAutoShapeType msoShapeNotchedRightArrow = new MsoAutoShapeType(50);
+  public final static MsoAutoShapeType msoShapePentagon = new MsoAutoShapeType(51);
+  public final static MsoAutoShapeType msoShapeChevron = new MsoAutoShapeType(52);
+  public final static MsoAutoShapeType msoShapeRightArrowCallout = new MsoAutoShapeType(53);
+  public final static MsoAutoShapeType msoShapeLeftArrowCallout = new MsoAutoShapeType(54);
+  public final static MsoAutoShapeType msoShapeUpArrowCallout = new MsoAutoShapeType(55);
+  public final static MsoAutoShapeType msoShapeDownArrowCallout = new MsoAutoShapeType(56);
+  public final static MsoAutoShapeType msoShapeLeftRightArrowCallout = new MsoAutoShapeType(57);
+  public final static MsoAutoShapeType msoShapeUpDownArrowCallout = new MsoAutoShapeType(58);
+  public final static MsoAutoShapeType msoShapeQuadArrowCallout = new MsoAutoShapeType(59);
+  public final static MsoAutoShapeType msoShapeCircularArrow = new MsoAutoShapeType(60);
+  public final static MsoAutoShapeType msoShapeFlowchartProcess = new MsoAutoShapeType(61);
+  public final static MsoAutoShapeType msoShapeFlowchartAlternateProcess = new MsoAutoShapeType(62);
+  public final static MsoAutoShapeType msoShapeFlowchartDecision = new MsoAutoShapeType(63);
+  public final static MsoAutoShapeType msoShapeFlowchartData = new MsoAutoShapeType(64);
+  public final static MsoAutoShapeType msoShapeFlowchartPredefinedProcess = new MsoAutoShapeType(65);
+  public final static MsoAutoShapeType msoShapeFlowchartInternalStorage = new MsoAutoShapeType(66);
+  public final static MsoAutoShapeType msoShapeFlowchartDocument = new MsoAutoShapeType(67);
+  public final static MsoAutoShapeType msoShapeFlowchartMultidocument = new MsoAutoShapeType(68);
+  public final static MsoAutoShapeType msoShapeFlowchartTerminator = new MsoAutoShapeType(69);
+  public final static MsoAutoShapeType msoShapeFlowchartPreparation = new MsoAutoShapeType(70);
+  public final static MsoAutoShapeType msoShapeFlowchartManualInput = new MsoAutoShapeType(71);
+  public final static MsoAutoShapeType msoShapeFlowchartManualOperation = new MsoAutoShapeType(72);
+  public final static MsoAutoShapeType msoShapeFlowchartConnector = new MsoAutoShapeType(73);
+  public final static MsoAutoShapeType msoShapeFlowchartOffpageConnector = new MsoAutoShapeType(74);
+  public final static MsoAutoShapeType msoShapeFlowchartCard = new MsoAutoShapeType(75);
+  public final static MsoAutoShapeType msoShapeFlowchartPunchedTape = new MsoAutoShapeType(76);
+  public final static MsoAutoShapeType msoShapeFlowchartSummingJunction = new MsoAutoShapeType(77);
+  public final static MsoAutoShapeType msoShapeFlowchartOr = new MsoAutoShapeType(78);
+  public final static MsoAutoShapeType msoShapeFlowchartCollate = new MsoAutoShapeType(79);
+  public final static MsoAutoShapeType msoShapeFlowchartSort = new MsoAutoShapeType(80);
+  public final static MsoAutoShapeType msoShapeFlowchartExtract = new MsoAutoShapeType(81);
+  public final static MsoAutoShapeType msoShapeFlowchartMerge = new MsoAutoShapeType(82);
+  public final static MsoAutoShapeType msoShapeFlowchartStoredData = new MsoAutoShapeType(83);
+  public final static MsoAutoShapeType msoShapeFlowchartDelay = new MsoAutoShapeType(84);
+  public final static MsoAutoShapeType msoShapeFlowchartSequentialAccessStorage = new MsoAutoShapeType(85);
+  public final static MsoAutoShapeType msoShapeFlowchartMagneticDisk = new MsoAutoShapeType(86);
+  public final static MsoAutoShapeType msoShapeFlowchartDirectAccessStorage = new MsoAutoShapeType(87);
+  public final static MsoAutoShapeType msoShapeFlowchartDisplay = new MsoAutoShapeType(88);
+  public final static MsoAutoShapeType msoShapeExplosion1 = new MsoAutoShapeType(89);
+  public final static MsoAutoShapeType msoShapeExplosion2 = new MsoAutoShapeType(90);
+  public final static MsoAutoShapeType msoShape4pointStar = new MsoAutoShapeType(91);
+  public final static MsoAutoShapeType msoShape5pointStar = new MsoAutoShapeType(92);
+  public final static MsoAutoShapeType msoShape8pointStar = new MsoAutoShapeType(93);
+  public final static MsoAutoShapeType msoShape16pointStar = new MsoAutoShapeType(94);
+  public final static MsoAutoShapeType msoShape24pointStar = new MsoAutoShapeType(95);
+  public final static MsoAutoShapeType msoShape32pointStar = new MsoAutoShapeType(96);
+  public final static MsoAutoShapeType msoShapeUpRibbon = new MsoAutoShapeType(97);
+  public final static MsoAutoShapeType msoShapeDownRibbon = new MsoAutoShapeType(98);
+  public final static MsoAutoShapeType msoShapeCurvedUpRibbon = new MsoAutoShapeType(99);
+  public final static MsoAutoShapeType msoShapeCurvedDownRibbon = new MsoAutoShapeType(100);
+  public final static MsoAutoShapeType msoShapeVerticalScroll = new MsoAutoShapeType(101);
+  public final static MsoAutoShapeType msoShapeHorizontalScroll = new MsoAutoShapeType(102);
+  public final static MsoAutoShapeType msoShapeWave = new MsoAutoShapeType(103);
+  public final static MsoAutoShapeType msoShapeDoubleWave = new MsoAutoShapeType(104);
+  public final static MsoAutoShapeType msoShapeRectangularCallout = new MsoAutoShapeType(105);
+  public final static MsoAutoShapeType msoShapeRoundedRectangularCallout = new MsoAutoShapeType(106);
+  public final static MsoAutoShapeType msoShapeOvalCallout = new MsoAutoShapeType(107);
+  public final static MsoAutoShapeType msoShapeCloudCallout = new MsoAutoShapeType(108);
+  public final static MsoAutoShapeType msoShapeLineCallout1 = new MsoAutoShapeType(109);
+  public final static MsoAutoShapeType msoShapeLineCallout2 = new MsoAutoShapeType(110);
+  public final static MsoAutoShapeType msoShapeLineCallout3 = new MsoAutoShapeType(111);
+  public final static MsoAutoShapeType msoShapeLineCallout4 = new MsoAutoShapeType(112);
+  public final static MsoAutoShapeType msoShapeLineCallout1AccentBar = new MsoAutoShapeType(113);
+  public final static MsoAutoShapeType msoShapeLineCallout2AccentBar = new MsoAutoShapeType(114);
+  public final static MsoAutoShapeType msoShapeLineCallout3AccentBar = new MsoAutoShapeType(115);
+  public final static MsoAutoShapeType msoShapeLineCallout4AccentBar = new MsoAutoShapeType(116);
+  public final static MsoAutoShapeType msoShapeLineCallout1NoBorder = new MsoAutoShapeType(117);
+  public final static MsoAutoShapeType msoShapeLineCallout2NoBorder = new MsoAutoShapeType(118);
+  public final static MsoAutoShapeType msoShapeLineCallout3NoBorder = new MsoAutoShapeType(119);
+  public final static MsoAutoShapeType msoShapeLineCallout4NoBorder = new MsoAutoShapeType(120);
+  public final static MsoAutoShapeType msoShapeLineCallout1BorderandAccentBar = new MsoAutoShapeType(121);
+  public final static MsoAutoShapeType msoShapeLineCallout2BorderandAccentBar = new MsoAutoShapeType(122);
+  public final static MsoAutoShapeType msoShapeLineCallout3BorderandAccentBar = new MsoAutoShapeType(123);
+  public final static MsoAutoShapeType msoShapeLineCallout4BorderandAccentBar = new MsoAutoShapeType(124);
+  public final static MsoAutoShapeType msoShapeActionButtonCustom = new MsoAutoShapeType(125);
+  public final static MsoAutoShapeType msoShapeActionButtonHome = new MsoAutoShapeType(126);
+  public final static MsoAutoShapeType msoShapeActionButtonHelp = new MsoAutoShapeType(127);
+  public final static MsoAutoShapeType msoShapeActionButtonInformation = new MsoAutoShapeType(128);
+  public final static MsoAutoShapeType msoShapeActionButtonBackorPrevious = new MsoAutoShapeType(129);
+  public final static MsoAutoShapeType msoShapeActionButtonForwardorNext = new MsoAutoShapeType(130);
+  public final static MsoAutoShapeType msoShapeActionButtonBeginning = new MsoAutoShapeType(131);
+  public final static MsoAutoShapeType msoShapeActionButtonEnd = new MsoAutoShapeType(132);
+  public final static MsoAutoShapeType msoShapeActionButtonReturn = new MsoAutoShapeType(133);
+  public final static MsoAutoShapeType msoShapeActionButtonDocument = new MsoAutoShapeType(134);
+  public final static MsoAutoShapeType msoShapeActionButtonSound = new MsoAutoShapeType(135);
+  public final static MsoAutoShapeType msoShapeActionButtonMovie = new MsoAutoShapeType(136);
+  public final static MsoAutoShapeType msoShapeBalloon = new MsoAutoShapeType(137);
+  public final static MsoAutoShapeType msoShapeNotPrimitive = new MsoAutoShapeType(138);
+  public final static MsoAutoShapeType msoShapeFlowchartOfflineStorage = new MsoAutoShapeType(139);
+  public final static MsoAutoShapeType msoShapeLeftRightRibbon = new MsoAutoShapeType(140);
+  public final static MsoAutoShapeType msoShapeDiagonalStripe = new MsoAutoShapeType(141);
+  public final static MsoAutoShapeType msoShapePie = new MsoAutoShapeType(142);
+  public final static MsoAutoShapeType msoShapeNonIsoscelesTrapezoid = new MsoAutoShapeType(143);
+  public final static MsoAutoShapeType msoShapeDecagon = new MsoAutoShapeType(144);
+  public final static MsoAutoShapeType msoShapeHeptagon = new MsoAutoShapeType(145);
+  public final static MsoAutoShapeType msoShapeDodecagon = new MsoAutoShapeType(146);
+  public final static MsoAutoShapeType msoShape6pointStar = new MsoAutoShapeType(147);
+  public final static MsoAutoShapeType msoShape7pointStar = new MsoAutoShapeType(148);
+  public final static MsoAutoShapeType msoShape10pointStar = new MsoAutoShapeType(149);
+  public final static MsoAutoShapeType msoShape12pointStar = new MsoAutoShapeType(150);
+  public final static MsoAutoShapeType msoShapeRound1Rectangle = new MsoAutoShapeType(151);
+  public final static MsoAutoShapeType msoShapeRound2SameRectangle = new MsoAutoShapeType(152);
+  public final static MsoAutoShapeType msoShapeRound2DiagRectangle = new MsoAutoShapeType(153);
+  public final static MsoAutoShapeType msoShapeSnipRoundRectangle = new MsoAutoShapeType(154);
+  public final static MsoAutoShapeType msoShapeSnip1Rectangle = new MsoAutoShapeType(155);
+  public final static MsoAutoShapeType msoShapeSnip2SameRectangle = new MsoAutoShapeType(156);
+  public final static MsoAutoShapeType msoShapeSnip2DiagRectangle = new MsoAutoShapeType(157);
+  public final static MsoAutoShapeType msoShapeFrame = new MsoAutoShapeType(158);
+  public final static MsoAutoShapeType msoShapeHalfFrame = new MsoAutoShapeType(159);
+  public final static MsoAutoShapeType msoShapeTear = new MsoAutoShapeType(160);
+  public final static MsoAutoShapeType msoShapeChord = new MsoAutoShapeType(161);
+  public final static MsoAutoShapeType msoShapeCorner = new MsoAutoShapeType(162);
+  public final static MsoAutoShapeType msoShapeMathPlus = new MsoAutoShapeType(163);
+  public final static MsoAutoShapeType msoShapeMathMinus = new MsoAutoShapeType(164);
+  public final static MsoAutoShapeType msoShapeMathMultiply = new MsoAutoShapeType(165);
+  public final static MsoAutoShapeType msoShapeMathDivide = new MsoAutoShapeType(166);
+  public final static MsoAutoShapeType msoShapeMathEqual = new MsoAutoShapeType(167);
+  public final static MsoAutoShapeType msoShapeMathNotEqual = new MsoAutoShapeType(168);
+  public final static MsoAutoShapeType msoShapeCornerTabs = new MsoAutoShapeType(169);
+  public final static MsoAutoShapeType msoShapeSquareTabs = new MsoAutoShapeType(170);
+  public final static MsoAutoShapeType msoShapePlaqueTabs = new MsoAutoShapeType(171);
+  public final static MsoAutoShapeType msoShapeGear6 = new MsoAutoShapeType(172);
+  public final static MsoAutoShapeType msoShapeGear9 = new MsoAutoShapeType(173);
+  public final static MsoAutoShapeType msoShapeFunnel = new MsoAutoShapeType(174);
+  public final static MsoAutoShapeType msoShapePieWedge = new MsoAutoShapeType(175);
+  public final static MsoAutoShapeType msoShapeLeftCircularArrow = new MsoAutoShapeType(176);
+  public final static MsoAutoShapeType msoShapeLeftRightCircularArrow = new MsoAutoShapeType(177);
+  public final static MsoAutoShapeType msoShapeSwooshArrow = new MsoAutoShapeType(178);
+  public final static MsoAutoShapeType msoShapeCloud = new MsoAutoShapeType(179);
+  public final static MsoAutoShapeType msoShapeChartX = new MsoAutoShapeType(180);
+  public final static MsoAutoShapeType msoShapeChartStar = new MsoAutoShapeType(181);
+  public final static MsoAutoShapeType msoShapeChartPlus = new MsoAutoShapeType(182);
+  public final static MsoAutoShapeType msoShapeLineInverse = new MsoAutoShapeType(183);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoShapeMixed = -2;
+  public final static int _msoShapeRectangle = 1;
+  public final static int _msoShapeParallelogram = 2;
+  public final static int _msoShapeTrapezoid = 3;
+  public final static int _msoShapeDiamond = 4;
+  public final static int _msoShapeRoundedRectangle = 5;
+  public final static int _msoShapeOctagon = 6;
+  public final static int _msoShapeIsoscelesTriangle = 7;
+  public final static int _msoShapeRightTriangle = 8;
+  public final static int _msoShapeOval = 9;
+  public final static int _msoShapeHexagon = 10;
+  public final static int _msoShapeCross = 11;
+  public final static int _msoShapeRegularPentagon = 12;
+  public final static int _msoShapeCan = 13;
+  public final static int _msoShapeCube = 14;
+  public final static int _msoShapeBevel = 15;
+  public final static int _msoShapeFoldedCorner = 16;
+  public final static int _msoShapeSmileyFace = 17;
+  public final static int _msoShapeDonut = 18;
+  public final static int _msoShapeNoSymbol = 19;
+  public final static int _msoShapeBlockArc = 20;
+  public final static int _msoShapeHeart = 21;
+  public final static int _msoShapeLightningBolt = 22;
+  public final static int _msoShapeSun = 23;
+  public final static int _msoShapeMoon = 24;
+  public final static int _msoShapeArc = 25;
+  public final static int _msoShapeDoubleBracket = 26;
+  public final static int _msoShapeDoubleBrace = 27;
+  public final static int _msoShapePlaque = 28;
+  public final static int _msoShapeLeftBracket = 29;
+  public final static int _msoShapeRightBracket = 30;
+  public final static int _msoShapeLeftBrace = 31;
+  public final static int _msoShapeRightBrace = 32;
+  public final static int _msoShapeRightArrow = 33;
+  public final static int _msoShapeLeftArrow = 34;
+  public final static int _msoShapeUpArrow = 35;
+  public final static int _msoShapeDownArrow = 36;
+  public final static int _msoShapeLeftRightArrow = 37;
+  public final static int _msoShapeUpDownArrow = 38;
+  public final static int _msoShapeQuadArrow = 39;
+  public final static int _msoShapeLeftRightUpArrow = 40;
+  public final static int _msoShapeBentArrow = 41;
+  public final static int _msoShapeUTurnArrow = 42;
+  public final static int _msoShapeLeftUpArrow = 43;
+  public final static int _msoShapeBentUpArrow = 44;
+  public final static int _msoShapeCurvedRightArrow = 45;
+  public final static int _msoShapeCurvedLeftArrow = 46;
+  public final static int _msoShapeCurvedUpArrow = 47;
+  public final static int _msoShapeCurvedDownArrow = 48;
+  public final static int _msoShapeStripedRightArrow = 49;
+  public final static int _msoShapeNotchedRightArrow = 50;
+  public final static int _msoShapePentagon = 51;
+  public final static int _msoShapeChevron = 52;
+  public final static int _msoShapeRightArrowCallout = 53;
+  public final static int _msoShapeLeftArrowCallout = 54;
+  public final static int _msoShapeUpArrowCallout = 55;
+  public final static int _msoShapeDownArrowCallout = 56;
+  public final static int _msoShapeLeftRightArrowCallout = 57;
+  public final static int _msoShapeUpDownArrowCallout = 58;
+  public final static int _msoShapeQuadArrowCallout = 59;
+  public final static int _msoShapeCircularArrow = 60;
+  public final static int _msoShapeFlowchartProcess = 61;
+  public final static int _msoShapeFlowchartAlternateProcess = 62;
+  public final static int _msoShapeFlowchartDecision = 63;
+  public final static int _msoShapeFlowchartData = 64;
+  public final static int _msoShapeFlowchartPredefinedProcess = 65;
+  public final static int _msoShapeFlowchartInternalStorage = 66;
+  public final static int _msoShapeFlowchartDocument = 67;
+  public final static int _msoShapeFlowchartMultidocument = 68;
+  public final static int _msoShapeFlowchartTerminator = 69;
+  public final static int _msoShapeFlowchartPreparation = 70;
+  public final static int _msoShapeFlowchartManualInput = 71;
+  public final static int _msoShapeFlowchartManualOperation = 72;
+  public final static int _msoShapeFlowchartConnector = 73;
+  public final static int _msoShapeFlowchartOffpageConnector = 74;
+  public final static int _msoShapeFlowchartCard = 75;
+  public final static int _msoShapeFlowchartPunchedTape = 76;
+  public final static int _msoShapeFlowchartSummingJunction = 77;
+  public final static int _msoShapeFlowchartOr = 78;
+  public final static int _msoShapeFlowchartCollate = 79;
+  public final static int _msoShapeFlowchartSort = 80;
+  public final static int _msoShapeFlowchartExtract = 81;
+  public final static int _msoShapeFlowchartMerge = 82;
+  public final static int _msoShapeFlowchartStoredData = 83;
+  public final static int _msoShapeFlowchartDelay = 84;
+  public final static int _msoShapeFlowchartSequentialAccessStorage = 85;
+  public final static int _msoShapeFlowchartMagneticDisk = 86;
+  public final static int _msoShapeFlowchartDirectAccessStorage = 87;
+  public final static int _msoShapeFlowchartDisplay = 88;
+  public final static int _msoShapeExplosion1 = 89;
+  public final static int _msoShapeExplosion2 = 90;
+  public final static int _msoShape4pointStar = 91;
+  public final static int _msoShape5pointStar = 92;
+  public final static int _msoShape8pointStar = 93;
+  public final static int _msoShape16pointStar = 94;
+  public final static int _msoShape24pointStar = 95;
+  public final static int _msoShape32pointStar = 96;
+  public final static int _msoShapeUpRibbon = 97;
+  public final static int _msoShapeDownRibbon = 98;
+  public final static int _msoShapeCurvedUpRibbon = 99;
+  public final static int _msoShapeCurvedDownRibbon = 100;
+  public final static int _msoShapeVerticalScroll = 101;
+  public final static int _msoShapeHorizontalScroll = 102;
+  public final static int _msoShapeWave = 103;
+  public final static int _msoShapeDoubleWave = 104;
+  public final static int _msoShapeRectangularCallout = 105;
+  public final static int _msoShapeRoundedRectangularCallout = 106;
+  public final static int _msoShapeOvalCallout = 107;
+  public final static int _msoShapeCloudCallout = 108;
+  public final static int _msoShapeLineCallout1 = 109;
+  public final static int _msoShapeLineCallout2 = 110;
+  public final static int _msoShapeLineCallout3 = 111;
+  public final static int _msoShapeLineCallout4 = 112;
+  public final static int _msoShapeLineCallout1AccentBar = 113;
+  public final static int _msoShapeLineCallout2AccentBar = 114;
+  public final static int _msoShapeLineCallout3AccentBar = 115;
+  public final static int _msoShapeLineCallout4AccentBar = 116;
+  public final static int _msoShapeLineCallout1NoBorder = 117;
+  public final static int _msoShapeLineCallout2NoBorder = 118;
+  public final static int _msoShapeLineCallout3NoBorder = 119;
+  public final static int _msoShapeLineCallout4NoBorder = 120;
+  public final static int _msoShapeLineCallout1BorderandAccentBar = 121;
+  public final static int _msoShapeLineCallout2BorderandAccentBar = 122;
+  public final static int _msoShapeLineCallout3BorderandAccentBar = 123;
+  public final static int _msoShapeLineCallout4BorderandAccentBar = 124;
+  public final static int _msoShapeActionButtonCustom = 125;
+  public final static int _msoShapeActionButtonHome = 126;
+  public final static int _msoShapeActionButtonHelp = 127;
+  public final static int _msoShapeActionButtonInformation = 128;
+  public final static int _msoShapeActionButtonBackorPrevious = 129;
+  public final static int _msoShapeActionButtonForwardorNext = 130;
+  public final static int _msoShapeActionButtonBeginning = 131;
+  public final static int _msoShapeActionButtonEnd = 132;
+  public final static int _msoShapeActionButtonReturn = 133;
+  public final static int _msoShapeActionButtonDocument = 134;
+  public final static int _msoShapeActionButtonSound = 135;
+  public final static int _msoShapeActionButtonMovie = 136;
+  public final static int _msoShapeBalloon = 137;
+  public final static int _msoShapeNotPrimitive = 138;
+  public final static int _msoShapeFlowchartOfflineStorage = 139;
+  public final static int _msoShapeLeftRightRibbon = 140;
+  public final static int _msoShapeDiagonalStripe = 141;
+  public final static int _msoShapePie = 142;
+  public final static int _msoShapeNonIsoscelesTrapezoid = 143;
+  public final static int _msoShapeDecagon = 144;
+  public final static int _msoShapeHeptagon = 145;
+  public final static int _msoShapeDodecagon = 146;
+  public final static int _msoShape6pointStar = 147;
+  public final static int _msoShape7pointStar = 148;
+  public final static int _msoShape10pointStar = 149;
+  public final static int _msoShape12pointStar = 150;
+  public final static int _msoShapeRound1Rectangle = 151;
+  public final static int _msoShapeRound2SameRectangle = 152;
+  public final static int _msoShapeRound2DiagRectangle = 153;
+  public final static int _msoShapeSnipRoundRectangle = 154;
+  public final static int _msoShapeSnip1Rectangle = 155;
+  public final static int _msoShapeSnip2SameRectangle = 156;
+  public final static int _msoShapeSnip2DiagRectangle = 157;
+  public final static int _msoShapeFrame = 158;
+  public final static int _msoShapeHalfFrame = 159;
+  public final static int _msoShapeTear = 160;
+  public final static int _msoShapeChord = 161;
+  public final static int _msoShapeCorner = 162;
+  public final static int _msoShapeMathPlus = 163;
+  public final static int _msoShapeMathMinus = 164;
+  public final static int _msoShapeMathMultiply = 165;
+  public final static int _msoShapeMathDivide = 166;
+  public final static int _msoShapeMathEqual = 167;
+  public final static int _msoShapeMathNotEqual = 168;
+  public final static int _msoShapeCornerTabs = 169;
+  public final static int _msoShapeSquareTabs = 170;
+  public final static int _msoShapePlaqueTabs = 171;
+  public final static int _msoShapeGear6 = 172;
+  public final static int _msoShapeGear9 = 173;
+  public final static int _msoShapeFunnel = 174;
+  public final static int _msoShapePieWedge = 175;
+  public final static int _msoShapeLeftCircularArrow = 176;
+  public final static int _msoShapeLeftRightCircularArrow = 177;
+  public final static int _msoShapeSwooshArrow = 178;
+  public final static int _msoShapeCloud = 179;
+  public final static int _msoShapeChartX = 180;
+  public final static int _msoShapeChartStar = 181;
+  public final static int _msoShapeChartPlus = 182;
+  public final static int _msoShapeLineInverse = 183;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoAutoShapeType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoAutoShapeType valueOf(int value) {
     switch(value) {
     case -2: return msoShapeMixed;
@@ -382,7 +575,7 @@ public enum MsoAutoShapeType {
     case 181: return msoShapeChartStar;
     case 182: return msoShapeChartPlus;
     case 183: return msoShapeLineInverse;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoAutoShapeType.class);
+    default: return new MsoAutoShapeType(value);
     }
   }
 }

@@ -35,7 +35,7 @@ public interface IMsoAxisTitle extends IDispatch {
   @DeclDISPID(1610743832)  public Object Delete() throws ComException;
   @DeclDISPID(1610743833)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(1610743834)  public String getName() throws ComException;
-  @DeclDISPID(1610743835)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1610743835)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610743836)  public Object Select() throws ComException;
   @DeclDISPID(2418)  public Boolean getIncludeInLayout() throws ComException;
   @DeclDISPID(2418)  public void setIncludeInLayout(Boolean value) throws ComException;
@@ -43,7 +43,7 @@ public interface IMsoAxisTitle extends IDispatch {
   @DeclDISPID(1671)  public void setPosition(XlChartElementPosition value) throws ComException;
   @DeclDISPID(1610743841)  public IMsoChartFormat getFormat() throws ComException;
   @DeclDISPID(1610743842)  public Double getHeight() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610743845)  public Double getWidth() throws ComException;
   @DeclDISPID(1610743846)  public void setFormula(String value) throws ComException;

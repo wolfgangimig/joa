@@ -8,8 +8,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(4096)  public Integer getDayOfMonth() throws ComException {
     final Object obj = this._dispatchCall(4096,"DayOfMonth", DISPATCH_PROPERTYGET,null);
@@ -66,8 +64,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(4110)  public com.wilutions.mslib.outlook.Exceptions getExceptions() throws ComException {
     final Object obj = this._dispatchCall(4110,"Exceptions", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ExceptionsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ExceptionsImpl.class);
   }
   @DeclDISPID(4099)  public Integer getInstance() throws ComException {
     final Object obj = this._dispatchCall(4099,"Instance", DISPATCH_PROPERTYGET,null);
@@ -164,7 +161,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     final Object obj = this._dispatchCall(4111,"GetOccurrence", DISPATCH_METHOD,null,StartDate);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.AppointmentItem.class);
+    return disp.as(com.wilutions.mslib.outlook.AppointmentItem.class);
   }
   public RecurrencePatternImpl(String progId) throws ComException {
     super(progId, "{00063044-0000-0000-C000-000000000046}");

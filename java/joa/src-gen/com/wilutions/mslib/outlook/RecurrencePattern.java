@@ -11,7 +11,7 @@ public interface RecurrencePattern extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(4096)  public Integer getDayOfMonth() throws ComException;
   @DeclDISPID(4096)  public void setDayOfMonth(Integer value) throws ComException;
   @DeclDISPID(4097)  public OlDaysOfWeek getDayOfWeekMask() throws ComException;

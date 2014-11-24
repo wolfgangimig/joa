@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E65-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.office.IMsoTrendline {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(185)  public Double getBackward() throws ComException {
     final Object obj = this._dispatchCall(185,"Backward", DISPATCH_PROPERTYGET,null);
@@ -144,10 +144,10 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (com.wilutions.mslib.office.IMsoChartFormat)obj;
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

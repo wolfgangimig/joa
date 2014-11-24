@@ -8,17 +8,33 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlFlagIcon {
-  olNoFlagIcon(0),
-  olPurpleFlagIcon(1),
-  olOrangeFlagIcon(2),
-  olGreenFlagIcon(3),
-  olYellowFlagIcon(4),
-  olBlueFlagIcon(5),
-  olRedFlagIcon(6);
+public class OlFlagIcon {
 
+  // Typed constants
+  public final static OlFlagIcon olNoFlagIcon = new OlFlagIcon(0);
+  public final static OlFlagIcon olPurpleFlagIcon = new OlFlagIcon(1);
+  public final static OlFlagIcon olOrangeFlagIcon = new OlFlagIcon(2);
+  public final static OlFlagIcon olGreenFlagIcon = new OlFlagIcon(3);
+  public final static OlFlagIcon olYellowFlagIcon = new OlFlagIcon(4);
+  public final static OlFlagIcon olBlueFlagIcon = new OlFlagIcon(5);
+  public final static OlFlagIcon olRedFlagIcon = new OlFlagIcon(6);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olNoFlagIcon = 0;
+  public final static int _olPurpleFlagIcon = 1;
+  public final static int _olOrangeFlagIcon = 2;
+  public final static int _olGreenFlagIcon = 3;
+  public final static int _olYellowFlagIcon = 4;
+  public final static int _olBlueFlagIcon = 5;
+  public final static int _olRedFlagIcon = 6;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlFlagIcon(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlFlagIcon valueOf(int value) {
     switch(value) {
     case 0: return olNoFlagIcon;
@@ -28,7 +44,7 @@ public enum OlFlagIcon {
     case 4: return olYellowFlagIcon;
     case 5: return olBlueFlagIcon;
     case 6: return olRedFlagIcon;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlFlagIcon.class);
+    default: return new OlFlagIcon(value);
     }
   }
 }

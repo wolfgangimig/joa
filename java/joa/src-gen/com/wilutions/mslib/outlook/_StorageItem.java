@@ -11,7 +11,7 @@ public interface _StorageItem extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(12295)  public java.util.Date getCreationTime() throws ComException;
   @DeclDISPID(12296)  public java.util.Date getLastModificationTime() throws ComException;
   @DeclDISPID(61470)  public String getEntryID() throws ComException;

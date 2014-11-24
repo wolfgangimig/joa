@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AEC-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class DocumentLibraryVersionImpl extends Dispatch implements com.wilutions.mslib.office.DocumentLibraryVersion {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -25,10 +25,10 @@ public class DocumentLibraryVersionImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(2)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(2,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(3)  public String getModifiedBy() throws ComException {
     final Object obj = this._dispatchCall(3,"ModifiedBy", DISPATCH_PROPERTYGET,null);
@@ -43,15 +43,15 @@ public class DocumentLibraryVersionImpl extends Dispatch implements com.wilution
   @DeclDISPID(5)  public void Delete() throws ComException {
     this._dispatchCall(5,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(6)  public Dispatch Open() throws ComException {
+  @DeclDISPID(6)  public IDispatch Open() throws ComException {
     final Object obj = this._dispatchCall(6,"Open", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(7)  public Dispatch Restore() throws ComException {
+  @DeclDISPID(7)  public IDispatch Restore() throws ComException {
     final Object obj = this._dispatchCall(7,"Restore", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public DocumentLibraryVersionImpl(String progId) throws ComException {
     super(progId, "{000C0387-0000-0000-C000-000000000046}");

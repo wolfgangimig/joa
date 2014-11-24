@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A67-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _CommandBarComboBoxImpl extends Dispatch implements com.wilutions.mslib.office._CommandBarComboBox {
-  @DeclDISPID(1610809344)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610809344)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610809344,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610809345)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610809345,"Creator", DISPATCH_PROPERTYGET,null);
@@ -43,8 +43,7 @@ public class _CommandBarComboBoxImpl extends Dispatch implements com.wilutions.m
     assert(Before != null);
     final Object obj = this._dispatchCall(1610874886,"Copy", DISPATCH_METHOD,null,Bar,Before);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
   @DeclDISPID(1610874887)  public void Delete(Object Temporary) throws ComException {
     assert(Temporary != null);
@@ -113,8 +112,7 @@ public class _CommandBarComboBoxImpl extends Dispatch implements com.wilutions.m
     assert(Before != null);
     final Object obj = this._dispatchCall(1610874902,"Move", DISPATCH_METHOD,null,Bar,Before);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
   @DeclDISPID(1610874903)  public Integer getLeft() throws ComException {
     final Object obj = this._dispatchCall(1610874903,"Left", DISPATCH_PROPERTYGET,null);
@@ -142,8 +140,7 @@ public class _CommandBarComboBoxImpl extends Dispatch implements com.wilutions.m
   @DeclDISPID(1610874908)  public com.wilutions.mslib.office.CommandBar getParent() throws ComException {
     final Object obj = this._dispatchCall(1610874908,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
   @DeclDISPID(1610874909)  public String getParameter() throws ComException {
     final Object obj = this._dispatchCall(1610874909,"Parameter", DISPATCH_PROPERTYGET,null);

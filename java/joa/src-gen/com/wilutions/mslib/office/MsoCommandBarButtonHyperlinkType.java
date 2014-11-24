@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoCommandBarButtonHyperlinkType {
-  msoCommandBarButtonHyperlinkNone(0),
-  msoCommandBarButtonHyperlinkOpen(1),
-  msoCommandBarButtonHyperlinkInsertPicture(2);
+public class MsoCommandBarButtonHyperlinkType {
 
+  // Typed constants
+  public final static MsoCommandBarButtonHyperlinkType msoCommandBarButtonHyperlinkNone = new MsoCommandBarButtonHyperlinkType(0);
+  public final static MsoCommandBarButtonHyperlinkType msoCommandBarButtonHyperlinkOpen = new MsoCommandBarButtonHyperlinkType(1);
+  public final static MsoCommandBarButtonHyperlinkType msoCommandBarButtonHyperlinkInsertPicture = new MsoCommandBarButtonHyperlinkType(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoCommandBarButtonHyperlinkNone = 0;
+  public final static int _msoCommandBarButtonHyperlinkOpen = 1;
+  public final static int _msoCommandBarButtonHyperlinkInsertPicture = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoCommandBarButtonHyperlinkType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoCommandBarButtonHyperlinkType valueOf(int value) {
     switch(value) {
     case 0: return msoCommandBarButtonHyperlinkNone;
     case 1: return msoCommandBarButtonHyperlinkOpen;
     case 2: return msoCommandBarButtonHyperlinkInsertPicture;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoCommandBarButtonHyperlinkType.class);
+    default: return new MsoCommandBarButtonHyperlinkType(value);
     }
   }
 }

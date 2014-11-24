@@ -77,7 +77,7 @@ public class ILicWizExternalImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(16)  public void SortSelectOptions(Dispatch pdispSelect) throws ComException {
+  @DeclDISPID(16)  public void SortSelectOptions(IDispatch pdispSelect) throws ComException {
     this._dispatchCall(16,"SortSelectOptions", DISPATCH_METHOD,null,(pdispSelect!=null?pdispSelect:Dispatch.NULL));
   }
   @DeclDISPID(17)  public void InternetDisconnect() throws ComException {
@@ -93,15 +93,15 @@ public class ILicWizExternalImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(21)  public Dispatch getValidator() throws ComException {
+  @DeclDISPID(21)  public IDispatch getValidator() throws ComException {
     final Object obj = this._dispatchCall(21,"Validator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(22)  public Dispatch getLicAgent() throws ComException {
+  @DeclDISPID(22)  public IDispatch getLicAgent() throws ComException {
     final Object obj = this._dispatchCall(22,"LicAgent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(23)  public String getCountryInfo() throws ComException {
     final Object obj = this._dispatchCall(23,"CountryInfo", DISPATCH_PROPERTYGET,null);

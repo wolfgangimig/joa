@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface IMsoChartArea extends IDispatch {
   @DeclDISPID(110)  public String getName() throws ComException;
   @DeclDISPID(235)  public Object Select() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(111)  public Object Clear() throws ComException;
   @DeclDISPID(113)  public Object ClearContents() throws ComException;
@@ -34,6 +34,6 @@ public interface IMsoChartArea extends IDispatch {
   @DeclDISPID(1610743831)  public IMsoChartFormat getFormat() throws ComException;
   @DeclDISPID(1610743832)  public Boolean getRoundedCorners() throws ComException;
   @DeclDISPID(1610743832)  public void setRoundedCorners(Boolean value) throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
 }

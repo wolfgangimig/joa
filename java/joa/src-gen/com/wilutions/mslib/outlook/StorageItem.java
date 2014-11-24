@@ -11,8 +11,7 @@ public class StorageItem extends Dispatch implements _StorageItem {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,13 +21,12 @@ public class StorageItem extends Dispatch implements _StorageItem {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(12295)  public java.util.Date getCreationTime() throws ComException {
     final Object obj = this._dispatchCall(12295,"CreationTime", DISPATCH_PROPERTYGET,null);
@@ -63,8 +61,7 @@ public class StorageItem extends Dispatch implements _StorageItem {
   @DeclDISPID(63509)  public Attachments getAttachments() throws ComException {
     final Object obj = this._dispatchCall(63509,"Attachments", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AttachmentsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AttachmentsImpl.class);
   }
   @DeclDISPID(3592)  public Integer getSize() throws ComException {
     final Object obj = this._dispatchCall(3592,"Size", DISPATCH_PROPERTYGET,null);
@@ -74,14 +71,13 @@ public class StorageItem extends Dispatch implements _StorageItem {
   @DeclDISPID(63510)  public UserProperties getUserProperties() throws ComException {
     final Object obj = this._dispatchCall(63510,"UserProperties", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException {
     final Object obj = this._dispatchCall(64253,"PropertyAccessor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(PropertyAccessor.class);
+    return disp.as(PropertyAccessor.class);
   }
   @DeclDISPID(55)  public String getSubject() throws ComException {
     final Object obj = this._dispatchCall(55,"Subject", DISPATCH_PROPERTYGET,null);

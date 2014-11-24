@@ -11,7 +11,7 @@ public interface Search extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(64100)  public String getFilter() throws ComException;
   @DeclDISPID(64104)  public Boolean getIsSynchronous() throws ComException;
   @DeclDISPID(64105)  public _Results getResults() throws ComException;

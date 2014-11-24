@@ -8,8 +8,7 @@ public class _AccountImpl extends Dispatch implements com.wilutions.mslib.outloo
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _AccountImpl extends Dispatch implements com.wilutions.mslib.outloo
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64210)  public com.wilutions.mslib.outlook.OlAccountType getAccountType() throws ComException {
     final Object obj = this._dispatchCall(64210,"AccountType", DISPATCH_PROPERTYGET,null);
@@ -55,8 +53,7 @@ public class _AccountImpl extends Dispatch implements com.wilutions.mslib.outloo
   @DeclDISPID(64622)  public com.wilutions.mslib.outlook.Recipient getCurrentUser() throws ComException {
     final Object obj = this._dispatchCall(64622,"CurrentUser", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
   @DeclDISPID(64624)  public String getAutoDiscoverXml() throws ComException {
     final Object obj = this._dispatchCall(64624,"AutoDiscoverXml", DISPATCH_PROPERTYGET,null);
@@ -67,7 +64,7 @@ public class _AccountImpl extends Dispatch implements com.wilutions.mslib.outloo
     final Object obj = this._dispatchCall(64614,"DeliveryStore", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.Store.class);
+    return disp.as(com.wilutions.mslib.outlook.Store.class);
   }
   @DeclDISPID(64615)  public com.wilutions.mslib.outlook.OlExchangeConnectionMode getExchangeConnectionMode() throws ComException {
     final Object obj = this._dispatchCall(64615,"ExchangeConnectionMode", DISPATCH_PROPERTYGET,null);
@@ -88,15 +85,13 @@ public class _AccountImpl extends Dispatch implements com.wilutions.mslib.outloo
     assert(ID != null);
     final Object obj = this._dispatchCall(64618,"GetAddressEntryFromID", DISPATCH_METHOD,null,ID);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(64619)  public com.wilutions.mslib.outlook.Recipient GetRecipientFromID(String EntryID) throws ComException {
     assert(EntryID != null);
     final Object obj = this._dispatchCall(64619,"GetRecipientFromID", DISPATCH_METHOD,null,EntryID);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
   public _AccountImpl(String progId) throws ComException {
     super(progId, "{000630C5-0000-0000-C000-000000000046}");

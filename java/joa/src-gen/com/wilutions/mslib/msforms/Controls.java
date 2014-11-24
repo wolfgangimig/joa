@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface Controls extends IDispatch {
   @DeclDISPID(60)  public Integer getCount() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(0)  public Dispatch Item(Object varg) throws ComException;
+  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException;
   @DeclDISPID(62)  public void Clear() throws ComException;
   @DeclDISPID(1610743812)  public void _Move(Integer cx, Integer cy) throws ComException;
   @DeclDISPID(1610743814)  public Control _AddByClass(Integer clsid) throws ComException;

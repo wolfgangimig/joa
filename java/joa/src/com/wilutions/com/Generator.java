@@ -28,18 +28,14 @@ public class Generator {
 				"{00062FFF-0000-0000-C000-000000000046}", 
 				
 				// Forms type library (i.e., fm20.dll)
-				"{0D452EE1-E08F-101A-852E-02608C4D0BB4}", 
+				"{0D452EE1-E08F-101A-852E-02608C4D0BB4}"
 				
-				// UCCollaborationLib (Integration of IM clients)
-				// Found in C:\Program Files (x86)\Skype\Phone\Skype.exe\3
-				// Microsoft.Office.Uc.dll from LyncSDK is .NET and is not registered
-				"{B9AA1F11-F480-4054-A84E-B5D9277E40A8}"
 		);
 		
 
-//		generateJavaClasses("com.wilutions", 
-//				"{0F9377B3-9F5B-4551-8709-8E422D5F7A8A}" // JoaCtrl
-//		);
+		generateJavaClasses("com.wilutions", 
+				"{0F9377B3-9F5B-4551-8709-8E422D5F7A8A}" // JoaCtrl
+		);
 	}
 
 	private static void generateJavaClasses(String pack, String... typeLibIds) {

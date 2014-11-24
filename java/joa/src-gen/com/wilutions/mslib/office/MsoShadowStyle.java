@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoShadowStyle {
-  msoShadowStyleMixed(-2),
-  msoShadowStyleInnerShadow(1),
-  msoShadowStyleOuterShadow(2);
+public class MsoShadowStyle {
 
+  // Typed constants
+  public final static MsoShadowStyle msoShadowStyleMixed = new MsoShadowStyle(-2);
+  public final static MsoShadowStyle msoShadowStyleInnerShadow = new MsoShadowStyle(1);
+  public final static MsoShadowStyle msoShadowStyleOuterShadow = new MsoShadowStyle(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoShadowStyleMixed = -2;
+  public final static int _msoShadowStyleInnerShadow = 1;
+  public final static int _msoShadowStyleOuterShadow = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoShadowStyle(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoShadowStyle valueOf(int value) {
     switch(value) {
     case -2: return msoShadowStyleMixed;
     case 1: return msoShadowStyleInnerShadow;
     case 2: return msoShadowStyleOuterShadow;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoShadowStyle.class);
+    default: return new MsoShadowStyle(value);
     }
   }
 }

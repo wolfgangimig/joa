@@ -47,14 +47,12 @@ public class ChartFillFormatImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(1610743816)  public com.wilutions.mslib.office.ChartColorFormat getBackColor() throws ComException {
     final Object obj = this._dispatchCall(1610743816,"BackColor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ChartColorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartColorFormatImpl.class);
   }
   @DeclDISPID(1610743817)  public com.wilutions.mslib.office.ChartColorFormat getForeColor() throws ComException {
     final Object obj = this._dispatchCall(1610743817,"ForeColor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ChartColorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartColorFormatImpl.class);
   }
   @DeclDISPID(1610743818)  public Integer getGradientColorType() throws ComException {
     final Object obj = this._dispatchCall(1610743818,"GradientColorType", DISPATCH_PROPERTYGET,null);
@@ -115,20 +113,20 @@ public class ChartFillFormatImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public ChartFillFormatImpl(String progId) throws ComException {
     super(progId, "{000C171C-0000-0000-C000-000000000046}");

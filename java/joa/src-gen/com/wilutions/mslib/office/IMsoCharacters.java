@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1731-0000-0000-C000-000000000046}")
 public interface IMsoCharacters extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(139)  public String getCaption() throws ComException;
   @DeclDISPID(139)  public void setCaption(String value) throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;
@@ -19,6 +19,6 @@ public interface IMsoCharacters extends IDispatch {
   @DeclDISPID(138)  public void setText(String value) throws ComException;
   @DeclDISPID(1522)  public String getPhoneticCharacters() throws ComException;
   @DeclDISPID(1522)  public void setPhoneticCharacters(String value) throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
 }

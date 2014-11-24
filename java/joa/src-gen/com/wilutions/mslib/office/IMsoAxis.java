@@ -89,7 +89,7 @@ public interface IMsoAxis extends IDispatch {
   @DeclDISPID(1610743886)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(1610743887)  public String getName() throws ComException;
   @DeclDISPID(1610743888)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
 }

@@ -11,9 +11,9 @@ public interface PropertyPages extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Dispatch Item(Object Index) throws ComException;
+  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException;
   @DeclDISPID(95)  public void Add(Object Page, String Title) throws ComException;
   @DeclDISPID(84)  public void Remove(Object Index) throws ComException;
 }

@@ -8,8 +8,7 @@ public class _CardViewImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _CardViewImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(407)  public void Apply() throws ComException {
     this._dispatchCall(407,"Apply", DISPATCH_METHOD,null);
@@ -35,8 +33,7 @@ public class _CardViewImpl extends Dispatch implements com.wilutions.mslib.outlo
     assert(SaveOption != null);
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null,Name,SaveOption.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ViewImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ViewImpl.class);
   }
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
@@ -115,7 +112,7 @@ public class _CardViewImpl extends Dispatch implements com.wilutions.mslib.outlo
     final Object obj = this._dispatchCall(64346,"SortFields", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.OrderFields.class);
+    return disp.as(com.wilutions.mslib.outlook.OrderFields.class);
   }
   @DeclDISPID(64351)  public Boolean getAllowInCellEditing() throws ComException {
     final Object obj = this._dispatchCall(64351,"AllowInCellEditing", DISPATCH_PROPERTYGET,null);
@@ -157,25 +154,25 @@ public class _CardViewImpl extends Dispatch implements com.wilutions.mslib.outlo
     final Object obj = this._dispatchCall(64341,"ViewFields", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.ViewFields.class);
+    return disp.as(com.wilutions.mslib.outlook.ViewFields.class);
   }
   @DeclDISPID(64377)  public com.wilutions.mslib.outlook.ViewFont getHeadingsFont() throws ComException {
     final Object obj = this._dispatchCall(64377,"HeadingsFont", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.ViewFont.class);
+    return disp.as(com.wilutions.mslib.outlook.ViewFont.class);
   }
   @DeclDISPID(64378)  public com.wilutions.mslib.outlook.ViewFont getBodyFont() throws ComException {
     final Object obj = this._dispatchCall(64378,"BodyFont", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.ViewFont.class);
+    return disp.as(com.wilutions.mslib.outlook.ViewFont.class);
   }
   @DeclDISPID(64059)  public com.wilutions.mslib.outlook.AutoFormatRules getAutoFormatRules() throws ComException {
     final Object obj = this._dispatchCall(64059,"AutoFormatRules", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.AutoFormatRules.class);
+    return disp.as(com.wilutions.mslib.outlook.AutoFormatRules.class);
   }
   public _CardViewImpl(String progId) throws ComException {
     super(progId, "{00063098-0000-0000-C000-000000000046}");

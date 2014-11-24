@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0306-0000-0000-C000-000000000046}")
 public interface CommandBarControls extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public CommandBarControl Add(Object Type, Object Id, Object Parameter, Object Before, Object Temporary) throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;

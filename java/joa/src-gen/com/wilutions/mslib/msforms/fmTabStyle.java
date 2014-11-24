@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{EBC7FDE3-6899-11CE-80C0-00AA00611080}")
-public enum fmTabStyle {
-  fmTabStyleTabs(0),
-  fmTabStyleButtons(1),
-  fmTabStyleNone(2);
+public class fmTabStyle {
 
+  // Typed constants
+  public final static fmTabStyle fmTabStyleTabs = new fmTabStyle(0);
+  public final static fmTabStyle fmTabStyleButtons = new fmTabStyle(1);
+  public final static fmTabStyle fmTabStyleNone = new fmTabStyle(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmTabStyleTabs = 0;
+  public final static int _fmTabStyleButtons = 1;
+  public final static int _fmTabStyleNone = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmTabStyle(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmTabStyle valueOf(int value) {
     switch(value) {
     case 0: return fmTabStyleTabs;
     case 1: return fmTabStyleButtons;
     case 2: return fmTabStyleNone;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmTabStyle.class);
+    default: return new fmTabStyle(value);
     }
   }
 }

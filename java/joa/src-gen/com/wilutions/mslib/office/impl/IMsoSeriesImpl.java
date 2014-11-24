@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E60-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.office.IMsoSeries {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(47)  public com.wilutions.mslib.office.XlAxisGroup getAxisGroup() throws ComException {
     final Object obj = this._dispatchCall(47,"AxisGroup", DISPATCH_PROPERTYGET,null);
@@ -34,11 +34,11 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(157)  public Dispatch DataLabels(Object Index) throws ComException {
+  @DeclDISPID(157)  public IDispatch DataLabels(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(157,"DataLabels", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(117)  public Object Delete() throws ComException {
     final Object obj = this._dispatchCall(117,"Delete", DISPATCH_METHOD,null);
@@ -237,11 +237,11 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(RHS != null);
     this._dispatchCall(228,"PlotOrder", DISPATCH_PROPERTYPUT,RHS);
   }
-  @DeclDISPID(70)  public Dispatch Points(Object Index) throws ComException {
+  @DeclDISPID(70)  public IDispatch Points(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(70,"Points", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(235)  public Object Select() throws ComException {
     final Object obj = this._dispatchCall(235,"Select", DISPATCH_METHOD,null);
@@ -257,11 +257,11 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(RHS != null);
     this._dispatchCall(163,"Smooth", DISPATCH_PROPERTYPUT,RHS);
   }
-  @DeclDISPID(154)  public Dispatch Trendlines(Object Index) throws ComException {
+  @DeclDISPID(154)  public IDispatch Trendlines(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(154,"Trendlines", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(108)  public Integer getType() throws ComException {
     final Object obj = this._dispatchCall(108,"Type", DISPATCH_PROPERTYGET,null);
@@ -400,10 +400,10 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (com.wilutions.mslib.office.IMsoChartFormat)obj;
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

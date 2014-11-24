@@ -8,89 +8,177 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum XlChartType {
-  xlColumnClustered(51),
-  xlColumnStacked(52),
-  xlColumnStacked100(53),
-  xl3DColumnClustered(54),
-  xl3DColumnStacked(55),
-  xl3DColumnStacked100(56),
-  xlBarClustered(57),
-  xlBarStacked(58),
-  xlBarStacked100(59),
-  xl3DBarClustered(60),
-  xl3DBarStacked(61),
-  xl3DBarStacked100(62),
-  xlLineStacked(63),
-  xlLineStacked100(64),
-  xlLineMarkers(65),
-  xlLineMarkersStacked(66),
-  xlLineMarkersStacked100(67),
-  xlPieOfPie(68),
-  xlPieExploded(69),
-  xl3DPieExploded(70),
-  xlBarOfPie(71),
-  xlXYScatterSmooth(72),
-  xlXYScatterSmoothNoMarkers(73),
-  xlXYScatterLines(74),
-  xlXYScatterLinesNoMarkers(75),
-  xlAreaStacked(76),
-  xlAreaStacked100(77),
-  xl3DAreaStacked(78),
-  xl3DAreaStacked100(79),
-  xlDoughnutExploded(80),
-  xlRadarMarkers(81),
-  xlRadarFilled(82),
-  xlSurface(83),
-  xlSurfaceWireframe(84),
-  xlSurfaceTopView(85),
-  xlSurfaceTopViewWireframe(86),
-  xlBubble(15),
-  xlBubble3DEffect(87),
-  xlStockHLC(88),
-  xlStockOHLC(89),
-  xlStockVHLC(90),
-  xlStockVOHLC(91),
-  xlCylinderColClustered(92),
-  xlCylinderColStacked(93),
-  xlCylinderColStacked100(94),
-  xlCylinderBarClustered(95),
-  xlCylinderBarStacked(96),
-  xlCylinderBarStacked100(97),
-  xlCylinderCol(98),
-  xlConeColClustered(99),
-  xlConeColStacked(100),
-  xlConeColStacked100(101),
-  xlConeBarClustered(102),
-  xlConeBarStacked(103),
-  xlConeBarStacked100(104),
-  xlConeCol(105),
-  xlPyramidColClustered(106),
-  xlPyramidColStacked(107),
-  xlPyramidColStacked100(108),
-  xlPyramidBarClustered(109),
-  xlPyramidBarStacked(110),
-  xlPyramidBarStacked100(111),
-  xlPyramidCol(112),
-  xl3DColumn(-4100),
-  xlLine(4),
-  xl3DLine(-4101),
-  xl3DPie(-4102),
-  xlPie(5),
-  xlXYScatter(-4169),
-  xl3DArea(-4098),
-  xlArea(1),
-  xlDoughnut(-4120),
-  xlRadar(-4151),
-  xlCombo(-4152),
-  xlComboColumnClusteredLine(113),
-  xlComboColumnClusteredLineSecondaryAxis(114),
-  xlComboAreaStackedColumnClustered(115),
-  xlOtherCombinations(116),
-  xlSuggestedChart(-2);
+public class XlChartType {
 
+  // Typed constants
+  public final static XlChartType xlColumnClustered = new XlChartType(51);
+  public final static XlChartType xlColumnStacked = new XlChartType(52);
+  public final static XlChartType xlColumnStacked100 = new XlChartType(53);
+  public final static XlChartType xl3DColumnClustered = new XlChartType(54);
+  public final static XlChartType xl3DColumnStacked = new XlChartType(55);
+  public final static XlChartType xl3DColumnStacked100 = new XlChartType(56);
+  public final static XlChartType xlBarClustered = new XlChartType(57);
+  public final static XlChartType xlBarStacked = new XlChartType(58);
+  public final static XlChartType xlBarStacked100 = new XlChartType(59);
+  public final static XlChartType xl3DBarClustered = new XlChartType(60);
+  public final static XlChartType xl3DBarStacked = new XlChartType(61);
+  public final static XlChartType xl3DBarStacked100 = new XlChartType(62);
+  public final static XlChartType xlLineStacked = new XlChartType(63);
+  public final static XlChartType xlLineStacked100 = new XlChartType(64);
+  public final static XlChartType xlLineMarkers = new XlChartType(65);
+  public final static XlChartType xlLineMarkersStacked = new XlChartType(66);
+  public final static XlChartType xlLineMarkersStacked100 = new XlChartType(67);
+  public final static XlChartType xlPieOfPie = new XlChartType(68);
+  public final static XlChartType xlPieExploded = new XlChartType(69);
+  public final static XlChartType xl3DPieExploded = new XlChartType(70);
+  public final static XlChartType xlBarOfPie = new XlChartType(71);
+  public final static XlChartType xlXYScatterSmooth = new XlChartType(72);
+  public final static XlChartType xlXYScatterSmoothNoMarkers = new XlChartType(73);
+  public final static XlChartType xlXYScatterLines = new XlChartType(74);
+  public final static XlChartType xlXYScatterLinesNoMarkers = new XlChartType(75);
+  public final static XlChartType xlAreaStacked = new XlChartType(76);
+  public final static XlChartType xlAreaStacked100 = new XlChartType(77);
+  public final static XlChartType xl3DAreaStacked = new XlChartType(78);
+  public final static XlChartType xl3DAreaStacked100 = new XlChartType(79);
+  public final static XlChartType xlDoughnutExploded = new XlChartType(80);
+  public final static XlChartType xlRadarMarkers = new XlChartType(81);
+  public final static XlChartType xlRadarFilled = new XlChartType(82);
+  public final static XlChartType xlSurface = new XlChartType(83);
+  public final static XlChartType xlSurfaceWireframe = new XlChartType(84);
+  public final static XlChartType xlSurfaceTopView = new XlChartType(85);
+  public final static XlChartType xlSurfaceTopViewWireframe = new XlChartType(86);
+  public final static XlChartType xlBubble = new XlChartType(15);
+  public final static XlChartType xlBubble3DEffect = new XlChartType(87);
+  public final static XlChartType xlStockHLC = new XlChartType(88);
+  public final static XlChartType xlStockOHLC = new XlChartType(89);
+  public final static XlChartType xlStockVHLC = new XlChartType(90);
+  public final static XlChartType xlStockVOHLC = new XlChartType(91);
+  public final static XlChartType xlCylinderColClustered = new XlChartType(92);
+  public final static XlChartType xlCylinderColStacked = new XlChartType(93);
+  public final static XlChartType xlCylinderColStacked100 = new XlChartType(94);
+  public final static XlChartType xlCylinderBarClustered = new XlChartType(95);
+  public final static XlChartType xlCylinderBarStacked = new XlChartType(96);
+  public final static XlChartType xlCylinderBarStacked100 = new XlChartType(97);
+  public final static XlChartType xlCylinderCol = new XlChartType(98);
+  public final static XlChartType xlConeColClustered = new XlChartType(99);
+  public final static XlChartType xlConeColStacked = new XlChartType(100);
+  public final static XlChartType xlConeColStacked100 = new XlChartType(101);
+  public final static XlChartType xlConeBarClustered = new XlChartType(102);
+  public final static XlChartType xlConeBarStacked = new XlChartType(103);
+  public final static XlChartType xlConeBarStacked100 = new XlChartType(104);
+  public final static XlChartType xlConeCol = new XlChartType(105);
+  public final static XlChartType xlPyramidColClustered = new XlChartType(106);
+  public final static XlChartType xlPyramidColStacked = new XlChartType(107);
+  public final static XlChartType xlPyramidColStacked100 = new XlChartType(108);
+  public final static XlChartType xlPyramidBarClustered = new XlChartType(109);
+  public final static XlChartType xlPyramidBarStacked = new XlChartType(110);
+  public final static XlChartType xlPyramidBarStacked100 = new XlChartType(111);
+  public final static XlChartType xlPyramidCol = new XlChartType(112);
+  public final static XlChartType xl3DColumn = new XlChartType(-4100);
+  public final static XlChartType xlLine = new XlChartType(4);
+  public final static XlChartType xl3DLine = new XlChartType(-4101);
+  public final static XlChartType xl3DPie = new XlChartType(-4102);
+  public final static XlChartType xlPie = new XlChartType(5);
+  public final static XlChartType xlXYScatter = new XlChartType(-4169);
+  public final static XlChartType xl3DArea = new XlChartType(-4098);
+  public final static XlChartType xlArea = new XlChartType(1);
+  public final static XlChartType xlDoughnut = new XlChartType(-4120);
+  public final static XlChartType xlRadar = new XlChartType(-4151);
+  public final static XlChartType xlCombo = new XlChartType(-4152);
+  public final static XlChartType xlComboColumnClusteredLine = new XlChartType(113);
+  public final static XlChartType xlComboColumnClusteredLineSecondaryAxis = new XlChartType(114);
+  public final static XlChartType xlComboAreaStackedColumnClustered = new XlChartType(115);
+  public final static XlChartType xlOtherCombinations = new XlChartType(116);
+  public final static XlChartType xlSuggestedChart = new XlChartType(-2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _xlColumnClustered = 51;
+  public final static int _xlColumnStacked = 52;
+  public final static int _xlColumnStacked100 = 53;
+  public final static int _xl3DColumnClustered = 54;
+  public final static int _xl3DColumnStacked = 55;
+  public final static int _xl3DColumnStacked100 = 56;
+  public final static int _xlBarClustered = 57;
+  public final static int _xlBarStacked = 58;
+  public final static int _xlBarStacked100 = 59;
+  public final static int _xl3DBarClustered = 60;
+  public final static int _xl3DBarStacked = 61;
+  public final static int _xl3DBarStacked100 = 62;
+  public final static int _xlLineStacked = 63;
+  public final static int _xlLineStacked100 = 64;
+  public final static int _xlLineMarkers = 65;
+  public final static int _xlLineMarkersStacked = 66;
+  public final static int _xlLineMarkersStacked100 = 67;
+  public final static int _xlPieOfPie = 68;
+  public final static int _xlPieExploded = 69;
+  public final static int _xl3DPieExploded = 70;
+  public final static int _xlBarOfPie = 71;
+  public final static int _xlXYScatterSmooth = 72;
+  public final static int _xlXYScatterSmoothNoMarkers = 73;
+  public final static int _xlXYScatterLines = 74;
+  public final static int _xlXYScatterLinesNoMarkers = 75;
+  public final static int _xlAreaStacked = 76;
+  public final static int _xlAreaStacked100 = 77;
+  public final static int _xl3DAreaStacked = 78;
+  public final static int _xl3DAreaStacked100 = 79;
+  public final static int _xlDoughnutExploded = 80;
+  public final static int _xlRadarMarkers = 81;
+  public final static int _xlRadarFilled = 82;
+  public final static int _xlSurface = 83;
+  public final static int _xlSurfaceWireframe = 84;
+  public final static int _xlSurfaceTopView = 85;
+  public final static int _xlSurfaceTopViewWireframe = 86;
+  public final static int _xlBubble = 15;
+  public final static int _xlBubble3DEffect = 87;
+  public final static int _xlStockHLC = 88;
+  public final static int _xlStockOHLC = 89;
+  public final static int _xlStockVHLC = 90;
+  public final static int _xlStockVOHLC = 91;
+  public final static int _xlCylinderColClustered = 92;
+  public final static int _xlCylinderColStacked = 93;
+  public final static int _xlCylinderColStacked100 = 94;
+  public final static int _xlCylinderBarClustered = 95;
+  public final static int _xlCylinderBarStacked = 96;
+  public final static int _xlCylinderBarStacked100 = 97;
+  public final static int _xlCylinderCol = 98;
+  public final static int _xlConeColClustered = 99;
+  public final static int _xlConeColStacked = 100;
+  public final static int _xlConeColStacked100 = 101;
+  public final static int _xlConeBarClustered = 102;
+  public final static int _xlConeBarStacked = 103;
+  public final static int _xlConeBarStacked100 = 104;
+  public final static int _xlConeCol = 105;
+  public final static int _xlPyramidColClustered = 106;
+  public final static int _xlPyramidColStacked = 107;
+  public final static int _xlPyramidColStacked100 = 108;
+  public final static int _xlPyramidBarClustered = 109;
+  public final static int _xlPyramidBarStacked = 110;
+  public final static int _xlPyramidBarStacked100 = 111;
+  public final static int _xlPyramidCol = 112;
+  public final static int _xl3DColumn = -4100;
+  public final static int _xlLine = 4;
+  public final static int _xl3DLine = -4101;
+  public final static int _xl3DPie = -4102;
+  public final static int _xlPie = 5;
+  public final static int _xlXYScatter = -4169;
+  public final static int _xl3DArea = -4098;
+  public final static int _xlArea = 1;
+  public final static int _xlDoughnut = -4120;
+  public final static int _xlRadar = -4151;
+  public final static int _xlCombo = -4152;
+  public final static int _xlComboColumnClusteredLine = 113;
+  public final static int _xlComboColumnClusteredLineSecondaryAxis = 114;
+  public final static int _xlComboAreaStackedColumnClustered = 115;
+  public final static int _xlOtherCombinations = 116;
+  public final static int _xlSuggestedChart = -2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private XlChartType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  XlChartType valueOf(int value) {
     switch(value) {
     case 51: return xlColumnClustered;
@@ -172,7 +260,7 @@ public enum XlChartType {
     case 115: return xlComboAreaStackedColumnClustered;
     case 116: return xlOtherCombinations;
     case -2: return xlSuggestedChart;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + XlChartType.class);
+    default: return new XlChartType(value);
     }
   }
 }

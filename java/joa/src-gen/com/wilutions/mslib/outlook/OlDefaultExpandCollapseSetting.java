@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlDefaultExpandCollapseSetting {
-  olAllExpanded(0),
-  olAllCollapsed(1),
-  olLastViewed(2);
+public class OlDefaultExpandCollapseSetting {
 
+  // Typed constants
+  public final static OlDefaultExpandCollapseSetting olAllExpanded = new OlDefaultExpandCollapseSetting(0);
+  public final static OlDefaultExpandCollapseSetting olAllCollapsed = new OlDefaultExpandCollapseSetting(1);
+  public final static OlDefaultExpandCollapseSetting olLastViewed = new OlDefaultExpandCollapseSetting(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olAllExpanded = 0;
+  public final static int _olAllCollapsed = 1;
+  public final static int _olLastViewed = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlDefaultExpandCollapseSetting(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlDefaultExpandCollapseSetting valueOf(int value) {
     switch(value) {
     case 0: return olAllExpanded;
     case 1: return olAllCollapsed;
     case 2: return olLastViewed;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlDefaultExpandCollapseSetting.class);
+    default: return new OlDefaultExpandCollapseSetting(value);
     }
   }
 }

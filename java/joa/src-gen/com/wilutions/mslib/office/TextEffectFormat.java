@@ -8,9 +8,9 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C031F-0000-0000-C000-000000000046}")
 public interface TextEffectFormat extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(10)  public void ToggleVerticalText() throws ComException;
   @DeclDISPID(100)  public MsoTextEffectAlignment getAlignment() throws ComException;
   @DeclDISPID(100)  public void setAlignment(MsoTextEffectAlignment value) throws ComException;

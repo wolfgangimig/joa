@@ -8,8 +8,7 @@ public class _CalendarModuleImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _CalendarModuleImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64441)  public com.wilutions.mslib.outlook.OlNavigationModuleType getNavigationModuleType() throws ComException {
     final Object obj = this._dispatchCall(64441,"NavigationModuleType", DISPATCH_PROPERTYGET,null);
@@ -58,8 +56,7 @@ public class _CalendarModuleImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(64444)  public com.wilutions.mslib.outlook._NavigationGroups getNavigationGroups() throws ComException {
     final Object obj = this._dispatchCall(64444,"NavigationGroups", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationGroupsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationGroupsImpl.class);
   }
   public _CalendarModuleImpl(String progId) throws ComException {
     super(progId, "{000630EA-0000-0000-C000-000000000046}");

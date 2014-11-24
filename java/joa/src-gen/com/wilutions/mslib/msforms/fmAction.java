@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{570C03E0-F797-11CE-B9EC-00AA006B1A69}")
-public enum fmAction {
-  fmActionCut(0),
-  fmActionCopy(1),
-  fmActionPaste(2),
-  fmActionDragDrop(3);
+public class fmAction {
 
+  // Typed constants
+  public final static fmAction fmActionCut = new fmAction(0);
+  public final static fmAction fmActionCopy = new fmAction(1);
+  public final static fmAction fmActionPaste = new fmAction(2);
+  public final static fmAction fmActionDragDrop = new fmAction(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmActionCut = 0;
+  public final static int _fmActionCopy = 1;
+  public final static int _fmActionPaste = 2;
+  public final static int _fmActionDragDrop = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmAction(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmAction valueOf(int value) {
     switch(value) {
     case 0: return fmActionCut;
     case 1: return fmActionCopy;
     case 2: return fmActionPaste;
     case 3: return fmActionDragDrop;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmAction.class);
+    default: return new fmAction(value);
     }
   }
 }

@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AEE-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib.office.SharedWorkspace {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -27,32 +27,27 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(1)  public com.wilutions.mslib.office.SharedWorkspaceMembers getMembers() throws ComException {
     final Object obj = this._dispatchCall(1,"Members", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SharedWorkspaceMembersImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceMembersImpl.class);
   }
   @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceTasks getTasks() throws ComException {
     final Object obj = this._dispatchCall(2,"Tasks", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SharedWorkspaceTasksImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceTasksImpl.class);
   }
   @DeclDISPID(3)  public com.wilutions.mslib.office.SharedWorkspaceFiles getFiles() throws ComException {
     final Object obj = this._dispatchCall(3,"Files", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SharedWorkspaceFilesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceFilesImpl.class);
   }
   @DeclDISPID(4)  public com.wilutions.mslib.office.SharedWorkspaceFolders getFolders() throws ComException {
     final Object obj = this._dispatchCall(4,"Folders", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SharedWorkspaceFoldersImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceFoldersImpl.class);
   }
   @DeclDISPID(5)  public com.wilutions.mslib.office.SharedWorkspaceLinks getLinks() throws ComException {
     final Object obj = this._dispatchCall(5,"Links", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SharedWorkspaceLinksImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceLinksImpl.class);
   }
   @DeclDISPID(6)  public void Refresh() throws ComException {
     this._dispatchCall(6,"Refresh", DISPATCH_METHOD,null);
@@ -65,10 +60,10 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(8)  public void Delete() throws ComException {
     this._dispatchCall(8,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(9)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(9)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(9,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(10)  public String getURL() throws ComException {
     final Object obj = this._dispatchCall(10,"URL", DISPATCH_PROPERTYGET,null);

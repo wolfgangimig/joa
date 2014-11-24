@@ -11,7 +11,7 @@ public interface Attachment extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(113)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(113)  public IDispatch getParent() throws ComException;
   @DeclDISPID(12289)  public String getDisplayName() throws ComException;
   @DeclDISPID(12289)  public void setDisplayName(String value) throws ComException;
   @DeclDISPID(14084)  public String getFileName() throws ComException;

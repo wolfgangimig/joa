@@ -8,21 +8,41 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoScreenSize {
-  msoScreenSize544x376(0),
-  msoScreenSize640x480(1),
-  msoScreenSize720x512(2),
-  msoScreenSize800x600(3),
-  msoScreenSize1024x768(4),
-  msoScreenSize1152x882(5),
-  msoScreenSize1152x900(6),
-  msoScreenSize1280x1024(7),
-  msoScreenSize1600x1200(8),
-  msoScreenSize1800x1440(9),
-  msoScreenSize1920x1200(10);
+public class MsoScreenSize {
 
+  // Typed constants
+  public final static MsoScreenSize msoScreenSize544x376 = new MsoScreenSize(0);
+  public final static MsoScreenSize msoScreenSize640x480 = new MsoScreenSize(1);
+  public final static MsoScreenSize msoScreenSize720x512 = new MsoScreenSize(2);
+  public final static MsoScreenSize msoScreenSize800x600 = new MsoScreenSize(3);
+  public final static MsoScreenSize msoScreenSize1024x768 = new MsoScreenSize(4);
+  public final static MsoScreenSize msoScreenSize1152x882 = new MsoScreenSize(5);
+  public final static MsoScreenSize msoScreenSize1152x900 = new MsoScreenSize(6);
+  public final static MsoScreenSize msoScreenSize1280x1024 = new MsoScreenSize(7);
+  public final static MsoScreenSize msoScreenSize1600x1200 = new MsoScreenSize(8);
+  public final static MsoScreenSize msoScreenSize1800x1440 = new MsoScreenSize(9);
+  public final static MsoScreenSize msoScreenSize1920x1200 = new MsoScreenSize(10);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoScreenSize544x376 = 0;
+  public final static int _msoScreenSize640x480 = 1;
+  public final static int _msoScreenSize720x512 = 2;
+  public final static int _msoScreenSize800x600 = 3;
+  public final static int _msoScreenSize1024x768 = 4;
+  public final static int _msoScreenSize1152x882 = 5;
+  public final static int _msoScreenSize1152x900 = 6;
+  public final static int _msoScreenSize1280x1024 = 7;
+  public final static int _msoScreenSize1600x1200 = 8;
+  public final static int _msoScreenSize1800x1440 = 9;
+  public final static int _msoScreenSize1920x1200 = 10;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoScreenSize(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoScreenSize valueOf(int value) {
     switch(value) {
     case 0: return msoScreenSize544x376;
@@ -36,7 +56,7 @@ public enum MsoScreenSize {
     case 8: return msoScreenSize1600x1200;
     case 9: return msoScreenSize1800x1440;
     case 10: return msoScreenSize1920x1200;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoScreenSize.class);
+    default: return new MsoScreenSize(value);
     }
   }
 }

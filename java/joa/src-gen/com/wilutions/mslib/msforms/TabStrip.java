@@ -34,8 +34,7 @@ public class TabStrip extends Dispatch implements ITabStrip {
   @DeclDISPID(-512)  public Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
     assert(value != null);
@@ -52,8 +51,7 @@ public class TabStrip extends Dispatch implements ITabStrip {
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException {
     assert(value != null);
@@ -146,14 +144,12 @@ public class TabStrip extends Dispatch implements ITabStrip {
   @DeclDISPID(0)  public Tabs getTabs() throws ComException {
     final Object obj = this._dispatchCall(0,"Tabs", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabsImpl.class);
   }
   @DeclDISPID(545)  public Tab getSelectedItem() throws ComException {
     final Object obj = this._dispatchCall(545,"SelectedItem", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.TabImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }
   @DeclDISPID(528)  public void setValue(Integer value) throws ComException {
     assert(value != null);

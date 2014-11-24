@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0379-0000-0000-C000-000000000046}")
 public interface SharedWorkspaceTask extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public String getTitle() throws ComException;
   @DeclDISPID(0)  public void setTitle(String value) throws ComException;
@@ -28,5 +28,5 @@ public interface SharedWorkspaceTask extends IDispatch {
   @DeclDISPID(9)  public Object getModifiedDate() throws ComException;
   @DeclDISPID(10)  public void Save() throws ComException;
   @DeclDISPID(11)  public void Delete() throws ComException;
-  @DeclDISPID(12)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(12)  public IDispatch getParent() throws ComException;
 }

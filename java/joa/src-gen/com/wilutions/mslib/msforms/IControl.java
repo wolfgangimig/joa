@@ -37,8 +37,8 @@ public interface IControl extends IDispatch {
   @DeclDISPID(-2147385337)  public Float getOldTop() throws ComException;
   @DeclDISPID(1610743837)  public void _GetOldWidth(ByRef<Integer> OldWidth) throws ComException;
   @DeclDISPID(-2147385336)  public Float getOldWidth() throws ComException;
-  @DeclDISPID(-2147385335)  public Dispatch getObject() throws ComException;
-  @DeclDISPID(-2147418104)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(-2147385335)  public IDispatch getObject() throws ComException;
+  @DeclDISPID(-2147418104)  public IDispatch getParent() throws ComException;
   @DeclDISPID(-2147385330)  public void setRowSource(String value) throws ComException;
   @DeclDISPID(-2147385330)  public String getRowSource() throws ComException;
   @DeclDISPID(-2147385329)  public void setRowSourceType(Short value) throws ComException;

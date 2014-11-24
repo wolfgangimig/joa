@@ -97,15 +97,7 @@ public class Dispatch implements IDispatch {
 		super.finalize();
 	}
 
-	/**
-	 * Convert this object into an object of the given class. A new object of
-	 * the given class is created and the internal native object is transferred
-	 * to the new object. This object hereby looses its internal native object.
-	 * 
-	 * @param clazz
-	 *            Class object.
-	 * @return new object of type clazz.
-	 */
+	@Override
 	public <T> T as(Class<T> clazz) {
 
 		// This check ...
@@ -118,7 +110,7 @@ public class Dispatch implements IDispatch {
 		// oInsp.getModifiedFormPages().as(PagesImpl.class).Add("My Page").as(Page.class);
 		// would throw an exception on the last "as".
 
-		return uncheckedAs(clazz);
+		return as(this, clazz);
 	}
 
 	/**
@@ -135,7 +127,12 @@ public class Dispatch implements IDispatch {
 		T ret = null;
 		if (idisp != null) {
 			assert idisp instanceof Dispatch;
-			ret = (T) JoaDll.dispatchAs(idisp, clazz);
+			
+			if (clazz.isAssignableFrom(idisp.getClass())) {
+				ret = (T) idisp;
+			} else {
+				ret = (T) JoaDll.dispatchAs(idisp, clazz);
+			}
 		}
 		return ret;
 	}
@@ -152,23 +149,6 @@ public class Dispatch implements IDispatch {
 	 */
 	public boolean is(Class<?> clazz) {
 		return JoaDll.dispatchIs(this, clazz);
-	}
-
-	/**
-	 * Same as function {@link #as(Class)}.
-	 * 
-	 * @param clazz
-	 * @return new object of type clazz.
-	 */
-	public <T> T uncheckedAs(Class<T> clazz) {
-		try {
-			@SuppressWarnings("unchecked")
-			T obj = (T) JoaDll.dispatchAs(this, clazz);
-			return obj;
-		} catch (Throwable e) {
-			throw new IllegalStateException(e);
-		}
-
 	}
 
 	/**

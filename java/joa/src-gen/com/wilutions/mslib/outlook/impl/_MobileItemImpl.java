@@ -8,8 +8,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,25 +18,22 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(63511)  public com.wilutions.mslib.outlook.Actions getActions() throws ComException {
     final Object obj = this._dispatchCall(63511,"Actions", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ActionsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ActionsImpl.class);
   }
   @DeclDISPID(63509)  public com.wilutions.mslib.outlook.Attachments getAttachments() throws ComException {
     final Object obj = this._dispatchCall(63509,"Attachments", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AttachmentsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AttachmentsImpl.class);
   }
   @DeclDISPID(34101)  public String getBillingInformation() throws ComException {
     final Object obj = this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYGET,null);
@@ -98,14 +94,12 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61589)  public com.wilutions.mslib.outlook.FormDescription getFormDescription() throws ComException {
     final Object obj = this._dispatchCall(61589,"FormDescription", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.FormDescriptionImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.FormDescriptionImpl.class);
   }
   @DeclDISPID(61502)  public com.wilutions.mslib.outlook._Inspector getGetInspector() throws ComException {
     final Object obj = this._dispatchCall(61502,"GetInspector", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._InspectorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }
   @DeclDISPID(23)  public com.wilutions.mslib.outlook.OlImportance getImportance() throws ComException {
     final Object obj = this._dispatchCall(23,"Importance", DISPATCH_PROPERTYGET,null);
@@ -198,17 +192,16 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(63510)  public com.wilutions.mslib.outlook.UserProperties getUserProperties() throws ComException {
     final Object obj = this._dispatchCall(63510,"UserProperties", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
   @DeclDISPID(61475)  public void Close(com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
-  @DeclDISPID(61490)  public Dispatch Copy() throws ComException {
+  @DeclDISPID(61490)  public IDispatch Copy() throws ComException {
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
@@ -217,10 +210,10 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public Dispatch Move(com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(61491)  public void PrintOut() throws ComException {
     this._dispatchCall(61491,"PrintOut", DISPATCH_METHOD,null);
@@ -260,13 +253,13 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     final Object obj = this._dispatchCall(63504,"Reply", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.MobileItem.class);
+    return disp.as(com.wilutions.mslib.outlook.MobileItem.class);
   }
   @DeclDISPID(63505)  public com.wilutions.mslib.outlook.MobileItem ReplyAll() throws ComException {
     final Object obj = this._dispatchCall(63505,"ReplyAll", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.MobileItem.class);
+    return disp.as(com.wilutions.mslib.outlook.MobileItem.class);
   }
   @DeclDISPID(64597)  public void Send(Boolean ForceSend) throws ComException {
     assert(ForceSend != null);
@@ -275,8 +268,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(63508)  public com.wilutions.mslib.outlook.Recipients getRecipients() throws ComException {
     final Object obj = this._dispatchCall(63508,"Recipients", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   @DeclDISPID(3588)  public String getTo() throws ComException {
     final Object obj = this._dispatchCall(3588,"To", DISPATCH_PROPERTYGET,null);
@@ -291,7 +283,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     final Object obj = this._dispatchCall(63507,"Forward", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.MobileItem.class);
+    return disp.as(com.wilutions.mslib.outlook.MobileItem.class);
   }
   @DeclDISPID(80)  public String getReplyRecipientNames() throws ComException {
     final Object obj = this._dispatchCall(80,"ReplyRecipientNames", DISPATCH_PROPERTYGET,null);
@@ -301,8 +293,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61459)  public com.wilutions.mslib.outlook.Recipients getReplyRecipients() throws ComException {
     final Object obj = this._dispatchCall(61459,"ReplyRecipients", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   @DeclDISPID(64598)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(64598,"Count", DISPATCH_PROPERTYGET,null);
@@ -317,8 +308,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(64009)  public com.wilutions.mslib.outlook.ItemProperties getItemProperties() throws ComException {
     final Object obj = this._dispatchCall(64009,"ItemProperties", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ItemPropertiesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ItemPropertiesImpl.class);
   }
   @DeclDISPID(3590)  public java.util.Date getReceivedTime() throws ComException {
     final Object obj = this._dispatchCall(3590,"ReceivedTime", DISPATCH_PROPERTYGET,null);
@@ -329,7 +319,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     final Object obj = this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.Account.class);
+    return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
   @DeclDISPID(64209)  public void setSendUsingAccount(com.wilutions.mslib.outlook.Account value) throws ComException {
     this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -348,7 +338,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     final Object obj = this._dispatchCall(64253,"PropertyAccessor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.PropertyAccessor.class);
+    return disp.as(com.wilutions.mslib.outlook.PropertyAccessor.class);
   }
   @DeclDISPID(63)  public String getReceivedByEntryID() throws ComException {
     final Object obj = this._dispatchCall(63,"ReceivedByEntryID", DISPATCH_PROPERTYGET,null);

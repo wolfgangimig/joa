@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E5A-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.office.IMsoCharacters {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(139)  public String getCaption() throws ComException {
     final Object obj = this._dispatchCall(139,"Caption", DISPATCH_PROPERTYGET,null);
@@ -32,8 +32,7 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(146)  public com.wilutions.mslib.office.ChartFont getFont() throws ComException {
     final Object obj = this._dispatchCall(146,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ChartFontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFontImpl.class);
   }
   @DeclDISPID(252)  public Object Insert(String bstr) throws ComException {
     assert(bstr != null);
@@ -59,10 +58,10 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
     assert(value != null);
     this._dispatchCall(1522,"PhoneticCharacters", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

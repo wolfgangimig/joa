@@ -8,15 +8,29 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoGradientColorType {
-  msoGradientColorMixed(-2),
-  msoGradientOneColor(1),
-  msoGradientTwoColors(2),
-  msoGradientPresetColors(3),
-  msoGradientMultiColor(4);
+public class MsoGradientColorType {
 
+  // Typed constants
+  public final static MsoGradientColorType msoGradientColorMixed = new MsoGradientColorType(-2);
+  public final static MsoGradientColorType msoGradientOneColor = new MsoGradientColorType(1);
+  public final static MsoGradientColorType msoGradientTwoColors = new MsoGradientColorType(2);
+  public final static MsoGradientColorType msoGradientPresetColors = new MsoGradientColorType(3);
+  public final static MsoGradientColorType msoGradientMultiColor = new MsoGradientColorType(4);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoGradientColorMixed = -2;
+  public final static int _msoGradientOneColor = 1;
+  public final static int _msoGradientTwoColors = 2;
+  public final static int _msoGradientPresetColors = 3;
+  public final static int _msoGradientMultiColor = 4;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoGradientColorType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoGradientColorType valueOf(int value) {
     switch(value) {
     case -2: return msoGradientColorMixed;
@@ -24,7 +38,7 @@ public enum MsoGradientColorType {
     case 2: return msoGradientTwoColors;
     case 3: return msoGradientPresetColors;
     case 4: return msoGradientMultiColor;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoGradientColorType.class);
+    default: return new MsoGradientColorType(value);
     }
   }
 }

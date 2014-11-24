@@ -11,8 +11,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,13 +21,12 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(12291)  public String getAddress() throws ComException {
     final Object obj = this._dispatchCall(12291,"Address", DISPATCH_PROPERTYGET,null);
@@ -90,14 +88,13 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
   @DeclDISPID(64240)  public _ContactItem GetContact() throws ComException {
     final Object obj = this._dispatchCall(64240,"GetContact", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ContactItemImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ContactItemImpl.class);
   }
   @DeclDISPID(64241)  public ExchangeUser GetExchangeUser() throws ComException {
     final Object obj = this._dispatchCall(64241,"GetExchangeUser", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(ExchangeUser.class);
+    return disp.as(ExchangeUser.class);
   }
   @DeclDISPID(64242)  public OlAddressEntryUserType getAddressEntryUserType() throws ComException {
     final Object obj = this._dispatchCall(64242,"AddressEntryUserType", DISPATCH_PROPERTYGET,null);
@@ -108,25 +105,23 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     final Object obj = this._dispatchCall(64239,"GetExchangeDistributionList", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(ExchangeDistributionList.class);
+    return disp.as(ExchangeDistributionList.class);
   }
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException {
     final Object obj = this._dispatchCall(64253,"PropertyAccessor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(PropertyAccessor.class);
+    return disp.as(PropertyAccessor.class);
   }
   @DeclDISPID(64244)  public AddressEntries GetMemberOfList() throws ComException {
     final Object obj = this._dispatchCall(64244,"GetMemberOfList", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
   }
   @DeclDISPID(64246)  public AddressEntries GetExchangeDistributionListMembers() throws ComException {
     final Object obj = this._dispatchCall(64246,"GetExchangeDistributionListMembers", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
   }
   @DeclDISPID(14848)  public String getAlias() throws ComException {
     final Object obj = this._dispatchCall(14848,"Alias", DISPATCH_PROPERTYGET,null);
@@ -150,8 +145,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
   @DeclDISPID(64247)  public AddressEntries GetOwners() throws ComException {
     final Object obj = this._dispatchCall(64247,"GetOwners", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntriesImpl.class);
   }
   public ExchangeDistributionList() throws ComException {
     super("{000610CA-0000-0000-C000-000000000046}", "{000630CA-0000-0000-C000-000000000046}");

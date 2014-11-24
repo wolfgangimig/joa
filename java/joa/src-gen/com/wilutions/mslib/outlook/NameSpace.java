@@ -11,8 +11,7 @@ public class NameSpace extends Dispatch implements _NameSpace {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,25 +21,22 @@ public class NameSpace extends Dispatch implements _NameSpace {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(8449)  public Recipient getCurrentUser() throws ComException {
     final Object obj = this._dispatchCall(8449,"CurrentUser", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
   @DeclDISPID(8451)  public _Folders getFolders() throws ComException {
     final Object obj = this._dispatchCall(8451,"Folders", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._FoldersImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._FoldersImpl.class);
   }
   @DeclDISPID(8452)  public String getType() throws ComException {
     final Object obj = this._dispatchCall(8452,"Type", DISPATCH_PROPERTYGET,null);
@@ -50,51 +46,45 @@ public class NameSpace extends Dispatch implements _NameSpace {
   @DeclDISPID(8461)  public AddressLists getAddressLists() throws ComException {
     final Object obj = this._dispatchCall(8461,"AddressLists", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressListsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListsImpl.class);
   }
   @DeclDISPID(8458)  public Recipient CreateRecipient(String RecipientName) throws ComException {
     assert(RecipientName != null);
     final Object obj = this._dispatchCall(8458,"CreateRecipient", DISPATCH_METHOD,null,RecipientName);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
   @DeclDISPID(8459)  public MAPIFolder GetDefaultFolder(OlDefaultFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(8459,"GetDefaultFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(8456)  public MAPIFolder GetFolderFromID(String EntryIDFolder, Object EntryIDStore) throws ComException {
     assert(EntryIDFolder != null);
     assert(EntryIDStore != null);
     final Object obj = this._dispatchCall(8456,"GetFolderFromID", DISPATCH_METHOD,null,EntryIDFolder,EntryIDStore);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
-  @DeclDISPID(8457)  public Dispatch GetItemFromID(String EntryIDItem, Object EntryIDStore) throws ComException {
+  @DeclDISPID(8457)  public IDispatch GetItemFromID(String EntryIDItem, Object EntryIDStore) throws ComException {
     assert(EntryIDItem != null);
     assert(EntryIDStore != null);
     final Object obj = this._dispatchCall(8457,"GetItemFromID", DISPATCH_METHOD,null,EntryIDItem,EntryIDStore);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(8455)  public Recipient GetRecipientFromID(String EntryID) throws ComException {
     assert(EntryID != null);
     final Object obj = this._dispatchCall(8455,"GetRecipientFromID", DISPATCH_METHOD,null,EntryID);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.RecipientImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
   @DeclDISPID(8460)  public MAPIFolder GetSharedDefaultFolder(Recipient Recipient, OlDefaultFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(8460,"GetSharedDefaultFolder", DISPATCH_METHOD,null,(Recipient!=null?Recipient:Dispatch.NULL),FolderType.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(8454)  public void Logoff() throws ComException {
     this._dispatchCall(8454,"Logoff", DISPATCH_METHOD,null);
@@ -109,14 +99,12 @@ public class NameSpace extends Dispatch implements _NameSpace {
   @DeclDISPID(8462)  public MAPIFolder PickFolder() throws ComException {
     final Object obj = this._dispatchCall(8462,"PickFolder", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(8472)  public SyncObjects getSyncObjects() throws ComException {
     final Object obj = this._dispatchCall(8472,"SyncObjects", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.SyncObjectsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.SyncObjectsImpl.class);
   }
   @DeclDISPID(8473)  public void AddStore(Object Store) throws ComException {
     assert(Store != null);
@@ -148,7 +136,7 @@ public class NameSpace extends Dispatch implements _NameSpace {
     final Object obj = this._dispatchCall(64208,"Accounts", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Accounts.class);
+    return disp.as(Accounts.class);
   }
   @DeclDISPID(64213)  public String getCurrentProfileName() throws ComException {
     final Object obj = this._dispatchCall(64213,"CurrentProfileName", DISPATCH_PROPERTYGET,null);
@@ -159,13 +147,13 @@ public class NameSpace extends Dispatch implements _NameSpace {
     final Object obj = this._dispatchCall(64216,"Stores", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Stores.class);
+    return disp.as(Stores.class);
   }
   @DeclDISPID(64225)  public SelectNamesDialog GetSelectNamesDialog() throws ComException {
     final Object obj = this._dispatchCall(64225,"GetSelectNamesDialog", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(SelectNamesDialog.class);
+    return disp.as(SelectNamesDialog.class);
   }
   @DeclDISPID(64215)  public void SendAndReceive(Boolean showProgressDialog) throws ComException {
     assert(showProgressDialog != null);
@@ -175,33 +163,31 @@ public class NameSpace extends Dispatch implements _NameSpace {
     final Object obj = this._dispatchCall(64236,"DefaultStore", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Store.class);
+    return disp.as(Store.class);
   }
   @DeclDISPID(64260)  public AddressEntry GetAddressEntryFromID(String ID) throws ComException {
     assert(ID != null);
     final Object obj = this._dispatchCall(64260,"GetAddressEntryFromID", DISPATCH_METHOD,null,ID);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(64261)  public AddressList GetGlobalAddressList() throws ComException {
     final Object obj = this._dispatchCall(64261,"GetGlobalAddressList", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressListImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
   @DeclDISPID(64262)  public Store GetStoreFromID(String ID) throws ComException {
     assert(ID != null);
     final Object obj = this._dispatchCall(64262,"GetStoreFromID", DISPATCH_METHOD,null,ID);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Store.class);
+    return disp.as(Store.class);
   }
   @DeclDISPID(64421)  public Categories getCategories() throws ComException {
     final Object obj = this._dispatchCall(64421,"Categories", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Categories.class);
+    return disp.as(Categories.class);
   }
   @DeclDISPID(64502)  public MAPIFolder OpenSharedFolder(String Path, Object Name, Object DownloadAttachments, Object UseTTL) throws ComException {
     assert(Path != null);
@@ -210,14 +196,13 @@ public class NameSpace extends Dispatch implements _NameSpace {
     assert(UseTTL != null);
     final Object obj = this._dispatchCall(64502,"OpenSharedFolder", DISPATCH_METHOD,null,Path,Name,DownloadAttachments,UseTTL);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
-  @DeclDISPID(64503)  public Dispatch OpenSharedItem(String Path) throws ComException {
+  @DeclDISPID(64503)  public IDispatch OpenSharedItem(String Path) throws ComException {
     assert(Path != null);
     final Object obj = this._dispatchCall(64503,"OpenSharedItem", DISPATCH_METHOD,null,Path);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64484)  public SharingItem CreateSharingItem(Object Context, Object Provider) throws ComException {
     assert(Context != null);
@@ -225,7 +210,7 @@ public class NameSpace extends Dispatch implements _NameSpace {
     final Object obj = this._dispatchCall(64484,"CreateSharingItem", DISPATCH_METHOD,null,Context,Provider);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(SharingItem.class);
+    return disp.as(SharingItem.class);
   }
   @DeclDISPID(64517)  public String getExchangeMailboxServerName() throws ComException {
     final Object obj = this._dispatchCall(64517,"ExchangeMailboxServerName", DISPATCH_PROPERTYGET,null);
@@ -257,8 +242,7 @@ public class NameSpace extends Dispatch implements _NameSpace {
   @DeclDISPID(64645)  public com.wilutions.mslib.office.ContactCard CreateContactCard(AddressEntry AddressEntry) throws ComException {
     final Object obj = this._dispatchCall(64645,"CreateContactCard", DISPATCH_METHOD,null,(AddressEntry!=null?AddressEntry:Dispatch.NULL));
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ContactCardImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ContactCardImpl.class);
   }
   public NameSpace() throws ComException {
     super("{0006308B-0000-0000-C000-000000000046}", "{00063002-0000-0000-C000-000000000046}");

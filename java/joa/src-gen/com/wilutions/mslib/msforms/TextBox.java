@@ -125,8 +125,7 @@ public class TextBox extends Dispatch implements IMdcText {
   @DeclDISPID(-512)  public Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException {
     assert(value != null);
@@ -185,8 +184,7 @@ public class TextBox extends Dispatch implements IMdcText {
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException {
     assert(value != null);

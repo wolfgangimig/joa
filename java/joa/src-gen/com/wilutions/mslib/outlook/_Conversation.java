@@ -11,10 +11,10 @@ public interface _Conversation extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(64591)  public Table GetTable() throws ComException;
-  @DeclDISPID(64592)  public SimpleItems GetChildren(Dispatch Item) throws ComException;
-  @DeclDISPID(64594)  public Dispatch GetParent(Dispatch Item) throws ComException;
+  @DeclDISPID(64592)  public SimpleItems GetChildren(IDispatch Item) throws ComException;
+  @DeclDISPID(64594)  public IDispatch GetParent(IDispatch Item) throws ComException;
   @DeclDISPID(64595)  public SimpleItems GetRootItems() throws ComException;
   @DeclDISPID(64602)  public String GetAlwaysAssignCategories(_Store Store) throws ComException;
   @DeclDISPID(64603)  public OlAlwaysDeleteConversation GetAlwaysDelete(_Store Store) throws ComException;

@@ -145,12 +145,12 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     assert(hwndOwner != null);
     this._dispatchCall(25,"ShowModal2", DISPATCH_METHOD,null,hwndOwner);
   }
-  @DeclDISPID(26)  public void ShowModal3(Dispatch dispOwner) throws ComException {
+  @DeclDISPID(26)  public void ShowModal3(IDispatch dispOwner) throws ComException {
     assert(dispOwner != null);
     this._dispatchCall(26,"ShowModal3", DISPATCH_METHOD,null,dispOwner);
   }
   public IJoaBridgeDialogImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{092F3085-8620-4218-A38D-7F223DA710D9}");
   }
   protected IJoaBridgeDialogImpl(long ndisp) {
     super(ndisp);

@@ -5,20 +5,20 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A2A-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.Script {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809344)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1610809344,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610809345)  public String getExtended() throws ComException {
     final Object obj = this._dispatchCall(1610809345,"Extended", DISPATCH_PROPERTYGET,null);
@@ -55,10 +55,10 @@ public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.S
   @DeclDISPID(1610809352)  public void Delete() throws ComException {
     this._dispatchCall(1610809352,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610809353)  public Dispatch getShape() throws ComException {
+  @DeclDISPID(1610809353)  public IDispatch getShape() throws ComException {
     final Object obj = this._dispatchCall(1610809353,"Shape", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(0)  public String getScriptText() throws ComException {
     final Object obj = this._dispatchCall(0,"ScriptText", DISPATCH_PROPERTYGET,null);

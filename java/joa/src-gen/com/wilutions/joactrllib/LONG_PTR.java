@@ -7,7 +7,6 @@ import com.wilutions.com.*;
  * 
  */
 @SuppressWarnings("all")
-// Is alias type
 public class LONG_PTR {
   private Integer value;
   public LONG_PTR() {}

@@ -8,15 +8,29 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoSharedWorkspaceTaskStatus {
-  msoSharedWorkspaceTaskStatusNotStarted(1),
-  msoSharedWorkspaceTaskStatusInProgress(2),
-  msoSharedWorkspaceTaskStatusCompleted(3),
-  msoSharedWorkspaceTaskStatusDeferred(4),
-  msoSharedWorkspaceTaskStatusWaiting(5);
+public class MsoSharedWorkspaceTaskStatus {
 
+  // Typed constants
+  public final static MsoSharedWorkspaceTaskStatus msoSharedWorkspaceTaskStatusNotStarted = new MsoSharedWorkspaceTaskStatus(1);
+  public final static MsoSharedWorkspaceTaskStatus msoSharedWorkspaceTaskStatusInProgress = new MsoSharedWorkspaceTaskStatus(2);
+  public final static MsoSharedWorkspaceTaskStatus msoSharedWorkspaceTaskStatusCompleted = new MsoSharedWorkspaceTaskStatus(3);
+  public final static MsoSharedWorkspaceTaskStatus msoSharedWorkspaceTaskStatusDeferred = new MsoSharedWorkspaceTaskStatus(4);
+  public final static MsoSharedWorkspaceTaskStatus msoSharedWorkspaceTaskStatusWaiting = new MsoSharedWorkspaceTaskStatus(5);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoSharedWorkspaceTaskStatusNotStarted = 1;
+  public final static int _msoSharedWorkspaceTaskStatusInProgress = 2;
+  public final static int _msoSharedWorkspaceTaskStatusCompleted = 3;
+  public final static int _msoSharedWorkspaceTaskStatusDeferred = 4;
+  public final static int _msoSharedWorkspaceTaskStatusWaiting = 5;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoSharedWorkspaceTaskStatus(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoSharedWorkspaceTaskStatus valueOf(int value) {
     switch(value) {
     case 1: return msoSharedWorkspaceTaskStatusNotStarted;
@@ -24,7 +38,7 @@ public enum MsoSharedWorkspaceTaskStatus {
     case 3: return msoSharedWorkspaceTaskStatusCompleted;
     case 4: return msoSharedWorkspaceTaskStatusDeferred;
     case 5: return msoSharedWorkspaceTaskStatusWaiting;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoSharedWorkspaceTaskStatus.class);
+    default: return new MsoSharedWorkspaceTaskStatus(value);
     }
   }
 }

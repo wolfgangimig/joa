@@ -10,10 +10,10 @@ public class IRibbonControlImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public Dispatch getContext() throws ComException {
+  @DeclDISPID(2)  public IDispatch getContext() throws ComException {
     final Object obj = this._dispatchCall(2,"Context", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(3)  public String getTag() throws ComException {
     final Object obj = this._dispatchCall(3,"Tag", DISPATCH_PROPERTYGET,null);

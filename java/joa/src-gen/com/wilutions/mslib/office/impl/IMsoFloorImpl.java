@@ -15,16 +15,15 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(128)  public com.wilutions.mslib.office.IMsoBorder getBorder() throws ComException {
     final Object obj = this._dispatchCall(128,"Border", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
   }
   @DeclDISPID(112)  public Object ClearFormats() throws ComException {
     final Object obj = this._dispatchCall(112,"ClearFormats", DISPATCH_METHOD,null);
@@ -34,14 +33,12 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(129)  public com.wilutions.mslib.office.IMsoInterior getInterior() throws ComException {
     final Object obj = this._dispatchCall(129,"Interior", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoInteriorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoInteriorImpl.class);
   }
   @DeclDISPID(1663)  public com.wilutions.mslib.office.ChartFillFormat getFill() throws ComException {
     final Object obj = this._dispatchCall(1663,"Fill", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ChartFillFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFillFormatImpl.class);
   }
   @DeclDISPID(161)  public Object getPictureType() throws ComException {
     final Object obj = this._dispatchCall(161,"PictureType", DISPATCH_PROPERTYGET,null);
@@ -67,13 +64,12 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1610743820)  public com.wilutions.mslib.office.IMsoChartFormat getFormat() throws ComException {
     final Object obj = this._dispatchCall(1610743820,"Format", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

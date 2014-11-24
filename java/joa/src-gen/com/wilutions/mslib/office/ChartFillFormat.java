@@ -30,7 +30,7 @@ public interface ChartFillFormat extends IDispatch {
   @DeclDISPID(1610743827)  public Integer getType() throws ComException;
   @DeclDISPID(1610743828)  public void setVisible(Integer value) throws ComException;
   @DeclDISPID(1610743828)  public Integer getVisible() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
 }

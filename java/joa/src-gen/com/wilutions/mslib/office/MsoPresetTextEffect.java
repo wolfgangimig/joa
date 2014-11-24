@@ -8,61 +8,121 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoPresetTextEffect {
-  msoTextEffectMixed(-2),
-  msoTextEffect1(0),
-  msoTextEffect2(1),
-  msoTextEffect3(2),
-  msoTextEffect4(3),
-  msoTextEffect5(4),
-  msoTextEffect6(5),
-  msoTextEffect7(6),
-  msoTextEffect8(7),
-  msoTextEffect9(8),
-  msoTextEffect10(9),
-  msoTextEffect11(10),
-  msoTextEffect12(11),
-  msoTextEffect13(12),
-  msoTextEffect14(13),
-  msoTextEffect15(14),
-  msoTextEffect16(15),
-  msoTextEffect17(16),
-  msoTextEffect18(17),
-  msoTextEffect19(18),
-  msoTextEffect20(19),
-  msoTextEffect21(20),
-  msoTextEffect22(21),
-  msoTextEffect23(22),
-  msoTextEffect24(23),
-  msoTextEffect25(24),
-  msoTextEffect26(25),
-  msoTextEffect27(26),
-  msoTextEffect28(27),
-  msoTextEffect29(28),
-  msoTextEffect30(29),
-  msoTextEffect31(30),
-  msoTextEffect32(31),
-  msoTextEffect33(32),
-  msoTextEffect34(33),
-  msoTextEffect35(34),
-  msoTextEffect36(35),
-  msoTextEffect37(36),
-  msoTextEffect38(37),
-  msoTextEffect39(38),
-  msoTextEffect40(39),
-  msoTextEffect41(40),
-  msoTextEffect42(41),
-  msoTextEffect43(42),
-  msoTextEffect44(43),
-  msoTextEffect45(44),
-  msoTextEffect46(45),
-  msoTextEffect47(46),
-  msoTextEffect48(47),
-  msoTextEffect49(48),
-  msoTextEffect50(49);
+public class MsoPresetTextEffect {
 
+  // Typed constants
+  public final static MsoPresetTextEffect msoTextEffectMixed = new MsoPresetTextEffect(-2);
+  public final static MsoPresetTextEffect msoTextEffect1 = new MsoPresetTextEffect(0);
+  public final static MsoPresetTextEffect msoTextEffect2 = new MsoPresetTextEffect(1);
+  public final static MsoPresetTextEffect msoTextEffect3 = new MsoPresetTextEffect(2);
+  public final static MsoPresetTextEffect msoTextEffect4 = new MsoPresetTextEffect(3);
+  public final static MsoPresetTextEffect msoTextEffect5 = new MsoPresetTextEffect(4);
+  public final static MsoPresetTextEffect msoTextEffect6 = new MsoPresetTextEffect(5);
+  public final static MsoPresetTextEffect msoTextEffect7 = new MsoPresetTextEffect(6);
+  public final static MsoPresetTextEffect msoTextEffect8 = new MsoPresetTextEffect(7);
+  public final static MsoPresetTextEffect msoTextEffect9 = new MsoPresetTextEffect(8);
+  public final static MsoPresetTextEffect msoTextEffect10 = new MsoPresetTextEffect(9);
+  public final static MsoPresetTextEffect msoTextEffect11 = new MsoPresetTextEffect(10);
+  public final static MsoPresetTextEffect msoTextEffect12 = new MsoPresetTextEffect(11);
+  public final static MsoPresetTextEffect msoTextEffect13 = new MsoPresetTextEffect(12);
+  public final static MsoPresetTextEffect msoTextEffect14 = new MsoPresetTextEffect(13);
+  public final static MsoPresetTextEffect msoTextEffect15 = new MsoPresetTextEffect(14);
+  public final static MsoPresetTextEffect msoTextEffect16 = new MsoPresetTextEffect(15);
+  public final static MsoPresetTextEffect msoTextEffect17 = new MsoPresetTextEffect(16);
+  public final static MsoPresetTextEffect msoTextEffect18 = new MsoPresetTextEffect(17);
+  public final static MsoPresetTextEffect msoTextEffect19 = new MsoPresetTextEffect(18);
+  public final static MsoPresetTextEffect msoTextEffect20 = new MsoPresetTextEffect(19);
+  public final static MsoPresetTextEffect msoTextEffect21 = new MsoPresetTextEffect(20);
+  public final static MsoPresetTextEffect msoTextEffect22 = new MsoPresetTextEffect(21);
+  public final static MsoPresetTextEffect msoTextEffect23 = new MsoPresetTextEffect(22);
+  public final static MsoPresetTextEffect msoTextEffect24 = new MsoPresetTextEffect(23);
+  public final static MsoPresetTextEffect msoTextEffect25 = new MsoPresetTextEffect(24);
+  public final static MsoPresetTextEffect msoTextEffect26 = new MsoPresetTextEffect(25);
+  public final static MsoPresetTextEffect msoTextEffect27 = new MsoPresetTextEffect(26);
+  public final static MsoPresetTextEffect msoTextEffect28 = new MsoPresetTextEffect(27);
+  public final static MsoPresetTextEffect msoTextEffect29 = new MsoPresetTextEffect(28);
+  public final static MsoPresetTextEffect msoTextEffect30 = new MsoPresetTextEffect(29);
+  public final static MsoPresetTextEffect msoTextEffect31 = new MsoPresetTextEffect(30);
+  public final static MsoPresetTextEffect msoTextEffect32 = new MsoPresetTextEffect(31);
+  public final static MsoPresetTextEffect msoTextEffect33 = new MsoPresetTextEffect(32);
+  public final static MsoPresetTextEffect msoTextEffect34 = new MsoPresetTextEffect(33);
+  public final static MsoPresetTextEffect msoTextEffect35 = new MsoPresetTextEffect(34);
+  public final static MsoPresetTextEffect msoTextEffect36 = new MsoPresetTextEffect(35);
+  public final static MsoPresetTextEffect msoTextEffect37 = new MsoPresetTextEffect(36);
+  public final static MsoPresetTextEffect msoTextEffect38 = new MsoPresetTextEffect(37);
+  public final static MsoPresetTextEffect msoTextEffect39 = new MsoPresetTextEffect(38);
+  public final static MsoPresetTextEffect msoTextEffect40 = new MsoPresetTextEffect(39);
+  public final static MsoPresetTextEffect msoTextEffect41 = new MsoPresetTextEffect(40);
+  public final static MsoPresetTextEffect msoTextEffect42 = new MsoPresetTextEffect(41);
+  public final static MsoPresetTextEffect msoTextEffect43 = new MsoPresetTextEffect(42);
+  public final static MsoPresetTextEffect msoTextEffect44 = new MsoPresetTextEffect(43);
+  public final static MsoPresetTextEffect msoTextEffect45 = new MsoPresetTextEffect(44);
+  public final static MsoPresetTextEffect msoTextEffect46 = new MsoPresetTextEffect(45);
+  public final static MsoPresetTextEffect msoTextEffect47 = new MsoPresetTextEffect(46);
+  public final static MsoPresetTextEffect msoTextEffect48 = new MsoPresetTextEffect(47);
+  public final static MsoPresetTextEffect msoTextEffect49 = new MsoPresetTextEffect(48);
+  public final static MsoPresetTextEffect msoTextEffect50 = new MsoPresetTextEffect(49);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoTextEffectMixed = -2;
+  public final static int _msoTextEffect1 = 0;
+  public final static int _msoTextEffect2 = 1;
+  public final static int _msoTextEffect3 = 2;
+  public final static int _msoTextEffect4 = 3;
+  public final static int _msoTextEffect5 = 4;
+  public final static int _msoTextEffect6 = 5;
+  public final static int _msoTextEffect7 = 6;
+  public final static int _msoTextEffect8 = 7;
+  public final static int _msoTextEffect9 = 8;
+  public final static int _msoTextEffect10 = 9;
+  public final static int _msoTextEffect11 = 10;
+  public final static int _msoTextEffect12 = 11;
+  public final static int _msoTextEffect13 = 12;
+  public final static int _msoTextEffect14 = 13;
+  public final static int _msoTextEffect15 = 14;
+  public final static int _msoTextEffect16 = 15;
+  public final static int _msoTextEffect17 = 16;
+  public final static int _msoTextEffect18 = 17;
+  public final static int _msoTextEffect19 = 18;
+  public final static int _msoTextEffect20 = 19;
+  public final static int _msoTextEffect21 = 20;
+  public final static int _msoTextEffect22 = 21;
+  public final static int _msoTextEffect23 = 22;
+  public final static int _msoTextEffect24 = 23;
+  public final static int _msoTextEffect25 = 24;
+  public final static int _msoTextEffect26 = 25;
+  public final static int _msoTextEffect27 = 26;
+  public final static int _msoTextEffect28 = 27;
+  public final static int _msoTextEffect29 = 28;
+  public final static int _msoTextEffect30 = 29;
+  public final static int _msoTextEffect31 = 30;
+  public final static int _msoTextEffect32 = 31;
+  public final static int _msoTextEffect33 = 32;
+  public final static int _msoTextEffect34 = 33;
+  public final static int _msoTextEffect35 = 34;
+  public final static int _msoTextEffect36 = 35;
+  public final static int _msoTextEffect37 = 36;
+  public final static int _msoTextEffect38 = 37;
+  public final static int _msoTextEffect39 = 38;
+  public final static int _msoTextEffect40 = 39;
+  public final static int _msoTextEffect41 = 40;
+  public final static int _msoTextEffect42 = 41;
+  public final static int _msoTextEffect43 = 42;
+  public final static int _msoTextEffect44 = 43;
+  public final static int _msoTextEffect45 = 44;
+  public final static int _msoTextEffect46 = 45;
+  public final static int _msoTextEffect47 = 46;
+  public final static int _msoTextEffect48 = 47;
+  public final static int _msoTextEffect49 = 48;
+  public final static int _msoTextEffect50 = 49;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPresetTextEffect(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPresetTextEffect valueOf(int value) {
     switch(value) {
     case -2: return msoTextEffectMixed;
@@ -116,7 +176,7 @@ public enum MsoPresetTextEffect {
     case 47: return msoTextEffect48;
     case 48: return msoTextEffect49;
     case 49: return msoTextEffect50;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPresetTextEffect.class);
+    default: return new MsoPresetTextEffect(value);
     }
   }
 }

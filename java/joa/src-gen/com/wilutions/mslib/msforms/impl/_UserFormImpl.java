@@ -9,7 +9,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     final Object obj = this._dispatchCall(256,"ActiveControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
@@ -67,8 +67,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(0)  public com.wilutions.mslib.msforms.Controls getControls() throws ComException {
     final Object obj = this._dispatchCall(0,"Controls", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.ControlsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.ControlsImpl.class);
   }
   @DeclDISPID(260)  public void setCycle(com.wilutions.mslib.msforms.fmCycle value) throws ComException {
     assert(value != null);
@@ -94,8 +93,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
@@ -140,8 +138,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
@@ -167,8 +164,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(27)  public void setPictureSizeMode(com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
     assert(value != null);

@@ -11,8 +11,7 @@ public class IMsoLeaderLinesImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(128)  public com.wilutions.mslib.office.IMsoBorder getBorder() throws ComException {
     final Object obj = this._dispatchCall(128,"Border", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
   }
   @DeclDISPID(117)  public void Delete() throws ComException {
     this._dispatchCall(117,"Delete", DISPATCH_METHOD,null);
@@ -20,23 +19,22 @@ public class IMsoLeaderLinesImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(1610743811)  public com.wilutions.mslib.office.IMsoChartFormat getFormat() throws ComException {
     final Object obj = this._dispatchCall(1610743811,"Format", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public IMsoLeaderLinesImpl(String progId) throws ComException {
     super(progId, "{000C1723-0000-0000-C000-000000000046}");

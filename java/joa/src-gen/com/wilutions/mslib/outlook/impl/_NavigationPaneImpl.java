@@ -8,8 +8,7 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64436)  public Boolean getIsCollapsed() throws ComException {
     final Object obj = this._dispatchCall(64436,"IsCollapsed", DISPATCH_PROPERTYGET,null);
@@ -40,7 +38,7 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
     final Object obj = this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationModule.class);
+    return disp.as(com.wilutions.mslib.outlook.NavigationModule.class);
   }
   @DeclDISPID(64437)  public void setCurrentModule(com.wilutions.mslib.outlook.NavigationModule value) throws ComException {
     this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
@@ -58,7 +56,7 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
     final Object obj = this._dispatchCall(64439,"Modules", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationModules.class);
+    return disp.as(com.wilutions.mslib.outlook.NavigationModules.class);
   }
   public _NavigationPaneImpl(String progId) throws ComException {
     super(progId, "{000630E6-0000-0000-C000-000000000046}");

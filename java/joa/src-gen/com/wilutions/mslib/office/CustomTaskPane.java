@@ -13,15 +13,15 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(2)  public Dispatch getWindow() throws ComException {
+  @DeclDISPID(2)  public IDispatch getWindow() throws ComException {
     final Object obj = this._dispatchCall(2,"Window", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(3)  public Boolean getVisible() throws ComException {
     final Object obj = this._dispatchCall(3,"Visible", DISPATCH_PROPERTYGET,null);
@@ -32,10 +32,10 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     assert(value != null);
     this._dispatchCall(3,"Visible", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(4)  public Dispatch getContentControl() throws ComException {
+  @DeclDISPID(4)  public IDispatch getContentControl() throws ComException {
     final Object obj = this._dispatchCall(4,"ContentControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(5)  public Integer getHeight() throws ComException {
     final Object obj = this._dispatchCall(5,"Height", DISPATCH_PROPERTYGET,null);

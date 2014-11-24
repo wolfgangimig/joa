@@ -8,73 +8,145 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoPresetCamera {
-  msoPresetCameraMixed(-2),
-  msoCameraLegacyObliqueTopLeft(1),
-  msoCameraLegacyObliqueTop(2),
-  msoCameraLegacyObliqueTopRight(3),
-  msoCameraLegacyObliqueLeft(4),
-  msoCameraLegacyObliqueFront(5),
-  msoCameraLegacyObliqueRight(6),
-  msoCameraLegacyObliqueBottomLeft(7),
-  msoCameraLegacyObliqueBottom(8),
-  msoCameraLegacyObliqueBottomRight(9),
-  msoCameraLegacyPerspectiveTopLeft(10),
-  msoCameraLegacyPerspectiveTop(11),
-  msoCameraLegacyPerspectiveTopRight(12),
-  msoCameraLegacyPerspectiveLeft(13),
-  msoCameraLegacyPerspectiveFront(14),
-  msoCameraLegacyPerspectiveRight(15),
-  msoCameraLegacyPerspectiveBottomLeft(16),
-  msoCameraLegacyPerspectiveBottom(17),
-  msoCameraLegacyPerspectiveBottomRight(18),
-  msoCameraOrthographicFront(19),
-  msoCameraIsometricTopUp(20),
-  msoCameraIsometricTopDown(21),
-  msoCameraIsometricBottomUp(22),
-  msoCameraIsometricBottomDown(23),
-  msoCameraIsometricLeftUp(24),
-  msoCameraIsometricLeftDown(25),
-  msoCameraIsometricRightUp(26),
-  msoCameraIsometricRightDown(27),
-  msoCameraIsometricOffAxis1Left(28),
-  msoCameraIsometricOffAxis1Right(29),
-  msoCameraIsometricOffAxis1Top(30),
-  msoCameraIsometricOffAxis2Left(31),
-  msoCameraIsometricOffAxis2Right(32),
-  msoCameraIsometricOffAxis2Top(33),
-  msoCameraIsometricOffAxis3Left(34),
-  msoCameraIsometricOffAxis3Right(35),
-  msoCameraIsometricOffAxis3Bottom(36),
-  msoCameraIsometricOffAxis4Left(37),
-  msoCameraIsometricOffAxis4Right(38),
-  msoCameraIsometricOffAxis4Bottom(39),
-  msoCameraObliqueTopLeft(40),
-  msoCameraObliqueTop(41),
-  msoCameraObliqueTopRight(42),
-  msoCameraObliqueLeft(43),
-  msoCameraObliqueRight(44),
-  msoCameraObliqueBottomLeft(45),
-  msoCameraObliqueBottom(46),
-  msoCameraObliqueBottomRight(47),
-  msoCameraPerspectiveFront(48),
-  msoCameraPerspectiveLeft(49),
-  msoCameraPerspectiveRight(50),
-  msoCameraPerspectiveAbove(51),
-  msoCameraPerspectiveBelow(52),
-  msoCameraPerspectiveAboveLeftFacing(53),
-  msoCameraPerspectiveAboveRightFacing(54),
-  msoCameraPerspectiveContrastingLeftFacing(55),
-  msoCameraPerspectiveContrastingRightFacing(56),
-  msoCameraPerspectiveHeroicLeftFacing(57),
-  msoCameraPerspectiveHeroicRightFacing(58),
-  msoCameraPerspectiveHeroicExtremeLeftFacing(59),
-  msoCameraPerspectiveHeroicExtremeRightFacing(60),
-  msoCameraPerspectiveRelaxed(61),
-  msoCameraPerspectiveRelaxedModerately(62);
+public class MsoPresetCamera {
 
+  // Typed constants
+  public final static MsoPresetCamera msoPresetCameraMixed = new MsoPresetCamera(-2);
+  public final static MsoPresetCamera msoCameraLegacyObliqueTopLeft = new MsoPresetCamera(1);
+  public final static MsoPresetCamera msoCameraLegacyObliqueTop = new MsoPresetCamera(2);
+  public final static MsoPresetCamera msoCameraLegacyObliqueTopRight = new MsoPresetCamera(3);
+  public final static MsoPresetCamera msoCameraLegacyObliqueLeft = new MsoPresetCamera(4);
+  public final static MsoPresetCamera msoCameraLegacyObliqueFront = new MsoPresetCamera(5);
+  public final static MsoPresetCamera msoCameraLegacyObliqueRight = new MsoPresetCamera(6);
+  public final static MsoPresetCamera msoCameraLegacyObliqueBottomLeft = new MsoPresetCamera(7);
+  public final static MsoPresetCamera msoCameraLegacyObliqueBottom = new MsoPresetCamera(8);
+  public final static MsoPresetCamera msoCameraLegacyObliqueBottomRight = new MsoPresetCamera(9);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveTopLeft = new MsoPresetCamera(10);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveTop = new MsoPresetCamera(11);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveTopRight = new MsoPresetCamera(12);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveLeft = new MsoPresetCamera(13);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveFront = new MsoPresetCamera(14);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveRight = new MsoPresetCamera(15);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveBottomLeft = new MsoPresetCamera(16);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveBottom = new MsoPresetCamera(17);
+  public final static MsoPresetCamera msoCameraLegacyPerspectiveBottomRight = new MsoPresetCamera(18);
+  public final static MsoPresetCamera msoCameraOrthographicFront = new MsoPresetCamera(19);
+  public final static MsoPresetCamera msoCameraIsometricTopUp = new MsoPresetCamera(20);
+  public final static MsoPresetCamera msoCameraIsometricTopDown = new MsoPresetCamera(21);
+  public final static MsoPresetCamera msoCameraIsometricBottomUp = new MsoPresetCamera(22);
+  public final static MsoPresetCamera msoCameraIsometricBottomDown = new MsoPresetCamera(23);
+  public final static MsoPresetCamera msoCameraIsometricLeftUp = new MsoPresetCamera(24);
+  public final static MsoPresetCamera msoCameraIsometricLeftDown = new MsoPresetCamera(25);
+  public final static MsoPresetCamera msoCameraIsometricRightUp = new MsoPresetCamera(26);
+  public final static MsoPresetCamera msoCameraIsometricRightDown = new MsoPresetCamera(27);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis1Left = new MsoPresetCamera(28);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis1Right = new MsoPresetCamera(29);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis1Top = new MsoPresetCamera(30);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis2Left = new MsoPresetCamera(31);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis2Right = new MsoPresetCamera(32);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis2Top = new MsoPresetCamera(33);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis3Left = new MsoPresetCamera(34);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis3Right = new MsoPresetCamera(35);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis3Bottom = new MsoPresetCamera(36);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis4Left = new MsoPresetCamera(37);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis4Right = new MsoPresetCamera(38);
+  public final static MsoPresetCamera msoCameraIsometricOffAxis4Bottom = new MsoPresetCamera(39);
+  public final static MsoPresetCamera msoCameraObliqueTopLeft = new MsoPresetCamera(40);
+  public final static MsoPresetCamera msoCameraObliqueTop = new MsoPresetCamera(41);
+  public final static MsoPresetCamera msoCameraObliqueTopRight = new MsoPresetCamera(42);
+  public final static MsoPresetCamera msoCameraObliqueLeft = new MsoPresetCamera(43);
+  public final static MsoPresetCamera msoCameraObliqueRight = new MsoPresetCamera(44);
+  public final static MsoPresetCamera msoCameraObliqueBottomLeft = new MsoPresetCamera(45);
+  public final static MsoPresetCamera msoCameraObliqueBottom = new MsoPresetCamera(46);
+  public final static MsoPresetCamera msoCameraObliqueBottomRight = new MsoPresetCamera(47);
+  public final static MsoPresetCamera msoCameraPerspectiveFront = new MsoPresetCamera(48);
+  public final static MsoPresetCamera msoCameraPerspectiveLeft = new MsoPresetCamera(49);
+  public final static MsoPresetCamera msoCameraPerspectiveRight = new MsoPresetCamera(50);
+  public final static MsoPresetCamera msoCameraPerspectiveAbove = new MsoPresetCamera(51);
+  public final static MsoPresetCamera msoCameraPerspectiveBelow = new MsoPresetCamera(52);
+  public final static MsoPresetCamera msoCameraPerspectiveAboveLeftFacing = new MsoPresetCamera(53);
+  public final static MsoPresetCamera msoCameraPerspectiveAboveRightFacing = new MsoPresetCamera(54);
+  public final static MsoPresetCamera msoCameraPerspectiveContrastingLeftFacing = new MsoPresetCamera(55);
+  public final static MsoPresetCamera msoCameraPerspectiveContrastingRightFacing = new MsoPresetCamera(56);
+  public final static MsoPresetCamera msoCameraPerspectiveHeroicLeftFacing = new MsoPresetCamera(57);
+  public final static MsoPresetCamera msoCameraPerspectiveHeroicRightFacing = new MsoPresetCamera(58);
+  public final static MsoPresetCamera msoCameraPerspectiveHeroicExtremeLeftFacing = new MsoPresetCamera(59);
+  public final static MsoPresetCamera msoCameraPerspectiveHeroicExtremeRightFacing = new MsoPresetCamera(60);
+  public final static MsoPresetCamera msoCameraPerspectiveRelaxed = new MsoPresetCamera(61);
+  public final static MsoPresetCamera msoCameraPerspectiveRelaxedModerately = new MsoPresetCamera(62);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoPresetCameraMixed = -2;
+  public final static int _msoCameraLegacyObliqueTopLeft = 1;
+  public final static int _msoCameraLegacyObliqueTop = 2;
+  public final static int _msoCameraLegacyObliqueTopRight = 3;
+  public final static int _msoCameraLegacyObliqueLeft = 4;
+  public final static int _msoCameraLegacyObliqueFront = 5;
+  public final static int _msoCameraLegacyObliqueRight = 6;
+  public final static int _msoCameraLegacyObliqueBottomLeft = 7;
+  public final static int _msoCameraLegacyObliqueBottom = 8;
+  public final static int _msoCameraLegacyObliqueBottomRight = 9;
+  public final static int _msoCameraLegacyPerspectiveTopLeft = 10;
+  public final static int _msoCameraLegacyPerspectiveTop = 11;
+  public final static int _msoCameraLegacyPerspectiveTopRight = 12;
+  public final static int _msoCameraLegacyPerspectiveLeft = 13;
+  public final static int _msoCameraLegacyPerspectiveFront = 14;
+  public final static int _msoCameraLegacyPerspectiveRight = 15;
+  public final static int _msoCameraLegacyPerspectiveBottomLeft = 16;
+  public final static int _msoCameraLegacyPerspectiveBottom = 17;
+  public final static int _msoCameraLegacyPerspectiveBottomRight = 18;
+  public final static int _msoCameraOrthographicFront = 19;
+  public final static int _msoCameraIsometricTopUp = 20;
+  public final static int _msoCameraIsometricTopDown = 21;
+  public final static int _msoCameraIsometricBottomUp = 22;
+  public final static int _msoCameraIsometricBottomDown = 23;
+  public final static int _msoCameraIsometricLeftUp = 24;
+  public final static int _msoCameraIsometricLeftDown = 25;
+  public final static int _msoCameraIsometricRightUp = 26;
+  public final static int _msoCameraIsometricRightDown = 27;
+  public final static int _msoCameraIsometricOffAxis1Left = 28;
+  public final static int _msoCameraIsometricOffAxis1Right = 29;
+  public final static int _msoCameraIsometricOffAxis1Top = 30;
+  public final static int _msoCameraIsometricOffAxis2Left = 31;
+  public final static int _msoCameraIsometricOffAxis2Right = 32;
+  public final static int _msoCameraIsometricOffAxis2Top = 33;
+  public final static int _msoCameraIsometricOffAxis3Left = 34;
+  public final static int _msoCameraIsometricOffAxis3Right = 35;
+  public final static int _msoCameraIsometricOffAxis3Bottom = 36;
+  public final static int _msoCameraIsometricOffAxis4Left = 37;
+  public final static int _msoCameraIsometricOffAxis4Right = 38;
+  public final static int _msoCameraIsometricOffAxis4Bottom = 39;
+  public final static int _msoCameraObliqueTopLeft = 40;
+  public final static int _msoCameraObliqueTop = 41;
+  public final static int _msoCameraObliqueTopRight = 42;
+  public final static int _msoCameraObliqueLeft = 43;
+  public final static int _msoCameraObliqueRight = 44;
+  public final static int _msoCameraObliqueBottomLeft = 45;
+  public final static int _msoCameraObliqueBottom = 46;
+  public final static int _msoCameraObliqueBottomRight = 47;
+  public final static int _msoCameraPerspectiveFront = 48;
+  public final static int _msoCameraPerspectiveLeft = 49;
+  public final static int _msoCameraPerspectiveRight = 50;
+  public final static int _msoCameraPerspectiveAbove = 51;
+  public final static int _msoCameraPerspectiveBelow = 52;
+  public final static int _msoCameraPerspectiveAboveLeftFacing = 53;
+  public final static int _msoCameraPerspectiveAboveRightFacing = 54;
+  public final static int _msoCameraPerspectiveContrastingLeftFacing = 55;
+  public final static int _msoCameraPerspectiveContrastingRightFacing = 56;
+  public final static int _msoCameraPerspectiveHeroicLeftFacing = 57;
+  public final static int _msoCameraPerspectiveHeroicRightFacing = 58;
+  public final static int _msoCameraPerspectiveHeroicExtremeLeftFacing = 59;
+  public final static int _msoCameraPerspectiveHeroicExtremeRightFacing = 60;
+  public final static int _msoCameraPerspectiveRelaxed = 61;
+  public final static int _msoCameraPerspectiveRelaxedModerately = 62;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPresetCamera(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPresetCamera valueOf(int value) {
     switch(value) {
     case -2: return msoPresetCameraMixed;
@@ -140,7 +212,7 @@ public enum MsoPresetCamera {
     case 60: return msoCameraPerspectiveHeroicExtremeRightFacing;
     case 61: return msoCameraPerspectiveRelaxed;
     case 62: return msoCameraPerspectiveRelaxedModerately;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPresetCamera.class);
+    default: return new MsoPresetCamera(value);
     }
   }
 }

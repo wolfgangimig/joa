@@ -8,159 +8,317 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlObjectClass {
-  olApplication(0),
-  olNamespace(1),
-  olFolder(2),
-  olRecipient(4),
-  olAttachment(5),
-  olAddressList(7),
-  olAddressEntry(8),
-  olFolders(15),
-  olItems(16),
-  olRecipients(17),
-  olAttachments(18),
-  olAddressLists(20),
-  olAddressEntries(21),
-  olAppointment(26),
-  olMeetingRequest(53),
-  olMeetingCancellation(54),
-  olMeetingResponseNegative(55),
-  olMeetingResponsePositive(56),
-  olMeetingResponseTentative(57),
-  olRecurrencePattern(28),
-  olExceptions(29),
-  olException(30),
-  olAction(32),
-  olActions(33),
-  olExplorer(34),
-  olInspector(35),
-  olPages(36),
-  olFormDescription(37),
-  olUserProperties(38),
-  olUserProperty(39),
-  olContact(40),
-  olDocument(41),
-  olJournal(42),
-  olMail(43),
-  olNote(44),
-  olPost(45),
-  olReport(46),
-  olRemote(47),
-  olTask(48),
-  olTaskRequest(49),
-  olTaskRequestUpdate(50),
-  olTaskRequestAccept(51),
-  olTaskRequestDecline(52),
-  olExplorers(60),
-  olInspectors(61),
-  olPanes(62),
-  olOutlookBarPane(63),
-  olOutlookBarStorage(64),
-  olOutlookBarGroups(65),
-  olOutlookBarGroup(66),
-  olOutlookBarShortcuts(67),
-  olOutlookBarShortcut(68),
-  olDistributionList(69),
-  olPropertyPageSite(70),
-  olPropertyPages(71),
-  olSyncObject(72),
-  olSyncObjects(73),
-  olSelection(74),
-  olLink(75),
-  olLinks(76),
-  olSearch(77),
-  olResults(78),
-  olViews(79),
-  olView(80),
-  olItemProperties(98),
-  olItemProperty(99),
-  olReminders(100),
-  olReminder(101),
-  olConflict(102),
-  olConflicts(103),
-  olSharing(104),
-  olAccount(105),
-  olAccounts(106),
-  olStore(107),
-  olStores(108),
-  olSelectNamesDialog(109),
-  olExchangeUser(110),
-  olExchangeDistributionList(111),
-  olPropertyAccessor(112),
-  olStorageItem(113),
-  olRules(114),
-  olRule(115),
-  olRuleActions(116),
-  olRuleAction(117),
-  olMoveOrCopyRuleAction(118),
-  olSendRuleAction(119),
-  olTable(120),
-  olRow(121),
-  olAssignToCategoryRuleAction(122),
-  olPlaySoundRuleAction(123),
-  olMarkAsTaskRuleAction(124),
-  olNewItemAlertRuleAction(125),
-  olRuleConditions(126),
-  olRuleCondition(127),
-  olImportanceRuleCondition(128),
-  olFormRegion(129),
-  olCategoryRuleCondition(130),
-  olFormNameRuleCondition(131),
-  olFromRuleCondition(132),
-  olSenderInAddressListRuleCondition(133),
-  olTextRuleCondition(134),
-  olAccountRuleCondition(135),
-  olClassTableView(136),
-  olClassIconView(137),
-  olClassCardView(138),
-  olClassCalendarView(139),
-  olClassTimeLineView(140),
-  olViewFields(141),
-  olViewField(142),
-  olOrderField(144),
-  olOrderFields(145),
-  olViewFont(146),
-  olAutoFormatRule(147),
-  olAutoFormatRules(148),
-  olColumnFormat(149),
-  olColumns(150),
-  olCalendarSharing(151),
-  olCategory(152),
-  olCategories(153),
-  olColumn(154),
-  olClassNavigationPane(155),
-  olNavigationModules(156),
-  olNavigationModule(157),
-  olMailModule(158),
-  olCalendarModule(159),
-  olContactsModule(160),
-  olTasksModule(161),
-  olJournalModule(162),
-  olNotesModule(163),
-  olNavigationGroups(164),
-  olNavigationGroup(165),
-  olNavigationFolders(166),
-  olNavigationFolder(167),
-  olClassBusinessCardView(168),
-  olAttachmentSelection(169),
-  olAddressRuleCondition(170),
-  olUserDefinedProperty(171),
-  olUserDefinedProperties(172),
-  olFromRssFeedRuleCondition(173),
-  olClassTimeZone(174),
-  olClassTimeZones(175),
-  olMobile(176),
-  olSolutionsModule(177),
-  olConversation(178),
-  olSimpleItems(179),
-  olOutspace(180),
-  olMeetingForwardNotification(181),
-  olConversationHeader(182),
-  olClassPeopleView(183);
+public class OlObjectClass {
 
+  // Typed constants
+  public final static OlObjectClass olApplication = new OlObjectClass(0);
+  public final static OlObjectClass olNamespace = new OlObjectClass(1);
+  public final static OlObjectClass olFolder = new OlObjectClass(2);
+  public final static OlObjectClass olRecipient = new OlObjectClass(4);
+  public final static OlObjectClass olAttachment = new OlObjectClass(5);
+  public final static OlObjectClass olAddressList = new OlObjectClass(7);
+  public final static OlObjectClass olAddressEntry = new OlObjectClass(8);
+  public final static OlObjectClass olFolders = new OlObjectClass(15);
+  public final static OlObjectClass olItems = new OlObjectClass(16);
+  public final static OlObjectClass olRecipients = new OlObjectClass(17);
+  public final static OlObjectClass olAttachments = new OlObjectClass(18);
+  public final static OlObjectClass olAddressLists = new OlObjectClass(20);
+  public final static OlObjectClass olAddressEntries = new OlObjectClass(21);
+  public final static OlObjectClass olAppointment = new OlObjectClass(26);
+  public final static OlObjectClass olMeetingRequest = new OlObjectClass(53);
+  public final static OlObjectClass olMeetingCancellation = new OlObjectClass(54);
+  public final static OlObjectClass olMeetingResponseNegative = new OlObjectClass(55);
+  public final static OlObjectClass olMeetingResponsePositive = new OlObjectClass(56);
+  public final static OlObjectClass olMeetingResponseTentative = new OlObjectClass(57);
+  public final static OlObjectClass olRecurrencePattern = new OlObjectClass(28);
+  public final static OlObjectClass olExceptions = new OlObjectClass(29);
+  public final static OlObjectClass olException = new OlObjectClass(30);
+  public final static OlObjectClass olAction = new OlObjectClass(32);
+  public final static OlObjectClass olActions = new OlObjectClass(33);
+  public final static OlObjectClass olExplorer = new OlObjectClass(34);
+  public final static OlObjectClass olInspector = new OlObjectClass(35);
+  public final static OlObjectClass olPages = new OlObjectClass(36);
+  public final static OlObjectClass olFormDescription = new OlObjectClass(37);
+  public final static OlObjectClass olUserProperties = new OlObjectClass(38);
+  public final static OlObjectClass olUserProperty = new OlObjectClass(39);
+  public final static OlObjectClass olContact = new OlObjectClass(40);
+  public final static OlObjectClass olDocument = new OlObjectClass(41);
+  public final static OlObjectClass olJournal = new OlObjectClass(42);
+  public final static OlObjectClass olMail = new OlObjectClass(43);
+  public final static OlObjectClass olNote = new OlObjectClass(44);
+  public final static OlObjectClass olPost = new OlObjectClass(45);
+  public final static OlObjectClass olReport = new OlObjectClass(46);
+  public final static OlObjectClass olRemote = new OlObjectClass(47);
+  public final static OlObjectClass olTask = new OlObjectClass(48);
+  public final static OlObjectClass olTaskRequest = new OlObjectClass(49);
+  public final static OlObjectClass olTaskRequestUpdate = new OlObjectClass(50);
+  public final static OlObjectClass olTaskRequestAccept = new OlObjectClass(51);
+  public final static OlObjectClass olTaskRequestDecline = new OlObjectClass(52);
+  public final static OlObjectClass olExplorers = new OlObjectClass(60);
+  public final static OlObjectClass olInspectors = new OlObjectClass(61);
+  public final static OlObjectClass olPanes = new OlObjectClass(62);
+  public final static OlObjectClass olOutlookBarPane = new OlObjectClass(63);
+  public final static OlObjectClass olOutlookBarStorage = new OlObjectClass(64);
+  public final static OlObjectClass olOutlookBarGroups = new OlObjectClass(65);
+  public final static OlObjectClass olOutlookBarGroup = new OlObjectClass(66);
+  public final static OlObjectClass olOutlookBarShortcuts = new OlObjectClass(67);
+  public final static OlObjectClass olOutlookBarShortcut = new OlObjectClass(68);
+  public final static OlObjectClass olDistributionList = new OlObjectClass(69);
+  public final static OlObjectClass olPropertyPageSite = new OlObjectClass(70);
+  public final static OlObjectClass olPropertyPages = new OlObjectClass(71);
+  public final static OlObjectClass olSyncObject = new OlObjectClass(72);
+  public final static OlObjectClass olSyncObjects = new OlObjectClass(73);
+  public final static OlObjectClass olSelection = new OlObjectClass(74);
+  public final static OlObjectClass olLink = new OlObjectClass(75);
+  public final static OlObjectClass olLinks = new OlObjectClass(76);
+  public final static OlObjectClass olSearch = new OlObjectClass(77);
+  public final static OlObjectClass olResults = new OlObjectClass(78);
+  public final static OlObjectClass olViews = new OlObjectClass(79);
+  public final static OlObjectClass olView = new OlObjectClass(80);
+  public final static OlObjectClass olItemProperties = new OlObjectClass(98);
+  public final static OlObjectClass olItemProperty = new OlObjectClass(99);
+  public final static OlObjectClass olReminders = new OlObjectClass(100);
+  public final static OlObjectClass olReminder = new OlObjectClass(101);
+  public final static OlObjectClass olConflict = new OlObjectClass(102);
+  public final static OlObjectClass olConflicts = new OlObjectClass(103);
+  public final static OlObjectClass olSharing = new OlObjectClass(104);
+  public final static OlObjectClass olAccount = new OlObjectClass(105);
+  public final static OlObjectClass olAccounts = new OlObjectClass(106);
+  public final static OlObjectClass olStore = new OlObjectClass(107);
+  public final static OlObjectClass olStores = new OlObjectClass(108);
+  public final static OlObjectClass olSelectNamesDialog = new OlObjectClass(109);
+  public final static OlObjectClass olExchangeUser = new OlObjectClass(110);
+  public final static OlObjectClass olExchangeDistributionList = new OlObjectClass(111);
+  public final static OlObjectClass olPropertyAccessor = new OlObjectClass(112);
+  public final static OlObjectClass olStorageItem = new OlObjectClass(113);
+  public final static OlObjectClass olRules = new OlObjectClass(114);
+  public final static OlObjectClass olRule = new OlObjectClass(115);
+  public final static OlObjectClass olRuleActions = new OlObjectClass(116);
+  public final static OlObjectClass olRuleAction = new OlObjectClass(117);
+  public final static OlObjectClass olMoveOrCopyRuleAction = new OlObjectClass(118);
+  public final static OlObjectClass olSendRuleAction = new OlObjectClass(119);
+  public final static OlObjectClass olTable = new OlObjectClass(120);
+  public final static OlObjectClass olRow = new OlObjectClass(121);
+  public final static OlObjectClass olAssignToCategoryRuleAction = new OlObjectClass(122);
+  public final static OlObjectClass olPlaySoundRuleAction = new OlObjectClass(123);
+  public final static OlObjectClass olMarkAsTaskRuleAction = new OlObjectClass(124);
+  public final static OlObjectClass olNewItemAlertRuleAction = new OlObjectClass(125);
+  public final static OlObjectClass olRuleConditions = new OlObjectClass(126);
+  public final static OlObjectClass olRuleCondition = new OlObjectClass(127);
+  public final static OlObjectClass olImportanceRuleCondition = new OlObjectClass(128);
+  public final static OlObjectClass olFormRegion = new OlObjectClass(129);
+  public final static OlObjectClass olCategoryRuleCondition = new OlObjectClass(130);
+  public final static OlObjectClass olFormNameRuleCondition = new OlObjectClass(131);
+  public final static OlObjectClass olFromRuleCondition = new OlObjectClass(132);
+  public final static OlObjectClass olSenderInAddressListRuleCondition = new OlObjectClass(133);
+  public final static OlObjectClass olTextRuleCondition = new OlObjectClass(134);
+  public final static OlObjectClass olAccountRuleCondition = new OlObjectClass(135);
+  public final static OlObjectClass olClassTableView = new OlObjectClass(136);
+  public final static OlObjectClass olClassIconView = new OlObjectClass(137);
+  public final static OlObjectClass olClassCardView = new OlObjectClass(138);
+  public final static OlObjectClass olClassCalendarView = new OlObjectClass(139);
+  public final static OlObjectClass olClassTimeLineView = new OlObjectClass(140);
+  public final static OlObjectClass olViewFields = new OlObjectClass(141);
+  public final static OlObjectClass olViewField = new OlObjectClass(142);
+  public final static OlObjectClass olOrderField = new OlObjectClass(144);
+  public final static OlObjectClass olOrderFields = new OlObjectClass(145);
+  public final static OlObjectClass olViewFont = new OlObjectClass(146);
+  public final static OlObjectClass olAutoFormatRule = new OlObjectClass(147);
+  public final static OlObjectClass olAutoFormatRules = new OlObjectClass(148);
+  public final static OlObjectClass olColumnFormat = new OlObjectClass(149);
+  public final static OlObjectClass olColumns = new OlObjectClass(150);
+  public final static OlObjectClass olCalendarSharing = new OlObjectClass(151);
+  public final static OlObjectClass olCategory = new OlObjectClass(152);
+  public final static OlObjectClass olCategories = new OlObjectClass(153);
+  public final static OlObjectClass olColumn = new OlObjectClass(154);
+  public final static OlObjectClass olClassNavigationPane = new OlObjectClass(155);
+  public final static OlObjectClass olNavigationModules = new OlObjectClass(156);
+  public final static OlObjectClass olNavigationModule = new OlObjectClass(157);
+  public final static OlObjectClass olMailModule = new OlObjectClass(158);
+  public final static OlObjectClass olCalendarModule = new OlObjectClass(159);
+  public final static OlObjectClass olContactsModule = new OlObjectClass(160);
+  public final static OlObjectClass olTasksModule = new OlObjectClass(161);
+  public final static OlObjectClass olJournalModule = new OlObjectClass(162);
+  public final static OlObjectClass olNotesModule = new OlObjectClass(163);
+  public final static OlObjectClass olNavigationGroups = new OlObjectClass(164);
+  public final static OlObjectClass olNavigationGroup = new OlObjectClass(165);
+  public final static OlObjectClass olNavigationFolders = new OlObjectClass(166);
+  public final static OlObjectClass olNavigationFolder = new OlObjectClass(167);
+  public final static OlObjectClass olClassBusinessCardView = new OlObjectClass(168);
+  public final static OlObjectClass olAttachmentSelection = new OlObjectClass(169);
+  public final static OlObjectClass olAddressRuleCondition = new OlObjectClass(170);
+  public final static OlObjectClass olUserDefinedProperty = new OlObjectClass(171);
+  public final static OlObjectClass olUserDefinedProperties = new OlObjectClass(172);
+  public final static OlObjectClass olFromRssFeedRuleCondition = new OlObjectClass(173);
+  public final static OlObjectClass olClassTimeZone = new OlObjectClass(174);
+  public final static OlObjectClass olClassTimeZones = new OlObjectClass(175);
+  public final static OlObjectClass olMobile = new OlObjectClass(176);
+  public final static OlObjectClass olSolutionsModule = new OlObjectClass(177);
+  public final static OlObjectClass olConversation = new OlObjectClass(178);
+  public final static OlObjectClass olSimpleItems = new OlObjectClass(179);
+  public final static OlObjectClass olOutspace = new OlObjectClass(180);
+  public final static OlObjectClass olMeetingForwardNotification = new OlObjectClass(181);
+  public final static OlObjectClass olConversationHeader = new OlObjectClass(182);
+  public final static OlObjectClass olClassPeopleView = new OlObjectClass(183);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olApplication = 0;
+  public final static int _olNamespace = 1;
+  public final static int _olFolder = 2;
+  public final static int _olRecipient = 4;
+  public final static int _olAttachment = 5;
+  public final static int _olAddressList = 7;
+  public final static int _olAddressEntry = 8;
+  public final static int _olFolders = 15;
+  public final static int _olItems = 16;
+  public final static int _olRecipients = 17;
+  public final static int _olAttachments = 18;
+  public final static int _olAddressLists = 20;
+  public final static int _olAddressEntries = 21;
+  public final static int _olAppointment = 26;
+  public final static int _olMeetingRequest = 53;
+  public final static int _olMeetingCancellation = 54;
+  public final static int _olMeetingResponseNegative = 55;
+  public final static int _olMeetingResponsePositive = 56;
+  public final static int _olMeetingResponseTentative = 57;
+  public final static int _olRecurrencePattern = 28;
+  public final static int _olExceptions = 29;
+  public final static int _olException = 30;
+  public final static int _olAction = 32;
+  public final static int _olActions = 33;
+  public final static int _olExplorer = 34;
+  public final static int _olInspector = 35;
+  public final static int _olPages = 36;
+  public final static int _olFormDescription = 37;
+  public final static int _olUserProperties = 38;
+  public final static int _olUserProperty = 39;
+  public final static int _olContact = 40;
+  public final static int _olDocument = 41;
+  public final static int _olJournal = 42;
+  public final static int _olMail = 43;
+  public final static int _olNote = 44;
+  public final static int _olPost = 45;
+  public final static int _olReport = 46;
+  public final static int _olRemote = 47;
+  public final static int _olTask = 48;
+  public final static int _olTaskRequest = 49;
+  public final static int _olTaskRequestUpdate = 50;
+  public final static int _olTaskRequestAccept = 51;
+  public final static int _olTaskRequestDecline = 52;
+  public final static int _olExplorers = 60;
+  public final static int _olInspectors = 61;
+  public final static int _olPanes = 62;
+  public final static int _olOutlookBarPane = 63;
+  public final static int _olOutlookBarStorage = 64;
+  public final static int _olOutlookBarGroups = 65;
+  public final static int _olOutlookBarGroup = 66;
+  public final static int _olOutlookBarShortcuts = 67;
+  public final static int _olOutlookBarShortcut = 68;
+  public final static int _olDistributionList = 69;
+  public final static int _olPropertyPageSite = 70;
+  public final static int _olPropertyPages = 71;
+  public final static int _olSyncObject = 72;
+  public final static int _olSyncObjects = 73;
+  public final static int _olSelection = 74;
+  public final static int _olLink = 75;
+  public final static int _olLinks = 76;
+  public final static int _olSearch = 77;
+  public final static int _olResults = 78;
+  public final static int _olViews = 79;
+  public final static int _olView = 80;
+  public final static int _olItemProperties = 98;
+  public final static int _olItemProperty = 99;
+  public final static int _olReminders = 100;
+  public final static int _olReminder = 101;
+  public final static int _olConflict = 102;
+  public final static int _olConflicts = 103;
+  public final static int _olSharing = 104;
+  public final static int _olAccount = 105;
+  public final static int _olAccounts = 106;
+  public final static int _olStore = 107;
+  public final static int _olStores = 108;
+  public final static int _olSelectNamesDialog = 109;
+  public final static int _olExchangeUser = 110;
+  public final static int _olExchangeDistributionList = 111;
+  public final static int _olPropertyAccessor = 112;
+  public final static int _olStorageItem = 113;
+  public final static int _olRules = 114;
+  public final static int _olRule = 115;
+  public final static int _olRuleActions = 116;
+  public final static int _olRuleAction = 117;
+  public final static int _olMoveOrCopyRuleAction = 118;
+  public final static int _olSendRuleAction = 119;
+  public final static int _olTable = 120;
+  public final static int _olRow = 121;
+  public final static int _olAssignToCategoryRuleAction = 122;
+  public final static int _olPlaySoundRuleAction = 123;
+  public final static int _olMarkAsTaskRuleAction = 124;
+  public final static int _olNewItemAlertRuleAction = 125;
+  public final static int _olRuleConditions = 126;
+  public final static int _olRuleCondition = 127;
+  public final static int _olImportanceRuleCondition = 128;
+  public final static int _olFormRegion = 129;
+  public final static int _olCategoryRuleCondition = 130;
+  public final static int _olFormNameRuleCondition = 131;
+  public final static int _olFromRuleCondition = 132;
+  public final static int _olSenderInAddressListRuleCondition = 133;
+  public final static int _olTextRuleCondition = 134;
+  public final static int _olAccountRuleCondition = 135;
+  public final static int _olClassTableView = 136;
+  public final static int _olClassIconView = 137;
+  public final static int _olClassCardView = 138;
+  public final static int _olClassCalendarView = 139;
+  public final static int _olClassTimeLineView = 140;
+  public final static int _olViewFields = 141;
+  public final static int _olViewField = 142;
+  public final static int _olOrderField = 144;
+  public final static int _olOrderFields = 145;
+  public final static int _olViewFont = 146;
+  public final static int _olAutoFormatRule = 147;
+  public final static int _olAutoFormatRules = 148;
+  public final static int _olColumnFormat = 149;
+  public final static int _olColumns = 150;
+  public final static int _olCalendarSharing = 151;
+  public final static int _olCategory = 152;
+  public final static int _olCategories = 153;
+  public final static int _olColumn = 154;
+  public final static int _olClassNavigationPane = 155;
+  public final static int _olNavigationModules = 156;
+  public final static int _olNavigationModule = 157;
+  public final static int _olMailModule = 158;
+  public final static int _olCalendarModule = 159;
+  public final static int _olContactsModule = 160;
+  public final static int _olTasksModule = 161;
+  public final static int _olJournalModule = 162;
+  public final static int _olNotesModule = 163;
+  public final static int _olNavigationGroups = 164;
+  public final static int _olNavigationGroup = 165;
+  public final static int _olNavigationFolders = 166;
+  public final static int _olNavigationFolder = 167;
+  public final static int _olClassBusinessCardView = 168;
+  public final static int _olAttachmentSelection = 169;
+  public final static int _olAddressRuleCondition = 170;
+  public final static int _olUserDefinedProperty = 171;
+  public final static int _olUserDefinedProperties = 172;
+  public final static int _olFromRssFeedRuleCondition = 173;
+  public final static int _olClassTimeZone = 174;
+  public final static int _olClassTimeZones = 175;
+  public final static int _olMobile = 176;
+  public final static int _olSolutionsModule = 177;
+  public final static int _olConversation = 178;
+  public final static int _olSimpleItems = 179;
+  public final static int _olOutspace = 180;
+  public final static int _olMeetingForwardNotification = 181;
+  public final static int _olConversationHeader = 182;
+  public final static int _olClassPeopleView = 183;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlObjectClass(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlObjectClass valueOf(int value) {
     switch(value) {
     case 0: return olApplication;
@@ -312,7 +470,7 @@ public enum OlObjectClass {
     case 181: return olMeetingForwardNotification;
     case 182: return olConversationHeader;
     case 183: return olClassPeopleView;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlObjectClass.class);
+    default: return new OlObjectClass(value);
     }
   }
 }

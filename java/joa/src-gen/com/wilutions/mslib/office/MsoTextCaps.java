@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoTextCaps {
-  msoCapsMixed(-2),
-  msoNoCaps(0),
-  msoSmallCaps(1),
-  msoAllCaps(2);
+public class MsoTextCaps {
 
+  // Typed constants
+  public final static MsoTextCaps msoCapsMixed = new MsoTextCaps(-2);
+  public final static MsoTextCaps msoNoCaps = new MsoTextCaps(0);
+  public final static MsoTextCaps msoSmallCaps = new MsoTextCaps(1);
+  public final static MsoTextCaps msoAllCaps = new MsoTextCaps(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoCapsMixed = -2;
+  public final static int _msoNoCaps = 0;
+  public final static int _msoSmallCaps = 1;
+  public final static int _msoAllCaps = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoTextCaps(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoTextCaps valueOf(int value) {
     switch(value) {
     case -2: return msoCapsMixed;
     case 0: return msoNoCaps;
     case 1: return msoSmallCaps;
     case 2: return msoAllCaps;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoTextCaps.class);
+    default: return new MsoTextCaps(value);
     }
   }
 }

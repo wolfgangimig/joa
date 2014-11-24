@@ -5,20 +5,20 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AF3-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.office.TextFrame2 {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(100)  public Float getMarginBottom() throws ComException {
     final Object obj = this._dispatchCall(100,"MarginBottom", DISPATCH_PROPERTYGET,null);
@@ -131,8 +131,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(112)  public com.wilutions.mslib.office.ThreeDFormat getThreeD() throws ComException {
     final Object obj = this._dispatchCall(112,"ThreeD", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ThreeDFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ThreeDFormatImpl.class);
   }
   @DeclDISPID(113)  public com.wilutions.mslib.office.MsoTriState getHasText() throws ComException {
     final Object obj = this._dispatchCall(113,"HasText", DISPATCH_PROPERTYGET,null);
@@ -142,20 +141,17 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(114)  public com.wilutions.mslib.office.TextRange2 getTextRange() throws ComException {
     final Object obj = this._dispatchCall(114,"TextRange", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TextRange2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
   @DeclDISPID(115)  public com.wilutions.mslib.office.TextColumn2 getColumn() throws ComException {
     final Object obj = this._dispatchCall(115,"Column", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TextColumn2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextColumn2Impl.class);
   }
   @DeclDISPID(116)  public com.wilutions.mslib.office.Ruler2 getRuler() throws ComException {
     final Object obj = this._dispatchCall(116,"Ruler", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.Ruler2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.Ruler2Impl.class);
   }
   @DeclDISPID(117)  public void DeleteText() throws ComException {
     this._dispatchCall(117,"DeleteText", DISPATCH_METHOD,null);

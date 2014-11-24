@@ -8,25 +8,49 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{593104F8-16BA-101B-989C-00006B82871A}")
-public enum fmMousePointer {
-  fmMousePointerDefault(0),
-  fmMousePointerArrow(1),
-  fmMousePointerCross(2),
-  fmMousePointerIBeam(3),
-  fmMousePointerSizeNESW(6),
-  fmMousePointerSizeNS(7),
-  fmMousePointerSizeNWSE(8),
-  fmMousePointerSizeWE(9),
-  fmMousePointerUpArrow(10),
-  fmMousePointerHourGlass(11),
-  fmMousePointerNoDrop(12),
-  fmMousePointerAppStarting(13),
-  fmMousePointerHelp(14),
-  fmMousePointerSizeAll(15),
-  fmMousePointerCustom(99);
+public class fmMousePointer {
 
+  // Typed constants
+  public final static fmMousePointer fmMousePointerDefault = new fmMousePointer(0);
+  public final static fmMousePointer fmMousePointerArrow = new fmMousePointer(1);
+  public final static fmMousePointer fmMousePointerCross = new fmMousePointer(2);
+  public final static fmMousePointer fmMousePointerIBeam = new fmMousePointer(3);
+  public final static fmMousePointer fmMousePointerSizeNESW = new fmMousePointer(6);
+  public final static fmMousePointer fmMousePointerSizeNS = new fmMousePointer(7);
+  public final static fmMousePointer fmMousePointerSizeNWSE = new fmMousePointer(8);
+  public final static fmMousePointer fmMousePointerSizeWE = new fmMousePointer(9);
+  public final static fmMousePointer fmMousePointerUpArrow = new fmMousePointer(10);
+  public final static fmMousePointer fmMousePointerHourGlass = new fmMousePointer(11);
+  public final static fmMousePointer fmMousePointerNoDrop = new fmMousePointer(12);
+  public final static fmMousePointer fmMousePointerAppStarting = new fmMousePointer(13);
+  public final static fmMousePointer fmMousePointerHelp = new fmMousePointer(14);
+  public final static fmMousePointer fmMousePointerSizeAll = new fmMousePointer(15);
+  public final static fmMousePointer fmMousePointerCustom = new fmMousePointer(99);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmMousePointerDefault = 0;
+  public final static int _fmMousePointerArrow = 1;
+  public final static int _fmMousePointerCross = 2;
+  public final static int _fmMousePointerIBeam = 3;
+  public final static int _fmMousePointerSizeNESW = 6;
+  public final static int _fmMousePointerSizeNS = 7;
+  public final static int _fmMousePointerSizeNWSE = 8;
+  public final static int _fmMousePointerSizeWE = 9;
+  public final static int _fmMousePointerUpArrow = 10;
+  public final static int _fmMousePointerHourGlass = 11;
+  public final static int _fmMousePointerNoDrop = 12;
+  public final static int _fmMousePointerAppStarting = 13;
+  public final static int _fmMousePointerHelp = 14;
+  public final static int _fmMousePointerSizeAll = 15;
+  public final static int _fmMousePointerCustom = 99;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmMousePointer(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmMousePointer valueOf(int value) {
     switch(value) {
     case 0: return fmMousePointerDefault;
@@ -44,7 +68,7 @@ public enum fmMousePointer {
     case 14: return fmMousePointerHelp;
     case 15: return fmMousePointerSizeAll;
     case 99: return fmMousePointerCustom;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmMousePointer.class);
+    default: return new fmMousePointer(value);
     }
   }
 }

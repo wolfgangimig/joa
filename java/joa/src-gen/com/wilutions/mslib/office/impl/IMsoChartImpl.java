@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E62-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.office.IMsoChart {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public void setHasTitle(Boolean value) throws ComException {
     assert(value != null);
@@ -22,8 +22,7 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1610743811)  public com.wilutions.mslib.office.IMsoChartTitle getChartTitle() throws ComException {
     final Object obj = this._dispatchCall(1610743811,"ChartTitle", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartTitleImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartTitleImpl.class);
   }
   @DeclDISPID(1610743812)  public Integer getDepthPercent() throws ComException {
     final Object obj = this._dispatchCall(1610743812,"DepthPercent", DISPATCH_PROPERTYGET,null);
@@ -154,18 +153,18 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(UserInterfaceOnly != null);
     this._dispatchCall(1610743839,"Protect", DISPATCH_METHOD,null,Password,DrawingObjects,Contents,Scenarios,UserInterfaceOnly);
   }
-  @DeclDISPID(8)  public Dispatch getChartGroups(Object pvarIndex, Object varIgallery) throws ComException {
+  @DeclDISPID(8)  public IDispatch getChartGroups(Object pvarIndex, Object varIgallery) throws ComException {
     assert(pvarIndex != null);
     assert(varIgallery != null);
     final Object obj = this._dispatchCall(8,"ChartGroups", DISPATCH_PROPERTYGET,null,pvarIndex,varIgallery);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(68)  public Dispatch SeriesCollection(Object Index) throws ComException {
+  @DeclDISPID(68)  public IDispatch SeriesCollection(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(68,"SeriesCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1922)  public void ApplyDataLabels(com.wilutions.mslib.office.XlDataLabelsType Type, Object IMsoLegendKey, Object AutoText, Object HasLeaderLines, Object ShowSeriesName, Object ShowCategoryName, Object ShowValue, Object ShowPercentage, Object ShowBubbleSize, Object Separator) throws ComException {
     assert(Type != null);
@@ -237,15 +236,14 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(84)  public com.wilutions.mslib.office.IMsoLegend getLegend() throws ComException {
     final Object obj = this._dispatchCall(84,"Legend", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoLegendImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoLegendImpl.class);
   }
-  @DeclDISPID(1610743861)  public Dispatch Axes(Object Type, com.wilutions.mslib.office.XlAxisGroup AxisGroup) throws ComException {
+  @DeclDISPID(1610743861)  public IDispatch Axes(Object Type, com.wilutions.mslib.office.XlAxisGroup AxisGroup) throws ComException {
     assert(Type != null);
     assert(AxisGroup != null);
     final Object obj = this._dispatchCall(1610743861,"Axes", DISPATCH_METHOD,null,Type,AxisGroup.value);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743862)  public void setHasAxis(Object axisType, Object AxisGroup, Object value3) throws ComException {
     assert(value3 != null);
@@ -264,20 +262,17 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(fBackWall != null);
     final Object obj = this._dispatchCall(1610743864,"Walls", DISPATCH_PROPERTYGET,null,fBackWall);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoWallsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoWallsImpl.class);
   }
   @DeclDISPID(1610743865)  public com.wilutions.mslib.office.IMsoFloor getFloor() throws ComException {
     final Object obj = this._dispatchCall(1610743865,"Floor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoFloorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoFloorImpl.class);
   }
   @DeclDISPID(1610743866)  public com.wilutions.mslib.office.IMsoPlotArea getPlotArea() throws ComException {
     final Object obj = this._dispatchCall(1610743866,"PlotArea", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoPlotAreaImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoPlotAreaImpl.class);
   }
   @DeclDISPID(92)  public Boolean getPlotVisibleOnly() throws ComException {
     final Object obj = this._dispatchCall(92,"PlotVisibleOnly", DISPATCH_PROPERTYGET,null);
@@ -291,8 +286,7 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1610743869)  public com.wilutions.mslib.office.IMsoChartArea getChartArea() throws ComException {
     final Object obj = this._dispatchCall(1610743869,"ChartArea", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartAreaImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartAreaImpl.class);
   }
   @DeclDISPID(1610743870)  public void AutoFormat(Integer rGallery, Object varFormat) throws ComException {
     assert(rGallery != null);
@@ -335,8 +329,7 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1610743876)  public com.wilutions.mslib.office.IMsoDataTable getDataTable() throws ComException {
     final Object obj = this._dispatchCall(1610743876,"DataTable", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoDataTableImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoDataTableImpl.class);
   }
   @DeclDISPID(1610743877)  public Object Evaluate(Object varName, Integer LocaleID, ByRef<Integer> ObjType) throws ComException {
     assert(varName != null);
@@ -389,14 +382,12 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(2377)  public com.wilutions.mslib.office.IMsoWalls getSideWall() throws ComException {
     final Object obj = this._dispatchCall(2377,"SideWall", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoWallsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoWallsImpl.class);
   }
   @DeclDISPID(2378)  public com.wilutions.mslib.office.IMsoWalls getBackWall() throws ComException {
     final Object obj = this._dispatchCall(2378,"BackWall", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoWallsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoWallsImpl.class);
   }
   @DeclDISPID(2465)  public Object getChartStyle() throws ComException {
     final Object obj = this._dispatchCall(2465,"ChartStyle", DISPATCH_PROPERTYGET,null);
@@ -410,10 +401,10 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(2466)  public void ClearToMatchStyle() throws ComException {
     this._dispatchCall(2466,"ClearToMatchStyle", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1814)  public Dispatch getPivotLayout() throws ComException {
+  @DeclDISPID(1814)  public IDispatch getPivotLayout() throws ComException {
     final Object obj = this._dispatchCall(1814,"PivotLayout", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743894)  public void RefreshPivotTable() throws ComException {
     this._dispatchCall(1610743894,"RefreshPivotTable", DISPATCH_METHOD,null);
@@ -432,10 +423,10 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(varChartType != null);
     this._dispatchCall(2468,"ApplyLayout", DISPATCH_METHOD,null,Layout,varChartType);
   }
-  @DeclDISPID(1610743898)  public Dispatch getSelection() throws ComException {
+  @DeclDISPID(1610743898)  public IDispatch getSelection() throws ComException {
     final Object obj = this._dispatchCall(1610743898,"Selection", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743899)  public void Refresh() throws ComException {
     this._dispatchCall(1610743899,"Refresh", DISPATCH_METHOD,null);
@@ -447,25 +438,22 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1610743901)  public com.wilutions.mslib.office.IMsoChartData getChartData() throws ComException {
     final Object obj = this._dispatchCall(1610743901,"ChartData", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartDataImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartDataImpl.class);
   }
   @DeclDISPID(1610743902)  public com.wilutions.mslib.office.IMsoChartFormat getFormat() throws ComException {
     final Object obj = this._dispatchCall(1610743902,"Format", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
   }
   @DeclDISPID(1610743903)  public com.wilutions.mslib.office.Shapes getShapes() throws ComException {
     final Object obj = this._dispatchCall(1610743903,"Shapes", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapesImpl.class);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);
@@ -537,11 +525,11 @@ public class IMsoChartImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(value != null);
     this._dispatchCall(1610743933,"ProtectChartSheetFormatting", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(236)  public Dispatch FullSeriesCollection(Object Index) throws ComException {
+  @DeclDISPID(236)  public IDispatch FullSeriesCollection(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(236,"FullSeriesCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(237)  public void setCategoryLabelLevel(com.wilutions.mslib.office.XlCategoryLabelLevel value) throws ComException {
     assert(value != null);

@@ -10,8 +10,7 @@ public class SignatureProviderImpl extends Dispatch implements com.wilutions.msl
     assert(XmlDsigStream != null);
     final Object obj = this._dispatchCall(1610743808,"GenerateSignatureLineImage", DISPATCH_METHOD,null,siglnimg.value,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL),XmlDsigStream);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(1610743809)  public void ShowSignatureSetup(Object ParentWindow, com.wilutions.mslib.office.SignatureSetup psigsetup) throws ComException {
     assert(ParentWindow != null);

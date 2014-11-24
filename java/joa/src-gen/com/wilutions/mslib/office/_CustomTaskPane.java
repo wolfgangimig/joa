@@ -9,11 +9,11 @@ import com.wilutions.com.*;
 @CoInterface(guid="{000C033B-0000-0000-C000-000000000046}")
 public interface _CustomTaskPane extends IDispatch {
   @DeclDISPID(0)  public String getTitle() throws ComException;
-  @DeclDISPID(1)  public Dispatch getApplication() throws ComException;
-  @DeclDISPID(2)  public Dispatch getWindow() throws ComException;
+  @DeclDISPID(1)  public IDispatch getApplication() throws ComException;
+  @DeclDISPID(2)  public IDispatch getWindow() throws ComException;
   @DeclDISPID(3)  public Boolean getVisible() throws ComException;
   @DeclDISPID(3)  public void setVisible(Boolean value) throws ComException;
-  @DeclDISPID(4)  public Dispatch getContentControl() throws ComException;
+  @DeclDISPID(4)  public IDispatch getContentControl() throws ComException;
   @DeclDISPID(5)  public Integer getHeight() throws ComException;
   @DeclDISPID(5)  public void setHeight(Integer value) throws ComException;
   @DeclDISPID(6)  public Integer getWidth() throws ComException;

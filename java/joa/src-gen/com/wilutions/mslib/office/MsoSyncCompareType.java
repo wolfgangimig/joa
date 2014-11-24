@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoSyncCompareType {
-  msoSyncCompareAndMerge(0),
-  msoSyncCompareSideBySide(1);
+public class MsoSyncCompareType {
 
+  // Typed constants
+  public final static MsoSyncCompareType msoSyncCompareAndMerge = new MsoSyncCompareType(0);
+  public final static MsoSyncCompareType msoSyncCompareSideBySide = new MsoSyncCompareType(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoSyncCompareAndMerge = 0;
+  public final static int _msoSyncCompareSideBySide = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoSyncCompareType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoSyncCompareType valueOf(int value) {
     switch(value) {
     case 0: return msoSyncCompareAndMerge;
     case 1: return msoSyncCompareSideBySide;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoSyncCompareType.class);
+    default: return new MsoSyncCompareType(value);
     }
   }
 }

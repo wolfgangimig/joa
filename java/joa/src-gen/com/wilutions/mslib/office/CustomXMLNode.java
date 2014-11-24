@@ -8,9 +8,9 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000CDB04-0000-0000-C000-000000000046}")
 public interface CustomXMLNode extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
-  @DeclDISPID(1610809344)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public CustomXMLNodes getAttributes() throws ComException;
   @DeclDISPID(1610809346)  public String getBaseName() throws ComException;
   @DeclDISPID(1610809347)  public CustomXMLNodes getChildNodes() throws ComException;
@@ -21,7 +21,7 @@ public interface CustomXMLNode extends IDispatch {
   @DeclDISPID(1610809352)  public MsoCustomXMLNodeType getNodeType() throws ComException;
   @DeclDISPID(1610809353)  public String getNodeValue() throws ComException;
   @DeclDISPID(1610809353)  public void setNodeValue(String value) throws ComException;
-  @DeclDISPID(1610809355)  public Dispatch getOwnerDocument() throws ComException;
+  @DeclDISPID(1610809355)  public IDispatch getOwnerDocument() throws ComException;
   @DeclDISPID(1610809356)  public CustomXMLPart getOwnerPart() throws ComException;
   @DeclDISPID(1610809357)  public CustomXMLNode getPreviousSibling() throws ComException;
   @DeclDISPID(1610809358)  public CustomXMLNode getParentNode() throws ComException;

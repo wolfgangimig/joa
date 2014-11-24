@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlSensitivity {
-  olNormal(0),
-  olPersonal(1),
-  olPrivate(2),
-  olConfidential(3);
+public class OlSensitivity {
 
+  // Typed constants
+  public final static OlSensitivity olNormal = new OlSensitivity(0);
+  public final static OlSensitivity olPersonal = new OlSensitivity(1);
+  public final static OlSensitivity olPrivate = new OlSensitivity(2);
+  public final static OlSensitivity olConfidential = new OlSensitivity(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olNormal = 0;
+  public final static int _olPersonal = 1;
+  public final static int _olPrivate = 2;
+  public final static int _olConfidential = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlSensitivity(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlSensitivity valueOf(int value) {
     switch(value) {
     case 0: return olNormal;
     case 1: return olPersonal;
     case 2: return olPrivate;
     case 3: return olConfidential;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlSensitivity.class);
+    default: return new OlSensitivity(value);
     }
   }
 }

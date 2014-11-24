@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{8B544093-ECC1-43E3-80EF-25D6FBCC7540}")
-public enum XlSizeRepresents {
-  xlSizeIsWidth(2),
-  xlSizeIsArea(1);
+public class XlSizeRepresents {
 
+  // Typed constants
+  public final static XlSizeRepresents xlSizeIsWidth = new XlSizeRepresents(2);
+  public final static XlSizeRepresents xlSizeIsArea = new XlSizeRepresents(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _xlSizeIsWidth = 2;
+  public final static int _xlSizeIsArea = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private XlSizeRepresents(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  XlSizeRepresents valueOf(int value) {
     switch(value) {
     case 2: return xlSizeIsWidth;
     case 1: return xlSizeIsArea;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + XlSizeRepresents.class);
+    default: return new XlSizeRepresents(value);
     }
   }
 }

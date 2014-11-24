@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{E1FC1640-70DF-101B-BC16-00AA003E3B29}")
-public enum fmBorders {
-  fmBordersNone(0),
-  fmBordersBox(1),
-  fmBordersLeft(2),
-  fmBordersTop(3);
+public class fmBorders {
 
+  // Typed constants
+  public final static fmBorders fmBordersNone = new fmBorders(0);
+  public final static fmBorders fmBordersBox = new fmBorders(1);
+  public final static fmBorders fmBordersLeft = new fmBorders(2);
+  public final static fmBorders fmBordersTop = new fmBorders(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmBordersNone = 0;
+  public final static int _fmBordersBox = 1;
+  public final static int _fmBordersLeft = 2;
+  public final static int _fmBordersTop = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmBorders(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmBorders valueOf(int value) {
     switch(value) {
     case 0: return fmBordersNone;
     case 1: return fmBordersBox;
     case 2: return fmBordersLeft;
     case 3: return fmBordersTop;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmBorders.class);
+    default: return new fmBorders(value);
     }
   }
 }

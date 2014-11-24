@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{2DF8D04E-5BFA-101B-BDE5-00AA0044DE52}")
 public interface DocumentProperty extends IDispatch {
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public void Delete() throws ComException;
   @DeclDISPID(3)  public String getName(Integer lcid) throws ComException;
   @DeclDISPID(3)  public void setName(Integer lcid, String pbstrRetVal) throws ComException;
@@ -20,6 +20,6 @@ public interface DocumentProperty extends IDispatch {
   @DeclDISPID(6)  public void setLinkToContent(Boolean pfLinkRetVal) throws ComException;
   @DeclDISPID(7)  public String getLinkSource() throws ComException;
   @DeclDISPID(7)  public void setLinkSource(String pbstrSourceRetVal) throws ComException;
-  @DeclDISPID(1610743820)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743820)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743821)  public Integer getCreator() throws ComException;
 }

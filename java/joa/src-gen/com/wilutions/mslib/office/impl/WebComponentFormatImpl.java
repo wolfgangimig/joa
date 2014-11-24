@@ -5,15 +5,15 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B4869-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class WebComponentFormatImpl extends Dispatch implements com.wilutions.mslib.office.WebComponentFormat {
-  @DeclDISPID(1)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(2)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(2)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(2,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(3)  public String getURL() throws ComException {
     final Object obj = this._dispatchCall(3,"URL", DISPATCH_PROPERTYGET,null);

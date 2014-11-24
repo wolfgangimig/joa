@@ -8,8 +8,7 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(80)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(80,"Count", DISPATCH_PROPERTYGET,null);
@@ -36,8 +34,7 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(95)  public com.wilutions.mslib.outlook.AddressEntry Add(String Type, Object Name, Object Address) throws ComException {
     assert(Type != null);
@@ -45,32 +42,27 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
     assert(Address != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Type,Name,Address);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(86)  public com.wilutions.mslib.outlook.AddressEntry GetFirst() throws ComException {
     final Object obj = this._dispatchCall(86,"GetFirst", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(88)  public com.wilutions.mslib.outlook.AddressEntry GetLast() throws ComException {
     final Object obj = this._dispatchCall(88,"GetLast", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(87)  public com.wilutions.mslib.outlook.AddressEntry GetNext() throws ComException {
     final Object obj = this._dispatchCall(87,"GetNext", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(89)  public com.wilutions.mslib.outlook.AddressEntry GetPrevious() throws ComException {
     final Object obj = this._dispatchCall(89,"GetPrevious", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(97)  public void Sort(Object Property, Object Order) throws ComException {
     assert(Property != null);

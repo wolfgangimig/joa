@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoArrowheadLength {
-  msoArrowheadLengthMixed(-2),
-  msoArrowheadShort(1),
-  msoArrowheadLengthMedium(2),
-  msoArrowheadLong(3);
+public class MsoArrowheadLength {
 
+  // Typed constants
+  public final static MsoArrowheadLength msoArrowheadLengthMixed = new MsoArrowheadLength(-2);
+  public final static MsoArrowheadLength msoArrowheadShort = new MsoArrowheadLength(1);
+  public final static MsoArrowheadLength msoArrowheadLengthMedium = new MsoArrowheadLength(2);
+  public final static MsoArrowheadLength msoArrowheadLong = new MsoArrowheadLength(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoArrowheadLengthMixed = -2;
+  public final static int _msoArrowheadShort = 1;
+  public final static int _msoArrowheadLengthMedium = 2;
+  public final static int _msoArrowheadLong = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoArrowheadLength(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoArrowheadLength valueOf(int value) {
     switch(value) {
     case -2: return msoArrowheadLengthMixed;
     case 1: return msoArrowheadShort;
     case 2: return msoArrowheadLengthMedium;
     case 3: return msoArrowheadLong;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoArrowheadLength.class);
+    default: return new MsoArrowheadLength(value);
     }
   }
 }

@@ -11,7 +11,7 @@ public interface _JournalItem extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(63511)  public Actions getActions() throws ComException;
   @DeclDISPID(63509)  public Attachments getAttachments() throws ComException;
   @DeclDISPID(34101)  public String getBillingInformation() throws ComException;
@@ -49,10 +49,10 @@ public interface _JournalItem extends IDispatch {
   @DeclDISPID(61468)  public void setUnRead(Boolean value) throws ComException;
   @DeclDISPID(63510)  public UserProperties getUserProperties() throws ComException;
   @DeclDISPID(61475)  public void Close(OlInspectorClose SaveMode) throws ComException;
-  @DeclDISPID(61490)  public Dispatch Copy() throws ComException;
+  @DeclDISPID(61490)  public IDispatch Copy() throws ComException;
   @DeclDISPID(61514)  public void Delete() throws ComException;
   @DeclDISPID(61606)  public void Display(Object Modal) throws ComException;
-  @DeclDISPID(61492)  public Dispatch Move(MAPIFolder DestFldr) throws ComException;
+  @DeclDISPID(61492)  public IDispatch Move(MAPIFolder DestFldr) throws ComException;
   @DeclDISPID(61491)  public void PrintOut() throws ComException;
   @DeclDISPID(61512)  public void Save() throws ComException;
   @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException;

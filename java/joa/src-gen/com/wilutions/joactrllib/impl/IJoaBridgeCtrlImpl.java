@@ -12,7 +12,7 @@ public class IJoaBridgeCtrlImpl extends Dispatch implements com.wilutions.joactr
     return new com.wilutions.joactrllib.LONG_PTR(als);
   }
   public IJoaBridgeCtrlImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{8B43F7ED-C4B5-4DBA-B174-E8D61C449B08}");
   }
   protected IJoaBridgeCtrlImpl(long ndisp) {
     super(ndisp);

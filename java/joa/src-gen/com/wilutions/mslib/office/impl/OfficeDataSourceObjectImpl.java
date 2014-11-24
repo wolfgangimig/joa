@@ -32,20 +32,20 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     assert(value != null);
     this._dispatchCall(3,"DataSource", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(4)  public Dispatch getColumns() throws ComException {
+  @DeclDISPID(4)  public IDispatch getColumns() throws ComException {
     final Object obj = this._dispatchCall(4,"Columns", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(5)  public Integer getRowCount() throws ComException {
     final Object obj = this._dispatchCall(5,"RowCount", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(6)  public Dispatch getFilters() throws ComException {
+  @DeclDISPID(6)  public IDispatch getFilters() throws ComException {
     final Object obj = this._dispatchCall(6,"Filters", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743817)  public Integer Move(com.wilutions.mslib.office.MsoMoveRow MsoMoveRow, Integer RowNbr) throws ComException {
     assert(MsoMoveRow != null);

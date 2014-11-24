@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlMarkInterval {
-  olMarkToday(0),
-  olMarkTomorrow(1),
-  olMarkThisWeek(2),
-  olMarkNextWeek(3),
-  olMarkNoDate(4),
-  olMarkComplete(5);
+public class OlMarkInterval {
 
+  // Typed constants
+  public final static OlMarkInterval olMarkToday = new OlMarkInterval(0);
+  public final static OlMarkInterval olMarkTomorrow = new OlMarkInterval(1);
+  public final static OlMarkInterval olMarkThisWeek = new OlMarkInterval(2);
+  public final static OlMarkInterval olMarkNextWeek = new OlMarkInterval(3);
+  public final static OlMarkInterval olMarkNoDate = new OlMarkInterval(4);
+  public final static OlMarkInterval olMarkComplete = new OlMarkInterval(5);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olMarkToday = 0;
+  public final static int _olMarkTomorrow = 1;
+  public final static int _olMarkThisWeek = 2;
+  public final static int _olMarkNextWeek = 3;
+  public final static int _olMarkNoDate = 4;
+  public final static int _olMarkComplete = 5;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlMarkInterval(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlMarkInterval valueOf(int value) {
     switch(value) {
     case 0: return olMarkToday;
@@ -26,7 +41,7 @@ public enum OlMarkInterval {
     case 3: return olMarkNextWeek;
     case 4: return olMarkNoDate;
     case 5: return olMarkComplete;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlMarkInterval.class);
+    default: return new OlMarkInterval(value);
     }
   }
 }

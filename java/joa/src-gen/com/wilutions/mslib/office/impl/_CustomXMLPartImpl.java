@@ -5,26 +5,25 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B426E-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.office._CustomXMLPart {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809344)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1610809344,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610809345)  public com.wilutions.mslib.office.CustomXMLNode getDocumentElement() throws ComException {
     final Object obj = this._dispatchCall(1610809345,"DocumentElement", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CustomXMLNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLNodeImpl.class);
   }
   @DeclDISPID(1610809346)  public String getId() throws ComException {
     final Object obj = this._dispatchCall(1610809346,"Id", DISPATCH_PROPERTYGET,null);
@@ -40,7 +39,7 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
     final Object obj = this._dispatchCall(1610809348,"SchemaCollection", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.CustomXMLSchemaCollection.class);
+    return disp.as(com.wilutions.mslib.office.CustomXMLSchemaCollection.class);
   }
   @DeclDISPID(1610809348)  public void setSchemaCollection(com.wilutions.mslib.office.CustomXMLSchemaCollection value) throws ComException {
     this._dispatchCall(1610809348,"SchemaCollection", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -48,8 +47,7 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(1610809350)  public com.wilutions.mslib.office.CustomXMLPrefixMappings getNamespaceManager() throws ComException {
     final Object obj = this._dispatchCall(1610809350,"NamespaceManager", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CustomXMLPrefixMappingsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLPrefixMappingsImpl.class);
   }
   @DeclDISPID(1610809351)  public String getXML() throws ComException {
     final Object obj = this._dispatchCall(1610809351,"XML", DISPATCH_PROPERTYGET,null);
@@ -82,21 +80,18 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
     assert(XPath != null);
     final Object obj = this._dispatchCall(1610809356,"SelectNodes", DISPATCH_METHOD,null,XPath);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CustomXMLNodesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLNodesImpl.class);
   }
   @DeclDISPID(1610809357)  public com.wilutions.mslib.office.CustomXMLNode SelectSingleNode(String XPath) throws ComException {
     assert(XPath != null);
     final Object obj = this._dispatchCall(1610809357,"SelectSingleNode", DISPATCH_METHOD,null,XPath);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CustomXMLNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLNodeImpl.class);
   }
   @DeclDISPID(1610809358)  public com.wilutions.mslib.office.CustomXMLValidationErrors getErrors() throws ComException {
     final Object obj = this._dispatchCall(1610809358,"Errors", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CustomXMLValidationErrorsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLValidationErrorsImpl.class);
   }
   @DeclDISPID(1610809359)  public Boolean getBuiltIn() throws ComException {
     final Object obj = this._dispatchCall(1610809359,"BuiltIn", DISPATCH_PROPERTYGET,null);

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1709-0000-0000-C000-000000000046}")
 public interface IMsoChart extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610743809)  public void setHasTitle(Boolean value) throws ComException;
   @DeclDISPID(1610743809)  public Boolean getHasTitle() throws ComException;
   @DeclDISPID(1610743811)  public IMsoChartTitle getChartTitle() throws ComException;
@@ -40,8 +40,8 @@ public interface IMsoChart extends IDispatch {
   @DeclDISPID(1610743836)  public Boolean getProtectChartObjects() throws ComException;
   @DeclDISPID(1610743838)  public void UnProtect(Object Password) throws ComException;
   @DeclDISPID(1610743839)  public void Protect(Object Password, Object DrawingObjects, Object Contents, Object Scenarios, Object UserInterfaceOnly) throws ComException;
-  @DeclDISPID(8)  public Dispatch getChartGroups(Object pvarIndex, Object varIgallery) throws ComException;
-  @DeclDISPID(68)  public Dispatch SeriesCollection(Object Index) throws ComException;
+  @DeclDISPID(8)  public IDispatch getChartGroups(Object pvarIndex, Object varIgallery) throws ComException;
+  @DeclDISPID(68)  public IDispatch SeriesCollection(Object Index) throws ComException;
   @DeclDISPID(1922)  public void ApplyDataLabels(XlDataLabelsType Type, Object IMsoLegendKey, Object AutoText, Object HasLeaderLines, Object ShowSeriesName, Object ShowCategoryName, Object ShowValue, Object ShowPercentage, Object ShowBubbleSize, Object Separator) throws ComException;
   @DeclDISPID(1400)  public XlChartType getChartType() throws ComException;
   @DeclDISPID(1400)  public void setChartType(XlChartType value) throws ComException;
@@ -55,7 +55,7 @@ public interface IMsoChart extends IDispatch {
   @DeclDISPID(53)  public Boolean getHasLegend() throws ComException;
   @DeclDISPID(53)  public void setHasLegend(Boolean value) throws ComException;
   @DeclDISPID(84)  public IMsoLegend getLegend() throws ComException;
-  @DeclDISPID(1610743861)  public Dispatch Axes(Object Type, XlAxisGroup AxisGroup) throws ComException;
+  @DeclDISPID(1610743861)  public IDispatch Axes(Object Type, XlAxisGroup AxisGroup) throws ComException;
   @DeclDISPID(1610743862)  public void setHasAxis(Object axisType, Object AxisGroup, Object value3) throws ComException;
   @DeclDISPID(1610743862)  public Object getHasAxis(Object axisType, Object AxisGroup) throws ComException;
   @DeclDISPID(1610743864)  public IMsoWalls getWalls(Boolean fBackWall) throws ComException;
@@ -85,18 +85,18 @@ public interface IMsoChart extends IDispatch {
   @DeclDISPID(2465)  public Object getChartStyle() throws ComException;
   @DeclDISPID(2465)  public void setChartStyle(Object value) throws ComException;
   @DeclDISPID(2466)  public void ClearToMatchStyle() throws ComException;
-  @DeclDISPID(1814)  public Dispatch getPivotLayout() throws ComException;
+  @DeclDISPID(1814)  public IDispatch getPivotLayout() throws ComException;
   @DeclDISPID(1610743894)  public void RefreshPivotTable() throws ComException;
   @DeclDISPID(1610743895)  public void setShowDataLabelsOverMaximum(Boolean value) throws ComException;
   @DeclDISPID(1610743895)  public Boolean getShowDataLabelsOverMaximum() throws ComException;
   @DeclDISPID(2468)  public void ApplyLayout(Integer Layout, Object varChartType) throws ComException;
-  @DeclDISPID(1610743898)  public Dispatch getSelection() throws ComException;
+  @DeclDISPID(1610743898)  public IDispatch getSelection() throws ComException;
   @DeclDISPID(1610743899)  public void Refresh() throws ComException;
   @DeclDISPID(1610743900)  public void SetElement(MsoChartElementType RHS) throws ComException;
   @DeclDISPID(1610743901)  public IMsoChartData getChartData() throws ComException;
   @DeclDISPID(1610743902)  public IMsoChartFormat getFormat() throws ComException;
   @DeclDISPID(1610743903)  public Shapes getShapes() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(117)  public Object Delete() throws ComException;
   @DeclDISPID(551)  public Object Copy() throws ComException;
@@ -112,7 +112,7 @@ public interface IMsoChart extends IDispatch {
   @DeclDISPID(1610743931)  public Boolean getShowAllFieldButtons() throws ComException;
   @DeclDISPID(1610743931)  public void setShowAllFieldButtons(Boolean value) throws ComException;
   @DeclDISPID(1610743933)  public void setProtectChartSheetFormatting(Boolean value) throws ComException;
-  @DeclDISPID(236)  public Dispatch FullSeriesCollection(Object Index) throws ComException;
+  @DeclDISPID(236)  public IDispatch FullSeriesCollection(Object Index) throws ComException;
   @DeclDISPID(237)  public void setCategoryLabelLevel(XlCategoryLabelLevel value) throws ComException;
   @DeclDISPID(237)  public XlCategoryLabelLevel getCategoryLabelLevel() throws ComException;
   @DeclDISPID(238)  public void setSeriesNameLevel(XlSeriesNameLevel value) throws ComException;

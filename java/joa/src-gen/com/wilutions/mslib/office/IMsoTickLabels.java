@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1726-0000-0000-C000-000000000046}")
 public interface IMsoTickLabels extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610743809)  public Object Delete() throws ComException;
   @DeclDISPID(1610743810)  public ChartFont getFont() throws ComException;
   @DeclDISPID(1610743811)  public String getName() throws ComException;
@@ -33,6 +33,6 @@ public interface IMsoTickLabels extends IDispatch {
   @DeclDISPID(1610743830)  public Boolean getMultiLevel() throws ComException;
   @DeclDISPID(1610743830)  public void setMultiLevel(Boolean value) throws ComException;
   @DeclDISPID(1610743832)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
 }

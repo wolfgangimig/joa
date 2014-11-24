@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{25B06F72-02C5-4AF8-8366-28C2C65CB035}")
-public enum OlDragBehavior {
-  olDragBehaviorDisabled(0),
-  olDragBehaviorEnabled(1);
+public class OlDragBehavior {
 
+  // Typed constants
+  public final static OlDragBehavior olDragBehaviorDisabled = new OlDragBehavior(0);
+  public final static OlDragBehavior olDragBehaviorEnabled = new OlDragBehavior(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olDragBehaviorDisabled = 0;
+  public final static int _olDragBehaviorEnabled = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlDragBehavior(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlDragBehavior valueOf(int value) {
     switch(value) {
     case 0: return olDragBehaviorDisabled;
     case 1: return olDragBehaviorEnabled;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlDragBehavior.class);
+    default: return new OlDragBehavior(value);
     }
   }
 }

@@ -8,9 +8,9 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{0006300E-0000-0000-C000-000000000046}")
 public interface ApplicationEvents_10 extends IDispatch {
-  @DeclDISPID(61442)  public void onItemSend(Dispatch Item, ByRef<Boolean> Cancel) throws ComException;
+  @DeclDISPID(61442)  public void onItemSend(IDispatch Item, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(61443)  public void onNewMail() throws ComException;
-  @DeclDISPID(61444)  public void onReminder(Dispatch Item) throws ComException;
+  @DeclDISPID(61444)  public void onReminder(IDispatch Item) throws ComException;
   @DeclDISPID(61445)  public void onOptionsPagesAdd(PropertyPages Pages) throws ComException;
   @DeclDISPID(61446)  public void onStartup() throws ComException;
   @DeclDISPID(61447)  public void onQuit() throws ComException;

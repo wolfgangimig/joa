@@ -48,4 +48,5 @@ public class DispatchImpl implements IDispatch {
 	public String toString() {
 		return "[DispatchImpl " + Long.toHexString(nptr) + "]";
 	}
+
 }

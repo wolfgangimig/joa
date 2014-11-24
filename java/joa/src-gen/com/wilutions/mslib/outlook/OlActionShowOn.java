@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlActionShowOn {
-  olDontShow(0),
-  olMenu(1),
-  olMenuAndToolbar(2);
+public class OlActionShowOn {
 
+  // Typed constants
+  public final static OlActionShowOn olDontShow = new OlActionShowOn(0);
+  public final static OlActionShowOn olMenu = new OlActionShowOn(1);
+  public final static OlActionShowOn olMenuAndToolbar = new OlActionShowOn(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olDontShow = 0;
+  public final static int _olMenu = 1;
+  public final static int _olMenuAndToolbar = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlActionShowOn(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlActionShowOn valueOf(int value) {
     switch(value) {
     case 0: return olDontShow;
     case 1: return olMenu;
     case 2: return olMenuAndToolbar;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlActionShowOn.class);
+    default: return new OlActionShowOn(value);
     }
   }
 }

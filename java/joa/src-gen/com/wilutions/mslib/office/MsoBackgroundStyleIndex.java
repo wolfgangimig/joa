@@ -8,24 +8,47 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoBackgroundStyleIndex {
-  msoBackgroundStyleMixed(-2),
-  msoBackgroundStyleNotAPreset(0),
-  msoBackgroundStylePreset1(1),
-  msoBackgroundStylePreset2(2),
-  msoBackgroundStylePreset3(3),
-  msoBackgroundStylePreset4(4),
-  msoBackgroundStylePreset5(5),
-  msoBackgroundStylePreset6(6),
-  msoBackgroundStylePreset7(7),
-  msoBackgroundStylePreset8(8),
-  msoBackgroundStylePreset9(9),
-  msoBackgroundStylePreset10(10),
-  msoBackgroundStylePreset11(11),
-  msoBackgroundStylePreset12(12);
+public class MsoBackgroundStyleIndex {
 
+  // Typed constants
+  public final static MsoBackgroundStyleIndex msoBackgroundStyleMixed = new MsoBackgroundStyleIndex(-2);
+  public final static MsoBackgroundStyleIndex msoBackgroundStyleNotAPreset = new MsoBackgroundStyleIndex(0);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset1 = new MsoBackgroundStyleIndex(1);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset2 = new MsoBackgroundStyleIndex(2);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset3 = new MsoBackgroundStyleIndex(3);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset4 = new MsoBackgroundStyleIndex(4);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset5 = new MsoBackgroundStyleIndex(5);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset6 = new MsoBackgroundStyleIndex(6);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset7 = new MsoBackgroundStyleIndex(7);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset8 = new MsoBackgroundStyleIndex(8);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset9 = new MsoBackgroundStyleIndex(9);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset10 = new MsoBackgroundStyleIndex(10);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset11 = new MsoBackgroundStyleIndex(11);
+  public final static MsoBackgroundStyleIndex msoBackgroundStylePreset12 = new MsoBackgroundStyleIndex(12);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoBackgroundStyleMixed = -2;
+  public final static int _msoBackgroundStyleNotAPreset = 0;
+  public final static int _msoBackgroundStylePreset1 = 1;
+  public final static int _msoBackgroundStylePreset2 = 2;
+  public final static int _msoBackgroundStylePreset3 = 3;
+  public final static int _msoBackgroundStylePreset4 = 4;
+  public final static int _msoBackgroundStylePreset5 = 5;
+  public final static int _msoBackgroundStylePreset6 = 6;
+  public final static int _msoBackgroundStylePreset7 = 7;
+  public final static int _msoBackgroundStylePreset8 = 8;
+  public final static int _msoBackgroundStylePreset9 = 9;
+  public final static int _msoBackgroundStylePreset10 = 10;
+  public final static int _msoBackgroundStylePreset11 = 11;
+  public final static int _msoBackgroundStylePreset12 = 12;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoBackgroundStyleIndex(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoBackgroundStyleIndex valueOf(int value) {
     switch(value) {
     case -2: return msoBackgroundStyleMixed;
@@ -42,7 +65,7 @@ public enum MsoBackgroundStyleIndex {
     case 10: return msoBackgroundStylePreset10;
     case 11: return msoBackgroundStylePreset11;
     case 12: return msoBackgroundStylePreset12;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoBackgroundStyleIndex.class);
+    default: return new MsoBackgroundStyleIndex(value);
     }
   }
 }

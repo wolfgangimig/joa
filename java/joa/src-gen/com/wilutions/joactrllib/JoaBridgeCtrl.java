@@ -15,7 +15,7 @@ public class JoaBridgeCtrl extends Dispatch implements IJoaBridgeCtrl {
     return new LONG_PTR(als);
   }
   public JoaBridgeCtrl() throws ComException {
-    super("{246D42EA-0513-447B-B7E6-86FE0400B3EA}");
+    super("{246D42EA-0513-447B-B7E6-86FE0400B3EA}", "{8B43F7ED-C4B5-4DBA-B174-E8D61C449B08}");
   }
   protected JoaBridgeCtrl(long ndisp) {
     super(ndisp);

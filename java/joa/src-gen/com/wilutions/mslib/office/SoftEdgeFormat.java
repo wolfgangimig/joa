@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C03BC-0000-0000-C000-000000000046}")
 public interface SoftEdgeFormat extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public MsoSoftEdgeType getType() throws ComException;
   @DeclDISPID(1)  public void setType(MsoSoftEdgeType value) throws ComException;

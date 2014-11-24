@@ -20,10 +20,10 @@ public class WebComponentWindowExternalImpl extends Dispatch implements com.wilu
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(4)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(4,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(5)  public void CloseWindow() throws ComException {
     this._dispatchCall(5,"CloseWindow", DISPATCH_METHOD,null);
@@ -31,8 +31,7 @@ public class WebComponentWindowExternalImpl extends Dispatch implements com.wilu
   @DeclDISPID(6)  public com.wilutions.mslib.office.WebComponent getWebComponent() throws ComException {
     final Object obj = this._dispatchCall(6,"WebComponent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.WebComponentImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.WebComponentImpl.class);
   }
   public WebComponentWindowExternalImpl(String progId) throws ComException {
     super(progId, "{000CD101-0000-0000-C000-000000000046}");

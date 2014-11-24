@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C3689F20-C231-11CE-A30C-00AA004A3D3C}")
-public enum fmRepeatDirection {
-  _fmRepeatDirectionHorizontal(0),
-  _fmRepeatDirectionVertical(1);
+public class fmRepeatDirection {
 
+  // Typed constants
+  public final static fmRepeatDirection _fmRepeatDirectionHorizontal = new fmRepeatDirection(0);
+  public final static fmRepeatDirection _fmRepeatDirectionVertical = new fmRepeatDirection(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int __fmRepeatDirectionHorizontal = 0;
+  public final static int __fmRepeatDirectionVertical = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmRepeatDirection(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmRepeatDirection valueOf(int value) {
     switch(value) {
     case 0: return _fmRepeatDirectionHorizontal;
     case 1: return _fmRepeatDirectionVertical;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmRepeatDirection.class);
+    default: return new fmRepeatDirection(value);
     }
   }
 }

@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E76-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ChartColorFormatImpl extends Dispatch implements com.wilutions.mslib.office.ChartColorFormat {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1646)  public Integer getSchemeColor() throws ComException {
     final Object obj = this._dispatchCall(1646,"SchemeColor", DISPATCH_PROPERTYGET,null);
@@ -38,10 +38,10 @@ public class ChartColorFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);

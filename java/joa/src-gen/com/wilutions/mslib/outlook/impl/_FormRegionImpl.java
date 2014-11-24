@@ -8,8 +8,7 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,23 +18,22 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64312)  public Boolean getIsExpanded() throws ComException {
     final Object obj = this._dispatchCall(64312,"IsExpanded", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64313)  public Dispatch getForm() throws ComException {
+  @DeclDISPID(64313)  public IDispatch getForm() throws ComException {
     final Object obj = this._dispatchCall(64313,"Form", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64309)  public String getDetail() throws ComException {
     final Object obj = this._dispatchCall(64309,"Detail", DISPATCH_PROPERTYGET,null);
@@ -46,16 +44,15 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
     assert(value != null);
     this._dispatchCall(64309,"Detail", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64096)  public Dispatch getItem() throws ComException {
+  @DeclDISPID(64096)  public IDispatch getItem() throws ComException {
     final Object obj = this._dispatchCall(64096,"Item", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(61502)  public com.wilutions.mslib.outlook._Inspector getInspector() throws ComException {
     final Object obj = this._dispatchCall(61502,"Inspector", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._InspectorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }
   @DeclDISPID(64308)  public com.wilutions.mslib.outlook.OlFormRegionMode getFormRegionMode() throws ComException {
     final Object obj = this._dispatchCall(64308,"FormRegionMode", DISPATCH_PROPERTYGET,null);
@@ -80,7 +77,7 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64201)  public void SetControlItemProperty(Dispatch Control, String PropertyName) throws ComException {
+  @DeclDISPID(64201)  public void SetControlItemProperty(IDispatch Control, String PropertyName) throws ComException {
     assert(PropertyName != null);
     this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,(Control!=null?Control:Dispatch.NULL),PropertyName);
   }

@@ -12,7 +12,7 @@ public interface Tabs extends IDispatch {
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743810)  public Tab _GetItemByIndex(Integer lIndex) throws ComException;
   @DeclDISPID(1610743811)  public Tab _GetItemByName(String bstr) throws ComException;
-  @DeclDISPID(0)  public Dispatch Item(Object varg) throws ComException;
+  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException;
   @DeclDISPID(1610743813)  public Object Enum() throws ComException;
   @DeclDISPID(66)  public Tab Add(Object bstrName, Object bstrCaption, Object lIndex) throws ComException;
   @DeclDISPID(1610743815)  public Tab _Add(String bstrName, String bstrCaption) throws ComException;

@@ -148,12 +148,12 @@ public class JoaBridgeDialog extends Dispatch implements IJoaBridgeDialog {
     assert(hwndOwner != null);
     this._dispatchCall(25,"ShowModal2", DISPATCH_METHOD,null,hwndOwner);
   }
-  @DeclDISPID(26)  public void ShowModal3(Dispatch dispOwner) throws ComException {
+  @DeclDISPID(26)  public void ShowModal3(IDispatch dispOwner) throws ComException {
     assert(dispOwner != null);
     this._dispatchCall(26,"ShowModal3", DISPATCH_METHOD,null,dispOwner);
   }
   public JoaBridgeDialog() throws ComException {
-    super("{5995DE21-CBAA-4E8B-8EC3-FB779A1D6390}");
+    super("{5995DE21-CBAA-4E8B-8EC3-FB779A1D6390}", "{092F3085-8620-4218-A38D-7F223DA710D9}");
   }
   protected JoaBridgeDialog(long ndisp) {
     super(ndisp);

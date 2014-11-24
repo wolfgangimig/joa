@@ -8,8 +8,7 @@ public class _NavigationGroupImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _NavigationGroupImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64448)  public com.wilutions.mslib.outlook.OlGroupType getGroupType() throws ComException {
     final Object obj = this._dispatchCall(64448,"GroupType", DISPATCH_PROPERTYGET,null);
@@ -36,7 +34,7 @@ public class _NavigationGroupImpl extends Dispatch implements com.wilutions.msli
     final Object obj = this._dispatchCall(64449,"NavigationFolders", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationFolders.class);
+    return disp.as(com.wilutions.mslib.outlook.NavigationFolders.class);
   }
   @DeclDISPID(8450)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(8450,"Name", DISPATCH_PROPERTYGET,null);

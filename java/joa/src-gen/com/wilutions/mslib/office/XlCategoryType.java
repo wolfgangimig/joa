@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{78F07E6C-4BC5-41B8-8FE1-F1643184BA3F}")
-public enum XlCategoryType {
-  xlCategoryScale(2),
-  xlTimeScale(3),
-  xlAutomaticScale(-4105);
+public class XlCategoryType {
 
+  // Typed constants
+  public final static XlCategoryType xlCategoryScale = new XlCategoryType(2);
+  public final static XlCategoryType xlTimeScale = new XlCategoryType(3);
+  public final static XlCategoryType xlAutomaticScale = new XlCategoryType(-4105);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _xlCategoryScale = 2;
+  public final static int _xlTimeScale = 3;
+  public final static int _xlAutomaticScale = -4105;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private XlCategoryType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  XlCategoryType valueOf(int value) {
     switch(value) {
     case 2: return xlCategoryScale;
     case 3: return xlTimeScale;
     case -4105: return xlAutomaticScale;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + XlCategoryType.class);
+    default: return new XlCategoryType(value);
     }
   }
 }

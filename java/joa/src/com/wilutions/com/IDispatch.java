@@ -15,4 +15,71 @@ package com.wilutions.com;
  * implement IDispatch.
  */
 public interface IDispatch {
+	
+	/**
+	 * Convert this object into an object of the given class. A new object of
+	 * the given class is created and the internal native object is transferred
+	 * to the new object. This object hereby looses its internal native object.
+	 * 
+	 * @param clazz
+	 *            Class object.
+	 * @return new object of type clazz.
+	 */
+	
+	default <T> T as(Class<T> clazz) {
+		throw new UnsupportedOperationException();
+	}
+	
+	
+	default boolean is(Class<?> clazz) {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default Object _get(String propName, Object... args) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default Object _get(int propId, Object... args) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default void _put(String propName, Object value, Object... args) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default void _put(int propId, Object value, Object... args) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default Object _call(String methodName, Object... args) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default Object _call(int methodId, Object... args) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default void withEvents(DispatchImpl handler) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+
+	
+	default void releaseEvents(DispatchImpl handler) throws ComException {
+		throw new UnsupportedOperationException();
+	}
+	
+	default void releaseComObject() {
+		throw new UnsupportedOperationException();
+	}
+	
+	default void releaseDispatch() {
+		throw new UnsupportedOperationException();
+	}
 }

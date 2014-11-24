@@ -15,11 +15,11 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public Dispatch Item(Object varg) throws ComException {
+  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException {
     assert(varg != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,varg);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(62)  public void Clear() throws ComException {
     this._dispatchCall(62,"Clear", DISPATCH_METHOD,null);
@@ -34,7 +34,7 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     final Object obj = this._dispatchCall(1610743814,"_AddByClass", DISPATCH_METHOD,null,clsid);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(1610743820)  public Object Enum() throws ComException {
     final Object obj = this._dispatchCall(1610743820,"Enum", DISPATCH_METHOD,null);
@@ -46,21 +46,21 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     final Object obj = this._dispatchCall(1610743821,"_GetItemByIndex", DISPATCH_METHOD,null,lIndex);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(1610743822)  public com.wilutions.mslib.msforms.Control _GetItemByName(String pstr) throws ComException {
     assert(pstr != null);
     final Object obj = this._dispatchCall(1610743822,"_GetItemByName", DISPATCH_METHOD,null,pstr);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(1610743823)  public com.wilutions.mslib.msforms.Control _GetItemByID(Integer ID) throws ComException {
     assert(ID != null);
     final Object obj = this._dispatchCall(1610743823,"_GetItemByID", DISPATCH_METHOD,null,ID);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(1610743824)  public void SendBackward() throws ComException {
     this._dispatchCall(1610743824,"SendBackward", DISPATCH_METHOD,null);
@@ -80,7 +80,7 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,bstrProgID,Name,Visible);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(67)  public void Remove(Object varg) throws ComException {
     assert(varg != null);

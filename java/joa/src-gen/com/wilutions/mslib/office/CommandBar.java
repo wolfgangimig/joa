@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0304-0000-0000-C000-000000000046}")
 public interface CommandBar extends IDispatch {
-  @DeclDISPID(1610809344)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610809344)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610874880)  public Boolean getBuiltIn() throws ComException;
   @DeclDISPID(1610874881)  public String getContext() throws ComException;
@@ -27,7 +27,7 @@ public interface CommandBar extends IDispatch {
   @DeclDISPID(1610874894)  public void setName(String value) throws ComException;
   @DeclDISPID(1610874896)  public String getNameLocal() throws ComException;
   @DeclDISPID(1610874896)  public void setNameLocal(String value) throws ComException;
-  @DeclDISPID(1610874898)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1610874898)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610874899)  public MsoBarPosition getPosition() throws ComException;
   @DeclDISPID(1610874899)  public void setPosition(MsoBarPosition value) throws ComException;
   @DeclDISPID(1610874901)  public Integer getRowIndex() throws ComException;

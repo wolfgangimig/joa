@@ -8,35 +8,69 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoPresetGradientType {
-  msoPresetGradientMixed(-2),
-  msoGradientEarlySunset(1),
-  msoGradientLateSunset(2),
-  msoGradientNightfall(3),
-  msoGradientDaybreak(4),
-  msoGradientHorizon(5),
-  msoGradientDesert(6),
-  msoGradientOcean(7),
-  msoGradientCalmWater(8),
-  msoGradientFire(9),
-  msoGradientFog(10),
-  msoGradientMoss(11),
-  msoGradientPeacock(12),
-  msoGradientWheat(13),
-  msoGradientParchment(14),
-  msoGradientMahogany(15),
-  msoGradientRainbow(16),
-  msoGradientRainbowII(17),
-  msoGradientGold(18),
-  msoGradientGoldII(19),
-  msoGradientBrass(20),
-  msoGradientChrome(21),
-  msoGradientChromeII(22),
-  msoGradientSilver(23),
-  msoGradientSapphire(24);
+public class MsoPresetGradientType {
 
+  // Typed constants
+  public final static MsoPresetGradientType msoPresetGradientMixed = new MsoPresetGradientType(-2);
+  public final static MsoPresetGradientType msoGradientEarlySunset = new MsoPresetGradientType(1);
+  public final static MsoPresetGradientType msoGradientLateSunset = new MsoPresetGradientType(2);
+  public final static MsoPresetGradientType msoGradientNightfall = new MsoPresetGradientType(3);
+  public final static MsoPresetGradientType msoGradientDaybreak = new MsoPresetGradientType(4);
+  public final static MsoPresetGradientType msoGradientHorizon = new MsoPresetGradientType(5);
+  public final static MsoPresetGradientType msoGradientDesert = new MsoPresetGradientType(6);
+  public final static MsoPresetGradientType msoGradientOcean = new MsoPresetGradientType(7);
+  public final static MsoPresetGradientType msoGradientCalmWater = new MsoPresetGradientType(8);
+  public final static MsoPresetGradientType msoGradientFire = new MsoPresetGradientType(9);
+  public final static MsoPresetGradientType msoGradientFog = new MsoPresetGradientType(10);
+  public final static MsoPresetGradientType msoGradientMoss = new MsoPresetGradientType(11);
+  public final static MsoPresetGradientType msoGradientPeacock = new MsoPresetGradientType(12);
+  public final static MsoPresetGradientType msoGradientWheat = new MsoPresetGradientType(13);
+  public final static MsoPresetGradientType msoGradientParchment = new MsoPresetGradientType(14);
+  public final static MsoPresetGradientType msoGradientMahogany = new MsoPresetGradientType(15);
+  public final static MsoPresetGradientType msoGradientRainbow = new MsoPresetGradientType(16);
+  public final static MsoPresetGradientType msoGradientRainbowII = new MsoPresetGradientType(17);
+  public final static MsoPresetGradientType msoGradientGold = new MsoPresetGradientType(18);
+  public final static MsoPresetGradientType msoGradientGoldII = new MsoPresetGradientType(19);
+  public final static MsoPresetGradientType msoGradientBrass = new MsoPresetGradientType(20);
+  public final static MsoPresetGradientType msoGradientChrome = new MsoPresetGradientType(21);
+  public final static MsoPresetGradientType msoGradientChromeII = new MsoPresetGradientType(22);
+  public final static MsoPresetGradientType msoGradientSilver = new MsoPresetGradientType(23);
+  public final static MsoPresetGradientType msoGradientSapphire = new MsoPresetGradientType(24);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoPresetGradientMixed = -2;
+  public final static int _msoGradientEarlySunset = 1;
+  public final static int _msoGradientLateSunset = 2;
+  public final static int _msoGradientNightfall = 3;
+  public final static int _msoGradientDaybreak = 4;
+  public final static int _msoGradientHorizon = 5;
+  public final static int _msoGradientDesert = 6;
+  public final static int _msoGradientOcean = 7;
+  public final static int _msoGradientCalmWater = 8;
+  public final static int _msoGradientFire = 9;
+  public final static int _msoGradientFog = 10;
+  public final static int _msoGradientMoss = 11;
+  public final static int _msoGradientPeacock = 12;
+  public final static int _msoGradientWheat = 13;
+  public final static int _msoGradientParchment = 14;
+  public final static int _msoGradientMahogany = 15;
+  public final static int _msoGradientRainbow = 16;
+  public final static int _msoGradientRainbowII = 17;
+  public final static int _msoGradientGold = 18;
+  public final static int _msoGradientGoldII = 19;
+  public final static int _msoGradientBrass = 20;
+  public final static int _msoGradientChrome = 21;
+  public final static int _msoGradientChromeII = 22;
+  public final static int _msoGradientSilver = 23;
+  public final static int _msoGradientSapphire = 24;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPresetGradientType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPresetGradientType valueOf(int value) {
     switch(value) {
     case -2: return msoPresetGradientMixed;
@@ -64,7 +98,7 @@ public enum MsoPresetGradientType {
     case 22: return msoGradientChromeII;
     case 23: return msoGradientSilver;
     case 24: return msoGradientSapphire;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPresetGradientType.class);
+    default: return new MsoPresetGradientType(value);
     }
   }
 }

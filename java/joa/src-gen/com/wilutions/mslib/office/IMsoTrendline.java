@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C170E-0000-0000-C000-000000000046}")
 public interface IMsoTrendline extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(185)  public Double getBackward() throws ComException;
   @DeclDISPID(185)  public void setBackward(Double RHS) throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
@@ -38,7 +38,7 @@ public interface IMsoTrendline extends IDispatch {
   @DeclDISPID(108)  public XlTrendlineType getType() throws ComException;
   @DeclDISPID(108)  public void setType(XlTrendlineType RHS) throws ComException;
   @DeclDISPID(1610743837)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(2650)  public Double getBackward2() throws ComException;
   @DeclDISPID(2650)  public void setBackward2(Double RHS) throws ComException;

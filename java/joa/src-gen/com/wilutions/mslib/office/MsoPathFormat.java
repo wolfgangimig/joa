@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoPathFormat {
-  msoPathTypeMixed(-2),
-  msoPathTypeNone(0),
-  msoPathType1(1),
-  msoPathType2(2),
-  msoPathType3(3),
-  msoPathType4(4);
+public class MsoPathFormat {
 
+  // Typed constants
+  public final static MsoPathFormat msoPathTypeMixed = new MsoPathFormat(-2);
+  public final static MsoPathFormat msoPathTypeNone = new MsoPathFormat(0);
+  public final static MsoPathFormat msoPathType1 = new MsoPathFormat(1);
+  public final static MsoPathFormat msoPathType2 = new MsoPathFormat(2);
+  public final static MsoPathFormat msoPathType3 = new MsoPathFormat(3);
+  public final static MsoPathFormat msoPathType4 = new MsoPathFormat(4);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoPathTypeMixed = -2;
+  public final static int _msoPathTypeNone = 0;
+  public final static int _msoPathType1 = 1;
+  public final static int _msoPathType2 = 2;
+  public final static int _msoPathType3 = 3;
+  public final static int _msoPathType4 = 4;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPathFormat(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPathFormat valueOf(int value) {
     switch(value) {
     case -2: return msoPathTypeMixed;
@@ -26,7 +41,7 @@ public enum MsoPathFormat {
     case 2: return msoPathType2;
     case 3: return msoPathType3;
     case 4: return msoPathType4;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPathFormat.class);
+    default: return new MsoPathFormat(value);
     }
   }
 }

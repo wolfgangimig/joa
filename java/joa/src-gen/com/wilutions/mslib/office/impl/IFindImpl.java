@@ -108,8 +108,7 @@ public class IFindImpl extends Dispatch implements com.wilutions.mslib.office.IF
   @DeclDISPID(1610743828)  public com.wilutions.mslib.office.IFoundFiles getResults() throws ComException {
     final Object obj = this._dispatchCall(1610743828,"Results", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IFoundFilesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IFoundFilesImpl.class);
   }
   @DeclDISPID(1610743829)  public Integer Show() throws ComException {
     final Object obj = this._dispatchCall(1610743829,"Show", DISPATCH_METHOD,null);

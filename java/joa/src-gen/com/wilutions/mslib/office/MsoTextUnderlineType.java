@@ -8,29 +8,57 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoTextUnderlineType {
-  msoUnderlineMixed(-2),
-  msoNoUnderline(0),
-  msoUnderlineWords(1),
-  msoUnderlineSingleLine(2),
-  msoUnderlineDoubleLine(3),
-  msoUnderlineHeavyLine(4),
-  msoUnderlineDottedLine(5),
-  msoUnderlineDottedHeavyLine(6),
-  msoUnderlineDashLine(7),
-  msoUnderlineDashHeavyLine(8),
-  msoUnderlineDashLongLine(9),
-  msoUnderlineDashLongHeavyLine(10),
-  msoUnderlineDotDashLine(11),
-  msoUnderlineDotDashHeavyLine(12),
-  msoUnderlineDotDotDashLine(13),
-  msoUnderlineDotDotDashHeavyLine(14),
-  msoUnderlineWavyLine(15),
-  msoUnderlineWavyHeavyLine(16),
-  msoUnderlineWavyDoubleLine(17);
+public class MsoTextUnderlineType {
 
+  // Typed constants
+  public final static MsoTextUnderlineType msoUnderlineMixed = new MsoTextUnderlineType(-2);
+  public final static MsoTextUnderlineType msoNoUnderline = new MsoTextUnderlineType(0);
+  public final static MsoTextUnderlineType msoUnderlineWords = new MsoTextUnderlineType(1);
+  public final static MsoTextUnderlineType msoUnderlineSingleLine = new MsoTextUnderlineType(2);
+  public final static MsoTextUnderlineType msoUnderlineDoubleLine = new MsoTextUnderlineType(3);
+  public final static MsoTextUnderlineType msoUnderlineHeavyLine = new MsoTextUnderlineType(4);
+  public final static MsoTextUnderlineType msoUnderlineDottedLine = new MsoTextUnderlineType(5);
+  public final static MsoTextUnderlineType msoUnderlineDottedHeavyLine = new MsoTextUnderlineType(6);
+  public final static MsoTextUnderlineType msoUnderlineDashLine = new MsoTextUnderlineType(7);
+  public final static MsoTextUnderlineType msoUnderlineDashHeavyLine = new MsoTextUnderlineType(8);
+  public final static MsoTextUnderlineType msoUnderlineDashLongLine = new MsoTextUnderlineType(9);
+  public final static MsoTextUnderlineType msoUnderlineDashLongHeavyLine = new MsoTextUnderlineType(10);
+  public final static MsoTextUnderlineType msoUnderlineDotDashLine = new MsoTextUnderlineType(11);
+  public final static MsoTextUnderlineType msoUnderlineDotDashHeavyLine = new MsoTextUnderlineType(12);
+  public final static MsoTextUnderlineType msoUnderlineDotDotDashLine = new MsoTextUnderlineType(13);
+  public final static MsoTextUnderlineType msoUnderlineDotDotDashHeavyLine = new MsoTextUnderlineType(14);
+  public final static MsoTextUnderlineType msoUnderlineWavyLine = new MsoTextUnderlineType(15);
+  public final static MsoTextUnderlineType msoUnderlineWavyHeavyLine = new MsoTextUnderlineType(16);
+  public final static MsoTextUnderlineType msoUnderlineWavyDoubleLine = new MsoTextUnderlineType(17);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoUnderlineMixed = -2;
+  public final static int _msoNoUnderline = 0;
+  public final static int _msoUnderlineWords = 1;
+  public final static int _msoUnderlineSingleLine = 2;
+  public final static int _msoUnderlineDoubleLine = 3;
+  public final static int _msoUnderlineHeavyLine = 4;
+  public final static int _msoUnderlineDottedLine = 5;
+  public final static int _msoUnderlineDottedHeavyLine = 6;
+  public final static int _msoUnderlineDashLine = 7;
+  public final static int _msoUnderlineDashHeavyLine = 8;
+  public final static int _msoUnderlineDashLongLine = 9;
+  public final static int _msoUnderlineDashLongHeavyLine = 10;
+  public final static int _msoUnderlineDotDashLine = 11;
+  public final static int _msoUnderlineDotDashHeavyLine = 12;
+  public final static int _msoUnderlineDotDotDashLine = 13;
+  public final static int _msoUnderlineDotDotDashHeavyLine = 14;
+  public final static int _msoUnderlineWavyLine = 15;
+  public final static int _msoUnderlineWavyHeavyLine = 16;
+  public final static int _msoUnderlineWavyDoubleLine = 17;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoTextUnderlineType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoTextUnderlineType valueOf(int value) {
     switch(value) {
     case -2: return msoUnderlineMixed;
@@ -52,7 +80,7 @@ public enum MsoTextUnderlineType {
     case 15: return msoUnderlineWavyLine;
     case 16: return msoUnderlineWavyHeavyLine;
     case 17: return msoUnderlineWavyDoubleLine;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoTextUnderlineType.class);
+    default: return new MsoTextUnderlineType(value);
     }
   }
 }

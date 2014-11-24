@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E44-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoChartDataImpl extends Dispatch implements com.wilutions.mslib.office.IMsoChartData {
-  @DeclDISPID(1610743808)  public Dispatch getWorkbook() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getWorkbook() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Workbook", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public void Activate() throws ComException {
     this._dispatchCall(1610743809,"Activate", DISPATCH_METHOD,null);

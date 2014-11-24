@@ -11,7 +11,7 @@ public interface AddressList extends IDispatch {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(256)  public AddressEntries getAddressEntries() throws ComException;
   @DeclDISPID(61470)  public String getID() throws ComException;
   @DeclDISPID(91)  public Integer getIndex() throws ComException;

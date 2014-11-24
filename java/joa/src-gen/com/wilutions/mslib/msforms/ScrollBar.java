@@ -124,8 +124,7 @@ public class ScrollBar extends Dispatch implements IScrollbar {
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   public ScrollBar() throws ComException {
     super("{DFD181E0-5E2F-11CE-A449-00AA004A803D}", "{04598FC3-866C-11CF-AB7C-00AA00C08FCF}");

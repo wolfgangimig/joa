@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9D7B-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.office.SignatureSet {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -29,20 +29,18 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     assert(iSig != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,iSig);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SignatureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SignatureImpl.class);
   }
-  @DeclDISPID(1610809349)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1610809349)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1610809349,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610809350)  public com.wilutions.mslib.office.Signature AddNonVisibleSignature(Object varSigProv) throws ComException {
     assert(varSigProv != null);
     final Object obj = this._dispatchCall(1610809350,"AddNonVisibleSignature", DISPATCH_METHOD,null,varSigProv);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SignatureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SignatureImpl.class);
   }
   @DeclDISPID(1610809351)  public Boolean getCanAddSignatureLine() throws ComException {
     final Object obj = this._dispatchCall(1610809351,"CanAddSignatureLine", DISPATCH_PROPERTYGET,null);
@@ -53,8 +51,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     assert(varSigProv != null);
     final Object obj = this._dispatchCall(1610809352,"AddSignatureLine", DISPATCH_METHOD,null,varSigProv);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SignatureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SignatureImpl.class);
   }
   @DeclDISPID(1610809353)  public com.wilutions.mslib.office.MsoSignatureSubset getSubset() throws ComException {
     final Object obj = this._dispatchCall(1610809353,"Subset", DISPATCH_PROPERTYGET,null);

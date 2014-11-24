@@ -5,20 +5,20 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AF1-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Font2 {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(2)  public com.wilutions.mslib.office.MsoTriState getBold() throws ComException {
     final Object obj = this._dispatchCall(2,"Bold", DISPATCH_PROPERTYGET,null);
@@ -140,44 +140,37 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
   @DeclDISPID(15)  public com.wilutions.mslib.office.FillFormat getFill() throws ComException {
     final Object obj = this._dispatchCall(15,"Fill", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.FillFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.FillFormatImpl.class);
   }
   @DeclDISPID(16)  public com.wilutions.mslib.office.GlowFormat getGlow() throws ComException {
     final Object obj = this._dispatchCall(16,"Glow", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.GlowFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.GlowFormatImpl.class);
   }
   @DeclDISPID(17)  public com.wilutions.mslib.office.ReflectionFormat getReflection() throws ComException {
     final Object obj = this._dispatchCall(17,"Reflection", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ReflectionFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ReflectionFormatImpl.class);
   }
   @DeclDISPID(18)  public com.wilutions.mslib.office.LineFormat getLine() throws ComException {
     final Object obj = this._dispatchCall(18,"Line", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.LineFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.LineFormatImpl.class);
   }
   @DeclDISPID(19)  public com.wilutions.mslib.office.ShadowFormat getShadow() throws ComException {
     final Object obj = this._dispatchCall(19,"Shadow", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShadowFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShadowFormatImpl.class);
   }
   @DeclDISPID(20)  public com.wilutions.mslib.office.ColorFormat getHighlight() throws ComException {
     final Object obj = this._dispatchCall(20,"Highlight", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ColorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(21)  public com.wilutions.mslib.office.ColorFormat getUnderlineColor() throws ComException {
     final Object obj = this._dispatchCall(21,"UnderlineColor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ColorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(22)  public com.wilutions.mslib.office.MsoTriState getSmallcaps() throws ComException {
     final Object obj = this._dispatchCall(22,"Smallcaps", DISPATCH_PROPERTYGET,null);

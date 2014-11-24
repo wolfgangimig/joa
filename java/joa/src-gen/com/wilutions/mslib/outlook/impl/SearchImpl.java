@@ -8,8 +8,7 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64100)  public String getFilter() throws ComException {
     final Object obj = this._dispatchCall(64100,"Filter", DISPATCH_PROPERTYGET,null);
@@ -40,8 +38,7 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
   @DeclDISPID(64105)  public com.wilutions.mslib.outlook._Results getResults() throws ComException {
     final Object obj = this._dispatchCall(64105,"Results", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ResultsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ResultsImpl.class);
   }
   @DeclDISPID(64102)  public Boolean getSearchSubFolders() throws ComException {
     final Object obj = this._dispatchCall(64102,"SearchSubFolders", DISPATCH_PROPERTYGET,null);
@@ -65,14 +62,13 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
     assert(Name != null);
     final Object obj = this._dispatchCall(64173,"Save", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64285)  public com.wilutions.mslib.outlook.Table GetTable() throws ComException {
     final Object obj = this._dispatchCall(64285,"GetTable", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.Table.class);
+    return disp.as(com.wilutions.mslib.outlook.Table.class);
   }
   public SearchImpl(String progId) throws ComException {
     super(progId, "{0006300B-0000-0000-C000-000000000046}");

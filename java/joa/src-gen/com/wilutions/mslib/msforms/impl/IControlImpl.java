@@ -134,15 +134,15 @@ public class IControlImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(-2147385335)  public Dispatch getObject() throws ComException {
+  @DeclDISPID(-2147385335)  public IDispatch getObject() throws ComException {
     final Object obj = this._dispatchCall(-2147385335,"Object", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(-2147418104)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(-2147418104)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(-2147418104,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(-2147385330)  public void setRowSource(String value) throws ComException {
     assert(value != null);

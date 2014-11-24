@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C030D-0000-0000-C000-000000000046}")
 public interface _CommandBarActiveX extends IDispatch {
-  @DeclDISPID(1610809344)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610809344)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610874880)  public Boolean getBeginGroup() throws ComException;
   @DeclDISPID(1610874880)  public void setBeginGroup(Boolean value) throws ComException;

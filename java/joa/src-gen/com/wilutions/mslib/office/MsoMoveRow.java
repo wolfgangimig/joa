@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoMoveRow {
-  msoMoveRowFirst(-4),
-  msoMoveRowPrev(-3),
-  msoMoveRowNext(-2),
-  msoMoveRowNbr(-1);
+public class MsoMoveRow {
 
+  // Typed constants
+  public final static MsoMoveRow msoMoveRowFirst = new MsoMoveRow(-4);
+  public final static MsoMoveRow msoMoveRowPrev = new MsoMoveRow(-3);
+  public final static MsoMoveRow msoMoveRowNext = new MsoMoveRow(-2);
+  public final static MsoMoveRow msoMoveRowNbr = new MsoMoveRow(-1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoMoveRowFirst = -4;
+  public final static int _msoMoveRowPrev = -3;
+  public final static int _msoMoveRowNext = -2;
+  public final static int _msoMoveRowNbr = -1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoMoveRow(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoMoveRow valueOf(int value) {
     switch(value) {
     case -4: return msoMoveRowFirst;
     case -3: return msoMoveRowPrev;
     case -2: return msoMoveRowNext;
     case -1: return msoMoveRowNbr;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoMoveRow.class);
+    default: return new MsoMoveRow(value);
     }
   }
 }

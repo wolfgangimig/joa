@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A59-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.office.FileSearch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -101,32 +101,27 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(11)  public com.wilutions.mslib.office.FoundFiles getFoundFiles() throws ComException {
     final Object obj = this._dispatchCall(11,"FoundFiles", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.FoundFilesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.FoundFilesImpl.class);
   }
   @DeclDISPID(12)  public com.wilutions.mslib.office.PropertyTests getPropertyTests() throws ComException {
     final Object obj = this._dispatchCall(12,"PropertyTests", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.PropertyTestsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.PropertyTestsImpl.class);
   }
   @DeclDISPID(13)  public com.wilutions.mslib.office.SearchScopes getSearchScopes() throws ComException {
     final Object obj = this._dispatchCall(13,"SearchScopes", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SearchScopesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SearchScopesImpl.class);
   }
   @DeclDISPID(14)  public com.wilutions.mslib.office.SearchFolders getSearchFolders() throws ComException {
     final Object obj = this._dispatchCall(14,"SearchFolders", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SearchFoldersImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SearchFoldersImpl.class);
   }
   @DeclDISPID(16)  public com.wilutions.mslib.office.FileTypes getFileTypes() throws ComException {
     final Object obj = this._dispatchCall(16,"FileTypes", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.FileTypesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.FileTypesImpl.class);
   }
   @DeclDISPID(17)  public void RefreshScopes() throws ComException {
     this._dispatchCall(17,"RefreshScopes", DISPATCH_METHOD,null);

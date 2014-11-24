@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoFileFindListBy {
-  msoListbyName(1),
-  msoListbyTitle(2);
+public class MsoFileFindListBy {
 
+  // Typed constants
+  public final static MsoFileFindListBy msoListbyName = new MsoFileFindListBy(1);
+  public final static MsoFileFindListBy msoListbyTitle = new MsoFileFindListBy(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoListbyName = 1;
+  public final static int _msoListbyTitle = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoFileFindListBy(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoFileFindListBy valueOf(int value) {
     switch(value) {
     case 1: return msoListbyName;
     case 2: return msoListbyTitle;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoFileFindListBy.class);
+    default: return new MsoFileFindListBy(value);
     }
   }
 }

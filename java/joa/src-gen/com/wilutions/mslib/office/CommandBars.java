@@ -8,10 +8,10 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{55F88893-7708-11D1-ACEB-006008961DA5}")
 public class CommandBars extends Dispatch implements _CommandBars {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -21,14 +21,12 @@ public class CommandBars extends Dispatch implements _CommandBars {
   @DeclDISPID(1610809344)  public CommandBarControl getActionControl() throws ComException {
     final Object obj = this._dispatchCall(1610809344,"ActionControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
   @DeclDISPID(1610809345)  public CommandBar getActiveMenuBar() throws ComException {
     final Object obj = this._dispatchCall(1610809345,"ActiveMenuBar", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
   @DeclDISPID(1610809346)  public CommandBar Add(Object Name, Object Position, Object MenuBar, Object Temporary) throws ComException {
     assert(Name != null);
@@ -37,8 +35,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Temporary != null);
     final Object obj = this._dispatchCall(1610809346,"Add", DISPATCH_METHOD,null,Name,Position,MenuBar,Temporary);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
   @DeclDISPID(1610809347)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610809347,"Count", DISPATCH_PROPERTYGET,null);
@@ -70,15 +67,13 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Visible != null);
     final Object obj = this._dispatchCall(1610809352,"FindControl", DISPATCH_METHOD,null,Type,Id,Tag,Visible);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
   @DeclDISPID(0)  public CommandBar getItem(Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
   @DeclDISPID(1610809354)  public Boolean getLargeButtons() throws ComException {
     final Object obj = this._dispatchCall(1610809354,"LargeButtons", DISPATCH_PROPERTYGET,null);
@@ -103,10 +98,10 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610809359)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1610809359)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1610809359,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610809360)  public void ReleaseFocus() throws ComException {
     this._dispatchCall(1610809360,"ReleaseFocus", DISPATCH_METHOD,null);
@@ -127,8 +122,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Visible != null);
     final Object obj = this._dispatchCall(1610809365,"FindControls", DISPATCH_METHOD,null,Type,Id,Tag,Visible);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CommandBarControlsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlsImpl.class);
   }
   @DeclDISPID(1610809367)  public Boolean getDisplayFonts() throws ComException {
     final Object obj = this._dispatchCall(1610809367,"DisplayFonts", DISPATCH_PROPERTYGET,null);
@@ -203,8 +197,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Height != null);
     final Object obj = this._dispatchCall(1610809380,"GetImageMso", DISPATCH_METHOD,null,idMso,Width,Height);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(1610809381)  public void CommitRenderingTransaction(Integer hwnd) throws ComException {
     assert(hwnd != null);

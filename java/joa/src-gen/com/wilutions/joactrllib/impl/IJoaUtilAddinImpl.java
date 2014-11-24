@@ -8,11 +8,10 @@ public class IJoaUtilAddinImpl extends Dispatch implements com.wilutions.joactrl
   @DeclDISPID(1)  public com.wilutions.joactrllib.IJoaBridgeDialog CreateBridgeDialog() throws ComException {
     final Object obj = this._dispatchCall(1,"CreateBridgeDialog", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.joactrllib.impl.IJoaBridgeDialogImpl.class);
+    return Dispatch.as(obj, com.wilutions.joactrllib.impl.IJoaBridgeDialogImpl.class);
   }
   public IJoaUtilAddinImpl(String progId) throws ComException {
-    super(progId);
+    super(progId, "{403444E9-2793-4450-AB21-0C1DB4754F3F}");
   }
   protected IJoaUtilAddinImpl(long ndisp) {
     super(ndisp);

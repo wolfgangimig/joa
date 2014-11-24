@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoOrgChartLayoutType {
-  msoOrgChartLayoutMixed(-2),
-  msoOrgChartLayoutStandard(1),
-  msoOrgChartLayoutBothHanging(2),
-  msoOrgChartLayoutLeftHanging(3),
-  msoOrgChartLayoutRightHanging(4),
-  msoOrgChartLayoutDefault(5);
+public class MsoOrgChartLayoutType {
 
+  // Typed constants
+  public final static MsoOrgChartLayoutType msoOrgChartLayoutMixed = new MsoOrgChartLayoutType(-2);
+  public final static MsoOrgChartLayoutType msoOrgChartLayoutStandard = new MsoOrgChartLayoutType(1);
+  public final static MsoOrgChartLayoutType msoOrgChartLayoutBothHanging = new MsoOrgChartLayoutType(2);
+  public final static MsoOrgChartLayoutType msoOrgChartLayoutLeftHanging = new MsoOrgChartLayoutType(3);
+  public final static MsoOrgChartLayoutType msoOrgChartLayoutRightHanging = new MsoOrgChartLayoutType(4);
+  public final static MsoOrgChartLayoutType msoOrgChartLayoutDefault = new MsoOrgChartLayoutType(5);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoOrgChartLayoutMixed = -2;
+  public final static int _msoOrgChartLayoutStandard = 1;
+  public final static int _msoOrgChartLayoutBothHanging = 2;
+  public final static int _msoOrgChartLayoutLeftHanging = 3;
+  public final static int _msoOrgChartLayoutRightHanging = 4;
+  public final static int _msoOrgChartLayoutDefault = 5;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoOrgChartLayoutType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoOrgChartLayoutType valueOf(int value) {
     switch(value) {
     case -2: return msoOrgChartLayoutMixed;
@@ -26,7 +41,7 @@ public enum MsoOrgChartLayoutType {
     case 3: return msoOrgChartLayoutLeftHanging;
     case 4: return msoOrgChartLayoutRightHanging;
     case 5: return msoOrgChartLayoutDefault;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoOrgChartLayoutType.class);
+    default: return new MsoOrgChartLayoutType(value);
     }
   }
 }

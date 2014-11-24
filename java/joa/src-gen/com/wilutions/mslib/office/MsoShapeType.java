@@ -8,38 +8,75 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoShapeType {
-  msoShapeTypeMixed(-2),
-  msoAutoShape(1),
-  msoCallout(2),
-  msoChart(3),
-  msoComment(4),
-  msoFreeform(5),
-  msoGroup(6),
-  msoEmbeddedOLEObject(7),
-  msoFormControl(8),
-  msoLine(9),
-  msoLinkedOLEObject(10),
-  msoLinkedPicture(11),
-  msoOLEControlObject(12),
-  msoPicture(13),
-  msoPlaceholder(14),
-  msoTextEffect(15),
-  msoMedia(16),
-  msoTextBox(17),
-  msoScriptAnchor(18),
-  msoTable(19),
-  msoCanvas(20),
-  msoDiagram(21),
-  msoInk(22),
-  msoInkComment(23),
-  msoSmartArt(24),
-  msoSlicer(25),
-  msoWebVideo(26),
-  msoContentApp(27);
+public class MsoShapeType {
 
+  // Typed constants
+  public final static MsoShapeType msoShapeTypeMixed = new MsoShapeType(-2);
+  public final static MsoShapeType msoAutoShape = new MsoShapeType(1);
+  public final static MsoShapeType msoCallout = new MsoShapeType(2);
+  public final static MsoShapeType msoChart = new MsoShapeType(3);
+  public final static MsoShapeType msoComment = new MsoShapeType(4);
+  public final static MsoShapeType msoFreeform = new MsoShapeType(5);
+  public final static MsoShapeType msoGroup = new MsoShapeType(6);
+  public final static MsoShapeType msoEmbeddedOLEObject = new MsoShapeType(7);
+  public final static MsoShapeType msoFormControl = new MsoShapeType(8);
+  public final static MsoShapeType msoLine = new MsoShapeType(9);
+  public final static MsoShapeType msoLinkedOLEObject = new MsoShapeType(10);
+  public final static MsoShapeType msoLinkedPicture = new MsoShapeType(11);
+  public final static MsoShapeType msoOLEControlObject = new MsoShapeType(12);
+  public final static MsoShapeType msoPicture = new MsoShapeType(13);
+  public final static MsoShapeType msoPlaceholder = new MsoShapeType(14);
+  public final static MsoShapeType msoTextEffect = new MsoShapeType(15);
+  public final static MsoShapeType msoMedia = new MsoShapeType(16);
+  public final static MsoShapeType msoTextBox = new MsoShapeType(17);
+  public final static MsoShapeType msoScriptAnchor = new MsoShapeType(18);
+  public final static MsoShapeType msoTable = new MsoShapeType(19);
+  public final static MsoShapeType msoCanvas = new MsoShapeType(20);
+  public final static MsoShapeType msoDiagram = new MsoShapeType(21);
+  public final static MsoShapeType msoInk = new MsoShapeType(22);
+  public final static MsoShapeType msoInkComment = new MsoShapeType(23);
+  public final static MsoShapeType msoSmartArt = new MsoShapeType(24);
+  public final static MsoShapeType msoSlicer = new MsoShapeType(25);
+  public final static MsoShapeType msoWebVideo = new MsoShapeType(26);
+  public final static MsoShapeType msoContentApp = new MsoShapeType(27);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoShapeTypeMixed = -2;
+  public final static int _msoAutoShape = 1;
+  public final static int _msoCallout = 2;
+  public final static int _msoChart = 3;
+  public final static int _msoComment = 4;
+  public final static int _msoFreeform = 5;
+  public final static int _msoGroup = 6;
+  public final static int _msoEmbeddedOLEObject = 7;
+  public final static int _msoFormControl = 8;
+  public final static int _msoLine = 9;
+  public final static int _msoLinkedOLEObject = 10;
+  public final static int _msoLinkedPicture = 11;
+  public final static int _msoOLEControlObject = 12;
+  public final static int _msoPicture = 13;
+  public final static int _msoPlaceholder = 14;
+  public final static int _msoTextEffect = 15;
+  public final static int _msoMedia = 16;
+  public final static int _msoTextBox = 17;
+  public final static int _msoScriptAnchor = 18;
+  public final static int _msoTable = 19;
+  public final static int _msoCanvas = 20;
+  public final static int _msoDiagram = 21;
+  public final static int _msoInk = 22;
+  public final static int _msoInkComment = 23;
+  public final static int _msoSmartArt = 24;
+  public final static int _msoSlicer = 25;
+  public final static int _msoWebVideo = 26;
+  public final static int _msoContentApp = 27;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoShapeType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoShapeType valueOf(int value) {
     switch(value) {
     case -2: return msoShapeTypeMixed;
@@ -70,7 +107,7 @@ public enum MsoShapeType {
     case 25: return msoSlicer;
     case 26: return msoWebVideo;
     case 27: return msoContentApp;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoShapeType.class);
+    default: return new MsoShapeType(value);
     }
   }
 }

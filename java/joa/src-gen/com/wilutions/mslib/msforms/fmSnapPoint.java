@@ -8,19 +8,37 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{317A54C1-C7B1-11CE-9AFD-00AA00600AB8}")
-public enum fmSnapPoint {
-  fmSnapPointTopLeft(0),
-  fmSnapPointTopCenter(1),
-  fmSnapPointTopRight(2),
-  fmSnapPointCenterLeft(3),
-  fmSnapPointCenter(4),
-  fmSnapPointCenterRight(5),
-  fmSnapPointBottomLeft(6),
-  fmSnapPointBottomCenter(7),
-  fmSnapPointBottomRight(8);
+public class fmSnapPoint {
 
+  // Typed constants
+  public final static fmSnapPoint fmSnapPointTopLeft = new fmSnapPoint(0);
+  public final static fmSnapPoint fmSnapPointTopCenter = new fmSnapPoint(1);
+  public final static fmSnapPoint fmSnapPointTopRight = new fmSnapPoint(2);
+  public final static fmSnapPoint fmSnapPointCenterLeft = new fmSnapPoint(3);
+  public final static fmSnapPoint fmSnapPointCenter = new fmSnapPoint(4);
+  public final static fmSnapPoint fmSnapPointCenterRight = new fmSnapPoint(5);
+  public final static fmSnapPoint fmSnapPointBottomLeft = new fmSnapPoint(6);
+  public final static fmSnapPoint fmSnapPointBottomCenter = new fmSnapPoint(7);
+  public final static fmSnapPoint fmSnapPointBottomRight = new fmSnapPoint(8);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmSnapPointTopLeft = 0;
+  public final static int _fmSnapPointTopCenter = 1;
+  public final static int _fmSnapPointTopRight = 2;
+  public final static int _fmSnapPointCenterLeft = 3;
+  public final static int _fmSnapPointCenter = 4;
+  public final static int _fmSnapPointCenterRight = 5;
+  public final static int _fmSnapPointBottomLeft = 6;
+  public final static int _fmSnapPointBottomCenter = 7;
+  public final static int _fmSnapPointBottomRight = 8;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmSnapPoint(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmSnapPoint valueOf(int value) {
     switch(value) {
     case 0: return fmSnapPointTopLeft;
@@ -32,7 +50,7 @@ public enum fmSnapPoint {
     case 6: return fmSnapPointBottomLeft;
     case 7: return fmSnapPointBottomCenter;
     case 8: return fmSnapPointBottomRight;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmSnapPoint.class);
+    default: return new fmSnapPoint(value);
     }
   }
 }

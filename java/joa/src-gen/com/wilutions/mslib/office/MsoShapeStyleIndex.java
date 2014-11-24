@@ -8,75 +8,149 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoShapeStyleIndex {
-  msoShapeStyleMixed(-2),
-  msoShapeStyleNotAPreset(0),
-  msoShapeStylePreset1(1),
-  msoShapeStylePreset2(2),
-  msoShapeStylePreset3(3),
-  msoShapeStylePreset4(4),
-  msoShapeStylePreset5(5),
-  msoShapeStylePreset6(6),
-  msoShapeStylePreset7(7),
-  msoShapeStylePreset8(8),
-  msoShapeStylePreset9(9),
-  msoShapeStylePreset10(10),
-  msoShapeStylePreset11(11),
-  msoShapeStylePreset12(12),
-  msoShapeStylePreset13(13),
-  msoShapeStylePreset14(14),
-  msoShapeStylePreset15(15),
-  msoShapeStylePreset16(16),
-  msoShapeStylePreset17(17),
-  msoShapeStylePreset18(18),
-  msoShapeStylePreset19(19),
-  msoShapeStylePreset20(20),
-  msoShapeStylePreset21(21),
-  msoShapeStylePreset22(22),
-  msoShapeStylePreset23(23),
-  msoShapeStylePreset24(24),
-  msoShapeStylePreset25(25),
-  msoShapeStylePreset26(26),
-  msoShapeStylePreset27(27),
-  msoShapeStylePreset28(28),
-  msoShapeStylePreset29(29),
-  msoShapeStylePreset30(30),
-  msoShapeStylePreset31(31),
-  msoShapeStylePreset32(32),
-  msoShapeStylePreset33(33),
-  msoShapeStylePreset34(34),
-  msoShapeStylePreset35(35),
-  msoShapeStylePreset36(36),
-  msoShapeStylePreset37(37),
-  msoShapeStylePreset38(38),
-  msoShapeStylePreset39(39),
-  msoShapeStylePreset40(40),
-  msoShapeStylePreset41(41),
-  msoShapeStylePreset42(42),
-  msoLineStylePreset1(10001),
-  msoLineStylePreset2(10002),
-  msoLineStylePreset3(10003),
-  msoLineStylePreset4(10004),
-  msoLineStylePreset5(10005),
-  msoLineStylePreset6(10006),
-  msoLineStylePreset7(10007),
-  msoLineStylePreset8(10008),
-  msoLineStylePreset9(10009),
-  msoLineStylePreset10(10010),
-  msoLineStylePreset11(10011),
-  msoLineStylePreset12(10012),
-  msoLineStylePreset13(10013),
-  msoLineStylePreset14(10014),
-  msoLineStylePreset15(10015),
-  msoLineStylePreset16(10016),
-  msoLineStylePreset17(10017),
-  msoLineStylePreset18(10018),
-  msoLineStylePreset19(10019),
-  msoLineStylePreset20(10020),
-  msoLineStylePreset21(10021);
+public class MsoShapeStyleIndex {
 
+  // Typed constants
+  public final static MsoShapeStyleIndex msoShapeStyleMixed = new MsoShapeStyleIndex(-2);
+  public final static MsoShapeStyleIndex msoShapeStyleNotAPreset = new MsoShapeStyleIndex(0);
+  public final static MsoShapeStyleIndex msoShapeStylePreset1 = new MsoShapeStyleIndex(1);
+  public final static MsoShapeStyleIndex msoShapeStylePreset2 = new MsoShapeStyleIndex(2);
+  public final static MsoShapeStyleIndex msoShapeStylePreset3 = new MsoShapeStyleIndex(3);
+  public final static MsoShapeStyleIndex msoShapeStylePreset4 = new MsoShapeStyleIndex(4);
+  public final static MsoShapeStyleIndex msoShapeStylePreset5 = new MsoShapeStyleIndex(5);
+  public final static MsoShapeStyleIndex msoShapeStylePreset6 = new MsoShapeStyleIndex(6);
+  public final static MsoShapeStyleIndex msoShapeStylePreset7 = new MsoShapeStyleIndex(7);
+  public final static MsoShapeStyleIndex msoShapeStylePreset8 = new MsoShapeStyleIndex(8);
+  public final static MsoShapeStyleIndex msoShapeStylePreset9 = new MsoShapeStyleIndex(9);
+  public final static MsoShapeStyleIndex msoShapeStylePreset10 = new MsoShapeStyleIndex(10);
+  public final static MsoShapeStyleIndex msoShapeStylePreset11 = new MsoShapeStyleIndex(11);
+  public final static MsoShapeStyleIndex msoShapeStylePreset12 = new MsoShapeStyleIndex(12);
+  public final static MsoShapeStyleIndex msoShapeStylePreset13 = new MsoShapeStyleIndex(13);
+  public final static MsoShapeStyleIndex msoShapeStylePreset14 = new MsoShapeStyleIndex(14);
+  public final static MsoShapeStyleIndex msoShapeStylePreset15 = new MsoShapeStyleIndex(15);
+  public final static MsoShapeStyleIndex msoShapeStylePreset16 = new MsoShapeStyleIndex(16);
+  public final static MsoShapeStyleIndex msoShapeStylePreset17 = new MsoShapeStyleIndex(17);
+  public final static MsoShapeStyleIndex msoShapeStylePreset18 = new MsoShapeStyleIndex(18);
+  public final static MsoShapeStyleIndex msoShapeStylePreset19 = new MsoShapeStyleIndex(19);
+  public final static MsoShapeStyleIndex msoShapeStylePreset20 = new MsoShapeStyleIndex(20);
+  public final static MsoShapeStyleIndex msoShapeStylePreset21 = new MsoShapeStyleIndex(21);
+  public final static MsoShapeStyleIndex msoShapeStylePreset22 = new MsoShapeStyleIndex(22);
+  public final static MsoShapeStyleIndex msoShapeStylePreset23 = new MsoShapeStyleIndex(23);
+  public final static MsoShapeStyleIndex msoShapeStylePreset24 = new MsoShapeStyleIndex(24);
+  public final static MsoShapeStyleIndex msoShapeStylePreset25 = new MsoShapeStyleIndex(25);
+  public final static MsoShapeStyleIndex msoShapeStylePreset26 = new MsoShapeStyleIndex(26);
+  public final static MsoShapeStyleIndex msoShapeStylePreset27 = new MsoShapeStyleIndex(27);
+  public final static MsoShapeStyleIndex msoShapeStylePreset28 = new MsoShapeStyleIndex(28);
+  public final static MsoShapeStyleIndex msoShapeStylePreset29 = new MsoShapeStyleIndex(29);
+  public final static MsoShapeStyleIndex msoShapeStylePreset30 = new MsoShapeStyleIndex(30);
+  public final static MsoShapeStyleIndex msoShapeStylePreset31 = new MsoShapeStyleIndex(31);
+  public final static MsoShapeStyleIndex msoShapeStylePreset32 = new MsoShapeStyleIndex(32);
+  public final static MsoShapeStyleIndex msoShapeStylePreset33 = new MsoShapeStyleIndex(33);
+  public final static MsoShapeStyleIndex msoShapeStylePreset34 = new MsoShapeStyleIndex(34);
+  public final static MsoShapeStyleIndex msoShapeStylePreset35 = new MsoShapeStyleIndex(35);
+  public final static MsoShapeStyleIndex msoShapeStylePreset36 = new MsoShapeStyleIndex(36);
+  public final static MsoShapeStyleIndex msoShapeStylePreset37 = new MsoShapeStyleIndex(37);
+  public final static MsoShapeStyleIndex msoShapeStylePreset38 = new MsoShapeStyleIndex(38);
+  public final static MsoShapeStyleIndex msoShapeStylePreset39 = new MsoShapeStyleIndex(39);
+  public final static MsoShapeStyleIndex msoShapeStylePreset40 = new MsoShapeStyleIndex(40);
+  public final static MsoShapeStyleIndex msoShapeStylePreset41 = new MsoShapeStyleIndex(41);
+  public final static MsoShapeStyleIndex msoShapeStylePreset42 = new MsoShapeStyleIndex(42);
+  public final static MsoShapeStyleIndex msoLineStylePreset1 = new MsoShapeStyleIndex(10001);
+  public final static MsoShapeStyleIndex msoLineStylePreset2 = new MsoShapeStyleIndex(10002);
+  public final static MsoShapeStyleIndex msoLineStylePreset3 = new MsoShapeStyleIndex(10003);
+  public final static MsoShapeStyleIndex msoLineStylePreset4 = new MsoShapeStyleIndex(10004);
+  public final static MsoShapeStyleIndex msoLineStylePreset5 = new MsoShapeStyleIndex(10005);
+  public final static MsoShapeStyleIndex msoLineStylePreset6 = new MsoShapeStyleIndex(10006);
+  public final static MsoShapeStyleIndex msoLineStylePreset7 = new MsoShapeStyleIndex(10007);
+  public final static MsoShapeStyleIndex msoLineStylePreset8 = new MsoShapeStyleIndex(10008);
+  public final static MsoShapeStyleIndex msoLineStylePreset9 = new MsoShapeStyleIndex(10009);
+  public final static MsoShapeStyleIndex msoLineStylePreset10 = new MsoShapeStyleIndex(10010);
+  public final static MsoShapeStyleIndex msoLineStylePreset11 = new MsoShapeStyleIndex(10011);
+  public final static MsoShapeStyleIndex msoLineStylePreset12 = new MsoShapeStyleIndex(10012);
+  public final static MsoShapeStyleIndex msoLineStylePreset13 = new MsoShapeStyleIndex(10013);
+  public final static MsoShapeStyleIndex msoLineStylePreset14 = new MsoShapeStyleIndex(10014);
+  public final static MsoShapeStyleIndex msoLineStylePreset15 = new MsoShapeStyleIndex(10015);
+  public final static MsoShapeStyleIndex msoLineStylePreset16 = new MsoShapeStyleIndex(10016);
+  public final static MsoShapeStyleIndex msoLineStylePreset17 = new MsoShapeStyleIndex(10017);
+  public final static MsoShapeStyleIndex msoLineStylePreset18 = new MsoShapeStyleIndex(10018);
+  public final static MsoShapeStyleIndex msoLineStylePreset19 = new MsoShapeStyleIndex(10019);
+  public final static MsoShapeStyleIndex msoLineStylePreset20 = new MsoShapeStyleIndex(10020);
+  public final static MsoShapeStyleIndex msoLineStylePreset21 = new MsoShapeStyleIndex(10021);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoShapeStyleMixed = -2;
+  public final static int _msoShapeStyleNotAPreset = 0;
+  public final static int _msoShapeStylePreset1 = 1;
+  public final static int _msoShapeStylePreset2 = 2;
+  public final static int _msoShapeStylePreset3 = 3;
+  public final static int _msoShapeStylePreset4 = 4;
+  public final static int _msoShapeStylePreset5 = 5;
+  public final static int _msoShapeStylePreset6 = 6;
+  public final static int _msoShapeStylePreset7 = 7;
+  public final static int _msoShapeStylePreset8 = 8;
+  public final static int _msoShapeStylePreset9 = 9;
+  public final static int _msoShapeStylePreset10 = 10;
+  public final static int _msoShapeStylePreset11 = 11;
+  public final static int _msoShapeStylePreset12 = 12;
+  public final static int _msoShapeStylePreset13 = 13;
+  public final static int _msoShapeStylePreset14 = 14;
+  public final static int _msoShapeStylePreset15 = 15;
+  public final static int _msoShapeStylePreset16 = 16;
+  public final static int _msoShapeStylePreset17 = 17;
+  public final static int _msoShapeStylePreset18 = 18;
+  public final static int _msoShapeStylePreset19 = 19;
+  public final static int _msoShapeStylePreset20 = 20;
+  public final static int _msoShapeStylePreset21 = 21;
+  public final static int _msoShapeStylePreset22 = 22;
+  public final static int _msoShapeStylePreset23 = 23;
+  public final static int _msoShapeStylePreset24 = 24;
+  public final static int _msoShapeStylePreset25 = 25;
+  public final static int _msoShapeStylePreset26 = 26;
+  public final static int _msoShapeStylePreset27 = 27;
+  public final static int _msoShapeStylePreset28 = 28;
+  public final static int _msoShapeStylePreset29 = 29;
+  public final static int _msoShapeStylePreset30 = 30;
+  public final static int _msoShapeStylePreset31 = 31;
+  public final static int _msoShapeStylePreset32 = 32;
+  public final static int _msoShapeStylePreset33 = 33;
+  public final static int _msoShapeStylePreset34 = 34;
+  public final static int _msoShapeStylePreset35 = 35;
+  public final static int _msoShapeStylePreset36 = 36;
+  public final static int _msoShapeStylePreset37 = 37;
+  public final static int _msoShapeStylePreset38 = 38;
+  public final static int _msoShapeStylePreset39 = 39;
+  public final static int _msoShapeStylePreset40 = 40;
+  public final static int _msoShapeStylePreset41 = 41;
+  public final static int _msoShapeStylePreset42 = 42;
+  public final static int _msoLineStylePreset1 = 10001;
+  public final static int _msoLineStylePreset2 = 10002;
+  public final static int _msoLineStylePreset3 = 10003;
+  public final static int _msoLineStylePreset4 = 10004;
+  public final static int _msoLineStylePreset5 = 10005;
+  public final static int _msoLineStylePreset6 = 10006;
+  public final static int _msoLineStylePreset7 = 10007;
+  public final static int _msoLineStylePreset8 = 10008;
+  public final static int _msoLineStylePreset9 = 10009;
+  public final static int _msoLineStylePreset10 = 10010;
+  public final static int _msoLineStylePreset11 = 10011;
+  public final static int _msoLineStylePreset12 = 10012;
+  public final static int _msoLineStylePreset13 = 10013;
+  public final static int _msoLineStylePreset14 = 10014;
+  public final static int _msoLineStylePreset15 = 10015;
+  public final static int _msoLineStylePreset16 = 10016;
+  public final static int _msoLineStylePreset17 = 10017;
+  public final static int _msoLineStylePreset18 = 10018;
+  public final static int _msoLineStylePreset19 = 10019;
+  public final static int _msoLineStylePreset20 = 10020;
+  public final static int _msoLineStylePreset21 = 10021;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoShapeStyleIndex(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoShapeStyleIndex valueOf(int value) {
     switch(value) {
     case -2: return msoShapeStyleMixed;
@@ -144,7 +218,7 @@ public enum MsoShapeStyleIndex {
     case 10019: return msoLineStylePreset19;
     case 10020: return msoLineStylePreset20;
     case 10021: return msoLineStylePreset21;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoShapeStyleIndex.class);
+    default: return new MsoShapeStyleIndex(value);
     }
   }
 }

@@ -8,8 +8,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64408)  public void SaveAsICal(String Path) throws ComException {
     assert(Path != null);
@@ -36,7 +34,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     final Object obj = this._dispatchCall(64409,"ForwardAsICal", DISPATCH_METHOD,null,MailFormat.value);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.MailItem.class);
+    return disp.as(com.wilutions.mslib.outlook.MailItem.class);
   }
   @DeclDISPID(64410)  public com.wilutions.mslib.outlook.OlCalendarDetail getCalendarDetail() throws ComException {
     final Object obj = this._dispatchCall(64410,"CalendarDetail", DISPATCH_PROPERTYGET,null);
@@ -59,8 +57,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(64412)  public com.wilutions.mslib.outlook.MAPIFolder getFolder() throws ComException {
     final Object obj = this._dispatchCall(64412,"Folder", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64413)  public Boolean getIncludeAttachments() throws ComException {
     final Object obj = this._dispatchCall(64413,"IncludeAttachments", DISPATCH_PROPERTYGET,null);

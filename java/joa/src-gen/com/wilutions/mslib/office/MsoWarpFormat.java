@@ -8,48 +8,95 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoWarpFormat {
-  msoWarpFormatMixed(-2),
-  msoWarpFormat1(0),
-  msoWarpFormat2(1),
-  msoWarpFormat3(2),
-  msoWarpFormat4(3),
-  msoWarpFormat5(4),
-  msoWarpFormat6(5),
-  msoWarpFormat7(6),
-  msoWarpFormat8(7),
-  msoWarpFormat9(8),
-  msoWarpFormat10(9),
-  msoWarpFormat11(10),
-  msoWarpFormat12(11),
-  msoWarpFormat13(12),
-  msoWarpFormat14(13),
-  msoWarpFormat15(14),
-  msoWarpFormat16(15),
-  msoWarpFormat17(16),
-  msoWarpFormat18(17),
-  msoWarpFormat19(18),
-  msoWarpFormat20(19),
-  msoWarpFormat21(20),
-  msoWarpFormat22(21),
-  msoWarpFormat23(22),
-  msoWarpFormat24(23),
-  msoWarpFormat25(24),
-  msoWarpFormat26(25),
-  msoWarpFormat27(26),
-  msoWarpFormat28(27),
-  msoWarpFormat29(28),
-  msoWarpFormat30(29),
-  msoWarpFormat31(30),
-  msoWarpFormat32(31),
-  msoWarpFormat33(32),
-  msoWarpFormat34(33),
-  msoWarpFormat35(34),
-  msoWarpFormat36(35),
-  msoWarpFormat37(36);
+public class MsoWarpFormat {
 
+  // Typed constants
+  public final static MsoWarpFormat msoWarpFormatMixed = new MsoWarpFormat(-2);
+  public final static MsoWarpFormat msoWarpFormat1 = new MsoWarpFormat(0);
+  public final static MsoWarpFormat msoWarpFormat2 = new MsoWarpFormat(1);
+  public final static MsoWarpFormat msoWarpFormat3 = new MsoWarpFormat(2);
+  public final static MsoWarpFormat msoWarpFormat4 = new MsoWarpFormat(3);
+  public final static MsoWarpFormat msoWarpFormat5 = new MsoWarpFormat(4);
+  public final static MsoWarpFormat msoWarpFormat6 = new MsoWarpFormat(5);
+  public final static MsoWarpFormat msoWarpFormat7 = new MsoWarpFormat(6);
+  public final static MsoWarpFormat msoWarpFormat8 = new MsoWarpFormat(7);
+  public final static MsoWarpFormat msoWarpFormat9 = new MsoWarpFormat(8);
+  public final static MsoWarpFormat msoWarpFormat10 = new MsoWarpFormat(9);
+  public final static MsoWarpFormat msoWarpFormat11 = new MsoWarpFormat(10);
+  public final static MsoWarpFormat msoWarpFormat12 = new MsoWarpFormat(11);
+  public final static MsoWarpFormat msoWarpFormat13 = new MsoWarpFormat(12);
+  public final static MsoWarpFormat msoWarpFormat14 = new MsoWarpFormat(13);
+  public final static MsoWarpFormat msoWarpFormat15 = new MsoWarpFormat(14);
+  public final static MsoWarpFormat msoWarpFormat16 = new MsoWarpFormat(15);
+  public final static MsoWarpFormat msoWarpFormat17 = new MsoWarpFormat(16);
+  public final static MsoWarpFormat msoWarpFormat18 = new MsoWarpFormat(17);
+  public final static MsoWarpFormat msoWarpFormat19 = new MsoWarpFormat(18);
+  public final static MsoWarpFormat msoWarpFormat20 = new MsoWarpFormat(19);
+  public final static MsoWarpFormat msoWarpFormat21 = new MsoWarpFormat(20);
+  public final static MsoWarpFormat msoWarpFormat22 = new MsoWarpFormat(21);
+  public final static MsoWarpFormat msoWarpFormat23 = new MsoWarpFormat(22);
+  public final static MsoWarpFormat msoWarpFormat24 = new MsoWarpFormat(23);
+  public final static MsoWarpFormat msoWarpFormat25 = new MsoWarpFormat(24);
+  public final static MsoWarpFormat msoWarpFormat26 = new MsoWarpFormat(25);
+  public final static MsoWarpFormat msoWarpFormat27 = new MsoWarpFormat(26);
+  public final static MsoWarpFormat msoWarpFormat28 = new MsoWarpFormat(27);
+  public final static MsoWarpFormat msoWarpFormat29 = new MsoWarpFormat(28);
+  public final static MsoWarpFormat msoWarpFormat30 = new MsoWarpFormat(29);
+  public final static MsoWarpFormat msoWarpFormat31 = new MsoWarpFormat(30);
+  public final static MsoWarpFormat msoWarpFormat32 = new MsoWarpFormat(31);
+  public final static MsoWarpFormat msoWarpFormat33 = new MsoWarpFormat(32);
+  public final static MsoWarpFormat msoWarpFormat34 = new MsoWarpFormat(33);
+  public final static MsoWarpFormat msoWarpFormat35 = new MsoWarpFormat(34);
+  public final static MsoWarpFormat msoWarpFormat36 = new MsoWarpFormat(35);
+  public final static MsoWarpFormat msoWarpFormat37 = new MsoWarpFormat(36);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoWarpFormatMixed = -2;
+  public final static int _msoWarpFormat1 = 0;
+  public final static int _msoWarpFormat2 = 1;
+  public final static int _msoWarpFormat3 = 2;
+  public final static int _msoWarpFormat4 = 3;
+  public final static int _msoWarpFormat5 = 4;
+  public final static int _msoWarpFormat6 = 5;
+  public final static int _msoWarpFormat7 = 6;
+  public final static int _msoWarpFormat8 = 7;
+  public final static int _msoWarpFormat9 = 8;
+  public final static int _msoWarpFormat10 = 9;
+  public final static int _msoWarpFormat11 = 10;
+  public final static int _msoWarpFormat12 = 11;
+  public final static int _msoWarpFormat13 = 12;
+  public final static int _msoWarpFormat14 = 13;
+  public final static int _msoWarpFormat15 = 14;
+  public final static int _msoWarpFormat16 = 15;
+  public final static int _msoWarpFormat17 = 16;
+  public final static int _msoWarpFormat18 = 17;
+  public final static int _msoWarpFormat19 = 18;
+  public final static int _msoWarpFormat20 = 19;
+  public final static int _msoWarpFormat21 = 20;
+  public final static int _msoWarpFormat22 = 21;
+  public final static int _msoWarpFormat23 = 22;
+  public final static int _msoWarpFormat24 = 23;
+  public final static int _msoWarpFormat25 = 24;
+  public final static int _msoWarpFormat26 = 25;
+  public final static int _msoWarpFormat27 = 26;
+  public final static int _msoWarpFormat28 = 27;
+  public final static int _msoWarpFormat29 = 28;
+  public final static int _msoWarpFormat30 = 29;
+  public final static int _msoWarpFormat31 = 30;
+  public final static int _msoWarpFormat32 = 31;
+  public final static int _msoWarpFormat33 = 32;
+  public final static int _msoWarpFormat34 = 33;
+  public final static int _msoWarpFormat35 = 34;
+  public final static int _msoWarpFormat36 = 35;
+  public final static int _msoWarpFormat37 = 36;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoWarpFormat(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoWarpFormat valueOf(int value) {
     switch(value) {
     case -2: return msoWarpFormatMixed;
@@ -90,7 +137,7 @@ public enum MsoWarpFormat {
     case 34: return msoWarpFormat35;
     case 35: return msoWarpFormat36;
     case 36: return msoWarpFormat37;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoWarpFormat.class);
+    default: return new MsoWarpFormat(value);
     }
   }
 }

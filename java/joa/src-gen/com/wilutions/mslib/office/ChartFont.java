@@ -36,7 +36,7 @@ public interface ChartFont extends IDispatch {
   @DeclDISPID(1610743832)  public Object getSuperscript() throws ComException;
   @DeclDISPID(1610743834)  public void setUnderline(Object value) throws ComException;
   @DeclDISPID(1610743834)  public Object getUnderline() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
 }

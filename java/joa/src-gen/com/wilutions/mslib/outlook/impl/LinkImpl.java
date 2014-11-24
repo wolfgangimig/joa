@@ -8,8 +8,7 @@ public class LinkImpl extends Dispatch implements com.wilutions.mslib.outlook.Li
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class LinkImpl extends Dispatch implements com.wilutions.mslib.outlook.Li
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(109)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(109)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(109,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(12289)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(12289,"Name", DISPATCH_PROPERTYGET,null);
@@ -37,10 +35,10 @@ public class LinkImpl extends Dispatch implements com.wilutions.mslib.outlook.Li
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlObjectClass.valueOf((Integer)obj);
   }
-  @DeclDISPID(8450)  public Dispatch getItem() throws ComException {
+  @DeclDISPID(8450)  public IDispatch getItem() throws ComException {
     final Object obj = this._dispatchCall(8450,"Item", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public LinkImpl(String progId) throws ComException {
     super(progId, "{00063089-0000-0000-C000-000000000046}");

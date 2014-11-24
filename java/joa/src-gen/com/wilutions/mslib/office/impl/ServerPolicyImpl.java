@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AFB-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ServerPolicyImpl extends Dispatch implements com.wilutions.mslib.office.ServerPolicy {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -19,8 +19,7 @@ public class ServerPolicyImpl extends Dispatch implements com.wilutions.mslib.of
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.PolicyItemImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.PolicyItemImpl.class);
   }
   @DeclDISPID(1)  public String getId() throws ComException {
     final Object obj = this._dispatchCall(1,"Id", DISPATCH_PROPERTYGET,null);
@@ -52,10 +51,10 @@ public class ServerPolicyImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(7)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(7)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(7,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public ServerPolicyImpl(String progId) throws ComException {
     super(progId, "{000C0390-0000-0000-C000-000000000046}");

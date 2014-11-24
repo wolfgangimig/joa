@@ -8,73 +8,145 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum XlConstants {
-  xlAutomatic(-4105),
-  xlCombination(-4111),
-  xlCustom(-4114),
-  xlBar(2),
-  xlColumn(3),
-  xl3DBar(-4099),
-  xl3DSurface(-4103),
-  xlDefaultAutoFormat(-1),
-  xlNone(-4142),
-  xlAbove(0),
-  xlBelow(1),
-  xlBoth(1),
-  xlBottom(-4107),
-  xlCenter(-4108),
-  xlChecker(9),
-  xlCircle(8),
-  xlCorner(2),
-  xlCrissCross(16),
-  xlCross(4),
-  xlDiamond(2),
-  xlDistributed(-4117),
-  xlFill(5),
-  xlFixedValue(1),
-  xlGeneral(1),
-  xlGray16(17),
-  xlGray25(-4124),
-  xlGray50(-4125),
-  xlGray75(-4126),
-  xlGray8(18),
-  xlGrid(15),
-  xlHigh(-4127),
-  xlInside(2),
-  xlJustify(-4130),
-  xlLeft(-4131),
-  xlLightDown(13),
-  xlLightHorizontal(11),
-  xlLightUp(14),
-  xlLightVertical(12),
-  xlLow(-4134),
-  xlMaximum(2),
-  xlMinimum(4),
-  xlMinusValues(3),
-  xlNextToAxis(4),
-  xlOpaque(3),
-  xlOutside(3),
-  xlPercent(2),
-  xlPlus(9),
-  xlPlusValues(2),
-  xlRight(-4152),
-  xlScale(3),
-  xlSemiGray75(10),
-  xlShowLabel(4),
-  xlShowLabelAndPercent(5),
-  xlShowPercent(3),
-  xlShowValue(2),
-  xlSingle(2),
-  xlSolid(1),
-  xlSquare(1),
-  xlStar(5),
-  xlStError(4),
-  xlTop(-4160),
-  xlTransparent(2),
-  xlTriangle(3);
+public class XlConstants {
 
+  // Typed constants
+  public final static XlConstants xlAutomatic = new XlConstants(-4105);
+  public final static XlConstants xlCombination = new XlConstants(-4111);
+  public final static XlConstants xlCustom = new XlConstants(-4114);
+  public final static XlConstants xlBar = new XlConstants(2);
+  public final static XlConstants xlColumn = new XlConstants(3);
+  public final static XlConstants xl3DBar = new XlConstants(-4099);
+  public final static XlConstants xl3DSurface = new XlConstants(-4103);
+  public final static XlConstants xlDefaultAutoFormat = new XlConstants(-1);
+  public final static XlConstants xlNone = new XlConstants(-4142);
+  public final static XlConstants xlAbove = new XlConstants(0);
+  public final static XlConstants xlBelow = new XlConstants(1);
+  public final static XlConstants xlBoth = new XlConstants(1);
+  public final static XlConstants xlBottom = new XlConstants(-4107);
+  public final static XlConstants xlCenter = new XlConstants(-4108);
+  public final static XlConstants xlChecker = new XlConstants(9);
+  public final static XlConstants xlCircle = new XlConstants(8);
+  public final static XlConstants xlCorner = new XlConstants(2);
+  public final static XlConstants xlCrissCross = new XlConstants(16);
+  public final static XlConstants xlCross = new XlConstants(4);
+  public final static XlConstants xlDiamond = new XlConstants(2);
+  public final static XlConstants xlDistributed = new XlConstants(-4117);
+  public final static XlConstants xlFill = new XlConstants(5);
+  public final static XlConstants xlFixedValue = new XlConstants(1);
+  public final static XlConstants xlGeneral = new XlConstants(1);
+  public final static XlConstants xlGray16 = new XlConstants(17);
+  public final static XlConstants xlGray25 = new XlConstants(-4124);
+  public final static XlConstants xlGray50 = new XlConstants(-4125);
+  public final static XlConstants xlGray75 = new XlConstants(-4126);
+  public final static XlConstants xlGray8 = new XlConstants(18);
+  public final static XlConstants xlGrid = new XlConstants(15);
+  public final static XlConstants xlHigh = new XlConstants(-4127);
+  public final static XlConstants xlInside = new XlConstants(2);
+  public final static XlConstants xlJustify = new XlConstants(-4130);
+  public final static XlConstants xlLeft = new XlConstants(-4131);
+  public final static XlConstants xlLightDown = new XlConstants(13);
+  public final static XlConstants xlLightHorizontal = new XlConstants(11);
+  public final static XlConstants xlLightUp = new XlConstants(14);
+  public final static XlConstants xlLightVertical = new XlConstants(12);
+  public final static XlConstants xlLow = new XlConstants(-4134);
+  public final static XlConstants xlMaximum = new XlConstants(2);
+  public final static XlConstants xlMinimum = new XlConstants(4);
+  public final static XlConstants xlMinusValues = new XlConstants(3);
+  public final static XlConstants xlNextToAxis = new XlConstants(4);
+  public final static XlConstants xlOpaque = new XlConstants(3);
+  public final static XlConstants xlOutside = new XlConstants(3);
+  public final static XlConstants xlPercent = new XlConstants(2);
+  public final static XlConstants xlPlus = new XlConstants(9);
+  public final static XlConstants xlPlusValues = new XlConstants(2);
+  public final static XlConstants xlRight = new XlConstants(-4152);
+  public final static XlConstants xlScale = new XlConstants(3);
+  public final static XlConstants xlSemiGray75 = new XlConstants(10);
+  public final static XlConstants xlShowLabel = new XlConstants(4);
+  public final static XlConstants xlShowLabelAndPercent = new XlConstants(5);
+  public final static XlConstants xlShowPercent = new XlConstants(3);
+  public final static XlConstants xlShowValue = new XlConstants(2);
+  public final static XlConstants xlSingle = new XlConstants(2);
+  public final static XlConstants xlSolid = new XlConstants(1);
+  public final static XlConstants xlSquare = new XlConstants(1);
+  public final static XlConstants xlStar = new XlConstants(5);
+  public final static XlConstants xlStError = new XlConstants(4);
+  public final static XlConstants xlTop = new XlConstants(-4160);
+  public final static XlConstants xlTransparent = new XlConstants(2);
+  public final static XlConstants xlTriangle = new XlConstants(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _xlAutomatic = -4105;
+  public final static int _xlCombination = -4111;
+  public final static int _xlCustom = -4114;
+  public final static int _xlBar = 2;
+  public final static int _xlColumn = 3;
+  public final static int _xl3DBar = -4099;
+  public final static int _xl3DSurface = -4103;
+  public final static int _xlDefaultAutoFormat = -1;
+  public final static int _xlNone = -4142;
+  public final static int _xlAbove = 0;
+  public final static int _xlBelow = 1;
+  public final static int _xlBoth = 1;
+  public final static int _xlBottom = -4107;
+  public final static int _xlCenter = -4108;
+  public final static int _xlChecker = 9;
+  public final static int _xlCircle = 8;
+  public final static int _xlCorner = 2;
+  public final static int _xlCrissCross = 16;
+  public final static int _xlCross = 4;
+  public final static int _xlDiamond = 2;
+  public final static int _xlDistributed = -4117;
+  public final static int _xlFill = 5;
+  public final static int _xlFixedValue = 1;
+  public final static int _xlGeneral = 1;
+  public final static int _xlGray16 = 17;
+  public final static int _xlGray25 = -4124;
+  public final static int _xlGray50 = -4125;
+  public final static int _xlGray75 = -4126;
+  public final static int _xlGray8 = 18;
+  public final static int _xlGrid = 15;
+  public final static int _xlHigh = -4127;
+  public final static int _xlInside = 2;
+  public final static int _xlJustify = -4130;
+  public final static int _xlLeft = -4131;
+  public final static int _xlLightDown = 13;
+  public final static int _xlLightHorizontal = 11;
+  public final static int _xlLightUp = 14;
+  public final static int _xlLightVertical = 12;
+  public final static int _xlLow = -4134;
+  public final static int _xlMaximum = 2;
+  public final static int _xlMinimum = 4;
+  public final static int _xlMinusValues = 3;
+  public final static int _xlNextToAxis = 4;
+  public final static int _xlOpaque = 3;
+  public final static int _xlOutside = 3;
+  public final static int _xlPercent = 2;
+  public final static int _xlPlus = 9;
+  public final static int _xlPlusValues = 2;
+  public final static int _xlRight = -4152;
+  public final static int _xlScale = 3;
+  public final static int _xlSemiGray75 = 10;
+  public final static int _xlShowLabel = 4;
+  public final static int _xlShowLabelAndPercent = 5;
+  public final static int _xlShowPercent = 3;
+  public final static int _xlShowValue = 2;
+  public final static int _xlSingle = 2;
+  public final static int _xlSolid = 1;
+  public final static int _xlSquare = 1;
+  public final static int _xlStar = 5;
+  public final static int _xlStError = 4;
+  public final static int _xlTop = -4160;
+  public final static int _xlTransparent = 2;
+  public final static int _xlTriangle = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private XlConstants(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  XlConstants valueOf(int value) {
     switch(value) {
     case -4105: return xlAutomatic;
@@ -140,7 +212,7 @@ public enum XlConstants {
     case -4160: return xlTop;
     //se 2: return xlTransparent; // same as xlBar
     //se 3: return xlTriangle; // same as xlColumn
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + XlConstants.class);
+    default: return new XlConstants(value);
     }
   }
 }

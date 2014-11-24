@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A04-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class DiagramNodeChildrenImpl extends Dispatch implements com.wilutions.mslib.office.DiagramNodeChildren {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -24,24 +24,22 @@ public class DiagramNodeChildrenImpl extends Dispatch implements com.wilutions.m
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(10)  public com.wilutions.mslib.office.DiagramNode AddNode(Object Index, com.wilutions.mslib.office.MsoDiagramNodeType NodeType) throws ComException {
     assert(Index != null);
     assert(NodeType != null);
     final Object obj = this._dispatchCall(10,"AddNode", DISPATCH_METHOD,null,Index,NodeType.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(11)  public void SelectAll() throws ComException {
     this._dispatchCall(11,"SelectAll", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(100)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(100)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(100,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(101)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(101,"Count", DISPATCH_PROPERTYGET,null);
@@ -51,14 +49,12 @@ public class DiagramNodeChildrenImpl extends Dispatch implements com.wilutions.m
   @DeclDISPID(103)  public com.wilutions.mslib.office.DiagramNode getFirstChild() throws ComException {
     final Object obj = this._dispatchCall(103,"FirstChild", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(104)  public com.wilutions.mslib.office.DiagramNode getLastChild() throws ComException {
     final Object obj = this._dispatchCall(104,"LastChild", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   public DiagramNodeChildrenImpl(String progId) throws ComException {
     super(progId, "{000C036F-0000-0000-C000-000000000046}");

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0376-0000-0000-C000-000000000046}")
 public interface Permission extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public UserPermission getItem(Object Index) throws ComException;
   @DeclDISPID(1)  public Integer getCount() throws ComException;
@@ -16,7 +16,7 @@ public interface Permission extends IDispatch {
   @DeclDISPID(2)  public void setEnableTrustedBrowser(Boolean value) throws ComException;
   @DeclDISPID(3)  public UserPermission Add(String UserId, Object Permission, Object ExpirationDate) throws ComException;
   @DeclDISPID(4)  public void ApplyPolicy(String FileName) throws ComException;
-  @DeclDISPID(5)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(5)  public IDispatch getParent() throws ComException;
   @DeclDISPID(6)  public void RemoveAll() throws ComException;
   @DeclDISPID(7)  public Boolean getEnabled() throws ComException;
   @DeclDISPID(7)  public void setEnabled(Boolean value) throws ComException;

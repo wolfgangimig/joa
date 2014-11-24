@@ -8,20 +8,39 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlItemType {
-  olMailItem(0),
-  olAppointmentItem(1),
-  olContactItem(2),
-  olTaskItem(3),
-  olJournalItem(4),
-  olNoteItem(5),
-  olPostItem(6),
-  olDistributionListItem(7),
-  olMobileItemSMS(11),
-  olMobileItemMMS(12);
+public class OlItemType {
 
+  // Typed constants
+  public final static OlItemType olMailItem = new OlItemType(0);
+  public final static OlItemType olAppointmentItem = new OlItemType(1);
+  public final static OlItemType olContactItem = new OlItemType(2);
+  public final static OlItemType olTaskItem = new OlItemType(3);
+  public final static OlItemType olJournalItem = new OlItemType(4);
+  public final static OlItemType olNoteItem = new OlItemType(5);
+  public final static OlItemType olPostItem = new OlItemType(6);
+  public final static OlItemType olDistributionListItem = new OlItemType(7);
+  public final static OlItemType olMobileItemSMS = new OlItemType(11);
+  public final static OlItemType olMobileItemMMS = new OlItemType(12);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olMailItem = 0;
+  public final static int _olAppointmentItem = 1;
+  public final static int _olContactItem = 2;
+  public final static int _olTaskItem = 3;
+  public final static int _olJournalItem = 4;
+  public final static int _olNoteItem = 5;
+  public final static int _olPostItem = 6;
+  public final static int _olDistributionListItem = 7;
+  public final static int _olMobileItemSMS = 11;
+  public final static int _olMobileItemMMS = 12;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlItemType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlItemType valueOf(int value) {
     switch(value) {
     case 0: return olMailItem;
@@ -34,7 +53,7 @@ public enum OlItemType {
     case 7: return olDistributionListItem;
     case 11: return olMobileItemSMS;
     case 12: return olMobileItemMMS;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlItemType.class);
+    default: return new OlItemType(value);
     }
   }
 }

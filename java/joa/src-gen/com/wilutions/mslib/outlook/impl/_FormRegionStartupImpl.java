@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A932-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _FormRegionStartupImpl extends Dispatch implements com.wilutions.mslib.outlook._FormRegionStartup {
-  @DeclDISPID(64310)  public Object GetFormRegionStorage(String FormRegionName, Dispatch Item, Integer LCID, com.wilutions.mslib.outlook.OlFormRegionMode FormRegionMode, com.wilutions.mslib.outlook.OlFormRegionSize FormRegionSize) throws ComException {
+  @DeclDISPID(64310)  public Object GetFormRegionStorage(String FormRegionName, IDispatch Item, Integer LCID, com.wilutions.mslib.outlook.OlFormRegionMode FormRegionMode, com.wilutions.mslib.outlook.OlFormRegionSize FormRegionSize) throws ComException {
     assert(FormRegionName != null);
     assert(LCID != null);
     assert(FormRegionMode != null);

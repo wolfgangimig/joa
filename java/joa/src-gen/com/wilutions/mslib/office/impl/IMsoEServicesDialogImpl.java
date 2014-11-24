@@ -18,20 +18,20 @@ public class IMsoEServicesDialogImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743811)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743811)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743811,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(1610743812)  public Dispatch getWebComponent() throws ComException {
+  @DeclDISPID(1610743812)  public IDispatch getWebComponent() throws ComException {
     final Object obj = this._dispatchCall(1610743812,"WebComponent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(1610743813)  public Dispatch getClipArt() throws ComException {
+  @DeclDISPID(1610743813)  public IDispatch getClipArt() throws ComException {
     final Object obj = this._dispatchCall(1610743813,"ClipArt", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public IMsoEServicesDialogImpl(String progId) throws ComException {
     super(progId, "{000C0372-0000-0000-C000-000000000046}");

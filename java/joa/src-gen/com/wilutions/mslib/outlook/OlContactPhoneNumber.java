@@ -8,29 +8,57 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlContactPhoneNumber {
-  olContactPhoneAssistant(0),
-  olContactPhoneBusiness(1),
-  olContactPhoneBusiness2(2),
-  olContactPhoneBusinessFax(3),
-  olContactPhoneCallback(4),
-  olContactPhoneCar(5),
-  olContactPhoneCompany(6),
-  olContactPhoneHome(7),
-  olContactPhoneHome2(8),
-  olContactPhoneHomeFax(9),
-  olContactPhoneISDN(10),
-  olContactPhoneMobile(11),
-  olContactPhoneOther(12),
-  olContactPhoneOtherFax(13),
-  olContactPhonePager(14),
-  olContactPhonePrimary(15),
-  olContactPhoneRadio(16),
-  olContactPhoneTelex(17),
-  olContactPhoneTTYTTD(18);
+public class OlContactPhoneNumber {
 
+  // Typed constants
+  public final static OlContactPhoneNumber olContactPhoneAssistant = new OlContactPhoneNumber(0);
+  public final static OlContactPhoneNumber olContactPhoneBusiness = new OlContactPhoneNumber(1);
+  public final static OlContactPhoneNumber olContactPhoneBusiness2 = new OlContactPhoneNumber(2);
+  public final static OlContactPhoneNumber olContactPhoneBusinessFax = new OlContactPhoneNumber(3);
+  public final static OlContactPhoneNumber olContactPhoneCallback = new OlContactPhoneNumber(4);
+  public final static OlContactPhoneNumber olContactPhoneCar = new OlContactPhoneNumber(5);
+  public final static OlContactPhoneNumber olContactPhoneCompany = new OlContactPhoneNumber(6);
+  public final static OlContactPhoneNumber olContactPhoneHome = new OlContactPhoneNumber(7);
+  public final static OlContactPhoneNumber olContactPhoneHome2 = new OlContactPhoneNumber(8);
+  public final static OlContactPhoneNumber olContactPhoneHomeFax = new OlContactPhoneNumber(9);
+  public final static OlContactPhoneNumber olContactPhoneISDN = new OlContactPhoneNumber(10);
+  public final static OlContactPhoneNumber olContactPhoneMobile = new OlContactPhoneNumber(11);
+  public final static OlContactPhoneNumber olContactPhoneOther = new OlContactPhoneNumber(12);
+  public final static OlContactPhoneNumber olContactPhoneOtherFax = new OlContactPhoneNumber(13);
+  public final static OlContactPhoneNumber olContactPhonePager = new OlContactPhoneNumber(14);
+  public final static OlContactPhoneNumber olContactPhonePrimary = new OlContactPhoneNumber(15);
+  public final static OlContactPhoneNumber olContactPhoneRadio = new OlContactPhoneNumber(16);
+  public final static OlContactPhoneNumber olContactPhoneTelex = new OlContactPhoneNumber(17);
+  public final static OlContactPhoneNumber olContactPhoneTTYTTD = new OlContactPhoneNumber(18);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olContactPhoneAssistant = 0;
+  public final static int _olContactPhoneBusiness = 1;
+  public final static int _olContactPhoneBusiness2 = 2;
+  public final static int _olContactPhoneBusinessFax = 3;
+  public final static int _olContactPhoneCallback = 4;
+  public final static int _olContactPhoneCar = 5;
+  public final static int _olContactPhoneCompany = 6;
+  public final static int _olContactPhoneHome = 7;
+  public final static int _olContactPhoneHome2 = 8;
+  public final static int _olContactPhoneHomeFax = 9;
+  public final static int _olContactPhoneISDN = 10;
+  public final static int _olContactPhoneMobile = 11;
+  public final static int _olContactPhoneOther = 12;
+  public final static int _olContactPhoneOtherFax = 13;
+  public final static int _olContactPhonePager = 14;
+  public final static int _olContactPhonePrimary = 15;
+  public final static int _olContactPhoneRadio = 16;
+  public final static int _olContactPhoneTelex = 17;
+  public final static int _olContactPhoneTTYTTD = 18;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlContactPhoneNumber(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlContactPhoneNumber valueOf(int value) {
     switch(value) {
     case 0: return olContactPhoneAssistant;
@@ -52,7 +80,7 @@ public enum OlContactPhoneNumber {
     case 16: return olContactPhoneRadio;
     case 17: return olContactPhoneTelex;
     case 18: return olContactPhoneTTYTTD;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlContactPhoneNumber.class);
+    default: return new OlContactPhoneNumber(value);
     }
   }
 }

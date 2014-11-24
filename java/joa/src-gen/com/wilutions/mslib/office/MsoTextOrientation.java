@@ -8,17 +8,33 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoTextOrientation {
-  msoTextOrientationMixed(-2),
-  msoTextOrientationHorizontal(1),
-  msoTextOrientationUpward(2),
-  msoTextOrientationDownward(3),
-  msoTextOrientationVerticalFarEast(4),
-  msoTextOrientationVertical(5),
-  msoTextOrientationHorizontalRotatedFarEast(6);
+public class MsoTextOrientation {
 
+  // Typed constants
+  public final static MsoTextOrientation msoTextOrientationMixed = new MsoTextOrientation(-2);
+  public final static MsoTextOrientation msoTextOrientationHorizontal = new MsoTextOrientation(1);
+  public final static MsoTextOrientation msoTextOrientationUpward = new MsoTextOrientation(2);
+  public final static MsoTextOrientation msoTextOrientationDownward = new MsoTextOrientation(3);
+  public final static MsoTextOrientation msoTextOrientationVerticalFarEast = new MsoTextOrientation(4);
+  public final static MsoTextOrientation msoTextOrientationVertical = new MsoTextOrientation(5);
+  public final static MsoTextOrientation msoTextOrientationHorizontalRotatedFarEast = new MsoTextOrientation(6);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoTextOrientationMixed = -2;
+  public final static int _msoTextOrientationHorizontal = 1;
+  public final static int _msoTextOrientationUpward = 2;
+  public final static int _msoTextOrientationDownward = 3;
+  public final static int _msoTextOrientationVerticalFarEast = 4;
+  public final static int _msoTextOrientationVertical = 5;
+  public final static int _msoTextOrientationHorizontalRotatedFarEast = 6;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoTextOrientation(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoTextOrientation valueOf(int value) {
     switch(value) {
     case -2: return msoTextOrientationMixed;
@@ -28,7 +44,7 @@ public enum MsoTextOrientation {
     case 4: return msoTextOrientationVerticalFarEast;
     case 5: return msoTextOrientationVertical;
     case 6: return msoTextOrientationHorizontalRotatedFarEast;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoTextOrientation.class);
+    default: return new MsoTextOrientation(value);
     }
   }
 }

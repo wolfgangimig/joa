@@ -11,14 +11,13 @@ public class Page extends Dispatch implements IPage {
   @DeclDISPID(0)  public Controls getControls() throws ComException {
     final Object obj = this._dispatchCall(0,"Controls", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.ControlsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.ControlsImpl.class);
   }
   @DeclDISPID(256)  public Control getActiveControl() throws ComException {
     final Object obj = this._dispatchCall(256,"ActiveControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Control.class);
+    return disp.as(Control.class);
   }
   @DeclDISPID(257)  public Boolean getCanPaste() throws ComException {
     final Object obj = this._dispatchCall(257,"CanPaste", DISPATCH_PROPERTYGET,null);
@@ -131,8 +130,7 @@ public class Page extends Dispatch implements IPage {
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(27)  public void setPictureSizeMode(fmPictureSizeMode value) throws ComException {
     assert(value != null);
@@ -334,10 +332,10 @@ public class Page extends Dispatch implements IPage {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-2147418104)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(-2147418104)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(-2147418104,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public Page() throws ComException {
     super("{5CEF5610-713D-11CE-80C9-00AA00611080}", "{5CEF5613-713D-11CE-80C9-00AA00611080}");

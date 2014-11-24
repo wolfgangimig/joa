@@ -3,6 +3,7 @@ package ribbonx.outlook14.addin;
 import java.util.Date;
 
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 import com.wilutions.mslib.outlook.Actions;
 import com.wilutions.mslib.outlook.Application;
 import com.wilutions.mslib.outlook.Attachments;
@@ -11,7 +12,7 @@ import com.wilutions.mslib.outlook.impl.AttachmentsImpl;
 
 public class OutlookItem {
 
-    private Dispatch m_item;  // the wrapped Outlook item
+    private IDispatch m_item;  // the wrapped Outlook item
     //private Object[] m_args;  // dummy argument array
 
     
@@ -64,7 +65,7 @@ public class OutlookItem {
 //    private final static String OlUserProperties = "UserProperties";
     
     
-	public OutlookItem(Dispatch item) {
+	public OutlookItem(IDispatch item) {
 		m_item = item;
 //		m_args = new Object[0];
 	}

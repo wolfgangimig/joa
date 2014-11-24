@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface Pages extends IDispatch {
   @DeclDISPID(60)  public Integer getCount() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(0)  public Dispatch Item(Object varg) throws ComException;
+  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException;
   @DeclDISPID(1610743811)  public Object Enum() throws ComException;
   @DeclDISPID(66)  public Page Add(Object bstrName, Object bstrCaption, Object lIndex) throws ComException;
   @DeclDISPID(1610743813)  public Page _AddCtrl(Integer clsid, String bstrName, String bstrCaption) throws ComException;

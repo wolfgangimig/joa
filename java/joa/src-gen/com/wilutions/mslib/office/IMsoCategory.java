@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1733-0000-0000-C000-000000000046}")
 public interface IMsoCategory extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(110)  public String getName() throws ComException;
   @DeclDISPID(2887)  public Boolean getIsFiltered() throws ComException;
   @DeclDISPID(2887)  public void setIsFiltered(Boolean pfIsFiltered) throws ComException;

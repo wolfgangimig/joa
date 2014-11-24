@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlContextMenu {
-  olItemContextMenu(0),
-  olViewContextMenu(1),
-  olFolderContextMenu(2),
-  olAttachmentContextMenu(3),
-  olStoreContextMenu(4),
-  olShortcutContextMenu(5);
+public class OlContextMenu {
 
+  // Typed constants
+  public final static OlContextMenu olItemContextMenu = new OlContextMenu(0);
+  public final static OlContextMenu olViewContextMenu = new OlContextMenu(1);
+  public final static OlContextMenu olFolderContextMenu = new OlContextMenu(2);
+  public final static OlContextMenu olAttachmentContextMenu = new OlContextMenu(3);
+  public final static OlContextMenu olStoreContextMenu = new OlContextMenu(4);
+  public final static OlContextMenu olShortcutContextMenu = new OlContextMenu(5);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olItemContextMenu = 0;
+  public final static int _olViewContextMenu = 1;
+  public final static int _olFolderContextMenu = 2;
+  public final static int _olAttachmentContextMenu = 3;
+  public final static int _olStoreContextMenu = 4;
+  public final static int _olShortcutContextMenu = 5;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlContextMenu(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlContextMenu valueOf(int value) {
     switch(value) {
     case 0: return olItemContextMenu;
@@ -26,7 +41,7 @@ public enum OlContextMenu {
     case 3: return olAttachmentContextMenu;
     case 4: return olStoreContextMenu;
     case 5: return olShortcutContextMenu;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlContextMenu.class);
+    default: return new OlContextMenu(value);
     }
   }
 }

@@ -8,21 +8,34 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{5931055E-16BA-101B-989C-00006B82871A}")
-public enum fmScrollBars {
-  fmScrollBarsNone(0),
-  fmScrollBarsHorizontal(1),
-  fmScrollBarsVertical(2),
-  fmScrollBarsBoth(3);
+public class fmScrollBars {
 
+  // Typed constants
+  public final static fmScrollBars fmScrollBarsNone = new fmScrollBars(0);
+  public final static fmScrollBars fmScrollBarsHorizontal = new fmScrollBars(1);
+  public final static fmScrollBars fmScrollBarsVertical = new fmScrollBars(2);
+  public final static fmScrollBars fmScrollBarsBoth = new fmScrollBars(3);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmScrollBarsNone = 0;
+  public final static int _fmScrollBarsHorizontal = 1;
+  public final static int _fmScrollBarsVertical = 2;
+  public final static int _fmScrollBarsBoth = 3;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmScrollBars(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmScrollBars valueOf(int value) {
     switch(value) {
     case 0: return fmScrollBarsNone;
     case 1: return fmScrollBarsHorizontal;
     case 2: return fmScrollBarsVertical;
     case 3: return fmScrollBarsBoth;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmScrollBars.class);
+    default: return new fmScrollBars(value);
     }
   }
 }

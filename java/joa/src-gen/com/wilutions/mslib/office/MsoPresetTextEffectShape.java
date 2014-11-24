@@ -8,51 +8,101 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoPresetTextEffectShape {
-  msoTextEffectShapeMixed(-2),
-  msoTextEffectShapePlainText(1),
-  msoTextEffectShapeStop(2),
-  msoTextEffectShapeTriangleUp(3),
-  msoTextEffectShapeTriangleDown(4),
-  msoTextEffectShapeChevronUp(5),
-  msoTextEffectShapeChevronDown(6),
-  msoTextEffectShapeRingInside(7),
-  msoTextEffectShapeRingOutside(8),
-  msoTextEffectShapeArchUpCurve(9),
-  msoTextEffectShapeArchDownCurve(10),
-  msoTextEffectShapeCircleCurve(11),
-  msoTextEffectShapeButtonCurve(12),
-  msoTextEffectShapeArchUpPour(13),
-  msoTextEffectShapeArchDownPour(14),
-  msoTextEffectShapeCirclePour(15),
-  msoTextEffectShapeButtonPour(16),
-  msoTextEffectShapeCurveUp(17),
-  msoTextEffectShapeCurveDown(18),
-  msoTextEffectShapeCanUp(19),
-  msoTextEffectShapeCanDown(20),
-  msoTextEffectShapeWave1(21),
-  msoTextEffectShapeWave2(22),
-  msoTextEffectShapeDoubleWave1(23),
-  msoTextEffectShapeDoubleWave2(24),
-  msoTextEffectShapeInflate(25),
-  msoTextEffectShapeDeflate(26),
-  msoTextEffectShapeInflateBottom(27),
-  msoTextEffectShapeDeflateBottom(28),
-  msoTextEffectShapeInflateTop(29),
-  msoTextEffectShapeDeflateTop(30),
-  msoTextEffectShapeDeflateInflate(31),
-  msoTextEffectShapeDeflateInflateDeflate(32),
-  msoTextEffectShapeFadeRight(33),
-  msoTextEffectShapeFadeLeft(34),
-  msoTextEffectShapeFadeUp(35),
-  msoTextEffectShapeFadeDown(36),
-  msoTextEffectShapeSlantUp(37),
-  msoTextEffectShapeSlantDown(38),
-  msoTextEffectShapeCascadeUp(39),
-  msoTextEffectShapeCascadeDown(40);
+public class MsoPresetTextEffectShape {
 
+  // Typed constants
+  public final static MsoPresetTextEffectShape msoTextEffectShapeMixed = new MsoPresetTextEffectShape(-2);
+  public final static MsoPresetTextEffectShape msoTextEffectShapePlainText = new MsoPresetTextEffectShape(1);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeStop = new MsoPresetTextEffectShape(2);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeTriangleUp = new MsoPresetTextEffectShape(3);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeTriangleDown = new MsoPresetTextEffectShape(4);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeChevronUp = new MsoPresetTextEffectShape(5);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeChevronDown = new MsoPresetTextEffectShape(6);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeRingInside = new MsoPresetTextEffectShape(7);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeRingOutside = new MsoPresetTextEffectShape(8);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeArchUpCurve = new MsoPresetTextEffectShape(9);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeArchDownCurve = new MsoPresetTextEffectShape(10);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCircleCurve = new MsoPresetTextEffectShape(11);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeButtonCurve = new MsoPresetTextEffectShape(12);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeArchUpPour = new MsoPresetTextEffectShape(13);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeArchDownPour = new MsoPresetTextEffectShape(14);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCirclePour = new MsoPresetTextEffectShape(15);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeButtonPour = new MsoPresetTextEffectShape(16);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCurveUp = new MsoPresetTextEffectShape(17);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCurveDown = new MsoPresetTextEffectShape(18);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCanUp = new MsoPresetTextEffectShape(19);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCanDown = new MsoPresetTextEffectShape(20);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeWave1 = new MsoPresetTextEffectShape(21);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeWave2 = new MsoPresetTextEffectShape(22);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDoubleWave1 = new MsoPresetTextEffectShape(23);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDoubleWave2 = new MsoPresetTextEffectShape(24);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeInflate = new MsoPresetTextEffectShape(25);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDeflate = new MsoPresetTextEffectShape(26);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeInflateBottom = new MsoPresetTextEffectShape(27);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDeflateBottom = new MsoPresetTextEffectShape(28);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeInflateTop = new MsoPresetTextEffectShape(29);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDeflateTop = new MsoPresetTextEffectShape(30);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDeflateInflate = new MsoPresetTextEffectShape(31);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeDeflateInflateDeflate = new MsoPresetTextEffectShape(32);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeFadeRight = new MsoPresetTextEffectShape(33);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeFadeLeft = new MsoPresetTextEffectShape(34);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeFadeUp = new MsoPresetTextEffectShape(35);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeFadeDown = new MsoPresetTextEffectShape(36);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeSlantUp = new MsoPresetTextEffectShape(37);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeSlantDown = new MsoPresetTextEffectShape(38);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCascadeUp = new MsoPresetTextEffectShape(39);
+  public final static MsoPresetTextEffectShape msoTextEffectShapeCascadeDown = new MsoPresetTextEffectShape(40);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoTextEffectShapeMixed = -2;
+  public final static int _msoTextEffectShapePlainText = 1;
+  public final static int _msoTextEffectShapeStop = 2;
+  public final static int _msoTextEffectShapeTriangleUp = 3;
+  public final static int _msoTextEffectShapeTriangleDown = 4;
+  public final static int _msoTextEffectShapeChevronUp = 5;
+  public final static int _msoTextEffectShapeChevronDown = 6;
+  public final static int _msoTextEffectShapeRingInside = 7;
+  public final static int _msoTextEffectShapeRingOutside = 8;
+  public final static int _msoTextEffectShapeArchUpCurve = 9;
+  public final static int _msoTextEffectShapeArchDownCurve = 10;
+  public final static int _msoTextEffectShapeCircleCurve = 11;
+  public final static int _msoTextEffectShapeButtonCurve = 12;
+  public final static int _msoTextEffectShapeArchUpPour = 13;
+  public final static int _msoTextEffectShapeArchDownPour = 14;
+  public final static int _msoTextEffectShapeCirclePour = 15;
+  public final static int _msoTextEffectShapeButtonPour = 16;
+  public final static int _msoTextEffectShapeCurveUp = 17;
+  public final static int _msoTextEffectShapeCurveDown = 18;
+  public final static int _msoTextEffectShapeCanUp = 19;
+  public final static int _msoTextEffectShapeCanDown = 20;
+  public final static int _msoTextEffectShapeWave1 = 21;
+  public final static int _msoTextEffectShapeWave2 = 22;
+  public final static int _msoTextEffectShapeDoubleWave1 = 23;
+  public final static int _msoTextEffectShapeDoubleWave2 = 24;
+  public final static int _msoTextEffectShapeInflate = 25;
+  public final static int _msoTextEffectShapeDeflate = 26;
+  public final static int _msoTextEffectShapeInflateBottom = 27;
+  public final static int _msoTextEffectShapeDeflateBottom = 28;
+  public final static int _msoTextEffectShapeInflateTop = 29;
+  public final static int _msoTextEffectShapeDeflateTop = 30;
+  public final static int _msoTextEffectShapeDeflateInflate = 31;
+  public final static int _msoTextEffectShapeDeflateInflateDeflate = 32;
+  public final static int _msoTextEffectShapeFadeRight = 33;
+  public final static int _msoTextEffectShapeFadeLeft = 34;
+  public final static int _msoTextEffectShapeFadeUp = 35;
+  public final static int _msoTextEffectShapeFadeDown = 36;
+  public final static int _msoTextEffectShapeSlantUp = 37;
+  public final static int _msoTextEffectShapeSlantDown = 38;
+  public final static int _msoTextEffectShapeCascadeUp = 39;
+  public final static int _msoTextEffectShapeCascadeDown = 40;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPresetTextEffectShape(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPresetTextEffectShape valueOf(int value) {
     switch(value) {
     case -2: return msoTextEffectShapeMixed;
@@ -96,7 +146,7 @@ public enum MsoPresetTextEffectShape {
     case 38: return msoTextEffectShapeSlantDown;
     case 39: return msoTextEffectShapeCascadeUp;
     case 40: return msoTextEffectShapeCascadeDown;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPresetTextEffectShape.class);
+    default: return new MsoPresetTextEffectShape(value);
     }
   }
 }

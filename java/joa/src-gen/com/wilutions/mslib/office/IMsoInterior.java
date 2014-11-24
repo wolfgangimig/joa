@@ -20,7 +20,7 @@ public interface IMsoInterior extends IDispatch {
   @DeclDISPID(1610743816)  public Object getPatternColor() throws ComException;
   @DeclDISPID(1610743818)  public void setPatternColorIndex(Object value) throws ComException;
   @DeclDISPID(1610743818)  public Object getPatternColorIndex() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
 }

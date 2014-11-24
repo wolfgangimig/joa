@@ -8,147 +8,293 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoEncoding {
-  msoEncodingThai(874),
-  msoEncodingJapaneseShiftJIS(932),
-  msoEncodingSimplifiedChineseGBK(936),
-  msoEncodingKorean(949),
-  msoEncodingTraditionalChineseBig5(950),
-  msoEncodingUnicodeLittleEndian(1200),
-  msoEncodingUnicodeBigEndian(1201),
-  msoEncodingCentralEuropean(1250),
-  msoEncodingCyrillic(1251),
-  msoEncodingWestern(1252),
-  msoEncodingGreek(1253),
-  msoEncodingTurkish(1254),
-  msoEncodingHebrew(1255),
-  msoEncodingArabic(1256),
-  msoEncodingBaltic(1257),
-  msoEncodingVietnamese(1258),
-  msoEncodingAutoDetect(50001),
-  msoEncodingJapaneseAutoDetect(50932),
-  msoEncodingSimplifiedChineseAutoDetect(50936),
-  msoEncodingKoreanAutoDetect(50949),
-  msoEncodingTraditionalChineseAutoDetect(50950),
-  msoEncodingCyrillicAutoDetect(51251),
-  msoEncodingGreekAutoDetect(51253),
-  msoEncodingArabicAutoDetect(51256),
-  msoEncodingISO88591Latin1(28591),
-  msoEncodingISO88592CentralEurope(28592),
-  msoEncodingISO88593Latin3(28593),
-  msoEncodingISO88594Baltic(28594),
-  msoEncodingISO88595Cyrillic(28595),
-  msoEncodingISO88596Arabic(28596),
-  msoEncodingISO88597Greek(28597),
-  msoEncodingISO88598Hebrew(28598),
-  msoEncodingISO88599Turkish(28599),
-  msoEncodingISO885915Latin9(28605),
-  msoEncodingISO88598HebrewLogical(38598),
-  msoEncodingISO2022JPNoHalfwidthKatakana(50220),
-  msoEncodingISO2022JPJISX02021984(50221),
-  msoEncodingISO2022JPJISX02011989(50222),
-  msoEncodingISO2022KR(50225),
-  msoEncodingISO2022CNTraditionalChinese(50227),
-  msoEncodingISO2022CNSimplifiedChinese(50229),
-  msoEncodingMacRoman(10000),
-  msoEncodingMacJapanese(10001),
-  msoEncodingMacTraditionalChineseBig5(10002),
-  msoEncodingMacKorean(10003),
-  msoEncodingMacArabic(10004),
-  msoEncodingMacHebrew(10005),
-  msoEncodingMacGreek1(10006),
-  msoEncodingMacCyrillic(10007),
-  msoEncodingMacSimplifiedChineseGB2312(10008),
-  msoEncodingMacRomania(10010),
-  msoEncodingMacUkraine(10017),
-  msoEncodingMacLatin2(10029),
-  msoEncodingMacIcelandic(10079),
-  msoEncodingMacTurkish(10081),
-  msoEncodingMacCroatia(10082),
-  msoEncodingEBCDICUSCanada(37),
-  msoEncodingEBCDICInternational(500),
-  msoEncodingEBCDICMultilingualROECELatin2(870),
-  msoEncodingEBCDICGreekModern(875),
-  msoEncodingEBCDICTurkishLatin5(1026),
-  msoEncodingEBCDICGermany(20273),
-  msoEncodingEBCDICDenmarkNorway(20277),
-  msoEncodingEBCDICFinlandSweden(20278),
-  msoEncodingEBCDICItaly(20280),
-  msoEncodingEBCDICLatinAmericaSpain(20284),
-  msoEncodingEBCDICUnitedKingdom(20285),
-  msoEncodingEBCDICJapaneseKatakanaExtended(20290),
-  msoEncodingEBCDICFrance(20297),
-  msoEncodingEBCDICArabic(20420),
-  msoEncodingEBCDICGreek(20423),
-  msoEncodingEBCDICHebrew(20424),
-  msoEncodingEBCDICKoreanExtended(20833),
-  msoEncodingEBCDICThai(20838),
-  msoEncodingEBCDICIcelandic(20871),
-  msoEncodingEBCDICTurkish(20905),
-  msoEncodingEBCDICRussian(20880),
-  msoEncodingEBCDICSerbianBulgarian(21025),
-  msoEncodingEBCDICJapaneseKatakanaExtendedAndJapanese(50930),
-  msoEncodingEBCDICUSCanadaAndJapanese(50931),
-  msoEncodingEBCDICKoreanExtendedAndKorean(50933),
-  msoEncodingEBCDICSimplifiedChineseExtendedAndSimplifiedChinese(50935),
-  msoEncodingEBCDICUSCanadaAndTraditionalChinese(50937),
-  msoEncodingEBCDICJapaneseLatinExtendedAndJapanese(50939),
-  msoEncodingOEMUnitedStates(437),
-  msoEncodingOEMGreek437G(737),
-  msoEncodingOEMBaltic(775),
-  msoEncodingOEMMultilingualLatinI(850),
-  msoEncodingOEMMultilingualLatinII(852),
-  msoEncodingOEMCyrillic(855),
-  msoEncodingOEMTurkish(857),
-  msoEncodingOEMPortuguese(860),
-  msoEncodingOEMIcelandic(861),
-  msoEncodingOEMHebrew(862),
-  msoEncodingOEMCanadianFrench(863),
-  msoEncodingOEMArabic(864),
-  msoEncodingOEMNordic(865),
-  msoEncodingOEMCyrillicII(866),
-  msoEncodingOEMModernGreek(869),
-  msoEncodingEUCJapanese(51932),
-  msoEncodingEUCChineseSimplifiedChinese(51936),
-  msoEncodingEUCKorean(51949),
-  msoEncodingEUCTaiwaneseTraditionalChinese(51950),
-  msoEncodingISCIIDevanagari(57002),
-  msoEncodingISCIIBengali(57003),
-  msoEncodingISCIITamil(57004),
-  msoEncodingISCIITelugu(57005),
-  msoEncodingISCIIAssamese(57006),
-  msoEncodingISCIIOriya(57007),
-  msoEncodingISCIIKannada(57008),
-  msoEncodingISCIIMalayalam(57009),
-  msoEncodingISCIIGujarati(57010),
-  msoEncodingISCIIPunjabi(57011),
-  msoEncodingArabicASMO(708),
-  msoEncodingArabicTransparentASMO(720),
-  msoEncodingKoreanJohab(1361),
-  msoEncodingTaiwanCNS(20000),
-  msoEncodingTaiwanTCA(20001),
-  msoEncodingTaiwanEten(20002),
-  msoEncodingTaiwanIBM5550(20003),
-  msoEncodingTaiwanTeleText(20004),
-  msoEncodingTaiwanWang(20005),
-  msoEncodingIA5IRV(20105),
-  msoEncodingIA5German(20106),
-  msoEncodingIA5Swedish(20107),
-  msoEncodingIA5Norwegian(20108),
-  msoEncodingUSASCII(20127),
-  msoEncodingT61(20261),
-  msoEncodingISO6937NonSpacingAccent(20269),
-  msoEncodingKOI8R(20866),
-  msoEncodingExtAlphaLowercase(21027),
-  msoEncodingKOI8U(21866),
-  msoEncodingEuropa3(29001),
-  msoEncodingHZGBSimplifiedChinese(52936),
-  msoEncodingSimplifiedChineseGB18030(54936),
-  msoEncodingUTF7(65000),
-  msoEncodingUTF8(65001);
+public class MsoEncoding {
 
+  // Typed constants
+  public final static MsoEncoding msoEncodingThai = new MsoEncoding(874);
+  public final static MsoEncoding msoEncodingJapaneseShiftJIS = new MsoEncoding(932);
+  public final static MsoEncoding msoEncodingSimplifiedChineseGBK = new MsoEncoding(936);
+  public final static MsoEncoding msoEncodingKorean = new MsoEncoding(949);
+  public final static MsoEncoding msoEncodingTraditionalChineseBig5 = new MsoEncoding(950);
+  public final static MsoEncoding msoEncodingUnicodeLittleEndian = new MsoEncoding(1200);
+  public final static MsoEncoding msoEncodingUnicodeBigEndian = new MsoEncoding(1201);
+  public final static MsoEncoding msoEncodingCentralEuropean = new MsoEncoding(1250);
+  public final static MsoEncoding msoEncodingCyrillic = new MsoEncoding(1251);
+  public final static MsoEncoding msoEncodingWestern = new MsoEncoding(1252);
+  public final static MsoEncoding msoEncodingGreek = new MsoEncoding(1253);
+  public final static MsoEncoding msoEncodingTurkish = new MsoEncoding(1254);
+  public final static MsoEncoding msoEncodingHebrew = new MsoEncoding(1255);
+  public final static MsoEncoding msoEncodingArabic = new MsoEncoding(1256);
+  public final static MsoEncoding msoEncodingBaltic = new MsoEncoding(1257);
+  public final static MsoEncoding msoEncodingVietnamese = new MsoEncoding(1258);
+  public final static MsoEncoding msoEncodingAutoDetect = new MsoEncoding(50001);
+  public final static MsoEncoding msoEncodingJapaneseAutoDetect = new MsoEncoding(50932);
+  public final static MsoEncoding msoEncodingSimplifiedChineseAutoDetect = new MsoEncoding(50936);
+  public final static MsoEncoding msoEncodingKoreanAutoDetect = new MsoEncoding(50949);
+  public final static MsoEncoding msoEncodingTraditionalChineseAutoDetect = new MsoEncoding(50950);
+  public final static MsoEncoding msoEncodingCyrillicAutoDetect = new MsoEncoding(51251);
+  public final static MsoEncoding msoEncodingGreekAutoDetect = new MsoEncoding(51253);
+  public final static MsoEncoding msoEncodingArabicAutoDetect = new MsoEncoding(51256);
+  public final static MsoEncoding msoEncodingISO88591Latin1 = new MsoEncoding(28591);
+  public final static MsoEncoding msoEncodingISO88592CentralEurope = new MsoEncoding(28592);
+  public final static MsoEncoding msoEncodingISO88593Latin3 = new MsoEncoding(28593);
+  public final static MsoEncoding msoEncodingISO88594Baltic = new MsoEncoding(28594);
+  public final static MsoEncoding msoEncodingISO88595Cyrillic = new MsoEncoding(28595);
+  public final static MsoEncoding msoEncodingISO88596Arabic = new MsoEncoding(28596);
+  public final static MsoEncoding msoEncodingISO88597Greek = new MsoEncoding(28597);
+  public final static MsoEncoding msoEncodingISO88598Hebrew = new MsoEncoding(28598);
+  public final static MsoEncoding msoEncodingISO88599Turkish = new MsoEncoding(28599);
+  public final static MsoEncoding msoEncodingISO885915Latin9 = new MsoEncoding(28605);
+  public final static MsoEncoding msoEncodingISO88598HebrewLogical = new MsoEncoding(38598);
+  public final static MsoEncoding msoEncodingISO2022JPNoHalfwidthKatakana = new MsoEncoding(50220);
+  public final static MsoEncoding msoEncodingISO2022JPJISX02021984 = new MsoEncoding(50221);
+  public final static MsoEncoding msoEncodingISO2022JPJISX02011989 = new MsoEncoding(50222);
+  public final static MsoEncoding msoEncodingISO2022KR = new MsoEncoding(50225);
+  public final static MsoEncoding msoEncodingISO2022CNTraditionalChinese = new MsoEncoding(50227);
+  public final static MsoEncoding msoEncodingISO2022CNSimplifiedChinese = new MsoEncoding(50229);
+  public final static MsoEncoding msoEncodingMacRoman = new MsoEncoding(10000);
+  public final static MsoEncoding msoEncodingMacJapanese = new MsoEncoding(10001);
+  public final static MsoEncoding msoEncodingMacTraditionalChineseBig5 = new MsoEncoding(10002);
+  public final static MsoEncoding msoEncodingMacKorean = new MsoEncoding(10003);
+  public final static MsoEncoding msoEncodingMacArabic = new MsoEncoding(10004);
+  public final static MsoEncoding msoEncodingMacHebrew = new MsoEncoding(10005);
+  public final static MsoEncoding msoEncodingMacGreek1 = new MsoEncoding(10006);
+  public final static MsoEncoding msoEncodingMacCyrillic = new MsoEncoding(10007);
+  public final static MsoEncoding msoEncodingMacSimplifiedChineseGB2312 = new MsoEncoding(10008);
+  public final static MsoEncoding msoEncodingMacRomania = new MsoEncoding(10010);
+  public final static MsoEncoding msoEncodingMacUkraine = new MsoEncoding(10017);
+  public final static MsoEncoding msoEncodingMacLatin2 = new MsoEncoding(10029);
+  public final static MsoEncoding msoEncodingMacIcelandic = new MsoEncoding(10079);
+  public final static MsoEncoding msoEncodingMacTurkish = new MsoEncoding(10081);
+  public final static MsoEncoding msoEncodingMacCroatia = new MsoEncoding(10082);
+  public final static MsoEncoding msoEncodingEBCDICUSCanada = new MsoEncoding(37);
+  public final static MsoEncoding msoEncodingEBCDICInternational = new MsoEncoding(500);
+  public final static MsoEncoding msoEncodingEBCDICMultilingualROECELatin2 = new MsoEncoding(870);
+  public final static MsoEncoding msoEncodingEBCDICGreekModern = new MsoEncoding(875);
+  public final static MsoEncoding msoEncodingEBCDICTurkishLatin5 = new MsoEncoding(1026);
+  public final static MsoEncoding msoEncodingEBCDICGermany = new MsoEncoding(20273);
+  public final static MsoEncoding msoEncodingEBCDICDenmarkNorway = new MsoEncoding(20277);
+  public final static MsoEncoding msoEncodingEBCDICFinlandSweden = new MsoEncoding(20278);
+  public final static MsoEncoding msoEncodingEBCDICItaly = new MsoEncoding(20280);
+  public final static MsoEncoding msoEncodingEBCDICLatinAmericaSpain = new MsoEncoding(20284);
+  public final static MsoEncoding msoEncodingEBCDICUnitedKingdom = new MsoEncoding(20285);
+  public final static MsoEncoding msoEncodingEBCDICJapaneseKatakanaExtended = new MsoEncoding(20290);
+  public final static MsoEncoding msoEncodingEBCDICFrance = new MsoEncoding(20297);
+  public final static MsoEncoding msoEncodingEBCDICArabic = new MsoEncoding(20420);
+  public final static MsoEncoding msoEncodingEBCDICGreek = new MsoEncoding(20423);
+  public final static MsoEncoding msoEncodingEBCDICHebrew = new MsoEncoding(20424);
+  public final static MsoEncoding msoEncodingEBCDICKoreanExtended = new MsoEncoding(20833);
+  public final static MsoEncoding msoEncodingEBCDICThai = new MsoEncoding(20838);
+  public final static MsoEncoding msoEncodingEBCDICIcelandic = new MsoEncoding(20871);
+  public final static MsoEncoding msoEncodingEBCDICTurkish = new MsoEncoding(20905);
+  public final static MsoEncoding msoEncodingEBCDICRussian = new MsoEncoding(20880);
+  public final static MsoEncoding msoEncodingEBCDICSerbianBulgarian = new MsoEncoding(21025);
+  public final static MsoEncoding msoEncodingEBCDICJapaneseKatakanaExtendedAndJapanese = new MsoEncoding(50930);
+  public final static MsoEncoding msoEncodingEBCDICUSCanadaAndJapanese = new MsoEncoding(50931);
+  public final static MsoEncoding msoEncodingEBCDICKoreanExtendedAndKorean = new MsoEncoding(50933);
+  public final static MsoEncoding msoEncodingEBCDICSimplifiedChineseExtendedAndSimplifiedChinese = new MsoEncoding(50935);
+  public final static MsoEncoding msoEncodingEBCDICUSCanadaAndTraditionalChinese = new MsoEncoding(50937);
+  public final static MsoEncoding msoEncodingEBCDICJapaneseLatinExtendedAndJapanese = new MsoEncoding(50939);
+  public final static MsoEncoding msoEncodingOEMUnitedStates = new MsoEncoding(437);
+  public final static MsoEncoding msoEncodingOEMGreek437G = new MsoEncoding(737);
+  public final static MsoEncoding msoEncodingOEMBaltic = new MsoEncoding(775);
+  public final static MsoEncoding msoEncodingOEMMultilingualLatinI = new MsoEncoding(850);
+  public final static MsoEncoding msoEncodingOEMMultilingualLatinII = new MsoEncoding(852);
+  public final static MsoEncoding msoEncodingOEMCyrillic = new MsoEncoding(855);
+  public final static MsoEncoding msoEncodingOEMTurkish = new MsoEncoding(857);
+  public final static MsoEncoding msoEncodingOEMPortuguese = new MsoEncoding(860);
+  public final static MsoEncoding msoEncodingOEMIcelandic = new MsoEncoding(861);
+  public final static MsoEncoding msoEncodingOEMHebrew = new MsoEncoding(862);
+  public final static MsoEncoding msoEncodingOEMCanadianFrench = new MsoEncoding(863);
+  public final static MsoEncoding msoEncodingOEMArabic = new MsoEncoding(864);
+  public final static MsoEncoding msoEncodingOEMNordic = new MsoEncoding(865);
+  public final static MsoEncoding msoEncodingOEMCyrillicII = new MsoEncoding(866);
+  public final static MsoEncoding msoEncodingOEMModernGreek = new MsoEncoding(869);
+  public final static MsoEncoding msoEncodingEUCJapanese = new MsoEncoding(51932);
+  public final static MsoEncoding msoEncodingEUCChineseSimplifiedChinese = new MsoEncoding(51936);
+  public final static MsoEncoding msoEncodingEUCKorean = new MsoEncoding(51949);
+  public final static MsoEncoding msoEncodingEUCTaiwaneseTraditionalChinese = new MsoEncoding(51950);
+  public final static MsoEncoding msoEncodingISCIIDevanagari = new MsoEncoding(57002);
+  public final static MsoEncoding msoEncodingISCIIBengali = new MsoEncoding(57003);
+  public final static MsoEncoding msoEncodingISCIITamil = new MsoEncoding(57004);
+  public final static MsoEncoding msoEncodingISCIITelugu = new MsoEncoding(57005);
+  public final static MsoEncoding msoEncodingISCIIAssamese = new MsoEncoding(57006);
+  public final static MsoEncoding msoEncodingISCIIOriya = new MsoEncoding(57007);
+  public final static MsoEncoding msoEncodingISCIIKannada = new MsoEncoding(57008);
+  public final static MsoEncoding msoEncodingISCIIMalayalam = new MsoEncoding(57009);
+  public final static MsoEncoding msoEncodingISCIIGujarati = new MsoEncoding(57010);
+  public final static MsoEncoding msoEncodingISCIIPunjabi = new MsoEncoding(57011);
+  public final static MsoEncoding msoEncodingArabicASMO = new MsoEncoding(708);
+  public final static MsoEncoding msoEncodingArabicTransparentASMO = new MsoEncoding(720);
+  public final static MsoEncoding msoEncodingKoreanJohab = new MsoEncoding(1361);
+  public final static MsoEncoding msoEncodingTaiwanCNS = new MsoEncoding(20000);
+  public final static MsoEncoding msoEncodingTaiwanTCA = new MsoEncoding(20001);
+  public final static MsoEncoding msoEncodingTaiwanEten = new MsoEncoding(20002);
+  public final static MsoEncoding msoEncodingTaiwanIBM5550 = new MsoEncoding(20003);
+  public final static MsoEncoding msoEncodingTaiwanTeleText = new MsoEncoding(20004);
+  public final static MsoEncoding msoEncodingTaiwanWang = new MsoEncoding(20005);
+  public final static MsoEncoding msoEncodingIA5IRV = new MsoEncoding(20105);
+  public final static MsoEncoding msoEncodingIA5German = new MsoEncoding(20106);
+  public final static MsoEncoding msoEncodingIA5Swedish = new MsoEncoding(20107);
+  public final static MsoEncoding msoEncodingIA5Norwegian = new MsoEncoding(20108);
+  public final static MsoEncoding msoEncodingUSASCII = new MsoEncoding(20127);
+  public final static MsoEncoding msoEncodingT61 = new MsoEncoding(20261);
+  public final static MsoEncoding msoEncodingISO6937NonSpacingAccent = new MsoEncoding(20269);
+  public final static MsoEncoding msoEncodingKOI8R = new MsoEncoding(20866);
+  public final static MsoEncoding msoEncodingExtAlphaLowercase = new MsoEncoding(21027);
+  public final static MsoEncoding msoEncodingKOI8U = new MsoEncoding(21866);
+  public final static MsoEncoding msoEncodingEuropa3 = new MsoEncoding(29001);
+  public final static MsoEncoding msoEncodingHZGBSimplifiedChinese = new MsoEncoding(52936);
+  public final static MsoEncoding msoEncodingSimplifiedChineseGB18030 = new MsoEncoding(54936);
+  public final static MsoEncoding msoEncodingUTF7 = new MsoEncoding(65000);
+  public final static MsoEncoding msoEncodingUTF8 = new MsoEncoding(65001);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoEncodingThai = 874;
+  public final static int _msoEncodingJapaneseShiftJIS = 932;
+  public final static int _msoEncodingSimplifiedChineseGBK = 936;
+  public final static int _msoEncodingKorean = 949;
+  public final static int _msoEncodingTraditionalChineseBig5 = 950;
+  public final static int _msoEncodingUnicodeLittleEndian = 1200;
+  public final static int _msoEncodingUnicodeBigEndian = 1201;
+  public final static int _msoEncodingCentralEuropean = 1250;
+  public final static int _msoEncodingCyrillic = 1251;
+  public final static int _msoEncodingWestern = 1252;
+  public final static int _msoEncodingGreek = 1253;
+  public final static int _msoEncodingTurkish = 1254;
+  public final static int _msoEncodingHebrew = 1255;
+  public final static int _msoEncodingArabic = 1256;
+  public final static int _msoEncodingBaltic = 1257;
+  public final static int _msoEncodingVietnamese = 1258;
+  public final static int _msoEncodingAutoDetect = 50001;
+  public final static int _msoEncodingJapaneseAutoDetect = 50932;
+  public final static int _msoEncodingSimplifiedChineseAutoDetect = 50936;
+  public final static int _msoEncodingKoreanAutoDetect = 50949;
+  public final static int _msoEncodingTraditionalChineseAutoDetect = 50950;
+  public final static int _msoEncodingCyrillicAutoDetect = 51251;
+  public final static int _msoEncodingGreekAutoDetect = 51253;
+  public final static int _msoEncodingArabicAutoDetect = 51256;
+  public final static int _msoEncodingISO88591Latin1 = 28591;
+  public final static int _msoEncodingISO88592CentralEurope = 28592;
+  public final static int _msoEncodingISO88593Latin3 = 28593;
+  public final static int _msoEncodingISO88594Baltic = 28594;
+  public final static int _msoEncodingISO88595Cyrillic = 28595;
+  public final static int _msoEncodingISO88596Arabic = 28596;
+  public final static int _msoEncodingISO88597Greek = 28597;
+  public final static int _msoEncodingISO88598Hebrew = 28598;
+  public final static int _msoEncodingISO88599Turkish = 28599;
+  public final static int _msoEncodingISO885915Latin9 = 28605;
+  public final static int _msoEncodingISO88598HebrewLogical = 38598;
+  public final static int _msoEncodingISO2022JPNoHalfwidthKatakana = 50220;
+  public final static int _msoEncodingISO2022JPJISX02021984 = 50221;
+  public final static int _msoEncodingISO2022JPJISX02011989 = 50222;
+  public final static int _msoEncodingISO2022KR = 50225;
+  public final static int _msoEncodingISO2022CNTraditionalChinese = 50227;
+  public final static int _msoEncodingISO2022CNSimplifiedChinese = 50229;
+  public final static int _msoEncodingMacRoman = 10000;
+  public final static int _msoEncodingMacJapanese = 10001;
+  public final static int _msoEncodingMacTraditionalChineseBig5 = 10002;
+  public final static int _msoEncodingMacKorean = 10003;
+  public final static int _msoEncodingMacArabic = 10004;
+  public final static int _msoEncodingMacHebrew = 10005;
+  public final static int _msoEncodingMacGreek1 = 10006;
+  public final static int _msoEncodingMacCyrillic = 10007;
+  public final static int _msoEncodingMacSimplifiedChineseGB2312 = 10008;
+  public final static int _msoEncodingMacRomania = 10010;
+  public final static int _msoEncodingMacUkraine = 10017;
+  public final static int _msoEncodingMacLatin2 = 10029;
+  public final static int _msoEncodingMacIcelandic = 10079;
+  public final static int _msoEncodingMacTurkish = 10081;
+  public final static int _msoEncodingMacCroatia = 10082;
+  public final static int _msoEncodingEBCDICUSCanada = 37;
+  public final static int _msoEncodingEBCDICInternational = 500;
+  public final static int _msoEncodingEBCDICMultilingualROECELatin2 = 870;
+  public final static int _msoEncodingEBCDICGreekModern = 875;
+  public final static int _msoEncodingEBCDICTurkishLatin5 = 1026;
+  public final static int _msoEncodingEBCDICGermany = 20273;
+  public final static int _msoEncodingEBCDICDenmarkNorway = 20277;
+  public final static int _msoEncodingEBCDICFinlandSweden = 20278;
+  public final static int _msoEncodingEBCDICItaly = 20280;
+  public final static int _msoEncodingEBCDICLatinAmericaSpain = 20284;
+  public final static int _msoEncodingEBCDICUnitedKingdom = 20285;
+  public final static int _msoEncodingEBCDICJapaneseKatakanaExtended = 20290;
+  public final static int _msoEncodingEBCDICFrance = 20297;
+  public final static int _msoEncodingEBCDICArabic = 20420;
+  public final static int _msoEncodingEBCDICGreek = 20423;
+  public final static int _msoEncodingEBCDICHebrew = 20424;
+  public final static int _msoEncodingEBCDICKoreanExtended = 20833;
+  public final static int _msoEncodingEBCDICThai = 20838;
+  public final static int _msoEncodingEBCDICIcelandic = 20871;
+  public final static int _msoEncodingEBCDICTurkish = 20905;
+  public final static int _msoEncodingEBCDICRussian = 20880;
+  public final static int _msoEncodingEBCDICSerbianBulgarian = 21025;
+  public final static int _msoEncodingEBCDICJapaneseKatakanaExtendedAndJapanese = 50930;
+  public final static int _msoEncodingEBCDICUSCanadaAndJapanese = 50931;
+  public final static int _msoEncodingEBCDICKoreanExtendedAndKorean = 50933;
+  public final static int _msoEncodingEBCDICSimplifiedChineseExtendedAndSimplifiedChinese = 50935;
+  public final static int _msoEncodingEBCDICUSCanadaAndTraditionalChinese = 50937;
+  public final static int _msoEncodingEBCDICJapaneseLatinExtendedAndJapanese = 50939;
+  public final static int _msoEncodingOEMUnitedStates = 437;
+  public final static int _msoEncodingOEMGreek437G = 737;
+  public final static int _msoEncodingOEMBaltic = 775;
+  public final static int _msoEncodingOEMMultilingualLatinI = 850;
+  public final static int _msoEncodingOEMMultilingualLatinII = 852;
+  public final static int _msoEncodingOEMCyrillic = 855;
+  public final static int _msoEncodingOEMTurkish = 857;
+  public final static int _msoEncodingOEMPortuguese = 860;
+  public final static int _msoEncodingOEMIcelandic = 861;
+  public final static int _msoEncodingOEMHebrew = 862;
+  public final static int _msoEncodingOEMCanadianFrench = 863;
+  public final static int _msoEncodingOEMArabic = 864;
+  public final static int _msoEncodingOEMNordic = 865;
+  public final static int _msoEncodingOEMCyrillicII = 866;
+  public final static int _msoEncodingOEMModernGreek = 869;
+  public final static int _msoEncodingEUCJapanese = 51932;
+  public final static int _msoEncodingEUCChineseSimplifiedChinese = 51936;
+  public final static int _msoEncodingEUCKorean = 51949;
+  public final static int _msoEncodingEUCTaiwaneseTraditionalChinese = 51950;
+  public final static int _msoEncodingISCIIDevanagari = 57002;
+  public final static int _msoEncodingISCIIBengali = 57003;
+  public final static int _msoEncodingISCIITamil = 57004;
+  public final static int _msoEncodingISCIITelugu = 57005;
+  public final static int _msoEncodingISCIIAssamese = 57006;
+  public final static int _msoEncodingISCIIOriya = 57007;
+  public final static int _msoEncodingISCIIKannada = 57008;
+  public final static int _msoEncodingISCIIMalayalam = 57009;
+  public final static int _msoEncodingISCIIGujarati = 57010;
+  public final static int _msoEncodingISCIIPunjabi = 57011;
+  public final static int _msoEncodingArabicASMO = 708;
+  public final static int _msoEncodingArabicTransparentASMO = 720;
+  public final static int _msoEncodingKoreanJohab = 1361;
+  public final static int _msoEncodingTaiwanCNS = 20000;
+  public final static int _msoEncodingTaiwanTCA = 20001;
+  public final static int _msoEncodingTaiwanEten = 20002;
+  public final static int _msoEncodingTaiwanIBM5550 = 20003;
+  public final static int _msoEncodingTaiwanTeleText = 20004;
+  public final static int _msoEncodingTaiwanWang = 20005;
+  public final static int _msoEncodingIA5IRV = 20105;
+  public final static int _msoEncodingIA5German = 20106;
+  public final static int _msoEncodingIA5Swedish = 20107;
+  public final static int _msoEncodingIA5Norwegian = 20108;
+  public final static int _msoEncodingUSASCII = 20127;
+  public final static int _msoEncodingT61 = 20261;
+  public final static int _msoEncodingISO6937NonSpacingAccent = 20269;
+  public final static int _msoEncodingKOI8R = 20866;
+  public final static int _msoEncodingExtAlphaLowercase = 21027;
+  public final static int _msoEncodingKOI8U = 21866;
+  public final static int _msoEncodingEuropa3 = 29001;
+  public final static int _msoEncodingHZGBSimplifiedChinese = 52936;
+  public final static int _msoEncodingSimplifiedChineseGB18030 = 54936;
+  public final static int _msoEncodingUTF7 = 65000;
+  public final static int _msoEncodingUTF8 = 65001;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoEncoding(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoEncoding valueOf(int value) {
     switch(value) {
     case 874: return msoEncodingThai;
@@ -288,7 +434,7 @@ public enum MsoEncoding {
     case 54936: return msoEncodingSimplifiedChineseGB18030;
     case 65000: return msoEncodingUTF7;
     case 65001: return msoEncodingUTF8;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoEncoding.class);
+    default: return new MsoEncoding(value);
     }
   }
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.MessageBox;
@@ -96,7 +97,7 @@ public class RibbonXAddin extends ThisAddin {
 	// a received mail or when Inspector is a read note
 	public boolean MyTab_GetVisible(IRibbonControl control) {
 		try {
-			Dispatch context = control.getContext();
+			IDispatch context = control.getContext();
 
 			if (context.is(Explorer.class)) {
 				Explorer explorer = context.as(Explorer.class);
@@ -109,7 +110,7 @@ public class RibbonXAddin extends ThisAddin {
 
 					Selection selection = explorer.getSelection();
 					if (selection.getCount() == 1) {
-						Dispatch item = selection.Item(1);
+						IDispatch item = selection.Item(1);
 						if (item.is(MailItem.class)) {
 							MailItem oMail = item.as(MailItem.class);
 							return oMail.getSent();
@@ -125,7 +126,7 @@ public class RibbonXAddin extends ThisAddin {
 
 			} else if (context.is(Inspector.class)) {
 				Inspector oInsp = context.as(Inspector.class);
-				Dispatch item = oInsp.getCurrentItem();
+				IDispatch item = oInsp.getCurrentItem();
 				if (item.is(MailItem.class)) {
 					MailItem oMail = item.as(MailItem.class);
 					return oMail.getSent();
@@ -144,10 +145,10 @@ public class RibbonXAddin extends ThisAddin {
 
 	public boolean MyTabInspector_GetVisible(IRibbonControl control) {
 		try {
-			Dispatch context = control.getContext();
+			IDispatch context = control.getContext();
 			if (context.is(Inspector.class)) {
 				Inspector oInsp = context.as(Inspector.class);
-				Dispatch item = oInsp.getCurrentItem();
+				IDispatch item = oInsp.getCurrentItem();
 				if (item != null && item.is(MailItem.class)) {
 					MailItem oMail = item.as(MailItem.class);
 					return oMail.getSent();
@@ -176,7 +177,7 @@ public class RibbonXAddin extends ThisAddin {
 	// and displays IRibbonControl.Context in message box
 	public void OnMyButtonClick(IRibbonControl control) {
 
-		final Dispatch context = control.getContext();
+		final IDispatch context = control.getContext();
 		if (context == null)
 			return;
 

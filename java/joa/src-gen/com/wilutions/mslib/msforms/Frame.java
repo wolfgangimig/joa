@@ -12,7 +12,7 @@ public class Frame extends Dispatch implements IOptionFrame {
     final Object obj = this._dispatchCall(256,"ActiveControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(Control.class);
+    return disp.as(Control.class);
   }
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
     assert(value != null);
@@ -70,8 +70,7 @@ public class Frame extends Dispatch implements IOptionFrame {
   @DeclDISPID(0)  public Controls getControls() throws ComException {
     final Object obj = this._dispatchCall(0,"Controls", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.ControlsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.ControlsImpl.class);
   }
   @DeclDISPID(260)  public void setCycle(fmCycle value) throws ComException {
     assert(value != null);
@@ -97,8 +96,7 @@ public class Frame extends Dispatch implements IOptionFrame {
   @DeclDISPID(-512)  public Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.FontImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
   @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException {
     assert(value != null);
@@ -143,8 +141,7 @@ public class Frame extends Dispatch implements IOptionFrame {
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException {
     assert(value != null);
@@ -170,8 +167,7 @@ public class Frame extends Dispatch implements IOptionFrame {
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(27)  public void setPictureSizeMode(fmPictureSizeMode value) throws ComException {
     assert(value != null);

@@ -8,24 +8,47 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlUserPropertyType {
-  olOutlookInternal(0),
-  olText(1),
-  olNumber(3),
-  olDateTime(5),
-  olYesNo(6),
-  olDuration(7),
-  olKeywords(11),
-  olPercent(12),
-  olCurrency(14),
-  olFormula(18),
-  olCombination(19),
-  olInteger(20),
-  olEnumeration(21),
-  olSmartFrom(22);
+public class OlUserPropertyType {
 
+  // Typed constants
+  public final static OlUserPropertyType olOutlookInternal = new OlUserPropertyType(0);
+  public final static OlUserPropertyType olText = new OlUserPropertyType(1);
+  public final static OlUserPropertyType olNumber = new OlUserPropertyType(3);
+  public final static OlUserPropertyType olDateTime = new OlUserPropertyType(5);
+  public final static OlUserPropertyType olYesNo = new OlUserPropertyType(6);
+  public final static OlUserPropertyType olDuration = new OlUserPropertyType(7);
+  public final static OlUserPropertyType olKeywords = new OlUserPropertyType(11);
+  public final static OlUserPropertyType olPercent = new OlUserPropertyType(12);
+  public final static OlUserPropertyType olCurrency = new OlUserPropertyType(14);
+  public final static OlUserPropertyType olFormula = new OlUserPropertyType(18);
+  public final static OlUserPropertyType olCombination = new OlUserPropertyType(19);
+  public final static OlUserPropertyType olInteger = new OlUserPropertyType(20);
+  public final static OlUserPropertyType olEnumeration = new OlUserPropertyType(21);
+  public final static OlUserPropertyType olSmartFrom = new OlUserPropertyType(22);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olOutlookInternal = 0;
+  public final static int _olText = 1;
+  public final static int _olNumber = 3;
+  public final static int _olDateTime = 5;
+  public final static int _olYesNo = 6;
+  public final static int _olDuration = 7;
+  public final static int _olKeywords = 11;
+  public final static int _olPercent = 12;
+  public final static int _olCurrency = 14;
+  public final static int _olFormula = 18;
+  public final static int _olCombination = 19;
+  public final static int _olInteger = 20;
+  public final static int _olEnumeration = 21;
+  public final static int _olSmartFrom = 22;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlUserPropertyType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlUserPropertyType valueOf(int value) {
     switch(value) {
     case 0: return olOutlookInternal;
@@ -42,7 +65,7 @@ public enum OlUserPropertyType {
     case 20: return olInteger;
     case 21: return olEnumeration;
     case 22: return olSmartFrom;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlUserPropertyType.class);
+    default: return new OlUserPropertyType(value);
     }
   }
 }

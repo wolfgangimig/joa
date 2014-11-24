@@ -5,20 +5,20 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AF2-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ParagraphFormat2Impl extends Dispatch implements com.wilutions.mslib.office.ParagraphFormat2 {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(2)  public com.wilutions.mslib.office.MsoParagraphAlignment getAlignment() throws ComException {
     final Object obj = this._dispatchCall(2,"Alignment", DISPATCH_PROPERTYGET,null);
@@ -41,8 +41,7 @@ public class ParagraphFormat2Impl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(4)  public com.wilutions.mslib.office.BulletFormat2 getBullet() throws ComException {
     final Object obj = this._dispatchCall(4,"Bullet", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.BulletFormat2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.BulletFormat2Impl.class);
   }
   @DeclDISPID(5)  public com.wilutions.mslib.office.MsoTriState getFarEastLineBreakLevel() throws ComException {
     final Object obj = this._dispatchCall(5,"FarEastLineBreakLevel", DISPATCH_PROPERTYGET,null);
@@ -155,8 +154,7 @@ public class ParagraphFormat2Impl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(17)  public com.wilutions.mslib.office.TabStops2 getTabStops() throws ComException {
     final Object obj = this._dispatchCall(17,"TabStops", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TabStops2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TabStops2Impl.class);
   }
   @DeclDISPID(18)  public com.wilutions.mslib.office.MsoTextDirection getTextDirection() throws ComException {
     final Object obj = this._dispatchCall(18,"TextDirection", DISPATCH_PROPERTYGET,null);

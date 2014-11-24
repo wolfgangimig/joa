@@ -44,12 +44,12 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     assert(value != null);
     this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(-512)  public Dispatch getFont() throws ComException {
+  @DeclDISPID(-512)  public IDispatch getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(-512)  public void setFont(Dispatch value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(IDispatch value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(12)  public Integer getSpecialEffect() throws ComException {

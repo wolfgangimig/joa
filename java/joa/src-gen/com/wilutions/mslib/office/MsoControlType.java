@@ -8,37 +8,73 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoControlType {
-  msoControlCustom(0),
-  msoControlButton(1),
-  msoControlEdit(2),
-  msoControlDropdown(3),
-  msoControlComboBox(4),
-  msoControlButtonDropdown(5),
-  msoControlSplitDropdown(6),
-  msoControlOCXDropdown(7),
-  msoControlGenericDropdown(8),
-  msoControlGraphicDropdown(9),
-  msoControlPopup(10),
-  msoControlGraphicPopup(11),
-  msoControlButtonPopup(12),
-  msoControlSplitButtonPopup(13),
-  msoControlSplitButtonMRUPopup(14),
-  msoControlLabel(15),
-  msoControlExpandingGrid(16),
-  msoControlSplitExpandingGrid(17),
-  msoControlGrid(18),
-  msoControlGauge(19),
-  msoControlGraphicCombo(20),
-  msoControlPane(21),
-  msoControlActiveX(22),
-  msoControlSpinner(23),
-  msoControlLabelEx(24),
-  msoControlWorkPane(25),
-  msoControlAutoCompleteCombo(26);
+public class MsoControlType {
 
+  // Typed constants
+  public final static MsoControlType msoControlCustom = new MsoControlType(0);
+  public final static MsoControlType msoControlButton = new MsoControlType(1);
+  public final static MsoControlType msoControlEdit = new MsoControlType(2);
+  public final static MsoControlType msoControlDropdown = new MsoControlType(3);
+  public final static MsoControlType msoControlComboBox = new MsoControlType(4);
+  public final static MsoControlType msoControlButtonDropdown = new MsoControlType(5);
+  public final static MsoControlType msoControlSplitDropdown = new MsoControlType(6);
+  public final static MsoControlType msoControlOCXDropdown = new MsoControlType(7);
+  public final static MsoControlType msoControlGenericDropdown = new MsoControlType(8);
+  public final static MsoControlType msoControlGraphicDropdown = new MsoControlType(9);
+  public final static MsoControlType msoControlPopup = new MsoControlType(10);
+  public final static MsoControlType msoControlGraphicPopup = new MsoControlType(11);
+  public final static MsoControlType msoControlButtonPopup = new MsoControlType(12);
+  public final static MsoControlType msoControlSplitButtonPopup = new MsoControlType(13);
+  public final static MsoControlType msoControlSplitButtonMRUPopup = new MsoControlType(14);
+  public final static MsoControlType msoControlLabel = new MsoControlType(15);
+  public final static MsoControlType msoControlExpandingGrid = new MsoControlType(16);
+  public final static MsoControlType msoControlSplitExpandingGrid = new MsoControlType(17);
+  public final static MsoControlType msoControlGrid = new MsoControlType(18);
+  public final static MsoControlType msoControlGauge = new MsoControlType(19);
+  public final static MsoControlType msoControlGraphicCombo = new MsoControlType(20);
+  public final static MsoControlType msoControlPane = new MsoControlType(21);
+  public final static MsoControlType msoControlActiveX = new MsoControlType(22);
+  public final static MsoControlType msoControlSpinner = new MsoControlType(23);
+  public final static MsoControlType msoControlLabelEx = new MsoControlType(24);
+  public final static MsoControlType msoControlWorkPane = new MsoControlType(25);
+  public final static MsoControlType msoControlAutoCompleteCombo = new MsoControlType(26);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoControlCustom = 0;
+  public final static int _msoControlButton = 1;
+  public final static int _msoControlEdit = 2;
+  public final static int _msoControlDropdown = 3;
+  public final static int _msoControlComboBox = 4;
+  public final static int _msoControlButtonDropdown = 5;
+  public final static int _msoControlSplitDropdown = 6;
+  public final static int _msoControlOCXDropdown = 7;
+  public final static int _msoControlGenericDropdown = 8;
+  public final static int _msoControlGraphicDropdown = 9;
+  public final static int _msoControlPopup = 10;
+  public final static int _msoControlGraphicPopup = 11;
+  public final static int _msoControlButtonPopup = 12;
+  public final static int _msoControlSplitButtonPopup = 13;
+  public final static int _msoControlSplitButtonMRUPopup = 14;
+  public final static int _msoControlLabel = 15;
+  public final static int _msoControlExpandingGrid = 16;
+  public final static int _msoControlSplitExpandingGrid = 17;
+  public final static int _msoControlGrid = 18;
+  public final static int _msoControlGauge = 19;
+  public final static int _msoControlGraphicCombo = 20;
+  public final static int _msoControlPane = 21;
+  public final static int _msoControlActiveX = 22;
+  public final static int _msoControlSpinner = 23;
+  public final static int _msoControlLabelEx = 24;
+  public final static int _msoControlWorkPane = 25;
+  public final static int _msoControlAutoCompleteCombo = 26;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoControlType(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoControlType valueOf(int value) {
     switch(value) {
     case 0: return msoControlCustom;
@@ -68,7 +104,7 @@ public enum MsoControlType {
     case 24: return msoControlLabelEx;
     case 25: return msoControlWorkPane;
     case 26: return msoControlAutoCompleteCombo;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoControlType.class);
+    default: return new MsoControlType(value);
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0373-0000-0000-C000-000000000046}")
 public interface WebComponentProperties extends IDispatch {
-  @DeclDISPID(1)  public Dispatch getShape() throws ComException;
+  @DeclDISPID(1)  public IDispatch getShape() throws ComException;
   @DeclDISPID(2)  public String getName() throws ComException;
   @DeclDISPID(2)  public void setName(String value) throws ComException;
   @DeclDISPID(3)  public String getURL() throws ComException;

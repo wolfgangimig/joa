@@ -8,25 +8,49 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoDateTimeFormat {
-  msoDateTimeFormatMixed(-2),
-  msoDateTimeMdyy(1),
-  msoDateTimeddddMMMMddyyyy(2),
-  msoDateTimedMMMMyyyy(3),
-  msoDateTimeMMMMdyyyy(4),
-  msoDateTimedMMMyy(5),
-  msoDateTimeMMMMyy(6),
-  msoDateTimeMMyy(7),
-  msoDateTimeMMddyyHmm(8),
-  msoDateTimeMMddyyhmmAMPM(9),
-  msoDateTimeHmm(10),
-  msoDateTimeHmmss(11),
-  msoDateTimehmmAMPM(12),
-  msoDateTimehmmssAMPM(13),
-  msoDateTimeFigureOut(14);
+public class MsoDateTimeFormat {
 
+  // Typed constants
+  public final static MsoDateTimeFormat msoDateTimeFormatMixed = new MsoDateTimeFormat(-2);
+  public final static MsoDateTimeFormat msoDateTimeMdyy = new MsoDateTimeFormat(1);
+  public final static MsoDateTimeFormat msoDateTimeddddMMMMddyyyy = new MsoDateTimeFormat(2);
+  public final static MsoDateTimeFormat msoDateTimedMMMMyyyy = new MsoDateTimeFormat(3);
+  public final static MsoDateTimeFormat msoDateTimeMMMMdyyyy = new MsoDateTimeFormat(4);
+  public final static MsoDateTimeFormat msoDateTimedMMMyy = new MsoDateTimeFormat(5);
+  public final static MsoDateTimeFormat msoDateTimeMMMMyy = new MsoDateTimeFormat(6);
+  public final static MsoDateTimeFormat msoDateTimeMMyy = new MsoDateTimeFormat(7);
+  public final static MsoDateTimeFormat msoDateTimeMMddyyHmm = new MsoDateTimeFormat(8);
+  public final static MsoDateTimeFormat msoDateTimeMMddyyhmmAMPM = new MsoDateTimeFormat(9);
+  public final static MsoDateTimeFormat msoDateTimeHmm = new MsoDateTimeFormat(10);
+  public final static MsoDateTimeFormat msoDateTimeHmmss = new MsoDateTimeFormat(11);
+  public final static MsoDateTimeFormat msoDateTimehmmAMPM = new MsoDateTimeFormat(12);
+  public final static MsoDateTimeFormat msoDateTimehmmssAMPM = new MsoDateTimeFormat(13);
+  public final static MsoDateTimeFormat msoDateTimeFigureOut = new MsoDateTimeFormat(14);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoDateTimeFormatMixed = -2;
+  public final static int _msoDateTimeMdyy = 1;
+  public final static int _msoDateTimeddddMMMMddyyyy = 2;
+  public final static int _msoDateTimedMMMMyyyy = 3;
+  public final static int _msoDateTimeMMMMdyyyy = 4;
+  public final static int _msoDateTimedMMMyy = 5;
+  public final static int _msoDateTimeMMMMyy = 6;
+  public final static int _msoDateTimeMMyy = 7;
+  public final static int _msoDateTimeMMddyyHmm = 8;
+  public final static int _msoDateTimeMMddyyhmmAMPM = 9;
+  public final static int _msoDateTimeHmm = 10;
+  public final static int _msoDateTimeHmmss = 11;
+  public final static int _msoDateTimehmmAMPM = 12;
+  public final static int _msoDateTimehmmssAMPM = 13;
+  public final static int _msoDateTimeFigureOut = 14;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoDateTimeFormat(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoDateTimeFormat valueOf(int value) {
     switch(value) {
     case -2: return msoDateTimeFormatMixed;
@@ -44,7 +68,7 @@ public enum MsoDateTimeFormat {
     case 12: return msoDateTimehmmAMPM;
     case 13: return msoDateTimehmmssAMPM;
     case 14: return msoDateTimeFigureOut;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoDateTimeFormat.class);
+    default: return new MsoDateTimeFormat(value);
     }
   }
 }

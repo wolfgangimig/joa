@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A38-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class LanguageSettingsImpl extends Dispatch implements com.wilutions.mslib.office.LanguageSettings {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -27,10 +27,10 @@ public class LanguageSettingsImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(3)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(3)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(3,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public LanguageSettingsImpl(String progId) throws ComException {
     super(progId, "{000C0353-0000-0000-C000-000000000046}");

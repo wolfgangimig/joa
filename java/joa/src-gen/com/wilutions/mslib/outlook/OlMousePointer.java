@@ -8,25 +8,49 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{1BA5FCB6-05E9-4721-979D-3CE2C9084479}")
-public enum OlMousePointer {
-  olMousePointerDefault(0),
-  olMousePointerArrow(1),
-  olMousePointerCross(2),
-  olMousePointerIBeam(3),
-  olMousePointerSizeNESW(6),
-  olMousePointerSizeNS(7),
-  olMousePointerSizeNWSE(8),
-  olMousePointerSizeWE(9),
-  olMousePointerUpArrow(10),
-  olMousePointerHourGlass(11),
-  olMousePointerNoDrop(12),
-  olMousePointerAppStarting(13),
-  olMousePointerHelp(14),
-  olMousePointerSizeAll(15),
-  olMousePointerCustom(99);
+public class OlMousePointer {
 
+  // Typed constants
+  public final static OlMousePointer olMousePointerDefault = new OlMousePointer(0);
+  public final static OlMousePointer olMousePointerArrow = new OlMousePointer(1);
+  public final static OlMousePointer olMousePointerCross = new OlMousePointer(2);
+  public final static OlMousePointer olMousePointerIBeam = new OlMousePointer(3);
+  public final static OlMousePointer olMousePointerSizeNESW = new OlMousePointer(6);
+  public final static OlMousePointer olMousePointerSizeNS = new OlMousePointer(7);
+  public final static OlMousePointer olMousePointerSizeNWSE = new OlMousePointer(8);
+  public final static OlMousePointer olMousePointerSizeWE = new OlMousePointer(9);
+  public final static OlMousePointer olMousePointerUpArrow = new OlMousePointer(10);
+  public final static OlMousePointer olMousePointerHourGlass = new OlMousePointer(11);
+  public final static OlMousePointer olMousePointerNoDrop = new OlMousePointer(12);
+  public final static OlMousePointer olMousePointerAppStarting = new OlMousePointer(13);
+  public final static OlMousePointer olMousePointerHelp = new OlMousePointer(14);
+  public final static OlMousePointer olMousePointerSizeAll = new OlMousePointer(15);
+  public final static OlMousePointer olMousePointerCustom = new OlMousePointer(99);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olMousePointerDefault = 0;
+  public final static int _olMousePointerArrow = 1;
+  public final static int _olMousePointerCross = 2;
+  public final static int _olMousePointerIBeam = 3;
+  public final static int _olMousePointerSizeNESW = 6;
+  public final static int _olMousePointerSizeNS = 7;
+  public final static int _olMousePointerSizeNWSE = 8;
+  public final static int _olMousePointerSizeWE = 9;
+  public final static int _olMousePointerUpArrow = 10;
+  public final static int _olMousePointerHourGlass = 11;
+  public final static int _olMousePointerNoDrop = 12;
+  public final static int _olMousePointerAppStarting = 13;
+  public final static int _olMousePointerHelp = 14;
+  public final static int _olMousePointerSizeAll = 15;
+  public final static int _olMousePointerCustom = 99;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlMousePointer(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlMousePointer valueOf(int value) {
     switch(value) {
     case 0: return olMousePointerDefault;
@@ -44,7 +68,7 @@ public enum OlMousePointer {
     case 14: return olMousePointerHelp;
     case 15: return olMousePointerSizeAll;
     case 99: return olMousePointerCustom;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlMousePointer.class);
+    default: return new OlMousePointer(value);
     }
   }
 }

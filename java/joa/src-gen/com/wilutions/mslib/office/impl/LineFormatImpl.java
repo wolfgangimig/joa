@@ -5,26 +5,25 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A7C-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.office.LineFormat {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(100)  public com.wilutions.mslib.office.ColorFormat getBackColor() throws ComException {
     final Object obj = this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ColorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(100)  public void setBackColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
@@ -95,8 +94,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(108)  public com.wilutions.mslib.office.ColorFormat getForeColor() throws ComException {
     final Object obj = this._dispatchCall(108,"ForeColor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ColorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(108)  public void setForeColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(108,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));

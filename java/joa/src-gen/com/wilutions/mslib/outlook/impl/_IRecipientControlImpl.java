@@ -41,12 +41,12 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     assert(ReadOnly != null);
     this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYPUT,ReadOnly);
   }
-  @DeclDISPID(-512)  public Dispatch getFont() throws ComException {
+  @DeclDISPID(-512)  public IDispatch getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
-  @DeclDISPID(-512)  public void setFont(Dispatch Font) throws ComException {
+  @DeclDISPID(-512)  public void setFont(IDispatch Font) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUT,(Font!=null?Font:Dispatch.NULL));
   }
   @DeclDISPID(12)  public Integer getSpecialEffect() throws ComException {

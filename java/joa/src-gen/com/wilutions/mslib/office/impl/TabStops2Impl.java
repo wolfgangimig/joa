@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9AD1-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.office.TabStops2 {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -19,21 +19,19 @@ public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.offic
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TabStop2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TabStop2Impl.class);
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(2)  public com.wilutions.mslib.office.TabStop2 Add(com.wilutions.mslib.office.MsoTabStopType Type, Float Position) throws ComException {
     assert(Type != null);
     assert(Position != null);
     final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Type.value,Position);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TabStop2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TabStop2Impl.class);
   }
   @DeclDISPID(3)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(3,"Count", DISPATCH_PROPERTYGET,null);

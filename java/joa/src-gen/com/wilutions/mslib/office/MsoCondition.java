@@ -8,83 +8,165 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoCondition {
-  msoConditionFileTypeAllFiles(1),
-  msoConditionFileTypeOfficeFiles(2),
-  msoConditionFileTypeWordDocuments(3),
-  msoConditionFileTypeExcelWorkbooks(4),
-  msoConditionFileTypePowerPointPresentations(5),
-  msoConditionFileTypeBinders(6),
-  msoConditionFileTypeDatabases(7),
-  msoConditionFileTypeTemplates(8),
-  msoConditionIncludes(9),
-  msoConditionIncludesPhrase(10),
-  msoConditionBeginsWith(11),
-  msoConditionEndsWith(12),
-  msoConditionIncludesNearEachOther(13),
-  msoConditionIsExactly(14),
-  msoConditionIsNot(15),
-  msoConditionYesterday(16),
-  msoConditionToday(17),
-  msoConditionTomorrow(18),
-  msoConditionLastWeek(19),
-  msoConditionThisWeek(20),
-  msoConditionNextWeek(21),
-  msoConditionLastMonth(22),
-  msoConditionThisMonth(23),
-  msoConditionNextMonth(24),
-  msoConditionAnytime(25),
-  msoConditionAnytimeBetween(26),
-  msoConditionOn(27),
-  msoConditionOnOrAfter(28),
-  msoConditionOnOrBefore(29),
-  msoConditionInTheNext(30),
-  msoConditionInTheLast(31),
-  msoConditionEquals(32),
-  msoConditionDoesNotEqual(33),
-  msoConditionAnyNumberBetween(34),
-  msoConditionAtMost(35),
-  msoConditionAtLeast(36),
-  msoConditionMoreThan(37),
-  msoConditionLessThan(38),
-  msoConditionIsYes(39),
-  msoConditionIsNo(40),
-  msoConditionIncludesFormsOf(41),
-  msoConditionFreeText(42),
-  msoConditionFileTypeOutlookItems(43),
-  msoConditionFileTypeMailItem(44),
-  msoConditionFileTypeCalendarItem(45),
-  msoConditionFileTypeContactItem(46),
-  msoConditionFileTypeNoteItem(47),
-  msoConditionFileTypeJournalItem(48),
-  msoConditionFileTypeTaskItem(49),
-  msoConditionFileTypePhotoDrawFiles(50),
-  msoConditionFileTypeDataConnectionFiles(51),
-  msoConditionFileTypePublisherFiles(52),
-  msoConditionFileTypeProjectFiles(53),
-  msoConditionFileTypeDocumentImagingFiles(54),
-  msoConditionFileTypeVisioFiles(55),
-  msoConditionFileTypeDesignerFiles(56),
-  msoConditionFileTypeWebPages(57),
-  msoConditionEqualsLow(58),
-  msoConditionEqualsNormal(59),
-  msoConditionEqualsHigh(60),
-  msoConditionNotEqualToLow(61),
-  msoConditionNotEqualToNormal(62),
-  msoConditionNotEqualToHigh(63),
-  msoConditionEqualsNotStarted(64),
-  msoConditionEqualsInProgress(65),
-  msoConditionEqualsCompleted(66),
-  msoConditionEqualsWaitingForSomeoneElse(67),
-  msoConditionEqualsDeferred(68),
-  msoConditionNotEqualToNotStarted(69),
-  msoConditionNotEqualToInProgress(70),
-  msoConditionNotEqualToCompleted(71),
-  msoConditionNotEqualToWaitingForSomeoneElse(72),
-  msoConditionNotEqualToDeferred(73);
+public class MsoCondition {
 
+  // Typed constants
+  public final static MsoCondition msoConditionFileTypeAllFiles = new MsoCondition(1);
+  public final static MsoCondition msoConditionFileTypeOfficeFiles = new MsoCondition(2);
+  public final static MsoCondition msoConditionFileTypeWordDocuments = new MsoCondition(3);
+  public final static MsoCondition msoConditionFileTypeExcelWorkbooks = new MsoCondition(4);
+  public final static MsoCondition msoConditionFileTypePowerPointPresentations = new MsoCondition(5);
+  public final static MsoCondition msoConditionFileTypeBinders = new MsoCondition(6);
+  public final static MsoCondition msoConditionFileTypeDatabases = new MsoCondition(7);
+  public final static MsoCondition msoConditionFileTypeTemplates = new MsoCondition(8);
+  public final static MsoCondition msoConditionIncludes = new MsoCondition(9);
+  public final static MsoCondition msoConditionIncludesPhrase = new MsoCondition(10);
+  public final static MsoCondition msoConditionBeginsWith = new MsoCondition(11);
+  public final static MsoCondition msoConditionEndsWith = new MsoCondition(12);
+  public final static MsoCondition msoConditionIncludesNearEachOther = new MsoCondition(13);
+  public final static MsoCondition msoConditionIsExactly = new MsoCondition(14);
+  public final static MsoCondition msoConditionIsNot = new MsoCondition(15);
+  public final static MsoCondition msoConditionYesterday = new MsoCondition(16);
+  public final static MsoCondition msoConditionToday = new MsoCondition(17);
+  public final static MsoCondition msoConditionTomorrow = new MsoCondition(18);
+  public final static MsoCondition msoConditionLastWeek = new MsoCondition(19);
+  public final static MsoCondition msoConditionThisWeek = new MsoCondition(20);
+  public final static MsoCondition msoConditionNextWeek = new MsoCondition(21);
+  public final static MsoCondition msoConditionLastMonth = new MsoCondition(22);
+  public final static MsoCondition msoConditionThisMonth = new MsoCondition(23);
+  public final static MsoCondition msoConditionNextMonth = new MsoCondition(24);
+  public final static MsoCondition msoConditionAnytime = new MsoCondition(25);
+  public final static MsoCondition msoConditionAnytimeBetween = new MsoCondition(26);
+  public final static MsoCondition msoConditionOn = new MsoCondition(27);
+  public final static MsoCondition msoConditionOnOrAfter = new MsoCondition(28);
+  public final static MsoCondition msoConditionOnOrBefore = new MsoCondition(29);
+  public final static MsoCondition msoConditionInTheNext = new MsoCondition(30);
+  public final static MsoCondition msoConditionInTheLast = new MsoCondition(31);
+  public final static MsoCondition msoConditionEquals = new MsoCondition(32);
+  public final static MsoCondition msoConditionDoesNotEqual = new MsoCondition(33);
+  public final static MsoCondition msoConditionAnyNumberBetween = new MsoCondition(34);
+  public final static MsoCondition msoConditionAtMost = new MsoCondition(35);
+  public final static MsoCondition msoConditionAtLeast = new MsoCondition(36);
+  public final static MsoCondition msoConditionMoreThan = new MsoCondition(37);
+  public final static MsoCondition msoConditionLessThan = new MsoCondition(38);
+  public final static MsoCondition msoConditionIsYes = new MsoCondition(39);
+  public final static MsoCondition msoConditionIsNo = new MsoCondition(40);
+  public final static MsoCondition msoConditionIncludesFormsOf = new MsoCondition(41);
+  public final static MsoCondition msoConditionFreeText = new MsoCondition(42);
+  public final static MsoCondition msoConditionFileTypeOutlookItems = new MsoCondition(43);
+  public final static MsoCondition msoConditionFileTypeMailItem = new MsoCondition(44);
+  public final static MsoCondition msoConditionFileTypeCalendarItem = new MsoCondition(45);
+  public final static MsoCondition msoConditionFileTypeContactItem = new MsoCondition(46);
+  public final static MsoCondition msoConditionFileTypeNoteItem = new MsoCondition(47);
+  public final static MsoCondition msoConditionFileTypeJournalItem = new MsoCondition(48);
+  public final static MsoCondition msoConditionFileTypeTaskItem = new MsoCondition(49);
+  public final static MsoCondition msoConditionFileTypePhotoDrawFiles = new MsoCondition(50);
+  public final static MsoCondition msoConditionFileTypeDataConnectionFiles = new MsoCondition(51);
+  public final static MsoCondition msoConditionFileTypePublisherFiles = new MsoCondition(52);
+  public final static MsoCondition msoConditionFileTypeProjectFiles = new MsoCondition(53);
+  public final static MsoCondition msoConditionFileTypeDocumentImagingFiles = new MsoCondition(54);
+  public final static MsoCondition msoConditionFileTypeVisioFiles = new MsoCondition(55);
+  public final static MsoCondition msoConditionFileTypeDesignerFiles = new MsoCondition(56);
+  public final static MsoCondition msoConditionFileTypeWebPages = new MsoCondition(57);
+  public final static MsoCondition msoConditionEqualsLow = new MsoCondition(58);
+  public final static MsoCondition msoConditionEqualsNormal = new MsoCondition(59);
+  public final static MsoCondition msoConditionEqualsHigh = new MsoCondition(60);
+  public final static MsoCondition msoConditionNotEqualToLow = new MsoCondition(61);
+  public final static MsoCondition msoConditionNotEqualToNormal = new MsoCondition(62);
+  public final static MsoCondition msoConditionNotEqualToHigh = new MsoCondition(63);
+  public final static MsoCondition msoConditionEqualsNotStarted = new MsoCondition(64);
+  public final static MsoCondition msoConditionEqualsInProgress = new MsoCondition(65);
+  public final static MsoCondition msoConditionEqualsCompleted = new MsoCondition(66);
+  public final static MsoCondition msoConditionEqualsWaitingForSomeoneElse = new MsoCondition(67);
+  public final static MsoCondition msoConditionEqualsDeferred = new MsoCondition(68);
+  public final static MsoCondition msoConditionNotEqualToNotStarted = new MsoCondition(69);
+  public final static MsoCondition msoConditionNotEqualToInProgress = new MsoCondition(70);
+  public final static MsoCondition msoConditionNotEqualToCompleted = new MsoCondition(71);
+  public final static MsoCondition msoConditionNotEqualToWaitingForSomeoneElse = new MsoCondition(72);
+  public final static MsoCondition msoConditionNotEqualToDeferred = new MsoCondition(73);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoConditionFileTypeAllFiles = 1;
+  public final static int _msoConditionFileTypeOfficeFiles = 2;
+  public final static int _msoConditionFileTypeWordDocuments = 3;
+  public final static int _msoConditionFileTypeExcelWorkbooks = 4;
+  public final static int _msoConditionFileTypePowerPointPresentations = 5;
+  public final static int _msoConditionFileTypeBinders = 6;
+  public final static int _msoConditionFileTypeDatabases = 7;
+  public final static int _msoConditionFileTypeTemplates = 8;
+  public final static int _msoConditionIncludes = 9;
+  public final static int _msoConditionIncludesPhrase = 10;
+  public final static int _msoConditionBeginsWith = 11;
+  public final static int _msoConditionEndsWith = 12;
+  public final static int _msoConditionIncludesNearEachOther = 13;
+  public final static int _msoConditionIsExactly = 14;
+  public final static int _msoConditionIsNot = 15;
+  public final static int _msoConditionYesterday = 16;
+  public final static int _msoConditionToday = 17;
+  public final static int _msoConditionTomorrow = 18;
+  public final static int _msoConditionLastWeek = 19;
+  public final static int _msoConditionThisWeek = 20;
+  public final static int _msoConditionNextWeek = 21;
+  public final static int _msoConditionLastMonth = 22;
+  public final static int _msoConditionThisMonth = 23;
+  public final static int _msoConditionNextMonth = 24;
+  public final static int _msoConditionAnytime = 25;
+  public final static int _msoConditionAnytimeBetween = 26;
+  public final static int _msoConditionOn = 27;
+  public final static int _msoConditionOnOrAfter = 28;
+  public final static int _msoConditionOnOrBefore = 29;
+  public final static int _msoConditionInTheNext = 30;
+  public final static int _msoConditionInTheLast = 31;
+  public final static int _msoConditionEquals = 32;
+  public final static int _msoConditionDoesNotEqual = 33;
+  public final static int _msoConditionAnyNumberBetween = 34;
+  public final static int _msoConditionAtMost = 35;
+  public final static int _msoConditionAtLeast = 36;
+  public final static int _msoConditionMoreThan = 37;
+  public final static int _msoConditionLessThan = 38;
+  public final static int _msoConditionIsYes = 39;
+  public final static int _msoConditionIsNo = 40;
+  public final static int _msoConditionIncludesFormsOf = 41;
+  public final static int _msoConditionFreeText = 42;
+  public final static int _msoConditionFileTypeOutlookItems = 43;
+  public final static int _msoConditionFileTypeMailItem = 44;
+  public final static int _msoConditionFileTypeCalendarItem = 45;
+  public final static int _msoConditionFileTypeContactItem = 46;
+  public final static int _msoConditionFileTypeNoteItem = 47;
+  public final static int _msoConditionFileTypeJournalItem = 48;
+  public final static int _msoConditionFileTypeTaskItem = 49;
+  public final static int _msoConditionFileTypePhotoDrawFiles = 50;
+  public final static int _msoConditionFileTypeDataConnectionFiles = 51;
+  public final static int _msoConditionFileTypePublisherFiles = 52;
+  public final static int _msoConditionFileTypeProjectFiles = 53;
+  public final static int _msoConditionFileTypeDocumentImagingFiles = 54;
+  public final static int _msoConditionFileTypeVisioFiles = 55;
+  public final static int _msoConditionFileTypeDesignerFiles = 56;
+  public final static int _msoConditionFileTypeWebPages = 57;
+  public final static int _msoConditionEqualsLow = 58;
+  public final static int _msoConditionEqualsNormal = 59;
+  public final static int _msoConditionEqualsHigh = 60;
+  public final static int _msoConditionNotEqualToLow = 61;
+  public final static int _msoConditionNotEqualToNormal = 62;
+  public final static int _msoConditionNotEqualToHigh = 63;
+  public final static int _msoConditionEqualsNotStarted = 64;
+  public final static int _msoConditionEqualsInProgress = 65;
+  public final static int _msoConditionEqualsCompleted = 66;
+  public final static int _msoConditionEqualsWaitingForSomeoneElse = 67;
+  public final static int _msoConditionEqualsDeferred = 68;
+  public final static int _msoConditionNotEqualToNotStarted = 69;
+  public final static int _msoConditionNotEqualToInProgress = 70;
+  public final static int _msoConditionNotEqualToCompleted = 71;
+  public final static int _msoConditionNotEqualToWaitingForSomeoneElse = 72;
+  public final static int _msoConditionNotEqualToDeferred = 73;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoCondition(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoCondition valueOf(int value) {
     switch(value) {
     case 1: return msoConditionFileTypeAllFiles;
@@ -160,7 +242,7 @@ public enum MsoCondition {
     case 71: return msoConditionNotEqualToCompleted;
     case 72: return msoConditionNotEqualToWaitingForSomeoneElse;
     case 73: return msoConditionNotEqualToDeferred;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoCondition.class);
+    default: return new MsoCondition(value);
     }
   }
 }

@@ -141,7 +141,7 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 		// We use the JoaBridgeCtrl as the parent window for the Java window.
 		
 		// Get the native window handle of the JoaBridgeCtrl
-		Dispatch ctrl = taskPane.getContentControl();
+		Dispatch ctrl = taskPane.getContentControl().as(Dispatch.class);
 		final long hwndJoaCtrl = ((Number) ctrl._get("HWND")).longValue();
 		
 		// Create the Java window as a child window of the JoaBridgeCtrl.

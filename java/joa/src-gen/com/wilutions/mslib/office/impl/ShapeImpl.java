@@ -5,20 +5,20 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A77-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Shape {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(10)  public void Apply() throws ComException {
     this._dispatchCall(10,"Apply", DISPATCH_METHOD,null);
@@ -29,8 +29,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(12)  public com.wilutions.mslib.office.Shape Duplicate() throws ComException {
     final Object obj = this._dispatchCall(12,"Duplicate", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
   @DeclDISPID(13)  public void Flip(com.wilutions.mslib.office.MsoFlipCmd FlipCmd) throws ComException {
     assert(FlipCmd != null);
@@ -76,8 +75,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(23)  public com.wilutions.mslib.office.ShapeRange Ungroup() throws ComException {
     final Object obj = this._dispatchCall(23,"Ungroup", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeRangeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeRangeImpl.class);
   }
   @DeclDISPID(24)  public void ZOrder(com.wilutions.mslib.office.MsoZOrderCmd ZOrderCmd) throws ComException {
     assert(ZOrderCmd != null);
@@ -86,8 +84,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(100)  public com.wilutions.mslib.office.Adjustments getAdjustments() throws ComException {
     final Object obj = this._dispatchCall(100,"Adjustments", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.AdjustmentsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.AdjustmentsImpl.class);
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.MsoAutoShapeType getAutoShapeType() throws ComException {
     final Object obj = this._dispatchCall(101,"AutoShapeType", DISPATCH_PROPERTYGET,null);
@@ -110,8 +107,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(103)  public com.wilutions.mslib.office.CalloutFormat getCallout() throws ComException {
     final Object obj = this._dispatchCall(103,"Callout", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.CalloutFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.CalloutFormatImpl.class);
   }
   @DeclDISPID(104)  public Integer getConnectionSiteCount() throws ComException {
     final Object obj = this._dispatchCall(104,"ConnectionSiteCount", DISPATCH_PROPERTYGET,null);
@@ -126,20 +122,17 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(106)  public com.wilutions.mslib.office.ConnectorFormat getConnectorFormat() throws ComException {
     final Object obj = this._dispatchCall(106,"ConnectorFormat", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ConnectorFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ConnectorFormatImpl.class);
   }
   @DeclDISPID(107)  public com.wilutions.mslib.office.FillFormat getFill() throws ComException {
     final Object obj = this._dispatchCall(107,"Fill", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.FillFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.FillFormatImpl.class);
   }
   @DeclDISPID(108)  public com.wilutions.mslib.office.GroupShapes getGroupItems() throws ComException {
     final Object obj = this._dispatchCall(108,"GroupItems", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.GroupShapesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.GroupShapesImpl.class);
   }
   @DeclDISPID(109)  public Float getHeight() throws ComException {
     final Object obj = this._dispatchCall(109,"Height", DISPATCH_PROPERTYGET,null);
@@ -167,8 +160,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(112)  public com.wilutions.mslib.office.LineFormat getLine() throws ComException {
     final Object obj = this._dispatchCall(112,"Line", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.LineFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.LineFormatImpl.class);
   }
   @DeclDISPID(113)  public com.wilutions.mslib.office.MsoTriState getLockAspectRatio() throws ComException {
     final Object obj = this._dispatchCall(113,"LockAspectRatio", DISPATCH_PROPERTYGET,null);
@@ -191,8 +183,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(116)  public com.wilutions.mslib.office.ShapeNodes getNodes() throws ComException {
     final Object obj = this._dispatchCall(116,"Nodes", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeNodesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeNodesImpl.class);
   }
   @DeclDISPID(117)  public Float getRotation() throws ComException {
     final Object obj = this._dispatchCall(117,"Rotation", DISPATCH_PROPERTYGET,null);
@@ -206,32 +197,27 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(118)  public com.wilutions.mslib.office.PictureFormat getPictureFormat() throws ComException {
     final Object obj = this._dispatchCall(118,"PictureFormat", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.PictureFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.PictureFormatImpl.class);
   }
   @DeclDISPID(119)  public com.wilutions.mslib.office.ShadowFormat getShadow() throws ComException {
     final Object obj = this._dispatchCall(119,"Shadow", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShadowFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShadowFormatImpl.class);
   }
   @DeclDISPID(120)  public com.wilutions.mslib.office.TextEffectFormat getTextEffect() throws ComException {
     final Object obj = this._dispatchCall(120,"TextEffect", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TextEffectFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextEffectFormatImpl.class);
   }
   @DeclDISPID(121)  public com.wilutions.mslib.office.TextFrame getTextFrame() throws ComException {
     final Object obj = this._dispatchCall(121,"TextFrame", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TextFrameImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextFrameImpl.class);
   }
   @DeclDISPID(122)  public com.wilutions.mslib.office.ThreeDFormat getThreeD() throws ComException {
     final Object obj = this._dispatchCall(122,"ThreeD", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ThreeDFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ThreeDFormatImpl.class);
   }
   @DeclDISPID(123)  public Float getTop() throws ComException {
     final Object obj = this._dispatchCall(123,"Top", DISPATCH_PROPERTYGET,null);
@@ -297,8 +283,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(137)  public com.wilutions.mslib.office.Shape getParentGroup() throws ComException {
     final Object obj = this._dispatchCall(137,"ParentGroup", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
   @DeclDISPID(139)  public Integer getId() throws ComException {
     final Object obj = this._dispatchCall(139,"Id", DISPATCH_PROPERTYGET,null);
@@ -308,8 +293,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(145)  public com.wilutions.mslib.office.TextFrame2 getTextFrame2() throws ComException {
     final Object obj = this._dispatchCall(145,"TextFrame2", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.TextFrame2Impl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextFrame2Impl.class);
   }
   @DeclDISPID(146)  public void Cut() throws ComException {
     this._dispatchCall(146,"Cut", DISPATCH_METHOD,null);
@@ -325,8 +309,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(149)  public com.wilutions.mslib.office.IMsoChart getChart() throws ComException {
     final Object obj = this._dispatchCall(149,"Chart", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartImpl.class);
   }
   @DeclDISPID(150)  public com.wilutions.mslib.office.MsoShapeStyleIndex getShapeStyle() throws ComException {
     final Object obj = this._dispatchCall(150,"ShapeStyle", DISPATCH_PROPERTYGET,null);
@@ -349,20 +332,17 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(152)  public com.wilutions.mslib.office.SoftEdgeFormat getSoftEdge() throws ComException {
     final Object obj = this._dispatchCall(152,"SoftEdge", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SoftEdgeFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SoftEdgeFormatImpl.class);
   }
   @DeclDISPID(153)  public com.wilutions.mslib.office.GlowFormat getGlow() throws ComException {
     final Object obj = this._dispatchCall(153,"Glow", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.GlowFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.GlowFormatImpl.class);
   }
   @DeclDISPID(154)  public com.wilutions.mslib.office.ReflectionFormat getReflection() throws ComException {
     final Object obj = this._dispatchCall(154,"Reflection", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ReflectionFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ReflectionFormatImpl.class);
   }
   @DeclDISPID(155)  public com.wilutions.mslib.office.MsoTriState getHasSmartArt() throws ComException {
     final Object obj = this._dispatchCall(155,"HasSmartArt", DISPATCH_PROPERTYGET,null);
@@ -372,8 +352,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(156)  public com.wilutions.mslib.office.SmartArt getSmartArt() throws ComException {
     final Object obj = this._dispatchCall(156,"SmartArt", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.SmartArtImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtImpl.class);
   }
   @DeclDISPID(157)  public void ConvertTextToSmartArt(com.wilutions.mslib.office.SmartArtLayout Layout) throws ComException {
     this._dispatchCall(157,"ConvertTextToSmartArt", DISPATCH_METHOD,null,(Layout!=null?Layout:Dispatch.NULL));

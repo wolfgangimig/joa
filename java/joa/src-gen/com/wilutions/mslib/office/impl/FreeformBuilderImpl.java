@@ -5,20 +5,20 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A7E-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class FreeformBuilderImpl extends Dispatch implements com.wilutions.mslib.office.FreeformBuilder {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(10)  public void AddNodes(com.wilutions.mslib.office.MsoSegmentType SegmentType, com.wilutions.mslib.office.MsoEditingType EditingType, Float X1, Float Y1, Float X2, Float Y2, Float X3, Float Y3) throws ComException {
     assert(SegmentType != null);
@@ -34,8 +34,7 @@ public class FreeformBuilderImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(11)  public com.wilutions.mslib.office.Shape ConvertToShape() throws ComException {
     final Object obj = this._dispatchCall(11,"ConvertToShape", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
   public FreeformBuilderImpl(String progId) throws ComException {
     super(progId, "{000C0315-0000-0000-C000-000000000046}");

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0302-0000-0000-C000-000000000046}")
 public interface _CommandBars extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public CommandBarControl getActionControl() throws ComException;
   @DeclDISPID(1610809345)  public CommandBar getActiveMenuBar() throws ComException;
@@ -25,7 +25,7 @@ public interface _CommandBars extends IDispatch {
   @DeclDISPID(1610809356)  public MsoMenuAnimation getMenuAnimationStyle() throws ComException;
   @DeclDISPID(1610809356)  public void setMenuAnimationStyle(MsoMenuAnimation value) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(1610809359)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(1610809359)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809360)  public void ReleaseFocus() throws ComException;
   @DeclDISPID(1610809363)  public Boolean getAdaptiveMenus() throws ComException;
   @DeclDISPID(1610809363)  public void setAdaptiveMenus(Boolean value) throws ComException;

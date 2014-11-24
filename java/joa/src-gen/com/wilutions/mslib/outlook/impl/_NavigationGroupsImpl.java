@@ -8,8 +8,7 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(80)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(80,"Count", DISPATCH_PROPERTYGET,null);
@@ -36,15 +34,14 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NavigationGroupImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationGroupImpl.class);
   }
   @DeclDISPID(64445)  public com.wilutions.mslib.outlook.NavigationGroup Create(String GroupDisplayName) throws ComException {
     assert(GroupDisplayName != null);
     final Object obj = this._dispatchCall(64445,"Create", DISPATCH_METHOD,null,GroupDisplayName);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationGroup.class);
+    return disp.as(com.wilutions.mslib.outlook.NavigationGroup.class);
   }
   @DeclDISPID(64446)  public void Delete(com.wilutions.mslib.outlook.NavigationGroup Group) throws ComException {
     this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,(Group!=null?Group:Dispatch.NULL));
@@ -54,7 +51,7 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
     final Object obj = this._dispatchCall(64447,"GetDefaultNavigationGroup", DISPATCH_METHOD,null,DefaultFolderGroup.value);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.NavigationGroup.class);
+    return disp.as(com.wilutions.mslib.outlook.NavigationGroup.class);
   }
   public _NavigationGroupsImpl(String progId) throws ComException {
     super(progId, "{000630EF-0000-0000-C000-000000000046}");

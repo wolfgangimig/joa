@@ -8,19 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{73628D00-B812-419F-8212-3D62079E22DB}")
-public enum OlMatchEntry {
-  olMatchEntryFirstLetter(0),
-  olMatchEntryComplete(1),
-  olMatchEntryNone(2);
+public class OlMatchEntry {
 
+  // Typed constants
+  public final static OlMatchEntry olMatchEntryFirstLetter = new OlMatchEntry(0);
+  public final static OlMatchEntry olMatchEntryComplete = new OlMatchEntry(1);
+  public final static OlMatchEntry olMatchEntryNone = new OlMatchEntry(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olMatchEntryFirstLetter = 0;
+  public final static int _olMatchEntryComplete = 1;
+  public final static int _olMatchEntryNone = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlMatchEntry(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlMatchEntry valueOf(int value) {
     switch(value) {
     case 0: return olMatchEntryFirstLetter;
     case 1: return olMatchEntryComplete;
     case 2: return olMatchEntryNone;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlMatchEntry.class);
+    default: return new OlMatchEntry(value);
     }
   }
 }

@@ -8,14 +8,13 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
   @DeclDISPID(0)  public com.wilutions.mslib.msforms.Controls getControls() throws ComException {
     final Object obj = this._dispatchCall(0,"Controls", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.impl.ControlsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.ControlsImpl.class);
   }
   @DeclDISPID(256)  public com.wilutions.mslib.msforms.Control getActiveControl() throws ComException {
     final Object obj = this._dispatchCall(256,"ActiveControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.msforms.Control.class);
+    return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
   @DeclDISPID(257)  public Boolean getCanPaste() throws ComException {
     final Object obj = this._dispatchCall(257,"CanPaste", DISPATCH_PROPERTYGET,null);
@@ -128,8 +127,7 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.stdole.impl.PictureImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(27)  public void setPictureSizeMode(com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
     assert(value != null);
@@ -331,10 +329,10 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-2147418104)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(-2147418104)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(-2147418104,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public IPageImpl(String progId) throws ComException {
     super(progId, "{5CEF5613-713D-11CE-80C9-00AA00611080}");

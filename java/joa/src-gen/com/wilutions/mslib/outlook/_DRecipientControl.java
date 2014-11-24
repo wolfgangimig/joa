@@ -16,8 +16,8 @@ public interface _DRecipientControl extends IDispatch {
   @DeclDISPID(-513)  public void setForeColor(Integer value) throws ComException;
   @DeclDISPID(-2147356664)  public Byte getReadOnly() throws ComException;
   @DeclDISPID(-2147356664)  public void setReadOnly(Byte value) throws ComException;
-  @DeclDISPID(-512)  public Dispatch getFont() throws ComException;
-  @DeclDISPID(-512)  public void setFont(Dispatch value) throws ComException;
+  @DeclDISPID(-512)  public IDispatch getFont() throws ComException;
+  @DeclDISPID(-512)  public void setFont(IDispatch value) throws ComException;
   @DeclDISPID(12)  public Integer getSpecialEffect() throws ComException;
   @DeclDISPID(12)  public void setSpecialEffect(Integer value) throws ComException;
 }

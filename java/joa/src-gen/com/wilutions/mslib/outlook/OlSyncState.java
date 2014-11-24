@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum OlSyncState {
-  olSyncStopped(0),
-  olSyncStarted(1);
+public class OlSyncState {
 
+  // Typed constants
+  public final static OlSyncState olSyncStopped = new OlSyncState(0);
+  public final static OlSyncState olSyncStarted = new OlSyncState(1);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _olSyncStopped = 0;
+  public final static int _olSyncStarted = 1;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private OlSyncState(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  OlSyncState valueOf(int value) {
     switch(value) {
     case 0: return olSyncStopped;
     case 1: return olSyncStarted;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + OlSyncState.class);
+    default: return new OlSyncState(value);
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C03BD-0000-0000-C000-000000000046}")
 public interface GlowFormat extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public Float getRadius() throws ComException;
   @DeclDISPID(1)  public void setRadius(Float value) throws ComException;

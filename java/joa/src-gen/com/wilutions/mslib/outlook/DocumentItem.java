@@ -11,8 +11,7 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -22,25 +21,22 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(63511)  public Actions getActions() throws ComException {
     final Object obj = this._dispatchCall(63511,"Actions", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ActionsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ActionsImpl.class);
   }
   @DeclDISPID(63509)  public Attachments getAttachments() throws ComException {
     final Object obj = this._dispatchCall(63509,"Attachments", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.AttachmentsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AttachmentsImpl.class);
   }
   @DeclDISPID(34101)  public String getBillingInformation() throws ComException {
     final Object obj = this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYGET,null);
@@ -101,14 +97,12 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   @DeclDISPID(61589)  public FormDescription getFormDescription() throws ComException {
     final Object obj = this._dispatchCall(61589,"FormDescription", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.FormDescriptionImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.FormDescriptionImpl.class);
   }
   @DeclDISPID(61502)  public _Inspector getGetInspector() throws ComException {
     final Object obj = this._dispatchCall(61502,"GetInspector", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._InspectorImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }
   @DeclDISPID(23)  public OlImportance getImportance() throws ComException {
     final Object obj = this._dispatchCall(23,"Importance", DISPATCH_PROPERTYGET,null);
@@ -201,17 +195,16 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   @DeclDISPID(63510)  public UserProperties getUserProperties() throws ComException {
     final Object obj = this._dispatchCall(63510,"UserProperties", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
   @DeclDISPID(61475)  public void Close(OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
-  @DeclDISPID(61490)  public Dispatch Copy() throws ComException {
+  @DeclDISPID(61490)  public IDispatch Copy() throws ComException {
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
@@ -220,10 +213,10 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public Dispatch Move(MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(61491)  public void PrintOut() throws ComException {
     this._dispatchCall(61491,"PrintOut", DISPATCH_METHOD,null);
@@ -247,8 +240,7 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   @DeclDISPID(64009)  public ItemProperties getItemProperties() throws ComException {
     final Object obj = this._dispatchCall(64009,"ItemProperties", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ItemPropertiesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ItemPropertiesImpl.class);
   }
   @DeclDISPID(34161)  public OlRemoteStatus getMarkForDownload() throws ComException {
     final Object obj = this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYGET,null);
@@ -272,14 +264,13 @@ public class DocumentItem extends Dispatch implements _DocumentItem {
   @DeclDISPID(64187)  public Conflicts getConflicts() throws ComException {
     final Object obj = this._dispatchCall(64187,"Conflicts", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ConflictsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ConflictsImpl.class);
   }
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException {
     final Object obj = this._dispatchCall(64253,"PropertyAccessor", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(PropertyAccessor.class);
+    return disp.as(PropertyAccessor.class);
   }
   public DocumentItem() throws ComException {
     super("{00061061-0000-0000-C000-000000000046}", "{00063020-0000-0000-C000-000000000046}");

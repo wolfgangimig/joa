@@ -83,5 +83,5 @@ public interface IPage extends IDispatch {
   @DeclDISPID(519)  public void UndoAction() throws ComException;
   @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException;
   @DeclDISPID(-543)  public String getAccelerator() throws ComException;
-  @DeclDISPID(-2147418104)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(-2147418104)  public IDispatch getParent() throws ComException;
 }

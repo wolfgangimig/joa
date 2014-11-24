@@ -8,17 +8,28 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{3DBDD630-DD73-11CE-8CD1-00AA0044BB60}")
-public enum fmCycle {
-  fmCycleAllForms(0),
-  fmCycleCurrentForm(2);
+public class fmCycle {
 
+  // Typed constants
+  public final static fmCycle fmCycleAllForms = new fmCycle(0);
+  public final static fmCycle fmCycleCurrentForm = new fmCycle(2);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _fmCycleAllForms = 0;
+  public final static int _fmCycleCurrentForm = 2;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private fmCycle(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  fmCycle valueOf(int value) {
     switch(value) {
     case 0: return fmCycleAllForms;
     case 2: return fmCycleCurrentForm;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + fmCycle.class);
+    default: return new fmCycle(value);
     }
   }
 }

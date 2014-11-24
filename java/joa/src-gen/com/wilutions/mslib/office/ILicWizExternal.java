@@ -23,12 +23,12 @@ public interface ILicWizExternal extends IDispatch {
   @DeclDISPID(13)  public void ResetPID() throws ComException;
   @DeclDISPID(14)  public void SetDialogSize(Integer dx, Integer dy) throws ComException;
   @DeclDISPID(15)  public Integer VerifyClock(Integer lMode) throws ComException;
-  @DeclDISPID(16)  public void SortSelectOptions(Dispatch pdispSelect) throws ComException;
+  @DeclDISPID(16)  public void SortSelectOptions(IDispatch pdispSelect) throws ComException;
   @DeclDISPID(17)  public void InternetDisconnect() throws ComException;
   @DeclDISPID(18)  public Integer GetConnectedState() throws ComException;
   @DeclDISPID(20)  public Integer getContext() throws ComException;
-  @DeclDISPID(21)  public Dispatch getValidator() throws ComException;
-  @DeclDISPID(22)  public Dispatch getLicAgent() throws ComException;
+  @DeclDISPID(21)  public IDispatch getValidator() throws ComException;
+  @DeclDISPID(22)  public IDispatch getLicAgent() throws ComException;
   @DeclDISPID(23)  public String getCountryInfo() throws ComException;
   @DeclDISPID(24)  public void setWizardVisible(Integer value) throws ComException;
   @DeclDISPID(25)  public void setWizardTitle(String value) throws ComException;

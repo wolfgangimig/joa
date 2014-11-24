@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface ExplorerEvents_10 extends IDispatch {
   @DeclDISPID(61441)  public void onActivate() throws ComException;
   @DeclDISPID(61442)  public void onFolderSwitch() throws ComException;
-  @DeclDISPID(61443)  public void onBeforeFolderSwitch(Dispatch NewFolder, ByRef<Boolean> Cancel) throws ComException;
+  @DeclDISPID(61443)  public void onBeforeFolderSwitch(IDispatch NewFolder, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(61444)  public void onViewSwitch() throws ComException;
   @DeclDISPID(61445)  public void onBeforeViewSwitch(Object NewView, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(61446)  public void onDeactivate() throws ComException;
@@ -24,6 +24,6 @@ public interface ExplorerEvents_10 extends IDispatch {
   @DeclDISPID(64015)  public void onBeforeItemCut(ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(64016)  public void onBeforeItemPaste(Object ClipboardContent, MAPIFolder Target, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(64633)  public void onAttachmentSelectionChange() throws ComException;
-  @DeclDISPID(64658)  public void onInlineResponse(Dispatch Item) throws ComException;
+  @DeclDISPID(64658)  public void onInlineResponse(IDispatch Item) throws ComException;
   @DeclDISPID(64662)  public void onInlineResponseClose() throws ComException;
 }

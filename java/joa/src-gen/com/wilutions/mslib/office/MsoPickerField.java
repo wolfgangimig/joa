@@ -8,16 +8,31 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C4B07795-AE88-400C-AF72-6F7F75A3EC0B}")
-public enum MsoPickerField {
-  msoPickerFieldUnknown(0),
-  msoPickerFieldDateTime(1),
-  msoPickerFieldNumber(2),
-  msoPickerFieldText(3),
-  msoPickerFieldUser(4),
-  msoPickerFieldMax(5);
+public class MsoPickerField {
 
+  // Typed constants
+  public final static MsoPickerField msoPickerFieldUnknown = new MsoPickerField(0);
+  public final static MsoPickerField msoPickerFieldDateTime = new MsoPickerField(1);
+  public final static MsoPickerField msoPickerFieldNumber = new MsoPickerField(2);
+  public final static MsoPickerField msoPickerFieldText = new MsoPickerField(3);
+  public final static MsoPickerField msoPickerFieldUser = new MsoPickerField(4);
+  public final static MsoPickerField msoPickerFieldMax = new MsoPickerField(5);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoPickerFieldUnknown = 0;
+  public final static int _msoPickerFieldDateTime = 1;
+  public final static int _msoPickerFieldNumber = 2;
+  public final static int _msoPickerFieldText = 3;
+  public final static int _msoPickerFieldUser = 4;
+  public final static int _msoPickerFieldMax = 5;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoPickerField(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoPickerField valueOf(int value) {
     switch(value) {
     case 0: return msoPickerFieldUnknown;
@@ -26,7 +41,7 @@ public enum MsoPickerField {
     case 3: return msoPickerFieldText;
     case 4: return msoPickerFieldUser;
     case 5: return msoPickerFieldMax;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoPickerField.class);
+    default: return new MsoPickerField(value);
     }
   }
 }

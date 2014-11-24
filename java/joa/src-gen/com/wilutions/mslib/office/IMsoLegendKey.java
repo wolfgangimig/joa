@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171E-0000-0000-C000-000000000046}")
 public interface IMsoLegendKey extends IDispatch {
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(112)  public Object ClearFormats() throws ComException;
   @DeclDISPID(117)  public Object Delete() throws ComException;
@@ -42,7 +42,7 @@ public interface IMsoLegendKey extends IDispatch {
   @DeclDISPID(103)  public Boolean getShadow() throws ComException;
   @DeclDISPID(103)  public void setShadow(Boolean RHS) throws ComException;
   @DeclDISPID(1610743841)  public IMsoChartFormat getFormat() throws ComException;
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(2649)  public Double getPictureUnit2() throws ComException;
   @DeclDISPID(2649)  public void setPictureUnit2(Double RHS) throws ComException;

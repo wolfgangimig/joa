@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A1B-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.office.DiagramNode {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"Creator", DISPATCH_PROPERTYGET,null);
@@ -20,8 +20,7 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
     assert(NodeType != null);
     final Object obj = this._dispatchCall(10,"AddNode", DISPATCH_METHOD,null,Pos.value,NodeType.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(11)  public void Delete() throws ComException {
     this._dispatchCall(11,"Delete", DISPATCH_METHOD,null);
@@ -42,8 +41,7 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
     assert(Pos != null);
     final Object obj = this._dispatchCall(15,"CloneNode", DISPATCH_METHOD,null,CopyChildren,(TargetNode!=null?TargetNode:Dispatch.NULL),Pos.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(16)  public void TransferChildren(com.wilutions.mslib.office.DiagramNode ReceivingNode) throws ComException {
     this._dispatchCall(16,"TransferChildren", DISPATCH_METHOD,null,(ReceivingNode!=null?ReceivingNode:Dispatch.NULL));
@@ -51,43 +49,37 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
   @DeclDISPID(17)  public com.wilutions.mslib.office.DiagramNode NextNode() throws ComException {
     final Object obj = this._dispatchCall(17,"NextNode", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(18)  public com.wilutions.mslib.office.DiagramNode PrevNode() throws ComException {
     final Object obj = this._dispatchCall(18,"PrevNode", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
-  @DeclDISPID(100)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(100)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(100,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.DiagramNodeChildren getChildren() throws ComException {
     final Object obj = this._dispatchCall(101,"Children", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeChildrenImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeChildrenImpl.class);
   }
   @DeclDISPID(102)  public com.wilutions.mslib.office.Shape getShape() throws ComException {
     final Object obj = this._dispatchCall(102,"Shape", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
   @DeclDISPID(103)  public com.wilutions.mslib.office.DiagramNode getRoot() throws ComException {
     final Object obj = this._dispatchCall(103,"Root", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(104)  public com.wilutions.mslib.office.IMsoDiagram getDiagram() throws ComException {
     final Object obj = this._dispatchCall(104,"Diagram", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoDiagramImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoDiagramImpl.class);
   }
   @DeclDISPID(105)  public com.wilutions.mslib.office.MsoOrgChartLayoutType getLayout() throws ComException {
     final Object obj = this._dispatchCall(105,"Layout", DISPATCH_PROPERTYGET,null);
@@ -101,8 +93,7 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
   @DeclDISPID(106)  public com.wilutions.mslib.office.Shape getTextShape() throws ComException {
     final Object obj = this._dispatchCall(106,"TextShape", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.ShapeImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
   public DiagramNodeImpl(String progId) throws ComException {
     super(progId, "{000C0370-0000-0000-C000-000000000046}");

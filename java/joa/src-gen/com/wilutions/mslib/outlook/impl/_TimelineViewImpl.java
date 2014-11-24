@@ -8,8 +8,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,13 +18,12 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(407)  public void Apply() throws ComException {
     this._dispatchCall(407,"Apply", DISPATCH_METHOD,null);
@@ -35,8 +33,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     assert(SaveOption != null);
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null,Name,SaveOption.value);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.ViewImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ViewImpl.class);
   }
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
@@ -133,7 +130,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     final Object obj = this._dispatchCall(64344,"GroupByFields", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.OrderFields.class);
+    return disp.as(com.wilutions.mslib.outlook.OrderFields.class);
   }
   @DeclDISPID(64384)  public com.wilutions.mslib.outlook.OlDefaultExpandCollapseSetting getDefaultExpandCollapseSetting() throws ComException {
     final Object obj = this._dispatchCall(64384,"DefaultExpandCollapseSetting", DISPATCH_PROPERTYGET,null);
@@ -175,19 +172,19 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     final Object obj = this._dispatchCall(64040,"UpperScaleFont", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.ViewFont.class);
+    return disp.as(com.wilutions.mslib.outlook.ViewFont.class);
   }
   @DeclDISPID(64044)  public com.wilutions.mslib.outlook.ViewFont getLowerScaleFont() throws ComException {
     final Object obj = this._dispatchCall(64044,"LowerScaleFont", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.ViewFont.class);
+    return disp.as(com.wilutions.mslib.outlook.ViewFont.class);
   }
   @DeclDISPID(64045)  public com.wilutions.mslib.outlook.ViewFont getItemFont() throws ComException {
     final Object obj = this._dispatchCall(64045,"ItemFont", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.ViewFont.class);
+    return disp.as(com.wilutions.mslib.outlook.ViewFont.class);
   }
   @DeclDISPID(64392)  public com.wilutions.mslib.outlook.OlTimelineViewMode getTimelineViewMode() throws ComException {
     final Object obj = this._dispatchCall(64392,"TimelineViewMode", DISPATCH_PROPERTYGET,null);

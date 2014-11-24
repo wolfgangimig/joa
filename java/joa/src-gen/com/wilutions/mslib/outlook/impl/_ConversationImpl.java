@@ -8,8 +8,7 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(61440)  public com.wilutions.mslib.outlook._Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ApplicationImpl.class);
   }
   @DeclDISPID(61450)  public com.wilutions.mslib.outlook.OlObjectClass getClass_() throws ComException {
     final Object obj = this._dispatchCall(61450,"Class", DISPATCH_PROPERTYGET,null);
@@ -19,36 +18,35 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(61451)  public com.wilutions.mslib.outlook._NameSpace getSession() throws ComException {
     final Object obj = this._dispatchCall(61451,"Session", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NameSpaceImpl.class);
   }
-  @DeclDISPID(61441)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(61441)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(61441,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64591)  public com.wilutions.mslib.outlook.Table GetTable() throws ComException {
     final Object obj = this._dispatchCall(64591,"GetTable", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.Table.class);
+    return disp.as(com.wilutions.mslib.outlook.Table.class);
   }
-  @DeclDISPID(64592)  public com.wilutions.mslib.outlook.SimpleItems GetChildren(Dispatch Item) throws ComException {
+  @DeclDISPID(64592)  public com.wilutions.mslib.outlook.SimpleItems GetChildren(IDispatch Item) throws ComException {
     final Object obj = this._dispatchCall(64592,"GetChildren", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.SimpleItems.class);
+    return disp.as(com.wilutions.mslib.outlook.SimpleItems.class);
   }
-  @DeclDISPID(64594)  public Dispatch GetParent(Dispatch Item) throws ComException {
+  @DeclDISPID(64594)  public IDispatch GetParent(IDispatch Item) throws ComException {
     final Object obj = this._dispatchCall(64594,"GetParent", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(64595)  public com.wilutions.mslib.outlook.SimpleItems GetRootItems() throws ComException {
     final Object obj = this._dispatchCall(64595,"GetRootItems", DISPATCH_METHOD,null);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.SimpleItems.class);
+    return disp.as(com.wilutions.mslib.outlook.SimpleItems.class);
   }
   @DeclDISPID(64602)  public String GetAlwaysAssignCategories(com.wilutions.mslib.outlook._Store Store) throws ComException {
     final Object obj = this._dispatchCall(64602,"GetAlwaysAssignCategories", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
@@ -63,8 +61,7 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(64604)  public com.wilutions.mslib.outlook.MAPIFolder GetAlwaysMoveToFolder(com.wilutions.mslib.outlook._Store Store) throws ComException {
     final Object obj = this._dispatchCall(64604,"GetAlwaysMoveToFolder", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64605)  public void MarkAsRead() throws ComException {
     this._dispatchCall(64605,"MarkAsRead", DISPATCH_METHOD,null);

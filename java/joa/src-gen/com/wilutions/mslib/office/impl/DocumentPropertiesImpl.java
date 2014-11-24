@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{ED6F4926-FF99-CB5A-204B-694DA5B322A8}")
 public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.mslib.office.DocumentProperties {
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(0)  public com.wilutions.mslib.office.DocumentProperty getItem(Object Index, Integer lcid) throws ComException {
     assert(Index != null);
@@ -38,10 +38,10 @@ public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743813)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743813)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743813,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743814)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743814,"Creator", DISPATCH_PROPERTYGET,null);

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0370-0000-0000-C000-000000000046}")
 public interface DiagramNode extends IDispatch {
-  @DeclDISPID(1610743808)  public Dispatch getApplication() throws ComException;
+  @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(10)  public DiagramNode AddNode(MsoRelativeNodePosition Pos, MsoDiagramNodeType NodeType) throws ComException;
   @DeclDISPID(11)  public void Delete() throws ComException;
@@ -19,7 +19,7 @@ public interface DiagramNode extends IDispatch {
   @DeclDISPID(16)  public void TransferChildren(DiagramNode ReceivingNode) throws ComException;
   @DeclDISPID(17)  public DiagramNode NextNode() throws ComException;
   @DeclDISPID(18)  public DiagramNode PrevNode() throws ComException;
-  @DeclDISPID(100)  public Dispatch getParent() throws ComException;
+  @DeclDISPID(100)  public IDispatch getParent() throws ComException;
   @DeclDISPID(101)  public DiagramNodeChildren getChildren() throws ComException;
   @DeclDISPID(102)  public Shape getShape() throws ComException;
   @DeclDISPID(103)  public DiagramNode getRoot() throws ComException;

@@ -22,8 +22,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   @DeclDISPID(1610743811)  public com.wilutions.mslib.office.IMsoAxisTitle getAxisTitle() throws ComException {
     final Object obj = this._dispatchCall(1610743811,"AxisTitle", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoAxisTitleImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoAxisTitleImpl.class);
   }
   @DeclDISPID(1610743812)  public Object getCategoryNames() throws ComException {
     final Object obj = this._dispatchCall(1610743812,"CategoryNames", DISPATCH_PROPERTYGET,null);
@@ -87,8 +86,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   @DeclDISPID(1610743825)  public com.wilutions.mslib.office.GridLines getMajorGridlines() throws ComException {
     final Object obj = this._dispatchCall(1610743825,"MajorGridlines", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.GridLinesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.GridLinesImpl.class);
   }
   @DeclDISPID(1610743826)  public com.wilutions.mslib.office.XlTickMark getMajorTickMark() throws ComException {
     final Object obj = this._dispatchCall(1610743826,"MajorTickMark", DISPATCH_PROPERTYGET,null);
@@ -174,8 +172,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   @DeclDISPID(1610743844)  public com.wilutions.mslib.office.GridLines getMinorGridlines() throws ComException {
     final Object obj = this._dispatchCall(1610743844,"MinorGridlines", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.GridLinesImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.GridLinesImpl.class);
   }
   @DeclDISPID(1610743845)  public com.wilutions.mslib.office.XlTickMark getMinorTickMark() throws ComException {
     final Object obj = this._dispatchCall(1610743845,"MinorTickMark", DISPATCH_PROPERTYGET,null);
@@ -239,8 +236,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   @DeclDISPID(1610743858)  public com.wilutions.mslib.office.IMsoTickLabels getTickLabels() throws ComException {
     final Object obj = this._dispatchCall(1610743858,"TickLabels", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoTickLabelsImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoTickLabelsImpl.class);
   }
   @DeclDISPID(1610743859)  public Integer getTickLabelSpacing() throws ComException {
     final Object obj = this._dispatchCall(1610743859,"TickLabelSpacing", DISPATCH_PROPERTYGET,null);
@@ -364,14 +360,12 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   @DeclDISPID(1610743885)  public com.wilutions.mslib.office.IMsoDisplayUnitLabel getDisplayUnitLabel() throws ComException {
     final Object obj = this._dispatchCall(1610743885,"DisplayUnitLabel", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoDisplayUnitLabelImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoDisplayUnitLabelImpl.class);
   }
   @DeclDISPID(1610743886)  public com.wilutions.mslib.office.IMsoBorder getBorder() throws ComException {
     final Object obj = this._dispatchCall(1610743886,"Border", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoBorderImpl.class);
   }
   @DeclDISPID(1610743887)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(1610743887,"Name", DISPATCH_PROPERTYGET,null);
@@ -381,23 +375,22 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
   @DeclDISPID(1610743888)  public com.wilutions.mslib.office.IMsoChartFormat getFormat() throws ComException {
     final Object obj = this._dispatchCall(1610743888,"Format", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    final Dispatch disp = (Dispatch)obj;
-    return disp.uncheckedAs(com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
+    return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoChartFormatImpl.class);
   }
-  @DeclDISPID(148)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(148)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(148,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(149)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(149,"Creator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(150)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(150)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(150,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public IMsoAxisImpl(String progId) throws ComException {
     super(progId, "{000C1713-0000-0000-C000-000000000046}");

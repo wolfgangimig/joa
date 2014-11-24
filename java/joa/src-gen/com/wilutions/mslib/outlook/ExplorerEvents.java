@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface ExplorerEvents extends IDispatch {
   @DeclDISPID(61441)  public void onActivate() throws ComException;
   @DeclDISPID(61442)  public void onFolderSwitch() throws ComException;
-  @DeclDISPID(61443)  public void onBeforeFolderSwitch(Dispatch NewFolder, ByRef<Boolean> Cancel) throws ComException;
+  @DeclDISPID(61443)  public void onBeforeFolderSwitch(IDispatch NewFolder, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(61444)  public void onViewSwitch() throws ComException;
   @DeclDISPID(61445)  public void onBeforeViewSwitch(Object NewView, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(61446)  public void onDeactivate() throws ComException;

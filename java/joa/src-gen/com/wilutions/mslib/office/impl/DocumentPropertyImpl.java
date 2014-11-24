@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{ED6F4925-FF99-CB5A-204B-694DA5B322A8}")
 public class DocumentPropertyImpl extends Dispatch implements com.wilutions.mslib.office.DocumentProperty {
-  @DeclDISPID(1)  public Dispatch getParent() throws ComException {
+  @DeclDISPID(1)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(1,"Parent", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(2)  public void Delete() throws ComException {
     this._dispatchCall(2,"Delete", DISPATCH_METHOD,null);
@@ -64,10 +64,10 @@ public class DocumentPropertyImpl extends Dispatch implements com.wilutions.msli
     assert(pbstrSourceRetVal != null);
     this._dispatchCall(7,"LinkSource", DISPATCH_PROPERTYPUT,pbstrSourceRetVal);
   }
-  @DeclDISPID(1610743820)  public Dispatch getApplication() throws ComException {
+  @DeclDISPID(1610743820)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743820,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743821)  public Integer getCreator() throws ComException {
     final Object obj = this._dispatchCall(1610743821,"Creator", DISPATCH_PROPERTYGET,null);

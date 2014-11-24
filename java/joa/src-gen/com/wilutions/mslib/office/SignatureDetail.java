@@ -8,32 +8,63 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum SignatureDetail {
-  sigdetLocalSigningTime(0),
-  sigdetApplicationName(1),
-  sigdetApplicationVersion(2),
-  sigdetOfficeVersion(3),
-  sigdetWindowsVersion(4),
-  sigdetNumberOfMonitors(5),
-  sigdetHorizResolution(6),
-  sigdetVertResolution(7),
-  sigdetColorDepth(8),
-  sigdetSignedData(9),
-  sigdetDocPreviewImg(10),
-  sigdetIPFormHash(11),
-  sigdetIPCurrentView(12),
-  sigdetSignatureType(13),
-  sigdetHashAlgorithm(14),
-  sigdetShouldShowViewWarning(15),
-  sigdetDelSuggSigner(16),
-  sigdetDelSuggSignerSet(17),
-  sigdetDelSuggSignerLine2(18),
-  sigdetDelSuggSignerLine2Set(19),
-  sigdetDelSuggSignerEmail(20),
-  sigdetDelSuggSignerEmailSet(21);
+public class SignatureDetail {
 
+  // Typed constants
+  public final static SignatureDetail sigdetLocalSigningTime = new SignatureDetail(0);
+  public final static SignatureDetail sigdetApplicationName = new SignatureDetail(1);
+  public final static SignatureDetail sigdetApplicationVersion = new SignatureDetail(2);
+  public final static SignatureDetail sigdetOfficeVersion = new SignatureDetail(3);
+  public final static SignatureDetail sigdetWindowsVersion = new SignatureDetail(4);
+  public final static SignatureDetail sigdetNumberOfMonitors = new SignatureDetail(5);
+  public final static SignatureDetail sigdetHorizResolution = new SignatureDetail(6);
+  public final static SignatureDetail sigdetVertResolution = new SignatureDetail(7);
+  public final static SignatureDetail sigdetColorDepth = new SignatureDetail(8);
+  public final static SignatureDetail sigdetSignedData = new SignatureDetail(9);
+  public final static SignatureDetail sigdetDocPreviewImg = new SignatureDetail(10);
+  public final static SignatureDetail sigdetIPFormHash = new SignatureDetail(11);
+  public final static SignatureDetail sigdetIPCurrentView = new SignatureDetail(12);
+  public final static SignatureDetail sigdetSignatureType = new SignatureDetail(13);
+  public final static SignatureDetail sigdetHashAlgorithm = new SignatureDetail(14);
+  public final static SignatureDetail sigdetShouldShowViewWarning = new SignatureDetail(15);
+  public final static SignatureDetail sigdetDelSuggSigner = new SignatureDetail(16);
+  public final static SignatureDetail sigdetDelSuggSignerSet = new SignatureDetail(17);
+  public final static SignatureDetail sigdetDelSuggSignerLine2 = new SignatureDetail(18);
+  public final static SignatureDetail sigdetDelSuggSignerLine2Set = new SignatureDetail(19);
+  public final static SignatureDetail sigdetDelSuggSignerEmail = new SignatureDetail(20);
+  public final static SignatureDetail sigdetDelSuggSignerEmailSet = new SignatureDetail(21);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _sigdetLocalSigningTime = 0;
+  public final static int _sigdetApplicationName = 1;
+  public final static int _sigdetApplicationVersion = 2;
+  public final static int _sigdetOfficeVersion = 3;
+  public final static int _sigdetWindowsVersion = 4;
+  public final static int _sigdetNumberOfMonitors = 5;
+  public final static int _sigdetHorizResolution = 6;
+  public final static int _sigdetVertResolution = 7;
+  public final static int _sigdetColorDepth = 8;
+  public final static int _sigdetSignedData = 9;
+  public final static int _sigdetDocPreviewImg = 10;
+  public final static int _sigdetIPFormHash = 11;
+  public final static int _sigdetIPCurrentView = 12;
+  public final static int _sigdetSignatureType = 13;
+  public final static int _sigdetHashAlgorithm = 14;
+  public final static int _sigdetShouldShowViewWarning = 15;
+  public final static int _sigdetDelSuggSigner = 16;
+  public final static int _sigdetDelSuggSignerSet = 17;
+  public final static int _sigdetDelSuggSignerLine2 = 18;
+  public final static int _sigdetDelSuggSignerLine2Set = 19;
+  public final static int _sigdetDelSuggSignerEmail = 20;
+  public final static int _sigdetDelSuggSignerEmailSet = 21;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private SignatureDetail(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  SignatureDetail valueOf(int value) {
     switch(value) {
     case 0: return sigdetLocalSigningTime;
@@ -58,7 +89,7 @@ public enum SignatureDetail {
     case 19: return sigdetDelSuggSignerLine2Set;
     case 20: return sigdetDelSuggSignerEmail;
     case 21: return sigdetDelSuggSignerEmailSet;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + SignatureDetail.class);
+    default: return new SignatureDetail(value);
     }
   }
 }

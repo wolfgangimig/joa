@@ -8,18 +8,35 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public enum MsoParagraphAlignment {
-  msoAlignMixed(-2),
-  msoAlignLeft(1),
-  msoAlignCenter(2),
-  msoAlignRight(3),
-  msoAlignJustify(4),
-  msoAlignDistribute(5),
-  msoAlignThaiDistribute(6),
-  msoAlignJustifyLow(7);
+public class MsoParagraphAlignment {
 
+  // Typed constants
+  public final static MsoParagraphAlignment msoAlignMixed = new MsoParagraphAlignment(-2);
+  public final static MsoParagraphAlignment msoAlignLeft = new MsoParagraphAlignment(1);
+  public final static MsoParagraphAlignment msoAlignCenter = new MsoParagraphAlignment(2);
+  public final static MsoParagraphAlignment msoAlignRight = new MsoParagraphAlignment(3);
+  public final static MsoParagraphAlignment msoAlignJustify = new MsoParagraphAlignment(4);
+  public final static MsoParagraphAlignment msoAlignDistribute = new MsoParagraphAlignment(5);
+  public final static MsoParagraphAlignment msoAlignThaiDistribute = new MsoParagraphAlignment(6);
+  public final static MsoParagraphAlignment msoAlignJustifyLow = new MsoParagraphAlignment(7);
+
+  // Integer constants for bitsets and switch statements
+  public final static int _msoAlignMixed = -2;
+  public final static int _msoAlignLeft = 1;
+  public final static int _msoAlignCenter = 2;
+  public final static int _msoAlignRight = 3;
+  public final static int _msoAlignJustify = 4;
+  public final static int _msoAlignDistribute = 5;
+  public final static int _msoAlignThaiDistribute = 6;
+  public final static int _msoAlignJustifyLow = 7;
+
+  // Value, readonly field.
   public final int value;
+
+  // Private constructor, use valueOf to create an instance.
   private MsoParagraphAlignment(int value) { this.value = value; }
+
+  // Return one of the predefined typed constants for the given value or create a new object.
   public static  MsoParagraphAlignment valueOf(int value) {
     switch(value) {
     case -2: return msoAlignMixed;
@@ -30,7 +47,7 @@ public enum MsoParagraphAlignment {
     case 5: return msoAlignDistribute;
     case 6: return msoAlignThaiDistribute;
     case 7: return msoAlignJustifyLow;
-    default: throw new IllegalArgumentException(value + " is not a valid value for " + MsoParagraphAlignment.class);
+    default: return new MsoParagraphAlignment(value);
     }
   }
 }
