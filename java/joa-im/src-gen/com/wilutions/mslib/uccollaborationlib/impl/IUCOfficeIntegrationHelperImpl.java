@@ -15,10 +15,10 @@ public class IUCOfficeIntegrationHelperImpl extends Dispatch implements com.wilu
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IAutomation)obj;
   }
-  @DeclDISPID(1610678274)  public Dispatch GetInteropHelper() throws ComException {
+  @DeclDISPID(1610678274)  public IDispatch GetInteropHelper() throws ComException {
     final Object obj = this._dispatchCall(1610678274,"GetInteropHelper", DISPATCH_METHOD,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610678275)  public String GetAuthenticationInfo() throws ComException {
     final Object obj = this._dispatchCall(1610678275,"GetAuthenticationInfo", DISPATCH_METHOD,null);

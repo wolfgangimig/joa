@@ -12,7 +12,7 @@ public interface IConversation extends IDispatch {
   @DeclDISPID(1610743809)  public IParticipant getSelfParticipant() throws ComException;
   @DeclDISPID(1610743810)  public IModalityDictionary getModalities() throws ComException;
   @DeclDISPID(1610743811)  public IParticipantCollection getParticipants() throws ComException;
-  @DeclDISPID(1610743812)  public IParticipant AddParticipant(Dispatch _contactOrCollaborationEndpoint) throws ComException;
+  @DeclDISPID(1610743812)  public IParticipant AddParticipant(IDispatch _contactOrCollaborationEndpoint) throws ComException;
   @DeclDISPID(1610743813)  public void RemoveParticipant(IParticipant _participant) throws ComException;
   @DeclDISPID(1610743814)  public IConversationContextList getContexts() throws ComException;
   @DeclDISPID(1610743815)  public IConversationHistory getHistory() throws ComException;

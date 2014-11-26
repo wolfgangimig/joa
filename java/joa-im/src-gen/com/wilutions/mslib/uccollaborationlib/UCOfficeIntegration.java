@@ -20,12 +20,12 @@ public class UCOfficeIntegration extends Dispatch implements IUCOfficeIntegratio
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743810)  public Dispatch GetInterface(String _version, OIInterface _interface) throws ComException {
+  @DeclDISPID(1610743810)  public IDispatch GetInterface(String _version, OIInterface _interface) throws ComException {
     assert(_version != null);
     assert(_interface != null);
     final Object obj = this._dispatchCall(1610743810,"GetInterface", DISPATCH_METHOD,null,_version,_interface.value);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   public UCOfficeIntegration() throws ComException {
     super("{A0651028-BA7A-4D71-877F-12E0175A5806}", "{6A222195-F65E-467F-8F77-EB180BD85288}");

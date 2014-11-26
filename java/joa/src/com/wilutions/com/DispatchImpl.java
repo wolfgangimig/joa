@@ -24,9 +24,18 @@ public class DispatchImpl implements IDispatch {
 	 * of the C++ class JDispatchImpl.
 	 */
 	private long nptr;
+	
+	private ConnectionPointContainer connectionPointContainer;
 
 	public DispatchImpl() {
 		JoaDll.nativeInit(this);
+	}
+	
+	public synchronized ConnectionPointContainer getConnectionPointContainer() {
+		if (connectionPointContainer == null) {
+			connectionPointContainer = new ConnectionPointContainer();
+		}
+		return connectionPointContainer;
 	}
 
 	public static void initLogger(String logFile, String logLevel, boolean append) {

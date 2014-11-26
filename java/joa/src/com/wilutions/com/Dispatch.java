@@ -165,7 +165,7 @@ public class Dispatch implements IDispatch {
 	 * might still reference the COM object. If the COM object should be
 	 * released from all Java objects, call function {@link #releaseComObject()}
 	 */
-	public synchronized void releaseDispatch() {
+	public synchronized void release() {
 		JoaDll.deleteDispatch(this);
 		assert this.ndisp == 0;
 	}

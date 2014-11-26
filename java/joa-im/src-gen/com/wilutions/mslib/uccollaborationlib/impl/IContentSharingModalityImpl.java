@@ -84,14 +84,14 @@ public class IContentSharingModalityImpl extends Dispatch implements com.wilutio
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743822)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Forward(Dispatch _contactOrCollaborationEndpoint, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743822)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Forward(IDispatch _contactOrCollaborationEndpoint, Object _modalityCallback, Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743822,"Forward", DISPATCH_METHOD,null,(_contactOrCollaborationEndpoint!=null?_contactOrCollaborationEndpoint:Dispatch.NULL),_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743823)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Transfer(Dispatch _contactOrCollaborationEndpoint, com.wilutions.mslib.uccollaborationlib.TransferOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743823)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Transfer(IDispatch _contactOrCollaborationEndpoint, com.wilutions.mslib.uccollaborationlib.TransferOptions _options, Object _modalityCallback, Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);

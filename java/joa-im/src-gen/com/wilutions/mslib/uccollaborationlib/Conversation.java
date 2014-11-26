@@ -30,7 +30,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantCollectionImpl.class);
   }
-  @DeclDISPID(1610743812)  public IParticipant AddParticipant(Dispatch _contactOrCollaborationEndpoint) throws ComException {
+  @DeclDISPID(1610743812)  public IParticipant AddParticipant(IDispatch _contactOrCollaborationEndpoint) throws ComException {
     final Object obj = this._dispatchCall(1610743812,"AddParticipant", DISPATCH_METHOD,null,(_contactOrCollaborationEndpoint!=null?_contactOrCollaborationEndpoint:Dispatch.NULL));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantImpl.class);

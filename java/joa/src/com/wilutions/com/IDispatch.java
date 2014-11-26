@@ -14,7 +14,7 @@ package com.wilutions.com;
  * Objects received from COM and Java objects that implement a COM interface
  * implement IDispatch.
  */
-public interface IDispatch {
+public interface IDispatch extends IUnknown {
 	
 	/**
 	 * Convert this object into an object of the given class. A new object of
@@ -79,7 +79,4 @@ public interface IDispatch {
 		throw new UnsupportedOperationException();
 	}
 	
-	default void releaseDispatch() {
-		throw new UnsupportedOperationException();
-	}
 }

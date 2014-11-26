@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{F71B4E0C-BF07-914F-34EF-E6B523683525}")
 public class ISearchResultImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.ISearchResult {
-  @DeclDISPID(1610743808)  public Dispatch getResult() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getResult() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Result", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public String getHitHighlightSummary() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"HitHighlightSummary", DISPATCH_PROPERTYGET,null);

@@ -8,10 +8,10 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{FACAB35B-EFE6-4228-82DB-5AAABC2DB239}")
 public class SearchResult extends Dispatch implements ISearchResult {
-  @DeclDISPID(1610743808)  public Dispatch getResult() throws ComException {
+  @DeclDISPID(1610743808)  public IDispatch getResult() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Result", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch)obj;
+    return (IDispatch)obj;
   }
   @DeclDISPID(1610743809)  public String getHitHighlightSummary() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"HitHighlightSummary", DISPATCH_PROPERTYGET,null);

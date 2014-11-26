@@ -2,8 +2,8 @@ package imcl;
 
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
-import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.IDispatch;
 import com.wilutions.mslib.uccollaborationlib.IUCOfficeIntegration;
 import com.wilutions.mslib.uccollaborationlib.OIFeature;
 import com.wilutions.mslib.uccollaborationlib.OIInterface;
@@ -17,6 +17,7 @@ public class IMClient extends DispatchImpl implements IUCOfficeIntegration {
 	public final static String OUTLOOK_2010 = "14.0.0.0";
 	
 	LyncClient lyncClient = new LyncClient();
+	Automation automation = new Automation();
 
 	@Override
 	public OIFeature GetSupportedFeatures(String _version) throws ComException {
@@ -35,14 +36,18 @@ public class IMClient extends DispatchImpl implements IUCOfficeIntegration {
 	}
 
 	@Override
-	public Dispatch GetInterface(String _version, OIInterface _interface) throws ComException {
+	public IDispatch GetInterface(String _version, OIInterface _interface) throws ComException {
 		System.out.println("GetInterface " + _version + ", _interface=" + _interface);
+		IDispatch ret = null;
 		switch (_interface.value) {
 		case OIInterface._oiInterfaceILyncClient:
-			//return lyncClient;
+			ret = lyncClient;
+			break;
+		case OIInterface._oiInterfaceIAutomation:
+			ret = automation;
 			break;
 		}
-		return null;
+		return ret;
 	}
 
 }

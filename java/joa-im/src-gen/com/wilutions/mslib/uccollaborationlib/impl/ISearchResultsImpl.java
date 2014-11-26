@@ -10,10 +10,10 @@ public class ISearchResultsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743809)  public Dispatch[] getAllContactsAndGroups() throws ComException {
+  @DeclDISPID(1610743809)  public IDispatch[] getAllContactsAndGroups() throws ComException {
     final Object obj = this._dispatchCall(1610743809,"AllContactsAndGroups", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
-    return (Dispatch[])obj;
+    return (IDispatch[])obj;
   }
   @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IContact[] getContacts() throws ComException {
     final Object obj = this._dispatchCall(1610743810,"Contacts", DISPATCH_PROPERTYGET,null);

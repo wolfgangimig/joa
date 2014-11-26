@@ -1,6 +1,7 @@
 package imcl;
 
 import com.wilutions.com.ComException;
+import com.wilutions.com.ConnectionPoint;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.mslib.uccollaborationlib.ClientState;
 import com.wilutions.mslib.uccollaborationlib.ClientType;
@@ -17,8 +18,16 @@ import com.wilutions.mslib.uccollaborationlib.ISignInConfiguration;
 import com.wilutions.mslib.uccollaborationlib.IUtilities;
 import com.wilutions.mslib.uccollaborationlib.LyncClientCapabilityTypes;
 import com.wilutions.mslib.uccollaborationlib.SupportedFeatures;
+import com.wilutions.mslib.uccollaborationlib._ILyncClientEvents;
 
 public class LyncClient extends DispatchImpl implements ILyncClient {
+	
+	public void doit() {
+		ConnectionPoint<_ILyncClientEvents> lyncEvents = getConnectionPointContainer().findConnectionPoint(_ILyncClientEvents.class);
+		lyncEvents.forEach((listener) -> {
+			listener.onOnStateChanged(null, null);
+		});
+	}
 
 	@Override
 	public ClientType getType() throws ComException {

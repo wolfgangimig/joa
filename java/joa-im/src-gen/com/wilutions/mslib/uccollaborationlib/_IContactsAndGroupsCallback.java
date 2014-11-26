@@ -13,5 +13,5 @@ public interface _IContactsAndGroupsCallback extends IDispatch {
   @DeclDISPID(255)  public void OnRemoveContactFromAllGroups(IContactManager _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(254)  public void OnRemoveGroup(IContactManager _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(250)  public void OnSearch(IContactManager _source, ISearchResults _searchResults, IAsynchronousOperation _asyncOperation) throws ComException;
-  @DeclDISPID(251)  public void OnLookup(IContactManager _source, Dispatch _lookupResult, IAsynchronousOperation _asyncOperation) throws ComException;
+  @DeclDISPID(251)  public void OnLookup(IContactManager _source, IDispatch _lookupResult, IAsynchronousOperation _asyncOperation) throws ComException;
 }

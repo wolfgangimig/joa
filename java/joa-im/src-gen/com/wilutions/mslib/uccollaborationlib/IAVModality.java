@@ -22,8 +22,8 @@ public interface IAVModality extends IDispatch {
   @DeclDISPID(1610743819)  public void Accept() throws ComException;
   @DeclDISPID(1610743820)  public IAsynchronousOperation Hold(Object _modalityCallback, Object _state) throws ComException;
   @DeclDISPID(1610743821)  public IAsynchronousOperation Retrieve(Object _modalityCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743822)  public IAsynchronousOperation Forward(Dispatch _contactOrCollaborationEndpoint, Object _modalityCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743823)  public IAsynchronousOperation Transfer(Dispatch _contactOrCollaborationEndpoint, TransferOptions _options, Object _modalityCallback, Object _state) throws ComException;
+  @DeclDISPID(1610743822)  public IAsynchronousOperation Forward(IDispatch _contactOrCollaborationEndpoint, Object _modalityCallback, Object _state) throws ComException;
+  @DeclDISPID(1610743823)  public IAsynchronousOperation Transfer(IDispatch _contactOrCollaborationEndpoint, TransferOptions _options, Object _modalityCallback, Object _state) throws ComException;
   @DeclDISPID(1610743824)  public IAsynchronousOperation ConsultativeTransfer(IConversation _conversation, TransferOptions _options, Object _modalityCallback, Object _state) throws ComException;
   @DeclDISPID(1610743825)  public Boolean CanInvoke(ModalityAction _action) throws ComException;
   @DeclDISPID(1610743826)  public Boolean CanSetProperty(ModalityProperty _modalityProperty) throws ComException;

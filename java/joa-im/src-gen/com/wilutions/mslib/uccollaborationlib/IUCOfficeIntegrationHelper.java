@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface IUCOfficeIntegrationHelper extends IDispatch {
   @DeclDISPID(1610678272)  public ILyncClient GetCommunicatorClient() throws ComException;
   @DeclDISPID(1610678273)  public IAutomation GetUIAutomation() throws ComException;
-  @DeclDISPID(1610678274)  public Dispatch GetInteropHelper() throws ComException;
+  @DeclDISPID(1610678274)  public IDispatch GetInteropHelper() throws ComException;
   @DeclDISPID(1610678275)  public String GetAuthenticationInfo() throws ComException;
   @DeclDISPID(1610678276)  public void Cleanup() throws ComException;
   @DeclDISPID(1610678277)  public void Notify(OIHelperAction Action, HRESULT hrRes) throws ComException;

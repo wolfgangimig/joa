@@ -10,5 +10,5 @@ import com.wilutions.com.*;
 public interface IUCOfficeIntegration extends IDispatch {
   @DeclDISPID(1610743808)  public OIFeature GetSupportedFeatures(String _version) throws ComException;
   @DeclDISPID(1610743809)  public String GetAuthenticationInfo(String _version) throws ComException;
-  @DeclDISPID(1610743810)  public Dispatch GetInterface(String _version, OIInterface _interface) throws ComException;
+  @DeclDISPID(1610743810)  public IDispatch GetInterface(String _version, OIInterface _interface) throws ComException;
 }

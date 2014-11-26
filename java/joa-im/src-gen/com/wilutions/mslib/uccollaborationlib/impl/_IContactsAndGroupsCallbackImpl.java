@@ -20,7 +20,7 @@ public class _IContactsAndGroupsCallbackImpl extends Dispatch implements com.wil
   @DeclDISPID(250)  public void OnSearch(com.wilutions.mslib.uccollaborationlib.IContactManager _source, com.wilutions.mslib.uccollaborationlib.ISearchResults _searchResults, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(250,"OnSearch", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_searchResults!=null?_searchResults:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(251)  public void OnLookup(com.wilutions.mslib.uccollaborationlib.IContactManager _source, Dispatch _lookupResult, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(251)  public void OnLookup(com.wilutions.mslib.uccollaborationlib.IContactManager _source, IDispatch _lookupResult, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(251,"OnLookup", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_lookupResult!=null?_lookupResult:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IContactsAndGroupsCallbackImpl(String progId) throws ComException {
