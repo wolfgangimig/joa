@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{DF414A68-5051-4465-AAE2-4F301315734E}")
 public interface IPreviousConversation extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getId() throws ComException;
   @DeclDISPID(1610743809)  public String getFrom() throws ComException;
   @DeclDISPID(1610743810)  public String getFromUri() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_XPOS_CONTAINER {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Float value;
   public OLE_XPOS_CONTAINER() {}
   public OLE_XPOS_CONTAINER(Float v) { this.value = value; }

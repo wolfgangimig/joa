@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{C66DE384-1F97-4F1A-AF30-0005990000F5}")
 public class FavoriteContacts extends Dispatch implements IFavoriteContacts {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException {
     final Object obj = this._dispatchCall(-4,"_NewEnum", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

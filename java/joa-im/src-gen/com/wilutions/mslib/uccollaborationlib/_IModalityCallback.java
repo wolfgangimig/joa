@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{3F60CFF7-BE3F-4404-8395-C02D0CDD318E}")
 public interface _IModalityCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1230)  public void OnConnect(IModality _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1231)  public void OnDisconnect(IModality _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1232)  public void OnHold(IModality _source, IAsynchronousOperation _asyncOperation) throws ComException;

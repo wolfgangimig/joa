@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{A9AAB6A0-54B9-4419-AAAF-6B26DFAC1585}")
 public interface _ISelfCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1751)  public void OnSetPhones(ISelf _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1752)  public void OnSetPhone(ISelf _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1753)  public void OnRemovePhone(ISelf _source, IAsynchronousOperation _asyncOperation) throws ComException;

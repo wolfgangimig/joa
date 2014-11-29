@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{35D15973-23ED-4504-866B-C0B5C937A058}")
 public class OlPageType {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlPageType olPageTypePlanner = new OlPageType(0);

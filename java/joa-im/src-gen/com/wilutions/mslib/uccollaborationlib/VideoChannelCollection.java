@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{67C2D762-4E8D-45BF-94F0-68D99103567A}")
 public class VideoChannelCollection extends Dispatch implements IVideoChannelCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

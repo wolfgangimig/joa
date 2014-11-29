@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{4C599241-6926-101B-9992-00000B65C6F9}")
 public class Image extends Dispatch implements IImage {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);

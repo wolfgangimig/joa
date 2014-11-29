@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{1124AA59-B6F3-4EB1-B79A-E7F53B388B8D}")
 public interface IParticipantActionAvailabilityChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ParticipantAction getAction() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getIsAvailable() throws ComException;
 }

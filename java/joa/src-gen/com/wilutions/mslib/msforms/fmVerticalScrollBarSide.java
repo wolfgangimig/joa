@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{D625CA10-CC59-11CE-B653-00AA004CD6D8}")
 public class fmVerticalScrollBarSide {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmVerticalScrollBarSide fmVerticalScrollBarSideRight = new fmVerticalScrollBarSide(0);

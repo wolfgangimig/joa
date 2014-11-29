@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{B1F5BCD8-69A6-4FC3-9EF0-9BD4AD999061}")
 public interface IConversationWindow extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConversation getConversation() throws ComException;
   @DeclDISPID(1610743809)  public Integer getLeft() throws ComException;
   @DeclDISPID(1610743810)  public Integer getTop() throws ComException;

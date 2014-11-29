@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_XSIZE_HIMETRIC {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_XSIZE_HIMETRIC() {}
   public OLE_XSIZE_HIMETRIC(Integer v) { this.value = value; }

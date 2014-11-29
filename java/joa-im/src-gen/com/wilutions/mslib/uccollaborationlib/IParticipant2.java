@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{D60B1701-766D-401E-8586-83E0C9106BE0}")
 public interface IParticipant2 extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public IAsynchronousOperation PinVideo(Object _callback, Object _state) throws ComException;
   @DeclDISPID(268435458)  public IAsynchronousOperation UnPinVideo(Object _callback, Object _state) throws ComException;
   @DeclDISPID(268435459)  public IAsynchronousOperation LockVideo(Object _callback, Object _state) throws ComException;

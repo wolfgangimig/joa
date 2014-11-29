@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{AA3E840F-7079-4AA4-91A9-6F3546DA6A95}")
 public class OlBackStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlBackStyle olBackStyleTransparent = new OlBackStyle(0);

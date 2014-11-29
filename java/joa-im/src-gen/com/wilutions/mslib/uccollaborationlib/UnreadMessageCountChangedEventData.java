@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{96E4B115-4C68-4038-A0DB-3777C4AE4AEB}")
 public class UnreadMessageCountChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public UnreadMessageCountChangedEventData() throws ComException {
     super("{96E4B115-4C68-4038-A0DB-3777C4AE4AEB}");
   }

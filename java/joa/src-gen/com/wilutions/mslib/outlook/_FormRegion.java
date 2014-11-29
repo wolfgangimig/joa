@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{0006305A-0000-0000-C000-000000000046}")
 public interface _FormRegion extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(61440)  public _Application getApplication() throws ComException;
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{5CEF5613-713D-11CE-80C9-00AA00611080}")
 public interface IPage extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(0)  public Controls getControls() throws ComException;
   @DeclDISPID(256)  public Control getActiveControl() throws ComException;
   @DeclDISPID(257)  public Boolean getCanPaste() throws ComException;

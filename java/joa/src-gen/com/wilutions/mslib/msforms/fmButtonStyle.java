@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{FDE774C0-9AA8-11CD-84DB-00006B82871A}")
 public class fmButtonStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmButtonStyle fmButtonStylePushButton = new fmButtonStyle(0);

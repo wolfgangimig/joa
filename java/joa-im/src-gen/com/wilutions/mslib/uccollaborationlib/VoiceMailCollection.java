@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{E5FBEB06-F18E-4351-B197-67CD6AA22C01}")
 public class VoiceMailCollection extends Dispatch implements IVoiceMailCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

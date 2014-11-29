@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{04598FC6-866C-11CF-AB7C-00AA00C08FCF}")
 public interface IControl extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-2147418056)  public void setCancel(Boolean value) throws ComException;
   @DeclDISPID(-2147418056)  public Boolean getCancel() throws ComException;
   @DeclDISPID(-2147385343)  public void setControlSource(String value) throws ComException;

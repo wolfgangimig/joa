@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{00067367-0000-0000-C000-000000000046}")
 public interface _OlkTimeZoneControl extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(64559)  public OlAppointmentTimeField getAppointmentTimeField() throws ComException;
   @DeclDISPID(64559)  public void setAppointmentTimeField(OlAppointmentTimeField value) throws ComException;
   @DeclDISPID(-504)  public OlBorderStyle getBorderStyle() throws ComException;

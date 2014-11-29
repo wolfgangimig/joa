@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0A52C7B8-6123-413B-AD6A-05FAFF69C519}")
 public class RoomPropertyChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public RoomPropertyChangedEventData() throws ComException {
     super("{0A52C7B8-6123-413B-AD6A-05FAFF69C519}");
   }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C03D7-0000-0000-C000-000000000046}")
 public interface IConverter extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void HrInitConverter(IConverterApplicationPreferences pcap, ByRef<IConverterPreferences> ppcp, IConverterUICallback pcuic) throws ComException;
   @DeclDISPID(2)  public void HrUninitConverter(IConverterUICallback pcuic) throws ComException;
   @DeclDISPID(3)  public void HrImport(String bstrSourcePath, String bstrDestPath, IConverterApplicationPreferences pcap, ByRef<IConverterPreferences> ppcp, IConverterUICallback pcuic) throws ComException;

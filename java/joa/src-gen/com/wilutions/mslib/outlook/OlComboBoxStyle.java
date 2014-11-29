@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{382F8459-84AD-4CEB-8705-A8F8E2DC15E1}")
 public class OlComboBoxStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlComboBoxStyle olComboBoxStyleCombo = new OlComboBoxStyle(0);

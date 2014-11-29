@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{6650430A-BE0F-101A-8BBB-00AA00300CAB}")
 public class OLE_TRISTATE {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OLE_TRISTATE Unchecked = new OLE_TRISTATE(0);

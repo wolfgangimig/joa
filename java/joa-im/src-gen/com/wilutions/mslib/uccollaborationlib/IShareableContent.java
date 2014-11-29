@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{B335AE5E-E4EA-49D3-B03B-646A96FE66D3}")
 public interface IShareableContent extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ShareableContentType getType() throws ComException;
   @DeclDISPID(1610743809)  public ShareableContentState getState() throws ComException;
   @DeclDISPID(1610743810)  public String getTitle() throws ComException;

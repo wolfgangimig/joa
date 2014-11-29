@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{81CB2AE5-6C07-4BC6-BC2B-F1C04545CE54}")
 public class Device extends Dispatch implements IDevice {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Name", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

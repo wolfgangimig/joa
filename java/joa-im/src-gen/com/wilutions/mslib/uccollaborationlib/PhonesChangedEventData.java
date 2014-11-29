@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{E769D3B9-F1AC-42F9-9702-43AEB7B3D3C2}")
 public class PhonesChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public PhonesChangedEventData() throws ComException {
     super("{E769D3B9-F1AC-42F9-9702-43AEB7B3D3C2}");
   }

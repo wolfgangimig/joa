@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{99880CD9-73B0-4B84-93FF-95BCD18C9EF8}")
 public class Address extends Dispatch implements IAddress {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getStreetAddress() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"StreetAddress", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

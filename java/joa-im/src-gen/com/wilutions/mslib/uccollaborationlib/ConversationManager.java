@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{C87287D3-0A25-414D-9A92-16A11A2099F0}")
 public class ConversationManager extends Dispatch implements IConversationManager {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ConversationSummarizerStates getSummarizerStates() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"SummarizerStates", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

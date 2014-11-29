@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{7BF80980-BF32-101A-8BBB-00AA00300CAB}")
 public interface IPicture extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610678272)  public OLE_HANDLE getHandle() throws ComException;
   @DeclDISPID(1610678273)  public OLE_HANDLE gethPal() throws ComException;
   @DeclDISPID(1610678274)  public Short getType() throws ComException;

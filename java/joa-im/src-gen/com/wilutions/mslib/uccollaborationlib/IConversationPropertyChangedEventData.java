@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{7CFE77CD-731D-48B2-82B1-ECA3414D62E3}")
 public interface IConversationPropertyChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ConversationProperty getProperty() throws ComException;
   @DeclDISPID(1610743809)  public Object getValue() throws ComException;
 }

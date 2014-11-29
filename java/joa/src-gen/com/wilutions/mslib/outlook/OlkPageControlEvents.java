@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000672F9-0000-0000-C000-000000000046}")
 public interface OlkPageControlEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

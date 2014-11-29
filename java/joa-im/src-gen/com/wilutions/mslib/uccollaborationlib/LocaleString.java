@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{8CD4531B-D249-489C-B55A-37E4A0BADB25}")
 public class LocaleString extends Dispatch implements ILocaleString {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getLocaleId() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"LocaleId", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

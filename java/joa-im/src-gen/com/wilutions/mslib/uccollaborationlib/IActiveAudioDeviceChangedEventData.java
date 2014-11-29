@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{3959E5C6-75CC-448E-9A18-9F163FF47646}")
 public interface IActiveAudioDeviceChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IAudioDevice getOldActiveAudioDevice() throws ComException;
   @DeclDISPID(1610743809)  public IAudioDevice getNewActiveAudioDevice() throws ComException;
 }

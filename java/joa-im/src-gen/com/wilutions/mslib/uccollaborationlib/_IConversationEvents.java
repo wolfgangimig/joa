@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{C63F58CB-EF11-4934-AA3B-2D69244F0780}")
 public interface _IConversationEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1000)  public void onOnStateChanged(IConversation _eventSource, IConversationStateChangedEventData _eventData) throws ComException;
   @DeclDISPID(1001)  public void onOnPropertyChanged(IConversation _eventSource, IConversationPropertyChangedEventData _eventData) throws ComException;
   @DeclDISPID(1003)  public void onOnParticipantAdded(IConversation _eventSource, IParticipantCollectionChangedEventData _eventData) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{C62A69F0-16DC-11CE-9E98-00AA00574A4F}")
 public class UserForm extends Dispatch implements _UserForm {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(256)  public Control getActiveControl() throws ComException {
     final Object obj = this._dispatchCall(256,"ActiveControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

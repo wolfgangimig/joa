@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{6C4DB7F3-3A3B-410C-944C-027289E79804}")
 public class RoomMessageDictionary extends Dispatch implements IRoomMessageDictionary {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

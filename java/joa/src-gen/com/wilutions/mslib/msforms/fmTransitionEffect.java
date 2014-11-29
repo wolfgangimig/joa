@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{0EE49F40-E956-11CE-8141-00AA00611080}")
 public class fmTransitionEffect {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmTransitionEffect fmTransitionEffectNone = new fmTransitionEffect(0);

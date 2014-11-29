@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{ED1CE184-17AA-497F-ABF2-C69B2144DF2A}")
 public class AudioDevice extends Dispatch implements IAudioDevice {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Name", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{4CAC6328-B9B0-11D3-8D59-0050048384E3}")
 public interface ILicWizExternal extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void PrintHtmlDocument(Object punkHtmlDoc) throws ComException;
   @DeclDISPID(2)  public void InvokeDateTimeApplet() throws ComException;
   @DeclDISPID(3)  public String FormatDate(java.util.Date date, String pFormat) throws ComException;

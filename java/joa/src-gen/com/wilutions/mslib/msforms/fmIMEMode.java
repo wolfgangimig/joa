@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{4D067CD0-0D74-11CF-B474-00AA006EB734}")
 public class fmIMEMode {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmIMEMode fmIMEModeNoControl = new fmIMEMode(0);

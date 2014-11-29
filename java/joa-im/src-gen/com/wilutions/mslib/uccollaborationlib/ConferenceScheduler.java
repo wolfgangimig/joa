@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{57DD2D13-F18D-4A4E-A022-2F8C269A4AFD}")
 public class ConferenceScheduler extends Dispatch implements IConferenceScheduler {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConferenceInfo CreateConferenceInfo() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"CreateConferenceInfo", DISPATCH_METHOD,null);
     if (obj == null) return null;

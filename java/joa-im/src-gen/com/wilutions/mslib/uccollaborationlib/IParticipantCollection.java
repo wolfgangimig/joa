@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{FD02E775-CB9D-4CE3-9243-115C81E5F11C}")
 public interface IParticipantCollection extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public IParticipant getItem(Integer _index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;

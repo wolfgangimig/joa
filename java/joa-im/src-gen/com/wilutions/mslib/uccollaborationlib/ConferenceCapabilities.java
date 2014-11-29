@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{488F9CE1-5468-48EC-B4DB-FC2F7F1AB247}")
 public class ConferenceCapabilities extends Dispatch implements IConferenceCapabilities {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getModalities() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Modalities", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

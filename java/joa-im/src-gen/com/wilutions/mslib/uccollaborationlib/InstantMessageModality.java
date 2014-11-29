@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{9582D285-7E6E-4BFA-BCBC-7DE3EA3E6D74}")
 public class InstantMessageModality extends Dispatch implements IInstantMessageModality {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ModalityTypes getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

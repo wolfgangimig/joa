@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{2DF8D04E-5BFA-101B-BDE5-00AA0044DE52}")
 public interface DocumentProperty extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public void Delete() throws ComException;
   @DeclDISPID(3)  public String getName(Integer lcid) throws ComException;

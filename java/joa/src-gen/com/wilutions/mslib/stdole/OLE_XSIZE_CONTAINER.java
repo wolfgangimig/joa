@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_XSIZE_CONTAINER {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Float value;
   public OLE_XSIZE_CONTAINER() {}
   public OLE_XSIZE_CONTAINER(Float v) { this.value = value; }

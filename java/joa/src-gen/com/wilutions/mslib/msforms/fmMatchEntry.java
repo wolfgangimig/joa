@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{8CCD0AC2-B1AD-11CE-8276-00AA004BA6AE}")
 public class fmMatchEntry {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmMatchEntry fmMatchEntryFirstLetter = new fmMatchEntry(0);

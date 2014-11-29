@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D3EF7C83-13F3-4BF2-8216-540FB95BBD00}")
 public class Contact extends Dispatch implements IContact {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getUri() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Uri", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

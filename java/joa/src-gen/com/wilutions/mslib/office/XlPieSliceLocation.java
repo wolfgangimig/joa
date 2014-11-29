@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{B270C821-56A3-4F6D-9274-74E6CDF4D10C}")
 public class XlPieSliceLocation {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlPieSliceLocation xlHorizontalCoordinate = new XlPieSliceLocation(1);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F04E-0000-0000-C000-000000000046}")
 public class OlkListBox extends Dispatch implements _OlkListBox {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-504)  public OlBorderStyle getBorderStyle() throws ComException {
     final Object obj = this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

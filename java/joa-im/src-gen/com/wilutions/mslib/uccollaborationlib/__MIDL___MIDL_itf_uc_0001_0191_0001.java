@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
 public class __MIDL___MIDL_itf_uc_0001_0191_0001 {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static __MIDL___MIDL_itf_uc_0001_0191_0001 ucRoomMessageAlert = new __MIDL___MIDL_itf_uc_0001_0191_0001(0);

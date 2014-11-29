@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{9B1665EA-5EA9-4D9B-9B61-D6D1E7C087E2}")
 public class XlUnderlineStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlUnderlineStyle xlUnderlineStyleDouble = new XlUnderlineStyle(-4119);

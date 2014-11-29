@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{CBD9B3DE-2ED2-47CC-AE82-54DAEB26EBB7}")
 public class CredentialRequestedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public CredentialRequestedEventData() throws ComException {
     super("{CBD9B3DE-2ED2-47CC-AE82-54DAEB26EBB7}");
   }

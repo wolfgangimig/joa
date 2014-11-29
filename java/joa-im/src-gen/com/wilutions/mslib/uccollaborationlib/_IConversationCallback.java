@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{57CC2235-96C5-49FA-B92B-350486C6CF52}")
 public interface _IConversationCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1061)  public void OnMerge(IConversation _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1065)  public void OnPark(IConversation _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1062)  public void OnSetProperty(IConversation _source, ConversationProperty _propertyType, IAsynchronousOperation _asyncOperation) throws ComException;

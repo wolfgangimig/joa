@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{6FB3B002-987C-460C-9E9F-B45F2ED3B1E9}")
 public class Participant2 extends Dispatch implements IParticipant2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public IAsynchronousOperation PinVideo(Object _callback, Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_ENABLEDEFAULTBOOL {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public OLE_ENABLEDEFAULTBOOL() {}
   public OLE_ENABLEDEFAULTBOOL(Boolean v) { this.value = value; }

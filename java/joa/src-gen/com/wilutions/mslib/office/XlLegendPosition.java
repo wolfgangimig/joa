@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{04D217CD-1859-4786-B583-07BA2092A552}")
 public class XlLegendPosition {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlLegendPosition xlLegendPositionBottom = new XlLegendPosition(-4107);

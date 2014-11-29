@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{0C81EC90-9469-4ED4-ACAD-ADB86E11039C}")
 public interface IGroupCollection extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public IGroup getItem(Integer _index) throws ComException;

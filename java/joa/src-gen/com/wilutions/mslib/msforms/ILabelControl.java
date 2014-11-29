@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{04598FC1-866C-11CF-AB7C-00AA00C08FCF}")
 public interface ILabelControl extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException;
   @DeclDISPID(-500)  public Boolean getAutoSize() throws ComException;
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException;

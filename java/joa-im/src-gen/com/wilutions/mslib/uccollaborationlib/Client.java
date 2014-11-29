@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{3F927576-996E-4A91-9CF9-D9FA46D2AAF5}")
 public class Client extends Dispatch implements IClient {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ClientType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

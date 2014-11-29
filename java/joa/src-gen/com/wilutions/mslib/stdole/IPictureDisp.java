@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public interface IPictureDisp extends Picture {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

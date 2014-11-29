@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{5512D124-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);

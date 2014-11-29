@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{569E04F2-D286-4903-9642-44D850310956}")
 public interface _IClientSettingsEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(5150)  public void onOnSettingChanged(IClientSettings _eventSource, IClientSettingsChangedEventData _eventData) throws ComException;
 }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{BACCB218-6318-4AD9-B0A0-5B578C05F84E}")
 public class VideoDevice extends Dispatch implements IVideoDevice {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getName() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Name", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

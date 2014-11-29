@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{570C03E0-F797-11CE-B9EC-00AA006B1A69}")
 public class fmAction {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmAction fmActionCut = new fmAction(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_OPTEXCLUSIVE {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public OLE_OPTEXCLUSIVE() {}
   public OLE_OPTEXCLUSIVE(Boolean v) { this.value = value; }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{3BA1B3E8-F66F-4EEC-A84E-8256DDAD606E}")
 public class ShareableContentStateChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ShareableContentStateChangedEventData() throws ComException {
     super("{3BA1B3E8-F66F-4EEC-A84E-8256DDAD606E}");
   }

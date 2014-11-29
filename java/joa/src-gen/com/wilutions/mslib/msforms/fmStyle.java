@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{9C37F9D0-FDE5-11CE-9560-00AA004B9DFA}")
 public class fmStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmStyle fmStyleDropDownCombo = new fmStyle(0);

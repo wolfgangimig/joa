@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{68DA8699-6C6E-4390-BD82-709FF1DC1702}")
 public interface IRoomUser extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getUri() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getCanSendMessage() throws ComException;
 }

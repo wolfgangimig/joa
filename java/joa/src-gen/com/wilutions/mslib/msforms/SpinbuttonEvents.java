@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{79176FB2-B7F2-11CE-97EF-00AA006D2776}")
 public interface SpinbuttonEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(3)  public void onBeforeDragOver(ReturnBoolean Cancel, DataObject Data, Float X, Float Y, fmDragState DragState, ReturnEffect Effect, Short Shift) throws ComException;
   @DeclDISPID(4)  public void onBeforeDropOrPaste(ReturnBoolean Cancel, fmAction Action, DataObject Data, Float X, Float Y, ReturnEffect Effect, Short Shift) throws ComException;
   @DeclDISPID(2)  public void onChange() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{CC671DF2-ECB2-4CF2-876E-AC14C25AA4FB}")
 public class MutedChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public MutedChangedEventData() throws ComException {
     super("{CC671DF2-ECB2-4CF2-876E-AC14C25AA4FB}");
   }

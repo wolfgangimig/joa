@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{FF235FFE-EDEF-4D1B-9205-519888A7AD8D}")
 public class WorkingHours extends Dispatch implements IWorkingHours {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getEmailAddress() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"EmailAddress", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

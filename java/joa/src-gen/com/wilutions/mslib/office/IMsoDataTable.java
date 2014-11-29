@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1711-0000-0000-C000-000000000046}")
 public interface IMsoDataTable extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void setShowLegendKey(Boolean value) throws ComException;
   @DeclDISPID(1610743808)  public Boolean getShowLegendKey() throws ComException;
   @DeclDISPID(1610743810)  public void setHasBorderHorizontal(Boolean value) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{781A3B60-3CC1-42B2-8840-84E1A981800F}")
 public class PreviousConversationsManager extends Dispatch implements IPreviousConversationsManager {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public PreviousConversationsType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

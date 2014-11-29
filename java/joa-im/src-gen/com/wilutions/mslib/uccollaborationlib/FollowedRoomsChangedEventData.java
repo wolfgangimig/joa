@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{FCB650FF-E3A0-47BC-ACD6-C1C3C8473AE4}")
 public class FollowedRoomsChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public FollowedRoomsChangedEventData() throws ComException {
     super("{FCB650FF-E3A0-47BC-ACD6-C1C3C8473AE4}");
   }

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{25B06F72-02C5-4AF8-8366-28C2C65CB035}")
 public class OlDragBehavior {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlDragBehavior olDragBehaviorDisabled = new OlDragBehavior(0);

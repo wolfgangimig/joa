@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F054-0000-0000-C000-000000000046}")
 public class OlkInfoBar extends Dispatch implements _OlkInfoBar {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{EA33F29D-6159-4E76-8A14-BCEAA808FA91}")
 public class OlVerticalLayout {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlVerticalLayout olVerticalLayoutAlignTop = new OlVerticalLayout(0);

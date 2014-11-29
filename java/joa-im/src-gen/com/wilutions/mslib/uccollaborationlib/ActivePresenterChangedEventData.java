@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{12063E4A-C16F-4E0F-8886-61DDF52F4090}")
 public class ActivePresenterChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ActivePresenterChangedEventData() throws ComException {
     super("{12063E4A-C16F-4E0F-8886-61DDF52F4090}");
   }

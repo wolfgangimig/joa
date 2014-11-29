@@ -20,21 +20,18 @@ package com.wilutions.com;
 public class DispatchImpl implements IDispatch {
 
 	/**
-	 * Internal pointer. This value is internally used as a pointer to an object
-	 * of the C++ class JDispatchImpl.
+	 * Internal pointer. This value is internally used as a pointer to
+	 * the corresponding native object.
 	 */
 	private long nptr;
-	
-	private ConnectionPointContainer connectionPointContainer;
+
+	private final ConnectionPointContainer connectionPointContainer = new ConnectionPointContainer();
 
 	public DispatchImpl() {
 		JoaDll.nativeInit(this);
 	}
-	
-	public synchronized ConnectionPointContainer getConnectionPointContainer() {
-		if (connectionPointContainer == null) {
-			connectionPointContainer = new ConnectionPointContainer();
-		}
+
+	public ConnectionPointContainer getConnectionPointContainer() {
 		return connectionPointContainer;
 	}
 

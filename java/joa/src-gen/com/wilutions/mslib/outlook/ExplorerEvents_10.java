@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{0006300F-0000-0000-C000-000000000046}")
 public interface ExplorerEvents_10 extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(61441)  public void onActivate() throws ComException;
   @DeclDISPID(61442)  public void onFolderSwitch() throws ComException;
   @DeclDISPID(61443)  public void onBeforeFolderSwitch(IDispatch NewFolder, ByRef<Boolean> Cancel) throws ComException;

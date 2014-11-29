@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{CDCF9CAF-EC72-4EC4-A7CA-05CBDDA1959D}")
 public class Self extends Dispatch implements ISelf {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IAsynchronousOperation PublishContactInformation(PublishableContactInformationType[] _publishablePresenceItemTypes, Object[] _publishablePresenceItemValues, Object _selfCallback, Object _state) throws ComException {
     assert(_publishablePresenceItemTypes != null);
     assert(_publishablePresenceItemValues != null);

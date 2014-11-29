@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_YSIZE_HIMETRIC {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_YSIZE_HIMETRIC() {}
   public OLE_YSIZE_HIMETRIC(Integer v) { this.value = value; }

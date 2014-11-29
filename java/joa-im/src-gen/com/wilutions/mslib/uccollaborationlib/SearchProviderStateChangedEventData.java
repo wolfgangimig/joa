@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{B53C508E-E967-43D2-A5C6-85523859581F}")
 public class SearchProviderStateChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public SearchProviderStateChangedEventData() throws ComException {
     super("{B53C508E-E967-43D2-A5C6-85523859581F}");
   }

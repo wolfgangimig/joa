@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{DFF47F2B-AD75-44DC-81AA-E23CA7C6A66F}")
 public class ShareableContent extends Dispatch implements IShareableContent {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ShareableContentType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

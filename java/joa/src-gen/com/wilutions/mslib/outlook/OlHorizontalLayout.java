@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{634EE3C4-6BCB-4BD6-8997-30C9DB02E223}")
 public class OlHorizontalLayout {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlHorizontalLayout olHorizontalLayoutAlignLeft = new OlHorizontalLayout(0);

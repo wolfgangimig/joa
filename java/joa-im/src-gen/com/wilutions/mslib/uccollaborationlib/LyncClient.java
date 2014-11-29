@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{A9F3C4A7-6DE0-48E4-8184-BA7D6D985908}")
 public class LyncClient extends Dispatch implements ILyncClient {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ClientType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

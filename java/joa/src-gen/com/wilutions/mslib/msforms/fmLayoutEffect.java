@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{02DFD4F0-EA2B-11CE-8043-00AA006009FA}")
 public class fmLayoutEffect {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmLayoutEffect fmLayoutEffectNone = new fmLayoutEffect(0);

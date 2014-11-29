@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{6A69DC0B-F5AB-47E7-8500-00ED31486C01}")
 public class SignInConfiguration extends Dispatch implements ISignInConfiguration {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Boolean CanSet(SignInConfigurationType _configurationType) throws ComException {
     assert(_configurationType != null);
     final Object obj = this._dispatchCall(1610743808,"CanSet", DISPATCH_METHOD,null,_configurationType.value);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{00067355-0000-0000-C000-000000000046}")
 public interface _OlkSenderPhoto extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-514)  public Boolean getEnabled() throws ComException;
   @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException;
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException;

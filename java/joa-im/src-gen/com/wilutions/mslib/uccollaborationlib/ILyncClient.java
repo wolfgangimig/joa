@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{C413A27F-601E-4261-B9E3-0EB966F4E7D1}")
 public interface ILyncClient extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ClientType getType() throws ComException;
   @DeclDISPID(1610743809)  public ClientState getState() throws ComException;
   @DeclDISPID(1610743810)  public String getUri() throws ComException;

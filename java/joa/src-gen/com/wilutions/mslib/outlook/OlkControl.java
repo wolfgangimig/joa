@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{00067366-0000-0000-C000-000000000046}")
 public interface OlkControl extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-2147356671)  public String getItemProperty() throws ComException;
   @DeclDISPID(-2147356671)  public void setItemProperty(String value) throws ComException;
   @DeclDISPID(-2147356669)  public String getControlProperty() throws ComException;

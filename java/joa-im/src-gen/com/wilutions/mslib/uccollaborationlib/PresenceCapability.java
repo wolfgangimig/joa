@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{8D418098-61CD-4970-A0E0-2E9BD6420976}")
 public class PresenceCapability extends Dispatch implements IPresenceCapability {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public PresenceCapabilityType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

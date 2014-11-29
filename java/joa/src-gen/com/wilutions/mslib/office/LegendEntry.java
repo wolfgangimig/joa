@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171A-0000-0000-C000-000000000046}")
 public interface LegendEntry extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(117)  public Object Delete() throws ComException;
   @DeclDISPID(146)  public ChartFont getFont() throws ComException;

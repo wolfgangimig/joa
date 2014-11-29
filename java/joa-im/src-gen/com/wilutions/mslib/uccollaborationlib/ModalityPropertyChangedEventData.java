@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{91D5058A-77C3-40DA-930C-F6207BD691C3}")
 public class ModalityPropertyChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ModalityPropertyChangedEventData() throws ComException {
     super("{91D5058A-77C3-40DA-930C-F6207BD691C3}");
   }

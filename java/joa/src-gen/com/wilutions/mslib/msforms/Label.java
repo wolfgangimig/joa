@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{978C9E23-D4B0-11CE-BF2D-00AA003F40D0}")
 public class Label extends Dispatch implements ILabelControl {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{10C3ACC7-6C0C-4F35-ADFB-AE0F200A8583}")
 public interface IPresenceCapability extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public PresenceCapabilityType getType() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getCanRender() throws ComException;
   @DeclDISPID(1610743810)  public Boolean getCanCapture() throws ComException;

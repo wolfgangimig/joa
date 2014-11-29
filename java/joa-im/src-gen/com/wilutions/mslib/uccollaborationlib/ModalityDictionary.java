@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D56D0F3E-24E3-421A-8AE8-5BFB8D97FE90}")
 public class ModalityDictionary extends Dispatch implements IModalityDictionary {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

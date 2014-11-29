@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{8BD21D30-EC42-11CE-9E0D-00AA006002F3}")
 public class ComboBox extends Dispatch implements IMdcCombo {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);

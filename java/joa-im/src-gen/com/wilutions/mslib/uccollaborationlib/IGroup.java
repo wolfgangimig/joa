@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{F97973D7-9436-4A3E-A802-F6EA172A0425}")
 public interface IGroup extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCount() throws ComException;
   @DeclDISPID(1610743810)  public Boolean TryGetContact(String _uri, ByRef<IContact> _value) throws ComException;

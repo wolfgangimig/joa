@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0352-0000-0000-C000-000000000046}")
 public interface _CommandBarsEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void onOnUpdate() throws ComException;
 }

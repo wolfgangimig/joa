@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{5512D113-5CC6-11CF-8D67-00AA00BDCE1D}")
 public interface IWHTMLImage extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(601)  public void setAction(String value) throws ComException;
   @DeclDISPID(601)  public String getAction() throws ComException;
   @DeclDISPID(606)  public void setSource(String value) throws ComException;

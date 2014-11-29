@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{FDA610FC-4565-4E70-B088-4B72A16E1967}")
 public class DeviceManager extends Dispatch implements IDeviceManager {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IAsynchronousOperation PlayAudioFile(String _audioFileName, AudioPlayBackModes _playbackDevices, Boolean _loop, Object _deviceManagerCallback, Object _state) throws ComException {
     assert(_audioFileName != null);
     assert(_playbackDevices != null);

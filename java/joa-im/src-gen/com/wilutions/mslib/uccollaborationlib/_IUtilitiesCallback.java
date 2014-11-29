@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{C4D95336-5949-4D13-AAC8-82039E5CBCFC}")
 public interface _IUtilitiesCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1900)  public void OnAddToExternalContacts(IUtilities _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1901)  public void OnFindPreviousConversations(IUtilities _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1902)  public void OnComposeEmail(IUtilities _source, IAsynchronousOperation _asyncOperation) throws ComException;

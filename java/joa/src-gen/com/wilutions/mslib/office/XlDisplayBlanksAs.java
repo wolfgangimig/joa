@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{3439EA79-5069-4404-A6E3-8EE3A1B9BD0E}")
 public class XlDisplayBlanksAs {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlDisplayBlanksAs xlInterpolated = new XlDisplayBlanksAs(3);

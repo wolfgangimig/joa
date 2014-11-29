@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{24290B3E-7DC8-485B-85A1-956BCD8D2C5C}")
 public class SearchResults2 extends Dispatch implements ISearchResults2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public Object[] getFastResults() throws ComException {
     final Object obj = this._dispatchCall(268435457,"FastResults", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

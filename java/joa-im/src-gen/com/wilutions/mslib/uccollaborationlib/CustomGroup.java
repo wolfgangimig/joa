@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{A2E0476A-945F-4C93-98FA-87AED29E9467}")
 public class CustomGroup extends Dispatch implements ICustomGroup {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException {
     final Object obj = this._dispatchCall(-4,"_NewEnum", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

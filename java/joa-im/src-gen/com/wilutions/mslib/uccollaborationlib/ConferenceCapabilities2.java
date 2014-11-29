@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{E8451131-7352-4906-9E57-5CB164FEE062}")
 public class ConferenceCapabilities2 extends Dispatch implements IConferenceCapabilities2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public Boolean getIsAudioPresentationModeAllowed() throws ComException {
     final Object obj = this._dispatchCall(268435457,"IsAudioPresentationModeAllowed", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

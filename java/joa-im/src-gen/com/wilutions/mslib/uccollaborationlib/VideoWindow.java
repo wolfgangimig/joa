@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{6C97F743-778B-460F-B14E-073290C4E7E4}")
 public class VideoWindow extends Dispatch implements IVideoWindow {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void setCaption(String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"Caption", DISPATCH_PROPERTYPUT,value);

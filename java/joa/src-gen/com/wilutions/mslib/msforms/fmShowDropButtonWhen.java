@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{C5D98C41-4EB2-11CE-8EA0-00AA004BA6AE}")
 public class fmShowDropButtonWhen {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmShowDropButtonWhen fmShowDropButtonWhenNever = new fmShowDropButtonWhen(0);

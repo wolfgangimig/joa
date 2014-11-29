@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{CF3F94A0-F546-11CE-9BCE-00AA00608E01}")
 public interface OptionFrameEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(768)  public void onAddControl(Control Control) throws ComException;
   @DeclDISPID(3)  public void onBeforeDragOver(ReturnBoolean Cancel, Control Control, DataObject Data, Float X, Float Y, fmDragState State, ReturnEffect Effect, Short Shift) throws ComException;
   @DeclDISPID(4)  public void onBeforeDropOrPaste(ReturnBoolean Cancel, Control Control, fmAction Action, DataObject Data, Float X, Float Y, ReturnEffect Effect, Short Shift) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{DD181E97-EEE0-4D65-BAD1-16866D0C7953}")
 public interface IAccessPermission extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public AccessLevel getAccessLevel() throws ComException;
   @DeclDISPID(1610743809)  public IAccessEntry[] getAccessEntries() throws ComException;
   @DeclDISPID(1610743810)  public Boolean TryGetValue(AccessEntryScope _scope, String _entryId, ByRef<IAccessEntry> _accessEntry) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{5512D114-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLReset extends Dispatch implements IWHTMLReset {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(602)  public void setCaption(String value) throws ComException {
     assert(value != null);
     this._dispatchCall(602,"Caption", DISPATCH_PROPERTYPUT,value);

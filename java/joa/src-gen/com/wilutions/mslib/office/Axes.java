@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1712-0000-0000-C000-000000000046}")
 public interface Axes extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(1610743809)  public IMsoAxis getItem(XlAxisType Type, XlAxisGroup AxisGroup) throws ComException;
   @DeclDISPID(1610743810)  public Object get_NewEnum() throws ComException;

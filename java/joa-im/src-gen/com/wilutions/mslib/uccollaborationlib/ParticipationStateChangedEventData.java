@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{29C7C658-9CA5-40AA-AC38-A25CB6F2AD74}")
 public class ParticipationStateChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ParticipationStateChangedEventData() throws ComException {
     super("{29C7C658-9CA5-40AA-AC38-A25CB6F2AD74}");
   }

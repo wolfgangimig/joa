@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{A766520D-F700-4BF5-8428-56BD914C1C40}")
 public interface IRoom extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IRoomUser[] getParticipants() throws ComException;
   @DeclDISPID(1610743809)  public RoomJoinState getJoinedState() throws ComException;
   @DeclDISPID(1610743810)  public Integer getUnreadRoomMessageCount() throws ComException;

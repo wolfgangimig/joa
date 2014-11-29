@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{56805856-ACAD-4D8C-AEAF-5576404BF72B}")
 public class IsTypingChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public IsTypingChangedEventData() throws ComException {
     super("{56805856-ACAD-4D8C-AEAF-5576404BF72B}");
   }

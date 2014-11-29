@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{8BD21D23-EC42-11CE-9E0D-00AA006002F3}")
 public interface IMdcList extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException;
   @DeclDISPID(-501)  public OLE_COLOR getBackColor() throws ComException;
   @DeclDISPID(-503)  public void setBorderColor(OLE_COLOR value) throws ComException;

@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{90B49A60-72AF-4360-9F9B-916DB7504A3C}")
 public interface IAlertLevelChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public NotificationTypes getChangedNotificationTypes() throws ComException;
 }

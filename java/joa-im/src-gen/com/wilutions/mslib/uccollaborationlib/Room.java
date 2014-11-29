@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{4FAC92C8-E226-44B6-A530-AED7AEB4CEF4}")
 public class Room extends Dispatch implements IRoom {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IRoomUser[] getParticipants() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Participants", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

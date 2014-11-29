@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{09028936-CD20-43EF-98CF-56726ADDBA34}")
 public interface IUCOfficeIntegrationHelper extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610678272)  public ILyncClient GetCommunicatorClient() throws ComException;
   @DeclDISPID(1610678273)  public IAutomation GetUIAutomation() throws ComException;
   @DeclDISPID(1610678274)  public IDispatch GetInteropHelper() throws ComException;

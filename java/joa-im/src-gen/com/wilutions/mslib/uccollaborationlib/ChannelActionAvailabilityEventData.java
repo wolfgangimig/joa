@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{61E9F245-CE9A-4403-AAD9-012B52CE151D}")
 public class ChannelActionAvailabilityEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ChannelActionAvailabilityEventData() throws ComException {
     super("{61E9F245-CE9A-4403-AAD9-012B52CE151D}");
   }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{00061059-0000-0000-C000-000000000046}")
 public class FormRegionStartup extends Dispatch implements _FormRegionStartup {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(64310)  public Object GetFormRegionStorage(String FormRegionName, IDispatch Item, Integer LCID, OlFormRegionMode FormRegionMode, OlFormRegionSize FormRegionSize) throws ComException {
     assert(FormRegionName != null);
     assert(LCID != null);

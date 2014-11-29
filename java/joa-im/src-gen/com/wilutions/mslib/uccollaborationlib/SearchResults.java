@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{E73DDB55-ACB3-4F33-A0ED-7B22D68BF311}")
 public class SearchResults extends Dispatch implements ISearchResults {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Boolean getIsMoreAvailable() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"IsMoreAvailable", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

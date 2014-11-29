@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{F5996C71-77AB-4020-9776-C2C270FEF2AE}")
 public interface IConversationHistory extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConversation getConversation() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getIsPastHistoryRetrieved() throws ComException;
   @DeclDISPID(1610743810)  public String[] getCurrentHistory() throws ComException;

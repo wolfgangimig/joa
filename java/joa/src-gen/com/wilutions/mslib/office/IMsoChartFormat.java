@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1730-0000-0000-C000-000000000046}")
 public interface IMsoChartFormat extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public FillFormat getFill() throws ComException;
   @DeclDISPID(1610743809)  public GlowFormat getGlow() throws ComException;
   @DeclDISPID(1610743810)  public LineFormat getLine() throws ComException;

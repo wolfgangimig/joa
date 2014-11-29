@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{7E29FD73-540B-4F03-A890-53C6B0AE7DD1}")
 public class OlEnterFieldBehavior {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlEnterFieldBehavior olEnterFieldBehaviorSelectAll = new OlEnterFieldBehavior(0);

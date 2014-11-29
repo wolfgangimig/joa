@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{0006F025-0000-0000-C000-000000000046}")
 public interface _DRecipientControl extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-514)  public Byte getEnabled() throws ComException;
   @DeclDISPID(-514)  public void setEnabled(Byte value) throws ComException;
   @DeclDISPID(-501)  public Integer getBackColor() throws ComException;

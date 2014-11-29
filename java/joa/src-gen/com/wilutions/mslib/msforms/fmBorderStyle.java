@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{5931055C-16BA-101B-989C-00006B82871A}")
 public class fmBorderStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmBorderStyle fmBorderStyleNone = new fmBorderStyle(0);

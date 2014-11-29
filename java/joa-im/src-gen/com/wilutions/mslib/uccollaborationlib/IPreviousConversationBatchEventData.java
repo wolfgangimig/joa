@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{EBD19735-0CB5-4AF3-8E05-B0140CF9D545}")
 public interface IPreviousConversationBatchEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IPreviousConversationCollection getItems() throws ComException;
 }

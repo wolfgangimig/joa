@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{A0651028-BA7A-4D71-877F-12E0175A5806}")
 public class UCOfficeIntegration extends Dispatch implements IUCOfficeIntegration {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public OIFeature GetSupportedFeatures(String _version) throws ComException {
     assert(_version != null);
     final Object obj = this._dispatchCall(1610743808,"GetSupportedFeatures", DISPATCH_METHOD,null,_version);

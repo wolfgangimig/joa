@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{18BA13C7-A64E-4301-BA51-D1BFB3C1C9D5}")
 public interface IVoiceMailBatchEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IVoiceMailCollection getVoiceMails() throws ComException;
 }

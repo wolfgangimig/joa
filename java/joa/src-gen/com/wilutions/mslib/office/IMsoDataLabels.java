@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171F-0000-0000-C000-000000000046}")
 public interface IMsoDataLabels extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(110)  public String getName() throws ComException;
   @DeclDISPID(235)  public Object Select() throws ComException;

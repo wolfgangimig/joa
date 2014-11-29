@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{DC63D621-11C8-4490-B017-B8C57EE1BE25}")
 public interface IAddress extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getStreetAddress() throws ComException;
   @DeclDISPID(1610743809)  public String getCity() throws ComException;
   @DeclDISPID(1610743810)  public String getState() throws ComException;

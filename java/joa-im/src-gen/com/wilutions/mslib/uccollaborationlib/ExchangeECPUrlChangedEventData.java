@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D40FAF18-96F8-407E-BA32-48DABA521E18}")
 public class ExchangeECPUrlChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ExchangeECPUrlChangedEventData() throws ComException {
     super("{D40FAF18-96F8-407E-BA32-48DABA521E18}");
   }

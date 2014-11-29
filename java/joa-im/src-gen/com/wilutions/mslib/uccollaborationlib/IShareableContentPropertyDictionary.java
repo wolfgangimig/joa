@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{CA478B44-4FCE-4082-8700-8CEC69FB50E1}")
 public interface IShareableContentPropertyDictionary extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public Object getItem(ShareableContentProperty _propertyType) throws ComException;
   @DeclDISPID(1610743810)  public ShareableContentProperty[] getKeys() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{C608CE35-98F7-41A6-951B-91C37D2D3851}")
 public class ConversationHistoryActionAvailabilityEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ConversationHistoryActionAvailabilityEventData() throws ComException {
     super("{C608CE35-98F7-41A6-951B-91C37D2D3851}");
   }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{64B7E9AD-D920-4EAA-95C7-9D95DE9ACE24}")
 public interface IConferenceApplicationProperties extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(1610743809)  public void GetItem(Integer index, ByRef<String> _key, ByRef<String> _value) throws ComException;
   @DeclDISPID(1610743810)  public String getItem(String _key) throws ComException;

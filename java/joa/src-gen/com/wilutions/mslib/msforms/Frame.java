@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{6E182020-F460-11CE-9BCD-00AA00608E01}")
 public class Frame extends Dispatch implements IOptionFrame {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(256)  public Control getActiveControl() throws ComException {
     final Object obj = this._dispatchCall(256,"ActiveControl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

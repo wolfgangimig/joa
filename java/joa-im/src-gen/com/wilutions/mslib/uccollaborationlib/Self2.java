@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{8B9F0B59-7C29-46E2-B6A6-804043A346DB}")
 public class Self2 extends Dispatch implements ISelf2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public IAlertLevel GetAlertLevelForNotification(String _senderIdentity, NotificationTypes _notificationTypes, NotificationUrgencyType _notificationUrgency) throws ComException {
     assert(_senderIdentity != null);
     assert(_notificationTypes != null);

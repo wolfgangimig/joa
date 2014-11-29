@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{76D9466C-84C2-4355-81FE-CB1B9CB03C19}")
 public class XlSeriesNameLevel {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlSeriesNameLevel xlSeriesNameLevelNone = new XlSeriesNameLevel(-3);

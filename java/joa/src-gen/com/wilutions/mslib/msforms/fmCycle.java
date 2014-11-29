@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{3DBDD630-DD73-11CE-8CD1-00AA0044BB60}")
 public class fmCycle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmCycle fmCycleAllForms = new fmCycle(0);

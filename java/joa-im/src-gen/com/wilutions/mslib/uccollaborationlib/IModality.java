@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{D4B240B9-059B-4D13-8997-31B282B3BD43}")
 public interface IModality extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ModalityTypes getType() throws ComException;
   @DeclDISPID(1610743809)  public ModalityState getState() throws ComException;
   @DeclDISPID(1610743810)  public IConversation getConversation() throws ComException;

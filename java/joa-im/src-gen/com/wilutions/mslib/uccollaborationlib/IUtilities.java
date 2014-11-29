@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{87084018-7E74-4F92-AB39-1CF03188580E}")
 public interface IUtilities extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public INamedPropertyList CreateNamedPropertyList() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getIsDefaultProvider() throws ComException;
   @DeclDISPID(1610743810)  public void SetAsDefaultProvider() throws ComException;

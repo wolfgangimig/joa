@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D7053240-CE69-11CD-A777-00DD01143C57}")
 public class CommandButton extends Dispatch implements ICommandButton {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);

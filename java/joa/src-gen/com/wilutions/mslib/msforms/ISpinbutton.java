@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{79176FB3-B7F2-11CE-97EF-00AA006D2776}")
 public interface ISpinbutton extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException;
   @DeclDISPID(-501)  public OLE_COLOR getBackColor() throws ComException;
   @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException;

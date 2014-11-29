@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{14A62AE0-9D65-49F2-8331-EF85BFF91244}")
 public class HistoryInfo extends Dispatch implements IHistoryInfo {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public HistoryInfoEntryType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

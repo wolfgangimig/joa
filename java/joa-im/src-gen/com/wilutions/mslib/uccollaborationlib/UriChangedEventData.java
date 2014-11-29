@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{B89F18D4-5041-488A-8D81-DE8EBB3A362C}")
 public class UriChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public UriChangedEventData() throws ComException {
     super("{B89F18D4-5041-488A-8D81-DE8EBB3A362C}");
   }

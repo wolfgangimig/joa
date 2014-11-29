@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{DFD181E0-5E2F-11CE-A449-00AA004A803D}")
 public class ScrollBar extends Dispatch implements IScrollbar {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());

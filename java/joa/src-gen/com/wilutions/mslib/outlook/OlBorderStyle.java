@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{0B17239E-C724-444B-ACB1-579893197A3C}")
 public class OlBorderStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlBorderStyle olBorderStyleNone = new OlBorderStyle(0);

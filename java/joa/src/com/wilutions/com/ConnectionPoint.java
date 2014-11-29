@@ -12,7 +12,7 @@ public class ConnectionPoint<T extends IUnknown> {
 
 	public ConnectionPoint() {
 	}
-
+	
 	public synchronized int advise(T listener) {
 		int cookie = ++cookieCounter;
 		if (cookie < 0)
@@ -22,10 +22,7 @@ public class ConnectionPoint<T extends IUnknown> {
 	}
 
 	public synchronized void unadvise(int cookie) {
-		T listener = listeners.remove(cookie);
-		if (listener != null) {
-			listener.release();
-		}
+		listeners.remove(cookie);
 	}
 
 	public void forEach(Consumer<T> action) {

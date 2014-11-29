@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{5CEF5610-713D-11CE-80C9-00AA00611080}")
 public class Page extends Dispatch implements IPage {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(0)  public Controls getControls() throws ComException {
     final Object obj = this._dispatchCall(0,"Controls", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

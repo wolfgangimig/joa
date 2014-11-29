@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1713-0000-0000-C000-000000000046}")
 public interface IMsoAxis extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Boolean getAxisBetweenCategories() throws ComException;
   @DeclDISPID(1610743808)  public void setAxisBetweenCategories(Boolean value) throws ComException;
   @DeclDISPID(1610743810)  public XlAxisGroup getAxisGroup() throws ComException;

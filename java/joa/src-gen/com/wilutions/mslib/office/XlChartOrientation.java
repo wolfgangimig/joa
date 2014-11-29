@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{94E08815-49E8-45BB-9BC2-8972405756CF}")
 public class XlChartOrientation {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlChartOrientation xlDownward = new XlChartOrientation(-4170);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_COLOR {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_COLOR() {}
   public OLE_COLOR(Integer v) { this.value = value; }

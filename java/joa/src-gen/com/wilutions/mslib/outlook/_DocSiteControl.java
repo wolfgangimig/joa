@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F024-0000-0000-C000-000000000046}")
 public class _DocSiteControl extends Dispatch implements _DDocSiteControl {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-2147356664)  public Byte getReadOnly() throws ComException {
     final Object obj = this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

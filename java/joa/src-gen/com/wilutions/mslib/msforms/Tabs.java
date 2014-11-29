@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{944ACF93-A1E6-11CE-8104-00AA00611080}")
 public interface Tabs extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(60)  public Integer getCount() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743810)  public Tab _GetItemByIndex(Integer lIndex) throws ComException;

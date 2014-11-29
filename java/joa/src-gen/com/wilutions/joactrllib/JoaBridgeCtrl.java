@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{246D42EA-0513-447B-B7E6-86FE0400B3EA}")
 public class JoaBridgeCtrl extends Dispatch implements IJoaBridgeCtrl {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-515)  public LONG_PTR getHWND() throws ComException {
     final Object obj = this._dispatchCall(-515,"HWND", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

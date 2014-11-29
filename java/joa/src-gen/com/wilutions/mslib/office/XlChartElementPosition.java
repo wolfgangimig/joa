@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{05B0478C-9CD6-4F60-B113-A55E6A6CB1DC}")
 public class XlChartElementPosition {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlChartElementPosition xlChartElementPositionAutomatic = new XlChartElementPosition(-4105);

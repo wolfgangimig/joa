@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{B7A53E76-8630-4A93-9771-940012A1371B}")
 public class ApplicationRegistration extends Dispatch implements IApplicationRegistration {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void AddRegistration() throws ComException {
     this._dispatchCall(1610743808,"AddRegistration", DISPATCH_METHOD,null);
   }

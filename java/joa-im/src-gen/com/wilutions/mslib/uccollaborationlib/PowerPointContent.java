@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{2D1A91B0-A593-4327-A7B2-F7DD01574BF3}")
 public class PowerPointContent extends Dispatch implements IPowerPointContent {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ShareableContentType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

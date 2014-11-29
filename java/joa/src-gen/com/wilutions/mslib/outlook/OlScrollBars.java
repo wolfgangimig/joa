@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{D1788312-EDEE-4673-AE33-B3C3BC0753EA}")
 public class OlScrollBars {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlScrollBars olScrollBarsNone = new OlScrollBars(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1709-0000-0000-C000-000000000046}")
 public interface IMsoChart extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610743809)  public void setHasTitle(Boolean value) throws ComException;
   @DeclDISPID(1610743809)  public Boolean getHasTitle() throws ComException;

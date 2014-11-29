@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{14C73C30-1612-11CE-9E98-00AA00574A4F}")
 public class fmZOrder {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmZOrder fmZOrderFront = new fmZOrder(0);

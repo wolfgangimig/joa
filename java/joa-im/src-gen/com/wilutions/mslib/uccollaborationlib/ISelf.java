@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{4DA899D3-FAC7-4F43-8E4A-1987988FBC9B}")
 public interface ISelf extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IAsynchronousOperation PublishContactInformation(PublishableContactInformationType[] _publishablePresenceItemTypes, Object[] _publishablePresenceItemValues, Object _selfCallback, Object _state) throws ComException;
   @DeclDISPID(1610743809)  public IContact getContact() throws ComException;
   @DeclDISPID(1610743810)  public IPhone CreatePhone(ContactEndpointType _phoneType, String _phoneUri, Boolean _toBePublished) throws ComException;

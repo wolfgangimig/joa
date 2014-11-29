@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{8665FD95-7720-4F9E-B605-6ABCBD7EDFF4}")
 public interface IParticipantPropertyDictionary extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public Object getItem(ParticipantProperty _propertyType) throws ComException;
   @DeclDISPID(1610743810)  public ParticipantProperty[] getKeys() throws ComException;

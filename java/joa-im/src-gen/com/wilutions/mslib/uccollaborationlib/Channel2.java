@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{A351A6D6-9B47-41A3-A6D3-07DDF2203E7D}")
 public class Channel2 extends Dispatch implements IChannel2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public IAsynchronousOperation Pause(Object _callback, Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);

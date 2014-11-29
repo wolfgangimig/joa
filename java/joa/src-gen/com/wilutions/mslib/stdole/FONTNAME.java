@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class FONTNAME {
+  static boolean __typelib__loaded = __TypeLib.load();
   private String value;
   public FONTNAME() {}
   public FONTNAME(String v) { this.value = value; }

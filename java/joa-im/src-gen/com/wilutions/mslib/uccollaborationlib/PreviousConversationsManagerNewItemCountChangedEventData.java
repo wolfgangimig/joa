@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D85B4D22-7E0A-40F6-AC97-FB09DF0FF9D0}")
 public class PreviousConversationsManagerNewItemCountChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public PreviousConversationsManagerNewItemCountChangedEventData() throws ComException {
     super("{D85B4D22-7E0A-40F6-AC97-FB09DF0FF9D0}");
   }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{55A21CF3-A2B3-484E-BE2A-14280F501289}")
 public interface IVideoView extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IVideoViewInformationDictionary getProperties() throws ComException;
   @DeclDISPID(1610743809)  public void SetVideoViewMode(VideoViewMode _mode) throws ComException;
   @DeclDISPID(1610743810)  public void EnterFullScreen(Integer[] _monitorIds) throws ComException;

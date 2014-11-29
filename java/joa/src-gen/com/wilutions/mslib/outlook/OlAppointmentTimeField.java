@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{BA5537F4-8941-4E26-871E-0D53D647B9FC}")
 public class OlAppointmentTimeField {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlAppointmentTimeField olAppointmentTimeFieldNone = new OlAppointmentTimeField(1);

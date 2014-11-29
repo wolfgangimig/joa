@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{8A683C93-BA84-11CF-8110-00A0C9030074}")
 public class ReturnEffect extends Dispatch implements IReturnEffect {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(0)  public void setValue(fmDropEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value.value);

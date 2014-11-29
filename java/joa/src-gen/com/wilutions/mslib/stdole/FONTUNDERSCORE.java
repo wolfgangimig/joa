@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class FONTUNDERSCORE {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public FONTUNDERSCORE() {}
   public FONTUNDERSCORE(Boolean v) { this.value = value; }

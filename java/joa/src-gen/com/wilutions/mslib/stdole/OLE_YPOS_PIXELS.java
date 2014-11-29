@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_YPOS_PIXELS {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_YPOS_PIXELS() {}
   public OLE_YPOS_PIXELS(Integer v) { this.value = value; }

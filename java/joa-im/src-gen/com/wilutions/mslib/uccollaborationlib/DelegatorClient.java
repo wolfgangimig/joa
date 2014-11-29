@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{90099FB2-B732-4CB7-81DE-C35BCA5E15DC}")
 public class DelegatorClient extends Dispatch implements IDelegatorClient {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ClientType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

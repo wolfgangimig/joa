@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{82074C80-EA51-11CE-8043-00AA006009FA}")
 public class fmDragState {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmDragState fmDragStateEnter = new fmDragState(0);

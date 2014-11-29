@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class PIROWSET {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Object value;
   public PIROWSET() {}
   public PIROWSET(Object v) { this.value = value; }

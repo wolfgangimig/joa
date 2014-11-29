@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{F644C610-A146-4A56-8338-A69C45C71CEF}")
 public interface IVoiceMailCollection extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public IVoiceMail getItem(Integer _index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_CANCELBOOL {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public OLE_CANCELBOOL() {}
   public OLE_CANCELBOOL(Boolean v) { this.value = value; }

@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{283C2089-B760-4D65-9199-716627174F7A}")
 public interface IGroupNameChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getNewName() throws ComException;
 }

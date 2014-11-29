@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{50BB9B50-811D-11CE-B565-00AA00608FAA}")
 public interface _DDocSiteControlEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

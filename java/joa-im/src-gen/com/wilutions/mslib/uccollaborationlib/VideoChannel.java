@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{90B18225-0BC7-4120-84AF-20056F7E7DA4}")
 public class VideoChannel extends Dispatch implements IVideoChannel {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ChannelType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

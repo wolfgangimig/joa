@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0909F1E4-5F02-4E09-857D-BD951E956FC1}")
 public class RoomManager extends Dispatch implements IRoomManager {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public RoomManagerState getState() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"State", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

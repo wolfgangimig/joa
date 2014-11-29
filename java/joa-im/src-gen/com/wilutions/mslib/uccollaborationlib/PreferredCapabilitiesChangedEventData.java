@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{CEC8BFBE-3E0E-4732-B3FE-5BABF6170F11}")
 public class PreferredCapabilitiesChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public PreferredCapabilitiesChangedEventData() throws ComException {
     super("{CEC8BFBE-3E0E-4732-B3FE-5BABF6170F11}");
   }

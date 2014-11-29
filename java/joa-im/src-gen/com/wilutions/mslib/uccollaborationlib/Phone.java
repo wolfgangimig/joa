@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{260E70C7-05BD-4C59-9EA3-5EBB9EFE5D93}")
 public class Phone extends Dispatch implements IPhone {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IContactEndpoint getEndpoint() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Endpoint", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

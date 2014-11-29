@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{66BAAC90-7C2A-11CE-B783-00AA004BA6AE}")
 public class fmTextAlign {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmTextAlign fmTextAlignLeft = new fmTextAlign(1);

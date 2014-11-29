@@ -8,6 +8,9 @@
 		<javah classpath="${project.class.path}" destdir="${dest}" force="yes" verbose="yes">
 			<class name="com.wilutions.com.JoaDll"/>
 		</javah>
+		<!--javah classpath="${project.class.path}" destdir="${dest}" force="yes" verbose="yes">
+			<class name="com.wilutions.com.ConnectionPointContainer"/>
+		</javah -->
 	
 	</target>
 

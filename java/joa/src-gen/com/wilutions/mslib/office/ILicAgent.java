@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{00194002-D9C3-11D3-8D59-0050048384E3}")
 public interface ILicAgent extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public Integer Initialize(Integer dwBPC, Integer dwMode, String bstrLicSource) throws ComException;
   @DeclDISPID(3)  public String GetFirstName() throws ComException;
   @DeclDISPID(4)  public void SetFirstName(String bstrNewVal) throws ComException;

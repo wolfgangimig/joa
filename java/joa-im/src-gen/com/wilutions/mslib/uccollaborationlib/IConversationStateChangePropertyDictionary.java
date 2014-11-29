@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{56F7DEC0-59CA-47C6-9F35-D5066A702B39}")
 public interface IConversationStateChangePropertyDictionary extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public Object getItem(ConversationStateChangeProperty _modalityType) throws ComException;
   @DeclDISPID(1610743810)  public ConversationStateChangeProperty[] getKeys() throws ComException;

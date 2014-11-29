@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{95B8D3E8-F3D5-4DC0-BCFE-AB80C835DEA0}")
 public interface IContactSubscription extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void Subscribe(ContactSubscriptionRefreshRate _subscriptionFreshness, ContactInformationType[] _contactInformationTypes) throws ComException;
   @DeclDISPID(1610743809)  public void Unsubscribe() throws ComException;
   @DeclDISPID(1610743810)  public void AddContact(IContact _contact) throws ComException;

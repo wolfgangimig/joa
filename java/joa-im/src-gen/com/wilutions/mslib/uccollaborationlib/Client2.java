@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{66D123BA-11E2-4C2C-8056-5ACA97245CD2}")
 public class Client2 extends Dispatch implements IClient2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public IContactManager getPrivateContactManager() throws ComException {
     final Object obj = this._dispatchCall(268435457,"PrivateContactManager", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

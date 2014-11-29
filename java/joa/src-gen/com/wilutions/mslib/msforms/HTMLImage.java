@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{5512D112-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLImage extends Dispatch implements IWHTMLImage {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(601)  public void setAction(String value) throws ComException {
     assert(value != null);
     this._dispatchCall(601,"Action", DISPATCH_PROPERTYPUT,value);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{C7ACB102-B692-49CC-92DA-5824822C7B96}")
 public interface IConferenceScheduler extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConferenceInfo CreateConferenceInfo() throws ComException;
   @DeclDISPID(1610743809)  public IAsynchronousOperation ScheduleConference(IConferenceInfo _confInfo, Object _conferenceSchedulerCallback, Object _state) throws ComException;
   @DeclDISPID(1610743810)  public IAsynchronousOperation GetConferenceInfo(String _conferenceId, Object _conferenceSchedulerCallback, Object _state) throws ComException;

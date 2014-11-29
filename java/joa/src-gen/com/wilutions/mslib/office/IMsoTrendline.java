@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C170E-0000-0000-C000-000000000046}")
 public interface IMsoTrendline extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(185)  public Double getBackward() throws ComException;
   @DeclDISPID(185)  public void setBackward(Double RHS) throws ComException;

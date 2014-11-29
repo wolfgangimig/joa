@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{1EABD900-9351-4306-936B-47DFB3170BC4}")
 public class RepresentationInfo extends Dispatch implements IRepresentationInfo {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public RepresentationType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

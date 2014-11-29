@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C170D-0000-0000-C000-000000000046}")
 public interface Points extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;
   @DeclDISPID(170)  public ChartPoint Item(Integer Index) throws ComException;

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{EC67AF3B-F2DF-4A52-9B85-E06A7FF28DB7}")
 public class MsoContactCardAddressType {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static MsoContactCardAddressType msoContactCardAddressTypeUnknown = new MsoContactCardAddressType(0);

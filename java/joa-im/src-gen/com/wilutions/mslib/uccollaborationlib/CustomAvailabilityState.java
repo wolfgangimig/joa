@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{859D1502-64E6-4977-A9B3-D131D68C723B}")
 public class CustomAvailabilityState extends Dispatch implements ICustomAvailabilityState {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ContactAvailability getAvailability() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Availability", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

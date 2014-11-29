@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{14710A1D-071F-4BFF-B1C2-4BEF5E8B2CEA}")
 public class XlTimeUnit {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlTimeUnit xlDays = new XlTimeUnit(0);

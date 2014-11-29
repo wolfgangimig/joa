@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1726-0000-0000-C000-000000000046}")
 public interface IMsoTickLabels extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610743809)  public Object Delete() throws ComException;
   @DeclDISPID(1610743810)  public ChartFont getFont() throws ComException;

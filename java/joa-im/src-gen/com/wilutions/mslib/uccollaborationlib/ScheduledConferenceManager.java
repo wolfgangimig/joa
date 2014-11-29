@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{75927B32-8F46-40EB-A6C9-7598F0DB38C0}")
 public class ScheduledConferenceManager extends Dispatch implements IScheduledConferenceManager {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IAsynchronousOperation GetScheduledConferenceItems(Object _scheduledConferenceManagerCallback, Object _state) throws ComException {
     assert(_scheduledConferenceManagerCallback != null);
     assert(_state != null);

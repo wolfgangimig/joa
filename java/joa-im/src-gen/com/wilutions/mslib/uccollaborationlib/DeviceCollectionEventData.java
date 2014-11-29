@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D0C49DF0-99EA-47C4-B735-9AF73E078423}")
 public class DeviceCollectionEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public DeviceCollectionEventData() throws ComException {
     super("{D0C49DF0-99EA-47C4-B735-9AF73E078423}");
   }

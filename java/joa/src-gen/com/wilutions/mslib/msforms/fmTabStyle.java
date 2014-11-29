@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{EBC7FDE3-6899-11CE-80C0-00AA00611080}")
 public class fmTabStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmTabStyle fmTabStyleTabs = new fmTabStyle(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{FEAEFFD6-C800-46A0-B634-FDC415FEC211}")
 public class ContactSubscription extends Dispatch implements IContactSubscription {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void Subscribe(ContactSubscriptionRefreshRate _subscriptionFreshness, ContactInformationType[] _contactInformationTypes) throws ComException {
     assert(_subscriptionFreshness != null);
     assert(_contactInformationTypes != null);

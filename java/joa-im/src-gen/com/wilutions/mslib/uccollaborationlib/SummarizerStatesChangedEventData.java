@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{C42E7ABA-DEA0-43EC-96AA-6D8211CB2E14}")
 public class SummarizerStatesChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public SummarizerStatesChangedEventData() throws ComException {
     super("{C42E7ABA-DEA0-43EC-96AA-6D8211CB2E14}");
   }

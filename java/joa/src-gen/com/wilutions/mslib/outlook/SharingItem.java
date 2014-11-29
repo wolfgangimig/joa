@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{00061067-0000-0000-C000-000000000046}")
 public class SharingItem extends Dispatch implements _SharingItem {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

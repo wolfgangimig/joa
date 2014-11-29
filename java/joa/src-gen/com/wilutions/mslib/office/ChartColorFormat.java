@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171D-0000-0000-C000-000000000046}")
 public interface ChartColorFormat extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1646)  public Integer getSchemeColor() throws ComException;
   @DeclDISPID(1646)  public void setSchemeColor(Integer RHS) throws ComException;

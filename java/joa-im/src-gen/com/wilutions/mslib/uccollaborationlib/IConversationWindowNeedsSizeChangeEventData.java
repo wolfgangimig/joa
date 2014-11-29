@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{CA62E6F3-3E6D-451B-AEAA-6A1B7AACF8D4}")
 public interface IConversationWindowNeedsSizeChangeEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getRecommendedWindowWidth() throws ComException;
   @DeclDISPID(1610743809)  public Integer getRecommendedWindowHeight() throws ComException;
   @DeclDISPID(1610743810)  public Integer getMinimumWindowWidth() throws ComException;

@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{861BFB12-94CE-4C1D-9B3A-33B20C9D48AC}")
 public class LyncClientNotificationReceivedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public LyncClientNotificationReceivedEventData() throws ComException {
     super("{861BFB12-94CE-4C1D-9B3A-33B20C9D48AC}");
   }

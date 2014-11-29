@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C03A7-0000-0000-C000-000000000046}")
 public interface IRibbonUI extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void Invalidate() throws ComException;
   @DeclDISPID(2)  public void InvalidateControl(String ControlID) throws ComException;
   @DeclDISPID(3)  public void InvalidateControlMso(String ControlID) throws ComException;

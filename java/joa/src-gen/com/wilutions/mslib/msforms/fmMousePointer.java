@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{593104F8-16BA-101B-989C-00006B82871A}")
 public class fmMousePointer {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmMousePointer fmMousePointerDefault = new fmMousePointer(0);

@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{76428270-36FA-4236-8BDF-AADB39FD1371}")
 public interface _IConversationWindowCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(4050)  public void OnOpenExtensibilityWindow(IConversationWindow _source, IAsynchronousOperation _asyncOperation) throws ComException;
 }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{7C4DB3CB-796E-4993-8D49-414317D014DA}")
 public class ConversationWindowActionAvailabilityChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ConversationWindowActionAvailabilityChangedEventData() throws ComException {
     super("{7C4DB3CB-796E-4993-8D49-414317D014DA}");
   }

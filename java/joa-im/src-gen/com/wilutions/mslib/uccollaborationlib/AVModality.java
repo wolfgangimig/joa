@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{BA2BD6F3-7676-42E3-89C6-10CEB3F7E106}")
 public class AVModality extends Dispatch implements IAVModality {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ModalityTypes getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

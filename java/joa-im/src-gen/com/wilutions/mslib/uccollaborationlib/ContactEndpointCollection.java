@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{4CD03696-F8BA-4068-AC3C-A611F8A4BF3E}")
 public class ContactEndpointCollection extends Dispatch implements IContactEndpointCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException {
     final Object obj = this._dispatchCall(-4,"_NewEnum", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

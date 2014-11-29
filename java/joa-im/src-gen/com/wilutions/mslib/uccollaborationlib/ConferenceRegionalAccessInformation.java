@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{36815016-484E-41F5-9E54-B952F4B44400}")
 public class ConferenceRegionalAccessInformation extends Dispatch implements IConferenceRegionalAccessInformation {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getRegionName() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"RegionName", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

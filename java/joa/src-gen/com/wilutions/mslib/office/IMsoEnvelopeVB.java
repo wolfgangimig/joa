@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000672AC-0000-0000-C000-000000000046}")
 public interface IMsoEnvelopeVB extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public String getIntroduction() throws ComException;
   @DeclDISPID(1)  public void setIntroduction(String value) throws ComException;
   @DeclDISPID(2)  public IDispatch getItem() throws ComException;

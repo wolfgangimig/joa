@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{556A0D7A-05FB-4A8B-B15A-AD3EACDE3AD2}")
 public class Channel extends Dispatch implements IChannel {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ChannelType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

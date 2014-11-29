@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{B37552F7-36B6-4EF3-80C2-47F17957E683}")
 public class AccessEntry extends Dispatch implements IAccessEntry {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public AccessEntryScope getScope() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Scope", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

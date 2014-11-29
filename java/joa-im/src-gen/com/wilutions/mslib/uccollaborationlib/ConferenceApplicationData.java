@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{960390D4-C70D-43A1-B272-22E73BC4D4B6}")
 public class ConferenceApplicationData extends Dispatch implements IConferenceApplicationData {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConferenceApplicationProperties getApplicationProperties(String _applicationId) throws ComException {
     assert(_applicationId != null);
     final Object obj = this._dispatchCall(1610743808,"ApplicationProperties", DISPATCH_PROPERTYGET,null,_applicationId);

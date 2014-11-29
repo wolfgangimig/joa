@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{37C7F935-E215-46D2-82A3-A451840EC733}")
 public interface IConversation2 extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

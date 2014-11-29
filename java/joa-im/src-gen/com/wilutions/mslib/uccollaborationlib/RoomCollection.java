@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{3DF72257-EA41-45A7-BD01-DCF2104B250C}")
 public class RoomCollection extends Dispatch implements IRoomCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

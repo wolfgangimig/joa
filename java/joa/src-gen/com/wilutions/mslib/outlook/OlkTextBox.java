@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F068-0000-0000-C000-000000000046}")
 public class OlkTextBox extends Dispatch implements _OlkTextBox {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-500)  public Boolean getAutoSize() throws ComException {
     final Object obj = this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

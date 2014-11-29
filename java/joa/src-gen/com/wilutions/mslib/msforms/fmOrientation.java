@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{16E571E0-040B-11CF-8283-00AA004BA6AE}")
 public class fmOrientation {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmOrientation fmOrientationAuto = new fmOrientation(-1);

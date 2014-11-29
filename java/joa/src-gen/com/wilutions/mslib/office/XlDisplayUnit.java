@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{BF78D790-8DCF-4CF1-9CD4-4FCEB78EBE14}")
 public class XlDisplayUnit {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlDisplayUnit xlHundreds = new XlDisplayUnit(-2);

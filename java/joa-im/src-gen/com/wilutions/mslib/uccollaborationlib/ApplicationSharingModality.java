@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{F8F4A9B9-7E52-44E0-89E0-30A3B4DA4D23}")
 public class ApplicationSharingModality extends Dispatch implements IApplicationSharingModality {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ModalityTypes getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

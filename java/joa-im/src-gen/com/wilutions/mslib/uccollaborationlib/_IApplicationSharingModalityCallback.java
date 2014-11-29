@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{8684D3AD-7061-4056-A894-EBF1270ADB9B}")
 public interface _IApplicationSharingModalityCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1400)  public void OnStartSharing(IApplicationSharingModality _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1401)  public void OnRequestControl(IApplicationSharingModality _source, IAsynchronousOperation _asyncOperation) throws ComException;
   @DeclDISPID(1402)  public void OnReleaseControl(IApplicationSharingModality _source, IAsynchronousOperation _asyncOperation) throws ComException;

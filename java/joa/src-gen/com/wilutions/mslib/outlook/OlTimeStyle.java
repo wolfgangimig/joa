@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{4FD8B708-E730-49B5-BDD3-B807F48E5B83}")
 public class OlTimeStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlTimeStyle olTimeStyleTimeOnly = new OlTimeStyle(0);

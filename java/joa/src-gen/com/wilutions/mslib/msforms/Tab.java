@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{A38BFFC3-A5A0-11CE-8107-00AA00611080}")
 public interface Tab extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-518)  public void setCaption(String value) throws ComException;
   @DeclDISPID(-518)  public String getCaption() throws ComException;
   @DeclDISPID(-2147418043)  public void setControlTipText(String value) throws ComException;

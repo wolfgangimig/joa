@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class LONG_PTR {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public LONG_PTR() {}
   public LONG_PTR(Integer v) { this.value = value; }

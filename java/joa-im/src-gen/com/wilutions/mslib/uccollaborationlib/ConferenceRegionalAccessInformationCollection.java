@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{F080136D-D09A-42DE-B9E4-2E926D1A430F}")
 public class ConferenceRegionalAccessInformationCollection extends Dispatch implements IConferenceRegionalAccessInformationCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException {
     final Object obj = this._dispatchCall(-4,"_NewEnum", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

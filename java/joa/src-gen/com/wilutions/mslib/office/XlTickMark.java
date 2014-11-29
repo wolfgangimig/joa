@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{E5EAD0BB-3A16-48F3-BECD-5839F6B552CA}")
 public class XlTickMark {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlTickMark xlTickMarkCross = new XlTickMark(4);

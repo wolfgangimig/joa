@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{36522520-67A7-48AE-AA63-B5A7BEA21B7C}")
 public class ClientStateChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ClientStateChangedEventData() throws ComException {
     super("{36522520-67A7-48AE-AA63-B5A7BEA21B7C}");
   }

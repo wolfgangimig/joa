@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{000CDB0D-0000-0000-C000-000000000046}")
 public class CustomXMLSchemaCollection extends Dispatch implements _CustomXMLSchemaCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{35A805A1-009F-4307-A6D9-3654104862B5}")
 public class OlAlignment {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlAlignment olAlignmentLeft = new OlAlignment(0);

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{7D8D95F5-EFE7-4189-8D68-0B3BCCEA097A}")
 public class XlAxisGroup {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlAxisGroup xlPrimary = new XlAxisGroup(1);

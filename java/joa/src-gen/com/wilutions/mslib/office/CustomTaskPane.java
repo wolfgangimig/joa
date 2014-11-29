@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{C5771BE5-A188-466B-AB31-00A6A32B1B1C}")
 public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(0)  public String getTitle() throws ComException {
     final Object obj = this._dispatchCall(0,"Title", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

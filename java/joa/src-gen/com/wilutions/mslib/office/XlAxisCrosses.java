@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{89FF0BFE-5E70-4183-88C8-5EF4B213451F}")
 public class XlAxisCrosses {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlAxisCrosses xlAxisCrossesAutomatic = new XlAxisCrosses(-4105);

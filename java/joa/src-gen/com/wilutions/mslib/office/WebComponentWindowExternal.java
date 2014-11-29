@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000CD101-0000-0000-C000-000000000046}")
 public interface WebComponentWindowExternal extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public Integer getInterfaceVersion() throws ComException;
   @DeclDISPID(2)  public String getApplicationName() throws ComException;
   @DeclDISPID(3)  public Integer getApplicationVersion() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{43EAF09A-5DD2-4CE7-9B03-FCEED187BF48}")
 public class ContactManager extends Dispatch implements IContactManager {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IGroupCollection getGroups() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Groups", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

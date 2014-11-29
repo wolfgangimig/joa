@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{C3689F20-C231-11CE-A30C-00AA004A3D3C}")
 public class fmRepeatDirection {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmRepeatDirection _fmRepeatDirectionHorizontal = new fmRepeatDirection(0);

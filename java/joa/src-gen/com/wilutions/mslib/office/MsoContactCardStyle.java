@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{0739EEEF-D856-414C-9494-F2F791FD1F22}")
 public class MsoContactCardStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static MsoContactCardStyle msoContactCardHover = new MsoContactCardStyle(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0370-0000-0000-C000-000000000046}")
 public interface DiagramNode extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(10)  public DiagramNode AddNode(MsoRelativeNodePosition Pos, MsoDiagramNodeType NodeType) throws ComException;

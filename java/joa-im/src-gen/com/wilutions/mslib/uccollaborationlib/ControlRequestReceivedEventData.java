@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{797D542E-5BEB-4926-8145-653CB060366F}")
 public class ControlRequestReceivedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ControlRequestReceivedEventData() throws ComException {
     super("{797D542E-5BEB-4926-8145-653CB060366F}");
   }

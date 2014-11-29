@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{7B020EC7-AF6C-11CE-9F46-00AA00574A4F}")
 public interface TabStripEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(3)  public void onBeforeDragOver(Integer Index, ReturnBoolean Cancel, DataObject Data, Float X, Float Y, fmDragState DragState, ReturnEffect Effect, Short Shift) throws ComException;
   @DeclDISPID(4)  public void onBeforeDropOrPaste(Integer Index, ReturnBoolean Cancel, fmAction Action, DataObject Data, Float X, Float Y, ReturnEffect Effect, Short Shift) throws ComException;
   @DeclDISPID(2)  public void onChange() throws ComException;

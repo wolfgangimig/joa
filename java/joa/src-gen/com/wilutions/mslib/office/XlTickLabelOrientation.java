@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{3A6700B4-6BC6-4848-AAA4-D360573F448C}")
 public class XlTickLabelOrientation {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlTickLabelOrientation xlTickLabelOrientationAutomatic = new XlTickLabelOrientation(-4105);

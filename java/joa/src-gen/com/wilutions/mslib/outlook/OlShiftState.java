@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{B791AC59-1E79-4007-A6A1-4A4FE62F8D03}")
 public class OlShiftState {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlShiftState olShiftStateShiftMask = new OlShiftState(1);

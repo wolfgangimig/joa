@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class FONTITALIC {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public FONTITALIC() {}
   public FONTITALIC(Boolean v) { this.value = value; }

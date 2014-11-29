@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public interface IFontDisp extends Font {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

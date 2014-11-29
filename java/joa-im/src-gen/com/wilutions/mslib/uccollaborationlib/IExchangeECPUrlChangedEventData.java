@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{7818A3F7-674B-477E-99E8-54774579A8E7}")
 public interface IExchangeECPUrlChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getNewUrl() throws ComException;
 }

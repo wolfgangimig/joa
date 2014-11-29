@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{7B020EC8-AF6C-11CE-9F46-00AA00574A4F}")
 public interface MultiPageEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(768)  public void onAddControl(Integer Index, Control Control) throws ComException;
   @DeclDISPID(3)  public void onBeforeDragOver(Integer Index, ReturnBoolean Cancel, Control Control, DataObject Data, Float X, Float Y, fmDragState State, ReturnEffect Effect, Short Shift) throws ComException;
   @DeclDISPID(4)  public void onBeforeDropOrPaste(Integer Index, ReturnBoolean Cancel, Control Control, fmAction Action, DataObject Data, Float X, Float Y, ReturnEffect Effect, Short Shift) throws ComException;

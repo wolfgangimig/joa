@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{7CC8C2D6-8F8A-490B-B6F8-3C410554F9E4}")
 public class XlMarkerStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlMarkerStyle xlMarkerStyleAutomatic = new XlMarkerStyle(-4105);

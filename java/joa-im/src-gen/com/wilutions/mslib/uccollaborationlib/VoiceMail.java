@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{56D29009-C2F0-48B5-89C1-0F725199ECEA}")
 public class VoiceMail extends Dispatch implements IVoiceMail {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getId() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Id", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

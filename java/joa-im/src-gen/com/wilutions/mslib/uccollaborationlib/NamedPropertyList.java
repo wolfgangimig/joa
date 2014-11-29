@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{66B28B84-9D92-47FF-9152-E89EAFBAF3C2}")
 public class NamedPropertyList extends Dispatch implements INamedPropertyList {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void Add(String _propertyID, Object _propertyValue) throws ComException {
     assert(_propertyID != null);
     assert(_propertyValue != null);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{BEF6E002-A874-101A-8BBA-00AA00300CAB}")
 public interface IFont extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610678272)  public String getName() throws ComException;
   @DeclDISPID(1610678272)  public void setName(String pname) throws ComException;
   @DeclDISPID(1610678274)  public Long getSize() throws ComException;

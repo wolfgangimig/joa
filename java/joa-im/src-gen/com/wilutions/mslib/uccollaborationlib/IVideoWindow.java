@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{56A868B4-0AD4-11CE-B03A-0020AF0BA770}")
 public interface IVideoWindow extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void setCaption(String value) throws ComException;
   @DeclDISPID(1610743808)  public String getCaption() throws ComException;
   @DeclDISPID(1610743810)  public void setWindowStyle(Integer value) throws ComException;

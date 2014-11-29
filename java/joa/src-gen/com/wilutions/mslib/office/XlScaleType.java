@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{6A0D7E5C-F9AD-4927-A850-5638891724B2}")
 public class XlScaleType {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlScaleType xlScaleLinear = new XlScaleType(-4132);

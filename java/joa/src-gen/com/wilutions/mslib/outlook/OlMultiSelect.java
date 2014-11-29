@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{5A0FB768-AAF4-4E8C-9C57-89ACA8B6249F}")
 public class OlMultiSelect {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlMultiSelect olMultiSelectSingle = new OlMultiSelect(0);

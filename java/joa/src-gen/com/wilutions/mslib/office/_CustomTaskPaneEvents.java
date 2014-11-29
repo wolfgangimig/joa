@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C033C-0000-0000-C000-000000000046}")
 public interface _CustomTaskPaneEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void onVisibleStateChange(_CustomTaskPane CustomTaskPaneInst) throws ComException;
   @DeclDISPID(2)  public void onDockPositionStateChange(_CustomTaskPane CustomTaskPaneInst) throws ComException;
 }

@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{47FF8FE4-6198-11CF-8CE8-00AA006CB389}")
 public interface WHTMLControlEvents5 extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-600)  public void onClick() throws ComException;
 }

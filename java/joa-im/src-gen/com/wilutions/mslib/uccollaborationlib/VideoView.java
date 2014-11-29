@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{24EFE0BC-5661-4F96-ADC4-351DBE47A4CC}")
 public class VideoView extends Dispatch implements IVideoView {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IVideoViewInformationDictionary getProperties() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Properties", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

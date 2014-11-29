@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{E664682C-CBA5-4C7C-A65B-9CD046F24CBD}")
 public interface ISignInDelayedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getEstimatedStartDelay() throws ComException;
   @DeclDISPID(1610743809)  public Integer getStatusCode() throws ComException;
 }

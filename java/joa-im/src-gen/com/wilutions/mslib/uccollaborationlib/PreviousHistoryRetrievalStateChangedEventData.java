@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{8DA3DAF8-E6D0-4A19-9552-EF293F01D8A4}")
 public class PreviousHistoryRetrievalStateChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public PreviousHistoryRetrievalStateChangedEventData() throws ComException {
     super("{8DA3DAF8-E6D0-4A19-9552-EF293F01D8A4}");
   }

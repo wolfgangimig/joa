@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{E6C8FA08-BD9F-11D0-985E-00C04FC29993}")
 public class LoadPictureConstants {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static LoadPictureConstants Default = new LoadPictureConstants(0);

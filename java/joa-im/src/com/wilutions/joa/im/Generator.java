@@ -40,7 +40,7 @@ public class Generator {
 	}
 
 	private static void generateJavaClasses(String pack, String... typeLibIds) {
-		DispatchImpl.initLogger("d:\\temp\\log\\joagen.log", "ERROR", false);
+		DispatchImpl.initLogger("d:\\temp\\log\\joagen-im.log", "ERROR", false);
 		String outDir = "d:\\git\\joa\\java\\joa-im\\src-gen";
 		System.out.println("Generator started for " + pack +  "...");
 		JoaDll.nativeGenerateJavaClassesForTypeLibs(outDir, pack, typeLibIds,

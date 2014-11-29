@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{209DA899-15F1-499A-B8B5-A847EAA899AE}")
 public interface IRepresentationInfo extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public RepresentationType getType() throws ComException;
   @DeclDISPID(1610743809)  public String getUri() throws ComException;
 }

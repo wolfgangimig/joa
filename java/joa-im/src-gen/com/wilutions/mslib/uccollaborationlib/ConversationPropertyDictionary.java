@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{CE124F88-3665-4A4A-B2E0-76355F832ADF}")
 public class ConversationPropertyDictionary extends Dispatch implements IConversationPropertyDictionary {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{17374941-9877-429F-A88C-8ECD0BFC49D4}")
 public class AlertLevelChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public AlertLevelChangedEventData() throws ComException {
     super("{17374941-9877-429F-A88C-8ECD0BFC49D4}");
   }

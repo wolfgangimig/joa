@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{909E0AE0-16DC-11CE-9E98-00AA00574A4F}")
 public class Control extends Dispatch implements IControl {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-2147418056)  public void setCancel(Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147418056,"Cancel", DISPATCH_PROPERTYPUT,value);

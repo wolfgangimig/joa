@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{899B846A-8887-45D6-B8F5-8AAA0BFDF722}")
 public interface IActiveContentChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IShareableContent getActiveContent() throws ComException;
 }

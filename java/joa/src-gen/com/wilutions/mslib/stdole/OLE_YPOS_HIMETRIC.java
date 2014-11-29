@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_YPOS_HIMETRIC {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_YPOS_HIMETRIC() {}
   public OLE_YPOS_HIMETRIC(Integer v) { this.value = value; }

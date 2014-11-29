@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C033B-0000-0000-C000-000000000046}")
 public interface _CustomTaskPane extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(0)  public String getTitle() throws ComException;
   @DeclDISPID(1)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(2)  public IDispatch getWindow() throws ComException;

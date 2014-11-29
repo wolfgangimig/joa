@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{000610D2-0000-0000-C000-000000000046}")
 public class Table extends Dispatch implements _Table {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(61440)  public _Application getApplication() throws ComException {
     final Object obj = this._dispatchCall(61440,"Application", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

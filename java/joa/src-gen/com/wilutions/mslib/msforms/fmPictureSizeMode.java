@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{53327010-E90B-11CE-9E0B-00AA006002F3}")
 public class fmPictureSizeMode {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmPictureSizeMode fmPictureSizeModeClip = new fmPictureSizeMode(0);

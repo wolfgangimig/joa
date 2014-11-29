@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{61C747F6-157C-4CAE-A37C-EC4352175860}")
 public interface IChannel extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ChannelType getType() throws ComException;
   @DeclDISPID(1610743809)  public ChannelState getState() throws ComException;
   @DeclDISPID(1610743810)  public IModality getModality() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{79176FB0-B7F2-11CE-97EF-00AA006D2776}")
 public class SpinButton extends Dispatch implements ISpinbutton {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());

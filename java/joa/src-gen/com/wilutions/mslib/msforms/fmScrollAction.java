@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{E0ABC3C0-D199-11CE-8CCE-00AA0044BB60}")
 public class fmScrollAction {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmScrollAction fmScrollActionNoChange = new fmScrollAction(0);

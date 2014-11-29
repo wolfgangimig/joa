@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{74B6CAF0-755E-454D-A819-D0E439EF5296}")
 public interface IPublicCloudProviderInfo extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getName() throws ComException;
   @DeclDISPID(1610743809)  public String getIconUrl() throws ComException;
   @DeclDISPID(1610743810)  public String getProxyFqdn() throws ComException;

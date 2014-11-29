@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C03C4-0000-0000-C000-000000000046}")
 public interface IBlogExtensibility extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void BlogProviderProperties(ByRef<String> BlogProvider, ByRef<String> FriendlyName, ByRef<MsoBlogCategorySupport> CategorySupport, ByRef<Boolean> Padding) throws ComException;
   @DeclDISPID(2)  public void SetupBlogAccount(String Account, Integer ParentWindow, IDispatch Document, Boolean NewAccount, ByRef<Boolean> ShowPictureUI) throws ComException;
   @DeclDISPID(3)  public void GetUserBlogs(String Account, Integer ParentWindow, IDispatch Document, ByRef<String[]> BlogNames, ByRef<String[]> BlogIDs, ByRef<String[]> BlogURLs) throws ComException;

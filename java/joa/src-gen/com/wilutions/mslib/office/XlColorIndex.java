@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{F6BA0ED9-B530-466E-83D5-325653CC1068}")
 public class XlColorIndex {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlColorIndex xlColorIndexAutomatic = new XlColorIndex(-4105);

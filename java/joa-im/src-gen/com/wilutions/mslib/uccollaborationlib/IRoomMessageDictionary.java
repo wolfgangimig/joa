@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{603E2454-725A-4679-A6A8-363B21633CB2}")
 public interface IRoomMessageDictionary extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
   @DeclDISPID(0)  public Object getItem(RoomMessageFormat _key) throws ComException;
   @DeclDISPID(0)  public void setItem(RoomMessageFormat _key, Object value2) throws ComException;

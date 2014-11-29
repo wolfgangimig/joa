@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1727-0000-0000-C000-000000000046}")
 public interface IMsoChartGroup extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void setAxisGroup(Integer value) throws ComException;
   @DeclDISPID(1610743808)  public Integer getAxisGroup() throws ComException;
   @DeclDISPID(1610743810)  public void setDoughnutHoleSize(Integer value) throws ComException;

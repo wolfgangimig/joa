@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{3DC07B52-702C-47FE-8893-B96E2A798163}")
 public class ConversationWindowNeedsSizeChangeEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ConversationWindowNeedsSizeChangeEventData() throws ComException {
     super("{3DC07B52-702C-47FE-8893-B96E2A798163}");
   }

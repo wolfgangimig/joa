@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{82B02373-B5BC-11CF-810F-00A0C9030074}")
 public class ReturnInteger extends Dispatch implements IReturnInteger {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(0)  public void setValue(Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);

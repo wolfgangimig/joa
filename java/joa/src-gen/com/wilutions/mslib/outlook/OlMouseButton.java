@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{0DCB2F52-1065-4FD4-BC45-1C11E6D1B279}")
 public class OlMouseButton {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlMouseButton olMouseButtonLeft = new OlMouseButton(1);

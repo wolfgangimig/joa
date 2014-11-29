@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{F0B791FA-434B-49F2-B84E-05619EBE6BEB}")
 public interface ICredentialRequestedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public CredentialRequestedType getType() throws ComException;
   @DeclDISPID(1610743809)  public String getUserName() throws ComException;
   @DeclDISPID(1610743810)  public Boolean getCanSavePassword() throws ComException;

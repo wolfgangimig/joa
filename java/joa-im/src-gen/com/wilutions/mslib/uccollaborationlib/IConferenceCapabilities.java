@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{E0E8B413-BB57-4B58-B1FB-288F3A269E35}")
 public interface IConferenceCapabilities extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getModalities() throws ComException;
   @DeclDISPID(1610743809)  public ConferenceAdmissionType getDefaultAdmissionType() throws ComException;
   @DeclDISPID(1610743810)  public Boolean getIsPstnBridgingEnabled() throws ComException;

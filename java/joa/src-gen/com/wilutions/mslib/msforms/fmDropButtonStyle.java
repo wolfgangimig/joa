@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{14D122B0-C6E7-11CE-827C-00AA004BA6AE}")
 public class fmDropButtonStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmDropButtonStyle fmDropButtonStylePlain = new fmDropButtonStyle(0);

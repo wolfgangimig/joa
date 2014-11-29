@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{A4069F25-4221-11CE-8EA0-00AA004BA6AE}")
 public class fmDisplayStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmDisplayStyle fmDisplayStyleText = new fmDisplayStyle(1);

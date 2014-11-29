@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{BF527F65-83F6-4FA4-AB1B-17A8585F0D8A}")
 public class ConferenceTelephoneAccessInformation extends Dispatch implements IConferenceTelephoneAccessInformation {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getExternalWebLink() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"ExternalWebLink", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

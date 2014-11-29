@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{3E40C2D1-0A01-4D22-A5B8-3DA4E7FD0170}")
 public class ConversationStateChangePropertyDictionary extends Dispatch implements IConversationStateChangePropertyDictionary {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

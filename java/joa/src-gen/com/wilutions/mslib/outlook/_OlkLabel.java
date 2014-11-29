@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000672D9-0000-0000-C000-000000000046}")
 public interface _OlkLabel extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-543)  public String getAccelerator() throws ComException;
   @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException;
   @DeclDISPID(-500)  public Boolean getAutoSize() throws ComException;

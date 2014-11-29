@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{2B4C8AB7-6E70-422A-B7CC-206452289F16}")
 public class XlPieSliceIndex {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlPieSliceIndex xlOuterCounterClockwisePoint = new XlPieSliceIndex(1);

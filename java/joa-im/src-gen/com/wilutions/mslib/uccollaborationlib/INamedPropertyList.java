@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{1A8A9402-E89F-40AE-88A8-B328391684B6}")
 public interface INamedPropertyList extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void Add(String _propertyID, Object _propertyValue) throws ComException;
   @DeclDISPID(1610743809)  public void Clear() throws ComException;
   @DeclDISPID(1610743810)  public void RemoveAt(Integer _index) throws ComException;

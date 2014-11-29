@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000672DF-0000-0000-C000-000000000046}")
 public interface _OlkListBox extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-504)  public OlBorderStyle getBorderStyle() throws ComException;
   @DeclDISPID(-504)  public void setBorderStyle(OlBorderStyle value) throws ComException;
   @DeclDISPID(-501)  public com.wilutions.mslib.stdole.OLE_COLOR getBackColor() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{8BD21D43-EC42-11CE-9E0D-00AA006002F3}")
 public interface IMdcCheckBox extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException;
   @DeclDISPID(-543)  public String getAccelerator() throws ComException;
   @DeclDISPID(710)  public void setAlignment(fmAlignment value) throws ComException;

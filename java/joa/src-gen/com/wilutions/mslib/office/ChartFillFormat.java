@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171C-0000-0000-C000-000000000046}")
 public interface ChartFillFormat extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void OneColorGradient(Integer Style, Integer Variant, Float Degree) throws ComException;
   @DeclDISPID(1610743809)  public void TwoColorGradient(Integer Style, Integer Variant) throws ComException;
   @DeclDISPID(1610743810)  public void PresetTextured(Integer PresetTexture) throws ComException;

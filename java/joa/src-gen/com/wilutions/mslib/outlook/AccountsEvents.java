@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{00063105-0000-0000-C000-000000000046}")
 public interface AccountsEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(64620)  public void onAutoDiscoverComplete(Account Account) throws ComException;
 }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{19CC2B4B-2489-450C-9708-A6C28282AA76}")
 public class AccessPermission extends Dispatch implements IAccessPermission {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public AccessLevel getAccessLevel() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"AccessLevel", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

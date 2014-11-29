@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{964562FD-22B1-4E15-9931-C555434E6538}")
 public class XlTickLabelPosition {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlTickLabelPosition xlTickLabelPositionHigh = new XlTickLabelPosition(-4127);

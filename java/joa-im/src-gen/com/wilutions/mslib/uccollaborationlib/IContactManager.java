@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{E6B3F5FA-4208-4C37-AE07-F6435B68D693}")
 public interface IContactManager extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IGroupCollection getGroups() throws ComException;
   @DeclDISPID(1610743809)  public IContact GetContactByUri(String _contactUri) throws ComException;
   @DeclDISPID(1610743810)  public IAsynchronousOperation Lookup(String _lookupString, Object _contactsAndGroupsCallback, Object _state) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{F77D5A8D-8D57-40F0-AB49-85BAA3699238}")
 public class SharingResourceList extends Dispatch implements ISharingResourceList {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{750D0562-9930-40DD-9DA7-887B50F2111F}")
 public class MsoIodGroup {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static MsoIodGroup msoIodGroupPIAs = new MsoIodGroup(0);

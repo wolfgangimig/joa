@@ -10,6 +10,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{46B5E644-A89E-4C63-86E5-34666807EE75}")
 public class Conversation2 extends Dispatch implements IConversation2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   public Conversation2() throws ComException {
     super("{46B5E644-A89E-4C63-86E5-34666807EE75}", "{37C7F935-E215-46D2-82A3-A451840EC733}");
   }

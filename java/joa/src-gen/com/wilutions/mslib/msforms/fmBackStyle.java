@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{1AFB3130-C129-11CD-A777-00DD01143C57}")
 public class fmBackStyle {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmBackStyle fmBackStyleTransparent = new fmBackStyle(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{AAFE380B-B079-4B55-B81B-A9401D77B776}")
 public interface IPowerPointContent extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ShareableContentType getType() throws ComException;
   @DeclDISPID(1610743809)  public ShareableContentState getState() throws ComException;
   @DeclDISPID(1610743810)  public String getTitle() throws ComException;

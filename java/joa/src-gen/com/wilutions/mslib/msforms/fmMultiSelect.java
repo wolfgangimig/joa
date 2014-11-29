@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{F00164C0-B17B-11CE-A95D-00AA006CB389}")
 public class fmMultiSelect {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmMultiSelect fmMultiSelectSingle = new fmMultiSelect(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{DAA5FDE3-A81C-4F23-80B6-C47B52C649BF}")
 public interface IContactEndpointCollection extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743809)  public void Add(IContactEndpoint _endpoint) throws ComException;
   @DeclDISPID(1610743810)  public void Clear() throws ComException;

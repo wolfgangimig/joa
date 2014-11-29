@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{0006302C-0000-0000-C000-000000000046}")
 public interface ApplicationEvents_11 extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(61442)  public void onItemSend(IDispatch Item, ByRef<Boolean> Cancel) throws ComException;
   @DeclDISPID(61443)  public void onNewMail() throws ComException;
   @DeclDISPID(61444)  public void onReminder(IDispatch Item) throws ComException;

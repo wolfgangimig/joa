@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{732091CB-0A8D-44BC-B977-418CCB37B552}")
 public class XlChartSplitType {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlChartSplitType xlSplitByPosition = new XlChartSplitType(1);

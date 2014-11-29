@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{C4B07795-AE88-400C-AF72-6F7F75A3EC0B}")
 public class MsoPickerField {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static MsoPickerField msoPickerFieldUnknown = new MsoPickerField(0);

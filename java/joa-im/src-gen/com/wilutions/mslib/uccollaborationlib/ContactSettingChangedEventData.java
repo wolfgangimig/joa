@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{1496AE1A-5BA4-484D-8B2B-57C44FE810CD}")
 public class ContactSettingChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ContactSettingChangedEventData() throws ComException {
     super("{1496AE1A-5BA4-484D-8B2B-57C44FE810CD}");
   }

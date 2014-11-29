@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{B5B1FF8F-3F61-4EA5-A339-D94FDFAF15E1}")
 public class Utilities extends Dispatch implements IUtilities {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public INamedPropertyList CreateNamedPropertyList() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"CreateNamedPropertyList", DISPATCH_METHOD,null);
     if (obj == null) return null;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{4C599243-6926-101B-9992-00000B65C6F9}")
 public interface IImage extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException;
   @DeclDISPID(-514)  public Boolean getEnabled() throws ComException;
   @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException;

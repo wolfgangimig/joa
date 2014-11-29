@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{FD28F0A8-D83A-40FB-8C30-6908A6117D5B}")
 public class Contact2 extends Dispatch implements IContact2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public void SetAdditionalUris(String[] _contactUris) throws ComException {
     assert(_contactUris != null);
     this._dispatchCall(268435457,"SetAdditionalUris", DISPATCH_METHOD,null,_contactUris);

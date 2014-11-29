@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{73628D00-B812-419F-8212-3D62079E22DB}")
 public class OlMatchEntry {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlMatchEntry olMatchEntryFirstLetter = new OlMatchEntry(0);

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D5980E2D-0886-4ECD-9D2B-0057A6C061F3}")
 public class VoiceMailBatchEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public VoiceMailBatchEventData() throws ComException {
     super("{D5980E2D-0886-4ECD-9D2B-0057A6C061F3}");
   }

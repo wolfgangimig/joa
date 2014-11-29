@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{10BB4720-F797-11CE-B9EC-00AA006B1A69}")
 public class fmDropEffect {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmDropEffect fmDropEffectNone = new fmDropEffect(0);

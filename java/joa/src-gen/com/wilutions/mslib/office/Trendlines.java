@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1722-0000-0000-C000-000000000046}")
 public interface Trendlines extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(181)  public IMsoTrendline Add(XlTrendlineType Type, Object Order, Object Period, Object Forward, Object Backward, Object Intercept, Object DisplayEquation, Object DisplayRSquared, Object Name) throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;

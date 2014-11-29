@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F01A-0000-0000-C000-000000000046}")
 public class MsoEnvelope extends Dispatch implements IMsoEnvelopeVB {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public String getIntroduction() throws ComException {
     final Object obj = this._dispatchCall(1,"Introduction", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

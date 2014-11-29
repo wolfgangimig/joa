@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
 public class ModalityAction {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static ModalityAction ucModalityActionConnect = new ModalityAction(0);

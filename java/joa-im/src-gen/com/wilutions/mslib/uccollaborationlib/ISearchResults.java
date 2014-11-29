@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{7356D7BB-FD71-4554-84A1-3BBE28726551}")
 public interface ISearchResults extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Boolean getIsMoreAvailable() throws ComException;
   @DeclDISPID(1610743809)  public IDispatch[] getAllContactsAndGroups() throws ComException;
   @DeclDISPID(1610743810)  public IContact[] getContacts() throws ComException;

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{317A54C2-C7B1-11CE-9AFD-00AA00600AB8}")
 public class fmPicturePosition {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmPicturePosition fmPicturePositionLeftTop = new fmPicturePosition(0);

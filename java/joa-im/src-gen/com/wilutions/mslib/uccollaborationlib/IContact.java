@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{85109845-6AE2-4B6B-9524-65BA203E5B7D}")
 public interface IContact extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getUri() throws ComException;
   @DeclDISPID(1610743809)  public Object GetContactInformation(ContactInformationType _contactInformationType) throws ComException;
   @DeclDISPID(1610743810)  public IContactInformationDictionary BatchGetContactInformation(ContactInformationType[] _contactInformationTypes) throws ComException;

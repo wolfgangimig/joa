@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{3BC642EF-64BE-45AE-982D-BABDAABB355A}")
 public class AlertLevel extends Dispatch implements IAlertLevel {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Boolean getNotificationEnabled() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"NotificationEnabled", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

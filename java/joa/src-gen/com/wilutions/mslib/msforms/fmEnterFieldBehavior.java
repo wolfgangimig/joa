@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{6A7167F1-2432-11CF-956F-00AA004B9DFA}")
 public class fmEnterFieldBehavior {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static fmEnterFieldBehavior fmEnterFieldBehaviorSelectAll = new fmEnterFieldBehavior(0);

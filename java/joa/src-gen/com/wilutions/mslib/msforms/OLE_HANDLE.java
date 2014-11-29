@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_HANDLE {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_HANDLE() {}
   public OLE_HANDLE(Integer v) { this.value = value; }

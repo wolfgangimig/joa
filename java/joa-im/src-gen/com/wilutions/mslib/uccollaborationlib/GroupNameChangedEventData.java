@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{4EB781A9-A304-4BC5-A399-2C79B20D4079}")
 public class GroupNameChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public GroupNameChangedEventData() throws ComException {
     super("{4EB781A9-A304-4BC5-A399-2C79B20D4079}");
   }

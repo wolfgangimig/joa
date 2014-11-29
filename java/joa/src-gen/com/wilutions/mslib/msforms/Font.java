@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{BEF6E003-A874-101A-8BBA-00AA00300CAB}")
 public interface Font extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

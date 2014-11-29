@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{5995DE21-CBAA-4E8B-8EC3-FB779A1D6390}")
 public class JoaBridgeDialog extends Dispatch implements IJoaBridgeDialog {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(11)  public void ShowModal(Object owner) throws ComException {
     assert(owner != null);
     this._dispatchCall(11,"ShowModal", DISPATCH_METHOD,null,owner);

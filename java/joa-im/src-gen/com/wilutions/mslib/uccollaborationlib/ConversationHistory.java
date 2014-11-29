@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{00B1F05C-924F-4A74-AED2-8EDE3D08DE8B}")
 public class ConversationHistory extends Dispatch implements IConversationHistory {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConversation getConversation() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Conversation", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

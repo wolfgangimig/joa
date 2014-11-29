@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C0354-0000-0000-C000-000000000046}")
 public interface _CommandBarComboBoxEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void onChange(CommandBarComboBox Ctrl) throws ComException;
 }

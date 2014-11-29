@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{B482E1E6-AFB7-4E58-91EE-3E20F6139220}")
 public class WorkingPeriod extends Dispatch implements IWorkingPeriod {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public java.util.Date getStartTime() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"StartTime", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

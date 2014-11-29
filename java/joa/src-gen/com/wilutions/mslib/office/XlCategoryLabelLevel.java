@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{BFFE8F80-6A67-4B7A-AEAA-8823E7932C87}")
 public class XlCategoryLabelLevel {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlCategoryLabelLevel xlCategoryLabelLevelNone = new XlCategoryLabelLevel(-3);

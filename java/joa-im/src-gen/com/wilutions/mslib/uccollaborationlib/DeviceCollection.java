@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{A0BA7D36-93CD-48C0-A168-3EF5933CEE8A}")
 public class DeviceCollection extends Dispatch implements IDeviceCollection {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException {
     final Object obj = this._dispatchCall(-4,"_NewEnum", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

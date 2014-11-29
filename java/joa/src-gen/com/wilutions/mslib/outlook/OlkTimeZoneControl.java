@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F059-0000-0000-C000-000000000046}")
 public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(64559)  public OlAppointmentTimeField getAppointmentTimeField() throws ComException {
     final Object obj = this._dispatchCall(64559,"AppointmentTimeField", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

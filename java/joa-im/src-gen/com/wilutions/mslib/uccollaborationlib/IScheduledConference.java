@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{71A054B3-4D4B-4643-B14F-4572494B19E7}")
 public interface IScheduledConference extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public String getConferenceId() throws ComException;
   @DeclDISPID(1610743809)  public String getOrganizer() throws ComException;
   @DeclDISPID(1610743810)  public String getOrganizerUri() throws ComException;

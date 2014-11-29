@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{46E31370-3F7A-11CE-BED6-00AA00611080}")
 public class MultiPage extends Dispatch implements IMultiPage {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());

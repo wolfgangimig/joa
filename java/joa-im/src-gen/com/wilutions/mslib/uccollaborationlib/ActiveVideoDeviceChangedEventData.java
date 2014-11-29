@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{A6B0C293-C498-44D5-BAC4-B66C3B41FA46}")
 public class ActiveVideoDeviceChangedEventData extends Dispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   public ActiveVideoDeviceChangedEventData() throws ComException {
     super("{A6B0C293-C498-44D5-BAC4-B66C3B41FA46}");
   }

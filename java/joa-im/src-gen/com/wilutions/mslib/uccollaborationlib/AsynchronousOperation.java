@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{E6A9D57E-838C-43D1-9F12-E47C844531E0}")
 public class AsynchronousOperation extends Dispatch implements IAsynchronousOperation {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Object getAsyncState() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"AsyncState", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{8B544093-ECC1-43E3-80EF-25D6FBCC7540}")
 public class XlSizeRepresents {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static XlSizeRepresents xlSizeIsWidth = new XlSizeRepresents(2);

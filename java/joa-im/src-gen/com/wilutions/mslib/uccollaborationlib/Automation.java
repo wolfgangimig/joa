@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{E45FB8A0-6716-4F0F-A4F0-220C3DEB7337}")
 public class Automation extends Dispatch implements IAutomation {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void LaunchAddContactWizard(String _contactEmail) throws ComException {
     assert(_contactEmail != null);
     this._dispatchCall(1610743808,"LaunchAddContactWizard", DISPATCH_METHOD,null,_contactEmail);

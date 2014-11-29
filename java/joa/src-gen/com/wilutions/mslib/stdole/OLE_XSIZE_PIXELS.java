@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class OLE_XSIZE_PIXELS {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public OLE_XSIZE_PIXELS() {}
   public OLE_XSIZE_PIXELS(Integer v) { this.value = value; }

@@ -8,4 +8,5 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{A98639A1-CB0C-4A5C-A511-96547F752ACD}")
 public interface IMsoHyperlinks extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
 }

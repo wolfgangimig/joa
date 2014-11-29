@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C1530-0000-0000-C000-000000000046}")
 public interface OfficeDataSourceObject extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public String getConnectString() throws ComException;
   @DeclDISPID(1)  public void setConnectString(String value) throws ComException;
   @DeclDISPID(2)  public String getTable() throws ComException;

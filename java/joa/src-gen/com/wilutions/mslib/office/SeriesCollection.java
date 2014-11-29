@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C170A-0000-0000-C000-000000000046}")
 public interface SeriesCollection extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(181)  public IMsoSeries Add(Object Source, XlRowCol Rowcol, Object SeriesLabels, Object CategoryLabels, Object Replace) throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;

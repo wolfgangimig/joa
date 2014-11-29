@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000CD809-0000-0000-C000-000000000046}")
 public interface EncryptionProvider extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Object GetProviderDetail(EncryptionProviderDetail encprovdet) throws ComException;
   @DeclDISPID(1610743809)  public Integer NewSession(Object ParentWindow) throws ComException;
   @DeclDISPID(1610743810)  public Integer Authenticate(Object ParentWindow, Object EncryptionData, ByRef<Integer> PermissionsMask) throws ComException;

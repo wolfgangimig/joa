@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class FONTSIZE {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Long value;
   public FONTSIZE() {}
   public FONTSIZE(Long v) { this.value = value; }

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F04C-0000-0000-C000-000000000046}")
 public class OlkCheckBox extends Dispatch implements _OlkCheckBox {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-543)  public String getAccelerator() throws ComException {
     final Object obj = this._dispatchCall(-543,"Accelerator", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

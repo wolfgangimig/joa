@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{6EA00553-9439-4D5A-B1E6-DC15A54DA8B2}")
 public interface IMsoDisplayUnitLabel extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void setCaption(String value) throws ComException;
   @DeclDISPID(1610743808)  public String getCaption() throws ComException;
   @DeclDISPID(1610743810)  public IMsoCharacters getCharacters(Object Start, Object Length) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class FONTBOLD {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public FONTBOLD() {}
   public FONTBOLD(Boolean v) { this.value = value; }

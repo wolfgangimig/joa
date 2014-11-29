@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
 public class OlMobileFormat {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static OlMobileFormat olSMS = new OlMobileFormat(0);

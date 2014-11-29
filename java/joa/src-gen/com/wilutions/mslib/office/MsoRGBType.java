@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class MsoRGBType {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Integer value;
   public MsoRGBType() {}
   public MsoRGBType(Integer v) { this.value = value; }

@@ -9,6 +9,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
 public class ShareableContentProperty {
+  static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
   public final static ShareableContentProperty ucShareableContentId = new ShareableContentProperty(1048576);

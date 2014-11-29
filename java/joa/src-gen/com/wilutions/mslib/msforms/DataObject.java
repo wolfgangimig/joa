@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{1C3B4210-F441-11CE-B9EA-00AA006B1A69}")
 public class DataObject extends Dispatch implements IDataAutoWrapper {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void Clear() throws ComException {
     this._dispatchCall(1610743808,"Clear", DISPATCH_METHOD,null);
   }

@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{08DDF5C4-FA12-4978-B26E-C6D23C453413}")
 public interface _IDeviceManagerCallback extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(600)  public void OnPlayAudioFile(IDeviceManager _source, IAsynchronousOperation _asyncOperation) throws ComException;
 }

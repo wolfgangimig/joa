@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 public class FONTSTRIKETHROUGH {
+  static boolean __typelib__loaded = __TypeLib.load();
   private Boolean value;
   public FONTSTRIKETHROUGH() {}
   public FONTSTRIKETHROUGH(Boolean v) { this.value = value; }

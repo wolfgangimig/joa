@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{3DEBDC7E-811F-4304-BDD7-7D98C732026C}")
 public interface IHistoryInfo extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public HistoryInfoEntryType getType() throws ComException;
   @DeclDISPID(1610743809)  public String getUri() throws ComException;
   @DeclDISPID(1610743810)  public Integer getStatus() throws ComException;

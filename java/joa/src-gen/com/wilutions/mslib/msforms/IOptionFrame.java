@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{29B86A70-F52E-11CE-9BCE-00AA00608E01}")
 public interface IOptionFrame extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(256)  public Control getActiveControl() throws ComException;
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException;
   @DeclDISPID(-501)  public OLE_COLOR getBackColor() throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{300E56A3-CE08-4EB3-9F48-505AA162C9DA}")
 public interface _IRoomEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(4200)  public void onOnPropertyChanged(IRoom _eventSource, IRoomPropertyChangedEventData _eventData) throws ComException;
   @DeclDISPID(4201)  public void onOnUnreadMessageCountChanged(IRoom _eventSource, IUnreadMessageCountChangedEventData _eventData) throws ComException;
   @DeclDISPID(4202)  public void onOnIsSendingMessage(IRoom _eventSource, IRoomMessageEventData _eventData) throws ComException;

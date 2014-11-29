@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{80EDBF3A-812E-42B5-A67F-6CC6D9A19A6C}")
 public interface IDelegatorClient extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ClientType getType() throws ComException;
   @DeclDISPID(1610743809)  public ClientState getState() throws ComException;
   @DeclDISPID(1610743810)  public String getUri() throws ComException;

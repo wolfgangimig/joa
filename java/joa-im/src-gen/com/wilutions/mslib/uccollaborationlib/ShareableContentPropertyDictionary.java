@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{235B711C-6FA3-4F91-B50E-36ED53B3801F}")
 public class ShareableContentPropertyDictionary extends Dispatch implements IShareableContentPropertyDictionary {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Count", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

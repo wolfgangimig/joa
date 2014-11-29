@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{EAD92B6D-A7DB-4AB8-A494-C5A2771FA987}")
 public class Utilities2 extends Dispatch implements IUtilities2 {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public String getExchangeECPUrl() throws ComException {
     final Object obj = this._dispatchCall(268435457,"ExchangeECPUrl", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

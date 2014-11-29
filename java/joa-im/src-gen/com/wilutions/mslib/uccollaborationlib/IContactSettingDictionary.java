@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{FD9000B3-479F-4B16-9D63-70A49E078946}")
 public interface IContactSettingDictionary extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ContactSetting[] getKeys() throws ComException;
   @DeclDISPID(1610743809)  public Object[] getValues() throws ComException;
   @DeclDISPID(1610743810)  public Boolean TryGetValue(ContactSetting _key, ByRef<Object> _value) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{04598FC9-866C-11CF-AB7C-00AA00C08FCF}")
 public interface IMultiPage extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException;
   @DeclDISPID(-501)  public OLE_COLOR getBackColor() throws ComException;
   @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException;

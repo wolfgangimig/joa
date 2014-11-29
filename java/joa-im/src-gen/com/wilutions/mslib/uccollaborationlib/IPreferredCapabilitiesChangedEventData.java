@@ -8,5 +8,6 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{B28F2007-3926-49CF-9101-4CCB9574049B}")
 public interface IPreferredCapabilitiesChangedEventData extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public LyncClientCapabilityTypes getPreferredCapabilities() throws ComException;
 }

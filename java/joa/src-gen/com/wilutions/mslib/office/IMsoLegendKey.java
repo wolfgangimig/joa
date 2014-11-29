@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000C171E-0000-0000-C000-000000000046}")
 public interface IMsoLegendKey extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(128)  public IMsoBorder getBorder() throws ComException;
   @DeclDISPID(112)  public Object ClearFormats() throws ComException;

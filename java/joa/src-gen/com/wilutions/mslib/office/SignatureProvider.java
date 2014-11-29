@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{000CD6A3-0000-0000-C000-000000000046}")
 public interface SignatureProvider extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public com.wilutions.mslib.stdole.IPictureDisp GenerateSignatureLineImage(SignatureLineImage siglnimg, SignatureSetup psigsetup, SignatureInfo psiginfo, Object XmlDsigStream) throws ComException;
   @DeclDISPID(1610743809)  public void ShowSignatureSetup(Object ParentWindow, SignatureSetup psigsetup) throws ComException;
   @DeclDISPID(1610743810)  public void ShowSigningCeremony(Object ParentWindow, SignatureSetup psigsetup, SignatureInfo psiginfo) throws ComException;

@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{0006F055-0000-0000-C000-000000000046}")
 public class OlkPageControl extends Dispatch implements _OlkPageControl {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(64465)  public OlPageType getPage() throws ComException {
     final Object obj = this._dispatchCall(64465,"Page", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

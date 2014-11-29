@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoInterface(guid="{953AE732-F53A-4116-AC1B-0321B3FB3DBA}")
 public interface _ILyncClientEvents extends IDispatch {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(100)  public void onOnStateChanged(IClient _eventSource, IClientStateChangedEventData _eventData) throws ComException;
   @DeclDISPID(101)  public void onOnNotificationReceived(ILyncClient _eventSource, ILyncClientNotificationReceivedEventData _eventData) throws ComException;
   @DeclDISPID(103)  public void onOnCredentialRequested(ILyncClient _eventSource, ICredentialRequestedEventData _eventData) throws ComException;

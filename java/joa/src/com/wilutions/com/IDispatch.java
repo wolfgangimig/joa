@@ -14,6 +14,7 @@ package com.wilutions.com;
  * Objects received from COM and Java objects that implement a COM interface
  * implement IDispatch.
  */
+@CoInterface(guid="{00020400-0000-0000-C000-000000000046}")
 public interface IDispatch extends IUnknown {
 	
 	/**

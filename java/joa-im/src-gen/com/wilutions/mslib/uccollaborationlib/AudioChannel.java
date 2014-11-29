@@ -9,6 +9,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{D5975289-8D98-481A-92A7-F8536085D621}")
 public class AudioChannel extends Dispatch implements IAudioChannel {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ChannelType getType() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Type", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;

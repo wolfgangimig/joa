@@ -8,6 +8,7 @@ import com.wilutions.com.*;
  */
 @CoClass(guid="{60A8F660-C321-4761-8AFF-41072DCFDD03}")
 public class ContactSettingDictionary extends Dispatch implements IContactSettingDictionary {
+  static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public ContactSetting[] getKeys() throws ComException {
     final Object obj = this._dispatchCall(1610743808,"Keys", DISPATCH_PROPERTYGET,null);
     if (obj == null) return null;
