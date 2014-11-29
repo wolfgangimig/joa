@@ -20,7 +20,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setDescription(String value) throws ComException {
+  @DeclDISPID(0)  public void setDescription(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Description", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(6)  public void setConnect(Boolean value) throws ComException {
+  @DeclDISPID(6)  public void setConnect(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"Connect", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(7)  public void setObject(IDispatch value) throws ComException {
+  @DeclDISPID(7)  public void setObject(final IDispatch value) throws ComException {
     this._dispatchCall(7,"Object", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(8)  public IDispatch getParent() throws ComException {

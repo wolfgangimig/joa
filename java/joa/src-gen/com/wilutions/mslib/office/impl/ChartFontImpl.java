@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E73-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.office.ChartFont {
-  @DeclDISPID(1610743808)  public void setBackground(Object value) throws ComException {
+  @DeclDISPID(1610743808)  public void setBackground(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"Background", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743810)  public void setBold(Object value) throws ComException {
+  @DeclDISPID(1610743810)  public void setBold(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743810,"Bold", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743812)  public void setColor(Object value) throws ComException {
+  @DeclDISPID(1610743812)  public void setColor(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"Color", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743814)  public void setColorIndex(Object value) throws ComException {
+  @DeclDISPID(1610743814)  public void setColorIndex(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"ColorIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -41,7 +41,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743816)  public void setFontStyle(Object value) throws ComException {
+  @DeclDISPID(1610743816)  public void setFontStyle(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"FontStyle", DISPATCH_PROPERTYPUT,value);
   }
@@ -50,7 +50,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743818)  public void setItalic(Object value) throws ComException {
+  @DeclDISPID(1610743818)  public void setItalic(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743818,"Italic", DISPATCH_PROPERTYPUT,value);
   }
@@ -59,7 +59,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743820)  public void setName(Object value) throws ComException {
+  @DeclDISPID(1610743820)  public void setName(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743820,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -68,7 +68,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743822)  public void setOutlineFont(Object value) throws ComException {
+  @DeclDISPID(1610743822)  public void setOutlineFont(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743822,"OutlineFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -77,7 +77,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743824)  public void setShadow(Object value) throws ComException {
+  @DeclDISPID(1610743824)  public void setShadow(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743824,"Shadow", DISPATCH_PROPERTYPUT,value);
   }
@@ -86,7 +86,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743826)  public void setSize(Object value) throws ComException {
+  @DeclDISPID(1610743826)  public void setSize(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743826,"Size", DISPATCH_PROPERTYPUT,value);
   }
@@ -95,7 +95,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743828)  public void setStrikeThrough(Object value) throws ComException {
+  @DeclDISPID(1610743828)  public void setStrikeThrough(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743828,"StrikeThrough", DISPATCH_PROPERTYPUT,value);
   }
@@ -104,7 +104,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743830)  public void setSubscript(Object value) throws ComException {
+  @DeclDISPID(1610743830)  public void setSubscript(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743830,"Subscript", DISPATCH_PROPERTYPUT,value);
   }
@@ -113,7 +113,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743832)  public void setSuperscript(Object value) throws ComException {
+  @DeclDISPID(1610743832)  public void setSuperscript(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743832,"Superscript", DISPATCH_PROPERTYPUT,value);
   }
@@ -122,7 +122,7 @@ public class ChartFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743834)  public void setUnderline(Object value) throws ComException {
+  @DeclDISPID(1610743834)  public void setUnderline(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743834,"Underline", DISPATCH_PROPERTYPUT,value);
   }

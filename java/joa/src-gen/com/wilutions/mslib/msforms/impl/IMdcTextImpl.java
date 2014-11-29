@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{4B458478-4821-CA8F-03A3-694DA597FE09}")
 public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msforms.IMdcText {
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(217)  public void setAutoTab(Boolean value) throws ComException {
+  @DeclDISPID(217)  public void setAutoTab(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(217,"AutoTab", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(218)  public void setAutoWordSelect(Boolean value) throws ComException {
+  @DeclDISPID(218)  public void setAutoWordSelect(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(218,"AutoWordSelect", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -42,7 +42,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-502)  public void setBackStyle(com.wilutions.mslib.msforms.fmBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final com.wilutions.mslib.msforms.fmBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -51,7 +51,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-503)  public void setBorderColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-503)  public void setBorderColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-503,"BorderColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -61,7 +61,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -75,7 +75,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(212)  public void setCurLine(Integer value) throws ComException {
+  @DeclDISPID(212)  public void setCurLine(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(212,"CurLine", DISPATCH_PROPERTYPUT,value);
   }
@@ -89,7 +89,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(208)  public void setCurX(Integer value) throws ComException {
+  @DeclDISPID(208)  public void setCurX(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(208,"CurX", DISPATCH_PROPERTYPUT,value);
   }
@@ -98,7 +98,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-544)  public void setEnterKeyBehavior(Boolean value) throws ComException {
+  @DeclDISPID(-544)  public void setEnterKeyBehavior(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-544,"EnterKeyBehavior", DISPATCH_PROPERTYPUT,value);
   }
@@ -107,7 +107,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -116,7 +116,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-512)  public void setFont(com.wilutions.mslib.msforms.Font value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final com.wilutions.mslib.msforms.Font value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
@@ -124,7 +124,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -134,7 +134,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(207)  public void setHideSelection(Boolean value) throws ComException {
+  @DeclDISPID(207)  public void setHideSelection(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(207,"HideSelection", DISPATCH_PROPERTYPUT,value);
   }
@@ -143,7 +143,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(604)  public void setIntegralHeight(Boolean value) throws ComException {
+  @DeclDISPID(604)  public void setIntegralHeight(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(604,"IntegralHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -157,7 +157,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -166,7 +166,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-533)  public void setMaxLength(Integer value) throws ComException {
+  @DeclDISPID(-533)  public void setMaxLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-533,"MaxLength", DISPATCH_PROPERTYPUT,value);
   }
@@ -175,7 +175,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -183,7 +183,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -192,7 +192,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-537)  public void setMultiLine(Boolean value) throws ComException {
+  @DeclDISPID(-537)  public void setMultiLine(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-537,"MultiLine", DISPATCH_PROPERTYPUT,value);
   }
@@ -201,7 +201,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-534)  public void setPasswordChar(String value) throws ComException {
+  @DeclDISPID(-534)  public void setPasswordChar(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-534,"PasswordChar", DISPATCH_PROPERTYPUT,value);
   }
@@ -210,7 +210,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-535)  public void setScrollBars(com.wilutions.mslib.msforms.fmScrollBars value) throws ComException {
+  @DeclDISPID(-535)  public void setScrollBars(final com.wilutions.mslib.msforms.fmScrollBars value) throws ComException {
     assert(value != null);
     this._dispatchCall(-535,"ScrollBars", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -219,7 +219,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmScrollBars.valueOf((Integer)obj);
   }
-  @DeclDISPID(220)  public void setSelectionMargin(Boolean value) throws ComException {
+  @DeclDISPID(220)  public void setSelectionMargin(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(220,"SelectionMargin", DISPATCH_PROPERTYPUT,value);
   }
@@ -228,7 +228,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-548)  public void setSelLength(Integer value) throws ComException {
+  @DeclDISPID(-548)  public void setSelLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-548,"SelLength", DISPATCH_PROPERTYPUT,value);
   }
@@ -237,7 +237,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-547)  public void setSelStart(Integer value) throws ComException {
+  @DeclDISPID(-547)  public void setSelStart(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-547,"SelStart", DISPATCH_PROPERTYPUT,value);
   }
@@ -246,7 +246,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-546)  public void setSelText(String value) throws ComException {
+  @DeclDISPID(-546)  public void setSelText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-546,"SelText", DISPATCH_PROPERTYPUT,value);
   }
@@ -255,7 +255,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12)  public void setSpecialEffect(com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -264,7 +264,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmSpecialEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(-545)  public void setTabKeyBehavior(Boolean value) throws ComException {
+  @DeclDISPID(-545)  public void setTabKeyBehavior(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-545,"TabKeyBehavior", DISPATCH_PROPERTYPUT,value);
   }
@@ -273,7 +273,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-517)  public void setText(String value) throws ComException {
+  @DeclDISPID(-517)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-517,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -282,7 +282,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(10004)  public void setTextAlign(com.wilutions.mslib.msforms.fmTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final com.wilutions.mslib.msforms.fmTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -296,7 +296,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -305,7 +305,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
@@ -323,7 +323,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
   @DeclDISPID(24)  public void Paste() throws ComException {
     this._dispatchCall(24,"Paste", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(-542)  public void setIMEMode(com.wilutions.mslib.msforms.fmIMEMode value) throws ComException {
+  @DeclDISPID(-542)  public void setIMEMode(final com.wilutions.mslib.msforms.fmIMEMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(-542,"IMEMode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -332,7 +332,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmIMEMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(224)  public void setEnterFieldBehavior(com.wilutions.mslib.msforms.fmEnterFieldBehavior value) throws ComException {
+  @DeclDISPID(224)  public void setEnterFieldBehavior(final com.wilutions.mslib.msforms.fmEnterFieldBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(224,"EnterFieldBehavior", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -341,7 +341,7 @@ public class IMdcTextImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmEnterFieldBehavior.valueOf((Integer)obj);
   }
-  @DeclDISPID(225)  public void setDragBehavior(com.wilutions.mslib.msforms.fmDragBehavior value) throws ComException {
+  @DeclDISPID(225)  public void setDragBehavior(final com.wilutions.mslib.msforms.fmDragBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(225,"DragBehavior", DISPATCH_PROPERTYPUT,value.value);
   }

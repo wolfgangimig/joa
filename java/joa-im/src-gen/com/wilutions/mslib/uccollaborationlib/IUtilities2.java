@@ -11,5 +11,5 @@ public interface IUtilities2 extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public String getExchangeECPUrl() throws ComException;
   @DeclDISPID(268435458)  public IScheduledConferenceManager getScheduledConferenceManager() throws ComException;
-  @DeclDISPID(268435459)  public String Normalize(String _displayString) throws ComException;
+  @DeclDISPID(268435459)  public String Normalize(final String _displayString) throws ComException;
 }

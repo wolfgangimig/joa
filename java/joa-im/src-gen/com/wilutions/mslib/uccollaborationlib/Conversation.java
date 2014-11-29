@@ -31,12 +31,12 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantCollectionImpl.class);
   }
-  @DeclDISPID(1610743812)  public IParticipant AddParticipant(IDispatch _contactOrCollaborationEndpoint) throws ComException {
+  @DeclDISPID(1610743812)  public IParticipant AddParticipant(final IDispatch _contactOrCollaborationEndpoint) throws ComException {
     final Object obj = this._dispatchCall(1610743812,"AddParticipant", DISPATCH_METHOD,null,(_contactOrCollaborationEndpoint!=null?_contactOrCollaborationEndpoint:Dispatch.NULL));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantImpl.class);
   }
-  @DeclDISPID(1610743813)  public void RemoveParticipant(IParticipant _participant) throws ComException {
+  @DeclDISPID(1610743813)  public void RemoveParticipant(final IParticipant _participant) throws ComException {
     this._dispatchCall(1610743813,"RemoveParticipant", DISPATCH_METHOD,null,(_participant!=null?_participant:Dispatch.NULL));
   }
   @DeclDISPID(1610743814)  public IConversationContextList getContexts() throws ComException {
@@ -54,7 +54,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationPropertyDictionaryImpl.class);
   }
-  @DeclDISPID(1610743817)  public IAsynchronousOperation SetProperty(ConversationProperty _propertyType, Object _propertyValue, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743817)  public IAsynchronousOperation SetProperty(final ConversationProperty _propertyType, final Object _propertyValue, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_propertyType != null);
     assert(_propertyValue != null);
     assert(_conversationCallback != null);
@@ -63,7 +63,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743818)  public IAsynchronousOperation SendInitialContext(ContextType[] _contextTypes, Object[] _contextDatas, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743818)  public IAsynchronousOperation SendInitialContext(final ContextType[] _contextTypes, final Object[] _contextDatas, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_contextTypes != null);
     assert(_contextDatas != null);
     assert(_conversationCallback != null);
@@ -72,7 +72,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743819)  public IAsynchronousOperation SendContextData(String _applicationId, String _dataType, String _data, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743819)  public IAsynchronousOperation SendContextData(final String _applicationId, final String _dataType, final String _data, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_applicationId != null);
     assert(_dataType != null);
     assert(_data != null);
@@ -82,7 +82,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743820)  public String GetApplicationData(String _appGuid) throws ComException {
+  @DeclDISPID(1610743820)  public String GetApplicationData(final String _appGuid) throws ComException {
     assert(_appGuid != null);
     final Object obj = this._dispatchCall(1610743820,"GetApplicationData", DISPATCH_METHOD,null,_appGuid);
     if (obj == null) return null;
@@ -93,7 +93,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationManagerImpl.class);
   }
-  @DeclDISPID(1610743822)  public IAsynchronousOperation Merge(IConversation _conversation, ModalityTypes _modalityTypes, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743822)  public IAsynchronousOperation Merge(final IConversation _conversation, final ModalityTypes _modalityTypes, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_modalityTypes != null);
     assert(_conversationCallback != null);
     assert(_state != null);
@@ -101,7 +101,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743823)  public IAsynchronousOperation AdmitParticipants(IParticipant[] _participants, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743823)  public IAsynchronousOperation AdmitParticipants(final IParticipant[] _participants, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_participants != null);
     assert(_conversationCallback != null);
     assert(_state != null);
@@ -109,7 +109,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743824)  public IAsynchronousOperation DenyParticipants(IParticipant[] _participants, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743824)  public IAsynchronousOperation DenyParticipants(final IParticipant[] _participants, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_participants != null);
     assert(_conversationCallback != null);
     assert(_state != null);
@@ -117,7 +117,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743825)  public IAsynchronousOperation Park(Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743825)  public IAsynchronousOperation Park(final Object _conversationCallback, final Object _state) throws ComException {
     assert(_conversationCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743825,"Park", DISPATCH_METHOD,null,_conversationCallback,_state);
@@ -127,13 +127,13 @@ public class Conversation extends Dispatch implements IConversation {
   @DeclDISPID(1610743826)  public void End() throws ComException {
     this._dispatchCall(1610743826,"End", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743827)  public Boolean CanInvoke(ConversationAction _action) throws ComException {
+  @DeclDISPID(1610743827)  public Boolean CanInvoke(final ConversationAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743827,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743828)  public Boolean CanSetProperty(ConversationProperty _convProperty) throws ComException {
+  @DeclDISPID(1610743828)  public Boolean CanSetProperty(final ConversationProperty _convProperty) throws ComException {
     assert(_convProperty != null);
     final Object obj = this._dispatchCall(1610743828,"CanSetProperty", DISPATCH_METHOD,null,_convProperty.value);
     if (obj == null) return null;
@@ -144,7 +144,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return ConversationDirection.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743830)  public IAsynchronousOperation MuteParticipants(IParticipant[] _participants, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743830)  public IAsynchronousOperation MuteParticipants(final IParticipant[] _participants, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_participants != null);
     assert(_conversationCallback != null);
     assert(_state != null);
@@ -152,7 +152,7 @@ public class Conversation extends Dispatch implements IConversation {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743831)  public IAsynchronousOperation UnmuteParticipants(IParticipant[] _participants, Object _conversationCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743831)  public IAsynchronousOperation UnmuteParticipants(final IParticipant[] _participants, final Object _conversationCallback, final Object _state) throws ComException {
     assert(_participants != null);
     assert(_conversationCallback != null);
     assert(_state != null);

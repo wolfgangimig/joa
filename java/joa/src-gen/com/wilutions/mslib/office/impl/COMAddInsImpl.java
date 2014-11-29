@@ -15,7 +15,7 @@ public class COMAddInsImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.COMAddIn Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.COMAddIn Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

@@ -8,10 +8,10 @@ public class ControlEventsImpl extends Dispatch implements com.wilutions.mslib.m
   @DeclDISPID(-2147384830)  public void onEnter() throws ComException {
     this._dispatchCall(-2147384830,"Enter", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(-2147384829)  public void onExit(com.wilutions.mslib.msforms.ReturnBoolean Cancel) throws ComException {
+  @DeclDISPID(-2147384829)  public void onExit(final com.wilutions.mslib.msforms.ReturnBoolean Cancel) throws ComException {
     this._dispatchCall(-2147384829,"Exit", DISPATCH_METHOD,null,(Cancel!=null?Cancel:Dispatch.NULL));
   }
-  @DeclDISPID(-2147384831)  public void onBeforeUpdate(com.wilutions.mslib.msforms.ReturnBoolean Cancel) throws ComException {
+  @DeclDISPID(-2147384831)  public void onBeforeUpdate(final com.wilutions.mslib.msforms.ReturnBoolean Cancel) throws ComException {
     this._dispatchCall(-2147384831,"BeforeUpdate", DISPATCH_METHOD,null,(Cancel!=null?Cancel:Dispatch.NULL));
   }
   @DeclDISPID(-2147384832)  public void onAfterUpdate() throws ComException {

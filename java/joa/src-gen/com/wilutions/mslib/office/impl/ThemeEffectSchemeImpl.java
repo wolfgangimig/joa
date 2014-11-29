@@ -20,7 +20,7 @@ public class ThemeEffectSchemeImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(2)  public void Load(String FileName) throws ComException {
+  @DeclDISPID(2)  public void Load(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(2,"Load", DISPATCH_METHOD,null,FileName);
   }

@@ -21,7 +21,7 @@ public class ThemeColorImpl extends Dispatch implements com.wilutions.mslib.offi
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.office.MsoRGBType(als);
   }
-  @DeclDISPID(0)  public void setRGB(com.wilutions.mslib.office.MsoRGBType value) throws ComException {
+  @DeclDISPID(0)  public void setRGB(final com.wilutions.mslib.office.MsoRGBType value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"RGB", DISPATCH_PROPERTYPUT,value.getValue());
   }

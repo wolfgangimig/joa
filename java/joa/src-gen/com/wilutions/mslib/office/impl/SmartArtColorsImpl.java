@@ -20,7 +20,7 @@ public class SmartArtColorsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.SmartArtColor Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.SmartArtColor Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

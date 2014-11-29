@@ -30,13 +30,13 @@ public class _OutlookBarShortcutsImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.OutlookBarShortcut Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.OutlookBarShortcut Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.OutlookBarShortcutImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.OutlookBarShortcut Add(Object Target, String Name, Object Index) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.OutlookBarShortcut Add(final Object Target, final String Name, final Object Index) throws ComException {
     assert(Target != null);
     assert(Name != null);
     assert(Index != null);
@@ -44,7 +44,7 @@ public class _OutlookBarShortcutsImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.OutlookBarShortcutImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

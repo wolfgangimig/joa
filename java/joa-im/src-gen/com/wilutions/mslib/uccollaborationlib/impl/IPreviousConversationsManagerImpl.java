@@ -36,18 +36,18 @@ public class IPreviousConversationsManagerImpl extends Dispatch implements com.w
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743814)  public void setMaxItems(Integer value) throws ComException {
+  @DeclDISPID(1610743814)  public void setMaxItems(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"MaxItems", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetUnreadItems(Object _previousConversationsManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetUnreadItems(final Object _previousConversationsManagerCallback, final Object _state) throws ComException {
     assert(_previousConversationsManagerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743816,"GetUnreadItems", DISPATCH_METHOD,null,_previousConversationsManagerCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetAllItems(Object _previousConversationsManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetAllItems(final Object _previousConversationsManagerCallback, final Object _state) throws ComException {
     assert(_previousConversationsManagerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743817,"GetAllItems", DISPATCH_METHOD,null,_previousConversationsManagerCallback,_state);

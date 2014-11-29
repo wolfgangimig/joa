@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{9585487C-F8A5-CA8E-10C9-694DA54A32E7}")
 public class IWHTMLCheckboxImpl extends Dispatch implements com.wilutions.mslib.msforms.IWHTMLCheckbox {
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IWHTMLCheckboxImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(607)  public void setValue(String value) throws ComException {
+  @DeclDISPID(607)  public void setValue(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(607,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IWHTMLCheckboxImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setChecked(Boolean value) throws ComException {
+  @DeclDISPID(0)  public void setChecked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Checked", DISPATCH_PROPERTYPUT,value);
   }

@@ -66,12 +66,12 @@ public class PowerPointContent extends Dispatch implements IPowerPointContent {
   @DeclDISPID(1610743820)  public void StopPresenting() throws ComException {
     this._dispatchCall(1610743820,"StopPresenting", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743821)  public void SaveAnnotation(String _fileName, ContentSavingFileType _fileType) throws ComException {
+  @DeclDISPID(1610743821)  public void SaveAnnotation(final String _fileName, final ContentSavingFileType _fileType) throws ComException {
     assert(_fileName != null);
     assert(_fileType != null);
     this._dispatchCall(1610743821,"SaveAnnotation", DISPATCH_METHOD,null,_fileName,_fileType.value);
   }
-  @DeclDISPID(1610743822)  public IAsynchronousOperation DownloadFile(String _localPath, Object _callback, Object _state) throws ComException {
+  @DeclDISPID(1610743822)  public IAsynchronousOperation DownloadFile(final String _localPath, final Object _callback, final Object _state) throws ComException {
     assert(_localPath != null);
     assert(_callback != null);
     assert(_state != null);
@@ -79,7 +79,7 @@ public class PowerPointContent extends Dispatch implements IPowerPointContent {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743823)  public Boolean CanInvoke(ShareableContentAction _action, ByRef<HRESULT> _hrReason) throws ComException {
+  @DeclDISPID(1610743823)  public Boolean CanInvoke(final ShareableContentAction _action, final ByRef<HRESULT> _hrReason) throws ComException {
     assert(_action != null);
     assert(_hrReason != null);
     final Object obj = this._dispatchCall(1610743823,"CanInvoke", DISPATCH_METHOD,null,_action.value,_hrReason);

@@ -19,26 +19,26 @@ public class GroupCollection extends Dispatch implements IGroupCollection {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public IGroup getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public IGroup getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IGroupImpl.class);
   }
-  @DeclDISPID(1610743811)  public Boolean TryGetGroup(String _groupName, ByRef<IGroup> _value) throws ComException {
+  @DeclDISPID(1610743811)  public Boolean TryGetGroup(final String _groupName, final ByRef<IGroup> _value) throws ComException {
     assert(_groupName != null);
     assert(_value != null);
     final Object obj = this._dispatchCall(1610743811,"TryGetGroup", DISPATCH_METHOD,null,_groupName,_value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743812)  public IGroupCollection GetGroupsByType(GroupType _groupType) throws ComException {
+  @DeclDISPID(1610743812)  public IGroupCollection GetGroupsByType(final GroupType _groupType) throws ComException {
     assert(_groupType != null);
     final Object obj = this._dispatchCall(1610743812,"GetGroupsByType", DISPATCH_METHOD,null,_groupType.value);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IGroupCollectionImpl.class);
   }
-  @DeclDISPID(1610743813)  public Integer IndexOf(IGroup _group) throws ComException {
+  @DeclDISPID(1610743813)  public Integer IndexOf(final IGroup _group) throws ComException {
     final Object obj = this._dispatchCall(1610743813,"IndexOf", DISPATCH_METHOD,null,(_group!=null?_group:Dispatch.NULL));
     if (obj == null) return null;
     return (Integer)obj;

@@ -20,7 +20,7 @@ public class MsoDebugOptionsImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(5)  public void setOutputToDebugger(Boolean value) throws ComException {
+  @DeclDISPID(5)  public void setOutputToDebugger(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"OutputToDebugger", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class MsoDebugOptionsImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(6)  public void setOutputToFile(Boolean value) throws ComException {
+  @DeclDISPID(6)  public void setOutputToFile(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"OutputToFile", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class MsoDebugOptionsImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(7)  public void setOutputToMessageBox(Boolean value) throws ComException {
+  @DeclDISPID(7)  public void setOutputToMessageBox(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"OutputToMessageBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,11 +47,11 @@ public class MsoDebugOptionsImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(9)  public void AddIgnoredAssertTag(String bstrTagToIgnore) throws ComException {
+  @DeclDISPID(9)  public void AddIgnoredAssertTag(final String bstrTagToIgnore) throws ComException {
     assert(bstrTagToIgnore != null);
     this._dispatchCall(9,"AddIgnoredAssertTag", DISPATCH_METHOD,null,bstrTagToIgnore);
   }
-  @DeclDISPID(10)  public void RemoveIgnoredAssertTag(String bstrTagToIgnore) throws ComException {
+  @DeclDISPID(10)  public void RemoveIgnoredAssertTag(final String bstrTagToIgnore) throws ComException {
     assert(bstrTagToIgnore != null);
     this._dispatchCall(10,"RemoveIgnoredAssertTag", DISPATCH_METHOD,null,bstrTagToIgnore);
   }

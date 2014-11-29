@@ -28,7 +28,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(407)  public void Apply() throws ComException {
     this._dispatchCall(407,"Apply", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61490)  public com.wilutions.mslib.outlook.View Copy(String Name, com.wilutions.mslib.outlook.OlViewSaveOption SaveOption) throws ComException {
+  @DeclDISPID(61490)  public com.wilutions.mslib.outlook.View Copy(final String Name, final com.wilutions.mslib.outlook.OlViewSaveOption SaveOption) throws ComException {
     assert(Name != null);
     assert(SaveOption != null);
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null,Name,SaveOption.value);
@@ -49,7 +49,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64065)  public void setLanguage(String value) throws ComException {
+  @DeclDISPID(64065)  public void setLanguage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64065,"Language", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64064)  public void setLockUserChanges(Boolean value) throws ComException {
+  @DeclDISPID(64064)  public void setLockUserChanges(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64064,"LockUserChanges", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -91,11 +91,11 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64060)  public void setXML(String value) throws ComException {
+  @DeclDISPID(64060)  public void setXML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64060,"XML", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64054)  public void GoToDate(java.util.Date Date) throws ComException {
+  @DeclDISPID(64054)  public void GoToDate(final java.util.Date Date) throws ComException {
     assert(Date != null);
     this._dispatchCall(64054,"GoToDate", DISPATCH_METHOD,null,Date);
   }
@@ -104,7 +104,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(409)  public void setFilter(String value) throws ComException {
+  @DeclDISPID(409)  public void setFilter(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(409,"Filter", DISPATCH_PROPERTYPUT,value);
   }
@@ -113,7 +113,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8449)  public void setStartField(String value) throws ComException {
+  @DeclDISPID(8449)  public void setStartField(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8449,"StartField", DISPATCH_PROPERTYPUT,value);
   }
@@ -122,7 +122,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64379)  public void setEndField(String value) throws ComException {
+  @DeclDISPID(64379)  public void setEndField(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64379,"EndField", DISPATCH_PROPERTYPUT,value);
   }
@@ -131,7 +131,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlCalendarViewMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(64375)  public void setCalendarViewMode(com.wilutions.mslib.outlook.OlCalendarViewMode value) throws ComException {
+  @DeclDISPID(64375)  public void setCalendarViewMode(final com.wilutions.mslib.outlook.OlCalendarViewMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(64375,"CalendarViewMode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -140,7 +140,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlDayWeekTimeScale.valueOf((Integer)obj);
   }
-  @DeclDISPID(64365)  public void setDayWeekTimeScale(com.wilutions.mslib.outlook.OlDayWeekTimeScale value) throws ComException {
+  @DeclDISPID(64365)  public void setDayWeekTimeScale(final com.wilutions.mslib.outlook.OlDayWeekTimeScale value) throws ComException {
     assert(value != null);
     this._dispatchCall(64365,"DayWeekTimeScale", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -149,7 +149,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64369)  public void setMonthShowEndTime(Boolean value) throws ComException {
+  @DeclDISPID(64369)  public void setMonthShowEndTime(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64369,"MonthShowEndTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -158,7 +158,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64371)  public void setBoldDatesWithItems(Boolean value) throws ComException {
+  @DeclDISPID(64371)  public void setBoldDatesWithItems(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64371,"BoldDatesWithItems", DISPATCH_PROPERTYPUT,value);
   }
@@ -173,7 +173,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64386)  public void setDaysInMultiDayMode(Integer value) throws ComException {
+  @DeclDISPID(64386)  public void setDaysInMultiDayMode(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64386,"DaysInMultiDayMode", DISPATCH_PROPERTYPUT,value);
   }
@@ -187,7 +187,7 @@ public class _CalendarViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64529)  public void setBoldSubjects(Boolean value) throws ComException {
+  @DeclDISPID(64529)  public void setBoldSubjects(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64529,"BoldSubjects", DISPATCH_PROPERTYPUT,value);
   }

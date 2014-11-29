@@ -20,7 +20,7 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(6)  public void Refresh() throws ComException {
     this._dispatchCall(6,"Refresh", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(7)  public void CreateNew(Object URL, Object Name) throws ComException {
+  @DeclDISPID(7)  public void CreateNew(final Object URL, final Object Name) throws ComException {
     assert(URL != null);
     assert(Name != null);
     this._dispatchCall(7,"CreateNew", DISPATCH_METHOD,null,URL,Name);
@@ -85,7 +85,7 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(13)  public void setSourceURL(String value) throws ComException {
+  @DeclDISPID(13)  public void setSourceURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(13,"SourceURL", DISPATCH_PROPERTYPUT,value);
   }

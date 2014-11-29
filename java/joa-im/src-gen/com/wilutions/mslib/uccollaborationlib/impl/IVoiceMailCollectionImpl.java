@@ -10,7 +10,7 @@ public class IVoiceMailCollectionImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IVoiceMail getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IVoiceMail getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;

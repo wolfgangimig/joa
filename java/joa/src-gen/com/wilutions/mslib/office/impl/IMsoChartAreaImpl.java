@@ -50,7 +50,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setShadow(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setShadow(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Shadow", DISPATCH_PROPERTYPUT,value);
   }
@@ -64,7 +64,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(123)  public void setHeight(Double value) throws ComException {
+  @DeclDISPID(123)  public void setHeight(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(123,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -83,7 +83,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(127)  public void setLeft(Double value) throws ComException {
+  @DeclDISPID(127)  public void setLeft(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(127,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -92,7 +92,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(126)  public void setTop(Double value) throws ComException {
+  @DeclDISPID(126)  public void setTop(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(126,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -101,7 +101,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(122)  public void setWidth(Double value) throws ComException {
+  @DeclDISPID(122)  public void setWidth(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(122,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -110,7 +110,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1525)  public void setAutoScaleFont(Object value) throws ComException {
+  @DeclDISPID(1525)  public void setAutoScaleFont(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1525,"AutoScaleFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -124,7 +124,7 @@ public class IMsoChartAreaImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743832)  public void setRoundedCorners(Boolean value) throws ComException {
+  @DeclDISPID(1610743832)  public void setRoundedCorners(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743832,"RoundedCorners", DISPATCH_PROPERTYPUT,value);
   }

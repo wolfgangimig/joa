@@ -30,7 +30,7 @@ public class OutlookBarGroupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class OutlookBarGroupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlOutlookBarViewType.valueOf((Integer)obj);
   }
-  @DeclDISPID(8451)  public void setViewType(com.wilutions.mslib.outlook.OlOutlookBarViewType value) throws ComException {
+  @DeclDISPID(8451)  public void setViewType(final com.wilutions.mslib.outlook.OlOutlookBarViewType value) throws ComException {
     assert(value != null);
     this._dispatchCall(8451,"ViewType", DISPATCH_PROPERTYPUT,value.value);
   }

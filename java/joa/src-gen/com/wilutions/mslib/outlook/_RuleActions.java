@@ -14,7 +14,7 @@ public interface _RuleActions extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public _RuleAction Item(Integer Index) throws ComException;
+  @DeclDISPID(81)  public _RuleAction Item(final Integer Index) throws ComException;
   @DeclDISPID(64274)  public MoveOrCopyRuleAction getCopyToFolder() throws ComException;
   @DeclDISPID(64275)  public RuleAction getDeletePermanently() throws ComException;
   @DeclDISPID(61509)  public RuleAction getDelete() throws ComException;

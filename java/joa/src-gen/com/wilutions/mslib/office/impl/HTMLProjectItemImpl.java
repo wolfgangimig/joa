@@ -25,15 +25,15 @@ public class HTMLProjectItemImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(5)  public void LoadFromFile(String FileName) throws ComException {
+  @DeclDISPID(5)  public void LoadFromFile(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(5,"LoadFromFile", DISPATCH_METHOD,null,FileName);
   }
-  @DeclDISPID(6)  public void Open(com.wilutions.mslib.office.MsoHTMLProjectOpen OpenKind) throws ComException {
+  @DeclDISPID(6)  public void Open(final com.wilutions.mslib.office.MsoHTMLProjectOpen OpenKind) throws ComException {
     assert(OpenKind != null);
     this._dispatchCall(6,"Open", DISPATCH_METHOD,null,OpenKind.value);
   }
-  @DeclDISPID(7)  public void SaveCopyAs(String FileName) throws ComException {
+  @DeclDISPID(7)  public void SaveCopyAs(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(7,"SaveCopyAs", DISPATCH_METHOD,null,FileName);
   }
@@ -42,7 +42,7 @@ public class HTMLProjectItemImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8)  public void setText(String value) throws ComException {
+  @DeclDISPID(8)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"Text", DISPATCH_PROPERTYPUT,value);
   }

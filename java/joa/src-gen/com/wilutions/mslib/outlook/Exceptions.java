@@ -14,5 +14,5 @@ public interface Exceptions extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Exception Item(Object Index) throws ComException;
+  @DeclDISPID(81)  public Exception Item(final Object Index) throws ComException;
 }

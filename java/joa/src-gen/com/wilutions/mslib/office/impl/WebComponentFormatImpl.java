@@ -20,7 +20,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setURL(String value) throws ComException {
+  @DeclDISPID(3)  public void setURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"URL", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setHTML(String value) throws ComException {
+  @DeclDISPID(4)  public void setHTML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"HTML", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(5)  public void setName(String value) throws ComException {
+  @DeclDISPID(5)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,7 +47,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(6)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(6)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -56,7 +56,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(7)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(7)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -65,7 +65,7 @@ public class WebComponentFormatImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8)  public void setPreviewGraphic(String value) throws ComException {
+  @DeclDISPID(8)  public void setPreviewGraphic(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"PreviewGraphic", DISPATCH_PROPERTYPUT,value);
   }

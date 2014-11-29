@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface ControlEvents extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-2147384830)  public void onEnter() throws ComException;
-  @DeclDISPID(-2147384829)  public void onExit(ReturnBoolean Cancel) throws ComException;
-  @DeclDISPID(-2147384831)  public void onBeforeUpdate(ReturnBoolean Cancel) throws ComException;
+  @DeclDISPID(-2147384829)  public void onExit(final ReturnBoolean Cancel) throws ComException;
+  @DeclDISPID(-2147384831)  public void onBeforeUpdate(final ReturnBoolean Cancel) throws ComException;
   @DeclDISPID(-2147384832)  public void onAfterUpdate() throws ComException;
 }

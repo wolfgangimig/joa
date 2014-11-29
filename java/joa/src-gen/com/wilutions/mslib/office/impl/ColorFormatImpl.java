@@ -26,7 +26,7 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.office.MsoRGBType(als);
   }
-  @DeclDISPID(0)  public void setRGB(com.wilutions.mslib.office.MsoRGBType value) throws ComException {
+  @DeclDISPID(0)  public void setRGB(final com.wilutions.mslib.office.MsoRGBType value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"RGB", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -35,7 +35,7 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(100)  public void setSchemeColor(Integer value) throws ComException {
+  @DeclDISPID(100)  public void setSchemeColor(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"SchemeColor", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(103)  public void setTintAndShade(Float value) throws ComException {
+  @DeclDISPID(103)  public void setTintAndShade(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"TintAndShade", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoThemeColorIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(104)  public void setObjectThemeColor(com.wilutions.mslib.office.MsoThemeColorIndex value) throws ComException {
+  @DeclDISPID(104)  public void setObjectThemeColor(final com.wilutions.mslib.office.MsoThemeColorIndex value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"ObjectThemeColor", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -67,7 +67,7 @@ public class ColorFormatImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(105)  public void setBrightness(Float value) throws ComException {
+  @DeclDISPID(105)  public void setBrightness(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"Brightness", DISPATCH_PROPERTYPUT,value);
   }

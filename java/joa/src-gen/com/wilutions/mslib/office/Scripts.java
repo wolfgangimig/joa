@@ -14,7 +14,7 @@ public interface Scripts extends IDispatch {
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(0)  public Script Item(Object Index) throws ComException;
-  @DeclDISPID(1610809348)  public Script Add(IDispatch Anchor, MsoScriptLocation Location, MsoScriptLanguage Language, String Id, String Extended, String ScriptText) throws ComException;
+  @DeclDISPID(0)  public Script Item(final Object Index) throws ComException;
+  @DeclDISPID(1610809348)  public Script Add(final IDispatch Anchor, final MsoScriptLocation Location, final MsoScriptLanguage Language, final String Id, final String Extended, final String ScriptText) throws ComException;
   @DeclDISPID(1610809349)  public void Delete() throws ComException;
 }

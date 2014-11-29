@@ -14,7 +14,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -24,7 +24,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -33,7 +33,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     if (obj == null) return null;
     return OlBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-502)  public void setBackStyle(OlBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final OlBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -42,7 +42,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -61,7 +61,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public OlMousePointer getMousePointer() throws ComException {
@@ -69,7 +69,7 @@ public class OlkCategory extends Dispatch implements _OlkCategory {
     if (obj == null) return null;
     return OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }

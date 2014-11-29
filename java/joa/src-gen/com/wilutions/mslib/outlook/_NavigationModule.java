@@ -16,7 +16,7 @@ public interface _NavigationModule extends IDispatch {
   @DeclDISPID(64441)  public OlNavigationModuleType getNavigationModuleType() throws ComException;
   @DeclDISPID(8450)  public String getName() throws ComException;
   @DeclDISPID(64442)  public Integer getPosition() throws ComException;
-  @DeclDISPID(64442)  public void setPosition(Integer value) throws ComException;
+  @DeclDISPID(64442)  public void setPosition(final Integer value) throws ComException;
   @DeclDISPID(64443)  public Boolean getVisible() throws ComException;
-  @DeclDISPID(64443)  public void setVisible(Boolean value) throws ComException;
+  @DeclDISPID(64443)  public void setVisible(final Boolean value) throws ComException;
 }

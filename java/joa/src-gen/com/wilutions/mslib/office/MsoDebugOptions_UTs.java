@@ -11,10 +11,10 @@ public interface MsoDebugOptions_UTs extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
-  @DeclDISPID(0)  public MsoDebugOptions_UT getItem(Integer Index) throws ComException;
+  @DeclDISPID(0)  public MsoDebugOptions_UT getItem(final Integer Index) throws ComException;
   @DeclDISPID(1)  public Integer getCount() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(2)  public MsoDebugOptions_UTs GetUnitTestsInCollection(String bstrCollectionName) throws ComException;
-  @DeclDISPID(3)  public MsoDebugOptions_UT GetUnitTest(String bstrCollectionName, String bstrUnitTestName) throws ComException;
-  @DeclDISPID(4)  public MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(String bstrCollectionName, String bstrUnitTestNameFilter) throws ComException;
+  @DeclDISPID(2)  public MsoDebugOptions_UTs GetUnitTestsInCollection(final String bstrCollectionName) throws ComException;
+  @DeclDISPID(3)  public MsoDebugOptions_UT GetUnitTest(final String bstrCollectionName, final String bstrUnitTestName) throws ComException;
+  @DeclDISPID(4)  public MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(final String bstrCollectionName, final String bstrUnitTestNameFilter) throws ComException;
 }

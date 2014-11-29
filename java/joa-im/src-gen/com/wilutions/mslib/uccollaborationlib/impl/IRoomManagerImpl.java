@@ -15,7 +15,7 @@ public class IRoomManagerImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IRoom[])obj;
   }
-  @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation QueryRooms(String _keyword, com.wilutions.mslib.uccollaborationlib.RoomSearchModeType _searchType, Object _roomManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation QueryRooms(final String _keyword, final com.wilutions.mslib.uccollaborationlib.RoomSearchModeType _searchType, final Object _roomManagerCallback, final Object _state) throws ComException {
     assert(_keyword != null);
     assert(_searchType != null);
     assert(_roomManagerCallback != null);
@@ -24,7 +24,7 @@ public class IRoomManagerImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743811)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation QueryRoomByUri(String _roomUri, Object _roomManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743811)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation QueryRoomByUri(final String _roomUri, final Object _roomManagerCallback, final Object _state) throws ComException {
     assert(_roomUri != null);
     assert(_roomManagerCallback != null);
     assert(_state != null);
@@ -32,7 +32,7 @@ public class IRoomManagerImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743812)  public Boolean TryGetRoomByUri(String _roomUri, ByRef<com.wilutions.mslib.uccollaborationlib.IRoom> _room) throws ComException {
+  @DeclDISPID(1610743812)  public Boolean TryGetRoomByUri(final String _roomUri, final ByRef<com.wilutions.mslib.uccollaborationlib.IRoom> _room) throws ComException {
     assert(_roomUri != null);
     assert(_room != null);
     final Object obj = this._dispatchCall(1610743812,"TryGetRoomByUri", DISPATCH_METHOD,null,_roomUri,_room);

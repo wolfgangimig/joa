@@ -35,7 +35,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(123)  public void setHeight(Double value) throws ComException {
+  @DeclDISPID(123)  public void setHeight(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(123,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -54,7 +54,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(127)  public void setLeft(Double value) throws ComException {
+  @DeclDISPID(127)  public void setLeft(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(127,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -63,7 +63,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(126)  public void setTop(Double value) throws ComException {
+  @DeclDISPID(126)  public void setTop(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(126,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -72,7 +72,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(122)  public void setWidth(Double value) throws ComException {
+  @DeclDISPID(122)  public void setWidth(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(122,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -81,7 +81,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1667)  public void setInsideLeft(Double value) throws ComException {
+  @DeclDISPID(1667)  public void setInsideLeft(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1667,"InsideLeft", DISPATCH_PROPERTYPUT,value);
   }
@@ -90,7 +90,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1668)  public void setInsideTop(Double value) throws ComException {
+  @DeclDISPID(1668)  public void setInsideTop(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1668,"InsideTop", DISPATCH_PROPERTYPUT,value);
   }
@@ -99,7 +99,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1669)  public void setInsideWidth(Double value) throws ComException {
+  @DeclDISPID(1669)  public void setInsideWidth(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1669,"InsideWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -108,7 +108,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1670)  public void setInsideHeight(Double value) throws ComException {
+  @DeclDISPID(1670)  public void setInsideHeight(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1670,"InsideHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -117,7 +117,7 @@ public class IMsoPlotAreaImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlChartElementPosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(1671)  public void setPosition(com.wilutions.mslib.office.XlChartElementPosition value) throws ComException {
+  @DeclDISPID(1671)  public void setPosition(final com.wilutions.mslib.office.XlChartElementPosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(1671,"Position", DISPATCH_PROPERTYPUT,value.value);
   }

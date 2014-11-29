@@ -25,7 +25,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
-  @DeclDISPID(100)  public void setBackColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
+  @DeclDISPID(100)  public void setBackColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.MsoArrowheadLength getBeginArrowheadLength() throws ComException {
@@ -33,7 +33,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoArrowheadLength.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setBeginArrowheadLength(com.wilutions.mslib.office.MsoArrowheadLength value) throws ComException {
+  @DeclDISPID(101)  public void setBeginArrowheadLength(final com.wilutions.mslib.office.MsoArrowheadLength value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"BeginArrowheadLength", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -42,7 +42,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoArrowheadStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(102)  public void setBeginArrowheadStyle(com.wilutions.mslib.office.MsoArrowheadStyle value) throws ComException {
+  @DeclDISPID(102)  public void setBeginArrowheadStyle(final com.wilutions.mslib.office.MsoArrowheadStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"BeginArrowheadStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -51,7 +51,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoArrowheadWidth.valueOf((Integer)obj);
   }
-  @DeclDISPID(103)  public void setBeginArrowheadWidth(com.wilutions.mslib.office.MsoArrowheadWidth value) throws ComException {
+  @DeclDISPID(103)  public void setBeginArrowheadWidth(final com.wilutions.mslib.office.MsoArrowheadWidth value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"BeginArrowheadWidth", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -60,7 +60,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoLineDashStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(104)  public void setDashStyle(com.wilutions.mslib.office.MsoLineDashStyle value) throws ComException {
+  @DeclDISPID(104)  public void setDashStyle(final com.wilutions.mslib.office.MsoLineDashStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"DashStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -69,7 +69,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoArrowheadLength.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setEndArrowheadLength(com.wilutions.mslib.office.MsoArrowheadLength value) throws ComException {
+  @DeclDISPID(105)  public void setEndArrowheadLength(final com.wilutions.mslib.office.MsoArrowheadLength value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"EndArrowheadLength", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -78,7 +78,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoArrowheadStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(106)  public void setEndArrowheadStyle(com.wilutions.mslib.office.MsoArrowheadStyle value) throws ComException {
+  @DeclDISPID(106)  public void setEndArrowheadStyle(final com.wilutions.mslib.office.MsoArrowheadStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"EndArrowheadStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -87,7 +87,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoArrowheadWidth.valueOf((Integer)obj);
   }
-  @DeclDISPID(107)  public void setEndArrowheadWidth(com.wilutions.mslib.office.MsoArrowheadWidth value) throws ComException {
+  @DeclDISPID(107)  public void setEndArrowheadWidth(final com.wilutions.mslib.office.MsoArrowheadWidth value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"EndArrowheadWidth", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -96,7 +96,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
-  @DeclDISPID(108)  public void setForeColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
+  @DeclDISPID(108)  public void setForeColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(108,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(109)  public com.wilutions.mslib.office.MsoPatternType getPattern() throws ComException {
@@ -104,7 +104,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPatternType.valueOf((Integer)obj);
   }
-  @DeclDISPID(109)  public void setPattern(com.wilutions.mslib.office.MsoPatternType value) throws ComException {
+  @DeclDISPID(109)  public void setPattern(final com.wilutions.mslib.office.MsoPatternType value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"Pattern", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -113,7 +113,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoLineStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(110)  public void setStyle(com.wilutions.mslib.office.MsoLineStyle value) throws ComException {
+  @DeclDISPID(110)  public void setStyle(final com.wilutions.mslib.office.MsoLineStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(110,"Style", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -122,7 +122,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(111)  public void setTransparency(Float value) throws ComException {
+  @DeclDISPID(111)  public void setTransparency(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(111,"Transparency", DISPATCH_PROPERTYPUT,value);
   }
@@ -131,7 +131,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(112)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(112)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(112,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -140,7 +140,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(113)  public void setWeight(Float value) throws ComException {
+  @DeclDISPID(113)  public void setWeight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(113,"Weight", DISPATCH_PROPERTYPUT,value);
   }
@@ -149,7 +149,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(114)  public void setInsetPen(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(114)  public void setInsetPen(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(114,"InsetPen", DISPATCH_PROPERTYPUT,value.value);
   }

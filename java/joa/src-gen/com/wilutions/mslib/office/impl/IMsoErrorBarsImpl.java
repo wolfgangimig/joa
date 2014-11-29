@@ -40,7 +40,7 @@ public class IMsoErrorBarsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlEndStyleCap.valueOf((Integer)obj);
   }
-  @DeclDISPID(1124)  public void setEndStyle(com.wilutions.mslib.office.XlEndStyleCap RHS) throws ComException {
+  @DeclDISPID(1124)  public void setEndStyle(final com.wilutions.mslib.office.XlEndStyleCap RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1124,"EndStyle", DISPATCH_PROPERTYPUT,RHS.value);
   }

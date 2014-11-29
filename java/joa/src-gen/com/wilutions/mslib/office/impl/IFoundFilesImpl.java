@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A53-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IFoundFilesImpl extends Dispatch implements com.wilutions.mslib.office.IFoundFiles {
-  @DeclDISPID(0)  public String getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public String getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

@@ -9,28 +9,28 @@ import com.wilutions.com.*;
 @CoClass(guid="{6FB3B002-987C-460C-9E9F-B45F2ED3B1E9}")
 public class Participant2 extends Dispatch implements IParticipant2 {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(268435457)  public IAsynchronousOperation PinVideo(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(268435457)  public IAsynchronousOperation PinVideo(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(268435457,"PinVideo", DISPATCH_METHOD,null,_callback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(268435458)  public IAsynchronousOperation UnPinVideo(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(268435458)  public IAsynchronousOperation UnPinVideo(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(268435458,"UnPinVideo", DISPATCH_METHOD,null,_callback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(268435459)  public IAsynchronousOperation LockVideo(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(268435459)  public IAsynchronousOperation LockVideo(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(268435459,"LockVideo", DISPATCH_METHOD,null,_callback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(268435460)  public IAsynchronousOperation UnLockVideo(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(268435460)  public IAsynchronousOperation UnLockVideo(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(268435460,"UnLockVideo", DISPATCH_METHOD,null,_callback,_state);

@@ -10,7 +10,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -19,7 +19,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(218)  public void setAutoWordSelect(Boolean value) throws ComException {
+  @DeclDISPID(218)  public void setAutoWordSelect(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(218,"AutoWordSelect", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -38,7 +38,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-502)  public void setBackStyle(com.wilutions.mslib.outlook.OlBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final com.wilutions.mslib.outlook.OlBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -47,7 +47,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -56,7 +56,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlEnterFieldBehavior.valueOf((Integer)obj);
   }
-  @DeclDISPID(224)  public void setEnterFieldBehavior(com.wilutions.mslib.outlook.OlEnterFieldBehavior value) throws ComException {
+  @DeclDISPID(224)  public void setEnterFieldBehavior(final com.wilutions.mslib.outlook.OlEnterFieldBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(224,"EnterFieldBehavior", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -71,7 +71,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -80,7 +80,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(207)  public void setHideSelection(Boolean value) throws ComException {
+  @DeclDISPID(207)  public void setHideSelection(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(207,"HideSelection", DISPATCH_PROPERTYPUT,value);
   }
@@ -89,7 +89,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -98,7 +98,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public com.wilutions.mslib.outlook.OlMousePointer getMousePointer() throws ComException {
@@ -106,7 +106,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.outlook.OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.outlook.OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -115,7 +115,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(64468)  public void setReferenceTime(java.util.Date value) throws ComException {
+  @DeclDISPID(64468)  public void setReferenceTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(64468,"ReferenceTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -124,7 +124,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTimeStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(64469)  public void setStyle(com.wilutions.mslib.outlook.OlTimeStyle value) throws ComException {
+  @DeclDISPID(64469)  public void setStyle(final com.wilutions.mslib.outlook.OlTimeStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(64469,"Style", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -133,7 +133,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(64466)  public void setTime(java.util.Date value) throws ComException {
+  @DeclDISPID(64466)  public void setTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(64466,"Time", DISPATCH_PROPERTYPUT,value);
   }
@@ -142,7 +142,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-517)  public void setText(String value) throws ComException {
+  @DeclDISPID(-517)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-517,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -151,7 +151,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(10004)  public void setTextAlign(com.wilutions.mslib.outlook.OlTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final com.wilutions.mslib.outlook.OlTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -160,7 +160,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -169,7 +169,7 @@ public class _OlkTimeControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(64475)  public void setIntervalTime(java.util.Date value) throws ComException {
+  @DeclDISPID(64475)  public void setIntervalTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(64475,"IntervalTime", DISPATCH_PROPERTYPUT,value);
   }

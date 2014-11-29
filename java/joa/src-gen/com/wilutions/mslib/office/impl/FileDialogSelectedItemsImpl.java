@@ -30,7 +30,7 @@ public class FileDialogSelectedItemsImpl extends Dispatch implements com.wilutio
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public String Item(Integer Index) throws ComException {
+  @DeclDISPID(0)  public String Item(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

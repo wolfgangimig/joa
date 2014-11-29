@@ -14,7 +14,7 @@ public interface _NavigationFolders extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public _NavigationFolder Item(Object Index) throws ComException;
-  @DeclDISPID(64450)  public NavigationFolder Add(MAPIFolder Folder) throws ComException;
-  @DeclDISPID(64451)  public void Remove(NavigationFolder RemovableFolder) throws ComException;
+  @DeclDISPID(81)  public _NavigationFolder Item(final Object Index) throws ComException;
+  @DeclDISPID(64450)  public NavigationFolder Add(final MAPIFolder Folder) throws ComException;
+  @DeclDISPID(64451)  public void Remove(final NavigationFolder RemovableFolder) throws ComException;
 }

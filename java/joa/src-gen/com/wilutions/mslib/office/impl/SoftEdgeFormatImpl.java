@@ -20,7 +20,7 @@ public class SoftEdgeFormatImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoSoftEdgeType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1)  public void setType(com.wilutions.mslib.office.MsoSoftEdgeType value) throws ComException {
+  @DeclDISPID(1)  public void setType(final com.wilutions.mslib.office.MsoSoftEdgeType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -29,7 +29,7 @@ public class SoftEdgeFormatImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(2)  public void setRadius(Float value) throws ComException {
+  @DeclDISPID(2)  public void setRadius(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Radius", DISPATCH_PROPERTYPUT,value);
   }

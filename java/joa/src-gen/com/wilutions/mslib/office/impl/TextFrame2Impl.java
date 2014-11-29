@@ -25,7 +25,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(100)  public void setMarginBottom(Float value) throws ComException {
+  @DeclDISPID(100)  public void setMarginBottom(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"MarginBottom", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(101)  public void setMarginLeft(Float value) throws ComException {
+  @DeclDISPID(101)  public void setMarginLeft(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"MarginLeft", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(102)  public void setMarginRight(Float value) throws ComException {
+  @DeclDISPID(102)  public void setMarginRight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"MarginRight", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(103)  public void setMarginTop(Float value) throws ComException {
+  @DeclDISPID(103)  public void setMarginTop(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"MarginTop", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextOrientation.valueOf((Integer)obj);
   }
-  @DeclDISPID(104)  public void setOrientation(com.wilutions.mslib.office.MsoTextOrientation value) throws ComException {
+  @DeclDISPID(104)  public void setOrientation(final com.wilutions.mslib.office.MsoTextOrientation value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"Orientation", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -70,7 +70,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoHorizontalAnchor.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setHorizontalAnchor(com.wilutions.mslib.office.MsoHorizontalAnchor value) throws ComException {
+  @DeclDISPID(105)  public void setHorizontalAnchor(final com.wilutions.mslib.office.MsoHorizontalAnchor value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"HorizontalAnchor", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -79,7 +79,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoVerticalAnchor.valueOf((Integer)obj);
   }
-  @DeclDISPID(106)  public void setVerticalAnchor(com.wilutions.mslib.office.MsoVerticalAnchor value) throws ComException {
+  @DeclDISPID(106)  public void setVerticalAnchor(final com.wilutions.mslib.office.MsoVerticalAnchor value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"VerticalAnchor", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -88,7 +88,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPathFormat.valueOf((Integer)obj);
   }
-  @DeclDISPID(107)  public void setPathFormat(com.wilutions.mslib.office.MsoPathFormat value) throws ComException {
+  @DeclDISPID(107)  public void setPathFormat(final com.wilutions.mslib.office.MsoPathFormat value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"PathFormat", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -97,7 +97,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoWarpFormat.valueOf((Integer)obj);
   }
-  @DeclDISPID(108)  public void setWarpFormat(com.wilutions.mslib.office.MsoWarpFormat value) throws ComException {
+  @DeclDISPID(108)  public void setWarpFormat(final com.wilutions.mslib.office.MsoWarpFormat value) throws ComException {
     assert(value != null);
     this._dispatchCall(108,"WarpFormat", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -106,7 +106,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetTextEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(109)  public void setWordArtformat(com.wilutions.mslib.office.MsoPresetTextEffect value) throws ComException {
+  @DeclDISPID(109)  public void setWordArtformat(final com.wilutions.mslib.office.MsoPresetTextEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"WordArtformat", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -115,7 +115,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(110)  public void setWordWrap(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(110)  public void setWordWrap(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(110,"WordWrap", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -124,7 +124,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoAutoSize.valueOf((Integer)obj);
   }
-  @DeclDISPID(111)  public void setAutoSize(com.wilutions.mslib.office.MsoAutoSize value) throws ComException {
+  @DeclDISPID(111)  public void setAutoSize(final com.wilutions.mslib.office.MsoAutoSize value) throws ComException {
     assert(value != null);
     this._dispatchCall(111,"AutoSize", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -161,7 +161,7 @@ public class TextFrame2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(118)  public void setNoTextRotation(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(118)  public void setNoTextRotation(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(118,"NoTextRotation", DISPATCH_PROPERTYPUT,value.value);
   }

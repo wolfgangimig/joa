@@ -30,7 +30,7 @@ public class UserPropertyImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(103)  public void setFormula(String value) throws ComException {
+  @DeclDISPID(103)  public void setFormula(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Formula", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class UserPropertyImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(104)  public void setValidationFormula(String value) throws ComException {
+  @DeclDISPID(104)  public void setValidationFormula(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"ValidationFormula", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class UserPropertyImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(105)  public void setValidationText(String value) throws ComException {
+  @DeclDISPID(105)  public void setValidationText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"ValidationText", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class UserPropertyImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }

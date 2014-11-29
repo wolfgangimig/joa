@@ -13,14 +13,14 @@ public interface Script extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public String getExtended() throws ComException;
-  @DeclDISPID(1610809345)  public void setExtended(String value) throws ComException;
+  @DeclDISPID(1610809345)  public void setExtended(final String value) throws ComException;
   @DeclDISPID(1610809347)  public String getId() throws ComException;
-  @DeclDISPID(1610809347)  public void setId(String value) throws ComException;
+  @DeclDISPID(1610809347)  public void setId(final String value) throws ComException;
   @DeclDISPID(1610809349)  public MsoScriptLanguage getLanguage() throws ComException;
-  @DeclDISPID(1610809349)  public void setLanguage(MsoScriptLanguage value) throws ComException;
+  @DeclDISPID(1610809349)  public void setLanguage(final MsoScriptLanguage value) throws ComException;
   @DeclDISPID(1610809351)  public MsoScriptLocation getLocation() throws ComException;
   @DeclDISPID(1610809352)  public void Delete() throws ComException;
   @DeclDISPID(1610809353)  public IDispatch getShape() throws ComException;
   @DeclDISPID(0)  public String getScriptText() throws ComException;
-  @DeclDISPID(0)  public void setScriptText(String value) throws ComException;
+  @DeclDISPID(0)  public void setScriptText(final String value) throws ComException;
 }

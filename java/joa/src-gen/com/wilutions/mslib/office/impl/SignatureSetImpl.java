@@ -25,7 +25,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.Signature getItem(Integer iSig) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.Signature getItem(final Integer iSig) throws ComException {
     assert(iSig != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,iSig);
     if (obj == null) return null;
@@ -36,7 +36,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809350)  public com.wilutions.mslib.office.Signature AddNonVisibleSignature(Object varSigProv) throws ComException {
+  @DeclDISPID(1610809350)  public com.wilutions.mslib.office.Signature AddNonVisibleSignature(final Object varSigProv) throws ComException {
     assert(varSigProv != null);
     final Object obj = this._dispatchCall(1610809350,"AddNonVisibleSignature", DISPATCH_METHOD,null,varSigProv);
     if (obj == null) return null;
@@ -47,7 +47,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809352)  public com.wilutions.mslib.office.Signature AddSignatureLine(Object varSigProv) throws ComException {
+  @DeclDISPID(1610809352)  public com.wilutions.mslib.office.Signature AddSignatureLine(final Object varSigProv) throws ComException {
     assert(varSigProv != null);
     final Object obj = this._dispatchCall(1610809352,"AddSignatureLine", DISPATCH_METHOD,null,varSigProv);
     if (obj == null) return null;
@@ -58,11 +58,11 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoSignatureSubset.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809353)  public void setSubset(com.wilutions.mslib.office.MsoSignatureSubset value) throws ComException {
+  @DeclDISPID(1610809353)  public void setSubset(final com.wilutions.mslib.office.MsoSignatureSubset value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809353,"Subset", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(1610809355)  public void setShowSignaturesPane(Boolean value) throws ComException {
+  @DeclDISPID(1610809355)  public void setShowSignaturesPane(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809355,"ShowSignaturesPane", DISPATCH_PROPERTYPUT,value);
   }

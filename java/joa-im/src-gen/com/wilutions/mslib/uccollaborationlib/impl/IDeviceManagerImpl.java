@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{52E342B7-E7AD-9EEB-35B9-28ADE16351D2}")
 public class IDeviceManagerImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.IDeviceManager {
-  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation PlayAudioFile(String _audioFileName, com.wilutions.mslib.uccollaborationlib.AudioPlayBackModes _playbackDevices, Boolean _loop, Object _deviceManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation PlayAudioFile(final String _audioFileName, final com.wilutions.mslib.uccollaborationlib.AudioPlayBackModes _playbackDevices, final Boolean _loop, final Object _deviceManagerCallback, final Object _state) throws ComException {
     assert(_audioFileName != null);
     assert(_playbackDevices != null);
     assert(_loop != null);
@@ -33,7 +33,7 @@ public class IDeviceManagerImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAudioDeviceImpl.class);
   }
-  @DeclDISPID(1610743812)  public void setActiveAudioDevice(com.wilutions.mslib.uccollaborationlib.IAudioDevice value) throws ComException {
+  @DeclDISPID(1610743812)  public void setActiveAudioDevice(final com.wilutions.mslib.uccollaborationlib.IAudioDevice value) throws ComException {
     this._dispatchCall(1610743812,"ActiveAudioDevice", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IVideoDevice getActiveVideoDevice() throws ComException {
@@ -41,7 +41,7 @@ public class IDeviceManagerImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IVideoDeviceImpl.class);
   }
-  @DeclDISPID(1610743814)  public void setActiveVideoDevice(com.wilutions.mslib.uccollaborationlib.IVideoDevice value) throws ComException {
+  @DeclDISPID(1610743814)  public void setActiveVideoDevice(final com.wilutions.mslib.uccollaborationlib.IVideoDevice value) throws ComException {
     this._dispatchCall(1610743814,"ActiveVideoDevice", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public IDeviceManagerImpl(String progId) throws ComException {

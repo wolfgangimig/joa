@@ -19,32 +19,32 @@ public class ContactSettingDictionary extends Dispatch implements IContactSettin
     if (obj == null) return null;
     return (Object[])obj;
   }
-  @DeclDISPID(1610743810)  public Boolean TryGetValue(ContactSetting _key, ByRef<Object> _value) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean TryGetValue(final ContactSetting _key, final ByRef<Object> _value) throws ComException {
     assert(_key != null);
     assert(_value != null);
     final Object obj = this._dispatchCall(1610743810,"TryGetValue", DISPATCH_METHOD,null,_key.value,_value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(0)  public Object getItem(ContactSetting _key) throws ComException {
+  @DeclDISPID(0)  public Object getItem(final ContactSetting _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_key.value);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743812)  public ContactSetting GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743812)  public ContactSetting GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743812,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return ContactSetting.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743813)  public Object GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743813)  public Object GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743813,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743814)  public Boolean ContainsKey(ContactSetting _key) throws ComException {
+  @DeclDISPID(1610743814)  public Boolean ContainsKey(final ContactSetting _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(1610743814,"ContainsKey", DISPATCH_METHOD,null,_key.value);
     if (obj == null) return null;

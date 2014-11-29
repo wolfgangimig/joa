@@ -15,7 +15,7 @@ public class IDistributionGroupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743810)  public Boolean TryGetContact(String _uri, ByRef<com.wilutions.mslib.uccollaborationlib.IContact> _value) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean TryGetContact(final String _uri, final ByRef<com.wilutions.mslib.uccollaborationlib.IContact> _value) throws ComException {
     assert(_uri != null);
     assert(_value != null);
     final Object obj = this._dispatchCall(1610743810,"TryGetContact", DISPATCH_METHOD,null,_uri,_value);
@@ -37,14 +37,14 @@ public class IDistributionGroupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809347)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AddContact(com.wilutions.mslib.uccollaborationlib.IContact _contact, Object _groupCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809347)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AddContact(final com.wilutions.mslib.uccollaborationlib.IContact _contact, final Object _groupCallback, final Object _state) throws ComException {
     assert(_groupCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809347,"AddContact", DISPATCH_METHOD,null,(_contact!=null?_contact:Dispatch.NULL),_groupCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809348)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemoveContact(com.wilutions.mslib.uccollaborationlib.IContact pContact, Object _groupCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809348)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemoveContact(final com.wilutions.mslib.uccollaborationlib.IContact pContact, final Object _groupCallback, final Object _state) throws ComException {
     assert(_groupCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809348,"RemoveContact", DISPATCH_METHOD,null,(pContact!=null?pContact:Dispatch.NULL),_groupCallback,_state);
@@ -56,7 +56,7 @@ public class IDistributionGroupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactManagerImpl.class);
   }
-  @DeclDISPID(1610809350)  public Boolean CanInvoke(com.wilutions.mslib.uccollaborationlib.GroupAction _action, com.wilutions.mslib.uccollaborationlib.IContact _contact) throws ComException {
+  @DeclDISPID(1610809350)  public Boolean CanInvoke(final com.wilutions.mslib.uccollaborationlib.GroupAction _action, final com.wilutions.mslib.uccollaborationlib.IContact _contact) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610809350,"CanInvoke", DISPATCH_METHOD,null,_action.value,(_contact!=null?_contact:Dispatch.NULL));
     if (obj == null) return null;
@@ -72,7 +72,7 @@ public class IDistributionGroupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IGroupCollectionImpl.class);
   }
-  @DeclDISPID(1610874882)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Expand(Object _groupCallback, Object _state) throws ComException {
+  @DeclDISPID(1610874882)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Expand(final Object _groupCallback, final Object _state) throws ComException {
     assert(_groupCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610874882,"Expand", DISPATCH_METHOD,null,_groupCallback,_state);
@@ -84,7 +84,7 @@ public class IDistributionGroupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610874884)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetAllMembers(Object _groupCallback, Object _state) throws ComException {
+  @DeclDISPID(1610874884)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetAllMembers(final Object _groupCallback, final Object _state) throws ComException {
     assert(_groupCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610874884,"GetAllMembers", DISPATCH_METHOD,null,_groupCallback,_state);
@@ -96,7 +96,7 @@ public class IDistributionGroupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874886)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetOwner(Object _groupCallback, Object _state) throws ComException {
+  @DeclDISPID(1610874886)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetOwner(final Object _groupCallback, final Object _state) throws ComException {
     assert(_groupCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610874886,"GetOwner", DISPATCH_METHOD,null,_groupCallback,_state);

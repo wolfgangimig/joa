@@ -15,11 +15,11 @@ public interface IMsoDiagram extends IDispatch {
   @DeclDISPID(101)  public DiagramNodes getNodes() throws ComException;
   @DeclDISPID(102)  public MsoDiagramType getType() throws ComException;
   @DeclDISPID(103)  public MsoTriState getAutoLayout() throws ComException;
-  @DeclDISPID(103)  public void setAutoLayout(MsoTriState value) throws ComException;
+  @DeclDISPID(103)  public void setAutoLayout(final MsoTriState value) throws ComException;
   @DeclDISPID(104)  public MsoTriState getReverse() throws ComException;
-  @DeclDISPID(104)  public void setReverse(MsoTriState value) throws ComException;
+  @DeclDISPID(104)  public void setReverse(final MsoTriState value) throws ComException;
   @DeclDISPID(105)  public MsoTriState getAutoFormat() throws ComException;
-  @DeclDISPID(105)  public void setAutoFormat(MsoTriState value) throws ComException;
-  @DeclDISPID(10)  public void Convert(MsoDiagramType Type) throws ComException;
+  @DeclDISPID(105)  public void setAutoFormat(final MsoTriState value) throws ComException;
+  @DeclDISPID(10)  public void Convert(final MsoDiagramType Type) throws ComException;
   @DeclDISPID(11)  public void FitText() throws ComException;
 }

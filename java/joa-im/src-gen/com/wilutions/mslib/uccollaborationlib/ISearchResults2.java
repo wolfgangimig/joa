@@ -10,5 +10,5 @@ import com.wilutions.com.*;
 public interface ISearchResults2 extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(268435457)  public Object[] getFastResults() throws ComException;
-  @DeclDISPID(268435458)  public void GetPartialResults(ByRef<ISearchResult[]> _results, ByRef<Boolean> insert, ByRef<Integer> index) throws ComException;
+  @DeclDISPID(268435458)  public void GetPartialResults(final ByRef<ISearchResult[]> _results, final ByRef<Boolean> insert, final ByRef<Integer> index) throws ComException;
 }

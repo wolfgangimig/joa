@@ -34,7 +34,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64226)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(64226)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64226,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
-  @DeclDISPID(63508)  public void setRecipients(Recipients value) throws ComException {
+  @DeclDISPID(63508)  public void setRecipients(final Recipients value) throws ComException {
     this._dispatchCall(63508,"Recipients", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(64227)  public String getBccLabel() throws ComException {
@@ -56,7 +56,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64227)  public void setBccLabel(String value) throws ComException {
+  @DeclDISPID(64227)  public void setBccLabel(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64227,"BccLabel", DISPATCH_PROPERTYPUT,value);
   }
@@ -65,7 +65,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64228)  public void setCcLabel(String value) throws ComException {
+  @DeclDISPID(64228)  public void setCcLabel(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64228,"CcLabel", DISPATCH_PROPERTYPUT,value);
   }
@@ -74,7 +74,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64229)  public void setToLabel(String value) throws ComException {
+  @DeclDISPID(64229)  public void setToLabel(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64229,"ToLabel", DISPATCH_PROPERTYPUT,value);
   }
@@ -83,7 +83,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64230)  public void setAllowMultipleSelection(Boolean value) throws ComException {
+  @DeclDISPID(64230)  public void setAllowMultipleSelection(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64230,"AllowMultipleSelection", DISPATCH_PROPERTYPUT,value);
   }
@@ -92,7 +92,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64231)  public void setForceResolution(Boolean value) throws ComException {
+  @DeclDISPID(64231)  public void setForceResolution(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64231,"ForceResolution", DISPATCH_PROPERTYPUT,value);
   }
@@ -101,7 +101,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64232)  public void setShowOnlyInitialAddressList(Boolean value) throws ComException {
+  @DeclDISPID(64232)  public void setShowOnlyInitialAddressList(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64232,"ShowOnlyInitialAddressList", DISPATCH_PROPERTYPUT,value);
   }
@@ -110,7 +110,7 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return OlRecipientSelectors.valueOf((Integer)obj);
   }
-  @DeclDISPID(64233)  public void setNumberOfRecipientSelectors(OlRecipientSelectors value) throws ComException {
+  @DeclDISPID(64233)  public void setNumberOfRecipientSelectors(final OlRecipientSelectors value) throws ComException {
     assert(value != null);
     this._dispatchCall(64233,"NumberOfRecipientSelectors", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -119,10 +119,10 @@ public class SelectNamesDialog extends Dispatch implements _SelectNamesDialog {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
-  @DeclDISPID(64234)  public void setInitialAddressList(AddressList value) throws ComException {
+  @DeclDISPID(64234)  public void setInitialAddressList(final AddressList value) throws ComException {
     this._dispatchCall(64234,"InitialAddressList", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
-  @DeclDISPID(64235)  public void SetDefaultDisplayMode(OlDefaultSelectNamesDisplayMode defaultMode) throws ComException {
+  @DeclDISPID(64235)  public void SetDefaultDisplayMode(final OlDefaultSelectNamesDisplayMode defaultMode) throws ComException {
     assert(defaultMode != null);
     this._dispatchCall(64235,"SetDefaultDisplayMode", DISPATCH_METHOD,null,defaultMode.value);
   }

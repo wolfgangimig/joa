@@ -20,7 +20,7 @@ public class IMsoCategoryImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2887)  public void setIsFiltered(Boolean pfIsFiltered) throws ComException {
+  @DeclDISPID(2887)  public void setIsFiltered(final Boolean pfIsFiltered) throws ComException {
     assert(pfIsFiltered != null);
     this._dispatchCall(2887,"IsFiltered", DISPATCH_PROPERTYPUT,pfIsFiltered);
   }

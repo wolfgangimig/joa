@@ -14,5 +14,5 @@ public interface _SimpleItems extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException;
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException;
 }

@@ -13,7 +13,7 @@ public interface GradientStop extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public ColorFormat getColor() throws ComException;
   @DeclDISPID(2)  public Float getPosition() throws ComException;
-  @DeclDISPID(2)  public void setPosition(Float value) throws ComException;
+  @DeclDISPID(2)  public void setPosition(final Float value) throws ComException;
   @DeclDISPID(3)  public Float getTransparency() throws ComException;
-  @DeclDISPID(3)  public void setTransparency(Float value) throws ComException;
+  @DeclDISPID(3)  public void setTransparency(final Float value) throws ComException;
 }

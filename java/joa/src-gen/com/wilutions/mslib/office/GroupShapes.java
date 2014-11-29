@@ -13,7 +13,7 @@ public interface GroupShapes extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public Shape Item(Object Index) throws ComException;
+  @DeclDISPID(0)  public Shape Item(final Object Index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(10)  public ShapeRange Range(Object Index) throws ComException;
+  @DeclDISPID(10)  public ShapeRange Range(final Object Index) throws ComException;
 }

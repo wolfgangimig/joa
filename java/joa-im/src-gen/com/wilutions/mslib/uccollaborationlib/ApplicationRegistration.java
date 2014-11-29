@@ -17,7 +17,7 @@ public class ApplicationRegistration extends Dispatch implements IApplicationReg
   @DeclDISPID(1610743809)  public void RemoveRegistration() throws ComException {
     this._dispatchCall(1610743809,"RemoveRegistration", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743810)  public void SetExtensibilityWindowProperties(String _intrnalUrl, String _externalUrl, ConversationWindowExtensionSize _windowSize) throws ComException {
+  @DeclDISPID(1610743810)  public void SetExtensibilityWindowProperties(final String _intrnalUrl, final String _externalUrl, final ConversationWindowExtensionSize _windowSize) throws ComException {
     assert(_intrnalUrl != null);
     assert(_externalUrl != null);
     assert(_windowSize != null);

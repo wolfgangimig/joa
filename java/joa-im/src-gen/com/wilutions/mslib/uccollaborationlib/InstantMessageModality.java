@@ -36,7 +36,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactEndpointImpl.class);
   }
-  @DeclDISPID(1610743812)  public void setEndpoint(IContactEndpoint value) throws ComException {
+  @DeclDISPID(1610743812)  public void setEndpoint(final IContactEndpoint value) throws ComException {
     this._dispatchCall(1610743812,"Endpoint", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610743814)  public IModalityPropertyDictionary getProperties() throws ComException {
@@ -44,7 +44,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IModalityPropertyDictionaryImpl.class);
   }
-  @DeclDISPID(1610743815)  public IAsynchronousOperation SetProperty(ModalityProperty _propertyType, Object _propertyValue, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743815)  public IAsynchronousOperation SetProperty(final ModalityProperty _propertyType, final Object _propertyValue, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_propertyType != null);
     assert(_propertyValue != null);
     assert(_modalityCallback != null);
@@ -53,7 +53,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743816)  public IAsynchronousOperation Connect(ModalityConnectOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743816)  public IAsynchronousOperation Connect(final ModalityConnectOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -61,7 +61,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743817)  public IAsynchronousOperation Disconnect(ModalityDisconnectReason _reason, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743817)  public IAsynchronousOperation Disconnect(final ModalityDisconnectReason _reason, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_reason != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -69,35 +69,35 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743818)  public void Reject(ModalityDisconnectReason _reason) throws ComException {
+  @DeclDISPID(1610743818)  public void Reject(final ModalityDisconnectReason _reason) throws ComException {
     assert(_reason != null);
     this._dispatchCall(1610743818,"Reject", DISPATCH_METHOD,null,_reason.value);
   }
   @DeclDISPID(1610743819)  public void Accept() throws ComException {
     this._dispatchCall(1610743819,"Accept", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743820)  public IAsynchronousOperation Hold(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743820)  public IAsynchronousOperation Hold(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743820,"Hold", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743821)  public IAsynchronousOperation Retrieve(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743821)  public IAsynchronousOperation Retrieve(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743821,"Retrieve", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743822)  public IAsynchronousOperation Forward(IDispatch _contactOrCollaborationEndpoint, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743822)  public IAsynchronousOperation Forward(final IDispatch _contactOrCollaborationEndpoint, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743822,"Forward", DISPATCH_METHOD,null,(_contactOrCollaborationEndpoint!=null?_contactOrCollaborationEndpoint:Dispatch.NULL),_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743823)  public IAsynchronousOperation Transfer(IDispatch _contactOrCollaborationEndpoint, TransferOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743823)  public IAsynchronousOperation Transfer(final IDispatch _contactOrCollaborationEndpoint, final TransferOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -105,7 +105,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743824)  public IAsynchronousOperation ConsultativeTransfer(IConversation _conversation, TransferOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743824)  public IAsynchronousOperation ConsultativeTransfer(final IConversation _conversation, final TransferOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -113,19 +113,19 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743825)  public Boolean CanInvoke(ModalityAction _action) throws ComException {
+  @DeclDISPID(1610743825)  public Boolean CanInvoke(final ModalityAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743825,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743826)  public Boolean CanSetProperty(ModalityProperty _modalityProperty) throws ComException {
+  @DeclDISPID(1610743826)  public Boolean CanSetProperty(final ModalityProperty _modalityProperty) throws ComException {
     assert(_modalityProperty != null);
     final Object obj = this._dispatchCall(1610743826,"CanSetProperty", DISPATCH_METHOD,null,_modalityProperty.value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809344)  public IAsynchronousOperation SendMessage(String _message, INamedPropertyList _additionalFormats, ModalityConnectOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809344)  public IAsynchronousOperation SendMessage(final String _message, final INamedPropertyList _additionalFormats, final ModalityConnectOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_message != null);
     assert(_options != null);
     assert(_modalityCallback != null);
@@ -134,7 +134,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809345)  public IAsynchronousOperation SetComposing(Boolean _isComposing, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809345)  public IAsynchronousOperation SetComposing(final Boolean _isComposing, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_isComposing != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -142,7 +142,7 @@ public class InstantMessageModality extends Dispatch implements IInstantMessageM
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809346)  public void SetCapabilities(InstantMessageCapabilities _capabilities) throws ComException {
+  @DeclDISPID(1610809346)  public void SetCapabilities(final InstantMessageCapabilities _capabilities) throws ComException {
     assert(_capabilities != null);
     this._dispatchCall(1610809346,"SetCapabilities", DISPATCH_METHOD,null,_capabilities.value);
   }

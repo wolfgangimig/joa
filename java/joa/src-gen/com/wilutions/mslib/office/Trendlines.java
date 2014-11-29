@@ -10,11 +10,11 @@ import com.wilutions.com.*;
 public interface Trendlines extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(181)  public IMsoTrendline Add(XlTrendlineType Type, Object Order, Object Period, Object Forward, Object Backward, Object Intercept, Object DisplayEquation, Object DisplayRSquared, Object Name) throws ComException;
+  @DeclDISPID(181)  public IMsoTrendline Add(final XlTrendlineType Type, final Object Order, final Object Period, final Object Forward, final Object Backward, final Object Intercept, final Object DisplayEquation, final Object DisplayRSquared, final Object Name) throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;
-  @DeclDISPID(170)  public IMsoTrendline Item(Object Index) throws ComException;
+  @DeclDISPID(170)  public IMsoTrendline Item(final Object Index) throws ComException;
   @DeclDISPID(-4)  public Object _NewEnum() throws ComException;
   @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(0)  public IMsoTrendline get_Default(Object Index) throws ComException;
+  @DeclDISPID(0)  public IMsoTrendline get_Default(final Object Index) throws ComException;
 }

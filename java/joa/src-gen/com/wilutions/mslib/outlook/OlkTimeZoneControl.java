@@ -14,7 +14,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return OlAppointmentTimeField.valueOf((Integer)obj);
   }
-  @DeclDISPID(64559)  public void setAppointmentTimeField(OlAppointmentTimeField value) throws ComException {
+  @DeclDISPID(64559)  public void setAppointmentTimeField(final OlAppointmentTimeField value) throws ComException {
     assert(value != null);
     this._dispatchCall(64559,"AppointmentTimeField", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -23,7 +23,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return OlBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(OlBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final OlBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -32,7 +32,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -41,7 +41,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -50,7 +50,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public OlMousePointer getMousePointer() throws ComException {
@@ -58,7 +58,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -67,7 +67,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64560)  public void setSelectedTimeZoneIndex(Integer value) throws ComException {
+  @DeclDISPID(64560)  public void setSelectedTimeZoneIndex(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64560,"SelectedTimeZoneIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -76,7 +76,7 @@ public class OlkTimeZoneControl extends Dispatch implements _OlkTimeZoneControl 
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }

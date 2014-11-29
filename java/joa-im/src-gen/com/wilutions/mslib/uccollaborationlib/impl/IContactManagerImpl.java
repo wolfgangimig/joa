@@ -10,13 +10,13 @@ public class IContactManagerImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IGroupCollectionImpl.class);
   }
-  @DeclDISPID(1610743809)  public com.wilutions.mslib.uccollaborationlib.IContact GetContactByUri(String _contactUri) throws ComException {
+  @DeclDISPID(1610743809)  public com.wilutions.mslib.uccollaborationlib.IContact GetContactByUri(final String _contactUri) throws ComException {
     assert(_contactUri != null);
     final Object obj = this._dispatchCall(1610743809,"GetContactByUri", DISPATCH_METHOD,null,_contactUri);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactImpl.class);
   }
-  @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Lookup(String _lookupString, Object _contactsAndGroupsCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Lookup(final String _lookupString, final Object _contactsAndGroupsCallback, final Object _state) throws ComException {
     assert(_lookupString != null);
     assert(_contactsAndGroupsCallback != null);
     assert(_state != null);
@@ -29,7 +29,7 @@ public class IContactManagerImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactSubscriptionImpl.class);
   }
-  @DeclDISPID(1610743812)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Search(String _searchString, com.wilutions.mslib.uccollaborationlib.SearchProviders _providers, com.wilutions.mslib.uccollaborationlib.SearchFields _searchFields, com.wilutions.mslib.uccollaborationlib.SearchOptions _searchOptions, Integer _maxResults, Object _contactsAndGroupsCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743812)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Search(final String _searchString, final com.wilutions.mslib.uccollaborationlib.SearchProviders _providers, final com.wilutions.mslib.uccollaborationlib.SearchFields _searchFields, final com.wilutions.mslib.uccollaborationlib.SearchOptions _searchOptions, final Integer _maxResults, final Object _contactsAndGroupsCallback, final Object _state) throws ComException {
     assert(_searchString != null);
     assert(_providers != null);
     assert(_searchFields != null);
@@ -41,20 +41,20 @@ public class IContactManagerImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemoveContactFromAllGroups(com.wilutions.mslib.uccollaborationlib.IContact _contact, Object _contactsAndGroupsCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemoveContactFromAllGroups(final com.wilutions.mslib.uccollaborationlib.IContact _contact, final Object _contactsAndGroupsCallback, final Object _state) throws ComException {
     assert(_contactsAndGroupsCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743813,"RemoveContactFromAllGroups", DISPATCH_METHOD,null,(_contact!=null?_contact:Dispatch.NULL),_contactsAndGroupsCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743814)  public String GetSearchProviderID(com.wilutions.mslib.uccollaborationlib.SearchProviders _provider) throws ComException {
+  @DeclDISPID(1610743814)  public String GetSearchProviderID(final com.wilutions.mslib.uccollaborationlib.SearchProviders _provider) throws ComException {
     assert(_provider != null);
     final Object obj = this._dispatchCall(1610743814,"GetSearchProviderID", DISPATCH_METHOD,null,_provider.value);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AddCustomGroup(String _customGroupName, Object _contactsAndGroupsCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AddCustomGroup(final String _customGroupName, final Object _contactsAndGroupsCallback, final Object _state) throws ComException {
     assert(_customGroupName != null);
     assert(_contactsAndGroupsCallback != null);
     assert(_state != null);
@@ -62,14 +62,14 @@ public class IContactManagerImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AddDistributionGroup(com.wilutions.mslib.uccollaborationlib.IDistributionGroup _distributionGroup, Object _contactsAndGroupsCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AddDistributionGroup(final com.wilutions.mslib.uccollaborationlib.IDistributionGroup _distributionGroup, final Object _contactsAndGroupsCallback, final Object _state) throws ComException {
     assert(_contactsAndGroupsCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743816,"AddDistributionGroup", DISPATCH_METHOD,null,(_distributionGroup!=null?_distributionGroup:Dispatch.NULL),_contactsAndGroupsCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemoveGroup(com.wilutions.mslib.uccollaborationlib.IGroup _group, Object _contactsAndGroupsCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemoveGroup(final com.wilutions.mslib.uccollaborationlib.IGroup _group, final Object _contactsAndGroupsCallback, final Object _state) throws ComException {
     assert(_contactsAndGroupsCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743817,"RemoveGroup", DISPATCH_METHOD,null,(_group!=null?_group:Dispatch.NULL),_contactsAndGroupsCallback,_state);
@@ -87,13 +87,13 @@ public class IContactManagerImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.SearchFields.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743821)  public com.wilutions.mslib.uccollaborationlib.SearchProviderStatusType GetSearchProviderStatus(com.wilutions.mslib.uccollaborationlib.SearchProviders _provider) throws ComException {
+  @DeclDISPID(1610743821)  public com.wilutions.mslib.uccollaborationlib.SearchProviderStatusType GetSearchProviderStatus(final com.wilutions.mslib.uccollaborationlib.SearchProviders _provider) throws ComException {
     assert(_provider != null);
     final Object obj = this._dispatchCall(1610743821,"GetSearchProviderStatus", DISPATCH_METHOD,null,_provider.value);
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.SearchProviderStatusType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743822)  public String GetExpertSearchQueryString(String _searchString) throws ComException {
+  @DeclDISPID(1610743822)  public String GetExpertSearchQueryString(final String _searchString) throws ComException {
     assert(_searchString != null);
     final Object obj = this._dispatchCall(1610743822,"GetExpertSearchQueryString", DISPATCH_METHOD,null,_searchString);
     if (obj == null) return null;
@@ -104,7 +104,7 @@ public class IContactManagerImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactImpl.class);
   }
-  @DeclDISPID(1610743824)  public com.wilutions.mslib.uccollaborationlib.IContact GetContactByTel(String _telUri) throws ComException {
+  @DeclDISPID(1610743824)  public com.wilutions.mslib.uccollaborationlib.IContact GetContactByTel(final String _telUri) throws ComException {
     assert(_telUri != null);
     final Object obj = this._dispatchCall(1610743824,"GetContactByTel", DISPATCH_METHOD,null,_telUri);
     if (obj == null) return null;

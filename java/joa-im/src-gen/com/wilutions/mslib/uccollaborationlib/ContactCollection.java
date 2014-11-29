@@ -19,7 +19,7 @@ public class ContactCollection extends Dispatch implements IContactCollection {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743810)  public Boolean TryGetContact(String _uri, ByRef<IContact> _value) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean TryGetContact(final String _uri, final ByRef<IContact> _value) throws ComException {
     assert(_uri != null);
     assert(_value != null);
     final Object obj = this._dispatchCall(1610743810,"TryGetContact", DISPATCH_METHOD,null,_uri,_value);

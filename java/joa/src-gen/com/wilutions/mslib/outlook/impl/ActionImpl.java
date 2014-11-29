@@ -30,7 +30,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlActionCopyLike.valueOf((Integer)obj);
   }
-  @DeclDISPID(100)  public void setCopyLike(com.wilutions.mslib.outlook.OlActionCopyLike value) throws ComException {
+  @DeclDISPID(100)  public void setCopyLike(final com.wilutions.mslib.outlook.OlActionCopyLike value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"CopyLike", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -39,7 +39,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(61)  public void setPrefix(String value) throws ComException {
+  @DeclDISPID(61)  public void setPrefix(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(61,"Prefix", DISPATCH_PROPERTYPUT,value);
   }
@@ -75,7 +75,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlActionReplyStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setReplyStyle(com.wilutions.mslib.outlook.OlActionReplyStyle value) throws ComException {
+  @DeclDISPID(101)  public void setReplyStyle(final com.wilutions.mslib.outlook.OlActionReplyStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"ReplyStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -84,7 +84,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlActionResponseStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(102)  public void setResponseStyle(com.wilutions.mslib.outlook.OlActionResponseStyle value) throws ComException {
+  @DeclDISPID(102)  public void setResponseStyle(final com.wilutions.mslib.outlook.OlActionResponseStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"ResponseStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -93,7 +93,7 @@ public class ActionImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlActionShowOn.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setShowOn(com.wilutions.mslib.outlook.OlActionShowOn value) throws ComException {
+  @DeclDISPID(105)  public void setShowOn(final com.wilutions.mslib.outlook.OlActionShowOn value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"ShowOn", DISPATCH_PROPERTYPUT,value.value);
   }

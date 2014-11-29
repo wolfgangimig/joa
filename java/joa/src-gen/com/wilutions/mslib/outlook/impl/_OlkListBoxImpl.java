@@ -10,7 +10,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(com.wilutions.mslib.outlook.OlBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final com.wilutions.mslib.outlook.OlBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -20,7 +20,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -29,7 +29,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -53,7 +53,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlMatchEntry.valueOf((Integer)obj);
   }
-  @DeclDISPID(504)  public void setMatchEntry(com.wilutions.mslib.outlook.OlMatchEntry value) throws ComException {
+  @DeclDISPID(504)  public void setMatchEntry(final com.wilutions.mslib.outlook.OlMatchEntry value) throws ComException {
     assert(value != null);
     this._dispatchCall(504,"MatchEntry", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -71,7 +71,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public com.wilutions.mslib.outlook.OlMousePointer getMousePointer() throws ComException {
@@ -79,7 +79,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.outlook.OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.outlook.OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -88,7 +88,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlMultiSelect.valueOf((Integer)obj);
   }
-  @DeclDISPID(-532)  public void setMultiSelect(com.wilutions.mslib.outlook.OlMultiSelect value) throws ComException {
+  @DeclDISPID(-532)  public void setMultiSelect(final com.wilutions.mslib.outlook.OlMultiSelect value) throws ComException {
     assert(value != null);
     this._dispatchCall(-532,"MultiSelect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -97,7 +97,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-517)  public void setText(String value) throws ComException {
+  @DeclDISPID(-517)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-517,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(10004)  public void setTextAlign(com.wilutions.mslib.outlook.OlTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final com.wilutions.mslib.outlook.OlTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -115,7 +115,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(611)  public void setTopIndex(Integer value) throws ComException {
+  @DeclDISPID(611)  public void setTopIndex(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(611,"TopIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -124,7 +124,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -133,7 +133,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-526)  public void setListIndex(Integer value) throws ComException {
+  @DeclDISPID(-526)  public void setListIndex(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-526,"ListIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -142,24 +142,24 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8457)  public String GetItem(Integer Index) throws ComException {
+  @DeclDISPID(8457)  public String GetItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(8457,"GetItem", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64478)  public void SetItem(Integer Index, String Item) throws ComException {
+  @DeclDISPID(64478)  public void SetItem(final Integer Index, final String Item) throws ComException {
     assert(Index != null);
     assert(Item != null);
     this._dispatchCall(64478,"SetItem", DISPATCH_METHOD,null,Index,Item);
   }
-  @DeclDISPID(64479)  public Boolean GetSelected(Integer Index) throws ComException {
+  @DeclDISPID(64479)  public Boolean GetSelected(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(64479,"GetSelected", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64480)  public void SetSelected(Integer Index, Boolean Selected) throws ComException {
+  @DeclDISPID(64480)  public void SetSelected(final Integer Index, final Boolean Selected) throws ComException {
     assert(Index != null);
     assert(Selected != null);
     this._dispatchCall(64480,"SetSelected", DISPATCH_METHOD,null,Index,Selected);
@@ -170,12 +170,12 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(-554)  public void Clear() throws ComException {
     this._dispatchCall(-554,"Clear", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(-553)  public void AddItem(String ItemText, Object Index) throws ComException {
+  @DeclDISPID(-553)  public void AddItem(final String ItemText, final Object Index) throws ComException {
     assert(ItemText != null);
     assert(Index != null);
     this._dispatchCall(-553,"AddItem", DISPATCH_METHOD,null,ItemText,Index);
   }
-  @DeclDISPID(-555)  public void RemoveItem(Integer Index) throws ComException {
+  @DeclDISPID(-555)  public void RemoveItem(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(-555,"RemoveItem", DISPATCH_METHOD,null,Index);
   }

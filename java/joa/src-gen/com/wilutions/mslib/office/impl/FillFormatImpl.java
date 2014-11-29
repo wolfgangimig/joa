@@ -23,39 +23,39 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(10)  public void Background() throws ComException {
     this._dispatchCall(10,"Background", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(11)  public void OneColorGradient(com.wilutions.mslib.office.MsoGradientStyle Style, Integer Variant, Float Degree) throws ComException {
+  @DeclDISPID(11)  public void OneColorGradient(final com.wilutions.mslib.office.MsoGradientStyle Style, final Integer Variant, final Float Degree) throws ComException {
     assert(Style != null);
     assert(Variant != null);
     assert(Degree != null);
     this._dispatchCall(11,"OneColorGradient", DISPATCH_METHOD,null,Style.value,Variant,Degree);
   }
-  @DeclDISPID(12)  public void Patterned(com.wilutions.mslib.office.MsoPatternType Pattern) throws ComException {
+  @DeclDISPID(12)  public void Patterned(final com.wilutions.mslib.office.MsoPatternType Pattern) throws ComException {
     assert(Pattern != null);
     this._dispatchCall(12,"Patterned", DISPATCH_METHOD,null,Pattern.value);
   }
-  @DeclDISPID(13)  public void PresetGradient(com.wilutions.mslib.office.MsoGradientStyle Style, Integer Variant, com.wilutions.mslib.office.MsoPresetGradientType PresetGradientType) throws ComException {
+  @DeclDISPID(13)  public void PresetGradient(final com.wilutions.mslib.office.MsoGradientStyle Style, final Integer Variant, final com.wilutions.mslib.office.MsoPresetGradientType PresetGradientType) throws ComException {
     assert(Style != null);
     assert(Variant != null);
     assert(PresetGradientType != null);
     this._dispatchCall(13,"PresetGradient", DISPATCH_METHOD,null,Style.value,Variant,PresetGradientType.value);
   }
-  @DeclDISPID(14)  public void PresetTextured(com.wilutions.mslib.office.MsoPresetTexture PresetTexture) throws ComException {
+  @DeclDISPID(14)  public void PresetTextured(final com.wilutions.mslib.office.MsoPresetTexture PresetTexture) throws ComException {
     assert(PresetTexture != null);
     this._dispatchCall(14,"PresetTextured", DISPATCH_METHOD,null,PresetTexture.value);
   }
   @DeclDISPID(15)  public void Solid() throws ComException {
     this._dispatchCall(15,"Solid", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(16)  public void TwoColorGradient(com.wilutions.mslib.office.MsoGradientStyle Style, Integer Variant) throws ComException {
+  @DeclDISPID(16)  public void TwoColorGradient(final com.wilutions.mslib.office.MsoGradientStyle Style, final Integer Variant) throws ComException {
     assert(Style != null);
     assert(Variant != null);
     this._dispatchCall(16,"TwoColorGradient", DISPATCH_METHOD,null,Style.value,Variant);
   }
-  @DeclDISPID(17)  public void UserPicture(String PictureFile) throws ComException {
+  @DeclDISPID(17)  public void UserPicture(final String PictureFile) throws ComException {
     assert(PictureFile != null);
     this._dispatchCall(17,"UserPicture", DISPATCH_METHOD,null,PictureFile);
   }
-  @DeclDISPID(18)  public void UserTextured(String TextureFile) throws ComException {
+  @DeclDISPID(18)  public void UserTextured(final String TextureFile) throws ComException {
     assert(TextureFile != null);
     this._dispatchCall(18,"UserTextured", DISPATCH_METHOD,null,TextureFile);
   }
@@ -64,7 +64,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
-  @DeclDISPID(100)  public void setBackColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
+  @DeclDISPID(100)  public void setBackColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.ColorFormat getForeColor() throws ComException {
@@ -72,7 +72,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
-  @DeclDISPID(101)  public void setForeColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
+  @DeclDISPID(101)  public void setForeColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(101,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(102)  public com.wilutions.mslib.office.MsoGradientColorType getGradientColorType() throws ComException {
@@ -125,7 +125,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(111)  public void setTransparency(Float value) throws ComException {
+  @DeclDISPID(111)  public void setTransparency(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(111,"Transparency", DISPATCH_PROPERTYPUT,value);
   }
@@ -139,7 +139,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(113)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(113)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(113,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -153,7 +153,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(115)  public void setTextureOffsetX(Float value) throws ComException {
+  @DeclDISPID(115)  public void setTextureOffsetX(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(115,"TextureOffsetX", DISPATCH_PROPERTYPUT,value);
   }
@@ -162,7 +162,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(116)  public void setTextureOffsetY(Float value) throws ComException {
+  @DeclDISPID(116)  public void setTextureOffsetY(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(116,"TextureOffsetY", DISPATCH_PROPERTYPUT,value);
   }
@@ -171,7 +171,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextureAlignment.valueOf((Integer)obj);
   }
-  @DeclDISPID(117)  public void setTextureAlignment(com.wilutions.mslib.office.MsoTextureAlignment value) throws ComException {
+  @DeclDISPID(117)  public void setTextureAlignment(final com.wilutions.mslib.office.MsoTextureAlignment value) throws ComException {
     assert(value != null);
     this._dispatchCall(117,"TextureAlignment", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -180,7 +180,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(118)  public void setTextureHorizontalScale(Float value) throws ComException {
+  @DeclDISPID(118)  public void setTextureHorizontalScale(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(118,"TextureHorizontalScale", DISPATCH_PROPERTYPUT,value);
   }
@@ -189,7 +189,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(119)  public void setTextureVerticalScale(Float value) throws ComException {
+  @DeclDISPID(119)  public void setTextureVerticalScale(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(119,"TextureVerticalScale", DISPATCH_PROPERTYPUT,value);
   }
@@ -198,7 +198,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(120)  public void setTextureTile(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(120)  public void setTextureTile(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(120,"TextureTile", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -207,7 +207,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(121)  public void setRotateWithObject(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(121)  public void setRotateWithObject(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(121,"RotateWithObject", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -221,7 +221,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(123)  public void setGradientAngle(Float value) throws ComException {
+  @DeclDISPID(123)  public void setGradientAngle(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(123,"GradientAngle", DISPATCH_PROPERTYPUT,value);
   }

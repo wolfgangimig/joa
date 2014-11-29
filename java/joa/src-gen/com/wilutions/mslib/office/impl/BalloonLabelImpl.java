@@ -30,7 +30,7 @@ public class BalloonLabelImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809347)  public void setText(String value) throws ComException {
+  @DeclDISPID(1610809347)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809347,"Text", DISPATCH_PROPERTYPUT,value);
   }

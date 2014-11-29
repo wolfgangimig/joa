@@ -30,13 +30,16 @@ public class Generator {
 				// UCCollaborationLib (Integration of IM clients)
 				// Found in C:\Program Files (x86)\Skype\Phone\Skype.exe\3
 				// Microsoft.Office.Uc.dll from LyncSDK is .NET and is not registered
-				"{B9AA1F11-F480-4054-A84E-B5D9277E40A8}"
+				"{B9AA1F11-F480-4054-A84E-B5D9277E40A8}",
+				
+				// Microsoft Office Communicator 2007 SDK
+				// http://www.microsoft.com/en-us/download/details.aspx?id=10176
+				// ... only IDLs no TypeLib
+				
+				// Messenger API Type Library
+				"{E02AD29E-80F5-46c6-B416-9B3EBDDF057E}"
 		);
 		
-
-//		generateJavaClasses("com.wilutions", 
-//				"{0F9377B3-9F5B-4551-8709-8E422D5F7A8A}" // JoaCtrl
-//		);
 	}
 
 	private static void generateJavaClasses(String pack, String... typeLibIds) {

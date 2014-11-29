@@ -32,7 +32,7 @@ public class Reminder extends Dispatch implements _Reminder {
   @DeclDISPID(64154)  public void Dismiss() throws ComException {
     this._dispatchCall(64154,"Dismiss", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64155)  public void Snooze(Object SnoozeTime) throws ComException {
+  @DeclDISPID(64155)  public void Snooze(final Object SnoozeTime) throws ComException {
     assert(SnoozeTime != null);
     this._dispatchCall(64155,"Snooze", DISPATCH_METHOD,null,SnoozeTime);
   }

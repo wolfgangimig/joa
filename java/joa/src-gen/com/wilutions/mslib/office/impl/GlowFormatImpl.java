@@ -20,7 +20,7 @@ public class GlowFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(1)  public void setRadius(Float value) throws ComException {
+  @DeclDISPID(1)  public void setRadius(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Radius", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class GlowFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(3)  public void setTransparency(Float value) throws ComException {
+  @DeclDISPID(3)  public void setTransparency(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Transparency", DISPATCH_PROPERTYPUT,value);
   }

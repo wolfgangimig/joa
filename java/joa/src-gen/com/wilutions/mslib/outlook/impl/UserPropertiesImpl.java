@@ -30,13 +30,13 @@ public class UserPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.UserProperty Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.UserProperty Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertyImpl.class);
   }
-  @DeclDISPID(102)  public com.wilutions.mslib.outlook.UserProperty Add(String Name, com.wilutions.mslib.outlook.OlUserPropertyType Type, Object AddToFolderFields, Object DisplayFormat) throws ComException {
+  @DeclDISPID(102)  public com.wilutions.mslib.outlook.UserProperty Add(final String Name, final com.wilutions.mslib.outlook.OlUserPropertyType Type, final Object AddToFolderFields, final Object DisplayFormat) throws ComException {
     assert(Name != null);
     assert(Type != null);
     assert(AddToFolderFields != null);
@@ -45,14 +45,14 @@ public class UserPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertyImpl.class);
   }
-  @DeclDISPID(103)  public com.wilutions.mslib.outlook.UserProperty Find(String Name, Object Custom) throws ComException {
+  @DeclDISPID(103)  public com.wilutions.mslib.outlook.UserProperty Find(final String Name, final Object Custom) throws ComException {
     assert(Name != null);
     assert(Custom != null);
     final Object obj = this._dispatchCall(103,"Find", DISPATCH_METHOD,null,Name,Custom);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertyImpl.class);
   }
-  @DeclDISPID(82)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }

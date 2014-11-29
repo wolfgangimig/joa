@@ -20,7 +20,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(0)  public void setPictureOffsetX(Float value) throws ComException {
+  @DeclDISPID(0)  public void setPictureOffsetX(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"PictureOffsetX", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(1)  public void setPictureOffsetY(Float value) throws ComException {
+  @DeclDISPID(1)  public void setPictureOffsetY(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"PictureOffsetY", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(2)  public void setPictureWidth(Float value) throws ComException {
+  @DeclDISPID(2)  public void setPictureWidth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"PictureWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,7 +47,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(3)  public void setPictureHeight(Float value) throws ComException {
+  @DeclDISPID(3)  public void setPictureHeight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"PictureHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -56,7 +56,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(5)  public void setShapeLeft(Float value) throws ComException {
+  @DeclDISPID(5)  public void setShapeLeft(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"ShapeLeft", DISPATCH_PROPERTYPUT,value);
   }
@@ -65,7 +65,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(6)  public void setShapeTop(Float value) throws ComException {
+  @DeclDISPID(6)  public void setShapeTop(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"ShapeTop", DISPATCH_PROPERTYPUT,value);
   }
@@ -74,7 +74,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(7)  public void setShapeWidth(Float value) throws ComException {
+  @DeclDISPID(7)  public void setShapeWidth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"ShapeWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -83,7 +83,7 @@ public class CropImpl extends Dispatch implements com.wilutions.mslib.office.Cro
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(8)  public void setShapeHeight(Float value) throws ComException {
+  @DeclDISPID(8)  public void setShapeHeight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"ShapeHeight", DISPATCH_PROPERTYPUT,value);
   }

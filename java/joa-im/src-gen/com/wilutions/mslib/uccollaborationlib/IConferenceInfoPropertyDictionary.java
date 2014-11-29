@@ -10,16 +10,16 @@ import com.wilutions.com.*;
 public interface IConferenceInfoPropertyDictionary extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public Object getItem(ConferenceInfoProperty _key) throws ComException;
-  @DeclDISPID(0)  public void setItem(ConferenceInfoProperty _key, Object value2) throws ComException;
-  @DeclDISPID(1610743811)  public void Add(ConferenceInfoProperty _key, Object _value) throws ComException;
+  @DeclDISPID(0)  public Object getItem(final ConferenceInfoProperty _key) throws ComException;
+  @DeclDISPID(0)  public void setItem(final ConferenceInfoProperty _key, final Object value2) throws ComException;
+  @DeclDISPID(1610743811)  public void Add(final ConferenceInfoProperty _key, final Object _value) throws ComException;
   @DeclDISPID(1610743812)  public ConferenceInfoProperty[] getKeys() throws ComException;
   @DeclDISPID(1610743813)  public Object[] getValues() throws ComException;
-  @DeclDISPID(1610743814)  public Boolean TryGetValue(ConferenceInfoProperty _key, ByRef<Object> _value) throws ComException;
-  @DeclDISPID(1610743815)  public ConferenceInfoProperty GetKeyAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743816)  public Object GetValueAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743817)  public Boolean ContainsKey(ConferenceInfoProperty _key) throws ComException;
-  @DeclDISPID(1610743818)  public void RemoveAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743819)  public void Remove(ConferenceInfoProperty _key) throws ComException;
+  @DeclDISPID(1610743814)  public Boolean TryGetValue(final ConferenceInfoProperty _key, final ByRef<Object> _value) throws ComException;
+  @DeclDISPID(1610743815)  public ConferenceInfoProperty GetKeyAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743816)  public Object GetValueAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743817)  public Boolean ContainsKey(final ConferenceInfoProperty _key) throws ComException;
+  @DeclDISPID(1610743818)  public void RemoveAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743819)  public void Remove(final ConferenceInfoProperty _key) throws ComException;
   @DeclDISPID(1610743820)  public void RemoveAll() throws ComException;
 }

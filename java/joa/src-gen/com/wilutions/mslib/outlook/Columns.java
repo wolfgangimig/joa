@@ -34,20 +34,20 @@ public class Columns extends Dispatch implements _Columns {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _Column Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public _Column Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ColumnImpl.class);
   }
-  @DeclDISPID(95)  public Column Add(String Name) throws ComException {
+  @DeclDISPID(95)  public Column Add(final String Name) throws ComException {
     assert(Name != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(Column.class);
   }
-  @DeclDISPID(82)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }

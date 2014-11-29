@@ -25,19 +25,19 @@ public class _CustomXMLSchemaCollectionImpl extends Dispatch implements com.wilu
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLSchema getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLSchema getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLSchemaImpl.class);
   }
-  @DeclDISPID(1610809347)  public String getNamespaceURI(Integer Index) throws ComException {
+  @DeclDISPID(1610809347)  public String getNamespaceURI(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(1610809347,"NamespaceURI", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809348)  public com.wilutions.mslib.office.CustomXMLSchema Add(String NamespaceURI, String Alias, String FileName, Boolean InstallForAllUsers) throws ComException {
+  @DeclDISPID(1610809348)  public com.wilutions.mslib.office.CustomXMLSchema Add(final String NamespaceURI, final String Alias, final String FileName, final Boolean InstallForAllUsers) throws ComException {
     assert(NamespaceURI != null);
     assert(Alias != null);
     assert(FileName != null);
@@ -46,7 +46,7 @@ public class _CustomXMLSchemaCollectionImpl extends Dispatch implements com.wilu
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLSchemaImpl.class);
   }
-  @DeclDISPID(1610809349)  public void AddCollection(com.wilutions.mslib.office.CustomXMLSchemaCollection SchemaCollection) throws ComException {
+  @DeclDISPID(1610809349)  public void AddCollection(final com.wilutions.mslib.office.CustomXMLSchemaCollection SchemaCollection) throws ComException {
     this._dispatchCall(1610809349,"AddCollection", DISPATCH_METHOD,null,(SchemaCollection!=null?SchemaCollection:Dispatch.NULL));
   }
   @DeclDISPID(1610809350)  public Boolean Validate() throws ComException {

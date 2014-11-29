@@ -14,24 +14,24 @@ public class ConferenceApplicationProperties extends Dispatch implements IConfer
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743809)  public void GetItem(Integer index, ByRef<String> _key, ByRef<String> _value) throws ComException {
+  @DeclDISPID(1610743809)  public void GetItem(final Integer index, final ByRef<String> _key, final ByRef<String> _value) throws ComException {
     assert(index != null);
     assert(_key != null);
     assert(_value != null);
     this._dispatchCall(1610743809,"GetItem", DISPATCH_METHOD,null,index,_key,_value);
   }
-  @DeclDISPID(1610743810)  public String getItem(String _key) throws ComException {
+  @DeclDISPID(1610743810)  public String getItem(final String _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(1610743810,"Item", DISPATCH_PROPERTYGET,null,_key);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743811)  public void Add(String _key, String _value) throws ComException {
+  @DeclDISPID(1610743811)  public void Add(final String _key, final String _value) throws ComException {
     assert(_key != null);
     assert(_value != null);
     this._dispatchCall(1610743811,"Add", DISPATCH_METHOD,null,_key,_value);
   }
-  @DeclDISPID(1610743812)  public void Remove(String _key) throws ComException {
+  @DeclDISPID(1610743812)  public void Remove(final String _key) throws ComException {
     assert(_key != null);
     this._dispatchCall(1610743812,"Remove", DISPATCH_METHOD,null,_key);
   }

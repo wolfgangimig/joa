@@ -85,13 +85,13 @@ public class Account extends Dispatch implements _Account {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64618)  public AddressEntry GetAddressEntryFromID(String ID) throws ComException {
+  @DeclDISPID(64618)  public AddressEntry GetAddressEntryFromID(final String ID) throws ComException {
     assert(ID != null);
     final Object obj = this._dispatchCall(64618,"GetAddressEntryFromID", DISPATCH_METHOD,null,ID);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
-  @DeclDISPID(64619)  public Recipient GetRecipientFromID(String EntryID) throws ComException {
+  @DeclDISPID(64619)  public Recipient GetRecipientFromID(final String EntryID) throws ComException {
     assert(EntryID != null);
     final Object obj = this._dispatchCall(64619,"GetRecipientFromID", DISPATCH_METHOD,null,EntryID);
     if (obj == null) return null;

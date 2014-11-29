@@ -10,7 +10,7 @@ public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.DocumentProperty getItem(Object Index, Integer lcid) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.DocumentProperty getItem(final Object Index, final Integer lcid) throws ComException {
     assert(Index != null);
     assert(lcid != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index,lcid);
@@ -22,7 +22,7 @@ public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(5)  public com.wilutions.mslib.office.DocumentProperty Add(String Name, Boolean LinkToContent, Object Type, Object Value, Object LinkSource, Integer lcid) throws ComException {
+  @DeclDISPID(5)  public com.wilutions.mslib.office.DocumentProperty Add(final String Name, final Boolean LinkToContent, final Object Type, final Object Value, final Object LinkSource, final Integer lcid) throws ComException {
     assert(Name != null);
     assert(LinkToContent != null);
     assert(Type != null);

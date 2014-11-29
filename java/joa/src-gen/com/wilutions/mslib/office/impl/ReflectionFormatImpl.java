@@ -20,7 +20,7 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoReflectionType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1)  public void setType(com.wilutions.mslib.office.MsoReflectionType value) throws ComException {
+  @DeclDISPID(1)  public void setType(final com.wilutions.mslib.office.MsoReflectionType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -29,7 +29,7 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(2)  public void setTransparency(Float value) throws ComException {
+  @DeclDISPID(2)  public void setTransparency(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Transparency", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(3)  public void setSize(Float value) throws ComException {
+  @DeclDISPID(3)  public void setSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Size", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,7 +47,7 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(4)  public void setOffset(Float value) throws ComException {
+  @DeclDISPID(4)  public void setOffset(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Offset", DISPATCH_PROPERTYPUT,value);
   }
@@ -56,7 +56,7 @@ public class ReflectionFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(5)  public void setBlur(Float value) throws ComException {
+  @DeclDISPID(5)  public void setBlur(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"Blur", DISPATCH_PROPERTYPUT,value);
   }

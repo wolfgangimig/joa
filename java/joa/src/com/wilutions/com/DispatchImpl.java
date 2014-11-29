@@ -10,6 +10,8 @@
  */
 package com.wilutions.com;
 
+import java.util.function.Consumer;
+
 /**
  * This class is the base class for IDispatch implementations in Java. The
  * native library finds via reflection the implemented interfaces and makes them
@@ -33,6 +35,13 @@ public class DispatchImpl implements IDispatch {
 
 	public ConnectionPointContainer getConnectionPointContainer() {
 		return connectionPointContainer;
+	}
+	
+	public <T extends IUnknown> void _fireEvent(Class<T> listenerClass, Consumer<T> action) {
+		ConnectionPoint<T> listeners = getConnectionPointContainer().findConnectionPoint(listenerClass);
+		if (listeners != null) {
+			listeners.forEach(action);
+		}
 	}
 
 	public static void initLogger(String logFile, String logLevel, boolean append) {

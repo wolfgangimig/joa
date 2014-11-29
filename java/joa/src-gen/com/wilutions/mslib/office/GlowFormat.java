@@ -12,8 +12,8 @@ public interface GlowFormat extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public Float getRadius() throws ComException;
-  @DeclDISPID(1)  public void setRadius(Float value) throws ComException;
+  @DeclDISPID(1)  public void setRadius(final Float value) throws ComException;
   @DeclDISPID(2)  public ColorFormat getColor() throws ComException;
   @DeclDISPID(3)  public Float getTransparency() throws ComException;
-  @DeclDISPID(3)  public void setTransparency(Float value) throws ComException;
+  @DeclDISPID(3)  public void setTransparency(final Float value) throws ComException;
 }

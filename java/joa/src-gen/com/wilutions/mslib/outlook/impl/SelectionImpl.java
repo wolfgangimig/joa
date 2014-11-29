@@ -30,7 +30,7 @@ public class SelectionImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -41,7 +41,7 @@ public class SelectionImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlSelectionLocation.valueOf((Integer)obj);
   }
-  @DeclDISPID(8706)  public com.wilutions.mslib.outlook.Selection GetSelection(com.wilutions.mslib.outlook.OlSelectionContents SelectionContents) throws ComException {
+  @DeclDISPID(8706)  public com.wilutions.mslib.outlook.Selection GetSelection(final com.wilutions.mslib.outlook.OlSelectionContents SelectionContents) throws ComException {
     assert(SelectionContents != null);
     final Object obj = this._dispatchCall(8706,"GetSelection", DISPATCH_METHOD,null,SelectionContents.value);
     if (obj == null) return null;

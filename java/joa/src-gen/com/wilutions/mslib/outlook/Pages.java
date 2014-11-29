@@ -14,7 +14,7 @@ public interface Pages extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException;
-  @DeclDISPID(300)  public IDispatch Add(Object Name) throws ComException;
-  @DeclDISPID(301)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException;
+  @DeclDISPID(300)  public IDispatch Add(final Object Name) throws ComException;
+  @DeclDISPID(301)  public void Remove(final Integer Index) throws ComException;
 }

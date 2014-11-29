@@ -11,6 +11,6 @@ public interface IDeviceCollection extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public IDevice getItem(Integer _index) throws ComException;
-  @DeclDISPID(1610743811)  public Integer IndexOf(IDevice _device) throws ComException;
+  @DeclDISPID(0)  public IDevice getItem(final Integer _index) throws ComException;
+  @DeclDISPID(1610743811)  public Integer IndexOf(final IDevice _device) throws ComException;
 }

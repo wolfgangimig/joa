@@ -30,18 +30,18 @@ public class LinksImpl extends Dispatch implements com.wilutions.mslib.outlook.L
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Link Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Link Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.LinkImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.Link Add(IDispatch Item) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.Link Add(final IDispatch Item) throws ComException {
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.LinkImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

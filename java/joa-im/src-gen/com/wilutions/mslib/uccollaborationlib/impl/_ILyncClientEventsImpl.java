@@ -5,25 +5,25 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{55AD7E59-5159-9A57-31B5-6AC6160CC140}")
 public class _ILyncClientEventsImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._ILyncClientEvents {
-  @DeclDISPID(100)  public void onOnStateChanged(com.wilutions.mslib.uccollaborationlib.IClient _eventSource, com.wilutions.mslib.uccollaborationlib.IClientStateChangedEventData _eventData) throws ComException {
+  @DeclDISPID(100)  public void onOnStateChanged(final com.wilutions.mslib.uccollaborationlib.IClient _eventSource, final com.wilutions.mslib.uccollaborationlib.IClientStateChangedEventData _eventData) throws ComException {
     this._dispatchCall(100,"OnStateChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(101)  public void onOnNotificationReceived(com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, com.wilutions.mslib.uccollaborationlib.ILyncClientNotificationReceivedEventData _eventData) throws ComException {
+  @DeclDISPID(101)  public void onOnNotificationReceived(final com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, final com.wilutions.mslib.uccollaborationlib.ILyncClientNotificationReceivedEventData _eventData) throws ComException {
     this._dispatchCall(101,"OnNotificationReceived", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(103)  public void onOnCredentialRequested(com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, com.wilutions.mslib.uccollaborationlib.ICredentialRequestedEventData _eventData) throws ComException {
+  @DeclDISPID(103)  public void onOnCredentialRequested(final com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, final com.wilutions.mslib.uccollaborationlib.ICredentialRequestedEventData _eventData) throws ComException {
     this._dispatchCall(103,"OnCredentialRequested", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(102)  public void onOnSignInDelayed(com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, com.wilutions.mslib.uccollaborationlib.ISignInDelayedEventData _eventData) throws ComException {
+  @DeclDISPID(102)  public void onOnSignInDelayed(final com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, final com.wilutions.mslib.uccollaborationlib.ISignInDelayedEventData _eventData) throws ComException {
     this._dispatchCall(102,"OnSignInDelayed", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(105)  public void onOnCapabilitiesChanged(com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, com.wilutions.mslib.uccollaborationlib.IPreferredCapabilitiesChangedEventData _eventData) throws ComException {
+  @DeclDISPID(105)  public void onOnCapabilitiesChanged(final com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, final com.wilutions.mslib.uccollaborationlib.IPreferredCapabilitiesChangedEventData _eventData) throws ComException {
     this._dispatchCall(105,"OnCapabilitiesChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(106)  public void onOnDelegatorClientAdded(com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, com.wilutions.mslib.uccollaborationlib.IDelegatorClientCollectionEventData _eventData) throws ComException {
+  @DeclDISPID(106)  public void onOnDelegatorClientAdded(final com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, final com.wilutions.mslib.uccollaborationlib.IDelegatorClientCollectionEventData _eventData) throws ComException {
     this._dispatchCall(106,"OnDelegatorClientAdded", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(107)  public void onOnDelegatorClientRemoved(com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, com.wilutions.mslib.uccollaborationlib.IDelegatorClientCollectionEventData _eventData) throws ComException {
+  @DeclDISPID(107)  public void onOnDelegatorClientRemoved(final com.wilutions.mslib.uccollaborationlib.ILyncClient _eventSource, final com.wilutions.mslib.uccollaborationlib.IDelegatorClientCollectionEventData _eventData) throws ComException {
     this._dispatchCall(107,"OnDelegatorClientRemoved", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
   public _ILyncClientEventsImpl(String progId) throws ComException {

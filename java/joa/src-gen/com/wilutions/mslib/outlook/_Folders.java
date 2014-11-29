@@ -14,11 +14,11 @@ public interface _Folders extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public MAPIFolder Item(Object Index) throws ComException;
-  @DeclDISPID(95)  public MAPIFolder Add(String Name, Object Type) throws ComException;
+  @DeclDISPID(81)  public MAPIFolder Item(final Object Index) throws ComException;
+  @DeclDISPID(95)  public MAPIFolder Add(final String Name, final Object Type) throws ComException;
   @DeclDISPID(86)  public MAPIFolder GetFirst() throws ComException;
   @DeclDISPID(88)  public MAPIFolder GetLast() throws ComException;
   @DeclDISPID(87)  public MAPIFolder GetNext() throws ComException;
   @DeclDISPID(89)  public MAPIFolder GetPrevious() throws ComException;
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException;
 }

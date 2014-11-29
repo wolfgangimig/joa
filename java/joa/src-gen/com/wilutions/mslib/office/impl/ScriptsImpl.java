@@ -30,13 +30,13 @@ public class ScriptsImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.Script Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.Script Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ScriptImpl.class);
   }
-  @DeclDISPID(1610809348)  public com.wilutions.mslib.office.Script Add(IDispatch Anchor, com.wilutions.mslib.office.MsoScriptLocation Location, com.wilutions.mslib.office.MsoScriptLanguage Language, String Id, String Extended, String ScriptText) throws ComException {
+  @DeclDISPID(1610809348)  public com.wilutions.mslib.office.Script Add(final IDispatch Anchor, final com.wilutions.mslib.office.MsoScriptLocation Location, final com.wilutions.mslib.office.MsoScriptLanguage Language, final String Id, final String Extended, final String ScriptText) throws ComException {
     assert(Location != null);
     assert(Language != null);
     assert(Id != null);

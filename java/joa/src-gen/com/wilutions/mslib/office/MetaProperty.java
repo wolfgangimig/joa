@@ -12,7 +12,7 @@ public interface MetaProperty extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public Object getValue() throws ComException;
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException;
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException;
   @DeclDISPID(1)  public String getName() throws ComException;
   @DeclDISPID(2)  public String getId() throws ComException;
   @DeclDISPID(3)  public Boolean getIsReadOnly() throws ComException;

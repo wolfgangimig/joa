@@ -5,13 +5,13 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{E595C270-A4E7-9F90-2E2D-F61B3F6E5737}")
 public class _IConversationManagerEventsImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IConversationManagerEvents {
-  @DeclDISPID(900)  public void onOnConversationAdded(com.wilutions.mslib.uccollaborationlib.IConversationManager _eventSource, com.wilutions.mslib.uccollaborationlib.IConversationManagerEventData _eventData) throws ComException {
+  @DeclDISPID(900)  public void onOnConversationAdded(final com.wilutions.mslib.uccollaborationlib.IConversationManager _eventSource, final com.wilutions.mslib.uccollaborationlib.IConversationManagerEventData _eventData) throws ComException {
     this._dispatchCall(900,"OnConversationAdded", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(901)  public void onOnConversationRemoved(com.wilutions.mslib.uccollaborationlib.IConversationManager _eventSource, com.wilutions.mslib.uccollaborationlib.IConversationManagerEventData _eventData) throws ComException {
+  @DeclDISPID(901)  public void onOnConversationRemoved(final com.wilutions.mslib.uccollaborationlib.IConversationManager _eventSource, final com.wilutions.mslib.uccollaborationlib.IConversationManagerEventData _eventData) throws ComException {
     this._dispatchCall(901,"OnConversationRemoved", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(902)  public void onOnSummarizerStatesChanged(com.wilutions.mslib.uccollaborationlib.IConversationManager _eventSource, com.wilutions.mslib.uccollaborationlib.ISummarizerStatesChangedEventData _eventData) throws ComException {
+  @DeclDISPID(902)  public void onOnSummarizerStatesChanged(final com.wilutions.mslib.uccollaborationlib.IConversationManager _eventSource, final com.wilutions.mslib.uccollaborationlib.ISummarizerStatesChangedEventData _eventData) throws ComException {
     this._dispatchCall(902,"OnSummarizerStatesChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
   public _IConversationManagerEventsImpl(String progId) throws ComException {

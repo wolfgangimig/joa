@@ -12,11 +12,11 @@ public interface SharedWorkspaceLink extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public String getURL() throws ComException;
-  @DeclDISPID(0)  public void setURL(String value) throws ComException;
+  @DeclDISPID(0)  public void setURL(final String value) throws ComException;
   @DeclDISPID(1)  public String getDescription() throws ComException;
-  @DeclDISPID(1)  public void setDescription(String value) throws ComException;
+  @DeclDISPID(1)  public void setDescription(final String value) throws ComException;
   @DeclDISPID(2)  public String getNotes() throws ComException;
-  @DeclDISPID(2)  public void setNotes(String value) throws ComException;
+  @DeclDISPID(2)  public void setNotes(final String value) throws ComException;
   @DeclDISPID(3)  public String getCreatedBy() throws ComException;
   @DeclDISPID(4)  public Object getCreatedDate() throws ComException;
   @DeclDISPID(5)  public String getModifiedBy() throws ComException;

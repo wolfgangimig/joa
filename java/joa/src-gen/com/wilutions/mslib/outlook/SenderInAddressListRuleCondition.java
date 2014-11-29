@@ -34,7 +34,7 @@ public class SenderInAddressListRuleCondition extends Dispatch implements _Sende
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class SenderInAddressListRuleCondition extends Dispatch implements _Sende
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
-  @DeclDISPID(64327)  public void setAddressList(AddressList value) throws ComException {
+  @DeclDISPID(64327)  public void setAddressList(final AddressList value) throws ComException {
     this._dispatchCall(64327,"AddressList", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public SenderInAddressListRuleCondition() throws ComException {

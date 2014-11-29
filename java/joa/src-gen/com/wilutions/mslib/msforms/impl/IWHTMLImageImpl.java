@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{95854878-F8A5-CA8E-10C9-694DA54A32E7}")
 public class IWHTMLImageImpl extends Dispatch implements com.wilutions.mslib.msforms.IWHTMLImage {
-  @DeclDISPID(601)  public void setAction(String value) throws ComException {
+  @DeclDISPID(601)  public void setAction(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(601,"Action", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IWHTMLImageImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(606)  public void setSource(String value) throws ComException {
+  @DeclDISPID(606)  public void setSource(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(606,"Source", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IWHTMLImageImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(603)  public void setEncoding(String value) throws ComException {
+  @DeclDISPID(603)  public void setEncoding(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(603,"Encoding", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IWHTMLImageImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(604)  public void setMethod(String value) throws ComException {
+  @DeclDISPID(604)  public void setMethod(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(604,"Method", DISPATCH_PROPERTYPUT,value);
   }
@@ -41,7 +41,7 @@ public class IWHTMLImageImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }

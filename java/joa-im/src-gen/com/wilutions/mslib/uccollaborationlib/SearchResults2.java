@@ -14,7 +14,7 @@ public class SearchResults2 extends Dispatch implements ISearchResults2 {
     if (obj == null) return null;
     return (Object[])obj;
   }
-  @DeclDISPID(268435458)  public void GetPartialResults(ByRef<ISearchResult[]> _results, ByRef<Boolean> insert, ByRef<Integer> index) throws ComException {
+  @DeclDISPID(268435458)  public void GetPartialResults(final ByRef<ISearchResult[]> _results, final ByRef<Boolean> insert, final ByRef<Integer> index) throws ComException {
     assert(_results != null);
     assert(insert != null);
     assert(index != null);

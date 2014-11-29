@@ -32,7 +32,7 @@ public class TableView extends Dispatch implements _TableView {
   @DeclDISPID(407)  public void Apply() throws ComException {
     this._dispatchCall(407,"Apply", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61490)  public View Copy(String Name, OlViewSaveOption SaveOption) throws ComException {
+  @DeclDISPID(61490)  public View Copy(final String Name, final OlViewSaveOption SaveOption) throws ComException {
     assert(Name != null);
     assert(SaveOption != null);
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null,Name,SaveOption.value);
@@ -53,7 +53,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64065)  public void setLanguage(String value) throws ComException {
+  @DeclDISPID(64065)  public void setLanguage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64065,"Language", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64064)  public void setLockUserChanges(Boolean value) throws ComException {
+  @DeclDISPID(64064)  public void setLockUserChanges(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64064,"LockUserChanges", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -95,11 +95,11 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64060)  public void setXML(String value) throws ComException {
+  @DeclDISPID(64060)  public void setXML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64060,"XML", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64054)  public void GoToDate(java.util.Date Date) throws ComException {
+  @DeclDISPID(64054)  public void GoToDate(final java.util.Date Date) throws ComException {
     assert(Date != null);
     this._dispatchCall(64054,"GoToDate", DISPATCH_METHOD,null,Date);
   }
@@ -108,7 +108,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(409)  public void setFilter(String value) throws ComException {
+  @DeclDISPID(409)  public void setFilter(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(409,"Filter", DISPATCH_PROPERTYPUT,value);
   }
@@ -135,7 +135,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64347)  public void setMaxLinesInMultiLineView(Integer value) throws ComException {
+  @DeclDISPID(64347)  public void setMaxLinesInMultiLineView(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64347,"MaxLinesInMultiLineView", DISPATCH_PROPERTYPUT,value);
   }
@@ -144,7 +144,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64345)  public void setAutomaticGrouping(Boolean value) throws ComException {
+  @DeclDISPID(64345)  public void setAutomaticGrouping(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64345,"AutomaticGrouping", DISPATCH_PROPERTYPUT,value);
   }
@@ -153,7 +153,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return OlDefaultExpandCollapseSetting.valueOf((Integer)obj);
   }
-  @DeclDISPID(64384)  public void setDefaultExpandCollapseSetting(OlDefaultExpandCollapseSetting value) throws ComException {
+  @DeclDISPID(64384)  public void setDefaultExpandCollapseSetting(final OlDefaultExpandCollapseSetting value) throws ComException {
     assert(value != null);
     this._dispatchCall(64384,"DefaultExpandCollapseSetting", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -162,7 +162,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64348)  public void setAutomaticColumnSizing(Boolean value) throws ComException {
+  @DeclDISPID(64348)  public void setAutomaticColumnSizing(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64348,"AutomaticColumnSizing", DISPATCH_PROPERTYPUT,value);
   }
@@ -171,7 +171,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return OlMultiLine.valueOf((Integer)obj);
   }
-  @DeclDISPID(64349)  public void setMultiLine(OlMultiLine value) throws ComException {
+  @DeclDISPID(64349)  public void setMultiLine(final OlMultiLine value) throws ComException {
     assert(value != null);
     this._dispatchCall(64349,"MultiLine", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -180,7 +180,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64350)  public void setMultiLineWidth(Integer value) throws ComException {
+  @DeclDISPID(64350)  public void setMultiLineWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64350,"MultiLineWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -189,7 +189,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64351)  public void setAllowInCellEditing(Boolean value) throws ComException {
+  @DeclDISPID(64351)  public void setAllowInCellEditing(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64351,"AllowInCellEditing", DISPATCH_PROPERTYPUT,value);
   }
@@ -198,7 +198,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64352)  public void setShowNewItemRow(Boolean value) throws ComException {
+  @DeclDISPID(64352)  public void setShowNewItemRow(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64352,"ShowNewItemRow", DISPATCH_PROPERTYPUT,value);
   }
@@ -207,7 +207,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return OlGridLineStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(64353)  public void setGridLineStyle(OlGridLineStyle value) throws ComException {
+  @DeclDISPID(64353)  public void setGridLineStyle(final OlGridLineStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(64353,"GridLineStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -216,7 +216,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64354)  public void setShowItemsInGroups(Boolean value) throws ComException {
+  @DeclDISPID(64354)  public void setShowItemsInGroups(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64354,"ShowItemsInGroups", DISPATCH_PROPERTYPUT,value);
   }
@@ -225,7 +225,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64355)  public void setShowReadingPane(Boolean value) throws ComException {
+  @DeclDISPID(64355)  public void setShowReadingPane(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64355,"ShowReadingPane", DISPATCH_PROPERTYPUT,value);
   }
@@ -234,7 +234,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64356)  public void setHideReadingPaneHeaderInfo(Boolean value) throws ComException {
+  @DeclDISPID(64356)  public void setHideReadingPaneHeaderInfo(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64356,"HideReadingPaneHeaderInfo", DISPATCH_PROPERTYPUT,value);
   }
@@ -261,7 +261,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return OlAutoPreview.valueOf((Integer)obj);
   }
-  @DeclDISPID(64376)  public void setAutoPreview(OlAutoPreview value) throws ComException {
+  @DeclDISPID(64376)  public void setAutoPreview(final OlAutoPreview value) throws ComException {
     assert(value != null);
     this._dispatchCall(64376,"AutoPreview", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -282,7 +282,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64640)  public void setShowConversationByDate(Boolean value) throws ComException {
+  @DeclDISPID(64640)  public void setShowConversationByDate(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64640,"ShowConversationByDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -291,7 +291,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64641)  public void setShowFullConversations(Boolean value) throws ComException {
+  @DeclDISPID(64641)  public void setShowFullConversations(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64641,"ShowFullConversations", DISPATCH_PROPERTYPUT,value);
   }
@@ -300,7 +300,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64643)  public void setAlwaysExpandConversation(Boolean value) throws ComException {
+  @DeclDISPID(64643)  public void setAlwaysExpandConversation(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64643,"AlwaysExpandConversation", DISPATCH_PROPERTYPUT,value);
   }
@@ -309,7 +309,7 @@ public class TableView extends Dispatch implements _TableView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64649)  public void setShowConversationSendersAboveSubject(Boolean value) throws ComException {
+  @DeclDISPID(64649)  public void setShowConversationSendersAboveSubject(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64649,"ShowConversationSendersAboveSubject", DISPATCH_PROPERTYPUT,value);
   }

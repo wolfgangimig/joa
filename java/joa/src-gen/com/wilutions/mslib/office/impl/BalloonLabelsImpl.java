@@ -25,7 +25,7 @@ public class BalloonLabelsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(0)  public IDispatch getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public IDispatch getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -36,7 +36,7 @@ public class BalloonLabelsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809347)  public void setCount(Integer value) throws ComException {
+  @DeclDISPID(1610809347)  public void setCount(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809347,"Count", DISPATCH_PROPERTYPUT,value);
   }

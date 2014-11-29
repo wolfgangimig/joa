@@ -9,6 +9,6 @@ import com.wilutions.com.*;
 @CoInterface(guid="{000630F8-0000-0000-C000-000000000046}")
 public interface StoresEvents_12 extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(64433)  public void onBeforeStoreRemove(_Store Store, ByRef<Boolean> Cancel) throws ComException;
-  @DeclDISPID(61441)  public void onStoreAdd(_Store Store) throws ComException;
+  @DeclDISPID(64433)  public void onBeforeStoreRemove(final _Store Store, final ByRef<Boolean> Cancel) throws ComException;
+  @DeclDISPID(61441)  public void onStoreAdd(final _Store Store) throws ComException;
 }

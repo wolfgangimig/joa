@@ -28,7 +28,7 @@ public class TabStop2Impl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(3)  public void setPosition(Float value) throws ComException {
+  @DeclDISPID(3)  public void setPosition(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Position", DISPATCH_PROPERTYPUT,value);
   }
@@ -37,7 +37,7 @@ public class TabStop2Impl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTabStopType.valueOf((Integer)obj);
   }
-  @DeclDISPID(4)  public void setType(com.wilutions.mslib.office.MsoTabStopType value) throws ComException {
+  @DeclDISPID(4)  public void setType(final com.wilutions.mslib.office.MsoTabStopType value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Type", DISPATCH_PROPERTYPUT,value.value);
   }

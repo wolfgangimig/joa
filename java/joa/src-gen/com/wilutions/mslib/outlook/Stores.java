@@ -34,7 +34,7 @@ public class Stores extends Dispatch implements _Stores {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _Store Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public _Store Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

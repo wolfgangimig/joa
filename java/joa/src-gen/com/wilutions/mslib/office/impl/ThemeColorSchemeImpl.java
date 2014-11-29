@@ -25,7 +25,7 @@ public class ThemeColorSchemeImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.ThemeColor Colors(com.wilutions.mslib.office.MsoThemeColorSchemeIndex Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.ThemeColor Colors(final com.wilutions.mslib.office.MsoThemeColorSchemeIndex Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Colors", DISPATCH_METHOD,null,Index.value);
     if (obj == null) return null;
@@ -36,15 +36,15 @@ public class ThemeColorSchemeImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(3)  public void Load(String FileName) throws ComException {
+  @DeclDISPID(3)  public void Load(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(3,"Load", DISPATCH_METHOD,null,FileName);
   }
-  @DeclDISPID(4)  public void Save(String FileName) throws ComException {
+  @DeclDISPID(4)  public void Save(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(4,"Save", DISPATCH_METHOD,null,FileName);
   }
-  @DeclDISPID(5)  public com.wilutions.mslib.office.MsoRGBType GetCustomColor(String Name) throws ComException {
+  @DeclDISPID(5)  public com.wilutions.mslib.office.MsoRGBType GetCustomColor(final String Name) throws ComException {
     assert(Name != null);
     final Object obj = this._dispatchCall(5,"GetCustomColor", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;

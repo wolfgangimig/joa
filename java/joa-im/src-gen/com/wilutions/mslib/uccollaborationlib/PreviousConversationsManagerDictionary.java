@@ -14,7 +14,7 @@ public class PreviousConversationsManagerDictionary extends Dispatch implements 
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public IPreviousConversationsManager getItem(PreviousConversationsType _key) throws ComException {
+  @DeclDISPID(0)  public IPreviousConversationsManager getItem(final PreviousConversationsType _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_key.value);
     if (obj == null) return null;
@@ -30,26 +30,26 @@ public class PreviousConversationsManagerDictionary extends Dispatch implements 
     if (obj == null) return null;
     return (IPreviousConversationsManager[])obj;
   }
-  @DeclDISPID(1610743812)  public PreviousConversationsType GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743812)  public PreviousConversationsType GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743812,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return PreviousConversationsType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743813)  public IPreviousConversationsManager GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743813)  public IPreviousConversationsManager GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743813,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IPreviousConversationsManagerImpl.class);
   }
-  @DeclDISPID(1610743814)  public Boolean TryGetValue(PreviousConversationsType _type, ByRef<IPreviousConversationsManager> _pastConversations) throws ComException {
+  @DeclDISPID(1610743814)  public Boolean TryGetValue(final PreviousConversationsType _type, final ByRef<IPreviousConversationsManager> _pastConversations) throws ComException {
     assert(_type != null);
     assert(_pastConversations != null);
     final Object obj = this._dispatchCall(1610743814,"TryGetValue", DISPATCH_METHOD,null,_type.value,_pastConversations);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(PreviousConversationsType _type) throws ComException {
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final PreviousConversationsType _type) throws ComException {
     assert(_type != null);
     final Object obj = this._dispatchCall(1610743815,"ContainsKey", DISPATCH_METHOD,null,_type.value);
     if (obj == null) return null;

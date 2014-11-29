@@ -30,7 +30,7 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809346)  public void setFilterIndex(Integer value) throws ComException {
+  @DeclDISPID(1610809346)  public void setFilterIndex(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809346,"FilterIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809348)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(1610809348)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809348,"Title", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809350)  public void setButtonName(String value) throws ComException {
+  @DeclDISPID(1610809350)  public void setButtonName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809350,"ButtonName", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809352)  public void setAllowMultiSelect(Boolean value) throws ComException {
+  @DeclDISPID(1610809352)  public void setAllowMultiSelect(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809352,"AllowMultiSelect", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoFileDialogView.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809354)  public void setInitialView(com.wilutions.mslib.office.MsoFileDialogView value) throws ComException {
+  @DeclDISPID(1610809354)  public void setInitialView(final com.wilutions.mslib.office.MsoFileDialogView value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809354,"InitialView", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -75,7 +75,7 @@ public class FileDialogImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809356)  public void setInitialFileName(String value) throws ComException {
+  @DeclDISPID(1610809356)  public void setInitialFileName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809356,"InitialFileName", DISPATCH_PROPERTYPUT,value);
   }

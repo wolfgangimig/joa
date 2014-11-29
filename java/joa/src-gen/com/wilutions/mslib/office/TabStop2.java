@@ -14,7 +14,7 @@ public interface TabStop2 extends IDispatch {
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public void Clear() throws ComException;
   @DeclDISPID(3)  public Float getPosition() throws ComException;
-  @DeclDISPID(3)  public void setPosition(Float value) throws ComException;
+  @DeclDISPID(3)  public void setPosition(final Float value) throws ComException;
   @DeclDISPID(4)  public MsoTabStopType getType() throws ComException;
-  @DeclDISPID(4)  public void setType(MsoTabStopType value) throws ComException;
+  @DeclDISPID(4)  public void setType(final MsoTabStopType value) throws ComException;
 }

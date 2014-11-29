@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E4C-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.office.IMsoChartGroup {
-  @DeclDISPID(1610743808)  public void setAxisGroup(Integer value) throws ComException {
+  @DeclDISPID(1610743808)  public void setAxisGroup(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"AxisGroup", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743810)  public void setDoughnutHoleSize(Integer value) throws ComException {
+  @DeclDISPID(1610743810)  public void setDoughnutHoleSize(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743810,"DoughnutHoleSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -33,7 +33,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoDropLinesImpl.class);
   }
-  @DeclDISPID(1610743814)  public void setFirstSliceAngle(Integer value) throws ComException {
+  @DeclDISPID(1610743814)  public void setFirstSliceAngle(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"FirstSliceAngle", DISPATCH_PROPERTYPUT,value);
   }
@@ -42,7 +42,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743816)  public void setGapWidth(Integer value) throws ComException {
+  @DeclDISPID(1610743816)  public void setGapWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"GapWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -51,7 +51,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743818)  public void setHasDropLines(Boolean value) throws ComException {
+  @DeclDISPID(1610743818)  public void setHasDropLines(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743818,"HasDropLines", DISPATCH_PROPERTYPUT,value);
   }
@@ -60,7 +60,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743820)  public void setHasHiLoLines(Boolean value) throws ComException {
+  @DeclDISPID(1610743820)  public void setHasHiLoLines(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743820,"HasHiLoLines", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743822)  public void setHasRadarAxisLabels(Boolean value) throws ComException {
+  @DeclDISPID(1610743822)  public void setHasRadarAxisLabels(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743822,"HasRadarAxisLabels", DISPATCH_PROPERTYPUT,value);
   }
@@ -78,7 +78,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743824)  public void setHasSeriesLines(Boolean value) throws ComException {
+  @DeclDISPID(1610743824)  public void setHasSeriesLines(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743824,"HasSeriesLines", DISPATCH_PROPERTYPUT,value);
   }
@@ -87,7 +87,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743826)  public void setHasUpDownBars(Boolean value) throws ComException {
+  @DeclDISPID(1610743826)  public void setHasUpDownBars(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743826,"HasUpDownBars", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743830)  public void setOverlap(Integer value) throws ComException {
+  @DeclDISPID(1610743830)  public void setOverlap(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743830,"Overlap", DISPATCH_PROPERTYPUT,value);
   }
@@ -120,7 +120,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610743833)  public IDispatch SeriesCollection(Object Index) throws ComException {
+  @DeclDISPID(1610743833)  public IDispatch SeriesCollection(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(1610743833,"SeriesCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -136,7 +136,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoUpBarsImpl.class);
   }
-  @DeclDISPID(1610743840)  public void setVaryByCategories(Boolean value) throws ComException {
+  @DeclDISPID(1610743840)  public void setVaryByCategories(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743840,"VaryByCategories", DISPATCH_PROPERTYPUT,value);
   }
@@ -150,11 +150,11 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlSizeRepresents.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743842)  public void setSizeRepresents(com.wilutions.mslib.office.XlSizeRepresents value) throws ComException {
+  @DeclDISPID(1610743842)  public void setSizeRepresents(final com.wilutions.mslib.office.XlSizeRepresents value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743842,"SizeRepresents", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(1610743844)  public void setBubbleScale(Integer value) throws ComException {
+  @DeclDISPID(1610743844)  public void setBubbleScale(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743844,"BubbleScale", DISPATCH_PROPERTYPUT,value);
   }
@@ -163,7 +163,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743846)  public void setShowNegativeBubbles(Boolean value) throws ComException {
+  @DeclDISPID(1610743846)  public void setShowNegativeBubbles(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743846,"ShowNegativeBubbles", DISPATCH_PROPERTYPUT,value);
   }
@@ -172,7 +172,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743848)  public void setSplitType(com.wilutions.mslib.office.XlChartSplitType value) throws ComException {
+  @DeclDISPID(1610743848)  public void setSplitType(final com.wilutions.mslib.office.XlChartSplitType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743848,"SplitType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -186,7 +186,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743850)  public void setSplitValue(Object value) throws ComException {
+  @DeclDISPID(1610743850)  public void setSplitValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743850,"SplitValue", DISPATCH_PROPERTYPUT,value);
   }
@@ -195,7 +195,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743852)  public void setSecondPlotSize(Integer value) throws ComException {
+  @DeclDISPID(1610743852)  public void setSecondPlotSize(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743852,"SecondPlotSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -204,7 +204,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743854)  public void setHas3DShading(Boolean value) throws ComException {
+  @DeclDISPID(1610743854)  public void setHas3DShading(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743854,"Has3DShading", DISPATCH_PROPERTYPUT,value);
   }
@@ -223,13 +223,13 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(151)  public IDispatch CategoryCollection(Object Index) throws ComException {
+  @DeclDISPID(151)  public IDispatch CategoryCollection(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(151,"CategoryCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(152)  public IDispatch FullCategoryCollection(Object Index) throws ComException {
+  @DeclDISPID(152)  public IDispatch FullCategoryCollection(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(152,"FullCategoryCollection", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

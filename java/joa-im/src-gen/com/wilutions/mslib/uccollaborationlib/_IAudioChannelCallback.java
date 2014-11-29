@@ -9,5 +9,5 @@ import com.wilutions.com.*;
 @CoInterface(guid="{95B9A382-EA50-45E4-965E-BA61E7213DBA}")
 public interface _IAudioChannelCallback extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(1260)  public void OnSendDtmf(IAudioChannel _source, IAsynchronousOperation _asyncOperation) throws ComException;
+  @DeclDISPID(1260)  public void OnSendDtmf(final IAudioChannel _source, final IAsynchronousOperation _asyncOperation) throws ComException;
 }

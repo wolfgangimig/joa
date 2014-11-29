@@ -14,9 +14,9 @@ public interface _UserDefinedProperties extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public _UserDefinedProperty Item(Object Index) throws ComException;
-  @DeclDISPID(102)  public UserDefinedProperty Add(String Name, OlUserPropertyType Type, Object DisplayFormat, Object Formula) throws ComException;
-  @DeclDISPID(103)  public UserDefinedProperty Find(String Name) throws ComException;
-  @DeclDISPID(82)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(81)  public _UserDefinedProperty Item(final Object Index) throws ComException;
+  @DeclDISPID(102)  public UserDefinedProperty Add(final String Name, final OlUserPropertyType Type, final Object DisplayFormat, final Object Formula) throws ComException;
+  @DeclDISPID(103)  public UserDefinedProperty Find(final String Name) throws ComException;
+  @DeclDISPID(82)  public void Remove(final Integer Index) throws ComException;
   @DeclDISPID(64069)  public void Refresh() throws ComException;
 }

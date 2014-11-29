@@ -14,8 +14,8 @@ public interface Recipients extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Recipient Item(Object Index) throws ComException;
-  @DeclDISPID(111)  public Recipient Add(String Name) throws ComException;
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(81)  public Recipient Item(final Object Index) throws ComException;
+  @DeclDISPID(111)  public Recipient Add(final String Name) throws ComException;
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException;
   @DeclDISPID(126)  public Boolean ResolveAll() throws ComException;
 }

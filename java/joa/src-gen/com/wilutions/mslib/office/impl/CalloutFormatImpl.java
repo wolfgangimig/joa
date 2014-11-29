@@ -23,15 +23,15 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(10)  public void AutomaticLength() throws ComException {
     this._dispatchCall(10,"AutomaticLength", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(11)  public void CustomDrop(Float Drop) throws ComException {
+  @DeclDISPID(11)  public void CustomDrop(final Float Drop) throws ComException {
     assert(Drop != null);
     this._dispatchCall(11,"CustomDrop", DISPATCH_METHOD,null,Drop);
   }
-  @DeclDISPID(12)  public void CustomLength(Float Length) throws ComException {
+  @DeclDISPID(12)  public void CustomLength(final Float Length) throws ComException {
     assert(Length != null);
     this._dispatchCall(12,"CustomLength", DISPATCH_METHOD,null,Length);
   }
-  @DeclDISPID(13)  public void PresetDrop(com.wilutions.mslib.office.MsoCalloutDropType DropType) throws ComException {
+  @DeclDISPID(13)  public void PresetDrop(final com.wilutions.mslib.office.MsoCalloutDropType DropType) throws ComException {
     assert(DropType != null);
     this._dispatchCall(13,"PresetDrop", DISPATCH_METHOD,null,DropType.value);
   }
@@ -40,7 +40,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(100)  public void setAccent(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(100)  public void setAccent(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"Accent", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -49,7 +49,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoCalloutAngleType.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setAngle(com.wilutions.mslib.office.MsoCalloutAngleType value) throws ComException {
+  @DeclDISPID(101)  public void setAngle(final com.wilutions.mslib.office.MsoCalloutAngleType value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"Angle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -58,7 +58,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(102)  public void setAutoAttach(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(102)  public void setAutoAttach(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"AutoAttach", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -72,7 +72,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(104)  public void setBorder(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(104)  public void setBorder(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"Border", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -91,7 +91,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(107)  public void setGap(Float value) throws ComException {
+  @DeclDISPID(107)  public void setGap(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"Gap", DISPATCH_PROPERTYPUT,value);
   }
@@ -105,7 +105,7 @@ public class CalloutFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoCalloutType.valueOf((Integer)obj);
   }
-  @DeclDISPID(109)  public void setType(com.wilutions.mslib.office.MsoCalloutType value) throws ComException {
+  @DeclDISPID(109)  public void setType(final com.wilutions.mslib.office.MsoCalloutType value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"Type", DISPATCH_PROPERTYPUT,value.value);
   }

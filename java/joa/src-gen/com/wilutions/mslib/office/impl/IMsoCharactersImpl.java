@@ -15,7 +15,7 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(139)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(139)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(139,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFontImpl.class);
   }
-  @DeclDISPID(252)  public Object Insert(String bstr) throws ComException {
+  @DeclDISPID(252)  public Object Insert(final String bstr) throws ComException {
     assert(bstr != null);
     final Object obj = this._dispatchCall(252,"Insert", DISPATCH_METHOD,null,bstr);
     if (obj == null) return null;
@@ -45,7 +45,7 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(138)  public void setText(String value) throws ComException {
+  @DeclDISPID(138)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(138,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -54,7 +54,7 @@ public class IMsoCharactersImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1522)  public void setPhoneticCharacters(String value) throws ComException {
+  @DeclDISPID(1522)  public void setPhoneticCharacters(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1522,"PhoneticCharacters", DISPATCH_PROPERTYPUT,value);
   }

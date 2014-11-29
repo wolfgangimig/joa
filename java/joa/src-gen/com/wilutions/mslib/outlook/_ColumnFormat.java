@@ -14,12 +14,12 @@ public interface _ColumnFormat extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(64030)  public String getLabel() throws ComException;
-  @DeclDISPID(64030)  public void setLabel(String value) throws ComException;
+  @DeclDISPID(64030)  public void setLabel(final String value) throws ComException;
   @DeclDISPID(64396)  public Integer getFieldFormat() throws ComException;
-  @DeclDISPID(64396)  public void setFieldFormat(Integer value) throws ComException;
+  @DeclDISPID(64396)  public void setFieldFormat(final Integer value) throws ComException;
   @DeclDISPID(8471)  public Integer getWidth() throws ComException;
-  @DeclDISPID(8471)  public void setWidth(Integer value) throws ComException;
+  @DeclDISPID(8471)  public void setWidth(final Integer value) throws ComException;
   @DeclDISPID(64034)  public OlAlign getAlign() throws ComException;
-  @DeclDISPID(64034)  public void setAlign(OlAlign value) throws ComException;
+  @DeclDISPID(64034)  public void setAlign(final OlAlign value) throws ComException;
   @DeclDISPID(64398)  public OlUserPropertyType getFieldType() throws ComException;
 }

@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{B980F6D8-1391-CA8F-0A41-694DA59ADB8C}")
 public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msforms.ISpinbutton {
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -15,7 +15,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -25,7 +25,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -43,7 +43,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(0)  public void setValue(Integer value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(100)  public void setMin(Integer value) throws ComException {
+  @DeclDISPID(100)  public void setMin(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"Min", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(101)  public void setMax(Integer value) throws ComException {
+  @DeclDISPID(101)  public void setMax(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"Max", DISPATCH_PROPERTYPUT,value);
   }
@@ -70,7 +70,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(102)  public void setSmallChange(Integer value) throws ComException {
+  @DeclDISPID(102)  public void setSmallChange(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"SmallChange", DISPATCH_PROPERTYPUT,value);
   }
@@ -79,7 +79,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(105)  public void setOrientation(com.wilutions.mslib.msforms.fmOrientation value) throws ComException {
+  @DeclDISPID(105)  public void setOrientation(final com.wilutions.mslib.msforms.fmOrientation value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"Orientation", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -88,7 +88,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmOrientation.valueOf((Integer)obj);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -96,7 +96,7 @@ public class ISpinbuttonImpl extends Dispatch implements com.wilutions.mslib.msf
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(106)  public void setDelay(Integer value) throws ComException {
+  @DeclDISPID(106)  public void setDelay(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"Delay", DISPATCH_PROPERTYPUT,value);
   }

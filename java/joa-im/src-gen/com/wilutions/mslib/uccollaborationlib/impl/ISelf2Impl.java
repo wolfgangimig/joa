@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{FC1AE82D-9189-9A72-2F58-A81B81F65C6B}")
 public class ISelf2Impl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.ISelf2 {
-  @DeclDISPID(268435457)  public com.wilutions.mslib.uccollaborationlib.IAlertLevel GetAlertLevelForNotification(String _senderIdentity, com.wilutions.mslib.uccollaborationlib.NotificationTypes _notificationTypes, com.wilutions.mslib.uccollaborationlib.NotificationUrgencyType _notificationUrgency) throws ComException {
+  @DeclDISPID(268435457)  public com.wilutions.mslib.uccollaborationlib.IAlertLevel GetAlertLevelForNotification(final String _senderIdentity, final com.wilutions.mslib.uccollaborationlib.NotificationTypes _notificationTypes, final com.wilutions.mslib.uccollaborationlib.NotificationUrgencyType _notificationUrgency) throws ComException {
     assert(_senderIdentity != null);
     assert(_notificationTypes != null);
     assert(_notificationUrgency != null);

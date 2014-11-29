@@ -17,6 +17,9 @@ public class RegisterIMProvider {
 		if (asDefault) {
 			String regkeyDef = "HKEY_CURRENT_USER\\Software\\IM Providers";
 			RegUtil.setRegistryValue(regkeyDef, "DefaultIMApp", applicationName);
+			
+			// Logging: http://technet.microsoft.com/en-us/library/ff678502.aspx
+			RegUtil.setRegistryValue(regkeyDef, "OfficePresenceLogging", 1);
 		}
 	}
 	

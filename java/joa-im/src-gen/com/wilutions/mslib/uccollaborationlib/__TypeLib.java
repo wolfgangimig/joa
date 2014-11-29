@@ -1,6 +1,7 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.mslib.uccollaborationlib;
 import com.wilutions.com.__AllClasses;
-public class __TypeLib { 
+class __TypeLib { 
   private static boolean loaded = false;
   public static boolean load() {
     if (loaded) return true;
@@ -45,7 +46,6 @@ public class __TypeLib {
     __AllClasses.registerClass("{57C3CB4D-C794-456F-846D-0E1ECA78BD00}","com.wilutions.mslib.uccollaborationlib.IContactCollection");
     __AllClasses.registerClass("{EE9F3E74-AC61-469E-80D6-E22BF4EEFF5C}","com.wilutions.mslib.uccollaborationlib.IClient");
     __AllClasses.registerClass("{8684D3AD-7061-4056-A894-EBF1270ADB9B}","com.wilutions.mslib.uccollaborationlib._IApplicationSharingModalityCallback");
-    __AllClasses.registerClass("{00000000-0000-0000-0000-000000000000}","com.wilutions.mslib.uccollaborationlib.__MIDL___MIDL_itf_uc_0001_0191_0005");
     __AllClasses.registerClass("{F0CE810F-E36F-4CD8-A836-515B9A6E09FC}","com.wilutions.mslib.uccollaborationlib.IContactInformationDictionary");
     __AllClasses.registerClass("{082EE280-726E-417F-99CB-81A0CCBFF883}","com.wilutions.mslib.uccollaborationlib._IDistributionGroupEvents");
     __AllClasses.registerClass("{E6B3F5FA-4208-4C37-AE07-F6435B68D693}","com.wilutions.mslib.uccollaborationlib.IContactManager");

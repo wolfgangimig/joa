@@ -31,7 +31,7 @@ public class MsoDebugOptions_UTManagerImpl extends Dispatch implements com.wilut
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(3)  public void setReportErrors(Boolean value) throws ComException {
+  @DeclDISPID(3)  public void setReportErrors(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"ReportErrors", DISPATCH_PROPERTYPUT,value);
   }

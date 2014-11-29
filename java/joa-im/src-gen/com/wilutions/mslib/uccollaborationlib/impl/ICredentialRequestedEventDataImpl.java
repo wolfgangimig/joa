@@ -25,13 +25,13 @@ public class ICredentialRequestedEventDataImpl extends Dispatch implements com.w
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743812)  public void Submit(String _domainAndUsername, String _password, Boolean _savePassword) throws ComException {
+  @DeclDISPID(1610743812)  public void Submit(final String _domainAndUsername, final String _password, final Boolean _savePassword) throws ComException {
     assert(_domainAndUsername != null);
     assert(_password != null);
     assert(_savePassword != null);
     this._dispatchCall(1610743812,"Submit", DISPATCH_METHOD,null,_domainAndUsername,_password,_savePassword);
   }
-  @DeclDISPID(1610743813)  public void Cancel(Boolean _cancelForWholeSession) throws ComException {
+  @DeclDISPID(1610743813)  public void Cancel(final Boolean _cancelForWholeSession) throws ComException {
     assert(_cancelForWholeSession != null);
     this._dispatchCall(1610743813,"Cancel", DISPATCH_METHOD,null,_cancelForWholeSession);
   }

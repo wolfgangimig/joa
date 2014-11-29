@@ -30,19 +30,19 @@ public class _NavigationFoldersImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._NavigationFolder Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._NavigationFolder Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationFolderImpl.class);
   }
-  @DeclDISPID(64450)  public com.wilutions.mslib.outlook.NavigationFolder Add(com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
+  @DeclDISPID(64450)  public com.wilutions.mslib.outlook.NavigationFolder Add(final com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
     final Object obj = this._dispatchCall(64450,"Add", DISPATCH_METHOD,null,(Folder!=null?Folder:Dispatch.NULL));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.NavigationFolder.class);
   }
-  @DeclDISPID(64451)  public void Remove(com.wilutions.mslib.outlook.NavigationFolder RemovableFolder) throws ComException {
+  @DeclDISPID(64451)  public void Remove(final com.wilutions.mslib.outlook.NavigationFolder RemovableFolder) throws ComException {
     this._dispatchCall(64451,"Remove", DISPATCH_METHOD,null,(RemovableFolder!=null?RemovableFolder:Dispatch.NULL));
   }
   public _NavigationFoldersImpl(String progId) throws ComException {

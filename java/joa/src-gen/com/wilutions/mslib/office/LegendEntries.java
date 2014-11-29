@@ -11,9 +11,9 @@ public interface LegendEntries extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;
-  @DeclDISPID(170)  public LegendEntry Item(Object Index) throws ComException;
+  @DeclDISPID(170)  public LegendEntry Item(final Object Index) throws ComException;
   @DeclDISPID(-4)  public Object _NewEnum() throws ComException;
   @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(0)  public LegendEntry get_Default(Object Index) throws ComException;
+  @DeclDISPID(0)  public LegendEntry get_Default(final Object Index) throws ComException;
 }

@@ -13,9 +13,9 @@ public interface _Row extends IDispatch {
   @DeclDISPID(61450)  public OlObjectClass getClass_() throws ComException;
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(64259)  public String BinaryToString(Object Index) throws ComException;
+  @DeclDISPID(64259)  public String BinaryToString(final Object Index) throws ComException;
   @DeclDISPID(64462)  public Object GetValues() throws ComException;
-  @DeclDISPID(81)  public Object Item(Object Index) throws ComException;
-  @DeclDISPID(64257)  public java.util.Date LocalTimeToUTC(Object Index) throws ComException;
-  @DeclDISPID(64256)  public java.util.Date UTCToLocalTime(Object Index) throws ComException;
+  @DeclDISPID(81)  public Object Item(final Object Index) throws ComException;
+  @DeclDISPID(64257)  public java.util.Date LocalTimeToUTC(final Object Index) throws ComException;
+  @DeclDISPID(64256)  public java.util.Date UTCToLocalTime(final Object Index) throws ComException;
 }

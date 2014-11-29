@@ -30,19 +30,19 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.outlook.P
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(300)  public IDispatch Add(Object Name) throws ComException {
+  @DeclDISPID(300)  public IDispatch Add(final Object Name) throws ComException {
     assert(Name != null);
     final Object obj = this._dispatchCall(300,"Add", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(301)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(301)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(301,"Remove", DISPATCH_METHOD,null,Index);
   }

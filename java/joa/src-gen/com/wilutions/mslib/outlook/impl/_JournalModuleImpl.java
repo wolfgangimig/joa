@@ -40,7 +40,7 @@ public class _JournalModuleImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64442)  public void setPosition(Integer value) throws ComException {
+  @DeclDISPID(64442)  public void setPosition(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64442,"Position", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class _JournalModuleImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64443)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(64443)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64443,"Visible", DISPATCH_PROPERTYPUT,value);
   }

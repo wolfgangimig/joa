@@ -15,7 +15,7 @@ public class PropertyTestsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.PropertyTest getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.PropertyTest getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -26,7 +26,7 @@ public class PropertyTestsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(5)  public void Add(String Name, com.wilutions.mslib.office.MsoCondition Condition, Object Value, Object SecondValue, com.wilutions.mslib.office.MsoConnector Connector) throws ComException {
+  @DeclDISPID(5)  public void Add(final String Name, final com.wilutions.mslib.office.MsoCondition Condition, final Object Value, final Object SecondValue, final com.wilutions.mslib.office.MsoConnector Connector) throws ComException {
     assert(Name != null);
     assert(Condition != null);
     assert(Value != null);
@@ -34,7 +34,7 @@ public class PropertyTestsImpl extends Dispatch implements com.wilutions.mslib.o
     assert(Connector != null);
     this._dispatchCall(5,"Add", DISPATCH_METHOD,null,Name,Condition.value,Value,SecondValue,Connector.value);
   }
-  @DeclDISPID(6)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(6)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(6,"Remove", DISPATCH_METHOD,null,Index);
   }

@@ -15,7 +15,7 @@ public class ChartColorFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1646)  public void setSchemeColor(Integer RHS) throws ComException {
+  @DeclDISPID(1646)  public void setSchemeColor(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1646,"SchemeColor", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -24,7 +24,7 @@ public class ChartColorFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1055)  public void setRGB(Integer RHS) throws ComException {
+  @DeclDISPID(1055)  public void setRGB(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1055,"RGB", DISPATCH_PROPERTYPUT,RHS);
   }

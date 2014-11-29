@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{44A3900F-DC43-95FD-217D-19CE8329DF12}")
 public class _IContentSharingModalityCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IContentSharingModalityCallback {
-  @DeclDISPID(5100)  public void OnCreateContent(com.wilutions.mslib.uccollaborationlib.IContentSharingModality _source, com.wilutions.mslib.uccollaborationlib.IShareableContent _content, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(5100)  public void OnCreateContent(final com.wilutions.mslib.uccollaborationlib.IContentSharingModality _source, final com.wilutions.mslib.uccollaborationlib.IShareableContent _content, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(5100,"OnCreateContent", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_content!=null?_content:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IContentSharingModalityCallbackImpl(String progId) throws ComException {

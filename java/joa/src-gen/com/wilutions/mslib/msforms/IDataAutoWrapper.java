@@ -10,10 +10,10 @@ import com.wilutions.com.*;
 public interface IDataAutoWrapper extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void Clear() throws ComException;
-  @DeclDISPID(1610743809)  public Boolean GetFormat(Object Format) throws ComException;
-  @DeclDISPID(1610743810)  public String GetText(Object Format) throws ComException;
-  @DeclDISPID(1610743811)  public void SetText(String Text, Object Format) throws ComException;
+  @DeclDISPID(1610743809)  public Boolean GetFormat(final Object Format) throws ComException;
+  @DeclDISPID(1610743810)  public String GetText(final Object Format) throws ComException;
+  @DeclDISPID(1610743811)  public void SetText(final String Text, final Object Format) throws ComException;
   @DeclDISPID(1610743812)  public void PutInClipboard() throws ComException;
   @DeclDISPID(1610743813)  public void GetFromClipboard() throws ComException;
-  @DeclDISPID(1610743814)  public fmDropEffect StartDrag(Object OKEffect) throws ComException;
+  @DeclDISPID(1610743814)  public fmDropEffect StartDrag(final Object OKEffect) throws ComException;
 }

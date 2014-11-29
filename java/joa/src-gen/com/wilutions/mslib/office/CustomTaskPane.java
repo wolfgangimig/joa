@@ -29,7 +29,7 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(3)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(3)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Visible", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(5)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(5)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(6)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(6)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     if (obj == null) return null;
     return MsoCTPDockPosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(7)  public void setDockPosition(MsoCTPDockPosition value) throws ComException {
+  @DeclDISPID(7)  public void setDockPosition(final MsoCTPDockPosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"DockPosition", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -70,7 +70,7 @@ public class CustomTaskPane extends Dispatch implements _CustomTaskPane {
     if (obj == null) return null;
     return MsoCTPDockPositionRestrict.valueOf((Integer)obj);
   }
-  @DeclDISPID(8)  public void setDockPositionRestrict(MsoCTPDockPositionRestrict value) throws ComException {
+  @DeclDISPID(8)  public void setDockPositionRestrict(final MsoCTPDockPositionRestrict value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"DockPositionRestrict", DISPATCH_PROPERTYPUT,value.value);
   }

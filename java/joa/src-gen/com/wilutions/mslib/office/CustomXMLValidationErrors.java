@@ -13,7 +13,7 @@ public interface CustomXMLValidationErrors extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public CustomXMLValidationError getItem(Integer Index) throws ComException;
-  @DeclDISPID(1610809347)  public void Add(CustomXMLNode Node, String ErrorName, String ErrorText, Boolean ClearedOnUpdate) throws ComException;
+  @DeclDISPID(0)  public CustomXMLValidationError getItem(final Integer Index) throws ComException;
+  @DeclDISPID(1610809347)  public void Add(final CustomXMLNode Node, final String ErrorName, final String ErrorText, final Boolean ClearedOnUpdate) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
 }

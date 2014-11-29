@@ -35,7 +35,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtLayoutImpl.class);
   }
-  @DeclDISPID(4)  public void setLayout(com.wilutions.mslib.office.SmartArtLayout value) throws ComException {
+  @DeclDISPID(4)  public void setLayout(final com.wilutions.mslib.office.SmartArtLayout value) throws ComException {
     this._dispatchCall(4,"Layout", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(5)  public com.wilutions.mslib.office.SmartArtQuickStyle getQuickStyle() throws ComException {
@@ -43,7 +43,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtQuickStyleImpl.class);
   }
-  @DeclDISPID(5)  public void setQuickStyle(com.wilutions.mslib.office.SmartArtQuickStyle value) throws ComException {
+  @DeclDISPID(5)  public void setQuickStyle(final com.wilutions.mslib.office.SmartArtQuickStyle value) throws ComException {
     this._dispatchCall(5,"QuickStyle", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(6)  public com.wilutions.mslib.office.SmartArtColor getColor() throws ComException {
@@ -51,7 +51,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtColorImpl.class);
   }
-  @DeclDISPID(6)  public void setColor(com.wilutions.mslib.office.SmartArtColor value) throws ComException {
+  @DeclDISPID(6)  public void setColor(final com.wilutions.mslib.office.SmartArtColor value) throws ComException {
     this._dispatchCall(6,"Color", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(7)  public com.wilutions.mslib.office.MsoTriState getReverse() throws ComException {
@@ -59,7 +59,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(7)  public void setReverse(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(7)  public void setReverse(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"Reverse", DISPATCH_PROPERTYPUT,value.value);
   }

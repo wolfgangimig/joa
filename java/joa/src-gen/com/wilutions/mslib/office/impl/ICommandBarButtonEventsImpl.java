@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{956F11FB-D36B-CA90-3145-6987AD61E15F}")
 public class ICommandBarButtonEventsImpl extends Dispatch implements com.wilutions.mslib.office.ICommandBarButtonEvents {
-  @DeclDISPID(1)  public void onClick(com.wilutions.mslib.office.CommandBarButton Ctrl, ByRef<Boolean> CancelDefault) throws ComException {
+  @DeclDISPID(1)  public void onClick(final com.wilutions.mslib.office.CommandBarButton Ctrl, final ByRef<Boolean> CancelDefault) throws ComException {
     assert(CancelDefault != null);
     this._dispatchCall(1,"Click", DISPATCH_METHOD,null,(Ctrl!=null?Ctrl:Dispatch.NULL),CancelDefault);
   }

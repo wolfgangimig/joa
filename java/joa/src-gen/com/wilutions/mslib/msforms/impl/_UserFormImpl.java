@@ -11,7 +11,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -21,7 +21,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-503)  public void setBorderColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-503)  public void setBorderColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-503,"BorderColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -31,7 +31,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -55,7 +55,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-518)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(-518)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-518,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.ControlsImpl.class);
   }
-  @DeclDISPID(260)  public void setCycle(com.wilutions.mslib.msforms.fmCycle value) throws ComException {
+  @DeclDISPID(260)  public void setCycle(final com.wilutions.mslib.msforms.fmCycle value) throws ComException {
     assert(value != null);
     this._dispatchCall(260,"Cycle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -78,7 +78,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmCycle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -87,7 +87,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-512)  public void setFont(com.wilutions.mslib.msforms.Font value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final com.wilutions.mslib.msforms.Font value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
@@ -95,7 +95,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -105,7 +105,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(1610743830)  public void _GetInsideHeight(ByRef<Integer> InsideHeight) throws ComException {
+  @DeclDISPID(1610743830)  public void _GetInsideHeight(final ByRef<Integer> InsideHeight) throws ComException {
     assert(InsideHeight != null);
     this._dispatchCall(1610743830,"_GetInsideHeight", DISPATCH_METHOD,null,InsideHeight);
   }
@@ -114,7 +114,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(1610743832)  public void _GetInsideWidth(ByRef<Integer> InsideWidth) throws ComException {
+  @DeclDISPID(1610743832)  public void _GetInsideWidth(final ByRef<Integer> InsideWidth) throws ComException {
     assert(InsideWidth != null);
     this._dispatchCall(1610743832,"_GetInsideWidth", DISPATCH_METHOD,null,InsideWidth);
   }
@@ -123,7 +123,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(264)  public void setKeepScrollBarsVisible(com.wilutions.mslib.msforms.fmScrollBars value) throws ComException {
+  @DeclDISPID(264)  public void setKeepScrollBarsVisible(final com.wilutions.mslib.msforms.fmScrollBars value) throws ComException {
     assert(value != null);
     this._dispatchCall(264,"KeepScrollBarsVisible", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -132,7 +132,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmScrollBars.valueOf((Integer)obj);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -140,7 +140,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -149,7 +149,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(26)  public void setPictureAlignment(com.wilutions.mslib.msforms.fmPictureAlignment value) throws ComException {
+  @DeclDISPID(26)  public void setPictureAlignment(final com.wilutions.mslib.msforms.fmPictureAlignment value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"PictureAlignment", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -158,7 +158,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmPictureAlignment.valueOf((Integer)obj);
   }
-  @DeclDISPID(-523)  public void setPicture(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
@@ -166,7 +166,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(27)  public void setPictureSizeMode(com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
+  @DeclDISPID(27)  public void setPictureSizeMode(final com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(27,"PictureSizeMode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -175,7 +175,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmPictureSizeMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(28)  public void setPictureTiling(Boolean value) throws ComException {
+  @DeclDISPID(28)  public void setPictureTiling(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(28,"PictureTiling", DISPATCH_PROPERTYPUT,value);
   }
@@ -184,7 +184,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(265)  public void setScrollBars(com.wilutions.mslib.msforms.fmScrollBars value) throws ComException {
+  @DeclDISPID(265)  public void setScrollBars(final com.wilutions.mslib.msforms.fmScrollBars value) throws ComException {
     assert(value != null);
     this._dispatchCall(265,"ScrollBars", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -193,15 +193,15 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmScrollBars.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743852)  public void _SetScrollHeight(Integer ScrollHeight) throws ComException {
+  @DeclDISPID(1610743852)  public void _SetScrollHeight(final Integer ScrollHeight) throws ComException {
     assert(ScrollHeight != null);
     this._dispatchCall(1610743852,"_SetScrollHeight", DISPATCH_METHOD,null,ScrollHeight);
   }
-  @DeclDISPID(1610743853)  public void _GetScrollHeight(ByRef<Integer> ScrollHeight) throws ComException {
+  @DeclDISPID(1610743853)  public void _GetScrollHeight(final ByRef<Integer> ScrollHeight) throws ComException {
     assert(ScrollHeight != null);
     this._dispatchCall(1610743853,"_GetScrollHeight", DISPATCH_METHOD,null,ScrollHeight);
   }
-  @DeclDISPID(266)  public void setScrollHeight(Float value) throws ComException {
+  @DeclDISPID(266)  public void setScrollHeight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(266,"ScrollHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -210,15 +210,15 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(1610743856)  public void _SetScrollLeft(Integer ScrollLeft) throws ComException {
+  @DeclDISPID(1610743856)  public void _SetScrollLeft(final Integer ScrollLeft) throws ComException {
     assert(ScrollLeft != null);
     this._dispatchCall(1610743856,"_SetScrollLeft", DISPATCH_METHOD,null,ScrollLeft);
   }
-  @DeclDISPID(1610743857)  public void _GetScrollLeft(ByRef<Integer> ScrollLeft) throws ComException {
+  @DeclDISPID(1610743857)  public void _GetScrollLeft(final ByRef<Integer> ScrollLeft) throws ComException {
     assert(ScrollLeft != null);
     this._dispatchCall(1610743857,"_GetScrollLeft", DISPATCH_METHOD,null,ScrollLeft);
   }
-  @DeclDISPID(267)  public void setScrollLeft(Float value) throws ComException {
+  @DeclDISPID(267)  public void setScrollLeft(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(267,"ScrollLeft", DISPATCH_PROPERTYPUT,value);
   }
@@ -227,15 +227,15 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(1610743860)  public void _SetScrollTop(Integer ScrollTop) throws ComException {
+  @DeclDISPID(1610743860)  public void _SetScrollTop(final Integer ScrollTop) throws ComException {
     assert(ScrollTop != null);
     this._dispatchCall(1610743860,"_SetScrollTop", DISPATCH_METHOD,null,ScrollTop);
   }
-  @DeclDISPID(1610743861)  public void _GetScrollTop(ByRef<Integer> ScrollTop) throws ComException {
+  @DeclDISPID(1610743861)  public void _GetScrollTop(final ByRef<Integer> ScrollTop) throws ComException {
     assert(ScrollTop != null);
     this._dispatchCall(1610743861,"_GetScrollTop", DISPATCH_METHOD,null,ScrollTop);
   }
-  @DeclDISPID(268)  public void setScrollTop(Float value) throws ComException {
+  @DeclDISPID(268)  public void setScrollTop(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(268,"ScrollTop", DISPATCH_PROPERTYPUT,value);
   }
@@ -244,15 +244,15 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(1610743864)  public void _SetScrollWidth(Integer ScrollWidth) throws ComException {
+  @DeclDISPID(1610743864)  public void _SetScrollWidth(final Integer ScrollWidth) throws ComException {
     assert(ScrollWidth != null);
     this._dispatchCall(1610743864,"_SetScrollWidth", DISPATCH_METHOD,null,ScrollWidth);
   }
-  @DeclDISPID(1610743865)  public void _GetScrollWidth(ByRef<Integer> ScrollWidth) throws ComException {
+  @DeclDISPID(1610743865)  public void _GetScrollWidth(final ByRef<Integer> ScrollWidth) throws ComException {
     assert(ScrollWidth != null);
     this._dispatchCall(1610743865,"_GetScrollWidth", DISPATCH_METHOD,null,ScrollWidth);
   }
-  @DeclDISPID(269)  public void setScrollWidth(Float value) throws ComException {
+  @DeclDISPID(269)  public void setScrollWidth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(269,"ScrollWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -261,7 +261,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(12)  public void setSpecialEffect(com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -270,7 +270,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmSpecialEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(271)  public void setVerticalScrollBarSide(com.wilutions.mslib.msforms.fmVerticalScrollBarSide value) throws ComException {
+  @DeclDISPID(271)  public void setVerticalScrollBarSide(final com.wilutions.mslib.msforms.fmVerticalScrollBarSide value) throws ComException {
     assert(value != null);
     this._dispatchCall(271,"VerticalScrollBarSide", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -279,7 +279,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmVerticalScrollBarSide.valueOf((Integer)obj);
   }
-  @DeclDISPID(272)  public void setZoom(Short value) throws ComException {
+  @DeclDISPID(272)  public void setZoom(final Short value) throws ComException {
     assert(value != null);
     this._dispatchCall(272,"Zoom", DISPATCH_PROPERTYPUT,value);
   }
@@ -303,7 +303,7 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(516)  public void Repaint() throws ComException {
     this._dispatchCall(516,"Repaint", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(517)  public void Scroll(Object xAction, Object yAction) throws ComException {
+  @DeclDISPID(517)  public void Scroll(final Object xAction, final Object yAction) throws ComException {
     assert(xAction != null);
     assert(yAction != null);
     this._dispatchCall(517,"Scroll", DISPATCH_METHOD,null,xAction,yAction);
@@ -314,23 +314,23 @@ public class _UserFormImpl extends Dispatch implements com.wilutions.mslib.msfor
   @DeclDISPID(519)  public void UndoAction() throws ComException {
     this._dispatchCall(519,"UndoAction", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743893)  public void _SetGridX(Integer GridX) throws ComException {
+  @DeclDISPID(1610743893)  public void _SetGridX(final Integer GridX) throws ComException {
     assert(GridX != null);
     this._dispatchCall(1610743893,"_SetGridX", DISPATCH_METHOD,null,GridX);
   }
-  @DeclDISPID(1610743894)  public void _GetGridX(ByRef<Integer> GridX) throws ComException {
+  @DeclDISPID(1610743894)  public void _GetGridX(final ByRef<Integer> GridX) throws ComException {
     assert(GridX != null);
     this._dispatchCall(1610743894,"_GetGridX", DISPATCH_METHOD,null,GridX);
   }
-  @DeclDISPID(1610743897)  public void _SetGridY(Integer GridY) throws ComException {
+  @DeclDISPID(1610743897)  public void _SetGridY(final Integer GridY) throws ComException {
     assert(GridY != null);
     this._dispatchCall(1610743897,"_SetGridY", DISPATCH_METHOD,null,GridY);
   }
-  @DeclDISPID(1610743898)  public void _GetGridY(ByRef<Integer> GridY) throws ComException {
+  @DeclDISPID(1610743898)  public void _GetGridY(final ByRef<Integer> GridY) throws ComException {
     assert(GridY != null);
     this._dispatchCall(1610743898,"_GetGridY", DISPATCH_METHOD,null,GridY);
   }
-  @DeclDISPID(395)  public void setDrawBuffer(Integer value) throws ComException {
+  @DeclDISPID(395)  public void setDrawBuffer(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(395,"DrawBuffer", DISPATCH_PROPERTYPUT,value);
   }

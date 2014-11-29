@@ -20,7 +20,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610874880)  public void setBeginGroup(Boolean value) throws ComException {
+  @DeclDISPID(1610874880)  public void setBeginGroup(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874880,"BeginGroup", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,18 +34,18 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874883)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(1610874883)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874883,"Caption", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610874886)  public com.wilutions.mslib.office.CommandBarControl Copy(Object Bar, Object Before) throws ComException {
+  @DeclDISPID(1610874886)  public com.wilutions.mslib.office.CommandBarControl Copy(final Object Bar, final Object Before) throws ComException {
     assert(Bar != null);
     assert(Before != null);
     final Object obj = this._dispatchCall(1610874886,"Copy", DISPATCH_METHOD,null,Bar,Before);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
-  @DeclDISPID(1610874887)  public void Delete(Object Temporary) throws ComException {
+  @DeclDISPID(1610874887)  public void Delete(final Object Temporary) throws ComException {
     assert(Temporary != null);
     this._dispatchCall(1610874887,"Delete", DISPATCH_METHOD,null,Temporary);
   }
@@ -54,7 +54,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874888)  public void setDescriptionText(String value) throws ComException {
+  @DeclDISPID(1610874888)  public void setDescriptionText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874888,"DescriptionText", DISPATCH_PROPERTYPUT,value);
   }
@@ -63,7 +63,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610874890)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(1610874890)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874890,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -75,7 +75,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610874893)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(1610874893)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874893,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -84,7 +84,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610874895)  public void setHelpContextId(Integer value) throws ComException {
+  @DeclDISPID(1610874895)  public void setHelpContextId(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874895,"HelpContextId", DISPATCH_PROPERTYPUT,value);
   }
@@ -93,7 +93,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874897)  public void setHelpFile(String value) throws ComException {
+  @DeclDISPID(1610874897)  public void setHelpFile(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874897,"HelpFile", DISPATCH_PROPERTYPUT,value);
   }
@@ -107,7 +107,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610874902)  public com.wilutions.mslib.office.CommandBarControl Move(Object Bar, Object Before) throws ComException {
+  @DeclDISPID(1610874902)  public com.wilutions.mslib.office.CommandBarControl Move(final Object Bar, final Object Before) throws ComException {
     assert(Bar != null);
     assert(Before != null);
     final Object obj = this._dispatchCall(1610874902,"Move", DISPATCH_METHOD,null,Bar,Before);
@@ -124,7 +124,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoControlOLEUsage.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610874904)  public void setOLEUsage(com.wilutions.mslib.office.MsoControlOLEUsage value) throws ComException {
+  @DeclDISPID(1610874904)  public void setOLEUsage(final com.wilutions.mslib.office.MsoControlOLEUsage value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874904,"OLEUsage", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -133,7 +133,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874906)  public void setOnAction(String value) throws ComException {
+  @DeclDISPID(1610874906)  public void setOnAction(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874906,"OnAction", DISPATCH_PROPERTYPUT,value);
   }
@@ -147,7 +147,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874909)  public void setParameter(String value) throws ComException {
+  @DeclDISPID(1610874909)  public void setParameter(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874909,"Parameter", DISPATCH_PROPERTYPUT,value);
   }
@@ -156,7 +156,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610874911)  public void setPriority(Integer value) throws ComException {
+  @DeclDISPID(1610874911)  public void setPriority(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874911,"Priority", DISPATCH_PROPERTYPUT,value);
   }
@@ -171,7 +171,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874915)  public void setTag(String value) throws ComException {
+  @DeclDISPID(1610874915)  public void setTag(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874915,"Tag", DISPATCH_PROPERTYPUT,value);
   }
@@ -180,7 +180,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610874917)  public void setTooltipText(String value) throws ComException {
+  @DeclDISPID(1610874917)  public void setTooltipText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874917,"TooltipText", DISPATCH_PROPERTYPUT,value);
   }
@@ -199,7 +199,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610874921)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(1610874921)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874921,"Visible", DISPATCH_PROPERTYPUT,value);
   }
@@ -208,7 +208,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610874923)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(1610874923)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610874923,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -232,7 +232,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoOLEMenuGroup.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610940418)  public void setOLEMenuGroup(com.wilutions.mslib.office.MsoOLEMenuGroup value) throws ComException {
+  @DeclDISPID(1610940418)  public void setOLEMenuGroup(final com.wilutions.mslib.office.MsoOLEMenuGroup value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610940418,"OLEMenuGroup", DISPATCH_PROPERTYPUT,value.value);
   }

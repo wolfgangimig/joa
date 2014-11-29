@@ -29,7 +29,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
-  @DeclDISPID(1610809346)  public CommandBar Add(Object Name, Object Position, Object MenuBar, Object Temporary) throws ComException {
+  @DeclDISPID(1610809346)  public CommandBar Add(final Object Name, final Object Position, final Object MenuBar, final Object Temporary) throws ComException {
     assert(Name != null);
     assert(Position != null);
     assert(MenuBar != null);
@@ -48,7 +48,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809348)  public void setDisplayTooltips(Boolean value) throws ComException {
+  @DeclDISPID(1610809348)  public void setDisplayTooltips(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809348,"DisplayTooltips", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,11 +57,11 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809350)  public void setDisplayKeysInTooltips(Boolean value) throws ComException {
+  @DeclDISPID(1610809350)  public void setDisplayKeysInTooltips(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809350,"DisplayKeysInTooltips", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610809352)  public CommandBarControl FindControl(Object Type, Object Id, Object Tag, Object Visible) throws ComException {
+  @DeclDISPID(1610809352)  public CommandBarControl FindControl(final Object Type, final Object Id, final Object Tag, final Object Visible) throws ComException {
     assert(Type != null);
     assert(Id != null);
     assert(Tag != null);
@@ -70,7 +70,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
-  @DeclDISPID(0)  public CommandBar getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public CommandBar getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -81,7 +81,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809354)  public void setLargeButtons(Boolean value) throws ComException {
+  @DeclDISPID(1610809354)  public void setLargeButtons(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809354,"LargeButtons", DISPATCH_PROPERTYPUT,value);
   }
@@ -90,7 +90,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return MsoMenuAnimation.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809356)  public void setMenuAnimationStyle(MsoMenuAnimation value) throws ComException {
+  @DeclDISPID(1610809356)  public void setMenuAnimationStyle(final MsoMenuAnimation value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809356,"MenuAnimationStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -112,11 +112,11 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809363)  public void setAdaptiveMenus(Boolean value) throws ComException {
+  @DeclDISPID(1610809363)  public void setAdaptiveMenus(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809363,"AdaptiveMenus", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610809365)  public CommandBarControls FindControls(Object Type, Object Id, Object Tag, Object Visible) throws ComException {
+  @DeclDISPID(1610809365)  public CommandBarControls FindControls(final Object Type, final Object Id, final Object Tag, final Object Visible) throws ComException {
     assert(Type != null);
     assert(Id != null);
     assert(Tag != null);
@@ -130,7 +130,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809367)  public void setDisplayFonts(Boolean value) throws ComException {
+  @DeclDISPID(1610809367)  public void setDisplayFonts(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809367,"DisplayFonts", DISPATCH_PROPERTYPUT,value);
   }
@@ -139,7 +139,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809369)  public void setDisableCustomize(Boolean value) throws ComException {
+  @DeclDISPID(1610809369)  public void setDisableCustomize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809369,"DisableCustomize", DISPATCH_PROPERTYPUT,value);
   }
@@ -148,51 +148,51 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809371)  public void setDisableAskAQuestionDropdown(Boolean value) throws ComException {
+  @DeclDISPID(1610809371)  public void setDisableAskAQuestionDropdown(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809371,"DisableAskAQuestionDropdown", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610809373)  public void ExecuteMso(String idMso) throws ComException {
+  @DeclDISPID(1610809373)  public void ExecuteMso(final String idMso) throws ComException {
     assert(idMso != null);
     this._dispatchCall(1610809373,"ExecuteMso", DISPATCH_METHOD,null,idMso);
   }
-  @DeclDISPID(1610809374)  public Boolean GetEnabledMso(String idMso) throws ComException {
+  @DeclDISPID(1610809374)  public Boolean GetEnabledMso(final String idMso) throws ComException {
     assert(idMso != null);
     final Object obj = this._dispatchCall(1610809374,"GetEnabledMso", DISPATCH_METHOD,null,idMso);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809375)  public Boolean GetVisibleMso(String idMso) throws ComException {
+  @DeclDISPID(1610809375)  public Boolean GetVisibleMso(final String idMso) throws ComException {
     assert(idMso != null);
     final Object obj = this._dispatchCall(1610809375,"GetVisibleMso", DISPATCH_METHOD,null,idMso);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809376)  public Boolean GetPressedMso(String idMso) throws ComException {
+  @DeclDISPID(1610809376)  public Boolean GetPressedMso(final String idMso) throws ComException {
     assert(idMso != null);
     final Object obj = this._dispatchCall(1610809376,"GetPressedMso", DISPATCH_METHOD,null,idMso);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809377)  public String GetLabelMso(String idMso) throws ComException {
+  @DeclDISPID(1610809377)  public String GetLabelMso(final String idMso) throws ComException {
     assert(idMso != null);
     final Object obj = this._dispatchCall(1610809377,"GetLabelMso", DISPATCH_METHOD,null,idMso);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809378)  public String GetScreentipMso(String idMso) throws ComException {
+  @DeclDISPID(1610809378)  public String GetScreentipMso(final String idMso) throws ComException {
     assert(idMso != null);
     final Object obj = this._dispatchCall(1610809378,"GetScreentipMso", DISPATCH_METHOD,null,idMso);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809379)  public String GetSupertipMso(String idMso) throws ComException {
+  @DeclDISPID(1610809379)  public String GetSupertipMso(final String idMso) throws ComException {
     assert(idMso != null);
     final Object obj = this._dispatchCall(1610809379,"GetSupertipMso", DISPATCH_METHOD,null,idMso);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809380)  public com.wilutions.mslib.stdole.IPictureDisp GetImageMso(String idMso, Integer Width, Integer Height) throws ComException {
+  @DeclDISPID(1610809380)  public com.wilutions.mslib.stdole.IPictureDisp GetImageMso(final String idMso, final Integer Width, final Integer Height) throws ComException {
     assert(idMso != null);
     assert(Width != null);
     assert(Height != null);
@@ -200,7 +200,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
-  @DeclDISPID(1610809381)  public void CommitRenderingTransaction(Integer hwnd) throws ComException {
+  @DeclDISPID(1610809381)  public void CommitRenderingTransaction(final Integer hwnd) throws ComException {
     assert(hwnd != null);
     this._dispatchCall(1610809381,"CommitRenderingTransaction", DISPATCH_METHOD,null,hwnd);
   }

@@ -34,7 +34,7 @@ public class Rule extends Dispatch implements _Rule {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8450)  public void setName(String value) throws ComException {
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8450,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class Rule extends Dispatch implements _Rule {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64267)  public void setExecutionOrder(Integer value) throws ComException {
+  @DeclDISPID(64267)  public void setExecutionOrder(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64267,"ExecutionOrder", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class Rule extends Dispatch implements _Rule {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class Rule extends Dispatch implements _Rule {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64270)  public void Execute(Object ShowProgress, Object Folder, Object IncludeSubfolders, Object RuleExecuteOption) throws ComException {
+  @DeclDISPID(64270)  public void Execute(final Object ShowProgress, final Object Folder, final Object IncludeSubfolders, final Object RuleExecuteOption) throws ComException {
     assert(ShowProgress != null);
     assert(Folder != null);
     assert(IncludeSubfolders != null);

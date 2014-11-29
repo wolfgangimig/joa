@@ -26,18 +26,18 @@ public class IVoiceMailsManagerImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743812)  public void setMaxItems(Integer value) throws ComException {
+  @DeclDISPID(1610743812)  public void setMaxItems(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"MaxItems", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetUnreadVoiceMails(Object _voiceMailsManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetUnreadVoiceMails(final Object _voiceMailsManagerCallback, final Object _state) throws ComException {
     assert(_voiceMailsManagerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743814,"GetUnreadVoiceMails", DISPATCH_METHOD,null,_voiceMailsManagerCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetAllVoiceMails(Object _voiceMailsManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetAllVoiceMails(final Object _voiceMailsManagerCallback, final Object _state) throws ComException {
     assert(_voiceMailsManagerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743815,"GetAllVoiceMails", DISPATCH_METHOD,null,_voiceMailsManagerCallback,_state);

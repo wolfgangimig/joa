@@ -10,7 +10,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(181)  public com.wilutions.mslib.office.IMsoSeries Add(Object Source, com.wilutions.mslib.office.XlRowCol Rowcol, Object SeriesLabels, Object CategoryLabels, Object Replace) throws ComException {
+  @DeclDISPID(181)  public com.wilutions.mslib.office.IMsoSeries Add(final Object Source, final com.wilutions.mslib.office.XlRowCol Rowcol, final Object SeriesLabels, final Object CategoryLabels, final Object Replace) throws ComException {
     assert(Source != null);
     assert(Rowcol != null);
     assert(SeriesLabels != null);
@@ -25,7 +25,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(227)  public Object Extend(Object Source, Object Rowcol, Object CategoryLabels) throws ComException {
+  @DeclDISPID(227)  public Object Extend(final Object Source, final Object Rowcol, final Object CategoryLabels) throws ComException {
     assert(Source != null);
     assert(Rowcol != null);
     assert(CategoryLabels != null);
@@ -33,7 +33,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoSeries Item(Object Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoSeries Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -44,7 +44,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(211)  public Object Paste(com.wilutions.mslib.office.XlRowCol Rowcol, Object SeriesLabels, Object CategoryLabels, Object Replace, Object NewSeries) throws ComException {
+  @DeclDISPID(211)  public Object Paste(final com.wilutions.mslib.office.XlRowCol Rowcol, final Object SeriesLabels, final Object CategoryLabels, final Object Replace, final Object NewSeries) throws ComException {
     assert(Rowcol != null);
     assert(SeriesLabels != null);
     assert(CategoryLabels != null);
@@ -69,7 +69,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoSeries get_Default(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoSeries get_Default(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

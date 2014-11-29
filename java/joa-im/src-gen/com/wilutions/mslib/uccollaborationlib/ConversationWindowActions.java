@@ -9,16 +9,16 @@ import com.wilutions.com.*;
 @CoClass(guid="{85147550-4A7B-4B36-8FB5-144B5087A299}")
 public class ConversationWindowActions extends Dispatch implements IConversationWindowActions {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(1610743808)  public void AddOfficePowerPointToConversation(String _PowerPointFilePath, String _OriginalPowerPointUrl) throws ComException {
+  @DeclDISPID(1610743808)  public void AddOfficePowerPointToConversation(final String _PowerPointFilePath, final String _OriginalPowerPointUrl) throws ComException {
     assert(_PowerPointFilePath != null);
     assert(_OriginalPowerPointUrl != null);
     this._dispatchCall(1610743808,"AddOfficePowerPointToConversation", DISPATCH_METHOD,null,_PowerPointFilePath,_OriginalPowerPointUrl);
   }
-  @DeclDISPID(1610743809)  public void AddOfficeOneNoteToConversation(String _pageId) throws ComException {
+  @DeclDISPID(1610743809)  public void AddOfficeOneNoteToConversation(final String _pageId) throws ComException {
     assert(_pageId != null);
     this._dispatchCall(1610743809,"AddOfficeOneNoteToConversation", DISPATCH_METHOD,null,_pageId);
   }
-  @DeclDISPID(1610743810)  public Boolean CanInvoke(ConversationWindowAction _action) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean CanInvoke(final ConversationWindowAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743810,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;

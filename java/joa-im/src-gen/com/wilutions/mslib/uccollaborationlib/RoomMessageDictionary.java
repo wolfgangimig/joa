@@ -14,18 +14,18 @@ public class RoomMessageDictionary extends Dispatch implements IRoomMessageDicti
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public Object getItem(RoomMessageFormat _key) throws ComException {
+  @DeclDISPID(0)  public Object getItem(final RoomMessageFormat _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_key.value);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setItem(RoomMessageFormat _key, Object value2) throws ComException {
+  @DeclDISPID(0)  public void setItem(final RoomMessageFormat _key, final Object value2) throws ComException {
     assert(value2 != null);
     assert(_key != null);
     this._dispatchCall(0,"Item", DISPATCH_PROPERTYPUT,value2,_key.value);
   }
-  @DeclDISPID(1610743811)  public void Add(RoomMessageFormat _key, Object _value) throws ComException {
+  @DeclDISPID(1610743811)  public void Add(final RoomMessageFormat _key, final Object _value) throws ComException {
     assert(_key != null);
     assert(_value != null);
     this._dispatchCall(1610743811,"Add", DISPATCH_METHOD,null,_key.value,_value);
@@ -40,36 +40,36 @@ public class RoomMessageDictionary extends Dispatch implements IRoomMessageDicti
     if (obj == null) return null;
     return (Object[])obj;
   }
-  @DeclDISPID(1610743814)  public Boolean TryGetValue(RoomMessageFormat _key, ByRef<Object> _itemValue) throws ComException {
+  @DeclDISPID(1610743814)  public Boolean TryGetValue(final RoomMessageFormat _key, final ByRef<Object> _itemValue) throws ComException {
     assert(_key != null);
     assert(_itemValue != null);
     final Object obj = this._dispatchCall(1610743814,"TryGetValue", DISPATCH_METHOD,null,_key.value,_itemValue);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743815)  public RoomMessageFormat GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743815)  public RoomMessageFormat GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743815,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return RoomMessageFormat.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743816)  public Object GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743816)  public Object GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743816,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743817)  public Boolean ContainsKey(RoomMessageFormat _key) throws ComException {
+  @DeclDISPID(1610743817)  public Boolean ContainsKey(final RoomMessageFormat _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(1610743817,"ContainsKey", DISPATCH_METHOD,null,_key.value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743818)  public void RemoveAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743818)  public void RemoveAt(final Integer _index) throws ComException {
     assert(_index != null);
     this._dispatchCall(1610743818,"RemoveAt", DISPATCH_METHOD,null,_index);
   }
-  @DeclDISPID(1610743819)  public void Remove(RoomMessageFormat _key) throws ComException {
+  @DeclDISPID(1610743819)  public void Remove(final RoomMessageFormat _key) throws ComException {
     assert(_key != null);
     this._dispatchCall(1610743819,"Remove", DISPATCH_METHOD,null,_key.value);
   }
@@ -81,7 +81,7 @@ public class RoomMessageDictionary extends Dispatch implements IRoomMessageDicti
     if (obj == null) return null;
     return RoomMessageType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743821)  public void setType(RoomMessageType value) throws ComException {
+  @DeclDISPID(1610743821)  public void setType(final RoomMessageType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743821,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -90,7 +90,7 @@ public class RoomMessageDictionary extends Dispatch implements IRoomMessageDicti
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743823)  public void setStoryTitle(String value) throws ComException {
+  @DeclDISPID(1610743823)  public void setStoryTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743823,"StoryTitle", DISPATCH_PROPERTYPUT,value);
   }

@@ -11,21 +11,21 @@ public class OlkLabelEventsImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(-601)  public void onDoubleClick() throws ComException {
     this._dispatchCall(-601,"DoubleClick", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(-605)  public void onMouseDown(com.wilutions.mslib.outlook.OlMouseButton Button, com.wilutions.mslib.outlook.OlShiftState Shift, com.wilutions.mslib.stdole.OLE_XPOS_CONTAINER X, com.wilutions.mslib.stdole.OLE_YPOS_CONTAINER Y) throws ComException {
+  @DeclDISPID(-605)  public void onMouseDown(final com.wilutions.mslib.outlook.OlMouseButton Button, final com.wilutions.mslib.outlook.OlShiftState Shift, final com.wilutions.mslib.stdole.OLE_XPOS_CONTAINER X, final com.wilutions.mslib.stdole.OLE_YPOS_CONTAINER Y) throws ComException {
     assert(Button != null);
     assert(Shift != null);
     assert(X != null);
     assert(Y != null);
     this._dispatchCall(-605,"MouseDown", DISPATCH_METHOD,null,Button.value,Shift.value,X.getValue(),Y.getValue());
   }
-  @DeclDISPID(-606)  public void onMouseMove(com.wilutions.mslib.outlook.OlMouseButton Button, com.wilutions.mslib.outlook.OlShiftState Shift, com.wilutions.mslib.stdole.OLE_XPOS_CONTAINER X, com.wilutions.mslib.stdole.OLE_YPOS_CONTAINER Y) throws ComException {
+  @DeclDISPID(-606)  public void onMouseMove(final com.wilutions.mslib.outlook.OlMouseButton Button, final com.wilutions.mslib.outlook.OlShiftState Shift, final com.wilutions.mslib.stdole.OLE_XPOS_CONTAINER X, final com.wilutions.mslib.stdole.OLE_YPOS_CONTAINER Y) throws ComException {
     assert(Button != null);
     assert(Shift != null);
     assert(X != null);
     assert(Y != null);
     this._dispatchCall(-606,"MouseMove", DISPATCH_METHOD,null,Button.value,Shift.value,X.getValue(),Y.getValue());
   }
-  @DeclDISPID(-607)  public void onMouseUp(com.wilutions.mslib.outlook.OlMouseButton Button, com.wilutions.mslib.outlook.OlShiftState Shift, com.wilutions.mslib.stdole.OLE_XPOS_CONTAINER X, com.wilutions.mslib.stdole.OLE_YPOS_CONTAINER Y) throws ComException {
+  @DeclDISPID(-607)  public void onMouseUp(final com.wilutions.mslib.outlook.OlMouseButton Button, final com.wilutions.mslib.outlook.OlShiftState Shift, final com.wilutions.mslib.stdole.OLE_XPOS_CONTAINER X, final com.wilutions.mslib.stdole.OLE_YPOS_CONTAINER Y) throws ComException {
     assert(Button != null);
     assert(Shift != null);
     assert(X != null);

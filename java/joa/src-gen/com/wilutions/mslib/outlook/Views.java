@@ -34,13 +34,13 @@ public class Views extends Dispatch implements _Views {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public View Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public View Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ViewImpl.class);
   }
-  @DeclDISPID(95)  public View Add(String Name, OlViewType ViewType, OlViewSaveOption SaveOption) throws ComException {
+  @DeclDISPID(95)  public View Add(final String Name, final OlViewType ViewType, final OlViewSaveOption SaveOption) throws ComException {
     assert(Name != null);
     assert(ViewType != null);
     assert(SaveOption != null);
@@ -48,7 +48,7 @@ public class Views extends Dispatch implements _Views {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ViewImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

@@ -25,7 +25,7 @@ public class GroupShapesImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.Shape Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.Shape Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -36,7 +36,7 @@ public class GroupShapesImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(10)  public com.wilutions.mslib.office.ShapeRange Range(Object Index) throws ComException {
+  @DeclDISPID(10)  public com.wilutions.mslib.office.ShapeRange Range(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(10,"Range", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

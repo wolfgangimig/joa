@@ -30,18 +30,18 @@ public class PropertyPagesImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(95)  public void Add(Object Page, String Title) throws ComException {
+  @DeclDISPID(95)  public void Add(final Object Page, final String Title) throws ComException {
     assert(Page != null);
     assert(Title != null);
     this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Page,Title);
   }
-  @DeclDISPID(84)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

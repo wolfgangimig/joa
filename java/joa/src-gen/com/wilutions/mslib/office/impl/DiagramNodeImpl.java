@@ -15,7 +15,7 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(10)  public com.wilutions.mslib.office.DiagramNode AddNode(com.wilutions.mslib.office.MsoRelativeNodePosition Pos, com.wilutions.mslib.office.MsoDiagramNodeType NodeType) throws ComException {
+  @DeclDISPID(10)  public com.wilutions.mslib.office.DiagramNode AddNode(final com.wilutions.mslib.office.MsoRelativeNodePosition Pos, final com.wilutions.mslib.office.MsoDiagramNodeType NodeType) throws ComException {
     assert(Pos != null);
     assert(NodeType != null);
     final Object obj = this._dispatchCall(10,"AddNode", DISPATCH_METHOD,null,Pos.value,NodeType.value);
@@ -25,25 +25,25 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
   @DeclDISPID(11)  public void Delete() throws ComException {
     this._dispatchCall(11,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(12)  public void MoveNode(com.wilutions.mslib.office.DiagramNode TargetNode, com.wilutions.mslib.office.MsoRelativeNodePosition Pos) throws ComException {
+  @DeclDISPID(12)  public void MoveNode(final com.wilutions.mslib.office.DiagramNode TargetNode, final com.wilutions.mslib.office.MsoRelativeNodePosition Pos) throws ComException {
     assert(Pos != null);
     this._dispatchCall(12,"MoveNode", DISPATCH_METHOD,null,(TargetNode!=null?TargetNode:Dispatch.NULL),Pos.value);
   }
-  @DeclDISPID(13)  public void ReplaceNode(com.wilutions.mslib.office.DiagramNode TargetNode) throws ComException {
+  @DeclDISPID(13)  public void ReplaceNode(final com.wilutions.mslib.office.DiagramNode TargetNode) throws ComException {
     this._dispatchCall(13,"ReplaceNode", DISPATCH_METHOD,null,(TargetNode!=null?TargetNode:Dispatch.NULL));
   }
-  @DeclDISPID(14)  public void SwapNode(com.wilutions.mslib.office.DiagramNode TargetNode, Boolean SwapChildren) throws ComException {
+  @DeclDISPID(14)  public void SwapNode(final com.wilutions.mslib.office.DiagramNode TargetNode, final Boolean SwapChildren) throws ComException {
     assert(SwapChildren != null);
     this._dispatchCall(14,"SwapNode", DISPATCH_METHOD,null,(TargetNode!=null?TargetNode:Dispatch.NULL),SwapChildren);
   }
-  @DeclDISPID(15)  public com.wilutions.mslib.office.DiagramNode CloneNode(Boolean CopyChildren, com.wilutions.mslib.office.DiagramNode TargetNode, com.wilutions.mslib.office.MsoRelativeNodePosition Pos) throws ComException {
+  @DeclDISPID(15)  public com.wilutions.mslib.office.DiagramNode CloneNode(final Boolean CopyChildren, final com.wilutions.mslib.office.DiagramNode TargetNode, final com.wilutions.mslib.office.MsoRelativeNodePosition Pos) throws ComException {
     assert(CopyChildren != null);
     assert(Pos != null);
     final Object obj = this._dispatchCall(15,"CloneNode", DISPATCH_METHOD,null,CopyChildren,(TargetNode!=null?TargetNode:Dispatch.NULL),Pos.value);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
-  @DeclDISPID(16)  public void TransferChildren(com.wilutions.mslib.office.DiagramNode ReceivingNode) throws ComException {
+  @DeclDISPID(16)  public void TransferChildren(final com.wilutions.mslib.office.DiagramNode ReceivingNode) throws ComException {
     this._dispatchCall(16,"TransferChildren", DISPATCH_METHOD,null,(ReceivingNode!=null?ReceivingNode:Dispatch.NULL));
   }
   @DeclDISPID(17)  public com.wilutions.mslib.office.DiagramNode NextNode() throws ComException {
@@ -86,7 +86,7 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoOrgChartLayoutType.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setLayout(com.wilutions.mslib.office.MsoOrgChartLayoutType value) throws ComException {
+  @DeclDISPID(105)  public void setLayout(final com.wilutions.mslib.office.MsoOrgChartLayoutType value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"Layout", DISPATCH_PROPERTYPUT,value.value);
   }

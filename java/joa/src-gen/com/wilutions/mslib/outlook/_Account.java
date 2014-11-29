@@ -24,6 +24,6 @@ public interface _Account extends IDispatch {
   @DeclDISPID(64615)  public OlExchangeConnectionMode getExchangeConnectionMode() throws ComException;
   @DeclDISPID(64616)  public String getExchangeMailboxServerName() throws ComException;
   @DeclDISPID(64617)  public String getExchangeMailboxServerVersion() throws ComException;
-  @DeclDISPID(64618)  public AddressEntry GetAddressEntryFromID(String ID) throws ComException;
-  @DeclDISPID(64619)  public Recipient GetRecipientFromID(String EntryID) throws ComException;
+  @DeclDISPID(64618)  public AddressEntry GetAddressEntryFromID(final String ID) throws ComException;
+  @DeclDISPID(64619)  public Recipient GetRecipientFromID(final String EntryID) throws ComException;
 }

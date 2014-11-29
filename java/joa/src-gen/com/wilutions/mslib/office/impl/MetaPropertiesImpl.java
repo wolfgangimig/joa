@@ -15,13 +15,13 @@ public class MetaPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.MetaProperty getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.MetaProperty getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.MetaPropertyImpl.class);
   }
-  @DeclDISPID(1)  public com.wilutions.mslib.office.MetaProperty GetItemByInternalName(String InternalName) throws ComException {
+  @DeclDISPID(1)  public com.wilutions.mslib.office.MetaProperty GetItemByInternalName(final String InternalName) throws ComException {
     assert(InternalName != null);
     final Object obj = this._dispatchCall(1,"GetItemByInternalName", DISPATCH_METHOD,null,InternalName);
     if (obj == null) return null;

@@ -35,7 +35,7 @@ public class IMsoDiagramImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(103)  public void setAutoLayout(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(103)  public void setAutoLayout(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"AutoLayout", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -44,7 +44,7 @@ public class IMsoDiagramImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(104)  public void setReverse(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(104)  public void setReverse(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"Reverse", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -53,11 +53,11 @@ public class IMsoDiagramImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setAutoFormat(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(105)  public void setAutoFormat(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"AutoFormat", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(10)  public void Convert(com.wilutions.mslib.office.MsoDiagramType Type) throws ComException {
+  @DeclDISPID(10)  public void Convert(final com.wilutions.mslib.office.MsoDiagramType Type) throws ComException {
     assert(Type != null);
     this._dispatchCall(10,"Convert", DISPATCH_METHOD,null,Type.value);
   }

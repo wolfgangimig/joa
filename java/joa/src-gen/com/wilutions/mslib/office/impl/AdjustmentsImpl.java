@@ -25,13 +25,13 @@ public class AdjustmentsImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public Float getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public Float getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(0)  public void setItem(Integer Index, Float value2) throws ComException {
+  @DeclDISPID(0)  public void setItem(final Integer Index, final Float value2) throws ComException {
     assert(value2 != null);
     assert(Index != null);
     this._dispatchCall(0,"Item", DISPATCH_PROPERTYPUT,value2,Index);

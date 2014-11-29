@@ -15,7 +15,7 @@ public class ILicValidatorImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public void setSelection(Integer value) throws ComException {
+  @DeclDISPID(2)  public void setSelection(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Selection", DISPATCH_PROPERTYPUT,value);
   }

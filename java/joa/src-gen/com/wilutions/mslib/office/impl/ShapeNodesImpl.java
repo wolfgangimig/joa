@@ -25,7 +25,7 @@ public class ShapeNodesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.ShapeNode Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.ShapeNode Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -36,11 +36,11 @@ public class ShapeNodesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(11)  public void Delete(Integer Index) throws ComException {
+  @DeclDISPID(11)  public void Delete(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(11,"Delete", DISPATCH_METHOD,null,Index);
   }
-  @DeclDISPID(12)  public void Insert(Integer Index, com.wilutions.mslib.office.MsoSegmentType SegmentType, com.wilutions.mslib.office.MsoEditingType EditingType, Float X1, Float Y1, Float X2, Float Y2, Float X3, Float Y3) throws ComException {
+  @DeclDISPID(12)  public void Insert(final Integer Index, final com.wilutions.mslib.office.MsoSegmentType SegmentType, final com.wilutions.mslib.office.MsoEditingType EditingType, final Float X1, final Float Y1, final Float X2, final Float Y2, final Float X3, final Float Y3) throws ComException {
     assert(Index != null);
     assert(SegmentType != null);
     assert(EditingType != null);
@@ -52,18 +52,18 @@ public class ShapeNodesImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(Y3 != null);
     this._dispatchCall(12,"Insert", DISPATCH_METHOD,null,Index,SegmentType.value,EditingType.value,X1,Y1,X2,Y2,X3,Y3);
   }
-  @DeclDISPID(13)  public void SetEditingType(Integer Index, com.wilutions.mslib.office.MsoEditingType EditingType) throws ComException {
+  @DeclDISPID(13)  public void SetEditingType(final Integer Index, final com.wilutions.mslib.office.MsoEditingType EditingType) throws ComException {
     assert(Index != null);
     assert(EditingType != null);
     this._dispatchCall(13,"SetEditingType", DISPATCH_METHOD,null,Index,EditingType.value);
   }
-  @DeclDISPID(14)  public void SetPosition(Integer Index, Float X1, Float Y1) throws ComException {
+  @DeclDISPID(14)  public void SetPosition(final Integer Index, final Float X1, final Float Y1) throws ComException {
     assert(Index != null);
     assert(X1 != null);
     assert(Y1 != null);
     this._dispatchCall(14,"SetPosition", DISPATCH_METHOD,null,Index,X1,Y1);
   }
-  @DeclDISPID(15)  public void SetSegmentType(Integer Index, com.wilutions.mslib.office.MsoSegmentType SegmentType) throws ComException {
+  @DeclDISPID(15)  public void SetSegmentType(final Integer Index, final com.wilutions.mslib.office.MsoSegmentType SegmentType) throws ComException {
     assert(Index != null);
     assert(SegmentType != null);
     this._dispatchCall(15,"SetSegmentType", DISPATCH_METHOD,null,Index,SegmentType.value);

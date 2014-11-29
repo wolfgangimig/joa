@@ -11,5 +11,5 @@ public interface IApplicationRegistration extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public void AddRegistration() throws ComException;
   @DeclDISPID(1610743809)  public void RemoveRegistration() throws ComException;
-  @DeclDISPID(1610743810)  public void SetExtensibilityWindowProperties(String _intrnalUrl, String _externalUrl, ConversationWindowExtensionSize _windowSize) throws ComException;
+  @DeclDISPID(1610743810)  public void SetExtensibilityWindowProperties(final String _intrnalUrl, final String _externalUrl, final ConversationWindowExtensionSize _windowSize) throws ComException;
 }

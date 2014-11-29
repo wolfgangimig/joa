@@ -34,7 +34,7 @@ public class TextRuleCondition extends Dispatch implements _TextRuleCondition {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class TextRuleCondition extends Dispatch implements _TextRuleCondition {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64295)  public void setText(Object value) throws ComException {
+  @DeclDISPID(64295)  public void setText(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64295,"Text", DISPATCH_PROPERTYPUT,value);
   }

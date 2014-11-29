@@ -30,7 +30,7 @@ public class _RuleActionsImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._RuleAction Item(Integer Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._RuleAction Item(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

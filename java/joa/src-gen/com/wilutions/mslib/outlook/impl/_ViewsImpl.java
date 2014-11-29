@@ -30,13 +30,13 @@ public class _ViewsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.outlook.View Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.outlook.View Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ViewImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.View Add(String Name, com.wilutions.mslib.outlook.OlViewType ViewType, com.wilutions.mslib.outlook.OlViewSaveOption SaveOption) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.View Add(final String Name, final com.wilutions.mslib.outlook.OlViewType ViewType, final com.wilutions.mslib.outlook.OlViewSaveOption SaveOption) throws ComException {
     assert(Name != null);
     assert(ViewType != null);
     assert(SaveOption != null);
@@ -44,7 +44,7 @@ public class _ViewsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ViewImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

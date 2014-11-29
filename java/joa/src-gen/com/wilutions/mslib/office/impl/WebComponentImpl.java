@@ -15,7 +15,7 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setURL(String value) throws ComException {
+  @DeclDISPID(2)  public void setURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"URL", DISPATCH_PROPERTYPUT,value);
   }
@@ -24,7 +24,7 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setHTML(String value) throws ComException {
+  @DeclDISPID(3)  public void setHTML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"HTML", DISPATCH_PROPERTYPUT,value);
   }
@@ -33,7 +33,7 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setName(String value) throws ComException {
+  @DeclDISPID(4)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -42,7 +42,7 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(5)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(5)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -51,11 +51,11 @@ public class WebComponentImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(6)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(6)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"Height", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(7)  public void SetPlaceHolderGraphic(String PlaceHolderGraphic) throws ComException {
+  @DeclDISPID(7)  public void SetPlaceHolderGraphic(final String PlaceHolderGraphic) throws ComException {
     assert(PlaceHolderGraphic != null);
     this._dispatchCall(7,"SetPlaceHolderGraphic", DISPATCH_METHOD,null,PlaceHolderGraphic);
   }

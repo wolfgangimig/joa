@@ -30,13 +30,13 @@ public class _OrderFieldsImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._OrderField Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._OrderField Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._OrderFieldImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.OrderField Add(String PropertyName, Object IsDescending) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.OrderField Add(final String PropertyName, final Object IsDescending) throws ComException {
     assert(PropertyName != null);
     assert(IsDescending != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,PropertyName,IsDescending);
@@ -44,14 +44,14 @@ public class _OrderFieldsImpl extends Dispatch implements com.wilutions.mslib.ou
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.OrderField.class);
   }
-  @DeclDISPID(82)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
   @DeclDISPID(64343)  public void RemoveAll() throws ComException {
     this._dispatchCall(64343,"RemoveAll", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64342)  public com.wilutions.mslib.outlook.OrderField Insert(String PropertyName, Object Index, Object IsDescending) throws ComException {
+  @DeclDISPID(64342)  public com.wilutions.mslib.outlook.OrderField Insert(final String PropertyName, final Object Index, final Object IsDescending) throws ComException {
     assert(PropertyName != null);
     assert(Index != null);
     assert(IsDescending != null);

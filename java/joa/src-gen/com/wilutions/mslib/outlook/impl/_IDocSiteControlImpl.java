@@ -10,7 +10,7 @@ public class _IDocSiteControlImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(-2147356664)  public void setReadOnly(Byte ReadOnly) throws ComException {
+  @DeclDISPID(-2147356664)  public void setReadOnly(final Byte ReadOnly) throws ComException {
     assert(ReadOnly != null);
     this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYPUT,ReadOnly);
   }
@@ -19,7 +19,7 @@ public class _IDocSiteControlImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(64483)  public void setSuppressAttachments(Byte SuppressAttachments) throws ComException {
+  @DeclDISPID(64483)  public void setSuppressAttachments(final Byte SuppressAttachments) throws ComException {
     assert(SuppressAttachments != null);
     this._dispatchCall(64483,"SuppressAttachments", DISPATCH_PROPERTYPUT,SuppressAttachments);
   }

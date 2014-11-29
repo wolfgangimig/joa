@@ -20,7 +20,7 @@ public class TextColumn2Impl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public void setNumber(Integer value) throws ComException {
+  @DeclDISPID(1)  public void setNumber(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Number", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class TextColumn2Impl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(2)  public void setSpacing(Float value) throws ComException {
+  @DeclDISPID(2)  public void setSpacing(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Spacing", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class TextColumn2Impl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextDirection.valueOf((Integer)obj);
   }
-  @DeclDISPID(3)  public void setTextDirection(com.wilutions.mslib.office.MsoTextDirection value) throws ComException {
+  @DeclDISPID(3)  public void setTextDirection(final com.wilutions.mslib.office.MsoTextDirection value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"TextDirection", DISPATCH_PROPERTYPUT,value.value);
   }

@@ -12,6 +12,6 @@ public interface ThemeFont extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(0)  public String getName() throws ComException;
-  @DeclDISPID(0)  public void setName(String value) throws ComException;
+  @DeclDISPID(0)  public void setName(final String value) throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
 }

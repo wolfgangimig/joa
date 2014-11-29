@@ -40,7 +40,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34101)  public void setBillingInformation(String value) throws ComException {
+  @DeclDISPID(34101)  public void setBillingInformation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(36865)  public void setCategories(String value) throws ComException {
+  @DeclDISPID(36865)  public void setCategories(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(36865,"Categories", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34107)  public void setCompanies(String value) throws ComException {
+  @DeclDISPID(34107)  public void setCompanies(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34107,"Companies", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlImportance.valueOf((Integer)obj);
   }
-  @DeclDISPID(23)  public void setImportance(com.wilutions.mslib.outlook.OlImportance value) throws ComException {
+  @DeclDISPID(23)  public void setImportance(final com.wilutions.mslib.outlook.OlImportance value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -120,7 +120,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -129,7 +129,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34100)  public void setMileage(String value) throws ComException {
+  @DeclDISPID(34100)  public void setMileage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34100,"Mileage", DISPATCH_PROPERTYPUT,value);
   }
@@ -138,7 +138,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34062)  public void setNoAging(Boolean value) throws ComException {
+  @DeclDISPID(34062)  public void setNoAging(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34062,"NoAging", DISPATCH_PROPERTYPUT,value);
   }
@@ -162,7 +162,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlSensitivity.valueOf((Integer)obj);
   }
-  @DeclDISPID(54)  public void setSensitivity(com.wilutions.mslib.outlook.OlSensitivity value) throws ComException {
+  @DeclDISPID(54)  public void setSensitivity(final com.wilutions.mslib.outlook.OlSensitivity value) throws ComException {
     assert(value != null);
     this._dispatchCall(54,"Sensitivity", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -176,7 +176,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(55,"Subject", DISPATCH_PROPERTYPUT,value);
   }
@@ -185,7 +185,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(61468)  public void setUnRead(Boolean value) throws ComException {
+  @DeclDISPID(61468)  public void setUnRead(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(61468,"UnRead", DISPATCH_PROPERTYPUT,value);
   }
@@ -194,7 +194,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
-  @DeclDISPID(61475)  public void Close(com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(61475)  public void Close(final com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
@@ -206,11 +206,11 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61606)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public IDispatch Move(com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
     return (IDispatch)obj;
@@ -221,7 +221,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
   @DeclDISPID(61512)  public void Save() throws ComException {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException {
+  @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
     this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
@@ -231,7 +231,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(5)  public void setAutoForwarded(Boolean value) throws ComException {
+  @DeclDISPID(5)  public void setAutoForwarded(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"AutoForwarded", DISPATCH_PROPERTYPUT,value);
   }
@@ -240,7 +240,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(15)  public void setDeferredDeliveryTime(java.util.Date value) throws ComException {
+  @DeclDISPID(15)  public void setDeferredDeliveryTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(15,"DeferredDeliveryTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -249,7 +249,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(3585)  public void setDeleteAfterSubmit(Boolean value) throws ComException {
+  @DeclDISPID(3585)  public void setDeleteAfterSubmit(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(3585,"DeleteAfterSubmit", DISPATCH_PROPERTYPUT,value);
   }
@@ -258,7 +258,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(21)  public void setExpiryTime(java.util.Date value) throws ComException {
+  @DeclDISPID(21)  public void setExpiryTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(21,"ExpiryTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -267,7 +267,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(35)  public void setOriginatorDeliveryReportRequested(Boolean value) throws ComException {
+  @DeclDISPID(35)  public void setOriginatorDeliveryReportRequested(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(35,"OriginatorDeliveryReportRequested", DISPATCH_PROPERTYPUT,value);
   }
@@ -276,7 +276,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(3590)  public void setReceivedTime(java.util.Date value) throws ComException {
+  @DeclDISPID(3590)  public void setReceivedTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(3590,"ReceivedTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -290,7 +290,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34051)  public void setReminderSet(Boolean value) throws ComException {
+  @DeclDISPID(34051)  public void setReminderSet(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34051,"ReminderSet", DISPATCH_PROPERTYPUT,value);
   }
@@ -299,7 +299,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34050)  public void setReminderTime(java.util.Date value) throws ComException {
+  @DeclDISPID(34050)  public void setReminderTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34050,"ReminderTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -313,7 +313,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
-  @DeclDISPID(62465)  public void setSaveSentMessageFolder(com.wilutions.mslib.outlook.MAPIFolder value) throws ComException {
+  @DeclDISPID(62465)  public void setSaveSentMessageFolder(final com.wilutions.mslib.outlook.MAPIFolder value) throws ComException {
     this._dispatchCall(62465,"SaveSentMessageFolder", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(3098)  public String getSenderName() throws ComException {
@@ -342,7 +342,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.MeetingItem.class);
   }
-  @DeclDISPID(63328)  public com.wilutions.mslib.outlook.AppointmentItem GetAssociatedAppointment(Boolean AddToCalendar) throws ComException {
+  @DeclDISPID(63328)  public com.wilutions.mslib.outlook.AppointmentItem GetAssociatedAppointment(final Boolean AddToCalendar) throws ComException {
     assert(AddToCalendar != null);
     final Object obj = this._dispatchCall(63328,"GetAssociatedAppointment", DISPATCH_METHOD,null,AddToCalendar);
     if (obj == null) return null;
@@ -382,7 +382,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlRemoteStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(34161)  public void setMarkForDownload(com.wilutions.mslib.outlook.OlRemoteStatus value) throws ComException {
+  @DeclDISPID(34161)  public void setMarkForDownload(final com.wilutions.mslib.outlook.OlRemoteStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -438,7 +438,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
-  @DeclDISPID(64209)  public void setSendUsingAccount(com.wilutions.mslib.outlook.Account value) throws ComException {
+  @DeclDISPID(64209)  public void setSendUsingAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
     this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(64642)  public Boolean getIsLatestVersion() throws ComException {
@@ -451,7 +451,7 @@ public class _MeetingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64644)  public void setRTFBody(Object value) throws ComException {
+  @DeclDISPID(64644)  public void setRTFBody(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }

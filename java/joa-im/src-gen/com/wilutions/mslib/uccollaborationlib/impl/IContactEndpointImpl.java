@@ -20,7 +20,7 @@ public class IContactEndpointImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743811)  public Boolean CanStart(com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityTypes) throws ComException {
+  @DeclDISPID(1610743811)  public Boolean CanStart(final com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityTypes) throws ComException {
     assert(_modalityTypes != null);
     final Object obj = this._dispatchCall(1610743811,"CanStart", DISPATCH_METHOD,null,_modalityTypes.value);
     if (obj == null) return null;

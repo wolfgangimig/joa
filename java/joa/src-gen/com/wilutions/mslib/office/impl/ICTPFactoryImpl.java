@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A56-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ICTPFactoryImpl extends Dispatch implements com.wilutions.mslib.office.ICTPFactory {
-  @DeclDISPID(1)  public com.wilutions.mslib.office._CustomTaskPane CreateCTP(String CTPAxID, String CTPTitle, Object CTPParentWindow) throws ComException {
+  @DeclDISPID(1)  public com.wilutions.mslib.office._CustomTaskPane CreateCTP(final String CTPAxID, final String CTPTitle, final Object CTPParentWindow) throws ComException {
     assert(CTPAxID != null);
     assert(CTPTitle != null);
     assert(CTPParentWindow != null);

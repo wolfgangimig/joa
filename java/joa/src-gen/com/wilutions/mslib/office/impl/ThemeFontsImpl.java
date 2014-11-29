@@ -25,7 +25,7 @@ public class ThemeFontsImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.ThemeFont Item(com.wilutions.mslib.office.MsoFontLanguageIndex Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.ThemeFont Item(final com.wilutions.mslib.office.MsoFontLanguageIndex Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index.value);
     if (obj == null) return null;

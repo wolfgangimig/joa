@@ -30,13 +30,13 @@ public class _TimeZonesImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._TimeZone Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._TimeZone Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._TimeZoneImpl.class);
   }
-  @DeclDISPID(64550)  public java.util.Date ConvertTime(java.util.Date SourceDateTime, com.wilutions.mslib.outlook._TimeZone SourceTimeZone, com.wilutions.mslib.outlook._TimeZone DestinationTimeZone) throws ComException {
+  @DeclDISPID(64550)  public java.util.Date ConvertTime(final java.util.Date SourceDateTime, final com.wilutions.mslib.outlook._TimeZone SourceTimeZone, final com.wilutions.mslib.outlook._TimeZone DestinationTimeZone) throws ComException {
     assert(SourceDateTime != null);
     final Object obj = this._dispatchCall(64550,"ConvertTime", DISPATCH_METHOD,null,SourceDateTime,(SourceTimeZone!=null?SourceTimeZone:Dispatch.NULL),(DestinationTimeZone!=null?DestinationTimeZone:Dispatch.NULL));
     if (obj == null) return null;

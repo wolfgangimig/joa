@@ -20,7 +20,7 @@ public class SharedWorkspaceMembersImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceMember getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceMember getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,7 +31,7 @@ public class SharedWorkspaceMembersImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceMember Add(String Email, String DomainName, String DisplayName, Object Role) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceMember Add(final String Email, final String DomainName, final String DisplayName, final Object Role) throws ComException {
     assert(Email != null);
     assert(DomainName != null);
     assert(DisplayName != null);

@@ -10,7 +10,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743808)  public void setAxisBetweenCategories(Boolean value) throws ComException {
+  @DeclDISPID(1610743808)  public void setAxisBetweenCategories(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"AxisBetweenCategories", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743812)  public void setCategoryNames(Object value) throws ComException {
+  @DeclDISPID(1610743812)  public void setCategoryNames(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"CategoryNames", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlAxisCrosses.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743814)  public void setCrosses(com.wilutions.mslib.office.XlAxisCrosses value) throws ComException {
+  @DeclDISPID(1610743814)  public void setCrosses(final com.wilutions.mslib.office.XlAxisCrosses value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"Crosses", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -47,7 +47,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743816)  public void setCrossesAt(Double value) throws ComException {
+  @DeclDISPID(1610743816)  public void setCrossesAt(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"CrossesAt", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743819)  public void setHasMajorGridlines(Boolean value) throws ComException {
+  @DeclDISPID(1610743819)  public void setHasMajorGridlines(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743819,"HasMajorGridlines", DISPATCH_PROPERTYPUT,value);
   }
@@ -70,7 +70,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743821)  public void setHasMinorGridlines(Boolean value) throws ComException {
+  @DeclDISPID(1610743821)  public void setHasMinorGridlines(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743821,"HasMinorGridlines", DISPATCH_PROPERTYPUT,value);
   }
@@ -79,7 +79,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743823)  public void setHasTitle(Boolean value) throws ComException {
+  @DeclDISPID(1610743823)  public void setHasTitle(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743823,"HasTitle", DISPATCH_PROPERTYPUT,value);
   }
@@ -93,7 +93,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTickMark.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743826)  public void setMajorTickMark(com.wilutions.mslib.office.XlTickMark value) throws ComException {
+  @DeclDISPID(1610743826)  public void setMajorTickMark(final com.wilutions.mslib.office.XlTickMark value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743826,"MajorTickMark", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -102,7 +102,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743828)  public void setMajorUnit(Double value) throws ComException {
+  @DeclDISPID(1610743828)  public void setMajorUnit(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743828,"MajorUnit", DISPATCH_PROPERTYPUT,value);
   }
@@ -111,7 +111,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743830)  public void setLogBase(Double value) throws ComException {
+  @DeclDISPID(1610743830)  public void setLogBase(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743830,"LogBase", DISPATCH_PROPERTYPUT,value);
   }
@@ -120,7 +120,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743832)  public void setTickLabelSpacingIsAuto(Boolean value) throws ComException {
+  @DeclDISPID(1610743832)  public void setTickLabelSpacingIsAuto(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743832,"TickLabelSpacingIsAuto", DISPATCH_PROPERTYPUT,value);
   }
@@ -129,7 +129,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743834)  public void setMajorUnitIsAuto(Boolean value) throws ComException {
+  @DeclDISPID(1610743834)  public void setMajorUnitIsAuto(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743834,"MajorUnitIsAuto", DISPATCH_PROPERTYPUT,value);
   }
@@ -138,7 +138,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743836)  public void setMaximumScale(Double value) throws ComException {
+  @DeclDISPID(1610743836)  public void setMaximumScale(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743836,"MaximumScale", DISPATCH_PROPERTYPUT,value);
   }
@@ -147,7 +147,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743838)  public void setMaximumScaleIsAuto(Boolean value) throws ComException {
+  @DeclDISPID(1610743838)  public void setMaximumScaleIsAuto(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743838,"MaximumScaleIsAuto", DISPATCH_PROPERTYPUT,value);
   }
@@ -156,7 +156,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743840)  public void setMinimumScale(Double value) throws ComException {
+  @DeclDISPID(1610743840)  public void setMinimumScale(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743840,"MinimumScale", DISPATCH_PROPERTYPUT,value);
   }
@@ -165,7 +165,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743842)  public void setMinimumScaleIsAuto(Boolean value) throws ComException {
+  @DeclDISPID(1610743842)  public void setMinimumScaleIsAuto(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743842,"MinimumScaleIsAuto", DISPATCH_PROPERTYPUT,value);
   }
@@ -179,7 +179,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTickMark.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743845)  public void setMinorTickMark(com.wilutions.mslib.office.XlTickMark value) throws ComException {
+  @DeclDISPID(1610743845)  public void setMinorTickMark(final com.wilutions.mslib.office.XlTickMark value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743845,"MinorTickMark", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -188,7 +188,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743847)  public void setMinorUnit(Double value) throws ComException {
+  @DeclDISPID(1610743847)  public void setMinorUnit(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743847,"MinorUnit", DISPATCH_PROPERTYPUT,value);
   }
@@ -197,7 +197,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743849)  public void setMinorUnitIsAuto(Boolean value) throws ComException {
+  @DeclDISPID(1610743849)  public void setMinorUnitIsAuto(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743849,"MinorUnitIsAuto", DISPATCH_PROPERTYPUT,value);
   }
@@ -206,7 +206,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743851)  public void setReversePlotOrder(Boolean value) throws ComException {
+  @DeclDISPID(1610743851)  public void setReversePlotOrder(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743851,"ReversePlotOrder", DISPATCH_PROPERTYPUT,value);
   }
@@ -215,7 +215,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlScaleType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743853)  public void setScaleType(com.wilutions.mslib.office.XlScaleType value) throws ComException {
+  @DeclDISPID(1610743853)  public void setScaleType(final com.wilutions.mslib.office.XlScaleType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743853,"ScaleType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -229,7 +229,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTickLabelPosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743856)  public void setTickLabelPosition(com.wilutions.mslib.office.XlTickLabelPosition value) throws ComException {
+  @DeclDISPID(1610743856)  public void setTickLabelPosition(final com.wilutions.mslib.office.XlTickLabelPosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743856,"TickLabelPosition", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -243,7 +243,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743859)  public void setTickLabelSpacing(Integer value) throws ComException {
+  @DeclDISPID(1610743859)  public void setTickLabelSpacing(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743859,"TickLabelSpacing", DISPATCH_PROPERTYPUT,value);
   }
@@ -252,7 +252,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743861)  public void setTickMarkSpacing(Integer value) throws ComException {
+  @DeclDISPID(1610743861)  public void setTickMarkSpacing(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743861,"TickMarkSpacing", DISPATCH_PROPERTYPUT,value);
   }
@@ -261,7 +261,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlAxisType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743863)  public void setType(com.wilutions.mslib.office.XlAxisType value) throws ComException {
+  @DeclDISPID(1610743863)  public void setType(final com.wilutions.mslib.office.XlAxisType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743863,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -270,7 +270,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTimeUnit.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743865)  public void setBaseUnit(com.wilutions.mslib.office.XlTimeUnit value) throws ComException {
+  @DeclDISPID(1610743865)  public void setBaseUnit(final com.wilutions.mslib.office.XlTimeUnit value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743865,"BaseUnit", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -279,7 +279,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743867)  public void setBaseUnitIsAuto(Boolean value) throws ComException {
+  @DeclDISPID(1610743867)  public void setBaseUnitIsAuto(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743867,"BaseUnitIsAuto", DISPATCH_PROPERTYPUT,value);
   }
@@ -288,7 +288,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTimeUnit.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743869)  public void setMajorUnitScale(com.wilutions.mslib.office.XlTimeUnit value) throws ComException {
+  @DeclDISPID(1610743869)  public void setMajorUnitScale(final com.wilutions.mslib.office.XlTimeUnit value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743869,"MajorUnitScale", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -297,7 +297,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTimeUnit.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743871)  public void setMinorUnitScale(com.wilutions.mslib.office.XlTimeUnit value) throws ComException {
+  @DeclDISPID(1610743871)  public void setMinorUnitScale(final com.wilutions.mslib.office.XlTimeUnit value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743871,"MinorUnitScale", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -306,7 +306,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlCategoryType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743873)  public void setCategoryType(com.wilutions.mslib.office.XlCategoryType value) throws ComException {
+  @DeclDISPID(1610743873)  public void setCategoryType(final com.wilutions.mslib.office.XlCategoryType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743873,"CategoryType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -335,7 +335,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlDisplayUnit.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743879)  public void setDisplayUnit(com.wilutions.mslib.office.XlDisplayUnit value) throws ComException {
+  @DeclDISPID(1610743879)  public void setDisplayUnit(final com.wilutions.mslib.office.XlDisplayUnit value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743879,"DisplayUnit", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -344,7 +344,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743881)  public void setDisplayUnitCustom(Double value) throws ComException {
+  @DeclDISPID(1610743881)  public void setDisplayUnitCustom(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743881,"DisplayUnitCustom", DISPATCH_PROPERTYPUT,value);
   }
@@ -353,7 +353,7 @@ public class IMsoAxisImpl extends Dispatch implements com.wilutions.mslib.office
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743883)  public void setHasDisplayUnitLabel(Boolean value) throws ComException {
+  @DeclDISPID(1610743883)  public void setHasDisplayUnitLabel(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743883,"HasDisplayUnitLabel", DISPATCH_PROPERTYPUT,value);
   }

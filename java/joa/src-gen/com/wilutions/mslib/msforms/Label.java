@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{978C9E23-D4B0-11CE-BF2D-00AA003F40D0}")
 public class Label extends Dispatch implements ILabelControl {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -28,7 +28,7 @@ public class Label extends Dispatch implements ILabelControl {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(-502)  public void setBackStyle(fmBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final fmBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -37,7 +37,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return fmBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-503)  public void setBorderColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-503)  public void setBorderColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-503,"BorderColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -47,7 +47,7 @@ public class Label extends Dispatch implements ILabelControl {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(fmBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final fmBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -56,7 +56,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return fmBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(0)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(0)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -65,7 +65,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -74,7 +74,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-512)  public void setFont(Font value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final Font value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-512)  public Font getFont() throws ComException {
@@ -82,7 +82,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
-  @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -92,7 +92,7 @@ public class Label extends Dispatch implements ILabelControl {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -100,7 +100,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -109,7 +109,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-523)  public void setPicture(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
@@ -117,7 +117,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(11)  public void setPicturePosition(fmPicturePosition value) throws ComException {
+  @DeclDISPID(11)  public void setPicturePosition(final fmPicturePosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"PicturePosition", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -126,7 +126,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return fmPicturePosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(12)  public void setSpecialEffect(fmSpecialEffect value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final fmSpecialEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -135,7 +135,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return fmSpecialEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(13)  public void setTextAlign(fmTextAlign value) throws ComException {
+  @DeclDISPID(13)  public void setTextAlign(final fmTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(13,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -144,7 +144,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return fmTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
@@ -153,7 +153,7 @@ public class Label extends Dispatch implements ILabelControl {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException {
+  @DeclDISPID(-543)  public void setAccelerator(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-543,"Accelerator", DISPATCH_PROPERTYPUT,value);
   }

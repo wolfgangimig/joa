@@ -28,7 +28,7 @@ public class IUCOfficeIntegrationHelperImpl extends Dispatch implements com.wilu
   @DeclDISPID(1610678276)  public void Cleanup() throws ComException {
     this._dispatchCall(1610678276,"Cleanup", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610678277)  public void Notify(com.wilutions.mslib.uccollaborationlib.OIHelperAction Action, HRESULT hrRes) throws ComException {
+  @DeclDISPID(1610678277)  public void Notify(final com.wilutions.mslib.uccollaborationlib.OIHelperAction Action, final HRESULT hrRes) throws ComException {
     assert(Action != null);
     assert(hrRes != null);
     this._dispatchCall(1610678277,"Notify", DISPATCH_METHOD,null,Action.value,hrRes);

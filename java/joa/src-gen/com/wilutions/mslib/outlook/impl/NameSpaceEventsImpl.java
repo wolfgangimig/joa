@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A9E7-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class NameSpaceEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.NameSpaceEvents {
-  @DeclDISPID(61445)  public void onOptionsPagesAdd(com.wilutions.mslib.outlook.PropertyPages Pages, com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
+  @DeclDISPID(61445)  public void onOptionsPagesAdd(final com.wilutions.mslib.outlook.PropertyPages Pages, final com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
     this._dispatchCall(61445,"OptionsPagesAdd", DISPATCH_METHOD,null,(Pages!=null?Pages:Dispatch.NULL),(Folder!=null?Folder:Dispatch.NULL));
   }
   @DeclDISPID(64557)  public void onAutoDiscoverComplete() throws ComException {

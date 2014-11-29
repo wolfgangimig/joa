@@ -14,7 +14,7 @@ public class _DocSiteControl extends Dispatch implements _DDocSiteControl {
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(-2147356664)  public void setReadOnly(Byte value) throws ComException {
+  @DeclDISPID(-2147356664)  public void setReadOnly(final Byte value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class _DocSiteControl extends Dispatch implements _DDocSiteControl {
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(64483)  public void setSuppressAttachments(Byte value) throws ComException {
+  @DeclDISPID(64483)  public void setSuppressAttachments(final Byte value) throws ComException {
     assert(value != null);
     this._dispatchCall(64483,"SuppressAttachments", DISPATCH_PROPERTYPUT,value);
   }

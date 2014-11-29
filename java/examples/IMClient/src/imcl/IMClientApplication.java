@@ -10,13 +10,13 @@ public class IMClientApplication extends AddinApplication {
 	private static final String processName = "javaw.exe";
 
 	public static void main(String[] args) {
-		AddinApplication.main(args);
+		main(IMClientApplication.class, IMClientApplication.class, args);
 	}
 
 	@Override
 	protected void register(boolean userNotMachine, String execPath) {
 		super.register(userNotMachine, execPath);
-		String guid = IMClient.class.getAnnotation(CoClass.class).guid();
+		String guid = LitwareClientAppObject.class.getAnnotation(CoClass.class).guid();
 		RegisterIMProvider.register(applicationName, friendlyName, processName, guid, true);
 	}
 	

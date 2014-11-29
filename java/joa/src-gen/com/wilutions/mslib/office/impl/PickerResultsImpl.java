@@ -15,7 +15,7 @@ public class PickerResultsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.PickerResult getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.PickerResult getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -26,7 +26,7 @@ public class PickerResultsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.PickerResult Add(String Id, String DisplayName, String Type, String SIPId, Object ItemData, Object SubItems) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.PickerResult Add(final String Id, final String DisplayName, final String Type, final String SIPId, final Object ItemData, final Object SubItems) throws ComException {
     assert(Id != null);
     assert(DisplayName != null);
     assert(Type != null);

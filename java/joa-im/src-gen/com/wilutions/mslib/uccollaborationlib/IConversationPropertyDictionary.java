@@ -10,11 +10,11 @@ import com.wilutions.com.*;
 public interface IConversationPropertyDictionary extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public Object getItem(ConversationProperty _propertyType) throws ComException;
+  @DeclDISPID(0)  public Object getItem(final ConversationProperty _propertyType) throws ComException;
   @DeclDISPID(1610743810)  public ConversationProperty[] getKeys() throws ComException;
   @DeclDISPID(1610743811)  public Object[] getValues() throws ComException;
-  @DeclDISPID(1610743812)  public Boolean TryGetValue(ConversationProperty _propertyType, ByRef<Object> _itemValue) throws ComException;
-  @DeclDISPID(1610743813)  public ConversationProperty GetKeyAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743814)  public Object GetValueAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(ConversationProperty _propertyType) throws ComException;
+  @DeclDISPID(1610743812)  public Boolean TryGetValue(final ConversationProperty _propertyType, final ByRef<Object> _itemValue) throws ComException;
+  @DeclDISPID(1610743813)  public ConversationProperty GetKeyAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743814)  public Object GetValueAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final ConversationProperty _propertyType) throws ComException;
 }

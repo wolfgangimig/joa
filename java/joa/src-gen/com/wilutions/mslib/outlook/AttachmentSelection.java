@@ -34,7 +34,7 @@ public class AttachmentSelection extends Dispatch implements _AttachmentSelectio
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public Attachment Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public Attachment Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -45,7 +45,7 @@ public class AttachmentSelection extends Dispatch implements _AttachmentSelectio
     if (obj == null) return null;
     return OlSelectionLocation.valueOf((Integer)obj);
   }
-  @DeclDISPID(8706)  public Selection GetSelection(OlSelectionContents SelectionContents) throws ComException {
+  @DeclDISPID(8706)  public Selection GetSelection(final OlSelectionContents SelectionContents) throws ComException {
     assert(SelectionContents != null);
     final Object obj = this._dispatchCall(8706,"GetSelection", DISPATCH_METHOD,null,SelectionContents.value);
     if (obj == null) return null;

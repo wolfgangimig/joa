@@ -14,7 +14,7 @@ public interface _RuleConditions extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public _RuleCondition Item(Integer Index) throws ComException;
+  @DeclDISPID(81)  public _RuleCondition Item(final Integer Index) throws ComException;
   @DeclDISPID(64300)  public RuleCondition getCC() throws ComException;
   @DeclDISPID(64301)  public RuleCondition getHasAttachment() throws ComException;
   @DeclDISPID(64299)  public ImportanceRuleCondition getImportance() throws ComException;

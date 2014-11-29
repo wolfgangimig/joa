@@ -51,7 +51,7 @@ public class _StorageItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -81,7 +81,7 @@ public class _StorageItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(55,"Subject", DISPATCH_PROPERTYPUT,value);
   }
@@ -90,7 +90,7 @@ public class _StorageItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34236)  public void setCreator(String value) throws ComException {
+  @DeclDISPID(34236)  public void setCreator(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34236,"Creator", DISPATCH_PROPERTYPUT,value);
   }

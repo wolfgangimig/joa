@@ -8,23 +8,23 @@ public class IRibbonUIImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1)  public void Invalidate() throws ComException {
     this._dispatchCall(1,"Invalidate", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(2)  public void InvalidateControl(String ControlID) throws ComException {
+  @DeclDISPID(2)  public void InvalidateControl(final String ControlID) throws ComException {
     assert(ControlID != null);
     this._dispatchCall(2,"InvalidateControl", DISPATCH_METHOD,null,ControlID);
   }
-  @DeclDISPID(3)  public void InvalidateControlMso(String ControlID) throws ComException {
+  @DeclDISPID(3)  public void InvalidateControlMso(final String ControlID) throws ComException {
     assert(ControlID != null);
     this._dispatchCall(3,"InvalidateControlMso", DISPATCH_METHOD,null,ControlID);
   }
-  @DeclDISPID(4)  public void ActivateTab(String ControlID) throws ComException {
+  @DeclDISPID(4)  public void ActivateTab(final String ControlID) throws ComException {
     assert(ControlID != null);
     this._dispatchCall(4,"ActivateTab", DISPATCH_METHOD,null,ControlID);
   }
-  @DeclDISPID(5)  public void ActivateTabMso(String ControlID) throws ComException {
+  @DeclDISPID(5)  public void ActivateTabMso(final String ControlID) throws ComException {
     assert(ControlID != null);
     this._dispatchCall(5,"ActivateTabMso", DISPATCH_METHOD,null,ControlID);
   }
-  @DeclDISPID(6)  public void ActivateTabQ(String ControlID, String Namespace) throws ComException {
+  @DeclDISPID(6)  public void ActivateTabQ(final String ControlID, final String Namespace) throws ComException {
     assert(ControlID != null);
     assert(Namespace != null);
     this._dispatchCall(6,"ActivateTabQ", DISPATCH_METHOD,null,ControlID,Namespace);

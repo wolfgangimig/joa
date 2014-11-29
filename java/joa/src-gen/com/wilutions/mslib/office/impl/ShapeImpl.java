@@ -31,19 +31,19 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(13)  public void Flip(com.wilutions.mslib.office.MsoFlipCmd FlipCmd) throws ComException {
+  @DeclDISPID(13)  public void Flip(final com.wilutions.mslib.office.MsoFlipCmd FlipCmd) throws ComException {
     assert(FlipCmd != null);
     this._dispatchCall(13,"Flip", DISPATCH_METHOD,null,FlipCmd.value);
   }
-  @DeclDISPID(14)  public void IncrementLeft(Float Increment) throws ComException {
+  @DeclDISPID(14)  public void IncrementLeft(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(14,"IncrementLeft", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(15)  public void IncrementRotation(Float Increment) throws ComException {
+  @DeclDISPID(15)  public void IncrementRotation(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(15,"IncrementRotation", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(16)  public void IncrementTop(Float Increment) throws ComException {
+  @DeclDISPID(16)  public void IncrementTop(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(16,"IncrementTop", DISPATCH_METHOD,null,Increment);
   }
@@ -53,19 +53,19 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   @DeclDISPID(18)  public void RerouteConnections() throws ComException {
     this._dispatchCall(18,"RerouteConnections", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(19)  public void ScaleHeight(Float Factor, com.wilutions.mslib.office.MsoTriState RelativeToOriginalSize, com.wilutions.mslib.office.MsoScaleFrom fScale) throws ComException {
+  @DeclDISPID(19)  public void ScaleHeight(final Float Factor, final com.wilutions.mslib.office.MsoTriState RelativeToOriginalSize, final com.wilutions.mslib.office.MsoScaleFrom fScale) throws ComException {
     assert(Factor != null);
     assert(RelativeToOriginalSize != null);
     assert(fScale != null);
     this._dispatchCall(19,"ScaleHeight", DISPATCH_METHOD,null,Factor,RelativeToOriginalSize.value,fScale.value);
   }
-  @DeclDISPID(20)  public void ScaleWidth(Float Factor, com.wilutions.mslib.office.MsoTriState RelativeToOriginalSize, com.wilutions.mslib.office.MsoScaleFrom fScale) throws ComException {
+  @DeclDISPID(20)  public void ScaleWidth(final Float Factor, final com.wilutions.mslib.office.MsoTriState RelativeToOriginalSize, final com.wilutions.mslib.office.MsoScaleFrom fScale) throws ComException {
     assert(Factor != null);
     assert(RelativeToOriginalSize != null);
     assert(fScale != null);
     this._dispatchCall(20,"ScaleWidth", DISPATCH_METHOD,null,Factor,RelativeToOriginalSize.value,fScale.value);
   }
-  @DeclDISPID(21)  public void Select(Object Replace) throws ComException {
+  @DeclDISPID(21)  public void Select(final Object Replace) throws ComException {
     assert(Replace != null);
     this._dispatchCall(21,"Select", DISPATCH_METHOD,null,Replace);
   }
@@ -77,7 +77,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeRangeImpl.class);
   }
-  @DeclDISPID(24)  public void ZOrder(com.wilutions.mslib.office.MsoZOrderCmd ZOrderCmd) throws ComException {
+  @DeclDISPID(24)  public void ZOrder(final com.wilutions.mslib.office.MsoZOrderCmd ZOrderCmd) throws ComException {
     assert(ZOrderCmd != null);
     this._dispatchCall(24,"ZOrder", DISPATCH_METHOD,null,ZOrderCmd.value);
   }
@@ -91,7 +91,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoAutoShapeType.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setAutoShapeType(com.wilutions.mslib.office.MsoAutoShapeType value) throws ComException {
+  @DeclDISPID(101)  public void setAutoShapeType(final com.wilutions.mslib.office.MsoAutoShapeType value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"AutoShapeType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -100,7 +100,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoBlackWhiteMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(102)  public void setBlackWhiteMode(com.wilutions.mslib.office.MsoBlackWhiteMode value) throws ComException {
+  @DeclDISPID(102)  public void setBlackWhiteMode(final com.wilutions.mslib.office.MsoBlackWhiteMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"BlackWhiteMode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -139,7 +139,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(109)  public void setHeight(Float value) throws ComException {
+  @DeclDISPID(109)  public void setHeight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -153,7 +153,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(111)  public void setLeft(Float value) throws ComException {
+  @DeclDISPID(111)  public void setLeft(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(111,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -167,7 +167,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(113)  public void setLockAspectRatio(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(113)  public void setLockAspectRatio(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(113,"LockAspectRatio", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -176,7 +176,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(115)  public void setName(String value) throws ComException {
+  @DeclDISPID(115)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(115,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -190,7 +190,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(117)  public void setRotation(Float value) throws ComException {
+  @DeclDISPID(117)  public void setRotation(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(117,"Rotation", DISPATCH_PROPERTYPUT,value);
   }
@@ -224,7 +224,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(123)  public void setTop(Float value) throws ComException {
+  @DeclDISPID(123)  public void setTop(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(123,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -248,7 +248,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(127)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(127)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(127,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -257,7 +257,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(128)  public void setWidth(Float value) throws ComException {
+  @DeclDISPID(128)  public void setWidth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(128,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -271,7 +271,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(131)  public void setAlternativeText(String value) throws ComException {
+  @DeclDISPID(131)  public void setAlternativeText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(131,"AlternativeText", DISPATCH_PROPERTYPUT,value);
   }
@@ -316,7 +316,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoShapeStyleIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(150)  public void setShapeStyle(com.wilutions.mslib.office.MsoShapeStyleIndex value) throws ComException {
+  @DeclDISPID(150)  public void setShapeStyle(final com.wilutions.mslib.office.MsoShapeStyleIndex value) throws ComException {
     assert(value != null);
     this._dispatchCall(150,"ShapeStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -325,7 +325,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoBackgroundStyleIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(151)  public void setBackgroundStyle(com.wilutions.mslib.office.MsoBackgroundStyleIndex value) throws ComException {
+  @DeclDISPID(151)  public void setBackgroundStyle(final com.wilutions.mslib.office.MsoBackgroundStyleIndex value) throws ComException {
     assert(value != null);
     this._dispatchCall(151,"BackgroundStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -354,7 +354,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtImpl.class);
   }
-  @DeclDISPID(157)  public void ConvertTextToSmartArt(com.wilutions.mslib.office.SmartArtLayout Layout) throws ComException {
+  @DeclDISPID(157)  public void ConvertTextToSmartArt(final com.wilutions.mslib.office.SmartArtLayout Layout) throws ComException {
     this._dispatchCall(157,"ConvertTextToSmartArt", DISPATCH_METHOD,null,(Layout!=null?Layout:Dispatch.NULL));
   }
   @DeclDISPID(158)  public String getTitle() throws ComException {
@@ -362,7 +362,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(158)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(158)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(158,"Title", DISPATCH_PROPERTYPUT,value);
   }

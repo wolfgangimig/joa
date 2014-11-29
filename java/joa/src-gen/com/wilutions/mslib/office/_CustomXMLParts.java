@@ -13,9 +13,9 @@ public interface _CustomXMLParts extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public CustomXMLPart getItem(Object Index) throws ComException;
-  @DeclDISPID(1610809347)  public CustomXMLPart Add(String XML, Object SchemaCollection) throws ComException;
-  @DeclDISPID(1610809348)  public CustomXMLPart SelectByID(String Id) throws ComException;
-  @DeclDISPID(1610809349)  public CustomXMLParts SelectByNamespace(String NamespaceURI) throws ComException;
+  @DeclDISPID(0)  public CustomXMLPart getItem(final Object Index) throws ComException;
+  @DeclDISPID(1610809347)  public CustomXMLPart Add(final String XML, final Object SchemaCollection) throws ComException;
+  @DeclDISPID(1610809348)  public CustomXMLPart SelectByID(final String Id) throws ComException;
+  @DeclDISPID(1610809349)  public CustomXMLParts SelectByNamespace(final String NamespaceURI) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
 }

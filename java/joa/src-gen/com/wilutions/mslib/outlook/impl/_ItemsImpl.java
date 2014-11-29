@@ -30,7 +30,7 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -41,17 +41,17 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(206)  public void setIncludeRecurrences(Boolean value) throws ComException {
+  @DeclDISPID(206)  public void setIncludeRecurrences(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(206,"IncludeRecurrences", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(95)  public IDispatch Add(Object Type) throws ComException {
+  @DeclDISPID(95)  public IDispatch Add(final Object Type) throws ComException {
     assert(Type != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Type);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(98)  public IDispatch Find(String Filter) throws ComException {
+  @DeclDISPID(98)  public IDispatch Find(final String Filter) throws ComException {
     assert(Filter != null);
     final Object obj = this._dispatchCall(98,"Find", DISPATCH_METHOD,null,Filter);
     if (obj == null) return null;
@@ -82,24 +82,24 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }
   @DeclDISPID(93)  public void ResetColumns() throws ComException {
     this._dispatchCall(93,"ResetColumns", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(100)  public com.wilutions.mslib.outlook._Items Restrict(String Filter) throws ComException {
+  @DeclDISPID(100)  public com.wilutions.mslib.outlook._Items Restrict(final String Filter) throws ComException {
     assert(Filter != null);
     final Object obj = this._dispatchCall(100,"Restrict", DISPATCH_METHOD,null,Filter);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ItemsImpl.class);
   }
-  @DeclDISPID(92)  public void SetColumns(String Columns) throws ComException {
+  @DeclDISPID(92)  public void SetColumns(final String Columns) throws ComException {
     assert(Columns != null);
     this._dispatchCall(92,"SetColumns", DISPATCH_METHOD,null,Columns);
   }
-  @DeclDISPID(97)  public void Sort(String Property, Object Descending) throws ComException {
+  @DeclDISPID(97)  public void Sort(final String Property, final Object Descending) throws ComException {
     assert(Property != null);
     assert(Descending != null);
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);

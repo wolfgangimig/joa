@@ -11,14 +11,14 @@ public class ExplorerEvents_10Impl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(61442)  public void onFolderSwitch() throws ComException {
     this._dispatchCall(61442,"FolderSwitch", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61443)  public void onBeforeFolderSwitch(IDispatch NewFolder, ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(61443)  public void onBeforeFolderSwitch(final IDispatch NewFolder, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(61443,"BeforeFolderSwitch", DISPATCH_METHOD,null,(NewFolder!=null?NewFolder:Dispatch.NULL),Cancel);
   }
   @DeclDISPID(61444)  public void onViewSwitch() throws ComException {
     this._dispatchCall(61444,"ViewSwitch", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61445)  public void onBeforeViewSwitch(Object NewView, ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(61445)  public void onBeforeViewSwitch(final Object NewView, final ByRef<Boolean> Cancel) throws ComException {
     assert(NewView != null);
     assert(Cancel != null);
     this._dispatchCall(61445,"BeforeViewSwitch", DISPATCH_METHOD,null,NewView,Cancel);
@@ -32,31 +32,31 @@ public class ExplorerEvents_10Impl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(61448)  public void onClose() throws ComException {
     this._dispatchCall(61448,"Close", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64017)  public void onBeforeMaximize(ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64017)  public void onBeforeMaximize(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(64017,"BeforeMaximize", DISPATCH_METHOD,null,Cancel);
   }
-  @DeclDISPID(64018)  public void onBeforeMinimize(ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64018)  public void onBeforeMinimize(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(64018,"BeforeMinimize", DISPATCH_METHOD,null,Cancel);
   }
-  @DeclDISPID(64019)  public void onBeforeMove(ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64019)  public void onBeforeMove(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(64019,"BeforeMove", DISPATCH_METHOD,null,Cancel);
   }
-  @DeclDISPID(64020)  public void onBeforeSize(ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64020)  public void onBeforeSize(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(64020,"BeforeSize", DISPATCH_METHOD,null,Cancel);
   }
-  @DeclDISPID(64014)  public void onBeforeItemCopy(ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64014)  public void onBeforeItemCopy(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(64014,"BeforeItemCopy", DISPATCH_METHOD,null,Cancel);
   }
-  @DeclDISPID(64015)  public void onBeforeItemCut(ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64015)  public void onBeforeItemCut(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
     this._dispatchCall(64015,"BeforeItemCut", DISPATCH_METHOD,null,Cancel);
   }
-  @DeclDISPID(64016)  public void onBeforeItemPaste(Object ClipboardContent, com.wilutions.mslib.outlook.MAPIFolder Target, ByRef<Boolean> Cancel) throws ComException {
+  @DeclDISPID(64016)  public void onBeforeItemPaste(final Object ClipboardContent, final com.wilutions.mslib.outlook.MAPIFolder Target, final ByRef<Boolean> Cancel) throws ComException {
     assert(ClipboardContent != null);
     assert(Cancel != null);
     this._dispatchCall(64016,"BeforeItemPaste", DISPATCH_METHOD,null,ClipboardContent,(Target!=null?Target:Dispatch.NULL),Cancel);
@@ -64,7 +64,7 @@ public class ExplorerEvents_10Impl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(64633)  public void onAttachmentSelectionChange() throws ComException {
     this._dispatchCall(64633,"AttachmentSelectionChange", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64658)  public void onInlineResponse(IDispatch Item) throws ComException {
+  @DeclDISPID(64658)  public void onInlineResponse(final IDispatch Item) throws ComException {
     assert(Item != null);
     this._dispatchCall(64658,"InlineResponse", DISPATCH_METHOD,null,Item);
   }

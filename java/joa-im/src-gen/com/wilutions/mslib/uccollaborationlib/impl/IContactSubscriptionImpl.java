@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{552F4A83-57B6-9681-2150-C2676DC2225A}")
 public class IContactSubscriptionImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.IContactSubscription {
-  @DeclDISPID(1610743808)  public void Subscribe(com.wilutions.mslib.uccollaborationlib.ContactSubscriptionRefreshRate _subscriptionFreshness, com.wilutions.mslib.uccollaborationlib.ContactInformationType[] _contactInformationTypes) throws ComException {
+  @DeclDISPID(1610743808)  public void Subscribe(final com.wilutions.mslib.uccollaborationlib.ContactSubscriptionRefreshRate _subscriptionFreshness, final com.wilutions.mslib.uccollaborationlib.ContactInformationType[] _contactInformationTypes) throws ComException {
     assert(_subscriptionFreshness != null);
     assert(_contactInformationTypes != null);
     this._dispatchCall(1610743808,"Subscribe", DISPATCH_METHOD,null,_subscriptionFreshness.value,_contactInformationTypes);
@@ -13,10 +13,10 @@ public class IContactSubscriptionImpl extends Dispatch implements com.wilutions.
   @DeclDISPID(1610743809)  public void Unsubscribe() throws ComException {
     this._dispatchCall(1610743809,"Unsubscribe", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743810)  public void AddContact(com.wilutions.mslib.uccollaborationlib.IContact _contact) throws ComException {
+  @DeclDISPID(1610743810)  public void AddContact(final com.wilutions.mslib.uccollaborationlib.IContact _contact) throws ComException {
     this._dispatchCall(1610743810,"AddContact", DISPATCH_METHOD,null,(_contact!=null?_contact:Dispatch.NULL));
   }
-  @DeclDISPID(1610743811)  public void RemoveContact(com.wilutions.mslib.uccollaborationlib.IContact _contact) throws ComException {
+  @DeclDISPID(1610743811)  public void RemoveContact(final com.wilutions.mslib.uccollaborationlib.IContact _contact) throws ComException {
     this._dispatchCall(1610743811,"RemoveContact", DISPATCH_METHOD,null,(_contact!=null?_contact:Dispatch.NULL));
   }
   @DeclDISPID(1610743812)  public com.wilutions.mslib.uccollaborationlib.ContactSubscriptionRefreshRate getLastSubscribedRefreshRate() throws ComException {
@@ -34,11 +34,11 @@ public class IContactSubscriptionImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IContact[])obj;
   }
-  @DeclDISPID(1610743815)  public void AddContactByUri(String _contactUri) throws ComException {
+  @DeclDISPID(1610743815)  public void AddContactByUri(final String _contactUri) throws ComException {
     assert(_contactUri != null);
     this._dispatchCall(1610743815,"AddContactByUri", DISPATCH_METHOD,null,_contactUri);
   }
-  @DeclDISPID(1610743816)  public void AddContacts(com.wilutions.mslib.uccollaborationlib.IContact[] _contacts) throws ComException {
+  @DeclDISPID(1610743816)  public void AddContacts(final com.wilutions.mslib.uccollaborationlib.IContact[] _contacts) throws ComException {
     assert(_contacts != null);
     this._dispatchCall(1610743816,"AddContacts", DISPATCH_METHOD,null,_contacts);
   }

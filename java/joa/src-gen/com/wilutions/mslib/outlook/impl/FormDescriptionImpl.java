@@ -30,7 +30,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(13060)  public void setCategory(String value) throws ComException {
+  @DeclDISPID(13060)  public void setCategory(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(13060,"Category", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(13061)  public void setCategorySub(String value) throws ComException {
+  @DeclDISPID(13061)  public void setCategorySub(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(13061,"CategorySub", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12292)  public void setComment(String value) throws ComException {
+  @DeclDISPID(12292)  public void setComment(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12292,"Comment", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(13059)  public void setContactName(String value) throws ComException {
+  @DeclDISPID(13059)  public void setContactName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(13059,"ContactName", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setDisplayName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setDisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"DisplayName", DISPATCH_PROPERTYPUT,value);
   }
@@ -75,7 +75,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(13063)  public void setHidden(Boolean value) throws ComException {
+  @DeclDISPID(13063)  public void setHidden(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(13063,"Hidden", DISPATCH_PROPERTYPUT,value);
   }
@@ -84,7 +84,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4093)  public void setIcon(String value) throws ComException {
+  @DeclDISPID(4093)  public void setIcon(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4093,"Icon", DISPATCH_PROPERTYPUT,value);
   }
@@ -93,7 +93,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(102)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(102)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -107,7 +107,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4092)  public void setMiniIcon(String value) throws ComException {
+  @DeclDISPID(4092)  public void setMiniIcon(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4092,"MiniIcon", DISPATCH_PROPERTYPUT,value);
   }
@@ -116,7 +116,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(61469)  public void setName(String value) throws ComException {
+  @DeclDISPID(61469)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(61469,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -125,7 +125,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(104)  public void setNumber(String value) throws ComException {
+  @DeclDISPID(104)  public void setNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"Number", DISPATCH_PROPERTYPUT,value);
   }
@@ -134,7 +134,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(101)  public void setOneOff(Boolean value) throws ComException {
+  @DeclDISPID(101)  public void setOneOff(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"OneOff", DISPATCH_PROPERTYPUT,value);
   }
@@ -148,7 +148,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(106)  public void setTemplate(String value) throws ComException {
+  @DeclDISPID(106)  public void setTemplate(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"Template", DISPATCH_PROPERTYPUT,value);
   }
@@ -157,7 +157,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(105)  public void setUseWordMail(Boolean value) throws ComException {
+  @DeclDISPID(105)  public void setUseWordMail(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"UseWordMail", DISPATCH_PROPERTYPUT,value);
   }
@@ -166,11 +166,11 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(13057)  public void setVersion(String value) throws ComException {
+  @DeclDISPID(13057)  public void setVersion(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(13057,"Version", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(107)  public void PublishForm(com.wilutions.mslib.outlook.OlFormRegistry Registry, Object Folder) throws ComException {
+  @DeclDISPID(107)  public void PublishForm(final com.wilutions.mslib.outlook.OlFormRegistry Registry, final Object Folder) throws ComException {
     assert(Registry != null);
     assert(Folder != null);
     this._dispatchCall(107,"PublishForm", DISPATCH_METHOD,null,Registry.value,Folder);

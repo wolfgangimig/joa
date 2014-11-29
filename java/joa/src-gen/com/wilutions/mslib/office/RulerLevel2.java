@@ -13,7 +13,7 @@ public interface RulerLevel2 extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public Float getFirstMargin() throws ComException;
-  @DeclDISPID(2)  public void setFirstMargin(Float value) throws ComException;
+  @DeclDISPID(2)  public void setFirstMargin(final Float value) throws ComException;
   @DeclDISPID(3)  public Float getLeftMargin() throws ComException;
-  @DeclDISPID(3)  public void setLeftMargin(Float value) throws ComException;
+  @DeclDISPID(3)  public void setLeftMargin(final Float value) throws ComException;
 }

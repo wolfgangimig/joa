@@ -45,7 +45,7 @@ public class IVoiceMailImpl extends Dispatch implements com.wilutions.mslib.ucco
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationImpl.class);
   }
-  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Delete(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Delete(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743816,"Delete", DISPATCH_METHOD,null,_callback,_state);

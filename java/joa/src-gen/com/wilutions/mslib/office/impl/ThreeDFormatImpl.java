@@ -20,22 +20,22 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(10)  public void IncrementRotationX(Float Increment) throws ComException {
+  @DeclDISPID(10)  public void IncrementRotationX(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(10,"IncrementRotationX", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(11)  public void IncrementRotationY(Float Increment) throws ComException {
+  @DeclDISPID(11)  public void IncrementRotationY(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(11,"IncrementRotationY", DISPATCH_METHOD,null,Increment);
   }
   @DeclDISPID(12)  public void ResetRotation() throws ComException {
     this._dispatchCall(12,"ResetRotation", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(13)  public void SetThreeDFormat(com.wilutions.mslib.office.MsoPresetThreeDFormat PresetThreeDFormat) throws ComException {
+  @DeclDISPID(13)  public void SetThreeDFormat(final com.wilutions.mslib.office.MsoPresetThreeDFormat PresetThreeDFormat) throws ComException {
     assert(PresetThreeDFormat != null);
     this._dispatchCall(13,"SetThreeDFormat", DISPATCH_METHOD,null,PresetThreeDFormat.value);
   }
-  @DeclDISPID(14)  public void SetExtrusionDirection(com.wilutions.mslib.office.MsoPresetExtrusionDirection PresetExtrusionDirection) throws ComException {
+  @DeclDISPID(14)  public void SetExtrusionDirection(final com.wilutions.mslib.office.MsoPresetExtrusionDirection PresetExtrusionDirection) throws ComException {
     assert(PresetExtrusionDirection != null);
     this._dispatchCall(14,"SetExtrusionDirection", DISPATCH_METHOD,null,PresetExtrusionDirection.value);
   }
@@ -44,7 +44,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(100)  public void setDepth(Float value) throws ComException {
+  @DeclDISPID(100)  public void setDepth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"Depth", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoExtrusionColorType.valueOf((Integer)obj);
   }
-  @DeclDISPID(102)  public void setExtrusionColorType(com.wilutions.mslib.office.MsoExtrusionColorType value) throws ComException {
+  @DeclDISPID(102)  public void setExtrusionColorType(final com.wilutions.mslib.office.MsoExtrusionColorType value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"ExtrusionColorType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -67,7 +67,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(103)  public void setPerspective(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(103)  public void setPerspective(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Perspective", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -81,7 +81,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetLightingDirection.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setPresetLightingDirection(com.wilutions.mslib.office.MsoPresetLightingDirection value) throws ComException {
+  @DeclDISPID(105)  public void setPresetLightingDirection(final com.wilutions.mslib.office.MsoPresetLightingDirection value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"PresetLightingDirection", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -90,7 +90,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetLightingSoftness.valueOf((Integer)obj);
   }
-  @DeclDISPID(106)  public void setPresetLightingSoftness(com.wilutions.mslib.office.MsoPresetLightingSoftness value) throws ComException {
+  @DeclDISPID(106)  public void setPresetLightingSoftness(final com.wilutions.mslib.office.MsoPresetLightingSoftness value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"PresetLightingSoftness", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -99,7 +99,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetMaterial.valueOf((Integer)obj);
   }
-  @DeclDISPID(107)  public void setPresetMaterial(com.wilutions.mslib.office.MsoPresetMaterial value) throws ComException {
+  @DeclDISPID(107)  public void setPresetMaterial(final com.wilutions.mslib.office.MsoPresetMaterial value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"PresetMaterial", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -113,7 +113,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(109)  public void setRotationX(Float value) throws ComException {
+  @DeclDISPID(109)  public void setRotationX(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"RotationX", DISPATCH_PROPERTYPUT,value);
   }
@@ -122,7 +122,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(110)  public void setRotationY(Float value) throws ComException {
+  @DeclDISPID(110)  public void setRotationY(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(110,"RotationY", DISPATCH_PROPERTYPUT,value);
   }
@@ -131,23 +131,23 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(111)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(111)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(111,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(15)  public void SetPresetCamera(com.wilutions.mslib.office.MsoPresetCamera PresetCamera) throws ComException {
+  @DeclDISPID(15)  public void SetPresetCamera(final com.wilutions.mslib.office.MsoPresetCamera PresetCamera) throws ComException {
     assert(PresetCamera != null);
     this._dispatchCall(15,"SetPresetCamera", DISPATCH_METHOD,null,PresetCamera.value);
   }
-  @DeclDISPID(16)  public void IncrementRotationZ(Float Increment) throws ComException {
+  @DeclDISPID(16)  public void IncrementRotationZ(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(16,"IncrementRotationZ", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(17)  public void IncrementRotationHorizontal(Float Increment) throws ComException {
+  @DeclDISPID(17)  public void IncrementRotationHorizontal(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(17,"IncrementRotationHorizontal", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(18)  public void IncrementRotationVertical(Float Increment) throws ComException {
+  @DeclDISPID(18)  public void IncrementRotationVertical(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(18,"IncrementRotationVertical", DISPATCH_METHOD,null,Increment);
   }
@@ -156,7 +156,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoLightRigType.valueOf((Integer)obj);
   }
-  @DeclDISPID(112)  public void setPresetLighting(com.wilutions.mslib.office.MsoLightRigType value) throws ComException {
+  @DeclDISPID(112)  public void setPresetLighting(final com.wilutions.mslib.office.MsoLightRigType value) throws ComException {
     assert(value != null);
     this._dispatchCall(112,"PresetLighting", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -165,7 +165,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(113)  public void setZ(Float value) throws ComException {
+  @DeclDISPID(113)  public void setZ(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(113,"Z", DISPATCH_PROPERTYPUT,value);
   }
@@ -174,7 +174,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoBevelType.valueOf((Integer)obj);
   }
-  @DeclDISPID(114)  public void setBevelTopType(com.wilutions.mslib.office.MsoBevelType value) throws ComException {
+  @DeclDISPID(114)  public void setBevelTopType(final com.wilutions.mslib.office.MsoBevelType value) throws ComException {
     assert(value != null);
     this._dispatchCall(114,"BevelTopType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -183,7 +183,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(115)  public void setBevelTopInset(Float value) throws ComException {
+  @DeclDISPID(115)  public void setBevelTopInset(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(115,"BevelTopInset", DISPATCH_PROPERTYPUT,value);
   }
@@ -192,7 +192,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(116)  public void setBevelTopDepth(Float value) throws ComException {
+  @DeclDISPID(116)  public void setBevelTopDepth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(116,"BevelTopDepth", DISPATCH_PROPERTYPUT,value);
   }
@@ -201,7 +201,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoBevelType.valueOf((Integer)obj);
   }
-  @DeclDISPID(117)  public void setBevelBottomType(com.wilutions.mslib.office.MsoBevelType value) throws ComException {
+  @DeclDISPID(117)  public void setBevelBottomType(final com.wilutions.mslib.office.MsoBevelType value) throws ComException {
     assert(value != null);
     this._dispatchCall(117,"BevelBottomType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -210,7 +210,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(118)  public void setBevelBottomInset(Float value) throws ComException {
+  @DeclDISPID(118)  public void setBevelBottomInset(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(118,"BevelBottomInset", DISPATCH_PROPERTYPUT,value);
   }
@@ -219,7 +219,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(119)  public void setBevelBottomDepth(Float value) throws ComException {
+  @DeclDISPID(119)  public void setBevelBottomDepth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(119,"BevelBottomDepth", DISPATCH_PROPERTYPUT,value);
   }
@@ -233,7 +233,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(121)  public void setRotationZ(Float value) throws ComException {
+  @DeclDISPID(121)  public void setRotationZ(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(121,"RotationZ", DISPATCH_PROPERTYPUT,value);
   }
@@ -242,7 +242,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(122)  public void setContourWidth(Float value) throws ComException {
+  @DeclDISPID(122)  public void setContourWidth(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(122,"ContourWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -256,7 +256,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(124)  public void setFieldOfView(Float value) throws ComException {
+  @DeclDISPID(124)  public void setFieldOfView(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(124,"FieldOfView", DISPATCH_PROPERTYPUT,value);
   }
@@ -265,7 +265,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(125)  public void setProjectText(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(125)  public void setProjectText(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(125,"ProjectText", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -274,7 +274,7 @@ public class ThreeDFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(126)  public void setLightAngle(Float value) throws ComException {
+  @DeclDISPID(126)  public void setLightAngle(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(126,"LightAngle", DISPATCH_PROPERTYPUT,value);
   }

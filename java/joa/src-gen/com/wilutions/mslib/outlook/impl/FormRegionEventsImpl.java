@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A930-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class FormRegionEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.FormRegionEvents {
-  @DeclDISPID(64312)  public void onExpanded(Boolean Expand) throws ComException {
+  @DeclDISPID(64312)  public void onExpanded(final Boolean Expand) throws ComException {
     assert(Expand != null);
     this._dispatchCall(64312,"Expanded", DISPATCH_METHOD,null,Expand);
   }

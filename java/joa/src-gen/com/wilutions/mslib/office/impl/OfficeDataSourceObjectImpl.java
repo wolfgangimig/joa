@@ -10,7 +10,7 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void setConnectString(String value) throws ComException {
+  @DeclDISPID(1)  public void setConnectString(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"ConnectString", DISPATCH_PROPERTYPUT,value);
   }
@@ -19,7 +19,7 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setTable(String value) throws ComException {
+  @DeclDISPID(2)  public void setTable(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Table", DISPATCH_PROPERTYPUT,value);
   }
@@ -28,7 +28,7 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setDataSource(String value) throws ComException {
+  @DeclDISPID(3)  public void setDataSource(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"DataSource", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,14 +47,14 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610743817)  public Integer Move(com.wilutions.mslib.office.MsoMoveRow MsoMoveRow, Integer RowNbr) throws ComException {
+  @DeclDISPID(1610743817)  public Integer Move(final com.wilutions.mslib.office.MsoMoveRow MsoMoveRow, final Integer RowNbr) throws ComException {
     assert(MsoMoveRow != null);
     assert(RowNbr != null);
     final Object obj = this._dispatchCall(1610743817,"Move", DISPATCH_METHOD,null,MsoMoveRow.value,RowNbr);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743818)  public void Open(String bstrSrc, String bstrConnect, String bstrTable, Integer fOpenExclusive, Integer fNeverPrompt) throws ComException {
+  @DeclDISPID(1610743818)  public void Open(final String bstrSrc, final String bstrConnect, final String bstrTable, final Integer fOpenExclusive, final Integer fNeverPrompt) throws ComException {
     assert(bstrSrc != null);
     assert(bstrConnect != null);
     assert(bstrTable != null);
@@ -62,7 +62,7 @@ public class OfficeDataSourceObjectImpl extends Dispatch implements com.wilution
     assert(fNeverPrompt != null);
     this._dispatchCall(1610743818,"Open", DISPATCH_METHOD,null,bstrSrc,bstrConnect,bstrTable,fOpenExclusive,fNeverPrompt);
   }
-  @DeclDISPID(1610743819)  public void SetSortOrder(String SortField1, Boolean SortAscending1, String SortField2, Boolean SortAscending2, String SortField3, Boolean SortAscending3) throws ComException {
+  @DeclDISPID(1610743819)  public void SetSortOrder(final String SortField1, final Boolean SortAscending1, final String SortField2, final Boolean SortAscending2, final String SortField3, final Boolean SortAscending3) throws ComException {
     assert(SortField1 != null);
     assert(SortAscending1 != null);
     assert(SortField2 != null);

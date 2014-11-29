@@ -14,6 +14,6 @@ public interface _NavigationModules extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public _NavigationModule Item(Object Index) throws ComException;
-  @DeclDISPID(64440)  public NavigationModule GetNavigationModule(OlNavigationModuleType ModuleType) throws ComException;
+  @DeclDISPID(81)  public _NavigationModule Item(final Object Index) throws ComException;
+  @DeclDISPID(64440)  public NavigationModule GetNavigationModule(final OlNavigationModuleType ModuleType) throws ComException;
 }

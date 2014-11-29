@@ -14,7 +14,7 @@ public class RoomMessageCollection extends Dispatch implements IRoomMessageColle
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public IRoomMessage getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public IRoomMessage getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
@@ -28,7 +28,7 @@ public class RoomMessageCollection extends Dispatch implements IRoomMessageColle
   @DeclDISPID(1610743811)  public void Clear() throws ComException {
     this._dispatchCall(1610743811,"Clear", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743812)  public Integer IndexOf(IRoomMessage _roomMesssage) throws ComException {
+  @DeclDISPID(1610743812)  public Integer IndexOf(final IRoomMessage _roomMesssage) throws ComException {
     final Object obj = this._dispatchCall(1610743812,"IndexOf", DISPATCH_METHOD,null,(_roomMesssage!=null?_roomMesssage:Dispatch.NULL));
     if (obj == null) return null;
     return (Integer)obj;

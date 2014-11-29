@@ -10,7 +10,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610678272)  public void setName(String pname) throws ComException {
+  @DeclDISPID(1610678272)  public void setName(final String pname) throws ComException {
     assert(pname != null);
     this._dispatchCall(1610678272,"Name", DISPATCH_PROPERTYPUT,pname);
   }
@@ -19,7 +19,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Long)obj;
   }
-  @DeclDISPID(1610678274)  public void setSize(Long psize) throws ComException {
+  @DeclDISPID(1610678274)  public void setSize(final Long psize) throws ComException {
     assert(psize != null);
     this._dispatchCall(1610678274,"Size", DISPATCH_PROPERTYPUT,psize);
   }
@@ -28,7 +28,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610678276)  public void setBold(Boolean pbold) throws ComException {
+  @DeclDISPID(1610678276)  public void setBold(final Boolean pbold) throws ComException {
     assert(pbold != null);
     this._dispatchCall(1610678276,"Bold", DISPATCH_PROPERTYPUT,pbold);
   }
@@ -37,7 +37,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610678278)  public void setItalic(Boolean pitalic) throws ComException {
+  @DeclDISPID(1610678278)  public void setItalic(final Boolean pitalic) throws ComException {
     assert(pitalic != null);
     this._dispatchCall(1610678278,"Italic", DISPATCH_PROPERTYPUT,pitalic);
   }
@@ -46,7 +46,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610678280)  public void setUnderline(Boolean punderline) throws ComException {
+  @DeclDISPID(1610678280)  public void setUnderline(final Boolean punderline) throws ComException {
     assert(punderline != null);
     this._dispatchCall(1610678280,"Underline", DISPATCH_PROPERTYPUT,punderline);
   }
@@ -55,7 +55,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610678282)  public void setStrikethrough(Boolean pstrikethrough) throws ComException {
+  @DeclDISPID(1610678282)  public void setStrikethrough(final Boolean pstrikethrough) throws ComException {
     assert(pstrikethrough != null);
     this._dispatchCall(1610678282,"Strikethrough", DISPATCH_PROPERTYPUT,pstrikethrough);
   }
@@ -64,7 +64,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Short)obj;
   }
-  @DeclDISPID(1610678284)  public void setWeight(Short pweight) throws ComException {
+  @DeclDISPID(1610678284)  public void setWeight(final Short pweight) throws ComException {
     assert(pweight != null);
     this._dispatchCall(1610678284,"Weight", DISPATCH_PROPERTYPUT,pweight);
   }
@@ -73,7 +73,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     if (obj == null) return null;
     return (Short)obj;
   }
-  @DeclDISPID(1610678286)  public void setCharset(Short pcharset) throws ComException {
+  @DeclDISPID(1610678286)  public void setCharset(final Short pcharset) throws ComException {
     assert(pcharset != null);
     this._dispatchCall(1610678286,"Charset", DISPATCH_PROPERTYPUT,pcharset);
   }
@@ -83,23 +83,23 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_HANDLE(als);
   }
-  @DeclDISPID(1610678289)  public void Clone(ByRef<com.wilutions.mslib.stdole.IFont> ppfont) throws ComException {
+  @DeclDISPID(1610678289)  public void Clone(final ByRef<com.wilutions.mslib.stdole.IFont> ppfont) throws ComException {
     assert(ppfont != null);
     this._dispatchCall(1610678289,"Clone", DISPATCH_METHOD,null,ppfont);
   }
-  @DeclDISPID(1610678290)  public void IsEqual(com.wilutions.mslib.stdole.IFont pfontOther) throws ComException {
+  @DeclDISPID(1610678290)  public void IsEqual(final com.wilutions.mslib.stdole.IFont pfontOther) throws ComException {
     this._dispatchCall(1610678290,"IsEqual", DISPATCH_METHOD,null,(pfontOther!=null?pfontOther:Dispatch.NULL));
   }
-  @DeclDISPID(1610678291)  public void SetRatio(Integer cyLogical, Integer cyHimetric) throws ComException {
+  @DeclDISPID(1610678291)  public void SetRatio(final Integer cyLogical, final Integer cyHimetric) throws ComException {
     assert(cyLogical != null);
     assert(cyHimetric != null);
     this._dispatchCall(1610678291,"SetRatio", DISPATCH_METHOD,null,cyLogical,cyHimetric);
   }
-  @DeclDISPID(1610678292)  public void AddRefHfont(com.wilutions.mslib.stdole.OLE_HANDLE hFont) throws ComException {
+  @DeclDISPID(1610678292)  public void AddRefHfont(final com.wilutions.mslib.stdole.OLE_HANDLE hFont) throws ComException {
     assert(hFont != null);
     this._dispatchCall(1610678292,"AddRefHfont", DISPATCH_METHOD,null,hFont.getValue());
   }
-  @DeclDISPID(1610678293)  public void ReleaseHfont(com.wilutions.mslib.stdole.OLE_HANDLE hFont) throws ComException {
+  @DeclDISPID(1610678293)  public void ReleaseHfont(final com.wilutions.mslib.stdole.OLE_HANDLE hFont) throws ComException {
     assert(hFont != null);
     this._dispatchCall(1610678293,"ReleaseHfont", DISPATCH_METHOD,null,hFont.getValue());
   }

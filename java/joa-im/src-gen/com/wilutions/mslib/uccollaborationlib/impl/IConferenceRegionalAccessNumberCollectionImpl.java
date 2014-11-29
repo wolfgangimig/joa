@@ -15,7 +15,7 @@ public class IConferenceRegionalAccessNumberCollectionImpl extends Dispatch impl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IConferenceRegionalAccessNumber getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IConferenceRegionalAccessNumber getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;

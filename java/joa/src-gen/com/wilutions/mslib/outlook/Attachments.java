@@ -14,7 +14,7 @@ public interface Attachments extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Attachment Item(Object Index) throws ComException;
-  @DeclDISPID(101)  public Attachment Add(Object Source, Object Type, Object Position, Object DisplayName) throws ComException;
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(81)  public Attachment Item(final Object Index) throws ComException;
+  @DeclDISPID(101)  public Attachment Add(final Object Source, final Object Type, final Object Position, final Object DisplayName) throws ComException;
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException;
 }

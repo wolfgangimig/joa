@@ -10,12 +10,12 @@ import com.wilutions.com.*;
 public interface IConferenceScheduler extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IConferenceInfo CreateConferenceInfo() throws ComException;
-  @DeclDISPID(1610743809)  public IAsynchronousOperation ScheduleConference(IConferenceInfo _confInfo, Object _conferenceSchedulerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743810)  public IAsynchronousOperation GetConferenceInfo(String _conferenceId, Object _conferenceSchedulerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743811)  public IAsynchronousOperation GetAllConferences(Boolean _isPublic, Object _conferenceSchedulerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743812)  public IAsynchronousOperation ModifyConference(IConferenceInfo _conferenceInfo, Object _conferenceSchedulerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743813)  public IAsynchronousOperation DeleteConference(String _confId, Object _conferenceSchedulerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743814)  public IAsynchronousOperation GetAvailableModalities(Object _conferenceSchedulerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743815)  public IAsynchronousOperation GetCapabilities(Object _conferenceSchedulerCallback, Object _state) throws ComException;
+  @DeclDISPID(1610743809)  public IAsynchronousOperation ScheduleConference(final IConferenceInfo _confInfo, final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743810)  public IAsynchronousOperation GetConferenceInfo(final String _conferenceId, final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743811)  public IAsynchronousOperation GetAllConferences(final Boolean _isPublic, final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743812)  public IAsynchronousOperation ModifyConference(final IConferenceInfo _conferenceInfo, final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743813)  public IAsynchronousOperation DeleteConference(final String _confId, final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743814)  public IAsynchronousOperation GetAvailableModalities(final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743815)  public IAsynchronousOperation GetCapabilities(final Object _conferenceSchedulerCallback, final Object _state) throws ComException;
   @DeclDISPID(1610743816)  public IConferenceSettingDictionary GetSettings() throws ComException;
 }

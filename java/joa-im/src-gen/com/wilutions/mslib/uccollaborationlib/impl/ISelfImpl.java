@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{8D3F00B8-5EA4-9402-13E4-70603D784061}")
 public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.ISelf {
-  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation PublishContactInformation(com.wilutions.mslib.uccollaborationlib.PublishableContactInformationType[] _publishablePresenceItemTypes, Object[] _publishablePresenceItemValues, Object _selfCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation PublishContactInformation(final com.wilutions.mslib.uccollaborationlib.PublishableContactInformationType[] _publishablePresenceItemTypes, final Object[] _publishablePresenceItemValues, final Object _selfCallback, final Object _state) throws ComException {
     assert(_publishablePresenceItemTypes != null);
     assert(_publishablePresenceItemValues != null);
     assert(_selfCallback != null);
@@ -19,7 +19,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactImpl.class);
   }
-  @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IPhone CreatePhone(com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType, String _phoneUri, Boolean _toBePublished) throws ComException {
+  @DeclDISPID(1610743810)  public com.wilutions.mslib.uccollaborationlib.IPhone CreatePhone(final com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType, final String _phoneUri, final Boolean _toBePublished) throws ComException {
     assert(_phoneType != null);
     assert(_phoneUri != null);
     assert(_toBePublished != null);
@@ -27,7 +27,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IPhoneImpl.class);
   }
-  @DeclDISPID(1610743811)  public Boolean CanSetPhone(com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType) throws ComException {
+  @DeclDISPID(1610743811)  public Boolean CanSetPhone(final com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType) throws ComException {
     assert(_phoneType != null);
     final Object obj = this._dispatchCall(1610743811,"CanSetPhone", DISPATCH_METHOD,null,_phoneType.value);
     if (obj == null) return null;
@@ -38,7 +38,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IPhone[])obj;
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetPhones(com.wilutions.mslib.uccollaborationlib.IPhone[] _phones, Object _selfCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetPhones(final com.wilutions.mslib.uccollaborationlib.IPhone[] _phones, final Object _selfCallback, final Object _state) throws ComException {
     assert(_phones != null);
     assert(_selfCallback != null);
     assert(_state != null);
@@ -46,7 +46,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.ICustomAvailabilityState[] GetPublishableCustomAvailabilityStates(Integer _localeId) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.ICustomAvailabilityState[] GetPublishableCustomAvailabilityStates(final Integer _localeId) throws ComException {
     assert(_localeId != null);
     final Object obj = this._dispatchCall(1610743814,"GetPublishableCustomAvailabilityStates", DISPATCH_METHOD,null,_localeId);
     if (obj == null) return null;
@@ -67,7 +67,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactEndpointImpl.class);
   }
-  @DeclDISPID(1610743818)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetPhone(com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType, String _phoneUri, Boolean _toBePublished, Object _selfCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743818)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetPhone(final com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType, final String _phoneUri, final Boolean _toBePublished, final Object _selfCallback, final Object _state) throws ComException {
     assert(_phoneType != null);
     assert(_phoneUri != null);
     assert(_toBePublished != null);
@@ -77,7 +77,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743819)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemovePhone(com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType, Object _selfCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743819)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RemovePhone(final com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType, final Object _selfCallback, final Object _state) throws ComException {
     assert(_phoneType != null);
     assert(_selfCallback != null);
     assert(_state != null);
@@ -85,7 +85,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743820)  public com.wilutions.mslib.uccollaborationlib.IPhone GetPhone(com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType) throws ComException {
+  @DeclDISPID(1610743820)  public com.wilutions.mslib.uccollaborationlib.IPhone GetPhone(final com.wilutions.mslib.uccollaborationlib.ContactEndpointType _phoneType) throws ComException {
     assert(_phoneType != null);
     final Object obj = this._dispatchCall(1610743820,"GetPhone", DISPATCH_METHOD,null,_phoneType.value);
     if (obj == null) return null;
@@ -96,7 +96,7 @@ public class ISelfImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743822)  public Object GetSettingInternal(com.wilutions.mslib.uccollaborationlib.SettingItemTypeInternal _settingItem) throws ComException {
+  @DeclDISPID(1610743822)  public Object GetSettingInternal(final com.wilutions.mslib.uccollaborationlib.SettingItemTypeInternal _settingItem) throws ComException {
     assert(_settingItem != null);
     final Object obj = this._dispatchCall(1610743822,"GetSettingInternal", DISPATCH_METHOD,null,_settingItem.value);
     if (obj == null) return null;

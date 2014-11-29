@@ -10,11 +10,11 @@ import com.wilutions.com.*;
 public interface IPreviousConversationsManagerDictionary extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public IPreviousConversationsManager getItem(PreviousConversationsType _key) throws ComException;
+  @DeclDISPID(0)  public IPreviousConversationsManager getItem(final PreviousConversationsType _key) throws ComException;
   @DeclDISPID(1610743810)  public PreviousConversationsType[] getKeys() throws ComException;
   @DeclDISPID(1610743811)  public IPreviousConversationsManager[] getValues() throws ComException;
-  @DeclDISPID(1610743812)  public PreviousConversationsType GetKeyAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743813)  public IPreviousConversationsManager GetValueAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743814)  public Boolean TryGetValue(PreviousConversationsType _type, ByRef<IPreviousConversationsManager> _pastConversations) throws ComException;
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(PreviousConversationsType _type) throws ComException;
+  @DeclDISPID(1610743812)  public PreviousConversationsType GetKeyAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743813)  public IPreviousConversationsManager GetValueAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743814)  public Boolean TryGetValue(final PreviousConversationsType _type, final ByRef<IPreviousConversationsManager> _pastConversations) throws ComException;
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final PreviousConversationsType _type) throws ComException;
 }

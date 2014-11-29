@@ -13,35 +13,35 @@ public class DocumentPropertyImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(2)  public void Delete() throws ComException {
     this._dispatchCall(2,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(3)  public String getName(Integer lcid) throws ComException {
+  @DeclDISPID(3)  public String getName(final Integer lcid) throws ComException {
     assert(lcid != null);
     final Object obj = this._dispatchCall(3,"Name", DISPATCH_PROPERTYGET,null,lcid);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setName(Integer lcid, String pbstrRetVal) throws ComException {
+  @DeclDISPID(3)  public void setName(final Integer lcid, final String pbstrRetVal) throws ComException {
     assert(pbstrRetVal != null);
     assert(lcid != null);
     this._dispatchCall(3,"Name", DISPATCH_PROPERTYPUT,pbstrRetVal,lcid);
   }
-  @DeclDISPID(0)  public Object getValue(Integer lcid) throws ComException {
+  @DeclDISPID(0)  public Object getValue(final Integer lcid) throws ComException {
     assert(lcid != null);
     final Object obj = this._dispatchCall(0,"Value", DISPATCH_PROPERTYGET,null,lcid);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Integer lcid, Object pvargRetVal) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Integer lcid, final Object pvargRetVal) throws ComException {
     assert(pvargRetVal != null);
     assert(lcid != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,pvargRetVal,lcid);
   }
-  @DeclDISPID(5)  public com.wilutions.mslib.office.MsoDocProperties getType(Integer lcid) throws ComException {
+  @DeclDISPID(5)  public com.wilutions.mslib.office.MsoDocProperties getType(final Integer lcid) throws ComException {
     assert(lcid != null);
     final Object obj = this._dispatchCall(5,"Type", DISPATCH_PROPERTYGET,null,lcid);
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoDocProperties.valueOf((Integer)obj);
   }
-  @DeclDISPID(5)  public void setType(Integer lcid, com.wilutions.mslib.office.MsoDocProperties ptypeRetVal) throws ComException {
+  @DeclDISPID(5)  public void setType(final Integer lcid, final com.wilutions.mslib.office.MsoDocProperties ptypeRetVal) throws ComException {
     assert(ptypeRetVal != null);
     assert(lcid != null);
     this._dispatchCall(5,"Type", DISPATCH_PROPERTYPUT,ptypeRetVal.value,lcid);
@@ -51,7 +51,7 @@ public class DocumentPropertyImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(6)  public void setLinkToContent(Boolean pfLinkRetVal) throws ComException {
+  @DeclDISPID(6)  public void setLinkToContent(final Boolean pfLinkRetVal) throws ComException {
     assert(pfLinkRetVal != null);
     this._dispatchCall(6,"LinkToContent", DISPATCH_PROPERTYPUT,pfLinkRetVal);
   }
@@ -60,7 +60,7 @@ public class DocumentPropertyImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(7)  public void setLinkSource(String pbstrSourceRetVal) throws ComException {
+  @DeclDISPID(7)  public void setLinkSource(final String pbstrSourceRetVal) throws ComException {
     assert(pbstrSourceRetVal != null);
     this._dispatchCall(7,"LinkSource", DISPATCH_PROPERTYPUT,pbstrSourceRetVal);
   }

@@ -5,19 +5,19 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{AAB5B8FE-523D-9D3E-12D9-82FFAE2FAE72}")
 public class IUCOfficeIntegrationImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.IUCOfficeIntegration {
-  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.OIFeature GetSupportedFeatures(String _version) throws ComException {
+  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.OIFeature GetSupportedFeatures(final String _version) throws ComException {
     assert(_version != null);
     final Object obj = this._dispatchCall(1610743808,"GetSupportedFeatures", DISPATCH_METHOD,null,_version);
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.OIFeature.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743809)  public String GetAuthenticationInfo(String _version) throws ComException {
+  @DeclDISPID(1610743809)  public String GetAuthenticationInfo(final String _version) throws ComException {
     assert(_version != null);
     final Object obj = this._dispatchCall(1610743809,"GetAuthenticationInfo", DISPATCH_METHOD,null,_version);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743810)  public IDispatch GetInterface(String _version, com.wilutions.mslib.uccollaborationlib.OIInterface _interface) throws ComException {
+  @DeclDISPID(1610743810)  public IDispatch GetInterface(final String _version, final com.wilutions.mslib.uccollaborationlib.OIInterface _interface) throws ComException {
     assert(_version != null);
     assert(_interface != null);
     final Object obj = this._dispatchCall(1610743810,"GetInterface", DISPATCH_METHOD,null,_version,_interface.value);

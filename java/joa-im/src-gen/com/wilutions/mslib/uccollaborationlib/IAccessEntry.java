@@ -12,8 +12,8 @@ public interface IAccessEntry extends IDispatch {
   @DeclDISPID(1610743808)  public AccessEntryScope getScope() throws ComException;
   @DeclDISPID(1610743809)  public String getId() throws ComException;
   @DeclDISPID(1610743810)  public IAccessPermission getPermission() throws ComException;
-  @DeclDISPID(1610743811)  public void SetPermission(IAccessPermission _permission) throws ComException;
+  @DeclDISPID(1610743811)  public void SetPermission(final IAccessPermission _permission) throws ComException;
   @DeclDISPID(1610743812)  public void ClearPermission() throws ComException;
-  @DeclDISPID(1610743813)  public Boolean CanSetPermission(IAccessPermission _permission) throws ComException;
+  @DeclDISPID(1610743813)  public Boolean CanSetPermission(final IAccessPermission _permission) throws ComException;
   @DeclDISPID(1610743814)  public Boolean CanClearPermission() throws ComException;
 }

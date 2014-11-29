@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{FDA610FC-4565-4E70-B088-4B72A16E1967}")
 public class DeviceManager extends Dispatch implements IDeviceManager {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(1610743808)  public IAsynchronousOperation PlayAudioFile(String _audioFileName, AudioPlayBackModes _playbackDevices, Boolean _loop, Object _deviceManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743808)  public IAsynchronousOperation PlayAudioFile(final String _audioFileName, final AudioPlayBackModes _playbackDevices, final Boolean _loop, final Object _deviceManagerCallback, final Object _state) throws ComException {
     assert(_audioFileName != null);
     assert(_playbackDevices != null);
     assert(_loop != null);
@@ -37,7 +37,7 @@ public class DeviceManager extends Dispatch implements IDeviceManager {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAudioDeviceImpl.class);
   }
-  @DeclDISPID(1610743812)  public void setActiveAudioDevice(IAudioDevice value) throws ComException {
+  @DeclDISPID(1610743812)  public void setActiveAudioDevice(final IAudioDevice value) throws ComException {
     this._dispatchCall(1610743812,"ActiveAudioDevice", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610743814)  public IVideoDevice getActiveVideoDevice() throws ComException {
@@ -45,7 +45,7 @@ public class DeviceManager extends Dispatch implements IDeviceManager {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IVideoDeviceImpl.class);
   }
-  @DeclDISPID(1610743814)  public void setActiveVideoDevice(IVideoDevice value) throws ComException {
+  @DeclDISPID(1610743814)  public void setActiveVideoDevice(final IVideoDevice value) throws ComException {
     this._dispatchCall(1610743814,"ActiveVideoDevice", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public DeviceManager() throws ComException {

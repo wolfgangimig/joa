@@ -5,11 +5,11 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{D06A40D1-A8D9-9219-2B66-B9768E058CC5}")
 public class IContact2Impl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.IContact2 {
-  @DeclDISPID(268435457)  public void SetAdditionalUris(String[] _contactUris) throws ComException {
+  @DeclDISPID(268435457)  public void SetAdditionalUris(final String[] _contactUris) throws ComException {
     assert(_contactUris != null);
     this._dispatchCall(268435457,"SetAdditionalUris", DISPATCH_METHOD,null,_contactUris);
   }
-  @DeclDISPID(268435458)  public com.wilutions.mslib.uccollaborationlib.IContact GetRawContactbyUri(String _contactUri) throws ComException {
+  @DeclDISPID(268435458)  public com.wilutions.mslib.uccollaborationlib.IContact GetRawContactbyUri(final String _contactUri) throws ComException {
     assert(_contactUri != null);
     final Object obj = this._dispatchCall(268435458,"GetRawContactbyUri", DISPATCH_METHOD,null,_contactUri);
     if (obj == null) return null;
@@ -20,7 +20,7 @@ public class IContact2Impl extends Dispatch implements com.wilutions.mslib.uccol
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(268435460)  public Object[] BatchGetContactInformation2(Long _contactInformationTypes) throws ComException {
+  @DeclDISPID(268435460)  public Object[] BatchGetContactInformation2(final Long _contactInformationTypes) throws ComException {
     assert(_contactInformationTypes != null);
     final Object obj = this._dispatchCall(268435460,"BatchGetContactInformation2", DISPATCH_METHOD,null,_contactInformationTypes);
     if (obj == null) return null;

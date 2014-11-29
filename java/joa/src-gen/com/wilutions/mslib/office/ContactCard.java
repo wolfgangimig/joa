@@ -12,5 +12,5 @@ public interface ContactCard extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public void Close() throws ComException;
-  @DeclDISPID(2)  public void Show(MsoContactCardStyle CardStyle, Integer RectangleLeft, Integer RectangleRight, Integer RectangleTop, Integer RectangleBottom, Integer HorizontalPosition, Boolean ShowWithDelay) throws ComException;
+  @DeclDISPID(2)  public void Show(final MsoContactCardStyle CardStyle, final Integer RectangleLeft, final Integer RectangleRight, final Integer RectangleTop, final Integer RectangleBottom, final Integer HorizontalPosition, final Boolean ShowWithDelay) throws ComException;
 }

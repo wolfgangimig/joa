@@ -30,19 +30,19 @@ public class RecipientsImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Recipient Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Recipient Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
-  @DeclDISPID(111)  public com.wilutions.mslib.outlook.Recipient Add(String Name) throws ComException {
+  @DeclDISPID(111)  public com.wilutions.mslib.outlook.Recipient Add(final String Name) throws ComException {
     assert(Name != null);
     final Object obj = this._dispatchCall(111,"Add", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

@@ -20,11 +20,11 @@ public class ThemeFontSchemeImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(2)  public void Load(String FileName) throws ComException {
+  @DeclDISPID(2)  public void Load(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(2,"Load", DISPATCH_METHOD,null,FileName);
   }
-  @DeclDISPID(3)  public void Save(String FileName) throws ComException {
+  @DeclDISPID(3)  public void Save(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(3,"Save", DISPATCH_METHOD,null,FileName);
   }

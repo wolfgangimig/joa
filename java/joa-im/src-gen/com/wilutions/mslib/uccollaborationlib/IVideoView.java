@@ -10,8 +10,8 @@ import com.wilutions.com.*;
 public interface IVideoView extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IVideoViewInformationDictionary getProperties() throws ComException;
-  @DeclDISPID(1610743809)  public void SetVideoViewMode(VideoViewMode _mode) throws ComException;
-  @DeclDISPID(1610743810)  public void EnterFullScreen(Integer[] _monitorIds) throws ComException;
+  @DeclDISPID(1610743809)  public void SetVideoViewMode(final VideoViewMode _mode) throws ComException;
+  @DeclDISPID(1610743810)  public void EnterFullScreen(final Integer[] _monitorIds) throws ComException;
   @DeclDISPID(1610743811)  public void LeaveFullScreen() throws ComException;
   @DeclDISPID(1610743812)  public void DockVideo() throws ComException;
   @DeclDISPID(1610743813)  public void UndockVideo() throws ComException;

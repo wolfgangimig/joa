@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{A826654D-10EC-961E-2DEF-E7C3C38124CC}")
 public class _IVoiceMailCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IVoiceMailCallback {
-  @DeclDISPID(3900)  public void OnDelete(com.wilutions.mslib.uccollaborationlib.IVoiceMail _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(3900)  public void OnDelete(final com.wilutions.mslib.uccollaborationlib.IVoiceMail _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(3900,"OnDelete", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IVoiceMailCallbackImpl(String progId) throws ComException {

@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{E1C694EB-A571-9955-24B4-44D48E33E48E}")
 public class _IJoaBridgeDialogEventsImpl extends Dispatch implements com.wilutions.joactrllib._IJoaBridgeDialogEvents {
-  @DeclDISPID(1)  public void onShow(Long HWND) throws ComException {
+  @DeclDISPID(1)  public void onShow(final Long HWND) throws ComException {
     assert(HWND != null);
     this._dispatchCall(1,"Show", DISPATCH_METHOD,null,HWND);
   }

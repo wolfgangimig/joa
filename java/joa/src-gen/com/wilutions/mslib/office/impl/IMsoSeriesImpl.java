@@ -15,7 +15,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlAxisGroup.valueOf((Integer)obj);
   }
-  @DeclDISPID(47)  public void setAxisGroup(com.wilutions.mslib.office.XlAxisGroup RHS) throws ComException {
+  @DeclDISPID(47)  public void setAxisGroup(final com.wilutions.mslib.office.XlAxisGroup RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(47,"AxisGroup", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -34,7 +34,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(157)  public IDispatch DataLabels(Object Index) throws ComException {
+  @DeclDISPID(157)  public IDispatch DataLabels(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(157,"DataLabels", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -45,7 +45,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(152)  public Object ErrorBar(com.wilutions.mslib.office.XlErrorBarDirection Direction, com.wilutions.mslib.office.XlErrorBarInclude Include, com.wilutions.mslib.office.XlErrorBarType Type, Object Amount, Object MinusValues) throws ComException {
+  @DeclDISPID(152)  public Object ErrorBar(final com.wilutions.mslib.office.XlErrorBarDirection Direction, final com.wilutions.mslib.office.XlErrorBarInclude Include, final com.wilutions.mslib.office.XlErrorBarType Type, final Object Amount, final Object MinusValues) throws ComException {
     assert(Direction != null);
     assert(Include != null);
     assert(Type != null);
@@ -65,7 +65,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(182)  public void setExplosion(Integer RHS) throws ComException {
+  @DeclDISPID(182)  public void setExplosion(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(182,"Explosion", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -74,7 +74,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(261)  public void setFormula(String RHS) throws ComException {
+  @DeclDISPID(261)  public void setFormula(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(261,"Formula", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -83,7 +83,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(263)  public void setFormulaLocal(String RHS) throws ComException {
+  @DeclDISPID(263)  public void setFormulaLocal(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(263,"FormulaLocal", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -92,7 +92,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(264)  public void setFormulaR1C1(String RHS) throws ComException {
+  @DeclDISPID(264)  public void setFormulaR1C1(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(264,"FormulaR1C1", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -101,7 +101,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(265)  public void setFormulaR1C1Local(String RHS) throws ComException {
+  @DeclDISPID(265)  public void setFormulaR1C1Local(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(265,"FormulaR1C1Local", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -110,7 +110,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(78)  public void setHasDataLabels(Boolean RHS) throws ComException {
+  @DeclDISPID(78)  public void setHasDataLabels(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(78,"HasDataLabels", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -119,7 +119,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(160)  public void setHasErrorBars(Boolean RHS) throws ComException {
+  @DeclDISPID(160)  public void setHasErrorBars(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(160,"HasErrorBars", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -138,7 +138,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(132)  public void setInvertIfNegative(Boolean RHS) throws ComException {
+  @DeclDISPID(132)  public void setInvertIfNegative(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(132,"InvertIfNegative", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -147,7 +147,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(73)  public void setMarkerBackgroundColor(Integer RHS) throws ComException {
+  @DeclDISPID(73)  public void setMarkerBackgroundColor(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(73,"MarkerBackgroundColor", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -156,7 +156,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlColorIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(74)  public void setMarkerBackgroundColorIndex(com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
+  @DeclDISPID(74)  public void setMarkerBackgroundColorIndex(final com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(74,"MarkerBackgroundColorIndex", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -165,7 +165,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(75)  public void setMarkerForegroundColor(Integer RHS) throws ComException {
+  @DeclDISPID(75)  public void setMarkerForegroundColor(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(75,"MarkerForegroundColor", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -174,7 +174,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlColorIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(76)  public void setMarkerForegroundColorIndex(com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
+  @DeclDISPID(76)  public void setMarkerForegroundColorIndex(final com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(76,"MarkerForegroundColorIndex", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -183,7 +183,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(231)  public void setMarkerSize(Integer RHS) throws ComException {
+  @DeclDISPID(231)  public void setMarkerSize(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(231,"MarkerSize", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -192,7 +192,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlMarkerStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(72)  public void setMarkerStyle(com.wilutions.mslib.office.XlMarkerStyle RHS) throws ComException {
+  @DeclDISPID(72)  public void setMarkerStyle(final com.wilutions.mslib.office.XlMarkerStyle RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(72,"MarkerStyle", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -201,7 +201,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(110)  public void setName(String RHS) throws ComException {
+  @DeclDISPID(110)  public void setName(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(110,"Name", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -215,7 +215,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlChartPictureType.valueOf((Integer)obj);
   }
-  @DeclDISPID(161)  public void setPictureType(com.wilutions.mslib.office.XlChartPictureType RHS) throws ComException {
+  @DeclDISPID(161)  public void setPictureType(final com.wilutions.mslib.office.XlChartPictureType RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(161,"PictureType", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -224,7 +224,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(162)  public void setPictureUnit(Double RHS) throws ComException {
+  @DeclDISPID(162)  public void setPictureUnit(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(162,"PictureUnit", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -233,11 +233,11 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(228)  public void setPlotOrder(Integer RHS) throws ComException {
+  @DeclDISPID(228)  public void setPlotOrder(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(228,"PlotOrder", DISPATCH_PROPERTYPUT,RHS);
   }
-  @DeclDISPID(70)  public IDispatch Points(Object Index) throws ComException {
+  @DeclDISPID(70)  public IDispatch Points(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(70,"Points", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -253,11 +253,11 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(163)  public void setSmooth(Boolean RHS) throws ComException {
+  @DeclDISPID(163)  public void setSmooth(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(163,"Smooth", DISPATCH_PROPERTYPUT,RHS);
   }
-  @DeclDISPID(154)  public IDispatch Trendlines(Object Index) throws ComException {
+  @DeclDISPID(154)  public IDispatch Trendlines(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(154,"Trendlines", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -268,7 +268,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(108)  public void setType(Integer RHS) throws ComException {
+  @DeclDISPID(108)  public void setType(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(108,"Type", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -277,11 +277,11 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlChartType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1400)  public void setChartType(com.wilutions.mslib.office.XlChartType RHS) throws ComException {
+  @DeclDISPID(1400)  public void setChartType(final com.wilutions.mslib.office.XlChartType RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1400,"ChartType", DISPATCH_PROPERTYPUT,RHS.value);
   }
-  @DeclDISPID(1401)  public void ApplyCustomType(com.wilutions.mslib.office.XlChartType ChartType) throws ComException {
+  @DeclDISPID(1401)  public void ApplyCustomType(final com.wilutions.mslib.office.XlChartType ChartType) throws ComException {
     assert(ChartType != null);
     this._dispatchCall(1401,"ApplyCustomType", DISPATCH_METHOD,null,ChartType.value);
   }
@@ -290,7 +290,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(164)  public void setValues(Object RHS) throws ComException {
+  @DeclDISPID(164)  public void setValues(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(164,"Values", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -299,7 +299,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1111)  public void setXValues(Object RHS) throws ComException {
+  @DeclDISPID(1111)  public void setXValues(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1111,"XValues", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -308,7 +308,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1664)  public void setBubbleSizes(Object RHS) throws ComException {
+  @DeclDISPID(1664)  public void setBubbleSizes(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1664,"BubbleSizes", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -317,7 +317,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlBarShape.valueOf((Integer)obj);
   }
-  @DeclDISPID(1403)  public void setBarShape(com.wilutions.mslib.office.XlBarShape RHS) throws ComException {
+  @DeclDISPID(1403)  public void setBarShape(final com.wilutions.mslib.office.XlBarShape RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1403,"BarShape", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -326,7 +326,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1659)  public void setApplyPictToSides(Boolean RHS) throws ComException {
+  @DeclDISPID(1659)  public void setApplyPictToSides(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1659,"ApplyPictToSides", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -335,7 +335,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1660)  public void setApplyPictToFront(Boolean RHS) throws ComException {
+  @DeclDISPID(1660)  public void setApplyPictToFront(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1660,"ApplyPictToFront", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -344,7 +344,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1661)  public void setApplyPictToEnd(Boolean RHS) throws ComException {
+  @DeclDISPID(1661)  public void setApplyPictToEnd(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1661,"ApplyPictToEnd", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -353,7 +353,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1665)  public void setHas3DEffect(Boolean RHS) throws ComException {
+  @DeclDISPID(1665)  public void setHas3DEffect(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1665,"Has3DEffect", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -362,7 +362,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setShadow(Boolean RHS) throws ComException {
+  @DeclDISPID(103)  public void setShadow(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(103,"Shadow", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -371,7 +371,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1394)  public void setHasLeaderLines(Boolean RHS) throws ComException {
+  @DeclDISPID(1394)  public void setHasLeaderLines(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1394,"HasLeaderLines", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -380,7 +380,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (com.wilutions.mslib.office.IMsoLeaderLines)obj;
   }
-  @DeclDISPID(1922)  public Object ApplyDataLabels(com.wilutions.mslib.office.XlDataLabelsType Type, Object IMsoLegendKey, Object AutoText, Object HasLeaderLines, Object ShowSeriesName, Object ShowCategoryName, Object ShowValue, Object ShowPercentage, Object ShowBubbleSize, Object Separator) throws ComException {
+  @DeclDISPID(1922)  public Object ApplyDataLabels(final com.wilutions.mslib.office.XlDataLabelsType Type, final Object IMsoLegendKey, final Object AutoText, final Object HasLeaderLines, final Object ShowSeriesName, final Object ShowCategoryName, final Object ShowValue, final Object ShowPercentage, final Object ShowBubbleSize, final Object Separator) throws ComException {
     assert(Type != null);
     assert(IMsoLegendKey != null);
     assert(AutoText != null);
@@ -415,7 +415,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(2649)  public void setPictureUnit2(Double RHS) throws ComException {
+  @DeclDISPID(2649)  public void setPictureUnit2(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2649,"PictureUnit2", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -429,7 +429,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2884)  public void setInvertColor(Integer RHS) throws ComException {
+  @DeclDISPID(2884)  public void setInvertColor(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2884,"InvertColor", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -438,7 +438,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlColorIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(2885)  public void setInvertColorIndex(com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
+  @DeclDISPID(2885)  public void setInvertColorIndex(final com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2885,"InvertColorIndex", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -447,7 +447,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2887)  public void setIsFiltered(Boolean RHS) throws ComException {
+  @DeclDISPID(2887)  public void setIsFiltered(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2887,"IsFiltered", DISPATCH_PROPERTYPUT,RHS);
   }

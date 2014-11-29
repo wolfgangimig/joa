@@ -25,11 +25,11 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(64408)  public void SaveAsICal(String Path) throws ComException {
+  @DeclDISPID(64408)  public void SaveAsICal(final String Path) throws ComException {
     assert(Path != null);
     this._dispatchCall(64408,"SaveAsICal", DISPATCH_METHOD,null,Path);
   }
-  @DeclDISPID(64409)  public com.wilutions.mslib.outlook.MailItem ForwardAsICal(com.wilutions.mslib.outlook.OlCalendarMailFormat MailFormat) throws ComException {
+  @DeclDISPID(64409)  public com.wilutions.mslib.outlook.MailItem ForwardAsICal(final com.wilutions.mslib.outlook.OlCalendarMailFormat MailFormat) throws ComException {
     assert(MailFormat != null);
     final Object obj = this._dispatchCall(64409,"ForwardAsICal", DISPATCH_METHOD,null,MailFormat.value);
     if (obj == null) return null;
@@ -41,7 +41,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlCalendarDetail.valueOf((Integer)obj);
   }
-  @DeclDISPID(64410)  public void setCalendarDetail(com.wilutions.mslib.outlook.OlCalendarDetail value) throws ComException {
+  @DeclDISPID(64410)  public void setCalendarDetail(final com.wilutions.mslib.outlook.OlCalendarDetail value) throws ComException {
     assert(value != null);
     this._dispatchCall(64410,"CalendarDetail", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -50,7 +50,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(64411)  public void setEndDate(java.util.Date value) throws ComException {
+  @DeclDISPID(64411)  public void setEndDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(64411,"EndDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -64,7 +64,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64413)  public void setIncludeAttachments(Boolean value) throws ComException {
+  @DeclDISPID(64413)  public void setIncludeAttachments(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64413,"IncludeAttachments", DISPATCH_PROPERTYPUT,value);
   }
@@ -73,7 +73,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64414)  public void setIncludePrivateDetails(Boolean value) throws ComException {
+  @DeclDISPID(64414)  public void setIncludePrivateDetails(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64414,"IncludePrivateDetails", DISPATCH_PROPERTYPUT,value);
   }
@@ -82,7 +82,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64415)  public void setRestrictToWorkingHours(Boolean value) throws ComException {
+  @DeclDISPID(64415)  public void setRestrictToWorkingHours(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64415,"RestrictToWorkingHours", DISPATCH_PROPERTYPUT,value);
   }
@@ -91,7 +91,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(64416)  public void setStartDate(java.util.Date value) throws ComException {
+  @DeclDISPID(64416)  public void setStartDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(64416,"StartDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -100,7 +100,7 @@ public class _CalendarSharingImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64417)  public void setIncludeWholeCalendar(Boolean value) throws ComException {
+  @DeclDISPID(64417)  public void setIncludeWholeCalendar(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64417,"IncludeWholeCalendar", DISPATCH_PROPERTYPUT,value);
   }

@@ -15,9 +15,9 @@ public interface Recipient extends IDispatch {
   @DeclDISPID(109)  public IDispatch getParent() throws ComException;
   @DeclDISPID(12291)  public String getAddress() throws ComException;
   @DeclDISPID(121)  public AddressEntry getAddressEntry() throws ComException;
-  @DeclDISPID(121)  public void setAddressEntry(AddressEntry value) throws ComException;
+  @DeclDISPID(121)  public void setAddressEntry(final AddressEntry value) throws ComException;
   @DeclDISPID(106)  public String getAutoResponse() throws ComException;
-  @DeclDISPID(106)  public void setAutoResponse(String value) throws ComException;
+  @DeclDISPID(106)  public void setAutoResponse(final String value) throws ComException;
   @DeclDISPID(14592)  public OlDisplayType getDisplayType() throws ComException;
   @DeclDISPID(61470)  public String getEntryID() throws ComException;
   @DeclDISPID(91)  public Integer getIndex() throws ComException;
@@ -25,15 +25,15 @@ public interface Recipient extends IDispatch {
   @DeclDISPID(12289)  public String getName() throws ComException;
   @DeclDISPID(100)  public Boolean getResolved() throws ComException;
   @DeclDISPID(118)  public OlTrackingStatus getTrackingStatus() throws ComException;
-  @DeclDISPID(118)  public void setTrackingStatus(OlTrackingStatus value) throws ComException;
+  @DeclDISPID(118)  public void setTrackingStatus(final OlTrackingStatus value) throws ComException;
   @DeclDISPID(119)  public java.util.Date getTrackingStatusTime() throws ComException;
-  @DeclDISPID(119)  public void setTrackingStatusTime(java.util.Date value) throws ComException;
+  @DeclDISPID(119)  public void setTrackingStatusTime(final java.util.Date value) throws ComException;
   @DeclDISPID(3093)  public Integer getType() throws ComException;
-  @DeclDISPID(3093)  public void setType(Integer value) throws ComException;
+  @DeclDISPID(3093)  public void setType(final Integer value) throws ComException;
   @DeclDISPID(110)  public void Delete() throws ComException;
-  @DeclDISPID(111)  public String FreeBusy(java.util.Date Start, Integer MinPerChar, Object CompleteFormat) throws ComException;
+  @DeclDISPID(111)  public String FreeBusy(final java.util.Date Start, final Integer MinPerChar, final Object CompleteFormat) throws ComException;
   @DeclDISPID(113)  public Boolean Resolve() throws ComException;
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException;
   @DeclDISPID(64628)  public Boolean getSendable() throws ComException;
-  @DeclDISPID(64628)  public void setSendable(Boolean value) throws ComException;
+  @DeclDISPID(64628)  public void setSendable(final Boolean value) throws ComException;
 }

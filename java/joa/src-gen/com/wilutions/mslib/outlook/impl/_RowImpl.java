@@ -25,7 +25,7 @@ public class _RowImpl extends Dispatch implements com.wilutions.mslib.outlook._R
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(64259)  public String BinaryToString(Object Index) throws ComException {
+  @DeclDISPID(64259)  public String BinaryToString(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(64259,"BinaryToString", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -36,19 +36,19 @@ public class _RowImpl extends Dispatch implements com.wilutions.mslib.outlook._R
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(81)  public Object Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public Object Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64257)  public java.util.Date LocalTimeToUTC(Object Index) throws ComException {
+  @DeclDISPID(64257)  public java.util.Date LocalTimeToUTC(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(64257,"LocalTimeToUTC", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(64256)  public java.util.Date UTCToLocalTime(Object Index) throws ComException {
+  @DeclDISPID(64256)  public java.util.Date UTCToLocalTime(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(64256,"UTCToLocalTime", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

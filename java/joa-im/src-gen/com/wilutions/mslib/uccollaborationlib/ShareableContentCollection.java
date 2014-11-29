@@ -14,7 +14,7 @@ public class ShareableContentCollection extends Dispatch implements IShareableCo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public IShareableContent getItem(Integer index) throws ComException {
+  @DeclDISPID(0)  public IShareableContent getItem(final Integer index) throws ComException {
     assert(index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,index);
     if (obj == null) return null;

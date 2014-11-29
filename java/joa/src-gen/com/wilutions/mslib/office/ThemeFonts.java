@@ -13,6 +13,6 @@ public interface ThemeFonts extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public ThemeFont Item(MsoFontLanguageIndex Index) throws ComException;
+  @DeclDISPID(0)  public ThemeFont Item(final MsoFontLanguageIndex Index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
 }

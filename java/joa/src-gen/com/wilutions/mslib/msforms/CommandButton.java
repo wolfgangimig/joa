@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{D7053240-CE69-11CD-A777-00DD01143C57}")
 public class CommandButton extends Dispatch implements ICommandButton {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -28,7 +28,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(-502)  public void setBackStyle(fmBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final fmBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -37,7 +37,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return fmBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-518)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(-518)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-518,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -46,7 +46,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -55,7 +55,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-512)  public void setFont(Font value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final Font value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-512)  public Font getFont() throws ComException {
@@ -63,7 +63,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
-  @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -73,7 +73,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(203)  public void setTakeFocusOnClick(Boolean value) throws ComException {
+  @DeclDISPID(203)  public void setTakeFocusOnClick(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(203,"TakeFocusOnClick", DISPATCH_PROPERTYPUT,value);
   }
@@ -82,7 +82,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -91,7 +91,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -99,7 +99,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -108,7 +108,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-523)  public void setPicture(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
@@ -116,7 +116,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(11)  public void setPicturePosition(fmPicturePosition value) throws ComException {
+  @DeclDISPID(11)  public void setPicturePosition(final fmPicturePosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"PicturePosition", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -125,7 +125,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return fmPicturePosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException {
+  @DeclDISPID(-543)  public void setAccelerator(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-543,"Accelerator", DISPATCH_PROPERTYPUT,value);
   }
@@ -134,7 +134,7 @@ public class CommandButton extends Dispatch implements ICommandButton {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }

@@ -10,7 +10,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-2147356671)  public void setItemProperty(String value) throws ComException {
+  @DeclDISPID(-2147356671)  public void setItemProperty(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356671,"ItemProperty", DISPATCH_PROPERTYPUT,value);
   }
@@ -19,7 +19,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-2147356669)  public void setControlProperty(String value) throws ComException {
+  @DeclDISPID(-2147356669)  public void setControlProperty(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356669,"ControlProperty", DISPATCH_PROPERTYPUT,value);
   }
@@ -28,7 +28,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-2147356668)  public void setPossibleValues(String value) throws ComException {
+  @DeclDISPID(-2147356668)  public void setPossibleValues(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356668,"PossibleValues", DISPATCH_PROPERTYPUT,value);
   }
@@ -37,7 +37,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-2147356670)  public void setFormat(Integer value) throws ComException {
+  @DeclDISPID(-2147356670)  public void setFormat(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356670,"Format", DISPATCH_PROPERTYPUT,value);
   }
@@ -46,7 +46,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-2147356655)  public void setEnableAutoLayout(Boolean value) throws ComException {
+  @DeclDISPID(-2147356655)  public void setEnableAutoLayout(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356655,"EnableAutoLayout", DISPATCH_PROPERTYPUT,value);
   }
@@ -55,7 +55,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-2147356654)  public void setMinimumWidth(Integer value) throws ComException {
+  @DeclDISPID(-2147356654)  public void setMinimumWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356654,"MinimumWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -64,7 +64,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-2147356653)  public void setMinimumHeight(Integer value) throws ComException {
+  @DeclDISPID(-2147356653)  public void setMinimumHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356653,"MinimumHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -73,7 +73,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlHorizontalLayout.valueOf((Integer)obj);
   }
-  @DeclDISPID(-2147356652)  public void setHorizontalLayout(com.wilutions.mslib.outlook.OlHorizontalLayout value) throws ComException {
+  @DeclDISPID(-2147356652)  public void setHorizontalLayout(final com.wilutions.mslib.outlook.OlHorizontalLayout value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356652,"HorizontalLayout", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -82,7 +82,7 @@ public class OlkControlImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlVerticalLayout.valueOf((Integer)obj);
   }
-  @DeclDISPID(-2147356651)  public void setVerticalLayout(com.wilutions.mslib.outlook.OlVerticalLayout value) throws ComException {
+  @DeclDISPID(-2147356651)  public void setVerticalLayout(final com.wilutions.mslib.outlook.OlVerticalLayout value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356651,"VerticalLayout", DISPATCH_PROPERTYPUT,value.value);
   }

@@ -45,7 +45,7 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(161)  public void setPictureType(Object value) throws ComException {
+  @DeclDISPID(161)  public void setPictureType(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(161,"PictureType", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class IMsoFloorImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2419)  public void setThickness(Integer value) throws ComException {
+  @DeclDISPID(2419)  public void setThickness(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(2419,"Thickness", DISPATCH_PROPERTYPUT,value);
   }

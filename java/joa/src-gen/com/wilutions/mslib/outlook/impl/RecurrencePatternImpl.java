@@ -30,7 +30,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4096)  public void setDayOfMonth(Integer value) throws ComException {
+  @DeclDISPID(4096)  public void setDayOfMonth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(4096,"DayOfMonth", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlDaysOfWeek.valueOf((Integer)obj);
   }
-  @DeclDISPID(4097)  public void setDayOfWeekMask(com.wilutions.mslib.outlook.OlDaysOfWeek value) throws ComException {
+  @DeclDISPID(4097)  public void setDayOfWeekMask(final com.wilutions.mslib.outlook.OlDaysOfWeek value) throws ComException {
     assert(value != null);
     this._dispatchCall(4097,"DayOfWeekMask", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -48,7 +48,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4109)  public void setDuration(Integer value) throws ComException {
+  @DeclDISPID(4109)  public void setDuration(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(4109,"Duration", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(4108)  public void setEndTime(java.util.Date value) throws ComException {
+  @DeclDISPID(4108)  public void setEndTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(4108,"EndTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4099)  public void setInstance(Integer value) throws ComException {
+  @DeclDISPID(4099)  public void setInstance(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(4099,"Instance", DISPATCH_PROPERTYPUT,value);
   }
@@ -80,7 +80,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4100)  public void setInterval(Integer value) throws ComException {
+  @DeclDISPID(4100)  public void setInterval(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(4100,"Interval", DISPATCH_PROPERTYPUT,value);
   }
@@ -89,7 +89,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4102)  public void setMonthOfYear(Integer value) throws ComException {
+  @DeclDISPID(4102)  public void setMonthOfYear(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(4102,"MonthOfYear", DISPATCH_PROPERTYPUT,value);
   }
@@ -98,7 +98,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(4107)  public void setNoEndDate(Boolean value) throws ComException {
+  @DeclDISPID(4107)  public void setNoEndDate(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(4107,"NoEndDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -107,7 +107,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(4101)  public void setOccurrences(Integer value) throws ComException {
+  @DeclDISPID(4101)  public void setOccurrences(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(4101,"Occurrences", DISPATCH_PROPERTYPUT,value);
   }
@@ -116,7 +116,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(4098)  public void setPatternEndDate(java.util.Date value) throws ComException {
+  @DeclDISPID(4098)  public void setPatternEndDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(4098,"PatternEndDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -125,7 +125,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(4104)  public void setPatternStartDate(java.util.Date value) throws ComException {
+  @DeclDISPID(4104)  public void setPatternStartDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(4104,"PatternStartDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -134,7 +134,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlRecurrenceType.valueOf((Integer)obj);
   }
-  @DeclDISPID(4103)  public void setRecurrenceType(com.wilutions.mslib.outlook.OlRecurrenceType value) throws ComException {
+  @DeclDISPID(4103)  public void setRecurrenceType(final com.wilutions.mslib.outlook.OlRecurrenceType value) throws ComException {
     assert(value != null);
     this._dispatchCall(4103,"RecurrenceType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -143,7 +143,7 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(4106)  public void setRegenerate(Boolean value) throws ComException {
+  @DeclDISPID(4106)  public void setRegenerate(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(4106,"Regenerate", DISPATCH_PROPERTYPUT,value);
   }
@@ -152,11 +152,11 @@ public class RecurrencePatternImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(4105)  public void setStartTime(java.util.Date value) throws ComException {
+  @DeclDISPID(4105)  public void setStartTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(4105,"StartTime", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(4111)  public com.wilutions.mslib.outlook.AppointmentItem GetOccurrence(java.util.Date StartDate) throws ComException {
+  @DeclDISPID(4111)  public com.wilutions.mslib.outlook.AppointmentItem GetOccurrence(final java.util.Date StartDate) throws ComException {
     assert(StartDate != null);
     final Object obj = this._dispatchCall(4111,"GetOccurrence", DISPATCH_METHOD,null,StartDate);
     if (obj == null) return null;

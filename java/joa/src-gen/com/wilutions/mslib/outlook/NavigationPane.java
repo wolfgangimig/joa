@@ -34,7 +34,7 @@ public class NavigationPane extends Dispatch implements _NavigationPane {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64436)  public void setIsCollapsed(Boolean value) throws ComException {
+  @DeclDISPID(64436)  public void setIsCollapsed(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64436,"IsCollapsed", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class NavigationPane extends Dispatch implements _NavigationPane {
     final Dispatch disp = (Dispatch)obj;
     return disp.as(NavigationModule.class);
   }
-  @DeclDISPID(64437)  public void setCurrentModule(NavigationModule value) throws ComException {
+  @DeclDISPID(64437)  public void setCurrentModule(final NavigationModule value) throws ComException {
     this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(64438)  public Integer getDisplayedModuleCount() throws ComException {
@@ -52,7 +52,7 @@ public class NavigationPane extends Dispatch implements _NavigationPane {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64438)  public void setDisplayedModuleCount(Integer value) throws ComException {
+  @DeclDISPID(64438)  public void setDisplayedModuleCount(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64438,"DisplayedModuleCount", DISPATCH_PROPERTYPUT,value);
   }

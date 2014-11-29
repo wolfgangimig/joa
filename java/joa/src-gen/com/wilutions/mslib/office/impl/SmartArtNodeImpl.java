@@ -20,7 +20,7 @@ public class SmartArtNodeImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.SmartArtNode AddNode(com.wilutions.mslib.office.MsoSmartArtNodePosition Position, com.wilutions.mslib.office.MsoSmartArtNodeType Type) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.SmartArtNode AddNode(final com.wilutions.mslib.office.MsoSmartArtNodePosition Position, final com.wilutions.mslib.office.MsoSmartArtNodeType Type) throws ComException {
     assert(Position != null);
     assert(Type != null);
     final Object obj = this._dispatchCall(2,"AddNode", DISPATCH_METHOD,null,Position.value,Type.value);
@@ -41,7 +41,7 @@ public class SmartArtNodeImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoOrgChartLayoutType.valueOf((Integer)obj);
   }
-  @DeclDISPID(6)  public void setOrgChartLayout(com.wilutions.mslib.office.MsoOrgChartLayoutType value) throws ComException {
+  @DeclDISPID(6)  public void setOrgChartLayout(final com.wilutions.mslib.office.MsoOrgChartLayoutType value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"OrgChartLayout", DISPATCH_PROPERTYPUT,value.value);
   }

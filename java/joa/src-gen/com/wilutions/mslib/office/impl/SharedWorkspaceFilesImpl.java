@@ -20,7 +20,7 @@ public class SharedWorkspaceFilesImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceFile getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceFile getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,7 +31,7 @@ public class SharedWorkspaceFilesImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceFile Add(String FileName, Object ParentFolder, Object OverwriteIfFileAlreadyExists, Object KeepInSync) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceFile Add(final String FileName, final Object ParentFolder, final Object OverwriteIfFileAlreadyExists, final Object KeepInSync) throws ComException {
     assert(FileName != null);
     assert(ParentFolder != null);
     assert(OverwriteIfFileAlreadyExists != null);

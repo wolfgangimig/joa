@@ -40,7 +40,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12292)  public void setDescription(String value) throws ComException {
+  @DeclDISPID(12292)  public void setDescription(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12292,"Description", DISPATCH_PROPERTYPUT,value);
   }
@@ -64,7 +64,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -78,7 +78,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(61490)  public com.wilutions.mslib.outlook.MAPIFolder CopyTo(com.wilutions.mslib.outlook.MAPIFolder DestinationFolder) throws ComException {
+  @DeclDISPID(61490)  public com.wilutions.mslib.outlook.MAPIFolder CopyTo(final com.wilutions.mslib.outlook.MAPIFolder DestinationFolder) throws ComException {
     final Object obj = this._dispatchCall(61490,"CopyTo", DISPATCH_METHOD,null,(DestinationFolder!=null?DestinationFolder:Dispatch.NULL));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
@@ -89,13 +89,13 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
   @DeclDISPID(12548)  public void Display() throws ComException {
     this._dispatchCall(12548,"Display", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(12545)  public com.wilutions.mslib.outlook._Explorer GetExplorer(Object DisplayMode) throws ComException {
+  @DeclDISPID(12545)  public com.wilutions.mslib.outlook._Explorer GetExplorer(final Object DisplayMode) throws ComException {
     assert(DisplayMode != null);
     final Object obj = this._dispatchCall(12545,"GetExplorer", DISPATCH_METHOD,null,DisplayMode);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ExplorerImpl.class);
   }
-  @DeclDISPID(61492)  public void MoveTo(com.wilutions.mslib.outlook.MAPIFolder DestinationFolder) throws ComException {
+  @DeclDISPID(61492)  public void MoveTo(final com.wilutions.mslib.outlook.MAPIFolder DestinationFolder) throws ComException {
     this._dispatchCall(61492,"MoveTo", DISPATCH_METHOD,null,(DestinationFolder!=null?DestinationFolder:Dispatch.NULL));
   }
   @DeclDISPID(12562)  public Boolean getWebViewOn() throws ComException {
@@ -103,7 +103,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(12562)  public void setWebViewOn(Boolean value) throws ComException {
+  @DeclDISPID(12562)  public void setWebViewOn(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(12562,"WebViewOn", DISPATCH_PROPERTYPUT,value);
   }
@@ -112,7 +112,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12563)  public void setWebViewURL(String value) throws ComException {
+  @DeclDISPID(12563)  public void setWebViewURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12563,"WebViewURL", DISPATCH_PROPERTYPUT,value);
   }
@@ -124,7 +124,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64110)  public void setAddressBookName(String value) throws ComException {
+  @DeclDISPID(64110)  public void setAddressBookName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64110,"AddressBookName", DISPATCH_PROPERTYPUT,value);
   }
@@ -133,7 +133,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64111)  public void setShowAsOutlookAB(Boolean value) throws ComException {
+  @DeclDISPID(64111)  public void setShowAsOutlookAB(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64111,"ShowAsOutlookAB", DISPATCH_PROPERTYPUT,value);
   }
@@ -147,7 +147,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64075)  public void setInAppFolderSyncObject(Boolean value) throws ComException {
+  @DeclDISPID(64075)  public void setInAppFolderSyncObject(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64075,"InAppFolderSyncObject", DISPATCH_PROPERTYPUT,value);
   }
@@ -161,7 +161,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64070)  public void setCustomViewsOnly(Boolean value) throws ComException {
+  @DeclDISPID(64070)  public void setCustomViewsOnly(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64070,"CustomViewsOnly", DISPATCH_PROPERTYPUT,value);
   }
@@ -180,7 +180,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlShowItemCount.valueOf((Integer)obj);
   }
-  @DeclDISPID(64194)  public void setShowItemCount(com.wilutions.mslib.outlook.OlShowItemCount value) throws ComException {
+  @DeclDISPID(64194)  public void setShowItemCount(final com.wilutions.mslib.outlook.OlShowItemCount value) throws ComException {
     assert(value != null);
     this._dispatchCall(64194,"ShowItemCount", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -190,14 +190,14 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Store.class);
   }
-  @DeclDISPID(64264)  public com.wilutions.mslib.outlook._StorageItem GetStorage(String StorageIdentifier, com.wilutions.mslib.outlook.OlStorageIdentifierType StorageIdentifierType) throws ComException {
+  @DeclDISPID(64264)  public com.wilutions.mslib.outlook._StorageItem GetStorage(final String StorageIdentifier, final com.wilutions.mslib.outlook.OlStorageIdentifierType StorageIdentifierType) throws ComException {
     assert(StorageIdentifier != null);
     assert(StorageIdentifierType != null);
     final Object obj = this._dispatchCall(64264,"GetStorage", DISPATCH_METHOD,null,StorageIdentifier,StorageIdentifierType.value);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._StorageItemImpl.class);
   }
-  @DeclDISPID(64285)  public com.wilutions.mslib.outlook.Table GetTable(Object Filter, Object TableContents) throws ComException {
+  @DeclDISPID(64285)  public com.wilutions.mslib.outlook.Table GetTable(final Object Filter, final Object TableContents) throws ComException {
     assert(Filter != null);
     assert(TableContents != null);
     final Object obj = this._dispatchCall(64285,"GetTable", DISPATCH_METHOD,null,Filter,TableContents);
@@ -228,7 +228,7 @@ public class MAPIFolderImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(64573)  public void SetCustomIcon(com.wilutions.mslib.stdole.Picture Picture) throws ComException {
+  @DeclDISPID(64573)  public void SetCustomIcon(final com.wilutions.mslib.stdole.Picture Picture) throws ComException {
     this._dispatchCall(64573,"SetCustomIcon", DISPATCH_METHOD,null,(Picture!=null?Picture:Dispatch.NULL));
   }
   public MAPIFolderImpl(String progId) throws ComException {

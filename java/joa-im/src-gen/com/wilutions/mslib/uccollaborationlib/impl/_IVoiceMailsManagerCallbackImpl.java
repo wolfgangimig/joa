@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{1947D23E-7C43-961A-3B3E-0C6DECC17882}")
 public class _IVoiceMailsManagerCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IVoiceMailsManagerCallback {
-  @DeclDISPID(4110)  public void OnGetUnreadVoiceMails(com.wilutions.mslib.uccollaborationlib.IVoiceMailsManager _source, com.wilutions.mslib.uccollaborationlib.IVoiceMailCollection _items, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(4110)  public void OnGetUnreadVoiceMails(final com.wilutions.mslib.uccollaborationlib.IVoiceMailsManager _source, final com.wilutions.mslib.uccollaborationlib.IVoiceMailCollection _items, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(4110,"OnGetUnreadVoiceMails", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_items!=null?_items:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(4111)  public void OnGetAllVoiceMails(com.wilutions.mslib.uccollaborationlib.IVoiceMailsManager _source, com.wilutions.mslib.uccollaborationlib.IVoiceMailCollection _items, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(4111)  public void OnGetAllVoiceMails(final com.wilutions.mslib.uccollaborationlib.IVoiceMailsManager _source, final com.wilutions.mslib.uccollaborationlib.IVoiceMailCollection _items, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(4111,"OnGetAllVoiceMails", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_items!=null?_items:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IVoiceMailsManagerCallbackImpl(String progId) throws ComException {

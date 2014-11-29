@@ -20,7 +20,7 @@ public class PictureEffectImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPictureEffectType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1)  public void setPosition(Integer value) throws ComException {
+  @DeclDISPID(1)  public void setPosition(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Position", DISPATCH_PROPERTYPUT,value);
   }
@@ -37,7 +37,7 @@ public class PictureEffectImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.EffectParametersImpl.class);
   }
-  @DeclDISPID(4)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(4)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }

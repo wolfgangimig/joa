@@ -40,7 +40,7 @@ public class LegendEntryImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1525)  public void setAutoScaleFont(Object RHS) throws ComException {
+  @DeclDISPID(1525)  public void setAutoScaleFont(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1525,"AutoScaleFont", DISPATCH_PROPERTYPUT,RHS);
   }

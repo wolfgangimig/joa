@@ -5,17 +5,17 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{E65F4006-D941-95DF-0924-842B113D609E}")
 public class _IParticipantCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IParticipantCallback {
-  @DeclDISPID(1152)  public void OnSetMuteAction(com.wilutions.mslib.uccollaborationlib.IParticipant _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1152)  public void OnSetMuteAction(final com.wilutions.mslib.uccollaborationlib.IParticipant _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(1152,"OnSetMuteAction", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(1151)  public void OnSetParticipantProperty(com.wilutions.mslib.uccollaborationlib.IParticipant _source, com.wilutions.mslib.uccollaborationlib.ParticipantProperty _propertyType, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1151)  public void OnSetParticipantProperty(final com.wilutions.mslib.uccollaborationlib.IParticipant _source, final com.wilutions.mslib.uccollaborationlib.ParticipantProperty _propertyType, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     assert(_propertyType != null);
     this._dispatchCall(1151,"OnSetParticipantProperty", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),_propertyType.value,(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(1153)  public void OnAdmit(com.wilutions.mslib.uccollaborationlib.IParticipant _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1153)  public void OnAdmit(final com.wilutions.mslib.uccollaborationlib.IParticipant _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(1153,"OnAdmit", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(1154)  public void OnDeny(com.wilutions.mslib.uccollaborationlib.IParticipant _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1154)  public void OnDeny(final com.wilutions.mslib.uccollaborationlib.IParticipant _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(1154,"OnDeny", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IParticipantCallbackImpl(String progId) throws ComException {

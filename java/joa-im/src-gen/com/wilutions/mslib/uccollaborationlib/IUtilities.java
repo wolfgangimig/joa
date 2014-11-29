@@ -12,10 +12,10 @@ public interface IUtilities extends IDispatch {
   @DeclDISPID(1610743808)  public INamedPropertyList CreateNamedPropertyList() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getIsDefaultProvider() throws ComException;
   @DeclDISPID(1610743810)  public void SetAsDefaultProvider() throws ComException;
-  @DeclDISPID(1610743811)  public Boolean CanInvoke(UtilitiesAction _utilitiesAction, Object _actionContext) throws ComException;
-  @DeclDISPID(1610743812)  public void ShowPropertiesDialog(Object _context) throws ComException;
-  @DeclDISPID(1610743813)  public IAsynchronousOperation AddToExternalContacts(IContact _contactContext, Object _utilitiesCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743814)  public IAsynchronousOperation FindPreviousConversations(Object _context, Object _utilitiesCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743815)  public IAsynchronousOperation ComposeEmail(Object _to, String _subject, Object _utilitiesCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743816)  public IAsynchronousOperation ScheduleMeeting(Object _paticipants, String _subject, Object _utilitiesCallback, Object _state) throws ComException;
+  @DeclDISPID(1610743811)  public Boolean CanInvoke(final UtilitiesAction _utilitiesAction, final Object _actionContext) throws ComException;
+  @DeclDISPID(1610743812)  public void ShowPropertiesDialog(final Object _context) throws ComException;
+  @DeclDISPID(1610743813)  public IAsynchronousOperation AddToExternalContacts(final IContact _contactContext, final Object _utilitiesCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743814)  public IAsynchronousOperation FindPreviousConversations(final Object _context, final Object _utilitiesCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743815)  public IAsynchronousOperation ComposeEmail(final Object _to, final String _subject, final Object _utilitiesCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743816)  public IAsynchronousOperation ScheduleMeeting(final Object _paticipants, final String _subject, final Object _utilitiesCallback, final Object _state) throws ComException;
 }

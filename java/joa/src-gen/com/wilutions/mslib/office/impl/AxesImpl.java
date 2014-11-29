@@ -10,7 +10,7 @@ public class AxesImpl extends Dispatch implements com.wilutions.mslib.office.Axe
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743809)  public com.wilutions.mslib.office.IMsoAxis getItem(com.wilutions.mslib.office.XlAxisType Type, com.wilutions.mslib.office.XlAxisGroup AxisGroup) throws ComException {
+  @DeclDISPID(1610743809)  public com.wilutions.mslib.office.IMsoAxis getItem(final com.wilutions.mslib.office.XlAxisType Type, final com.wilutions.mslib.office.XlAxisGroup AxisGroup) throws ComException {
     assert(Type != null);
     assert(AxisGroup != null);
     final Object obj = this._dispatchCall(1610743809,"Item", DISPATCH_PROPERTYGET,null,Type.value,AxisGroup.value);
@@ -32,7 +32,7 @@ public class AxesImpl extends Dispatch implements com.wilutions.mslib.office.Axe
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoAxis get_Default(com.wilutions.mslib.office.XlAxisType Type, com.wilutions.mslib.office.XlAxisGroup AxisGroup) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoAxis get_Default(final com.wilutions.mslib.office.XlAxisType Type, final com.wilutions.mslib.office.XlAxisGroup AxisGroup) throws ComException {
     assert(Type != null);
     assert(AxisGroup != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Type.value,AxisGroup.value);

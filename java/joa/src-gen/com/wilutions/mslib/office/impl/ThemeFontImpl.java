@@ -20,7 +20,7 @@ public class ThemeFontImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }

@@ -25,7 +25,7 @@ public class EffectParameterImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(1)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Value", DISPATCH_PROPERTYPUT,value);
   }

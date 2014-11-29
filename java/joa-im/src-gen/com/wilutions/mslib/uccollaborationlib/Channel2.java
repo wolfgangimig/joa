@@ -9,14 +9,14 @@ import com.wilutions.com.*;
 @CoClass(guid="{A351A6D6-9B47-41A3-A6D3-07DDF2203E7D}")
 public class Channel2 extends Dispatch implements IChannel2 {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(268435457)  public IAsynchronousOperation Pause(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(268435457)  public IAsynchronousOperation Pause(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(268435457,"Pause", DISPATCH_METHOD,null,_callback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(268435458)  public IAsynchronousOperation Resume(Object _callback, Object _state) throws ComException {
+  @DeclDISPID(268435458)  public IAsynchronousOperation Resume(final Object _callback, final Object _state) throws ComException {
     assert(_callback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(268435458,"Resume", DISPATCH_METHOD,null,_callback,_state);

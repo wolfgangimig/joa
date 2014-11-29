@@ -25,7 +25,7 @@ public class _TableImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(98)  public com.wilutions.mslib.outlook.Row FindRow(String Filter) throws ComException {
+  @DeclDISPID(98)  public com.wilutions.mslib.outlook.Row FindRow(final String Filter) throws ComException {
     assert(Filter != null);
     final Object obj = this._dispatchCall(98,"FindRow", DISPATCH_METHOD,null,Filter);
     if (obj == null) return null;
@@ -38,7 +38,7 @@ public class _TableImpl extends Dispatch implements com.wilutions.mslib.outlook.
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Row.class);
   }
-  @DeclDISPID(64463)  public Object GetArray(Integer MaxRows) throws ComException {
+  @DeclDISPID(64463)  public Object GetArray(final Integer MaxRows) throws ComException {
     assert(MaxRows != null);
     final Object obj = this._dispatchCall(64463,"GetArray", DISPATCH_METHOD,null,MaxRows);
     if (obj == null) return null;
@@ -58,14 +58,14 @@ public class _TableImpl extends Dispatch implements com.wilutions.mslib.outlook.
   @DeclDISPID(64286)  public void MoveToStart() throws ComException {
     this._dispatchCall(64286,"MoveToStart", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(100)  public com.wilutions.mslib.outlook.Table Restrict(String Filter) throws ComException {
+  @DeclDISPID(100)  public com.wilutions.mslib.outlook.Table Restrict(final String Filter) throws ComException {
     assert(Filter != null);
     final Object obj = this._dispatchCall(100,"Restrict", DISPATCH_METHOD,null,Filter);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Table.class);
   }
-  @DeclDISPID(97)  public void Sort(String SortProperty, Object Descending) throws ComException {
+  @DeclDISPID(97)  public void Sort(final String SortProperty, final Object Descending) throws ComException {
     assert(SortProperty != null);
     assert(Descending != null);
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,SortProperty,Descending);

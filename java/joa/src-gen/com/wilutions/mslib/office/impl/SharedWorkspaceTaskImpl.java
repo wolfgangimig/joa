@@ -20,7 +20,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(0)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Title", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void setAssignedTo(String value) throws ComException {
+  @DeclDISPID(1)  public void setAssignedTo(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"AssignedTo", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoSharedWorkspaceTaskStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(2)  public void setStatus(com.wilutions.mslib.office.MsoSharedWorkspaceTaskStatus value) throws ComException {
+  @DeclDISPID(2)  public void setStatus(final com.wilutions.mslib.office.MsoSharedWorkspaceTaskStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Status", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -47,7 +47,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoSharedWorkspaceTaskPriority.valueOf((Integer)obj);
   }
-  @DeclDISPID(3)  public void setPriority(com.wilutions.mslib.office.MsoSharedWorkspaceTaskPriority value) throws ComException {
+  @DeclDISPID(3)  public void setPriority(final com.wilutions.mslib.office.MsoSharedWorkspaceTaskPriority value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Priority", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -56,7 +56,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setDescription(String value) throws ComException {
+  @DeclDISPID(4)  public void setDescription(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Description", DISPATCH_PROPERTYPUT,value);
   }
@@ -65,7 +65,7 @@ public class SharedWorkspaceTaskImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(5)  public void setDueDate(Object value) throws ComException {
+  @DeclDISPID(5)  public void setDueDate(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"DueDate", DISPATCH_PROPERTYPUT,value);
   }

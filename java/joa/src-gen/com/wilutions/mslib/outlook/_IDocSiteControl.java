@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface _IDocSiteControl extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-2147356664)  public Byte getReadOnly() throws ComException;
-  @DeclDISPID(-2147356664)  public void setReadOnly(Byte ReadOnly) throws ComException;
+  @DeclDISPID(-2147356664)  public void setReadOnly(final Byte ReadOnly) throws ComException;
   @DeclDISPID(64483)  public Byte getSuppressAttachments() throws ComException;
-  @DeclDISPID(64483)  public void setSuppressAttachments(Byte SuppressAttachments) throws ComException;
+  @DeclDISPID(64483)  public void setSuppressAttachments(final Byte SuppressAttachments) throws ComException;
 }

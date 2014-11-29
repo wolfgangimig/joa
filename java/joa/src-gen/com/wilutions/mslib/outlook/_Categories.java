@@ -14,7 +14,7 @@ public interface _Categories extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public _Category Item(Object Index) throws ComException;
-  @DeclDISPID(95)  public Category Add(String Name, Object Color, Object ShortcutKey) throws ComException;
-  @DeclDISPID(82)  public void Remove(Object Index) throws ComException;
+  @DeclDISPID(81)  public _Category Item(final Object Index) throws ComException;
+  @DeclDISPID(95)  public Category Add(final String Name, final Object Color, final Object ShortcutKey) throws ComException;
+  @DeclDISPID(82)  public void Remove(final Object Index) throws ComException;
 }

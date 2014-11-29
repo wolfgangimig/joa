@@ -15,7 +15,7 @@ public class PictureEffectsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.PictureEffect getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.PictureEffect getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,14 +31,14 @@ public class PictureEffectsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.PictureEffect Insert(com.wilutions.mslib.office.MsoPictureEffectType EffectType, Integer Position) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.PictureEffect Insert(final com.wilutions.mslib.office.MsoPictureEffectType EffectType, final Integer Position) throws ComException {
     assert(EffectType != null);
     assert(Position != null);
     final Object obj = this._dispatchCall(2,"Insert", DISPATCH_METHOD,null,EffectType.value,Position);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PictureEffectImpl.class);
   }
-  @DeclDISPID(3)  public void Delete(Integer Index) throws ComException {
+  @DeclDISPID(3)  public void Delete(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(3,"Delete", DISPATCH_METHOD,null,Index);
   }

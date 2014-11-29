@@ -15,5 +15,5 @@ public interface MsoDebugOptions_UTManager extends IDispatch {
   @DeclDISPID(1)  public void NotifyStartOfTestSuiteRun() throws ComException;
   @DeclDISPID(2)  public void NotifyEndOfTestSuiteRun() throws ComException;
   @DeclDISPID(3)  public Boolean getReportErrors() throws ComException;
-  @DeclDISPID(3)  public void setReportErrors(Boolean value) throws ComException;
+  @DeclDISPID(3)  public void setReportErrors(final Boolean value) throws ComException;
 }

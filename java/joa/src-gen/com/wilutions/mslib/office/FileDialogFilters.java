@@ -14,8 +14,8 @@ public interface FileDialogFilters extends IDispatch {
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610809346)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public FileDialogFilter Item(Integer Index) throws ComException;
-  @DeclDISPID(1610809348)  public void Delete(Object filter) throws ComException;
+  @DeclDISPID(0)  public FileDialogFilter Item(final Integer Index) throws ComException;
+  @DeclDISPID(1610809348)  public void Delete(final Object filter) throws ComException;
   @DeclDISPID(1610809349)  public void Clear() throws ComException;
-  @DeclDISPID(1610809350)  public FileDialogFilter Add(String Description, String Extensions, Object Position) throws ComException;
+  @DeclDISPID(1610809350)  public FileDialogFilter Add(final String Description, final String Extensions, final Object Position) throws ComException;
 }

@@ -9,5 +9,5 @@ import com.wilutions.com.*;
 @CoInterface(guid="{84340964-7820-4EBC-BCD3-702926DE23E8}")
 public interface _IContentSharingModalityCallback extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(5100)  public void OnCreateContent(IContentSharingModality _source, IShareableContent _content, IAsynchronousOperation _asyncOperation) throws ComException;
+  @DeclDISPID(5100)  public void OnCreateContent(final IContentSharingModality _source, final IShareableContent _content, final IAsynchronousOperation _asyncOperation) throws ComException;
 }

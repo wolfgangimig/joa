@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A9CE-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _ViewsEventsImpl extends Dispatch implements com.wilutions.mslib.outlook._ViewsEvents {
-  @DeclDISPID(400)  public void onViewAdd(com.wilutions.mslib.outlook.View View) throws ComException {
+  @DeclDISPID(400)  public void onViewAdd(final com.wilutions.mslib.outlook.View View) throws ComException {
     this._dispatchCall(400,"ViewAdd", DISPATCH_METHOD,null,(View!=null?View:Dispatch.NULL));
   }
-  @DeclDISPID(64071)  public void onViewRemove(com.wilutions.mslib.outlook.View View) throws ComException {
+  @DeclDISPID(64071)  public void onViewRemove(final com.wilutions.mslib.outlook.View View) throws ComException {
     this._dispatchCall(64071,"ViewRemove", DISPATCH_METHOD,null,(View!=null?View:Dispatch.NULL));
   }
   public _ViewsEventsImpl(String progId) throws ComException {

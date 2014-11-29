@@ -11,7 +11,7 @@ public interface ServerPolicy extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
-  @DeclDISPID(0)  public PolicyItem getItem(Object Index) throws ComException;
+  @DeclDISPID(0)  public PolicyItem getItem(final Object Index) throws ComException;
   @DeclDISPID(1)  public String getId() throws ComException;
   @DeclDISPID(2)  public String getName() throws ComException;
   @DeclDISPID(3)  public String getDescription() throws ComException;

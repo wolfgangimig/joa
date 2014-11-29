@@ -28,7 +28,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextEffectAlignment.valueOf((Integer)obj);
   }
-  @DeclDISPID(100)  public void setAlignment(com.wilutions.mslib.office.MsoTextEffectAlignment value) throws ComException {
+  @DeclDISPID(100)  public void setAlignment(final com.wilutions.mslib.office.MsoTextEffectAlignment value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"Alignment", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -37,7 +37,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setFontBold(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(101)  public void setFontBold(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"FontBold", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -46,7 +46,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(102)  public void setFontItalic(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(102)  public void setFontItalic(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"FontItalic", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -55,7 +55,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(103)  public void setFontName(String value) throws ComException {
+  @DeclDISPID(103)  public void setFontName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"FontName", DISPATCH_PROPERTYPUT,value);
   }
@@ -64,7 +64,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(104)  public void setFontSize(Float value) throws ComException {
+  @DeclDISPID(104)  public void setFontSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"FontSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -73,7 +73,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setKernedPairs(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(105)  public void setKernedPairs(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"KernedPairs", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -82,7 +82,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(106)  public void setNormalizedHeight(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(106)  public void setNormalizedHeight(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"NormalizedHeight", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -91,7 +91,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetTextEffectShape.valueOf((Integer)obj);
   }
-  @DeclDISPID(107)  public void setPresetShape(com.wilutions.mslib.office.MsoPresetTextEffectShape value) throws ComException {
+  @DeclDISPID(107)  public void setPresetShape(final com.wilutions.mslib.office.MsoPresetTextEffectShape value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"PresetShape", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -100,7 +100,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetTextEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(108)  public void setPresetTextEffect(com.wilutions.mslib.office.MsoPresetTextEffect value) throws ComException {
+  @DeclDISPID(108)  public void setPresetTextEffect(final com.wilutions.mslib.office.MsoPresetTextEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(108,"PresetTextEffect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -109,7 +109,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(109)  public void setRotatedChars(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(109)  public void setRotatedChars(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"RotatedChars", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -118,7 +118,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(110)  public void setText(String value) throws ComException {
+  @DeclDISPID(110)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(110,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -127,7 +127,7 @@ public class TextEffectFormatImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(111)  public void setTracking(Float value) throws ComException {
+  @DeclDISPID(111)  public void setTracking(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(111,"Tracking", DISPATCH_PROPERTYPUT,value);
   }

@@ -10,7 +10,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException {
+  @DeclDISPID(-543)  public void setAccelerator(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-543,"Accelerator", DISPATCH_PROPERTYPUT,value);
   }
@@ -19,7 +19,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -28,7 +28,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-518)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(-518)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-518,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -37,7 +37,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -51,7 +51,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public com.wilutions.mslib.outlook.OlMousePointer getMousePointer() throws ComException {
@@ -59,7 +59,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.outlook.OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.outlook.OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -68,7 +68,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
@@ -77,7 +77,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(10004)  public void setTextAlign(com.wilutions.mslib.outlook.OlTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final com.wilutions.mslib.outlook.OlTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -86,7 +86,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-523)  public void setPicture(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(26)  public com.wilutions.mslib.outlook.OlPictureAlignment getPictureAlignment() throws ComException {
@@ -94,7 +94,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlPictureAlignment.valueOf((Integer)obj);
   }
-  @DeclDISPID(26)  public void setPictureAlignment(com.wilutions.mslib.outlook.OlPictureAlignment value) throws ComException {
+  @DeclDISPID(26)  public void setPictureAlignment(final com.wilutions.mslib.outlook.OlPictureAlignment value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"PictureAlignment", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -103,7 +103,7 @@ public class _OlkCommandButtonImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64544)  public void setDisplayDropArrow(Boolean value) throws ComException {
+  @DeclDISPID(64544)  public void setDisplayDropArrow(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64544,"DisplayDropArrow", DISPATCH_PROPERTYPUT,value);
   }

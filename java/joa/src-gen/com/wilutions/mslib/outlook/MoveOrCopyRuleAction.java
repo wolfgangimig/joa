@@ -34,7 +34,7 @@ public class MoveOrCopyRuleAction extends Dispatch implements _MoveOrCopyRuleAct
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class MoveOrCopyRuleAction extends Dispatch implements _MoveOrCopyRuleAct
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
-  @DeclDISPID(64273)  public void setFolder(MAPIFolder value) throws ComException {
+  @DeclDISPID(64273)  public void setFolder(final MAPIFolder value) throws ComException {
     this._dispatchCall(64273,"Folder", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public MoveOrCopyRuleAction() throws ComException {

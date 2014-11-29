@@ -10,7 +10,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Byte Enabled) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Byte Enabled) throws ComException {
     assert(Enabled != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,Enabled);
   }
@@ -19,7 +19,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(Integer BackColor) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final Integer BackColor) throws ComException {
     assert(BackColor != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,BackColor);
   }
@@ -28,7 +28,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-513)  public void setForeColor(Integer ForeColor) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final Integer ForeColor) throws ComException {
     assert(ForeColor != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,ForeColor);
   }
@@ -37,7 +37,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(-2147356664)  public void setReadOnly(Byte ReadOnly) throws ComException {
+  @DeclDISPID(-2147356664)  public void setReadOnly(final Byte ReadOnly) throws ComException {
     assert(ReadOnly != null);
     this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYPUT,ReadOnly);
   }
@@ -46,7 +46,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(-512)  public void setFont(IDispatch Font) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final IDispatch Font) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUT,(Font!=null?Font:Dispatch.NULL));
   }
   @DeclDISPID(12)  public Integer getSpecialEffect() throws ComException {
@@ -54,7 +54,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(12)  public void setSpecialEffect(Integer Effect) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final Integer Effect) throws ComException {
     assert(Effect != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,Effect);
   }

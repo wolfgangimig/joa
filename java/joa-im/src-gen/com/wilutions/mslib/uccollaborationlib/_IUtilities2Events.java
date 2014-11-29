@@ -9,5 +9,5 @@ import com.wilutions.com.*;
 @CoInterface(guid="{3417D640-3976-4CB6-BC82-54E5E2E10784}")
 public interface _IUtilities2Events extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(5060)  public void onOnExchangeECPUrlChanged(IUtilities _eventSource, IExchangeECPUrlChangedEventData _eventData) throws ComException;
+  @DeclDISPID(5060)  public void onOnExchangeECPUrlChanged(final IUtilities _eventSource, final IExchangeECPUrlChangedEventData _eventData) throws ComException;
 }

@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E70-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.office.IMsoInterior {
-  @DeclDISPID(1610743808)  public void setColor(Object value) throws ComException {
+  @DeclDISPID(1610743808)  public void setColor(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"Color", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743810)  public void setColorIndex(Object value) throws ComException {
+  @DeclDISPID(1610743810)  public void setColorIndex(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743810,"ColorIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743812)  public void setInvertIfNegative(Object value) throws ComException {
+  @DeclDISPID(1610743812)  public void setInvertIfNegative(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"InvertIfNegative", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743814)  public void setPattern(Object value) throws ComException {
+  @DeclDISPID(1610743814)  public void setPattern(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"Pattern", DISPATCH_PROPERTYPUT,value);
   }
@@ -41,7 +41,7 @@ public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743816)  public void setPatternColor(Object value) throws ComException {
+  @DeclDISPID(1610743816)  public void setPatternColor(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"PatternColor", DISPATCH_PROPERTYPUT,value);
   }
@@ -50,7 +50,7 @@ public class IMsoInteriorImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743818)  public void setPatternColorIndex(Object value) throws ComException {
+  @DeclDISPID(1610743818)  public void setPatternColorIndex(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743818,"PatternColorIndex", DISPATCH_PROPERTYPUT,value);
   }

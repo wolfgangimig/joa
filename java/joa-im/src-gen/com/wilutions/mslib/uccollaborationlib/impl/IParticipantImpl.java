@@ -30,7 +30,7 @@ public class IParticipantImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantPropertyDictionaryImpl.class);
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetProperty(com.wilutions.mslib.uccollaborationlib.ParticipantProperty _propertyType, Object _propertyValue, Object _participantCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetProperty(final com.wilutions.mslib.uccollaborationlib.ParticipantProperty _propertyType, final Object _propertyValue, final Object _participantCallback, final Object _state) throws ComException {
     assert(_propertyType != null);
     assert(_propertyValue != null);
     assert(_participantCallback != null);
@@ -39,7 +39,7 @@ public class IParticipantImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetMute(Boolean _mute, Object _participantCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetMute(final Boolean _mute, final Object _participantCallback, final Object _state) throws ComException {
     assert(_mute != null);
     assert(_participantCallback != null);
     assert(_state != null);
@@ -52,20 +52,20 @@ public class IParticipantImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743816)  public Boolean CanSetProperty(com.wilutions.mslib.uccollaborationlib.ParticipantProperty _participantProperty) throws ComException {
+  @DeclDISPID(1610743816)  public Boolean CanSetProperty(final com.wilutions.mslib.uccollaborationlib.ParticipantProperty _participantProperty) throws ComException {
     assert(_participantProperty != null);
     final Object obj = this._dispatchCall(1610743816,"CanSetProperty", DISPATCH_METHOD,null,_participantProperty.value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Admit(Object _participantCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Admit(final Object _participantCallback, final Object _state) throws ComException {
     assert(_participantCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743817,"Admit", DISPATCH_METHOD,null,_participantCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743818)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Deny(Object _participantCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743818)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Deny(final Object _participantCallback, final Object _state) throws ComException {
     assert(_participantCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743818,"Deny", DISPATCH_METHOD,null,_participantCallback,_state);
@@ -87,7 +87,7 @@ public class IParticipantImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743822)  public Boolean CanInvoke(com.wilutions.mslib.uccollaborationlib.ParticipantAction _action) throws ComException {
+  @DeclDISPID(1610743822)  public Boolean CanInvoke(final com.wilutions.mslib.uccollaborationlib.ParticipantAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743822,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;

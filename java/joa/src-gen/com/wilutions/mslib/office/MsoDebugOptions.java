@@ -12,12 +12,12 @@ public interface MsoDebugOptions extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(5)  public Boolean getOutputToDebugger() throws ComException;
-  @DeclDISPID(5)  public void setOutputToDebugger(Boolean value) throws ComException;
+  @DeclDISPID(5)  public void setOutputToDebugger(final Boolean value) throws ComException;
   @DeclDISPID(6)  public Boolean getOutputToFile() throws ComException;
-  @DeclDISPID(6)  public void setOutputToFile(Boolean value) throws ComException;
+  @DeclDISPID(6)  public void setOutputToFile(final Boolean value) throws ComException;
   @DeclDISPID(7)  public Boolean getOutputToMessageBox() throws ComException;
-  @DeclDISPID(7)  public void setOutputToMessageBox(Boolean value) throws ComException;
+  @DeclDISPID(7)  public void setOutputToMessageBox(final Boolean value) throws ComException;
   @DeclDISPID(8)  public Object getUnitTestManager() throws ComException;
-  @DeclDISPID(9)  public void AddIgnoredAssertTag(String bstrTagToIgnore) throws ComException;
-  @DeclDISPID(10)  public void RemoveIgnoredAssertTag(String bstrTagToIgnore) throws ComException;
+  @DeclDISPID(9)  public void AddIgnoredAssertTag(final String bstrTagToIgnore) throws ComException;
+  @DeclDISPID(10)  public void RemoveIgnoredAssertTag(final String bstrTagToIgnore) throws ComException;
 }

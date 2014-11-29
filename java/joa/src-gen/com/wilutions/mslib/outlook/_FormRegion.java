@@ -16,7 +16,7 @@ public interface _FormRegion extends IDispatch {
   @DeclDISPID(64312)  public Boolean getIsExpanded() throws ComException;
   @DeclDISPID(64313)  public IDispatch getForm() throws ComException;
   @DeclDISPID(64309)  public String getDetail() throws ComException;
-  @DeclDISPID(64309)  public void setDetail(String value) throws ComException;
+  @DeclDISPID(64309)  public void setDetail(final String value) throws ComException;
   @DeclDISPID(64096)  public IDispatch getItem() throws ComException;
   @DeclDISPID(61502)  public _Inspector getInspector() throws ComException;
   @DeclDISPID(64308)  public OlFormRegionMode getFormRegionMode() throws ComException;
@@ -24,12 +24,12 @@ public interface _FormRegion extends IDispatch {
   @DeclDISPID(64315)  public void Reflow() throws ComException;
   @DeclDISPID(12289)  public String getDisplayName() throws ComException;
   @DeclDISPID(8450)  public String getInternalName() throws ComException;
-  @DeclDISPID(64201)  public void SetControlItemProperty(IDispatch Control, String PropertyName) throws ComException;
+  @DeclDISPID(64201)  public void SetControlItemProperty(final IDispatch Control, final String PropertyName) throws ComException;
   @DeclDISPID(64518)  public Boolean getSuppressControlReplacement() throws ComException;
-  @DeclDISPID(64518)  public void setSuppressControlReplacement(Boolean value) throws ComException;
+  @DeclDISPID(64518)  public void setSuppressControlReplacement(final Boolean value) throws ComException;
   @DeclDISPID(8457)  public void Select() throws ComException;
   @DeclDISPID(64538)  public Boolean getEnableAutoLayout() throws ComException;
-  @DeclDISPID(64538)  public void setEnableAutoLayout(Boolean value) throws ComException;
+  @DeclDISPID(64538)  public void setEnableAutoLayout(final Boolean value) throws ComException;
   @DeclDISPID(8451)  public Boolean getVisible() throws ComException;
-  @DeclDISPID(8451)  public void setVisible(Boolean value) throws ComException;
+  @DeclDISPID(8451)  public void setVisible(final Boolean value) throws ComException;
 }

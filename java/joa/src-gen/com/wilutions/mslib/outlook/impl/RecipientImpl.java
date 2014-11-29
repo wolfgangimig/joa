@@ -35,7 +35,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
-  @DeclDISPID(121)  public void setAddressEntry(com.wilutions.mslib.outlook.AddressEntry value) throws ComException {
+  @DeclDISPID(121)  public void setAddressEntry(final com.wilutions.mslib.outlook.AddressEntry value) throws ComException {
     this._dispatchCall(121,"AddressEntry", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(106)  public String getAutoResponse() throws ComException {
@@ -43,7 +43,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(106)  public void setAutoResponse(String value) throws ComException {
+  @DeclDISPID(106)  public void setAutoResponse(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"AutoResponse", DISPATCH_PROPERTYPUT,value);
   }
@@ -82,7 +82,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTrackingStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(118)  public void setTrackingStatus(com.wilutions.mslib.outlook.OlTrackingStatus value) throws ComException {
+  @DeclDISPID(118)  public void setTrackingStatus(final com.wilutions.mslib.outlook.OlTrackingStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(118,"TrackingStatus", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -91,7 +91,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(119)  public void setTrackingStatusTime(java.util.Date value) throws ComException {
+  @DeclDISPID(119)  public void setTrackingStatusTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(119,"TrackingStatusTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -100,14 +100,14 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(3093)  public void setType(Integer value) throws ComException {
+  @DeclDISPID(3093)  public void setType(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(3093,"Type", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(110)  public void Delete() throws ComException {
     this._dispatchCall(110,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(111)  public String FreeBusy(java.util.Date Start, Integer MinPerChar, Object CompleteFormat) throws ComException {
+  @DeclDISPID(111)  public String FreeBusy(final java.util.Date Start, final Integer MinPerChar, final Object CompleteFormat) throws ComException {
     assert(Start != null);
     assert(MinPerChar != null);
     assert(CompleteFormat != null);
@@ -131,7 +131,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64628)  public void setSendable(Boolean value) throws ComException {
+  @DeclDISPID(64628)  public void setSendable(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64628,"Sendable", DISPATCH_PROPERTYPUT,value);
   }

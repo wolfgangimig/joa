@@ -15,7 +15,7 @@ public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.TabStop2 Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.TabStop2 Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -26,7 +26,7 @@ public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.TabStop2 Add(com.wilutions.mslib.office.MsoTabStopType Type, Float Position) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.TabStop2 Add(final com.wilutions.mslib.office.MsoTabStopType Type, final Float Position) throws ComException {
     assert(Type != null);
     assert(Position != null);
     final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Type.value,Position);
@@ -43,7 +43,7 @@ public class TabStops2Impl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(4)  public void setDefaultSpacing(Float value) throws ComException {
+  @DeclDISPID(4)  public void setDefaultSpacing(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"DefaultSpacing", DISPATCH_PROPERTYPUT,value);
   }

@@ -40,7 +40,7 @@ public class _SolutionsModuleImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64442)  public void setPosition(Integer value) throws ComException {
+  @DeclDISPID(64442)  public void setPosition(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64442,"Position", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,11 +49,11 @@ public class _SolutionsModuleImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64443)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(64443)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64443,"Visible", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64574)  public void AddSolution(com.wilutions.mslib.outlook.MAPIFolder Solution, com.wilutions.mslib.outlook.OlSolutionScope Scope) throws ComException {
+  @DeclDISPID(64574)  public void AddSolution(final com.wilutions.mslib.outlook.MAPIFolder Solution, final com.wilutions.mslib.outlook.OlSolutionScope Scope) throws ComException {
     assert(Scope != null);
     this._dispatchCall(64574,"AddSolution", DISPATCH_METHOD,null,(Solution!=null?Solution:Dispatch.NULL),Scope.value);
   }

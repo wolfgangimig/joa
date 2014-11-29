@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{7EF71FCA-7055-9375-1440-55435DAE96A2}")
 public class IConferenceApplicationDataImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.IConferenceApplicationData {
-  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IConferenceApplicationProperties getApplicationProperties(String _applicationId) throws ComException {
+  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IConferenceApplicationProperties getApplicationProperties(final String _applicationId) throws ComException {
     assert(_applicationId != null);
     final Object obj = this._dispatchCall(1610743808,"ApplicationProperties", DISPATCH_PROPERTYGET,null,_applicationId);
     if (obj == null) return null;

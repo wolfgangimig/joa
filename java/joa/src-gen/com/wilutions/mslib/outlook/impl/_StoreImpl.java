@@ -82,7 +82,7 @@ public class _StoreImpl extends Dispatch implements com.wilutions.mslib.outlook.
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.PropertyAccessor.class);
   }
-  @DeclDISPID(8456)  public com.wilutions.mslib.outlook.MAPIFolder GetSpecialFolder(com.wilutions.mslib.outlook.OlSpecialFolders FolderType) throws ComException {
+  @DeclDISPID(8456)  public com.wilutions.mslib.outlook.MAPIFolder GetSpecialFolder(final com.wilutions.mslib.outlook.OlSpecialFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(8456,"GetSpecialFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;
@@ -96,7 +96,7 @@ public class _StoreImpl extends Dispatch implements com.wilutions.mslib.outlook.
   @DeclDISPID(64590)  public void RefreshQuotaDisplay() throws ComException {
     this._dispatchCall(64590,"RefreshQuotaDisplay", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64621)  public com.wilutions.mslib.outlook.MAPIFolder GetDefaultFolder(com.wilutions.mslib.outlook.OlDefaultFolders FolderType) throws ComException {
+  @DeclDISPID(64621)  public com.wilutions.mslib.outlook.MAPIFolder GetDefaultFolder(final com.wilutions.mslib.outlook.OlDefaultFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(64621,"GetDefaultFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;

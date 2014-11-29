@@ -44,7 +44,7 @@ public class OutlookBarPane extends Dispatch implements _OutlookBarPane {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(8451)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(8451)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(8451,"Visible", DISPATCH_PROPERTYPUT,value);
   }

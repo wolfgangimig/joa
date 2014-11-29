@@ -86,7 +86,7 @@ public class Store extends Dispatch implements _Store {
     final Dispatch disp = (Dispatch)obj;
     return disp.as(PropertyAccessor.class);
   }
-  @DeclDISPID(8456)  public MAPIFolder GetSpecialFolder(OlSpecialFolders FolderType) throws ComException {
+  @DeclDISPID(8456)  public MAPIFolder GetSpecialFolder(final OlSpecialFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(8456,"GetSpecialFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;
@@ -100,7 +100,7 @@ public class Store extends Dispatch implements _Store {
   @DeclDISPID(64590)  public void RefreshQuotaDisplay() throws ComException {
     this._dispatchCall(64590,"RefreshQuotaDisplay", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64621)  public MAPIFolder GetDefaultFolder(OlDefaultFolders FolderType) throws ComException {
+  @DeclDISPID(64621)  public MAPIFolder GetDefaultFolder(final OlDefaultFolders FolderType) throws ComException {
     assert(FolderType != null);
     final Object obj = this._dispatchCall(64621,"GetDefaultFolder", DISPATCH_METHOD,null,FolderType.value);
     if (obj == null) return null;

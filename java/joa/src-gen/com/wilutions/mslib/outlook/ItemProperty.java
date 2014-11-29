@@ -16,6 +16,6 @@ public interface ItemProperty extends IDispatch {
   @DeclDISPID(112)  public String getName() throws ComException;
   @DeclDISPID(109)  public OlUserPropertyType getType() throws ComException;
   @DeclDISPID(0)  public Object getValue() throws ComException;
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException;
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException;
   @DeclDISPID(64008)  public Boolean getIsUserProperty() throws ComException;
 }

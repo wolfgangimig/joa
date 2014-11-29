@@ -11,6 +11,6 @@ public interface IAccessPermission extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public AccessLevel getAccessLevel() throws ComException;
   @DeclDISPID(1610743809)  public IAccessEntry[] getAccessEntries() throws ComException;
-  @DeclDISPID(1610743810)  public Boolean TryGetValue(AccessEntryScope _scope, String _entryId, ByRef<IAccessEntry> _accessEntry) throws ComException;
-  @DeclDISPID(1610743811)  public void GetAccessEntry(AccessEntryScope _scope, String _entryId, ByRef<IAccessEntry> _accessEntry) throws ComException;
+  @DeclDISPID(1610743810)  public Boolean TryGetValue(final AccessEntryScope _scope, final String _entryId, final ByRef<IAccessEntry> _accessEntry) throws ComException;
+  @DeclDISPID(1610743811)  public void GetAccessEntry(final AccessEntryScope _scope, final String _entryId, final ByRef<IAccessEntry> _accessEntry) throws ComException;
 }

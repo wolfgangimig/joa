@@ -41,11 +41,11 @@ public class SyncImpl extends Dispatch implements com.wilutions.mslib.office.Syn
   @DeclDISPID(7)  public void PutUpdate() throws ComException {
     this._dispatchCall(7,"PutUpdate", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(8)  public void OpenVersion(com.wilutions.mslib.office.MsoSyncVersionType SyncVersionType) throws ComException {
+  @DeclDISPID(8)  public void OpenVersion(final com.wilutions.mslib.office.MsoSyncVersionType SyncVersionType) throws ComException {
     assert(SyncVersionType != null);
     this._dispatchCall(8,"OpenVersion", DISPATCH_METHOD,null,SyncVersionType.value);
   }
-  @DeclDISPID(9)  public void ResolveConflict(com.wilutions.mslib.office.MsoSyncConflictResolutionType SyncConflictResolution) throws ComException {
+  @DeclDISPID(9)  public void ResolveConflict(final com.wilutions.mslib.office.MsoSyncConflictResolutionType SyncConflictResolution) throws ComException {
     assert(SyncConflictResolution != null);
     this._dispatchCall(9,"ResolveConflict", DISPATCH_METHOD,null,SyncConflictResolution.value);
   }

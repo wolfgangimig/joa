@@ -25,13 +25,13 @@ public class ODSOFiltersImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809346)  public IDispatch Item(Integer Index) throws ComException {
+  @DeclDISPID(1610809346)  public IDispatch Item(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(1610809346,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809347)  public void Add(String Column, com.wilutions.mslib.office.MsoFilterComparison Comparison, com.wilutions.mslib.office.MsoFilterConjunction Conjunction, String bstrCompareTo, Boolean DeferUpdate) throws ComException {
+  @DeclDISPID(1610809347)  public void Add(final String Column, final com.wilutions.mslib.office.MsoFilterComparison Comparison, final com.wilutions.mslib.office.MsoFilterConjunction Conjunction, final String bstrCompareTo, final Boolean DeferUpdate) throws ComException {
     assert(Column != null);
     assert(Comparison != null);
     assert(Conjunction != null);
@@ -39,7 +39,7 @@ public class ODSOFiltersImpl extends Dispatch implements com.wilutions.mslib.off
     assert(DeferUpdate != null);
     this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,Column,Comparison.value,Conjunction.value,bstrCompareTo,DeferUpdate);
   }
-  @DeclDISPID(1610809348)  public void Delete(Integer Index, Boolean DeferUpdate) throws ComException {
+  @DeclDISPID(1610809348)  public void Delete(final Integer Index, final Boolean DeferUpdate) throws ComException {
     assert(Index != null);
     assert(DeferUpdate != null);
     this._dispatchCall(1610809348,"Delete", DISPATCH_METHOD,null,Index,DeferUpdate);

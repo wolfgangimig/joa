@@ -13,9 +13,9 @@ public interface CustomXMLPrefixMappings extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public CustomXMLPrefixMapping getItem(Object Index) throws ComException;
-  @DeclDISPID(1610809347)  public void AddNamespace(String Prefix, String NamespaceURI) throws ComException;
-  @DeclDISPID(1610809348)  public String LookupNamespace(String Prefix) throws ComException;
-  @DeclDISPID(1610809349)  public String LookupPrefix(String NamespaceURI) throws ComException;
+  @DeclDISPID(0)  public CustomXMLPrefixMapping getItem(final Object Index) throws ComException;
+  @DeclDISPID(1610809347)  public void AddNamespace(final String Prefix, final String NamespaceURI) throws ComException;
+  @DeclDISPID(1610809348)  public String LookupNamespace(final String Prefix) throws ComException;
+  @DeclDISPID(1610809349)  public String LookupPrefix(final String NamespaceURI) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
 }

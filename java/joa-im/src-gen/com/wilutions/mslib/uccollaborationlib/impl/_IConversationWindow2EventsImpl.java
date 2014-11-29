@@ -5,13 +5,13 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{6FBD233F-51F2-99FB-1DAA-4973E968482D}")
 public class _IConversationWindow2EventsImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IConversationWindow2Events {
-  @DeclDISPID(5050)  public void onOnStateChanged(com.wilutions.mslib.uccollaborationlib.IConversationWindow _eventSource, com.wilutions.mslib.uccollaborationlib.IConversationWindowStateChangedEventData _eventData) throws ComException {
+  @DeclDISPID(5050)  public void onOnStateChanged(final com.wilutions.mslib.uccollaborationlib.IConversationWindow _eventSource, final com.wilutions.mslib.uccollaborationlib.IConversationWindowStateChangedEventData _eventData) throws ComException {
     this._dispatchCall(5050,"OnStateChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(5051)  public void onOnInformationChanged(com.wilutions.mslib.uccollaborationlib.IConversationWindow _eventSource, com.wilutions.mslib.uccollaborationlib.IConversationWindowInformationChangedEventData _eventData) throws ComException {
+  @DeclDISPID(5051)  public void onOnInformationChanged(final com.wilutions.mslib.uccollaborationlib.IConversationWindow _eventSource, final com.wilutions.mslib.uccollaborationlib.IConversationWindowInformationChangedEventData _eventData) throws ComException {
     this._dispatchCall(5051,"OnInformationChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(5052)  public void onOnActionAvailabilityChanged(com.wilutions.mslib.uccollaborationlib.IConversationWindow _eventSource, com.wilutions.mslib.uccollaborationlib.IConversationWindowActionAvailabilityChangedEventData _eventData) throws ComException {
+  @DeclDISPID(5052)  public void onOnActionAvailabilityChanged(final com.wilutions.mslib.uccollaborationlib.IConversationWindow _eventSource, final com.wilutions.mslib.uccollaborationlib.IConversationWindowActionAvailabilityChangedEventData _eventData) throws ComException {
     this._dispatchCall(5052,"OnActionAvailabilityChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
   public _IConversationWindow2EventsImpl(String progId) throws ComException {

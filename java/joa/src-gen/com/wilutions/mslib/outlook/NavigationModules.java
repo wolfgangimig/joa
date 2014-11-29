@@ -34,13 +34,13 @@ public class NavigationModules extends Dispatch implements _NavigationModules {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _NavigationModule Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public _NavigationModule Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationModuleImpl.class);
   }
-  @DeclDISPID(64440)  public NavigationModule GetNavigationModule(OlNavigationModuleType ModuleType) throws ComException {
+  @DeclDISPID(64440)  public NavigationModule GetNavigationModule(final OlNavigationModuleType ModuleType) throws ComException {
     assert(ModuleType != null);
     final Object obj = this._dispatchCall(64440,"GetNavigationModule", DISPATCH_METHOD,null,ModuleType.value);
     if (obj == null) return null;

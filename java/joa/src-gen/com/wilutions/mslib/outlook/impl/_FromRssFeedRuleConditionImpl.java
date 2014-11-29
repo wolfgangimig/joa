@@ -30,7 +30,7 @@ public class _FromRssFeedRuleConditionImpl extends Dispatch implements com.wilut
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class _FromRssFeedRuleConditionImpl extends Dispatch implements com.wilut
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64295)  public void setFromRssFeed(Object value) throws ComException {
+  @DeclDISPID(64295)  public void setFromRssFeed(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64295,"FromRssFeed", DISPATCH_PROPERTYPUT,value);
   }

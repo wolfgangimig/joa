@@ -18,7 +18,7 @@ public class ContactCardImpl extends Dispatch implements com.wilutions.mslib.off
   @DeclDISPID(1)  public void Close() throws ComException {
     this._dispatchCall(1,"Close", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(2)  public void Show(com.wilutions.mslib.office.MsoContactCardStyle CardStyle, Integer RectangleLeft, Integer RectangleRight, Integer RectangleTop, Integer RectangleBottom, Integer HorizontalPosition, Boolean ShowWithDelay) throws ComException {
+  @DeclDISPID(2)  public void Show(final com.wilutions.mslib.office.MsoContactCardStyle CardStyle, final Integer RectangleLeft, final Integer RectangleRight, final Integer RectangleTop, final Integer RectangleBottom, final Integer HorizontalPosition, final Boolean ShowWithDelay) throws ComException {
     assert(CardStyle != null);
     assert(RectangleLeft != null);
     assert(RectangleRight != null);

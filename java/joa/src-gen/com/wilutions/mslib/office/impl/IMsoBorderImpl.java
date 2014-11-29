@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E7C-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoBorderImpl extends Dispatch implements com.wilutions.mslib.office.IMsoBorder {
-  @DeclDISPID(1610743808)  public void setColor(Object value) throws ComException {
+  @DeclDISPID(1610743808)  public void setColor(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"Color", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IMsoBorderImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743810)  public void setColorIndex(Object value) throws ComException {
+  @DeclDISPID(1610743810)  public void setColorIndex(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743810,"ColorIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IMsoBorderImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743812)  public void setLineStyle(Object value) throws ComException {
+  @DeclDISPID(1610743812)  public void setLineStyle(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"LineStyle", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IMsoBorderImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743814)  public void setWeight(Object value) throws ComException {
+  @DeclDISPID(1610743814)  public void setWeight(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"Weight", DISPATCH_PROPERTYPUT,value);
   }

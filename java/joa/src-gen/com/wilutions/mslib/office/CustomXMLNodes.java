@@ -13,6 +13,6 @@ public interface CustomXMLNodes extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public CustomXMLNode getItem(Integer Index) throws ComException;
+  @DeclDISPID(0)  public CustomXMLNode getItem(final Integer Index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
 }

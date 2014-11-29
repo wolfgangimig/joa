@@ -11,5 +11,5 @@ public interface IPhone extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IContactEndpoint getEndpoint() throws ComException;
   @DeclDISPID(1610743809)  public Boolean getPublished() throws ComException;
-  @DeclDISPID(1610743809)  public void setPublished(Boolean value) throws ComException;
+  @DeclDISPID(1610743809)  public void setPublished(final Boolean value) throws ComException;
 }

@@ -20,12 +20,12 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809345)  public void Move(Integer xLeft, Integer yTop) throws ComException {
+  @DeclDISPID(1610809345)  public void Move(final Integer xLeft, final Integer yTop) throws ComException {
     assert(xLeft != null);
     assert(yTop != null);
     this._dispatchCall(1610809345,"Move", DISPATCH_METHOD,null,xLeft,yTop);
   }
-  @DeclDISPID(1610809346)  public void setTop(Integer value) throws ComException {
+  @DeclDISPID(1610809346)  public void setTop(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809346,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809348)  public void setLeft(Integer value) throws ComException {
+  @DeclDISPID(1610809348)  public void setLeft(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809348,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -46,7 +46,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
   @DeclDISPID(1610809350)  public void Help() throws ComException {
     this._dispatchCall(1610809350,"Help", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610809351)  public Integer StartWizard(Boolean On, String Callback, Integer PrivateX, Object Animation, Object CustomTeaser, Object Top, Object Left, Object Bottom, Object Right) throws ComException {
+  @DeclDISPID(1610809351)  public Integer StartWizard(final Boolean On, final String Callback, final Integer PrivateX, final Object Animation, final Object CustomTeaser, final Object Top, final Object Left, final Object Bottom, final Object Right) throws ComException {
     assert(On != null);
     assert(Callback != null);
     assert(PrivateX != null);
@@ -60,13 +60,13 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809352)  public void EndWizard(Integer WizardID, Boolean varfSuccess, Object Animation) throws ComException {
+  @DeclDISPID(1610809352)  public void EndWizard(final Integer WizardID, final Boolean varfSuccess, final Object Animation) throws ComException {
     assert(WizardID != null);
     assert(varfSuccess != null);
     assert(Animation != null);
     this._dispatchCall(1610809352,"EndWizard", DISPATCH_METHOD,null,WizardID,varfSuccess,Animation);
   }
-  @DeclDISPID(1610809353)  public void ActivateWizard(Integer WizardID, com.wilutions.mslib.office.MsoWizardActType act, Object Animation) throws ComException {
+  @DeclDISPID(1610809353)  public void ActivateWizard(final Integer WizardID, final com.wilutions.mslib.office.MsoWizardActType act, final Object Animation) throws ComException {
     assert(WizardID != null);
     assert(act != null);
     assert(Animation != null);
@@ -90,7 +90,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809357)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(1610809357)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809357,"Visible", DISPATCH_PROPERTYPUT,value);
   }
@@ -99,7 +99,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoAnimationType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809359)  public void setAnimation(com.wilutions.mslib.office.MsoAnimationType value) throws ComException {
+  @DeclDISPID(1610809359)  public void setAnimation(final com.wilutions.mslib.office.MsoAnimationType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809359,"Animation", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -108,11 +108,11 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809361)  public void setReduced(Boolean value) throws ComException {
+  @DeclDISPID(1610809361)  public void setReduced(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809361,"Reduced", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610809363)  public void setAssistWithHelp(Boolean value) throws ComException {
+  @DeclDISPID(1610809363)  public void setAssistWithHelp(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809363,"AssistWithHelp", DISPATCH_PROPERTYPUT,value);
   }
@@ -121,7 +121,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809365)  public void setAssistWithWizards(Boolean value) throws ComException {
+  @DeclDISPID(1610809365)  public void setAssistWithWizards(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809365,"AssistWithWizards", DISPATCH_PROPERTYPUT,value);
   }
@@ -130,7 +130,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809367)  public void setAssistWithAlerts(Boolean value) throws ComException {
+  @DeclDISPID(1610809367)  public void setAssistWithAlerts(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809367,"AssistWithAlerts", DISPATCH_PROPERTYPUT,value);
   }
@@ -139,7 +139,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809369)  public void setMoveWhenInTheWay(Boolean value) throws ComException {
+  @DeclDISPID(1610809369)  public void setMoveWhenInTheWay(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809369,"MoveWhenInTheWay", DISPATCH_PROPERTYPUT,value);
   }
@@ -148,7 +148,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809371)  public void setSounds(Boolean value) throws ComException {
+  @DeclDISPID(1610809371)  public void setSounds(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809371,"Sounds", DISPATCH_PROPERTYPUT,value);
   }
@@ -157,7 +157,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809373)  public void setFeatureTips(Boolean value) throws ComException {
+  @DeclDISPID(1610809373)  public void setFeatureTips(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809373,"FeatureTips", DISPATCH_PROPERTYPUT,value);
   }
@@ -166,7 +166,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809375)  public void setMouseTips(Boolean value) throws ComException {
+  @DeclDISPID(1610809375)  public void setMouseTips(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809375,"MouseTips", DISPATCH_PROPERTYPUT,value);
   }
@@ -175,7 +175,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809377)  public void setKeyboardShortcutTips(Boolean value) throws ComException {
+  @DeclDISPID(1610809377)  public void setKeyboardShortcutTips(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809377,"KeyboardShortcutTips", DISPATCH_PROPERTYPUT,value);
   }
@@ -184,7 +184,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809379)  public void setHighPriorityTips(Boolean value) throws ComException {
+  @DeclDISPID(1610809379)  public void setHighPriorityTips(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809379,"HighPriorityTips", DISPATCH_PROPERTYPUT,value);
   }
@@ -193,7 +193,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809381)  public void setTipOfDay(Boolean value) throws ComException {
+  @DeclDISPID(1610809381)  public void setTipOfDay(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809381,"TipOfDay", DISPATCH_PROPERTYPUT,value);
   }
@@ -202,7 +202,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809383)  public void setGuessHelp(Boolean value) throws ComException {
+  @DeclDISPID(1610809383)  public void setGuessHelp(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809383,"GuessHelp", DISPATCH_PROPERTYPUT,value);
   }
@@ -211,7 +211,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809385)  public void setSearchWhenProgramming(Boolean value) throws ComException {
+  @DeclDISPID(1610809385)  public void setSearchWhenProgramming(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809385,"SearchWhenProgramming", DISPATCH_PROPERTYPUT,value);
   }
@@ -230,7 +230,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809388)  public void setFileName(String value) throws ComException {
+  @DeclDISPID(1610809388)  public void setFileName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809388,"FileName", DISPATCH_PROPERTYPUT,value);
   }
@@ -244,11 +244,11 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809391)  public void setOn(Boolean value) throws ComException {
+  @DeclDISPID(1610809391)  public void setOn(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809391,"On", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610809393)  public Integer DoAlert(String bstrAlertTitle, String bstrAlertText, com.wilutions.mslib.office.MsoAlertButtonType alb, com.wilutions.mslib.office.MsoAlertIconType alc, com.wilutions.mslib.office.MsoAlertDefaultType ald, com.wilutions.mslib.office.MsoAlertCancelType alq, Boolean varfSysAlert) throws ComException {
+  @DeclDISPID(1610809393)  public Integer DoAlert(final String bstrAlertTitle, final String bstrAlertText, final com.wilutions.mslib.office.MsoAlertButtonType alb, final com.wilutions.mslib.office.MsoAlertIconType alc, final com.wilutions.mslib.office.MsoAlertDefaultType ald, final com.wilutions.mslib.office.MsoAlertCancelType alq, final Boolean varfSysAlert) throws ComException {
     assert(bstrAlertTitle != null);
     assert(bstrAlertText != null);
     assert(alb != null);

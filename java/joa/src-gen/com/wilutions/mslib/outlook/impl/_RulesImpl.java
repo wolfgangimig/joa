@@ -30,13 +30,13 @@ public class _RulesImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._Rule Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._Rule Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._RuleImpl.class);
   }
-  @DeclDISPID(64266)  public com.wilutions.mslib.outlook.Rule Create(String Name, com.wilutions.mslib.outlook.OlRuleType RuleType) throws ComException {
+  @DeclDISPID(64266)  public com.wilutions.mslib.outlook.Rule Create(final String Name, final com.wilutions.mslib.outlook.OlRuleType RuleType) throws ComException {
     assert(Name != null);
     assert(RuleType != null);
     final Object obj = this._dispatchCall(64266,"Create", DISPATCH_METHOD,null,Name,RuleType.value);
@@ -44,11 +44,11 @@ public class _RulesImpl extends Dispatch implements com.wilutions.mslib.outlook.
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Rule.class);
   }
-  @DeclDISPID(61512)  public void Save(Object ShowProgress) throws ComException {
+  @DeclDISPID(61512)  public void Save(final Object ShowProgress) throws ComException {
     assert(ShowProgress != null);
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null,ShowProgress);
   }
-  @DeclDISPID(82)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }
@@ -57,7 +57,7 @@ public class _RulesImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64533)  public void setIsRssRulesProcessingEnabled(Boolean value) throws ComException {
+  @DeclDISPID(64533)  public void setIsRssRulesProcessingEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64533,"IsRssRulesProcessingEnabled", DISPATCH_PROPERTYPUT,value);
   }

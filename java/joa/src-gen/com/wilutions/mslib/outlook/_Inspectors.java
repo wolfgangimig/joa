@@ -14,6 +14,6 @@ public interface _Inspectors extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Inspector Item(Object Index) throws ComException;
-  @DeclDISPID(95)  public _Inspector Add(IDispatch Item) throws ComException;
+  @DeclDISPID(81)  public Inspector Item(final Object Index) throws ComException;
+  @DeclDISPID(95)  public _Inspector Add(final IDispatch Item) throws ComException;
 }

@@ -20,12 +20,12 @@ public class IConversationWindow2Impl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationWindowActionsImpl.class);
   }
-  @DeclDISPID(268435460)  public void SetPreferredAnnotationTool(com.wilutions.mslib.uccollaborationlib.AnnotationTool _annotationTool, Integer _annotationColor) throws ComException {
+  @DeclDISPID(268435460)  public void SetPreferredAnnotationTool(final com.wilutions.mslib.uccollaborationlib.AnnotationTool _annotationTool, final Integer _annotationColor) throws ComException {
     assert(_annotationTool != null);
     assert(_annotationColor != null);
     this._dispatchCall(268435460,"SetPreferredAnnotationTool", DISPATCH_METHOD,null,_annotationTool.value,_annotationColor);
   }
-  @DeclDISPID(268435462)  public void ShowFullScreen(Integer _monitorId) throws ComException {
+  @DeclDISPID(268435462)  public void ShowFullScreen(final Integer _monitorId) throws ComException {
     assert(_monitorId != null);
     this._dispatchCall(268435462,"ShowFullScreen", DISPATCH_METHOD,null,_monitorId);
   }
@@ -43,7 +43,7 @@ public class IConversationWindow2Impl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IVideoViewImpl.class);
   }
-  @DeclDISPID(268435467)  public Boolean CanInvoke(com.wilutions.mslib.uccollaborationlib.ConversationWindowAction _action) throws ComException {
+  @DeclDISPID(268435467)  public Boolean CanInvoke(final com.wilutions.mslib.uccollaborationlib.ConversationWindowAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(268435467,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;

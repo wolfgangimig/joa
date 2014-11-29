@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{5512D114-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLReset extends Dispatch implements IWHTMLReset {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(602)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(602)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(602,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class HTMLReset extends Dispatch implements IWHTMLReset {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }

@@ -14,8 +14,8 @@ public interface IConversationHistory extends IDispatch {
   @DeclDISPID(1610743810)  public String[] getCurrentHistory() throws ComException;
   @DeclDISPID(1610743811)  public Object[] getAllHistory() throws ComException;
   @DeclDISPID(1610743812)  public Object[] getPastHistory() throws ComException;
-  @DeclDISPID(1610743813)  public IAsynchronousOperation RetrievePastHistory(Object _conversationHistoryCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743814)  public IAsynchronousOperation RetrievePastHistoryByEntryId(String _entryId, Object _conversationHistoryCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743815)  public IAsynchronousOperation SaveAllHistory(Object _conversationHistoryCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743816)  public Boolean CanInvoke(ConversationHistoryAction _action) throws ComException;
+  @DeclDISPID(1610743813)  public IAsynchronousOperation RetrievePastHistory(final Object _conversationHistoryCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743814)  public IAsynchronousOperation RetrievePastHistoryByEntryId(final String _entryId, final Object _conversationHistoryCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743815)  public IAsynchronousOperation SaveAllHistory(final Object _conversationHistoryCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743816)  public Boolean CanInvoke(final ConversationHistoryAction _action) throws ComException;
 }

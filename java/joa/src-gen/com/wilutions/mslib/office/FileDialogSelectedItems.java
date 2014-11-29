@@ -14,5 +14,5 @@ public interface FileDialogSelectedItems extends IDispatch {
   @DeclDISPID(1610809344)  public IDispatch getParent() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610809346)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public String Item(Integer Index) throws ComException;
+  @DeclDISPID(0)  public String Item(final Integer Index) throws ComException;
 }

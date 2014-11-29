@@ -10,7 +10,7 @@ public class _OlkPageControlImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlPageType.valueOf((Integer)obj);
   }
-  @DeclDISPID(64465)  public void setPage(com.wilutions.mslib.outlook.OlPageType value) throws ComException {
+  @DeclDISPID(64465)  public void setPage(final com.wilutions.mslib.outlook.OlPageType value) throws ComException {
     assert(value != null);
     this._dispatchCall(64465,"Page", DISPATCH_PROPERTYPUT,value.value);
   }

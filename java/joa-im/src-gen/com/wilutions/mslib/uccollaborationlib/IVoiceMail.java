@@ -17,5 +17,5 @@ public interface IVoiceMail extends IDispatch {
   @DeclDISPID(1610743813)  public INamedPropertyList getProperties() throws ComException;
   @DeclDISPID(1610743814)  public Boolean getIsRead() throws ComException;
   @DeclDISPID(1610743815)  public IConversation CallVoiceMail() throws ComException;
-  @DeclDISPID(1610743816)  public IAsynchronousOperation Delete(Object _callback, Object _state) throws ComException;
+  @DeclDISPID(1610743816)  public IAsynchronousOperation Delete(final Object _callback, final Object _state) throws ComException;
 }

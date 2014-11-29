@@ -39,7 +39,7 @@ public class NavigationFolder extends Dispatch implements _NavigationFolder {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64453)  public void setIsSelected(Boolean value) throws ComException {
+  @DeclDISPID(64453)  public void setIsSelected(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64453,"IsSelected", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class NavigationFolder extends Dispatch implements _NavigationFolder {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64454)  public void setIsSideBySide(Boolean value) throws ComException {
+  @DeclDISPID(64454)  public void setIsSideBySide(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64454,"IsSideBySide", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class NavigationFolder extends Dispatch implements _NavigationFolder {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64455)  public void setPosition(Integer value) throws ComException {
+  @DeclDISPID(64455)  public void setPosition(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64455,"Position", DISPATCH_PROPERTYPUT,value);
   }

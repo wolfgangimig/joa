@@ -14,6 +14,6 @@ public interface _Explorers extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Explorer Item(Object Index) throws ComException;
-  @DeclDISPID(95)  public _Explorer Add(Object Folder, OlFolderDisplayMode DisplayMode) throws ComException;
+  @DeclDISPID(81)  public Explorer Item(final Object Index) throws ComException;
+  @DeclDISPID(95)  public _Explorer Add(final Object Folder, final OlFolderDisplayMode DisplayMode) throws ComException;
 }

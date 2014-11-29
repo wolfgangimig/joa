@@ -30,13 +30,13 @@ public class _CategoriesImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._Category Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._Category Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._CategoryImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.Category Add(String Name, Object Color, Object ShortcutKey) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.Category Add(final String Name, final Object Color, final Object ShortcutKey) throws ComException {
     assert(Name != null);
     assert(Color != null);
     assert(ShortcutKey != null);
@@ -45,7 +45,7 @@ public class _CategoriesImpl extends Dispatch implements com.wilutions.mslib.out
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Category.class);
   }
-  @DeclDISPID(82)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }

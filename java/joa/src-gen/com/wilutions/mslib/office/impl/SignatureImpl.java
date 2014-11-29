@@ -28,7 +28,7 @@ public class SignatureImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809356)  public void Sign(Object varSigImg, Object varDelSuggSigner, Object varDelSuggSignerLine2, Object varDelSuggSignerEmail) throws ComException {
+  @DeclDISPID(1610809356)  public void Sign(final Object varSigImg, final Object varDelSuggSigner, final Object varDelSuggSignerLine2, final Object varDelSuggSignerEmail) throws ComException {
     assert(varSigImg != null);
     assert(varDelSuggSigner != null);
     assert(varDelSuggSignerLine2 != null);

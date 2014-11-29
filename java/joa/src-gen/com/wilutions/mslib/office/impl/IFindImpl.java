@@ -115,98 +115,98 @@ public class IFindImpl extends Dispatch implements com.wilutions.mslib.office.IF
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public void setSearchPath(String value) throws ComException {
+  @DeclDISPID(0)  public void setSearchPath(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"SearchPath", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743809)  public void setName(String value) throws ComException {
+  @DeclDISPID(1610743809)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743809,"Name", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743810)  public void setSubDir(Boolean value) throws ComException {
+  @DeclDISPID(1610743810)  public void setSubDir(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743810,"SubDir", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743811)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(1610743811)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743811,"Title", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743812)  public void setAuthor(String value) throws ComException {
+  @DeclDISPID(1610743812)  public void setAuthor(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"Author", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743813)  public void setKeywords(String value) throws ComException {
+  @DeclDISPID(1610743813)  public void setKeywords(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743813,"Keywords", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743814)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(1610743814)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"Subject", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743815)  public void setOptions(com.wilutions.mslib.office.MsoFileFindOptions value) throws ComException {
+  @DeclDISPID(1610743815)  public void setOptions(final com.wilutions.mslib.office.MsoFileFindOptions value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743815,"Options", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(1610743816)  public void setMatchCase(Boolean value) throws ComException {
+  @DeclDISPID(1610743816)  public void setMatchCase(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"MatchCase", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743817)  public void setText(String value) throws ComException {
+  @DeclDISPID(1610743817)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743817,"Text", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743818)  public void setPatternMatch(Boolean value) throws ComException {
+  @DeclDISPID(1610743818)  public void setPatternMatch(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743818,"PatternMatch", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743819)  public void setDateSavedFrom(Object value) throws ComException {
+  @DeclDISPID(1610743819)  public void setDateSavedFrom(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743819,"DateSavedFrom", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743820)  public void setDateSavedTo(Object value) throws ComException {
+  @DeclDISPID(1610743820)  public void setDateSavedTo(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743820,"DateSavedTo", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743821)  public void setSavedBy(String value) throws ComException {
+  @DeclDISPID(1610743821)  public void setSavedBy(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743821,"SavedBy", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743822)  public void setDateCreatedFrom(Object value) throws ComException {
+  @DeclDISPID(1610743822)  public void setDateCreatedFrom(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743822,"DateCreatedFrom", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743823)  public void setDateCreatedTo(Object value) throws ComException {
+  @DeclDISPID(1610743823)  public void setDateCreatedTo(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743823,"DateCreatedTo", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743824)  public void setView(com.wilutions.mslib.office.MsoFileFindView value) throws ComException {
+  @DeclDISPID(1610743824)  public void setView(final com.wilutions.mslib.office.MsoFileFindView value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743824,"View", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(1610743825)  public void setSortBy(com.wilutions.mslib.office.MsoFileFindSortBy value) throws ComException {
+  @DeclDISPID(1610743825)  public void setSortBy(final com.wilutions.mslib.office.MsoFileFindSortBy value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743825,"SortBy", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(1610743826)  public void setListBy(com.wilutions.mslib.office.MsoFileFindListBy value) throws ComException {
+  @DeclDISPID(1610743826)  public void setListBy(final com.wilutions.mslib.office.MsoFileFindListBy value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743826,"ListBy", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(1610743827)  public void setSelectedFile(Integer value) throws ComException {
+  @DeclDISPID(1610743827)  public void setSelectedFile(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743827,"SelectedFile", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(1610743850)  public void Execute() throws ComException {
     this._dispatchCall(1610743850,"Execute", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743851)  public void Load(String bstrQueryName) throws ComException {
+  @DeclDISPID(1610743851)  public void Load(final String bstrQueryName) throws ComException {
     assert(bstrQueryName != null);
     this._dispatchCall(1610743851,"Load", DISPATCH_METHOD,null,bstrQueryName);
   }
-  @DeclDISPID(1610743852)  public void Save(String bstrQueryName) throws ComException {
+  @DeclDISPID(1610743852)  public void Save(final String bstrQueryName) throws ComException {
     assert(bstrQueryName != null);
     this._dispatchCall(1610743852,"Save", DISPATCH_METHOD,null,bstrQueryName);
   }
-  @DeclDISPID(1610743853)  public void Delete(String bstrQueryName) throws ComException {
+  @DeclDISPID(1610743853)  public void Delete(final String bstrQueryName) throws ComException {
     assert(bstrQueryName != null);
     this._dispatchCall(1610743853,"Delete", DISPATCH_METHOD,null,bstrQueryName);
   }
@@ -215,7 +215,7 @@ public class IFindImpl extends Dispatch implements com.wilutions.mslib.office.IF
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743854)  public void setFileType(Integer value) throws ComException {
+  @DeclDISPID(1610743854)  public void setFileType(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743854,"FileType", DISPATCH_PROPERTYPUT,value);
   }

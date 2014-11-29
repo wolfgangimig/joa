@@ -34,7 +34,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(36865)  public void setCategories(String value) throws ComException {
+  @DeclDISPID(36865)  public void setCategories(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(36865,"Categories", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(35587)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(35587)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(35587,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -81,7 +81,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(35588)  public void setLeft(Integer value) throws ComException {
+  @DeclDISPID(35588)  public void setLeft(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(35588,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -90,7 +90,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -114,7 +114,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(35589)  public void setTop(Integer value) throws ComException {
+  @DeclDISPID(35589)  public void setTop(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(35589,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -123,11 +123,11 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(35586)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(35586)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(35586,"Width", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(61475)  public void Close(OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(61475)  public void Close(final OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
@@ -139,11 +139,11 @@ public class NoteItem extends Dispatch implements _NoteItem {
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61606)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public IDispatch Move(MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(final MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
     return (IDispatch)obj;
@@ -154,7 +154,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
   @DeclDISPID(61512)  public void Save() throws ComException {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException {
+  @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
     this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
@@ -174,7 +174,7 @@ public class NoteItem extends Dispatch implements _NoteItem {
     if (obj == null) return null;
     return OlRemoteStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(34161)  public void setMarkForDownload(OlRemoteStatus value) throws ComException {
+  @DeclDISPID(34161)  public void setMarkForDownload(final OlRemoteStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYPUT,value.value);
   }

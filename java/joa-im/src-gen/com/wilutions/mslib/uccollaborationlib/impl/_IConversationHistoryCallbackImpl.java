@@ -5,13 +5,13 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{9F3EB7CC-CA0D-91C3-12A3-79984F025BA7}")
 public class _IConversationHistoryCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IConversationHistoryCallback {
-  @DeclDISPID(1091)  public void OnSaveAllHistory(com.wilutions.mslib.uccollaborationlib.IConversationHistory _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1091)  public void OnSaveAllHistory(final com.wilutions.mslib.uccollaborationlib.IConversationHistory _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(1091,"OnSaveAllHistory", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(1092)  public void OnRetrievePastHistory(com.wilutions.mslib.uccollaborationlib.IConversationHistory _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1092)  public void OnRetrievePastHistory(final com.wilutions.mslib.uccollaborationlib.IConversationHistory _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(1092,"OnRetrievePastHistory", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(1093)  public void OnRetrievePastHistoryByEntryId(com.wilutions.mslib.uccollaborationlib.IConversationHistory _source, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(1093)  public void OnRetrievePastHistoryByEntryId(final com.wilutions.mslib.uccollaborationlib.IConversationHistory _source, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(1093,"OnRetrievePastHistoryByEntryId", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IConversationHistoryCallbackImpl(String progId) throws ComException {

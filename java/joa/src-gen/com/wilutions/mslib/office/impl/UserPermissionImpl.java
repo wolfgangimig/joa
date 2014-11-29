@@ -25,7 +25,7 @@ public class UserPermissionImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public void setPermission(Integer value) throws ComException {
+  @DeclDISPID(1)  public void setPermission(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Permission", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class UserPermissionImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(2)  public void setExpirationDate(Object value) throws ComException {
+  @DeclDISPID(2)  public void setExpirationDate(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"ExpirationDate", DISPATCH_PROPERTYPUT,value);
   }

@@ -30,7 +30,7 @@ public class AttachmentImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setDisplayName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setDisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"DisplayName", DISPATCH_PROPERTYPUT,value);
   }
@@ -54,7 +54,7 @@ public class AttachmentImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(114)  public void setPosition(Integer value) throws ComException {
+  @DeclDISPID(114)  public void setPosition(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(114,"Position", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class AttachmentImpl extends Dispatch implements com.wilutions.mslib.outl
   @DeclDISPID(105)  public void Delete() throws ComException {
     this._dispatchCall(105,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(104)  public void SaveAsFile(String Path) throws ComException {
+  @DeclDISPID(104)  public void SaveAsFile(final String Path) throws ComException {
     assert(Path != null);
     this._dispatchCall(104,"SaveAsFile", DISPATCH_METHOD,null,Path);
   }

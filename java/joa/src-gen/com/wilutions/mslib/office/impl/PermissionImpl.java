@@ -15,7 +15,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.UserPermission getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.UserPermission getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,11 +31,11 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2)  public void setEnableTrustedBrowser(Boolean value) throws ComException {
+  @DeclDISPID(2)  public void setEnableTrustedBrowser(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"EnableTrustedBrowser", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(3)  public com.wilutions.mslib.office.UserPermission Add(String UserId, Object Permission, Object ExpirationDate) throws ComException {
+  @DeclDISPID(3)  public com.wilutions.mslib.office.UserPermission Add(final String UserId, final Object Permission, final Object ExpirationDate) throws ComException {
     assert(UserId != null);
     assert(Permission != null);
     assert(ExpirationDate != null);
@@ -43,7 +43,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.UserPermissionImpl.class);
   }
-  @DeclDISPID(4)  public void ApplyPolicy(String FileName) throws ComException {
+  @DeclDISPID(4)  public void ApplyPolicy(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(4,"ApplyPolicy", DISPATCH_METHOD,null,FileName);
   }
@@ -60,7 +60,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(7)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(7)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8)  public void setRequestPermissionURL(String value) throws ComException {
+  @DeclDISPID(8)  public void setRequestPermissionURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"RequestPermissionURL", DISPATCH_PROPERTYPUT,value);
   }
@@ -88,7 +88,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(11)  public void setStoreLicenses(Boolean value) throws ComException {
+  @DeclDISPID(11)  public void setStoreLicenses(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"StoreLicenses", DISPATCH_PROPERTYPUT,value);
   }
@@ -97,7 +97,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12)  public void setDocumentAuthor(String value) throws ComException {
+  @DeclDISPID(12)  public void setDocumentAuthor(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"DocumentAuthor", DISPATCH_PROPERTYPUT,value);
   }

@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface IRoomCollection extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public IRoom getItem(Integer _index) throws ComException;
+  @DeclDISPID(0)  public IRoom getItem(final Integer _index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(1610743811)  public Integer IndexOf(IRoom _room) throws ComException;
+  @DeclDISPID(1610743811)  public Integer IndexOf(final IRoom _room) throws ComException;
 }

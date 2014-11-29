@@ -30,7 +30,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743812)  public void setNumberFormat(String value) throws ComException {
+  @DeclDISPID(1610743812)  public void setNumberFormat(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"NumberFormat", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743814)  public void setNumberFormatLinked(Boolean value) throws ComException {
+  @DeclDISPID(1610743814)  public void setNumberFormatLinked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"NumberFormatLinked", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743816)  public void setNumberFormatLocal(Object value) throws ComException {
+  @DeclDISPID(1610743816)  public void setNumberFormatLocal(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"NumberFormatLocal", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTickLabelOrientation.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743818)  public void setOrientation(com.wilutions.mslib.office.XlTickLabelOrientation value) throws ComException {
+  @DeclDISPID(1610743818)  public void setOrientation(final com.wilutions.mslib.office.XlTickLabelOrientation value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743818,"Orientation", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -71,7 +71,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743821)  public void setReadingOrder(Integer value) throws ComException {
+  @DeclDISPID(1610743821)  public void setReadingOrder(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743821,"ReadingOrder", DISPATCH_PROPERTYPUT,value);
   }
@@ -80,7 +80,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743823)  public void setAutoScaleFont(Object value) throws ComException {
+  @DeclDISPID(1610743823)  public void setAutoScaleFont(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743823,"AutoScaleFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -94,7 +94,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743826)  public void setOffset(Integer value) throws ComException {
+  @DeclDISPID(1610743826)  public void setOffset(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743826,"Offset", DISPATCH_PROPERTYPUT,value);
   }
@@ -103,7 +103,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743828)  public void setAlignment(Integer value) throws ComException {
+  @DeclDISPID(1610743828)  public void setAlignment(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743828,"Alignment", DISPATCH_PROPERTYPUT,value);
   }
@@ -112,7 +112,7 @@ public class IMsoTickLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743830)  public void setMultiLevel(Boolean value) throws ComException {
+  @DeclDISPID(1610743830)  public void setMultiLevel(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743830,"MultiLevel", DISPATCH_PROPERTYPUT,value);
   }

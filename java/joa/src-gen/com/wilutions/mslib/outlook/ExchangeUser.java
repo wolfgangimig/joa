@@ -34,7 +34,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12291)  public void setAddress(String value) throws ComException {
+  @DeclDISPID(12291)  public void setAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12291,"Address", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,18 +62,18 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12290)  public void setType(String value) throws ComException {
+  @DeclDISPID(12290)  public void setType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12290,"Type", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(770)  public void Delete() throws ComException {
     this._dispatchCall(770,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(769)  public void Details(Object HWnd) throws ComException {
+  @DeclDISPID(769)  public void Details(final Object HWnd) throws ComException {
     assert(HWnd != null);
     this._dispatchCall(769,"Details", DISPATCH_METHOD,null,HWnd);
   }
-  @DeclDISPID(774)  public String GetFreeBusy(java.util.Date Start, Integer MinPerChar, Object CompleteFormat) throws ComException {
+  @DeclDISPID(774)  public String GetFreeBusy(final java.util.Date Start, final Integer MinPerChar, final Object CompleteFormat) throws ComException {
     assert(Start != null);
     assert(MinPerChar != null);
     assert(CompleteFormat != null);
@@ -81,7 +81,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(768)  public void Update(Object MakePermanent, Object Refresh) throws ComException {
+  @DeclDISPID(768)  public void Update(final Object MakePermanent, final Object Refresh) throws ComException {
     assert(MakePermanent != null);
     assert(Refresh != null);
     this._dispatchCall(768,"Update", DISPATCH_METHOD,null,MakePermanent,Refresh);
@@ -134,7 +134,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14896)  public void setAssistantName(String value) throws ComException {
+  @DeclDISPID(14896)  public void setAssistantName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14896,"AssistantName", DISPATCH_PROPERTYPUT,value);
   }
@@ -143,7 +143,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14856)  public void setBusinessTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14856)  public void setBusinessTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14856,"BusinessTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -152,7 +152,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14887)  public void setCity(String value) throws ComException {
+  @DeclDISPID(14887)  public void setCity(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14887,"City", DISPATCH_PROPERTYPUT,value);
   }
@@ -161,7 +161,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12292)  public void setComments(String value) throws ComException {
+  @DeclDISPID(12292)  public void setComments(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12292,"Comments", DISPATCH_PROPERTYPUT,value);
   }
@@ -170,7 +170,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14870)  public void setCompanyName(String value) throws ComException {
+  @DeclDISPID(14870)  public void setCompanyName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14870,"CompanyName", DISPATCH_PROPERTYPUT,value);
   }
@@ -179,7 +179,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14872)  public void setDepartment(String value) throws ComException {
+  @DeclDISPID(14872)  public void setDepartment(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14872,"Department", DISPATCH_PROPERTYPUT,value);
   }
@@ -188,7 +188,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14854)  public void setFirstName(String value) throws ComException {
+  @DeclDISPID(14854)  public void setFirstName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14854,"FirstName", DISPATCH_PROPERTYPUT,value);
   }
@@ -197,7 +197,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14871)  public void setJobTitle(String value) throws ComException {
+  @DeclDISPID(14871)  public void setJobTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14871,"JobTitle", DISPATCH_PROPERTYPUT,value);
   }
@@ -206,7 +206,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14865)  public void setLastName(String value) throws ComException {
+  @DeclDISPID(14865)  public void setLastName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14865,"LastName", DISPATCH_PROPERTYPUT,value);
   }
@@ -215,7 +215,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14876)  public void setMobileTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14876)  public void setMobileTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14876,"MobileTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -224,7 +224,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14873)  public void setOfficeLocation(String value) throws ComException {
+  @DeclDISPID(14873)  public void setOfficeLocation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14873,"OfficeLocation", DISPATCH_PROPERTYPUT,value);
   }
@@ -233,7 +233,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14890)  public void setPostalCode(String value) throws ComException {
+  @DeclDISPID(14890)  public void setPostalCode(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14890,"PostalCode", DISPATCH_PROPERTYPUT,value);
   }
@@ -247,7 +247,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14888)  public void setStateOrProvince(String value) throws ComException {
+  @DeclDISPID(14888)  public void setStateOrProvince(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14888,"StateOrProvince", DISPATCH_PROPERTYPUT,value);
   }
@@ -256,7 +256,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14889)  public void setStreetAddress(String value) throws ComException {
+  @DeclDISPID(14889)  public void setStreetAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14889,"StreetAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -271,7 +271,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32814)  public void setYomiCompanyName(String value) throws ComException {
+  @DeclDISPID(32814)  public void setYomiCompanyName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32814,"YomiCompanyName", DISPATCH_PROPERTYPUT,value);
   }
@@ -280,7 +280,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32812)  public void setYomiFirstName(String value) throws ComException {
+  @DeclDISPID(32812)  public void setYomiFirstName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32812,"YomiFirstName", DISPATCH_PROPERTYPUT,value);
   }
@@ -289,7 +289,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32813)  public void setYomiLastName(String value) throws ComException {
+  @DeclDISPID(32813)  public void setYomiLastName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32813,"YomiLastName", DISPATCH_PROPERTYPUT,value);
   }
@@ -298,7 +298,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64487)  public void setYomiDisplayName(String value) throws ComException {
+  @DeclDISPID(64487)  public void setYomiDisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64487,"YomiDisplayName", DISPATCH_PROPERTYPUT,value);
   }
@@ -307,7 +307,7 @@ public class ExchangeUser extends Dispatch implements _ExchangeUser {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64488)  public void setYomiDepartment(String value) throws ComException {
+  @DeclDISPID(64488)  public void setYomiDepartment(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64488,"YomiDepartment", DISPATCH_PROPERTYPUT,value);
   }

@@ -25,7 +25,7 @@ public class ODSOColumnsImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809346)  public IDispatch Item(Object varIndex) throws ComException {
+  @DeclDISPID(1610809346)  public IDispatch Item(final Object varIndex) throws ComException {
     assert(varIndex != null);
     final Object obj = this._dispatchCall(1610809346,"Item", DISPATCH_METHOD,null,varIndex);
     if (obj == null) return null;

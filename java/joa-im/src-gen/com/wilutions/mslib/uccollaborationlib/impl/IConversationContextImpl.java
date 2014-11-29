@@ -25,7 +25,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743811)  public void setIsRequired(Boolean value) throws ComException {
+  @DeclDISPID(1610743811)  public void setIsRequired(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743811,"IsRequired", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantInfoImpl.class);
   }
-  @DeclDISPID(1610743813)  public void setFrom(com.wilutions.mslib.uccollaborationlib.IParticipantInfo value) throws ComException {
+  @DeclDISPID(1610743813)  public void setFrom(final com.wilutions.mslib.uccollaborationlib.IParticipantInfo value) throws ComException {
     this._dispatchCall(1610743813,"From", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IParticipantInfo getTo() throws ComException {
@@ -42,7 +42,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantInfoImpl.class);
   }
-  @DeclDISPID(1610743815)  public void setTo(com.wilutions.mslib.uccollaborationlib.IParticipantInfo value) throws ComException {
+  @DeclDISPID(1610743815)  public void setTo(final com.wilutions.mslib.uccollaborationlib.IParticipantInfo value) throws ComException {
     this._dispatchCall(1610743815,"To", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610743817)  public String getConversationId() throws ComException {
@@ -50,7 +50,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743817)  public void setConversationId(String value) throws ComException {
+  @DeclDISPID(1610743817)  public void setConversationId(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743817,"ConversationId", DISPATCH_PROPERTYPUT,value);
   }
@@ -59,7 +59,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743819)  public void setDate(String value) throws ComException {
+  @DeclDISPID(1610743819)  public void setDate(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743819,"Date", DISPATCH_PROPERTYPUT,value);
   }
@@ -68,7 +68,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IParticipantInfo[])obj;
   }
-  @DeclDISPID(1610743821)  public void setParticipants(com.wilutions.mslib.uccollaborationlib.IParticipantInfo[] value) throws ComException {
+  @DeclDISPID(1610743821)  public void setParticipants(final com.wilutions.mslib.uccollaborationlib.IParticipantInfo[] value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743821,"Participants", DISPATCH_PROPERTYPUT,value);
   }
@@ -77,7 +77,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.ModalityTypes.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743823)  public void setModalityTypes(com.wilutions.mslib.uccollaborationlib.ModalityTypes value) throws ComException {
+  @DeclDISPID(1610743823)  public void setModalityTypes(final com.wilutions.mslib.uccollaborationlib.ModalityTypes value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743823,"ModalityTypes", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -86,7 +86,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743825)  public void setDataFormat(String value) throws ComException {
+  @DeclDISPID(1610743825)  public void setDataFormat(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743825,"DataFormat", DISPATCH_PROPERTYPUT,value);
   }
@@ -95,7 +95,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743827)  public void setData(String value) throws ComException {
+  @DeclDISPID(1610743827)  public void setData(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743827,"Data", DISPATCH_PROPERTYPUT,value);
   }
@@ -104,7 +104,7 @@ public class IConversationContextImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationContextCollectionImpl.class);
   }
-  @DeclDISPID(1610743830)  public com.wilutions.mslib.uccollaborationlib.IParticipantInfo CreateParticipantInfo(String _uri, String _representedUri) throws ComException {
+  @DeclDISPID(1610743830)  public com.wilutions.mslib.uccollaborationlib.IParticipantInfo CreateParticipantInfo(final String _uri, final String _representedUri) throws ComException {
     assert(_uri != null);
     assert(_representedUri != null);
     final Object obj = this._dispatchCall(1610743830,"CreateParticipantInfo", DISPATCH_METHOD,null,_uri,_representedUri);

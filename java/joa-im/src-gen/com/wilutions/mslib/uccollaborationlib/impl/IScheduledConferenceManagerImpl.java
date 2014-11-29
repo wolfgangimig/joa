@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{E666C9E8-22B8-9D22-1443-C94C6D61455B}")
 public class IScheduledConferenceManagerImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib.IScheduledConferenceManager {
-  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetScheduledConferenceItems(Object _scheduledConferenceManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743808)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GetScheduledConferenceItems(final Object _scheduledConferenceManagerCallback, final Object _state) throws ComException {
     assert(_scheduledConferenceManagerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743808,"GetScheduledConferenceItems", DISPATCH_METHOD,null,_scheduledConferenceManagerCallback,_state);

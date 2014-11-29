@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{4227BA19-11DF-CA8E-1CA1-69476CF4FC8E}")
 public class IReturnStringImpl extends Dispatch implements com.wilutions.mslib.msforms.IReturnString {
-  @DeclDISPID(0)  public void setValue(String value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }

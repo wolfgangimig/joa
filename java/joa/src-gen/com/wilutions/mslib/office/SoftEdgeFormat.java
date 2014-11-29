@@ -12,7 +12,7 @@ public interface SoftEdgeFormat extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public MsoSoftEdgeType getType() throws ComException;
-  @DeclDISPID(1)  public void setType(MsoSoftEdgeType value) throws ComException;
+  @DeclDISPID(1)  public void setType(final MsoSoftEdgeType value) throws ComException;
   @DeclDISPID(2)  public Float getRadius() throws ComException;
-  @DeclDISPID(2)  public void setRadius(Float value) throws ComException;
+  @DeclDISPID(2)  public void setRadius(final Float value) throws ComException;
 }

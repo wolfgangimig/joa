@@ -15,7 +15,7 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException {
+  @DeclDISPID(0)  public IDispatch Item(final Object varg) throws ComException {
     assert(varg != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,varg);
     if (obj == null) return null;
@@ -24,12 +24,12 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
   @DeclDISPID(62)  public void Clear() throws ComException {
     this._dispatchCall(62,"Clear", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743812)  public void _Move(Integer cx, Integer cy) throws ComException {
+  @DeclDISPID(1610743812)  public void _Move(final Integer cx, final Integer cy) throws ComException {
     assert(cx != null);
     assert(cy != null);
     this._dispatchCall(1610743812,"_Move", DISPATCH_METHOD,null,cx,cy);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.msforms.Control _AddByClass(Integer clsid) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.msforms.Control _AddByClass(final Integer clsid) throws ComException {
     assert(clsid != null);
     final Object obj = this._dispatchCall(1610743814,"_AddByClass", DISPATCH_METHOD,null,clsid);
     if (obj == null) return null;
@@ -41,21 +41,21 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743821)  public com.wilutions.mslib.msforms.Control _GetItemByIndex(Integer lIndex) throws ComException {
+  @DeclDISPID(1610743821)  public com.wilutions.mslib.msforms.Control _GetItemByIndex(final Integer lIndex) throws ComException {
     assert(lIndex != null);
     final Object obj = this._dispatchCall(1610743821,"_GetItemByIndex", DISPATCH_METHOD,null,lIndex);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
-  @DeclDISPID(1610743822)  public com.wilutions.mslib.msforms.Control _GetItemByName(String pstr) throws ComException {
+  @DeclDISPID(1610743822)  public com.wilutions.mslib.msforms.Control _GetItemByName(final String pstr) throws ComException {
     assert(pstr != null);
     final Object obj = this._dispatchCall(1610743822,"_GetItemByName", DISPATCH_METHOD,null,pstr);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
-  @DeclDISPID(1610743823)  public com.wilutions.mslib.msforms.Control _GetItemByID(Integer ID) throws ComException {
+  @DeclDISPID(1610743823)  public com.wilutions.mslib.msforms.Control _GetItemByID(final Integer ID) throws ComException {
     assert(ID != null);
     final Object obj = this._dispatchCall(1610743823,"_GetItemByID", DISPATCH_METHOD,null,ID);
     if (obj == null) return null;
@@ -68,12 +68,12 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
   @DeclDISPID(1610743825)  public void SendToBack() throws ComException {
     this._dispatchCall(1610743825,"SendToBack", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(63)  public void Move(Float cx, Float cy) throws ComException {
+  @DeclDISPID(63)  public void Move(final Float cx, final Float cy) throws ComException {
     assert(cx != null);
     assert(cy != null);
     this._dispatchCall(63,"Move", DISPATCH_METHOD,null,cx,cy);
   }
-  @DeclDISPID(66)  public com.wilutions.mslib.msforms.Control Add(String bstrProgID, Object Name, Object Visible) throws ComException {
+  @DeclDISPID(66)  public com.wilutions.mslib.msforms.Control Add(final String bstrProgID, final Object Name, final Object Visible) throws ComException {
     assert(bstrProgID != null);
     assert(Name != null);
     assert(Visible != null);
@@ -82,7 +82,7 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
-  @DeclDISPID(67)  public void Remove(Object varg) throws ComException {
+  @DeclDISPID(67)  public void Remove(final Object varg) throws ComException {
     assert(varg != null);
     this._dispatchCall(67,"Remove", DISPATCH_METHOD,null,varg);
   }

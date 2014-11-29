@@ -14,7 +14,7 @@ public interface OutlookBarShortcut extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(0)  public String getName() throws ComException;
-  @DeclDISPID(0)  public void setName(String value) throws ComException;
+  @DeclDISPID(0)  public void setName(final String value) throws ComException;
   @DeclDISPID(8448)  public Object getTarget() throws ComException;
-  @DeclDISPID(64162)  public void SetIcon(Object Icon) throws ComException;
+  @DeclDISPID(64162)  public void SetIcon(final Object Icon) throws ComException;
 }

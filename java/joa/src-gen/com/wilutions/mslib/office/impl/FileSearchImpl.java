@@ -20,7 +20,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1)  public void setSearchSubFolders(Boolean value) throws ComException {
+  @DeclDISPID(1)  public void setSearchSubFolders(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"SearchSubFolders", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2)  public void setMatchTextExactly(Boolean value) throws ComException {
+  @DeclDISPID(2)  public void setMatchTextExactly(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"MatchTextExactly", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(3)  public void setMatchAllWordForms(Boolean value) throws ComException {
+  @DeclDISPID(3)  public void setMatchAllWordForms(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"MatchAllWordForms", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,7 +47,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setFileName(String value) throws ComException {
+  @DeclDISPID(4)  public void setFileName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"FileName", DISPATCH_PROPERTYPUT,value);
   }
@@ -56,7 +56,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoFileType.valueOf((Integer)obj);
   }
-  @DeclDISPID(5)  public void setFileType(com.wilutions.mslib.office.MsoFileType value) throws ComException {
+  @DeclDISPID(5)  public void setFileType(final com.wilutions.mslib.office.MsoFileType value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"FileType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -65,7 +65,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoLastModified.valueOf((Integer)obj);
   }
-  @DeclDISPID(6)  public void setLastModified(com.wilutions.mslib.office.MsoLastModified value) throws ComException {
+  @DeclDISPID(6)  public void setLastModified(final com.wilutions.mslib.office.MsoLastModified value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"LastModified", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -74,7 +74,7 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(7)  public void setTextOrProperty(String value) throws ComException {
+  @DeclDISPID(7)  public void setTextOrProperty(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"TextOrProperty", DISPATCH_PROPERTYPUT,value);
   }
@@ -83,11 +83,11 @@ public class FileSearchImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8)  public void setLookIn(String value) throws ComException {
+  @DeclDISPID(8)  public void setLookIn(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"LookIn", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(9)  public Integer Execute(com.wilutions.mslib.office.MsoSortBy SortBy, com.wilutions.mslib.office.MsoSortOrder SortOrder, Boolean AlwaysAccurate) throws ComException {
+  @DeclDISPID(9)  public Integer Execute(final com.wilutions.mslib.office.MsoSortBy SortBy, final com.wilutions.mslib.office.MsoSortOrder SortOrder, final Boolean AlwaysAccurate) throws ComException {
     assert(SortBy != null);
     assert(SortOrder != null);
     assert(AlwaysAccurate != null);

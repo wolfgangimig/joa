@@ -15,7 +15,7 @@ public class FullSeriesCollectionImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoSeries Item(Object Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoSeries Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -36,7 +36,7 @@ public class FullSeriesCollectionImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoSeries get_Default(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoSeries get_Default(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

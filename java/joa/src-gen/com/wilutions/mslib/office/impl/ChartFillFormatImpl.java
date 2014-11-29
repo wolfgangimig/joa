@@ -5,40 +5,40 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E77-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ChartFillFormatImpl extends Dispatch implements com.wilutions.mslib.office.ChartFillFormat {
-  @DeclDISPID(1610743808)  public void OneColorGradient(Integer Style, Integer Variant, Float Degree) throws ComException {
+  @DeclDISPID(1610743808)  public void OneColorGradient(final Integer Style, final Integer Variant, final Float Degree) throws ComException {
     assert(Style != null);
     assert(Variant != null);
     assert(Degree != null);
     this._dispatchCall(1610743808,"OneColorGradient", DISPATCH_METHOD,null,Style,Variant,Degree);
   }
-  @DeclDISPID(1610743809)  public void TwoColorGradient(Integer Style, Integer Variant) throws ComException {
+  @DeclDISPID(1610743809)  public void TwoColorGradient(final Integer Style, final Integer Variant) throws ComException {
     assert(Style != null);
     assert(Variant != null);
     this._dispatchCall(1610743809,"TwoColorGradient", DISPATCH_METHOD,null,Style,Variant);
   }
-  @DeclDISPID(1610743810)  public void PresetTextured(Integer PresetTexture) throws ComException {
+  @DeclDISPID(1610743810)  public void PresetTextured(final Integer PresetTexture) throws ComException {
     assert(PresetTexture != null);
     this._dispatchCall(1610743810,"PresetTextured", DISPATCH_METHOD,null,PresetTexture);
   }
   @DeclDISPID(1610743811)  public void Solid() throws ComException {
     this._dispatchCall(1610743811,"Solid", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743812)  public void Patterned(Integer Pattern) throws ComException {
+  @DeclDISPID(1610743812)  public void Patterned(final Integer Pattern) throws ComException {
     assert(Pattern != null);
     this._dispatchCall(1610743812,"Patterned", DISPATCH_METHOD,null,Pattern);
   }
-  @DeclDISPID(1610743813)  public void UserPicture(Object PictureFile, Object PictureFormat, Object PictureStackUnit, Object PicturePlacement) throws ComException {
+  @DeclDISPID(1610743813)  public void UserPicture(final Object PictureFile, final Object PictureFormat, final Object PictureStackUnit, final Object PicturePlacement) throws ComException {
     assert(PictureFile != null);
     assert(PictureFormat != null);
     assert(PictureStackUnit != null);
     assert(PicturePlacement != null);
     this._dispatchCall(1610743813,"UserPicture", DISPATCH_METHOD,null,PictureFile,PictureFormat,PictureStackUnit,PicturePlacement);
   }
-  @DeclDISPID(1610743814)  public void UserTextured(String TextureFile) throws ComException {
+  @DeclDISPID(1610743814)  public void UserTextured(final String TextureFile) throws ComException {
     assert(TextureFile != null);
     this._dispatchCall(1610743814,"UserTextured", DISPATCH_METHOD,null,TextureFile);
   }
-  @DeclDISPID(1610743815)  public void PresetGradient(Integer Style, Integer Variant, Integer PresetGradientType) throws ComException {
+  @DeclDISPID(1610743815)  public void PresetGradient(final Integer Style, final Integer Variant, final Integer PresetGradientType) throws ComException {
     assert(Style != null);
     assert(Variant != null);
     assert(PresetGradientType != null);
@@ -104,7 +104,7 @@ public class ChartFillFormatImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743828)  public void setVisible(Integer value) throws ComException {
+  @DeclDISPID(1610743828)  public void setVisible(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743828,"Visible", DISPATCH_PROPERTYPUT,value);
   }

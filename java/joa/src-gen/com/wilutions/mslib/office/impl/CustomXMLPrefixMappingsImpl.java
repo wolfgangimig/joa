@@ -25,24 +25,24 @@ public class CustomXMLPrefixMappingsImpl extends Dispatch implements com.wilutio
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLPrefixMapping getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLPrefixMapping getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLPrefixMappingImpl.class);
   }
-  @DeclDISPID(1610809347)  public void AddNamespace(String Prefix, String NamespaceURI) throws ComException {
+  @DeclDISPID(1610809347)  public void AddNamespace(final String Prefix, final String NamespaceURI) throws ComException {
     assert(Prefix != null);
     assert(NamespaceURI != null);
     this._dispatchCall(1610809347,"AddNamespace", DISPATCH_METHOD,null,Prefix,NamespaceURI);
   }
-  @DeclDISPID(1610809348)  public String LookupNamespace(String Prefix) throws ComException {
+  @DeclDISPID(1610809348)  public String LookupNamespace(final String Prefix) throws ComException {
     assert(Prefix != null);
     final Object obj = this._dispatchCall(1610809348,"LookupNamespace", DISPATCH_METHOD,null,Prefix);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809349)  public String LookupPrefix(String NamespaceURI) throws ComException {
+  @DeclDISPID(1610809349)  public String LookupPrefix(final String NamespaceURI) throws ComException {
     assert(NamespaceURI != null);
     final Object obj = this._dispatchCall(1610809349,"LookupPrefix", DISPATCH_METHOD,null,NamespaceURI);
     if (obj == null) return null;

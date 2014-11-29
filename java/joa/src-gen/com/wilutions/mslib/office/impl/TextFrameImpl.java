@@ -25,7 +25,7 @@ public class TextFrameImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(100)  public void setMarginBottom(Float value) throws ComException {
+  @DeclDISPID(100)  public void setMarginBottom(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"MarginBottom", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class TextFrameImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(101)  public void setMarginLeft(Float value) throws ComException {
+  @DeclDISPID(101)  public void setMarginLeft(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"MarginLeft", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class TextFrameImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(102)  public void setMarginRight(Float value) throws ComException {
+  @DeclDISPID(102)  public void setMarginRight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"MarginRight", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class TextFrameImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(103)  public void setMarginTop(Float value) throws ComException {
+  @DeclDISPID(103)  public void setMarginTop(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"MarginTop", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class TextFrameImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextOrientation.valueOf((Integer)obj);
   }
-  @DeclDISPID(104)  public void setOrientation(com.wilutions.mslib.office.MsoTextOrientation value) throws ComException {
+  @DeclDISPID(104)  public void setOrientation(final com.wilutions.mslib.office.MsoTextOrientation value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"Orientation", DISPATCH_PROPERTYPUT,value.value);
   }

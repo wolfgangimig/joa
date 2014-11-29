@@ -30,7 +30,7 @@ public class BalloonCheckboxImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809347)  public void setChecked(Boolean value) throws ComException {
+  @DeclDISPID(1610809347)  public void setChecked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809347,"Checked", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class BalloonCheckboxImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809349)  public void setText(String value) throws ComException {
+  @DeclDISPID(1610809349)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809349,"Text", DISPATCH_PROPERTYPUT,value);
   }

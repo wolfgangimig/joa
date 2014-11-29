@@ -14,6 +14,6 @@ public interface BalloonLabel extends IDispatch {
   @DeclDISPID(0)  public String getItem() throws ComException;
   @DeclDISPID(1610809345)  public String getName() throws ComException;
   @DeclDISPID(1610809346)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(1610809347)  public void setText(String value) throws ComException;
+  @DeclDISPID(1610809347)  public void setText(final String value) throws ComException;
   @DeclDISPID(1610809347)  public String getText() throws ComException;
 }

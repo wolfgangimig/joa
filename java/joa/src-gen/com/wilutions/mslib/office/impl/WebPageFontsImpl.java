@@ -20,7 +20,7 @@ public class WebPageFontsImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.WebPageFont getItem(com.wilutions.mslib.office.MsoCharacterSet Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.WebPageFont getItem(final com.wilutions.mslib.office.MsoCharacterSet Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index.value);
     if (obj == null) return null;

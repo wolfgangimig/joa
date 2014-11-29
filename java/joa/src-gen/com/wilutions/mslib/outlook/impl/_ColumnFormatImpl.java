@@ -30,7 +30,7 @@ public class _ColumnFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64030)  public void setLabel(String value) throws ComException {
+  @DeclDISPID(64030)  public void setLabel(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64030,"Label", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class _ColumnFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64396)  public void setFieldFormat(Integer value) throws ComException {
+  @DeclDISPID(64396)  public void setFieldFormat(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64396,"FieldFormat", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class _ColumnFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8471)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(8471)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(8471,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class _ColumnFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(64034)  public void setAlign(com.wilutions.mslib.outlook.OlAlign value) throws ComException {
+  @DeclDISPID(64034)  public void setAlign(final com.wilutions.mslib.outlook.OlAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(64034,"Align", DISPATCH_PROPERTYPUT,value.value);
   }

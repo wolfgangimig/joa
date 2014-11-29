@@ -25,13 +25,13 @@ public class CustomXMLValidationErrorsImpl extends Dispatch implements com.wilut
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLValidationError getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLValidationError getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLValidationErrorImpl.class);
   }
-  @DeclDISPID(1610809347)  public void Add(com.wilutions.mslib.office.CustomXMLNode Node, String ErrorName, String ErrorText, Boolean ClearedOnUpdate) throws ComException {
+  @DeclDISPID(1610809347)  public void Add(final com.wilutions.mslib.office.CustomXMLNode Node, final String ErrorName, final String ErrorText, final Boolean ClearedOnUpdate) throws ComException {
     assert(ErrorName != null);
     assert(ErrorText != null);
     assert(ClearedOnUpdate != null);

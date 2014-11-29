@@ -25,7 +25,7 @@ public class IConferenceInfoImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.ConferenceAdmissionType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743811)  public void setAdmissionType(com.wilutions.mslib.uccollaborationlib.ConferenceAdmissionType value) throws ComException {
+  @DeclDISPID(1610743811)  public void setAdmissionType(final com.wilutions.mslib.uccollaborationlib.ConferenceAdmissionType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743811,"AdmissionType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -34,7 +34,7 @@ public class IConferenceInfoImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743813)  public void setAdmissionKey(String value) throws ComException {
+  @DeclDISPID(1610743813)  public void setAdmissionKey(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743813,"AdmissionKey", DISPATCH_PROPERTYPUT,value);
   }

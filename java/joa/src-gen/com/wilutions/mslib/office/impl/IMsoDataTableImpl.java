@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B8E7A-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoDataTableImpl extends Dispatch implements com.wilutions.mslib.office.IMsoDataTable {
-  @DeclDISPID(1610743808)  public void setShowLegendKey(Boolean value) throws ComException {
+  @DeclDISPID(1610743808)  public void setShowLegendKey(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"ShowLegendKey", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IMsoDataTableImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743810)  public void setHasBorderHorizontal(Boolean value) throws ComException {
+  @DeclDISPID(1610743810)  public void setHasBorderHorizontal(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743810,"HasBorderHorizontal", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IMsoDataTableImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743812)  public void setHasBorderVertical(Boolean value) throws ComException {
+  @DeclDISPID(1610743812)  public void setHasBorderVertical(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"HasBorderVertical", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IMsoDataTableImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743814)  public void setHasBorderOutline(Boolean value) throws ComException {
+  @DeclDISPID(1610743814)  public void setHasBorderOutline(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"HasBorderOutline", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class IMsoDataTableImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743821)  public void setAutoScaleFont(Object value) throws ComException {
+  @DeclDISPID(1610743821)  public void setAutoScaleFont(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743821,"AutoScaleFont", DISPATCH_PROPERTYPUT,value);
   }

@@ -14,14 +14,14 @@ public class ConferenceScheduler extends Dispatch implements IConferenceSchedule
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConferenceInfoImpl.class);
   }
-  @DeclDISPID(1610743809)  public IAsynchronousOperation ScheduleConference(IConferenceInfo _confInfo, Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743809)  public IAsynchronousOperation ScheduleConference(final IConferenceInfo _confInfo, final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743809,"ScheduleConference", DISPATCH_METHOD,null,(_confInfo!=null?_confInfo:Dispatch.NULL),_conferenceSchedulerCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743810)  public IAsynchronousOperation GetConferenceInfo(String _conferenceId, Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743810)  public IAsynchronousOperation GetConferenceInfo(final String _conferenceId, final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_conferenceId != null);
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
@@ -29,7 +29,7 @@ public class ConferenceScheduler extends Dispatch implements IConferenceSchedule
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743811)  public IAsynchronousOperation GetAllConferences(Boolean _isPublic, Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743811)  public IAsynchronousOperation GetAllConferences(final Boolean _isPublic, final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_isPublic != null);
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
@@ -37,14 +37,14 @@ public class ConferenceScheduler extends Dispatch implements IConferenceSchedule
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743812)  public IAsynchronousOperation ModifyConference(IConferenceInfo _conferenceInfo, Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743812)  public IAsynchronousOperation ModifyConference(final IConferenceInfo _conferenceInfo, final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743812,"ModifyConference", DISPATCH_METHOD,null,(_conferenceInfo!=null?_conferenceInfo:Dispatch.NULL),_conferenceSchedulerCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743813)  public IAsynchronousOperation DeleteConference(String _confId, Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743813)  public IAsynchronousOperation DeleteConference(final String _confId, final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_confId != null);
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
@@ -52,14 +52,14 @@ public class ConferenceScheduler extends Dispatch implements IConferenceSchedule
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743814)  public IAsynchronousOperation GetAvailableModalities(Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743814)  public IAsynchronousOperation GetAvailableModalities(final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743814,"GetAvailableModalities", DISPATCH_METHOD,null,_conferenceSchedulerCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743815)  public IAsynchronousOperation GetCapabilities(Object _conferenceSchedulerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743815)  public IAsynchronousOperation GetCapabilities(final Object _conferenceSchedulerCallback, final Object _state) throws ComException {
     assert(_conferenceSchedulerCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743815,"GetCapabilities", DISPATCH_METHOD,null,_conferenceSchedulerCallback,_state);

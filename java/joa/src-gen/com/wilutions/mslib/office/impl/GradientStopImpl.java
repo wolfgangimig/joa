@@ -25,7 +25,7 @@ public class GradientStopImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(2)  public void setPosition(Float value) throws ComException {
+  @DeclDISPID(2)  public void setPosition(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Position", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class GradientStopImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(3)  public void setTransparency(Float value) throws ComException {
+  @DeclDISPID(3)  public void setTransparency(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Transparency", DISPATCH_PROPERTYPUT,value);
   }

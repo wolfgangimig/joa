@@ -15,7 +15,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(185)  public void setBackward(Double RHS) throws ComException {
+  @DeclDISPID(185)  public void setBackward(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(185,"Backward", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -44,7 +44,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(190)  public void setDisplayEquation(Boolean RHS) throws ComException {
+  @DeclDISPID(190)  public void setDisplayEquation(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(190,"DisplayEquation", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -53,7 +53,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(189)  public void setDisplayRSquared(Boolean RHS) throws ComException {
+  @DeclDISPID(189)  public void setDisplayRSquared(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(189,"DisplayRSquared", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -62,7 +62,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(191)  public void setForward(Double RHS) throws ComException {
+  @DeclDISPID(191)  public void setForward(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(191,"Forward", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -76,7 +76,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(186)  public void setIntercept(Double RHS) throws ComException {
+  @DeclDISPID(186)  public void setIntercept(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(186,"Intercept", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -85,7 +85,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(187)  public void setInterceptIsAuto(Boolean RHS) throws ComException {
+  @DeclDISPID(187)  public void setInterceptIsAuto(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(187,"InterceptIsAuto", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -94,7 +94,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(110)  public void setName(String RHS) throws ComException {
+  @DeclDISPID(110)  public void setName(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(110,"Name", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -103,7 +103,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(188)  public void setNameIsAuto(Boolean RHS) throws ComException {
+  @DeclDISPID(188)  public void setNameIsAuto(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(188,"NameIsAuto", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -112,7 +112,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(192)  public void setOrder(Integer RHS) throws ComException {
+  @DeclDISPID(192)  public void setOrder(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(192,"Order", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -121,7 +121,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(184)  public void setPeriod(Integer RHS) throws ComException {
+  @DeclDISPID(184)  public void setPeriod(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(184,"Period", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -135,7 +135,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlTrendlineType.valueOf((Integer)obj);
   }
-  @DeclDISPID(108)  public void setType(com.wilutions.mslib.office.XlTrendlineType RHS) throws ComException {
+  @DeclDISPID(108)  public void setType(final com.wilutions.mslib.office.XlTrendlineType RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(108,"Type", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -159,7 +159,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(2650)  public void setBackward2(Double RHS) throws ComException {
+  @DeclDISPID(2650)  public void setBackward2(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2650,"Backward2", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -168,7 +168,7 @@ public class IMsoTrendlineImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(2651)  public void setForward2(Double RHS) throws ComException {
+  @DeclDISPID(2651)  public void setForward2(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2651,"Forward2", DISPATCH_PROPERTYPUT,RHS);
   }

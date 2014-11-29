@@ -40,7 +40,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34101)  public void setBillingInformation(String value) throws ComException {
+  @DeclDISPID(34101)  public void setBillingInformation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(36865)  public void setCategories(String value) throws ComException {
+  @DeclDISPID(36865)  public void setCategories(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(36865,"Categories", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34107)  public void setCompanies(String value) throws ComException {
+  @DeclDISPID(34107)  public void setCompanies(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34107,"Companies", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlImportance.valueOf((Integer)obj);
   }
-  @DeclDISPID(23)  public void setImportance(com.wilutions.mslib.outlook.OlImportance value) throws ComException {
+  @DeclDISPID(23)  public void setImportance(final com.wilutions.mslib.outlook.OlImportance value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -120,7 +120,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -129,7 +129,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34100)  public void setMileage(String value) throws ComException {
+  @DeclDISPID(34100)  public void setMileage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34100,"Mileage", DISPATCH_PROPERTYPUT,value);
   }
@@ -138,7 +138,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34062)  public void setNoAging(Boolean value) throws ComException {
+  @DeclDISPID(34062)  public void setNoAging(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34062,"NoAging", DISPATCH_PROPERTYPUT,value);
   }
@@ -162,7 +162,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlSensitivity.valueOf((Integer)obj);
   }
-  @DeclDISPID(54)  public void setSensitivity(com.wilutions.mslib.outlook.OlSensitivity value) throws ComException {
+  @DeclDISPID(54)  public void setSensitivity(final com.wilutions.mslib.outlook.OlSensitivity value) throws ComException {
     assert(value != null);
     this._dispatchCall(54,"Sensitivity", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -176,7 +176,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(55,"Subject", DISPATCH_PROPERTYPUT,value);
   }
@@ -185,7 +185,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(61468)  public void setUnRead(Boolean value) throws ComException {
+  @DeclDISPID(61468)  public void setUnRead(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(61468,"UnRead", DISPATCH_PROPERTYPUT,value);
   }
@@ -194,7 +194,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
-  @DeclDISPID(61475)  public void Close(com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(61475)  public void Close(final com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
@@ -206,11 +206,11 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61606)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public IDispatch Move(com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
     return (IDispatch)obj;
@@ -221,7 +221,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(61512)  public void Save() throws ComException {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException {
+  @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
     this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
@@ -231,7 +231,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(33040)  public void setActualWork(Integer value) throws ComException {
+  @DeclDISPID(33040)  public void setActualWork(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(33040,"ActualWork", DISPATCH_PROPERTYPUT,value);
   }
@@ -240,7 +240,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(33067)  public void setCardData(String value) throws ComException {
+  @DeclDISPID(33067)  public void setCardData(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(33067,"CardData", DISPATCH_PROPERTYPUT,value);
   }
@@ -249,7 +249,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(33052)  public void setComplete(Boolean value) throws ComException {
+  @DeclDISPID(33052)  public void setComplete(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(33052,"Complete", DISPATCH_PROPERTYPUT,value);
   }
@@ -258,7 +258,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34108)  public void setContactNames(String value) throws ComException {
+  @DeclDISPID(34108)  public void setContactNames(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34108,"ContactNames", DISPATCH_PROPERTYPUT,value);
   }
@@ -267,7 +267,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33039)  public void setDateCompleted(java.util.Date value) throws ComException {
+  @DeclDISPID(33039)  public void setDateCompleted(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33039,"DateCompleted", DISPATCH_PROPERTYPUT,value);
   }
@@ -286,7 +286,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33029)  public void setDueDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33029)  public void setDueDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33029,"DueDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -300,7 +300,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(33059)  public void setOrdinal(Integer value) throws ComException {
+  @DeclDISPID(33059)  public void setOrdinal(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(33059,"Ordinal", DISPATCH_PROPERTYPUT,value);
   }
@@ -309,7 +309,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(33055)  public void setOwner(String value) throws ComException {
+  @DeclDISPID(33055)  public void setOwner(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(33055,"Owner", DISPATCH_PROPERTYPUT,value);
   }
@@ -323,7 +323,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(63007)  public void setPercentComplete(Integer value) throws ComException {
+  @DeclDISPID(63007)  public void setPercentComplete(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(63007,"PercentComplete", DISPATCH_PROPERTYPUT,value);
   }
@@ -337,7 +337,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34050)  public void setReminderTime(java.util.Date value) throws ComException {
+  @DeclDISPID(34050)  public void setReminderTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34050,"ReminderTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -346,7 +346,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34076)  public void setReminderOverrideDefault(Boolean value) throws ComException {
+  @DeclDISPID(34076)  public void setReminderOverrideDefault(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34076,"ReminderOverrideDefault", DISPATCH_PROPERTYPUT,value);
   }
@@ -355,7 +355,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34078)  public void setReminderPlaySound(Boolean value) throws ComException {
+  @DeclDISPID(34078)  public void setReminderPlaySound(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34078,"ReminderPlaySound", DISPATCH_PROPERTYPUT,value);
   }
@@ -364,7 +364,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34051)  public void setReminderSet(Boolean value) throws ComException {
+  @DeclDISPID(34051)  public void setReminderSet(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34051,"ReminderSet", DISPATCH_PROPERTYPUT,value);
   }
@@ -373,7 +373,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34079)  public void setReminderSoundFile(String value) throws ComException {
+  @DeclDISPID(34079)  public void setReminderSoundFile(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34079,"ReminderSoundFile", DISPATCH_PROPERTYPUT,value);
   }
@@ -387,7 +387,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(33063)  public void setRole(String value) throws ComException {
+  @DeclDISPID(33063)  public void setRole(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(33063,"Role", DISPATCH_PROPERTYPUT,value);
   }
@@ -396,7 +396,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(33071)  public void setSchedulePlusPriority(String value) throws ComException {
+  @DeclDISPID(33071)  public void setSchedulePlusPriority(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(33071,"SchedulePlusPriority", DISPATCH_PROPERTYPUT,value);
   }
@@ -405,7 +405,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33028)  public void setStartDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33028)  public void setStartDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33028,"StartDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -414,7 +414,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTaskStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(33025)  public void setStatus(com.wilutions.mslib.outlook.OlTaskStatus value) throws ComException {
+  @DeclDISPID(33025)  public void setStatus(final com.wilutions.mslib.outlook.OlTaskStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(33025,"Status", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -423,7 +423,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3586)  public void setStatusOnCompletionRecipients(String value) throws ComException {
+  @DeclDISPID(3586)  public void setStatusOnCompletionRecipients(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3586,"StatusOnCompletionRecipients", DISPATCH_PROPERTYPUT,value);
   }
@@ -432,7 +432,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3587)  public void setStatusUpdateRecipients(String value) throws ComException {
+  @DeclDISPID(3587)  public void setStatusUpdateRecipients(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3587,"StatusUpdateRecipients", DISPATCH_PROPERTYPUT,value);
   }
@@ -441,7 +441,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(33027)  public void setTeamTask(Boolean value) throws ComException {
+  @DeclDISPID(33027)  public void setTeamTask(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(33027,"TeamTask", DISPATCH_PROPERTYPUT,value);
   }
@@ -450,7 +450,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(33041)  public void setTotalWork(Integer value) throws ComException {
+  @DeclDISPID(33041)  public void setTotalWork(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(33041,"TotalWork", DISPATCH_PROPERTYPUT,value);
   }
@@ -474,7 +474,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
   @DeclDISPID(62989)  public void MarkComplete() throws ComException {
     this._dispatchCall(62989,"MarkComplete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(63009)  public com.wilutions.mslib.outlook.TaskItem Respond(com.wilutions.mslib.outlook.OlTaskResponse Response, Object fNoUI, Object fAdditionalTextDialog) throws ComException {
+  @DeclDISPID(63009)  public com.wilutions.mslib.outlook.TaskItem Respond(final com.wilutions.mslib.outlook.OlTaskResponse Response, final Object fNoUI, final Object fAdditionalTextDialog) throws ComException {
     assert(Response != null);
     assert(fNoUI != null);
     assert(fAdditionalTextDialog != null);
@@ -514,7 +514,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(16350)  public void setInternetCodepage(Integer value) throws ComException {
+  @DeclDISPID(16350)  public void setInternetCodepage(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(16350,"InternetCodepage", DISPATCH_PROPERTYPUT,value);
   }
@@ -523,7 +523,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlRemoteStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(34161)  public void setMarkForDownload(com.wilutions.mslib.outlook.OlRemoteStatus value) throws ComException {
+  @DeclDISPID(34161)  public void setMarkForDownload(final com.wilutions.mslib.outlook.OlRemoteStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -554,7 +554,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
-  @DeclDISPID(64209)  public void setSendUsingAccount(com.wilutions.mslib.outlook.Account value) throws ComException {
+  @DeclDISPID(64209)  public void setSendUsingAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
     this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(34208)  public java.util.Date getToDoTaskOrdinal() throws ComException {
@@ -562,7 +562,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34208)  public void setToDoTaskOrdinal(java.util.Date value) throws ComException {
+  @DeclDISPID(34208)  public void setToDoTaskOrdinal(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34208,"ToDoTaskOrdinal", DISPATCH_PROPERTYPUT,value);
   }
@@ -581,7 +581,7 @@ public class _TaskItemImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64644)  public void setRTFBody(Object value) throws ComException {
+  @DeclDISPID(64644)  public void setRTFBody(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }

@@ -15,7 +15,7 @@ public class SharedWorkspaceTasksImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceTask getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceTask getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -26,7 +26,7 @@ public class SharedWorkspaceTasksImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceTask Add(String Title, Object Status, Object Priority, Object Assignee, Object Description, Object DueDate) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceTask Add(final String Title, final Object Status, final Object Priority, final Object Assignee, final Object Description, final Object DueDate) throws ComException {
     assert(Title != null);
     assert(Status != null);
     assert(Priority != null);

@@ -22,5 +22,5 @@ public interface IMsoChartFormat extends IDispatch {
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
   @DeclDISPID(200)  public Adjustments getAdjustments() throws ComException;
   @DeclDISPID(201)  public MsoAutoShapeType getAutoShapeType() throws ComException;
-  @DeclDISPID(201)  public void setAutoShapeType(MsoAutoShapeType value) throws ComException;
+  @DeclDISPID(201)  public void setAutoShapeType(final MsoAutoShapeType value) throws ComException;
 }

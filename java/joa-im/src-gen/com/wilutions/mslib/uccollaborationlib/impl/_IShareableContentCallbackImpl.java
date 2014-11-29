@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{F1101137-0CCC-960A-132E-9D5E71B05B48}")
 public class _IShareableContentCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IShareableContentCallback {
-  @DeclDISPID(5110)  public void OnDownloadFile(com.wilutions.mslib.uccollaborationlib.IShareableContent _source, String _localPath, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(5110)  public void OnDownloadFile(final com.wilutions.mslib.uccollaborationlib.IShareableContent _source, final String _localPath, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     assert(_localPath != null);
     this._dispatchCall(5110,"OnDownloadFile", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),_localPath,(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }

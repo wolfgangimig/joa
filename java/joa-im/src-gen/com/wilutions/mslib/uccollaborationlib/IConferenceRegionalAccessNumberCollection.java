@@ -11,5 +11,5 @@ public interface IConferenceRegionalAccessNumberCollection extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public IConferenceRegionalAccessNumber getItem(Integer _index) throws ComException;
+  @DeclDISPID(0)  public IConferenceRegionalAccessNumber getItem(final Integer _index) throws ComException;
 }

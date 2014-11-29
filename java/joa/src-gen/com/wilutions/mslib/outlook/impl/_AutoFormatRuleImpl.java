@@ -30,7 +30,7 @@ public class _AutoFormatRuleImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8450)  public void setName(String value) throws ComException {
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8450,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class _AutoFormatRuleImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64024)  public void setFilter(String value) throws ComException {
+  @DeclDISPID(64024)  public void setFilter(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64024,"Filter", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class _AutoFormatRuleImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class _AutoFormatRuleImpl extends Dispatch implements com.wilutions.mslib
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.ViewFont.class);
   }
-  @DeclDISPID(64023)  public void setFont(com.wilutions.mslib.outlook.ViewFont value) throws ComException {
+  @DeclDISPID(64023)  public void setFont(final com.wilutions.mslib.outlook.ViewFont value) throws ComException {
     this._dispatchCall(64023,"Font", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(64062)  public Boolean getStandard() throws ComException {

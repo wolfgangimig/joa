@@ -15,7 +15,7 @@ public class PointsImpl extends Dispatch implements com.wilutions.mslib.office.P
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.ChartPoint Item(Integer Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.ChartPoint Item(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -36,7 +36,7 @@ public class PointsImpl extends Dispatch implements com.wilutions.mslib.office.P
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.ChartPoint get_Default(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.ChartPoint get_Default(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

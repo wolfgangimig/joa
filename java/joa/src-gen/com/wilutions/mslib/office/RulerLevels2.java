@@ -13,6 +13,6 @@ public interface RulerLevels2 extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public RulerLevel2 Item(Object Index) throws ComException;
+  @DeclDISPID(0)  public RulerLevel2 Item(final Object Index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
 }

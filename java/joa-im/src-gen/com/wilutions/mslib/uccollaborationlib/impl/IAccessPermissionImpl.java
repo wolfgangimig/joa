@@ -15,7 +15,7 @@ public class IAccessPermissionImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IAccessEntry[])obj;
   }
-  @DeclDISPID(1610743810)  public Boolean TryGetValue(com.wilutions.mslib.uccollaborationlib.AccessEntryScope _scope, String _entryId, ByRef<com.wilutions.mslib.uccollaborationlib.IAccessEntry> _accessEntry) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean TryGetValue(final com.wilutions.mslib.uccollaborationlib.AccessEntryScope _scope, final String _entryId, final ByRef<com.wilutions.mslib.uccollaborationlib.IAccessEntry> _accessEntry) throws ComException {
     assert(_scope != null);
     assert(_entryId != null);
     assert(_accessEntry != null);
@@ -23,7 +23,7 @@ public class IAccessPermissionImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743811)  public void GetAccessEntry(com.wilutions.mslib.uccollaborationlib.AccessEntryScope _scope, String _entryId, ByRef<com.wilutions.mslib.uccollaborationlib.IAccessEntry> _accessEntry) throws ComException {
+  @DeclDISPID(1610743811)  public void GetAccessEntry(final com.wilutions.mslib.uccollaborationlib.AccessEntryScope _scope, final String _entryId, final ByRef<com.wilutions.mslib.uccollaborationlib.IAccessEntry> _accessEntry) throws ComException {
     assert(_scope != null);
     assert(_entryId != null);
     assert(_accessEntry != null);

@@ -19,7 +19,7 @@ public class Phone extends Dispatch implements IPhone {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743809)  public void setPublished(Boolean value) throws ComException {
+  @DeclDISPID(1610743809)  public void setPublished(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743809,"Published", DISPATCH_PROPERTYPUT,value);
   }

@@ -14,11 +14,11 @@ public interface ODSOFilter extends IDispatch {
   @DeclDISPID(1)  public Integer getIndex() throws ComException;
   @DeclDISPID(2)  public IDispatch getParent() throws ComException;
   @DeclDISPID(3)  public String getColumn() throws ComException;
-  @DeclDISPID(3)  public void setColumn(String value) throws ComException;
+  @DeclDISPID(3)  public void setColumn(final String value) throws ComException;
   @DeclDISPID(4)  public MsoFilterComparison getComparison() throws ComException;
-  @DeclDISPID(4)  public void setComparison(MsoFilterComparison value) throws ComException;
+  @DeclDISPID(4)  public void setComparison(final MsoFilterComparison value) throws ComException;
   @DeclDISPID(5)  public String getCompareTo() throws ComException;
-  @DeclDISPID(5)  public void setCompareTo(String value) throws ComException;
+  @DeclDISPID(5)  public void setCompareTo(final String value) throws ComException;
   @DeclDISPID(6)  public MsoFilterConjunction getConjunction() throws ComException;
-  @DeclDISPID(6)  public void setConjunction(MsoFilterConjunction value) throws ComException;
+  @DeclDISPID(6)  public void setConjunction(final MsoFilterConjunction value) throws ComException;
 }

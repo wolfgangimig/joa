@@ -10,7 +10,7 @@ public class ISearchResults2Impl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Object[])obj;
   }
-  @DeclDISPID(268435458)  public void GetPartialResults(ByRef<com.wilutions.mslib.uccollaborationlib.ISearchResult[]> _results, ByRef<Boolean> insert, ByRef<Integer> index) throws ComException {
+  @DeclDISPID(268435458)  public void GetPartialResults(final ByRef<com.wilutions.mslib.uccollaborationlib.ISearchResult[]> _results, final ByRef<Boolean> insert, final ByRef<Integer> index) throws ComException {
     assert(_results != null);
     assert(insert != null);
     assert(index != null);

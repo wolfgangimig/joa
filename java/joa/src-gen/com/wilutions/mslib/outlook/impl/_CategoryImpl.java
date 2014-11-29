@@ -30,7 +30,7 @@ public class _CategoryImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8450)  public void setName(String value) throws ComException {
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8450,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class _CategoryImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlCategoryColor.valueOf((Integer)obj);
   }
-  @DeclDISPID(64419)  public void setColor(com.wilutions.mslib.outlook.OlCategoryColor value) throws ComException {
+  @DeclDISPID(64419)  public void setColor(final com.wilutions.mslib.outlook.OlCategoryColor value) throws ComException {
     assert(value != null);
     this._dispatchCall(64419,"Color", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -48,7 +48,7 @@ public class _CategoryImpl extends Dispatch implements com.wilutions.mslib.outlo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlCategoryShortcutKey.valueOf((Integer)obj);
   }
-  @DeclDISPID(64420)  public void setShortcutKey(com.wilutions.mslib.outlook.OlCategoryShortcutKey value) throws ComException {
+  @DeclDISPID(64420)  public void setShortcutKey(final com.wilutions.mslib.outlook.OlCategoryShortcutKey value) throws ComException {
     assert(value != null);
     this._dispatchCall(64420,"ShortcutKey", DISPATCH_PROPERTYPUT,value.value);
   }

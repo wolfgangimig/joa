@@ -30,7 +30,7 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setSignatureText(String value) throws ComException {
+  @DeclDISPID(3)  public void setSignatureText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"SignatureText", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
-  @DeclDISPID(4)  public void setSignatureImage(com.wilutions.mslib.stdole.IPictureDisp value) throws ComException {
+  @DeclDISPID(4)  public void setSignatureImage(final com.wilutions.mslib.stdole.IPictureDisp value) throws ComException {
     this._dispatchCall(4,"SignatureImage", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(5)  public String getSignatureComment() throws ComException {
@@ -47,17 +47,17 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(5)  public void setSignatureComment(String value) throws ComException {
+  @DeclDISPID(5)  public void setSignatureComment(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"SignatureComment", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(6)  public Object GetSignatureDetail(com.wilutions.mslib.office.SignatureDetail sigdet) throws ComException {
+  @DeclDISPID(6)  public Object GetSignatureDetail(final com.wilutions.mslib.office.SignatureDetail sigdet) throws ComException {
     assert(sigdet != null);
     final Object obj = this._dispatchCall(6,"GetSignatureDetail", DISPATCH_METHOD,null,sigdet.value);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(7)  public Object GetCertificateDetail(com.wilutions.mslib.office.CertificateDetail certdet) throws ComException {
+  @DeclDISPID(7)  public Object GetCertificateDetail(final com.wilutions.mslib.office.CertificateDetail certdet) throws ComException {
     assert(certdet != null);
     final Object obj = this._dispatchCall(7,"GetCertificateDetail", DISPATCH_METHOD,null,certdet.value);
     if (obj == null) return null;
@@ -93,15 +93,15 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(14)  public void ShowSignatureCertificate(Object ParentWindow) throws ComException {
+  @DeclDISPID(14)  public void ShowSignatureCertificate(final Object ParentWindow) throws ComException {
     assert(ParentWindow != null);
     this._dispatchCall(14,"ShowSignatureCertificate", DISPATCH_METHOD,null,ParentWindow);
   }
-  @DeclDISPID(15)  public void SelectSignatureCertificate(Object ParentWindow) throws ComException {
+  @DeclDISPID(15)  public void SelectSignatureCertificate(final Object ParentWindow) throws ComException {
     assert(ParentWindow != null);
     this._dispatchCall(15,"SelectSignatureCertificate", DISPATCH_METHOD,null,ParentWindow);
   }
-  @DeclDISPID(16)  public void SelectCertificateDetailByThumbprint(String bstrThumbprint) throws ComException {
+  @DeclDISPID(16)  public void SelectCertificateDetailByThumbprint(final String bstrThumbprint) throws ComException {
     assert(bstrThumbprint != null);
     this._dispatchCall(16,"SelectCertificateDetailByThumbprint", DISPATCH_METHOD,null,bstrThumbprint);
   }

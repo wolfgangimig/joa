@@ -10,11 +10,11 @@ import com.wilutions.com.*;
 public interface _OlkSenderPhoto extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-514)  public Boolean getEnabled() throws ComException;
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException;
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException;
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException;
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException;
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException;
   @DeclDISPID(-521)  public OlMousePointer getMousePointer() throws ComException;
-  @DeclDISPID(-521)  public void setMousePointer(OlMousePointer value) throws ComException;
+  @DeclDISPID(-521)  public void setMousePointer(final OlMousePointer value) throws ComException;
   @DeclDISPID(64485)  public Integer getPreferredWidth() throws ComException;
   @DeclDISPID(64486)  public Integer getPreferredHeight() throws ComException;
 }

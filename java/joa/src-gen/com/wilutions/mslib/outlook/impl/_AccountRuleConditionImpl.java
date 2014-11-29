@@ -30,7 +30,7 @@ public class _AccountRuleConditionImpl extends Dispatch implements com.wilutions
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -45,7 +45,7 @@ public class _AccountRuleConditionImpl extends Dispatch implements com.wilutions
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
-  @DeclDISPID(64209)  public void setAccount(com.wilutions.mslib.outlook.Account value) throws ComException {
+  @DeclDISPID(64209)  public void setAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
     this._dispatchCall(64209,"Account", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public _AccountRuleConditionImpl(String progId) throws ComException {

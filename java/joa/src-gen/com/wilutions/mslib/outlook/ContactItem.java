@@ -44,7 +44,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34101)  public void setBillingInformation(String value) throws ComException {
+  @DeclDISPID(34101)  public void setBillingInformation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(36865)  public void setCategories(String value) throws ComException {
+  @DeclDISPID(36865)  public void setCategories(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(36865,"Categories", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34107)  public void setCompanies(String value) throws ComException {
+  @DeclDISPID(34107)  public void setCompanies(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34107,"Companies", DISPATCH_PROPERTYPUT,value);
   }
@@ -110,7 +110,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return OlImportance.valueOf((Integer)obj);
   }
-  @DeclDISPID(23)  public void setImportance(OlImportance value) throws ComException {
+  @DeclDISPID(23)  public void setImportance(final OlImportance value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -124,7 +124,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -133,7 +133,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34100)  public void setMileage(String value) throws ComException {
+  @DeclDISPID(34100)  public void setMileage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34100,"Mileage", DISPATCH_PROPERTYPUT,value);
   }
@@ -142,7 +142,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34062)  public void setNoAging(Boolean value) throws ComException {
+  @DeclDISPID(34062)  public void setNoAging(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34062,"NoAging", DISPATCH_PROPERTYPUT,value);
   }
@@ -166,7 +166,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return OlSensitivity.valueOf((Integer)obj);
   }
-  @DeclDISPID(54)  public void setSensitivity(OlSensitivity value) throws ComException {
+  @DeclDISPID(54)  public void setSensitivity(final OlSensitivity value) throws ComException {
     assert(value != null);
     this._dispatchCall(54,"Sensitivity", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -180,7 +180,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(55,"Subject", DISPATCH_PROPERTYPUT,value);
   }
@@ -189,7 +189,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(61468)  public void setUnRead(Boolean value) throws ComException {
+  @DeclDISPID(61468)  public void setUnRead(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(61468,"UnRead", DISPATCH_PROPERTYPUT,value);
   }
@@ -198,7 +198,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
-  @DeclDISPID(61475)  public void Close(OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(61475)  public void Close(final OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
@@ -210,11 +210,11 @@ public class ContactItem extends Dispatch implements _ContactItem {
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61606)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public IDispatch Move(MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(final MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
     return (IDispatch)obj;
@@ -225,7 +225,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
   @DeclDISPID(61512)  public void Save() throws ComException {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException {
+  @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
     this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
@@ -235,7 +235,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14848)  public void setAccount(String value) throws ComException {
+  @DeclDISPID(14848)  public void setAccount(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14848,"Account", DISPATCH_PROPERTYPUT,value);
   }
@@ -244,7 +244,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(14913)  public void setAnniversary(java.util.Date value) throws ComException {
+  @DeclDISPID(14913)  public void setAnniversary(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(14913,"Anniversary", DISPATCH_PROPERTYPUT,value);
   }
@@ -253,7 +253,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14896)  public void setAssistantName(String value) throws ComException {
+  @DeclDISPID(14896)  public void setAssistantName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14896,"AssistantName", DISPATCH_PROPERTYPUT,value);
   }
@@ -262,7 +262,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14894)  public void setAssistantTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14894)  public void setAssistantTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14894,"AssistantTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -271,7 +271,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(14914)  public void setBirthday(java.util.Date value) throws ComException {
+  @DeclDISPID(14914)  public void setBirthday(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(14914,"Birthday", DISPATCH_PROPERTYPUT,value);
   }
@@ -280,7 +280,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14875)  public void setBusiness2TelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14875)  public void setBusiness2TelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14875,"Business2TelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -289,7 +289,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32795)  public void setBusinessAddress(String value) throws ComException {
+  @DeclDISPID(32795)  public void setBusinessAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32795,"BusinessAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -298,7 +298,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32838)  public void setBusinessAddressCity(String value) throws ComException {
+  @DeclDISPID(32838)  public void setBusinessAddressCity(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32838,"BusinessAddressCity", DISPATCH_PROPERTYPUT,value);
   }
@@ -307,7 +307,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32841)  public void setBusinessAddressCountry(String value) throws ComException {
+  @DeclDISPID(32841)  public void setBusinessAddressCountry(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32841,"BusinessAddressCountry", DISPATCH_PROPERTYPUT,value);
   }
@@ -316,7 +316,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32840)  public void setBusinessAddressPostalCode(String value) throws ComException {
+  @DeclDISPID(32840)  public void setBusinessAddressPostalCode(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32840,"BusinessAddressPostalCode", DISPATCH_PROPERTYPUT,value);
   }
@@ -325,7 +325,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32842)  public void setBusinessAddressPostOfficeBox(String value) throws ComException {
+  @DeclDISPID(32842)  public void setBusinessAddressPostOfficeBox(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32842,"BusinessAddressPostOfficeBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -334,7 +334,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32839)  public void setBusinessAddressState(String value) throws ComException {
+  @DeclDISPID(32839)  public void setBusinessAddressState(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32839,"BusinessAddressState", DISPATCH_PROPERTYPUT,value);
   }
@@ -343,7 +343,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32837)  public void setBusinessAddressStreet(String value) throws ComException {
+  @DeclDISPID(32837)  public void setBusinessAddressStreet(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32837,"BusinessAddressStreet", DISPATCH_PROPERTYPUT,value);
   }
@@ -352,7 +352,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14884)  public void setBusinessFaxNumber(String value) throws ComException {
+  @DeclDISPID(14884)  public void setBusinessFaxNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14884,"BusinessFaxNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -361,7 +361,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14929)  public void setBusinessHomePage(String value) throws ComException {
+  @DeclDISPID(14929)  public void setBusinessHomePage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14929,"BusinessHomePage", DISPATCH_PROPERTYPUT,value);
   }
@@ -370,7 +370,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14856)  public void setBusinessTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14856)  public void setBusinessTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14856,"BusinessTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -379,7 +379,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14850)  public void setCallbackTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14850)  public void setCallbackTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14850,"CallbackTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -388,7 +388,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14878)  public void setCarTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14878)  public void setCarTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14878,"CarTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -397,7 +397,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32780)  public void setChildren(String value) throws ComException {
+  @DeclDISPID(32780)  public void setChildren(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32780,"Children", DISPATCH_PROPERTYPUT,value);
   }
@@ -421,7 +421,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14935)  public void setCompanyMainTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14935)  public void setCompanyMainTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14935,"CompanyMainTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -430,7 +430,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14870)  public void setCompanyName(String value) throws ComException {
+  @DeclDISPID(14870)  public void setCompanyName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14870,"CompanyName", DISPATCH_PROPERTYPUT,value);
   }
@@ -439,7 +439,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14921)  public void setComputerNetworkName(String value) throws ComException {
+  @DeclDISPID(14921)  public void setComputerNetworkName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14921,"ComputerNetworkName", DISPATCH_PROPERTYPUT,value);
   }
@@ -448,7 +448,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14922)  public void setCustomerID(String value) throws ComException {
+  @DeclDISPID(14922)  public void setCustomerID(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14922,"CustomerID", DISPATCH_PROPERTYPUT,value);
   }
@@ -457,7 +457,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14872)  public void setDepartment(String value) throws ComException {
+  @DeclDISPID(14872)  public void setDepartment(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14872,"Department", DISPATCH_PROPERTYPUT,value);
   }
@@ -466,7 +466,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32899)  public void setEmail1Address(String value) throws ComException {
+  @DeclDISPID(32899)  public void setEmail1Address(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32899,"Email1Address", DISPATCH_PROPERTYPUT,value);
   }
@@ -475,7 +475,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32898)  public void setEmail1AddressType(String value) throws ComException {
+  @DeclDISPID(32898)  public void setEmail1AddressType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32898,"Email1AddressType", DISPATCH_PROPERTYPUT,value);
   }
@@ -494,7 +494,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32915)  public void setEmail2Address(String value) throws ComException {
+  @DeclDISPID(32915)  public void setEmail2Address(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32915,"Email2Address", DISPATCH_PROPERTYPUT,value);
   }
@@ -503,7 +503,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32914)  public void setEmail2AddressType(String value) throws ComException {
+  @DeclDISPID(32914)  public void setEmail2AddressType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32914,"Email2AddressType", DISPATCH_PROPERTYPUT,value);
   }
@@ -522,7 +522,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32931)  public void setEmail3Address(String value) throws ComException {
+  @DeclDISPID(32931)  public void setEmail3Address(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32931,"Email3Address", DISPATCH_PROPERTYPUT,value);
   }
@@ -531,7 +531,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32930)  public void setEmail3AddressType(String value) throws ComException {
+  @DeclDISPID(32930)  public void setEmail3AddressType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32930,"Email3AddressType", DISPATCH_PROPERTYPUT,value);
   }
@@ -550,7 +550,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32773)  public void setFileAs(String value) throws ComException {
+  @DeclDISPID(32773)  public void setFileAs(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32773,"FileAs", DISPATCH_PROPERTYPUT,value);
   }
@@ -559,7 +559,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14854)  public void setFirstName(String value) throws ComException {
+  @DeclDISPID(14854)  public void setFirstName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14854,"FirstName", DISPATCH_PROPERTYPUT,value);
   }
@@ -568,7 +568,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14924)  public void setFTPSite(String value) throws ComException {
+  @DeclDISPID(14924)  public void setFTPSite(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14924,"FTPSite", DISPATCH_PROPERTYPUT,value);
   }
@@ -577,7 +577,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setFullName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setFullName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"FullName", DISPATCH_PROPERTYPUT,value);
   }
@@ -591,7 +591,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return OlGender.valueOf((Integer)obj);
   }
-  @DeclDISPID(14925)  public void setGender(OlGender value) throws ComException {
+  @DeclDISPID(14925)  public void setGender(final OlGender value) throws ComException {
     assert(value != null);
     this._dispatchCall(14925,"Gender", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -600,7 +600,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14855)  public void setGovernmentIDNumber(String value) throws ComException {
+  @DeclDISPID(14855)  public void setGovernmentIDNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14855,"GovernmentIDNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -609,7 +609,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14915)  public void setHobby(String value) throws ComException {
+  @DeclDISPID(14915)  public void setHobby(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14915,"Hobby", DISPATCH_PROPERTYPUT,value);
   }
@@ -618,7 +618,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14895)  public void setHome2TelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14895)  public void setHome2TelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14895,"Home2TelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -627,7 +627,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32794)  public void setHomeAddress(String value) throws ComException {
+  @DeclDISPID(32794)  public void setHomeAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32794,"HomeAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -636,7 +636,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14937)  public void setHomeAddressCity(String value) throws ComException {
+  @DeclDISPID(14937)  public void setHomeAddressCity(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14937,"HomeAddressCity", DISPATCH_PROPERTYPUT,value);
   }
@@ -645,7 +645,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14938)  public void setHomeAddressCountry(String value) throws ComException {
+  @DeclDISPID(14938)  public void setHomeAddressCountry(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14938,"HomeAddressCountry", DISPATCH_PROPERTYPUT,value);
   }
@@ -654,7 +654,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14939)  public void setHomeAddressPostalCode(String value) throws ComException {
+  @DeclDISPID(14939)  public void setHomeAddressPostalCode(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14939,"HomeAddressPostalCode", DISPATCH_PROPERTYPUT,value);
   }
@@ -663,7 +663,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14942)  public void setHomeAddressPostOfficeBox(String value) throws ComException {
+  @DeclDISPID(14942)  public void setHomeAddressPostOfficeBox(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14942,"HomeAddressPostOfficeBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -672,7 +672,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14940)  public void setHomeAddressState(String value) throws ComException {
+  @DeclDISPID(14940)  public void setHomeAddressState(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14940,"HomeAddressState", DISPATCH_PROPERTYPUT,value);
   }
@@ -681,7 +681,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14941)  public void setHomeAddressStreet(String value) throws ComException {
+  @DeclDISPID(14941)  public void setHomeAddressStreet(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14941,"HomeAddressStreet", DISPATCH_PROPERTYPUT,value);
   }
@@ -690,7 +690,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14885)  public void setHomeFaxNumber(String value) throws ComException {
+  @DeclDISPID(14885)  public void setHomeFaxNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14885,"HomeFaxNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -699,7 +699,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14857)  public void setHomeTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14857)  public void setHomeTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14857,"HomeTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -708,7 +708,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14858)  public void setInitials(String value) throws ComException {
+  @DeclDISPID(14858)  public void setInitials(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14858,"Initials", DISPATCH_PROPERTYPUT,value);
   }
@@ -717,7 +717,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32984)  public void setInternetFreeBusyAddress(String value) throws ComException {
+  @DeclDISPID(32984)  public void setInternetFreeBusyAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32984,"InternetFreeBusyAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -726,7 +726,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14893)  public void setISDNNumber(String value) throws ComException {
+  @DeclDISPID(14893)  public void setISDNNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14893,"ISDNNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -735,7 +735,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14871)  public void setJobTitle(String value) throws ComException {
+  @DeclDISPID(14871)  public void setJobTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14871,"JobTitle", DISPATCH_PROPERTYPUT,value);
   }
@@ -744,7 +744,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(32805)  public void setJournal(Boolean value) throws ComException {
+  @DeclDISPID(32805)  public void setJournal(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(32805,"Journal", DISPATCH_PROPERTYPUT,value);
   }
@@ -753,7 +753,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14860)  public void setLanguage(String value) throws ComException {
+  @DeclDISPID(14860)  public void setLanguage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14860,"Language", DISPATCH_PROPERTYPUT,value);
   }
@@ -787,7 +787,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14865)  public void setLastName(String value) throws ComException {
+  @DeclDISPID(14865)  public void setLastName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14865,"LastName", DISPATCH_PROPERTYPUT,value);
   }
@@ -801,7 +801,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14869)  public void setMailingAddress(String value) throws ComException {
+  @DeclDISPID(14869)  public void setMailingAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14869,"MailingAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -810,7 +810,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14887)  public void setMailingAddressCity(String value) throws ComException {
+  @DeclDISPID(14887)  public void setMailingAddressCity(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14887,"MailingAddressCity", DISPATCH_PROPERTYPUT,value);
   }
@@ -819,7 +819,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14886)  public void setMailingAddressCountry(String value) throws ComException {
+  @DeclDISPID(14886)  public void setMailingAddressCountry(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14886,"MailingAddressCountry", DISPATCH_PROPERTYPUT,value);
   }
@@ -828,7 +828,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14890)  public void setMailingAddressPostalCode(String value) throws ComException {
+  @DeclDISPID(14890)  public void setMailingAddressPostalCode(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14890,"MailingAddressPostalCode", DISPATCH_PROPERTYPUT,value);
   }
@@ -837,7 +837,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14891)  public void setMailingAddressPostOfficeBox(String value) throws ComException {
+  @DeclDISPID(14891)  public void setMailingAddressPostOfficeBox(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14891,"MailingAddressPostOfficeBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -846,7 +846,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14888)  public void setMailingAddressState(String value) throws ComException {
+  @DeclDISPID(14888)  public void setMailingAddressState(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14888,"MailingAddressState", DISPATCH_PROPERTYPUT,value);
   }
@@ -855,7 +855,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14889)  public void setMailingAddressStreet(String value) throws ComException {
+  @DeclDISPID(14889)  public void setMailingAddressStreet(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14889,"MailingAddressStreet", DISPATCH_PROPERTYPUT,value);
   }
@@ -864,7 +864,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14926)  public void setManagerName(String value) throws ComException {
+  @DeclDISPID(14926)  public void setManagerName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14926,"ManagerName", DISPATCH_PROPERTYPUT,value);
   }
@@ -873,7 +873,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14916)  public void setMiddleName(String value) throws ComException {
+  @DeclDISPID(14916)  public void setMiddleName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14916,"MiddleName", DISPATCH_PROPERTYPUT,value);
   }
@@ -882,7 +882,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14876)  public void setMobileTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14876)  public void setMobileTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14876,"MobileTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -891,7 +891,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32863)  public void setNetMeetingAlias(String value) throws ComException {
+  @DeclDISPID(32863)  public void setNetMeetingAlias(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32863,"NetMeetingAlias", DISPATCH_PROPERTYPUT,value);
   }
@@ -900,7 +900,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32864)  public void setNetMeetingServer(String value) throws ComException {
+  @DeclDISPID(32864)  public void setNetMeetingServer(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32864,"NetMeetingServer", DISPATCH_PROPERTYPUT,value);
   }
@@ -909,7 +909,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14927)  public void setNickName(String value) throws ComException {
+  @DeclDISPID(14927)  public void setNickName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14927,"NickName", DISPATCH_PROPERTYPUT,value);
   }
@@ -918,7 +918,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14873)  public void setOfficeLocation(String value) throws ComException {
+  @DeclDISPID(14873)  public void setOfficeLocation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14873,"OfficeLocation", DISPATCH_PROPERTYPUT,value);
   }
@@ -927,7 +927,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14864)  public void setOrganizationalIDNumber(String value) throws ComException {
+  @DeclDISPID(14864)  public void setOrganizationalIDNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14864,"OrganizationalIDNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -936,7 +936,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32796)  public void setOtherAddress(String value) throws ComException {
+  @DeclDISPID(32796)  public void setOtherAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32796,"OtherAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -945,7 +945,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14943)  public void setOtherAddressCity(String value) throws ComException {
+  @DeclDISPID(14943)  public void setOtherAddressCity(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14943,"OtherAddressCity", DISPATCH_PROPERTYPUT,value);
   }
@@ -954,7 +954,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14944)  public void setOtherAddressCountry(String value) throws ComException {
+  @DeclDISPID(14944)  public void setOtherAddressCountry(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14944,"OtherAddressCountry", DISPATCH_PROPERTYPUT,value);
   }
@@ -963,7 +963,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14945)  public void setOtherAddressPostalCode(String value) throws ComException {
+  @DeclDISPID(14945)  public void setOtherAddressPostalCode(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14945,"OtherAddressPostalCode", DISPATCH_PROPERTYPUT,value);
   }
@@ -972,7 +972,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14948)  public void setOtherAddressPostOfficeBox(String value) throws ComException {
+  @DeclDISPID(14948)  public void setOtherAddressPostOfficeBox(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14948,"OtherAddressPostOfficeBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -981,7 +981,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14946)  public void setOtherAddressState(String value) throws ComException {
+  @DeclDISPID(14946)  public void setOtherAddressState(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14946,"OtherAddressState", DISPATCH_PROPERTYPUT,value);
   }
@@ -990,7 +990,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14947)  public void setOtherAddressStreet(String value) throws ComException {
+  @DeclDISPID(14947)  public void setOtherAddressStreet(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14947,"OtherAddressStreet", DISPATCH_PROPERTYPUT,value);
   }
@@ -999,7 +999,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14883)  public void setOtherFaxNumber(String value) throws ComException {
+  @DeclDISPID(14883)  public void setOtherFaxNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14883,"OtherFaxNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1008,7 +1008,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14879)  public void setOtherTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14879)  public void setOtherTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14879,"OtherTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1017,7 +1017,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14881)  public void setPagerNumber(String value) throws ComException {
+  @DeclDISPID(14881)  public void setPagerNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14881,"PagerNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1026,7 +1026,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14928)  public void setPersonalHomePage(String value) throws ComException {
+  @DeclDISPID(14928)  public void setPersonalHomePage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14928,"PersonalHomePage", DISPATCH_PROPERTYPUT,value);
   }
@@ -1035,7 +1035,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14874)  public void setPrimaryTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14874)  public void setPrimaryTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14874,"PrimaryTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1044,7 +1044,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14918)  public void setProfession(String value) throws ComException {
+  @DeclDISPID(14918)  public void setProfession(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14918,"Profession", DISPATCH_PROPERTYPUT,value);
   }
@@ -1053,7 +1053,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14877)  public void setRadioTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14877)  public void setRadioTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14877,"RadioTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1062,7 +1062,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14919)  public void setReferredBy(String value) throws ComException {
+  @DeclDISPID(14919)  public void setReferredBy(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14919,"ReferredBy", DISPATCH_PROPERTYPUT,value);
   }
@@ -1071,7 +1071,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return OlMailingAddress.valueOf((Integer)obj);
   }
-  @DeclDISPID(32802)  public void setSelectedMailingAddress(OlMailingAddress value) throws ComException {
+  @DeclDISPID(32802)  public void setSelectedMailingAddress(final OlMailingAddress value) throws ComException {
     assert(value != null);
     this._dispatchCall(32802,"SelectedMailingAddress", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -1080,7 +1080,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14920)  public void setSpouse(String value) throws ComException {
+  @DeclDISPID(14920)  public void setSpouse(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14920,"Spouse", DISPATCH_PROPERTYPUT,value);
   }
@@ -1089,7 +1089,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14853)  public void setSuffix(String value) throws ComException {
+  @DeclDISPID(14853)  public void setSuffix(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14853,"Suffix", DISPATCH_PROPERTYPUT,value);
   }
@@ -1098,7 +1098,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14892)  public void setTelexNumber(String value) throws ComException {
+  @DeclDISPID(14892)  public void setTelexNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14892,"TelexNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1107,7 +1107,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14917)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(14917)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14917,"Title", DISPATCH_PROPERTYPUT,value);
   }
@@ -1116,7 +1116,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14923)  public void setTTYTDDTelephoneNumber(String value) throws ComException {
+  @DeclDISPID(14923)  public void setTTYTDDTelephoneNumber(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(14923,"TTYTDDTelephoneNumber", DISPATCH_PROPERTYPUT,value);
   }
@@ -1125,7 +1125,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32847)  public void setUser1(String value) throws ComException {
+  @DeclDISPID(32847)  public void setUser1(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32847,"User1", DISPATCH_PROPERTYPUT,value);
   }
@@ -1134,7 +1134,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32848)  public void setUser2(String value) throws ComException {
+  @DeclDISPID(32848)  public void setUser2(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32848,"User2", DISPATCH_PROPERTYPUT,value);
   }
@@ -1143,7 +1143,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32849)  public void setUser3(String value) throws ComException {
+  @DeclDISPID(32849)  public void setUser3(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32849,"User3", DISPATCH_PROPERTYPUT,value);
   }
@@ -1152,7 +1152,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32850)  public void setUser4(String value) throws ComException {
+  @DeclDISPID(32850)  public void setUser4(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32850,"User4", DISPATCH_PROPERTYPUT,value);
   }
@@ -1161,7 +1161,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32811)  public void setWebPage(String value) throws ComException {
+  @DeclDISPID(32811)  public void setWebPage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32811,"WebPage", DISPATCH_PROPERTYPUT,value);
   }
@@ -1170,7 +1170,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32814)  public void setYomiCompanyName(String value) throws ComException {
+  @DeclDISPID(32814)  public void setYomiCompanyName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32814,"YomiCompanyName", DISPATCH_PROPERTYPUT,value);
   }
@@ -1179,7 +1179,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32812)  public void setYomiFirstName(String value) throws ComException {
+  @DeclDISPID(32812)  public void setYomiFirstName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32812,"YomiFirstName", DISPATCH_PROPERTYPUT,value);
   }
@@ -1188,7 +1188,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32813)  public void setYomiLastName(String value) throws ComException {
+  @DeclDISPID(32813)  public void setYomiLastName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32813,"YomiLastName", DISPATCH_PROPERTYPUT,value);
   }
@@ -1221,7 +1221,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32866)  public void setIMAddress(String value) throws ComException {
+  @DeclDISPID(32866)  public void setIMAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32866,"IMAddress", DISPATCH_PROPERTYPUT,value);
   }
@@ -1230,19 +1230,19 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return OlRemoteStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(34161)  public void setMarkForDownload(OlRemoteStatus value) throws ComException {
+  @DeclDISPID(34161)  public void setMarkForDownload(final OlRemoteStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYPUT,value.value);
   }
-  @DeclDISPID(32896)  public void setEmail1DisplayName(String value) throws ComException {
+  @DeclDISPID(32896)  public void setEmail1DisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32896,"Email1DisplayName", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(32912)  public void setEmail2DisplayName(String value) throws ComException {
+  @DeclDISPID(32912)  public void setEmail2DisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32912,"Email2DisplayName", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(32928)  public void setEmail3DisplayName(String value) throws ComException {
+  @DeclDISPID(32928)  public void setEmail3DisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32928,"Email3DisplayName", DISPATCH_PROPERTYPUT,value);
   }
@@ -1261,7 +1261,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ConflictsImpl.class);
   }
-  @DeclDISPID(64189)  public void AddPicture(String Path) throws ComException {
+  @DeclDISPID(64189)  public void AddPicture(final String Path) throws ComException {
     assert(Path != null);
     this._dispatchCall(64189,"AddPicture", DISPATCH_METHOD,null,Path);
   }
@@ -1288,11 +1288,11 @@ public class ContactItem extends Dispatch implements _ContactItem {
   @DeclDISPID(64405)  public void ShowBusinessCardEditor() throws ComException {
     this._dispatchCall(64405,"ShowBusinessCardEditor", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64407)  public void SaveBusinessCardImage(String Path) throws ComException {
+  @DeclDISPID(64407)  public void SaveBusinessCardImage(final String Path) throws ComException {
     assert(Path != null);
     this._dispatchCall(64407,"SaveBusinessCardImage", DISPATCH_METHOD,null,Path);
   }
-  @DeclDISPID(64471)  public void ShowCheckPhoneDialog(OlContactPhoneNumber PhoneNumber) throws ComException {
+  @DeclDISPID(64471)  public void ShowCheckPhoneDialog(final OlContactPhoneNumber PhoneNumber) throws ComException {
     assert(PhoneNumber != null);
     this._dispatchCall(64471,"ShowCheckPhoneDialog", DISPATCH_METHOD,null,PhoneNumber.value);
   }
@@ -1301,7 +1301,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64543)  public void setTaskSubject(String value) throws ComException {
+  @DeclDISPID(64543)  public void setTaskSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64543,"TaskSubject", DISPATCH_PROPERTYPUT,value);
   }
@@ -1310,7 +1310,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33029)  public void setTaskDueDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33029)  public void setTaskDueDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33029,"TaskDueDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -1319,7 +1319,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33028)  public void setTaskStartDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33028)  public void setTaskStartDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33028,"TaskStartDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -1328,7 +1328,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33039)  public void setTaskCompletedDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33039)  public void setTaskCompletedDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33039,"TaskCompletedDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -1337,7 +1337,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34208)  public void setToDoTaskOrdinal(java.util.Date value) throws ComException {
+  @DeclDISPID(34208)  public void setToDoTaskOrdinal(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34208,"ToDoTaskOrdinal", DISPATCH_PROPERTYPUT,value);
   }
@@ -1346,7 +1346,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34076)  public void setReminderOverrideDefault(Boolean value) throws ComException {
+  @DeclDISPID(34076)  public void setReminderOverrideDefault(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34076,"ReminderOverrideDefault", DISPATCH_PROPERTYPUT,value);
   }
@@ -1355,7 +1355,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34078)  public void setReminderPlaySound(Boolean value) throws ComException {
+  @DeclDISPID(34078)  public void setReminderPlaySound(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34078,"ReminderPlaySound", DISPATCH_PROPERTYPUT,value);
   }
@@ -1364,7 +1364,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34051)  public void setReminderSet(Boolean value) throws ComException {
+  @DeclDISPID(34051)  public void setReminderSet(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34051,"ReminderSet", DISPATCH_PROPERTYPUT,value);
   }
@@ -1373,7 +1373,7 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34079)  public void setReminderSoundFile(String value) throws ComException {
+  @DeclDISPID(34079)  public void setReminderSoundFile(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34079,"ReminderSoundFile", DISPATCH_PROPERTYPUT,value);
   }
@@ -1382,11 +1382,11 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34050)  public void setReminderTime(java.util.Date value) throws ComException {
+  @DeclDISPID(34050)  public void setReminderTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34050,"ReminderTime", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64510)  public void MarkAsTask(OlMarkInterval MarkInterval) throws ComException {
+  @DeclDISPID(64510)  public void MarkAsTask(final OlMarkInterval MarkInterval) throws ComException {
     assert(MarkInterval != null);
     this._dispatchCall(64510,"MarkAsTask", DISPATCH_METHOD,null,MarkInterval.value);
   }
@@ -1403,14 +1403,14 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64525)  public void setBusinessCardLayoutXml(String value) throws ComException {
+  @DeclDISPID(64525)  public void setBusinessCardLayoutXml(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64525,"BusinessCardLayoutXml", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(64526)  public void ResetBusinessCard() throws ComException {
     this._dispatchCall(64526,"ResetBusinessCard", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64527)  public void AddBusinessCardLogoPicture(String Path) throws ComException {
+  @DeclDISPID(64527)  public void AddBusinessCardLogoPicture(final String Path) throws ComException {
     assert(Path != null);
     this._dispatchCall(64527,"AddBusinessCardLogoPicture", DISPATCH_METHOD,null,Path);
   }
@@ -1434,14 +1434,14 @@ public class ContactItem extends Dispatch implements _ContactItem {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64644)  public void setRTFBody(Object value) throws ComException {
+  @DeclDISPID(64644)  public void setRTFBody(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(64657)  public void ShowCheckFullNameDialog() throws ComException {
     this._dispatchCall(64657,"ShowCheckFullNameDialog", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64656)  public void ShowCheckAddressDialog(OlMailingAddress MailingAddress) throws ComException {
+  @DeclDISPID(64656)  public void ShowCheckAddressDialog(final OlMailingAddress MailingAddress) throws ComException {
     assert(MailingAddress != null);
     this._dispatchCall(64656,"ShowCheckAddressDialog", DISPATCH_METHOD,null,MailingAddress.value);
   }

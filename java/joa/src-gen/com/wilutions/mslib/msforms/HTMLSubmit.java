@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{5512D110-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(601)  public void setAction(String value) throws ComException {
+  @DeclDISPID(601)  public void setAction(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(601,"Action", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(602)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(602)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(602,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -27,7 +27,7 @@ public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(603)  public void setEncoding(String value) throws ComException {
+  @DeclDISPID(603)  public void setEncoding(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(603,"Encoding", DISPATCH_PROPERTYPUT,value);
   }
@@ -36,7 +36,7 @@ public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(604)  public void setMethod(String value) throws ComException {
+  @DeclDISPID(604)  public void setMethod(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(604,"Method", DISPATCH_PROPERTYPUT,value);
   }
@@ -45,7 +45,7 @@ public class HTMLSubmit extends Dispatch implements IWHTMLSubmitButton {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }

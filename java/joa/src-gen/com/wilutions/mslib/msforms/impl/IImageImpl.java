@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{8CCE0B28-CD45-CB5A-043C-69E7AE923A03}")
 public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.IImage {
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -23,7 +23,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -42,7 +42,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-502)  public void setBackStyle(com.wilutions.mslib.msforms.fmBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final com.wilutions.mslib.msforms.fmBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -51,7 +51,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-503)  public void setBorderColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-503)  public void setBorderColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-503,"BorderColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -61,7 +61,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -70,7 +70,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-523)  public void setPicture(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
@@ -78,7 +78,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -86,7 +86,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(27)  public void setPictureSizeMode(com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
+  @DeclDISPID(27)  public void setPictureSizeMode(final com.wilutions.mslib.msforms.fmPictureSizeMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(27,"PictureSizeMode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -95,7 +95,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmPictureSizeMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(26)  public void setPictureAlignment(com.wilutions.mslib.msforms.fmPictureAlignment value) throws ComException {
+  @DeclDISPID(26)  public void setPictureAlignment(final com.wilutions.mslib.msforms.fmPictureAlignment value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"PictureAlignment", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -104,7 +104,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmPictureAlignment.valueOf((Integer)obj);
   }
-  @DeclDISPID(28)  public void setPictureTiling(Boolean value) throws ComException {
+  @DeclDISPID(28)  public void setPictureTiling(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(28,"PictureTiling", DISPATCH_PROPERTYPUT,value);
   }
@@ -113,7 +113,7 @@ public class IImageImpl extends Dispatch implements com.wilutions.mslib.msforms.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(12)  public void setSpecialEffect(com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value.value);
   }

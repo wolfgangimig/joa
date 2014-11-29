@@ -19,13 +19,13 @@ public interface _StorageItem extends IDispatch {
   @DeclDISPID(61512)  public void Save() throws ComException;
   @DeclDISPID(61514)  public void Delete() throws ComException;
   @DeclDISPID(37120)  public String getBody() throws ComException;
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException;
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException;
   @DeclDISPID(63509)  public Attachments getAttachments() throws ComException;
   @DeclDISPID(3592)  public Integer getSize() throws ComException;
   @DeclDISPID(63510)  public UserProperties getUserProperties() throws ComException;
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException;
   @DeclDISPID(55)  public String getSubject() throws ComException;
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException;
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException;
   @DeclDISPID(34236)  public String getCreator() throws ComException;
-  @DeclDISPID(34236)  public void setCreator(String value) throws ComException;
+  @DeclDISPID(34236)  public void setCreator(final String value) throws ComException;
 }

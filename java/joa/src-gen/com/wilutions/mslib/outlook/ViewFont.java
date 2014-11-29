@@ -34,7 +34,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64385)  public void setBold(Boolean value) throws ComException {
+  @DeclDISPID(64385)  public void setBold(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64385,"Bold", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64387)  public void setItalic(Boolean value) throws ComException {
+  @DeclDISPID(64387)  public void setItalic(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64387,"Italic", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64388)  public void setName(String value) throws ComException {
+  @DeclDISPID(64388)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64388,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64389)  public void setSize(Integer value) throws ComException {
+  @DeclDISPID(64389)  public void setSize(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64389,"Size", DISPATCH_PROPERTYPUT,value);
   }
@@ -70,7 +70,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64390)  public void setStrikethrough(Boolean value) throws ComException {
+  @DeclDISPID(64390)  public void setStrikethrough(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64390,"Strikethrough", DISPATCH_PROPERTYPUT,value);
   }
@@ -79,7 +79,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64391)  public void setUnderline(Boolean value) throws ComException {
+  @DeclDISPID(64391)  public void setUnderline(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64391,"Underline", DISPATCH_PROPERTYPUT,value);
   }
@@ -88,7 +88,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return OlColor.valueOf((Integer)obj);
   }
-  @DeclDISPID(64395)  public void setColor(OlColor value) throws ComException {
+  @DeclDISPID(64395)  public void setColor(final OlColor value) throws ComException {
     assert(value != null);
     this._dispatchCall(64395,"Color", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -97,7 +97,7 @@ public class ViewFont extends Dispatch implements _ViewFont {
     if (obj == null) return null;
     return OlCategoryColor.valueOf((Integer)obj);
   }
-  @DeclDISPID(64638)  public void setExtendedColor(OlCategoryColor value) throws ComException {
+  @DeclDISPID(64638)  public void setExtendedColor(final OlCategoryColor value) throws ComException {
     assert(value != null);
     this._dispatchCall(64638,"ExtendedColor", DISPATCH_PROPERTYPUT,value.value);
   }

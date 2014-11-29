@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A91D-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class FoldersEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.FoldersEvents {
-  @DeclDISPID(61441)  public void onFolderAdd(com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
+  @DeclDISPID(61441)  public void onFolderAdd(final com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
     this._dispatchCall(61441,"FolderAdd", DISPATCH_METHOD,null,(Folder!=null?Folder:Dispatch.NULL));
   }
-  @DeclDISPID(61442)  public void onFolderChange(com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
+  @DeclDISPID(61442)  public void onFolderChange(final com.wilutions.mslib.outlook.MAPIFolder Folder) throws ComException {
     this._dispatchCall(61442,"FolderChange", DISPATCH_METHOD,null,(Folder!=null?Folder:Dispatch.NULL));
   }
   @DeclDISPID(61443)  public void onFolderRemove() throws ComException {

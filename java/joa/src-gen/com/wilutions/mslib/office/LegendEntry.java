@@ -16,7 +16,7 @@ public interface LegendEntry extends IDispatch {
   @DeclDISPID(174)  public IMsoLegendKey getLegendKey() throws ComException;
   @DeclDISPID(235)  public Object Select() throws ComException;
   @DeclDISPID(1525)  public Object getAutoScaleFont() throws ComException;
-  @DeclDISPID(1525)  public void setAutoScaleFont(Object RHS) throws ComException;
+  @DeclDISPID(1525)  public void setAutoScaleFont(final Object RHS) throws ComException;
   @DeclDISPID(127)  public Double getLeft() throws ComException;
   @DeclDISPID(126)  public Double getTop() throws ComException;
   @DeclDISPID(122)  public Double getWidth() throws ComException;

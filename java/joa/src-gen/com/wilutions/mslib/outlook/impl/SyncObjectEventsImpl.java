@@ -8,14 +8,14 @@ public class SyncObjectEventsImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(61441)  public void onSyncStart() throws ComException {
     this._dispatchCall(61441,"SyncStart", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61442)  public void onProgress(com.wilutions.mslib.outlook.OlSyncState State, String Description, Integer Value, Integer Max) throws ComException {
+  @DeclDISPID(61442)  public void onProgress(final com.wilutions.mslib.outlook.OlSyncState State, final String Description, final Integer Value, final Integer Max) throws ComException {
     assert(State != null);
     assert(Description != null);
     assert(Value != null);
     assert(Max != null);
     this._dispatchCall(61442,"Progress", DISPATCH_METHOD,null,State.value,Description,Value,Max);
   }
-  @DeclDISPID(61443)  public void onOnError(Integer Code, String Description) throws ComException {
+  @DeclDISPID(61443)  public void onOnError(final Integer Code, final String Description) throws ComException {
     assert(Code != null);
     assert(Description != null);
     this._dispatchCall(61443,"OnError", DISPATCH_METHOD,null,Code,Description);

@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C9B8A9EE-2243-9959-3E23-16C59850EC23}")
 public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joactrllib.IJoaBridgeDialog {
-  @DeclDISPID(11)  public void ShowModal(Object owner) throws ComException {
+  @DeclDISPID(11)  public void ShowModal(final Object owner) throws ComException {
     assert(owner != null);
     this._dispatchCall(11,"ShowModal", DISPATCH_METHOD,null,owner);
   }
@@ -17,7 +17,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Long)obj;
   }
-  @DeclDISPID(1)  public void setHWND(Long value) throws ComException {
+  @DeclDISPID(1)  public void setHWND(final Long value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"HWND", DISPATCH_PROPERTYPUT,value);
   }
@@ -26,7 +26,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(2)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Title", DISPATCH_PROPERTYPUT,value);
   }
@@ -35,7 +35,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(12)  public void setX(Integer value) throws ComException {
+  @DeclDISPID(12)  public void setX(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"X", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(13)  public void setY(Integer value) throws ComException {
+  @DeclDISPID(13)  public void setY(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(13,"Y", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(14)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(14)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(14,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(15)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(15)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(15,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(16)  public void setMinimizeBox(Boolean value) throws ComException {
+  @DeclDISPID(16)  public void setMinimizeBox(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(16,"MinimizeBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -80,7 +80,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(17)  public void setMaximizeBox(Boolean value) throws ComException {
+  @DeclDISPID(17)  public void setMaximizeBox(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(17,"MaximizeBox", DISPATCH_PROPERTYPUT,value);
   }
@@ -89,7 +89,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(18)  public void setCenterOnOwner(Boolean value) throws ComException {
+  @DeclDISPID(18)  public void setCenterOnOwner(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(18,"CenterOnOwner", DISPATCH_PROPERTYPUT,value);
   }
@@ -98,7 +98,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(19)  public void setResizable(Boolean value) throws ComException {
+  @DeclDISPID(19)  public void setResizable(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(19,"Resizable", DISPATCH_PROPERTYPUT,value);
   }
@@ -107,7 +107,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(20)  public void setMinHeight(Integer value) throws ComException {
+  @DeclDISPID(20)  public void setMinHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(20,"MinHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -116,7 +116,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(21)  public void setMaxHeight(Integer value) throws ComException {
+  @DeclDISPID(21)  public void setMaxHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(21,"MaxHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -125,7 +125,7 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(22)  public void setMinWidth(Integer value) throws ComException {
+  @DeclDISPID(22)  public void setMinWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(22,"MinWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -134,18 +134,18 @@ public class IJoaBridgeDialogImpl extends Dispatch implements com.wilutions.joac
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(23)  public void setMaxWidth(Integer value) throws ComException {
+  @DeclDISPID(23)  public void setMaxWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"MaxWidth", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(24)  public void SetFocusOnFirstChildWindow() throws ComException {
     this._dispatchCall(24,"SetFocusOnFirstChildWindow", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(25)  public void ShowModal2(Long hwndOwner) throws ComException {
+  @DeclDISPID(25)  public void ShowModal2(final Long hwndOwner) throws ComException {
     assert(hwndOwner != null);
     this._dispatchCall(25,"ShowModal2", DISPATCH_METHOD,null,hwndOwner);
   }
-  @DeclDISPID(26)  public void ShowModal3(IDispatch dispOwner) throws ComException {
+  @DeclDISPID(26)  public void ShowModal3(final IDispatch dispOwner) throws ComException {
     assert(dispOwner != null);
     this._dispatchCall(26,"ShowModal3", DISPATCH_METHOD,null,dispOwner);
   }

@@ -15,7 +15,7 @@ public class ChartGroupsImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoChartGroup Item(Object Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoChartGroup Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

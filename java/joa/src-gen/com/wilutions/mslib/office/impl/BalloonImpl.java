@@ -30,7 +30,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(1610809347)  public void setBalloonType(com.wilutions.mslib.office.MsoBalloonType value) throws ComException {
+  @DeclDISPID(1610809347)  public void setBalloonType(final com.wilutions.mslib.office.MsoBalloonType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809347,"BalloonType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -39,7 +39,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoBalloonType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809349)  public void setIcon(com.wilutions.mslib.office.MsoIconType value) throws ComException {
+  @DeclDISPID(1610809349)  public void setIcon(final com.wilutions.mslib.office.MsoIconType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809349,"Icon", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -48,7 +48,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoIconType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809351)  public void setHeading(String value) throws ComException {
+  @DeclDISPID(1610809351)  public void setHeading(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809351,"Heading", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809353)  public void setText(String value) throws ComException {
+  @DeclDISPID(1610809353)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809353,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809355)  public void setMode(com.wilutions.mslib.office.MsoModeType value) throws ComException {
+  @DeclDISPID(1610809355)  public void setMode(final com.wilutions.mslib.office.MsoModeType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809355,"Mode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -75,7 +75,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoModeType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809357)  public void setAnimation(com.wilutions.mslib.office.MsoAnimationType value) throws ComException {
+  @DeclDISPID(1610809357)  public void setAnimation(final com.wilutions.mslib.office.MsoAnimationType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809357,"Animation", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -84,7 +84,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoAnimationType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809359)  public void setButton(com.wilutions.mslib.office.MsoButtonSetType value) throws ComException {
+  @DeclDISPID(1610809359)  public void setButton(final com.wilutions.mslib.office.MsoButtonSetType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809359,"Button", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -93,7 +93,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoButtonSetType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809361)  public void setCallback(String value) throws ComException {
+  @DeclDISPID(1610809361)  public void setCallback(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809361,"Callback", DISPATCH_PROPERTYPUT,value);
   }
@@ -102,7 +102,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809363)  public void setPrivate(Integer value) throws ComException {
+  @DeclDISPID(1610809363)  public void setPrivate(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809363,"Private", DISPATCH_PROPERTYPUT,value);
   }
@@ -111,7 +111,7 @@ public class BalloonImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809365)  public void SetAvoidRectangle(Integer Left, Integer Top, Integer Right, Integer Bottom) throws ComException {
+  @DeclDISPID(1610809365)  public void SetAvoidRectangle(final Integer Left, final Integer Top, final Integer Right, final Integer Bottom) throws ComException {
     assert(Left != null);
     assert(Top != null);
     assert(Right != null);

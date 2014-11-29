@@ -15,7 +15,7 @@ public class MsoDebugOptions_UTsImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.MsoDebugOptions_UT getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.MsoDebugOptions_UT getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,20 +31,20 @@ public class MsoDebugOptions_UTsImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.MsoDebugOptions_UTs GetUnitTestsInCollection(String bstrCollectionName) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.MsoDebugOptions_UTs GetUnitTestsInCollection(final String bstrCollectionName) throws ComException {
     assert(bstrCollectionName != null);
     final Object obj = this._dispatchCall(2,"GetUnitTestsInCollection", DISPATCH_METHOD,null,bstrCollectionName);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.MsoDebugOptions_UTsImpl.class);
   }
-  @DeclDISPID(3)  public com.wilutions.mslib.office.MsoDebugOptions_UT GetUnitTest(String bstrCollectionName, String bstrUnitTestName) throws ComException {
+  @DeclDISPID(3)  public com.wilutions.mslib.office.MsoDebugOptions_UT GetUnitTest(final String bstrCollectionName, final String bstrUnitTestName) throws ComException {
     assert(bstrCollectionName != null);
     assert(bstrUnitTestName != null);
     final Object obj = this._dispatchCall(3,"GetUnitTest", DISPATCH_METHOD,null,bstrCollectionName,bstrUnitTestName);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.MsoDebugOptions_UTImpl.class);
   }
-  @DeclDISPID(4)  public com.wilutions.mslib.office.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(String bstrCollectionName, String bstrUnitTestNameFilter) throws ComException {
+  @DeclDISPID(4)  public com.wilutions.mslib.office.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(final String bstrCollectionName, final String bstrUnitTestNameFilter) throws ComException {
     assert(bstrCollectionName != null);
     assert(bstrUnitTestNameFilter != null);
     final Object obj = this._dispatchCall(4,"GetMatchingUnitTestsInCollection", DISPATCH_METHOD,null,bstrCollectionName,bstrUnitTestNameFilter);

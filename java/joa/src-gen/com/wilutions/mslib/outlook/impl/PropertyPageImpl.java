@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A915-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class PropertyPageImpl extends Dispatch implements com.wilutions.mslib.outlook.PropertyPage {
-  @DeclDISPID(8448)  public void GetPageInfo(ByRef<String> HelpFile, ByRef<Integer> HelpContext) throws ComException {
+  @DeclDISPID(8448)  public void GetPageInfo(final ByRef<String> HelpFile, final ByRef<Integer> HelpContext) throws ComException {
     assert(HelpFile != null);
     assert(HelpContext != null);
     this._dispatchCall(8448,"GetPageInfo", DISPATCH_METHOD,null,HelpFile,HelpContext);

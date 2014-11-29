@@ -14,7 +14,7 @@ public interface Conflicts extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Conflict Item(Object Index) throws ComException;
+  @DeclDISPID(81)  public Conflict Item(final Object Index) throws ComException;
   @DeclDISPID(86)  public Conflict GetFirst() throws ComException;
   @DeclDISPID(88)  public Conflict GetLast() throws ComException;
   @DeclDISPID(87)  public Conflict GetNext() throws ComException;

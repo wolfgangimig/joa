@@ -20,7 +20,7 @@ public class PickerDialogImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void setDataHandlerId(String value) throws ComException {
+  @DeclDISPID(1)  public void setDataHandlerId(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"DataHandlerId", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class PickerDialogImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setTitle(String value) throws ComException {
+  @DeclDISPID(2)  public void setTitle(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Title", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,13 +43,13 @@ public class PickerDialogImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerResultsImpl.class);
   }
-  @DeclDISPID(5)  public com.wilutions.mslib.office.PickerResults Show(Boolean IsMultiSelect, com.wilutions.mslib.office.PickerResults ExistingResults) throws ComException {
+  @DeclDISPID(5)  public com.wilutions.mslib.office.PickerResults Show(final Boolean IsMultiSelect, final com.wilutions.mslib.office.PickerResults ExistingResults) throws ComException {
     assert(IsMultiSelect != null);
     final Object obj = this._dispatchCall(5,"Show", DISPATCH_METHOD,null,IsMultiSelect,(ExistingResults!=null?ExistingResults:Dispatch.NULL));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerResultsImpl.class);
   }
-  @DeclDISPID(6)  public com.wilutions.mslib.office.PickerResults Resolve(String TokenText, Integer duplicateDlgMode) throws ComException {
+  @DeclDISPID(6)  public com.wilutions.mslib.office.PickerResults Resolve(final String TokenText, final Integer duplicateDlgMode) throws ComException {
     assert(TokenText != null);
     assert(duplicateDlgMode != null);
     final Object obj = this._dispatchCall(6,"Resolve", DISPATCH_METHOD,null,TokenText,duplicateDlgMode);

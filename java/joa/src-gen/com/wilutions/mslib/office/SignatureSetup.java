@@ -15,17 +15,17 @@ public interface SignatureSetup extends IDispatch {
   @DeclDISPID(2)  public String getId() throws ComException;
   @DeclDISPID(3)  public String getSignatureProvider() throws ComException;
   @DeclDISPID(4)  public String getSuggestedSigner() throws ComException;
-  @DeclDISPID(4)  public void setSuggestedSigner(String value) throws ComException;
+  @DeclDISPID(4)  public void setSuggestedSigner(final String value) throws ComException;
   @DeclDISPID(5)  public String getSuggestedSignerLine2() throws ComException;
-  @DeclDISPID(5)  public void setSuggestedSignerLine2(String value) throws ComException;
+  @DeclDISPID(5)  public void setSuggestedSignerLine2(final String value) throws ComException;
   @DeclDISPID(6)  public String getSuggestedSignerEmail() throws ComException;
-  @DeclDISPID(6)  public void setSuggestedSignerEmail(String value) throws ComException;
+  @DeclDISPID(6)  public void setSuggestedSignerEmail(final String value) throws ComException;
   @DeclDISPID(7)  public String getSigningInstructions() throws ComException;
-  @DeclDISPID(7)  public void setSigningInstructions(String value) throws ComException;
+  @DeclDISPID(7)  public void setSigningInstructions(final String value) throws ComException;
   @DeclDISPID(8)  public Boolean getAllowComments() throws ComException;
-  @DeclDISPID(8)  public void setAllowComments(Boolean value) throws ComException;
+  @DeclDISPID(8)  public void setAllowComments(final Boolean value) throws ComException;
   @DeclDISPID(9)  public Boolean getShowSignDate() throws ComException;
-  @DeclDISPID(9)  public void setShowSignDate(Boolean value) throws ComException;
+  @DeclDISPID(9)  public void setShowSignDate(final Boolean value) throws ComException;
   @DeclDISPID(10)  public String getAdditionalXml() throws ComException;
-  @DeclDISPID(10)  public void setAdditionalXml(String value) throws ComException;
+  @DeclDISPID(10)  public void setAdditionalXml(final String value) throws ComException;
 }

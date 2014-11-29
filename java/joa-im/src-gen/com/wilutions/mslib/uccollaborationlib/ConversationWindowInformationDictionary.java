@@ -14,7 +14,7 @@ public class ConversationWindowInformationDictionary extends Dispatch implements
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public Object getItem(ConversationWindowInformationType _key) throws ComException {
+  @DeclDISPID(0)  public Object getItem(final ConversationWindowInformationType _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_key.value);
     if (obj == null) return null;
@@ -30,26 +30,26 @@ public class ConversationWindowInformationDictionary extends Dispatch implements
     if (obj == null) return null;
     return (Object[])obj;
   }
-  @DeclDISPID(1610743812)  public Boolean TryGetValue(ConversationWindowInformationType _key, ByRef<Object> _itemValue) throws ComException {
+  @DeclDISPID(1610743812)  public Boolean TryGetValue(final ConversationWindowInformationType _key, final ByRef<Object> _itemValue) throws ComException {
     assert(_key != null);
     assert(_itemValue != null);
     final Object obj = this._dispatchCall(1610743812,"TryGetValue", DISPATCH_METHOD,null,_key.value,_itemValue);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743813)  public ConversationWindowInformationType GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743813)  public ConversationWindowInformationType GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743813,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return ConversationWindowInformationType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743814)  public Object GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743814)  public Object GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743814,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(ConversationWindowInformationType _key) throws ComException {
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final ConversationWindowInformationType _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(1610743815,"ContainsKey", DISPATCH_METHOD,null,_key.value);
     if (obj == null) return null;

@@ -10,7 +10,7 @@ public class IVideoChannelCollectionImpl extends Dispatch implements com.wilutio
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IVideoChannel getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IVideoChannel getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
@@ -21,7 +21,7 @@ public class IVideoChannelCollectionImpl extends Dispatch implements com.wilutio
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743811)  public Integer IndexOf(com.wilutions.mslib.uccollaborationlib.IVideoChannel _videoChannel) throws ComException {
+  @DeclDISPID(1610743811)  public Integer IndexOf(final com.wilutions.mslib.uccollaborationlib.IVideoChannel _videoChannel) throws ComException {
     final Object obj = this._dispatchCall(1610743811,"IndexOf", DISPATCH_METHOD,null,(_videoChannel!=null?_videoChannel:Dispatch.NULL));
     if (obj == null) return null;
     return (Integer)obj;

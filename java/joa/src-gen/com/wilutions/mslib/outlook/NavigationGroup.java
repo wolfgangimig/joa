@@ -45,7 +45,7 @@ public class NavigationGroup extends Dispatch implements _NavigationGroup {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8450)  public void setName(String value) throws ComException {
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8450,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -54,7 +54,7 @@ public class NavigationGroup extends Dispatch implements _NavigationGroup {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64455)  public void setPosition(Integer value) throws ComException {
+  @DeclDISPID(64455)  public void setPosition(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64455,"Position", DISPATCH_PROPERTYPUT,value);
   }

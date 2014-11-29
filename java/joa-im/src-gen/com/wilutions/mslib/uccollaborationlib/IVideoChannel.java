@@ -13,9 +13,9 @@ public interface IVideoChannel extends IDispatch {
   @DeclDISPID(1610743809)  public ChannelState getState() throws ComException;
   @DeclDISPID(1610743810)  public IModality getModality() throws ComException;
   @DeclDISPID(1610743811)  public Boolean getIsContributing() throws ComException;
-  @DeclDISPID(1610743812)  public IAsynchronousOperation Start(Object _mediaChannelCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743813)  public IAsynchronousOperation Stop(Object _mediaChannelCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743814)  public Boolean CanInvoke(ChannelAction _action) throws ComException;
+  @DeclDISPID(1610743812)  public IAsynchronousOperation Start(final Object _mediaChannelCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743813)  public IAsynchronousOperation Stop(final Object _mediaChannelCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743814)  public Boolean CanInvoke(final ChannelAction _action) throws ComException;
   @DeclDISPID(1610809344)  public IVideoWindow getRenderVideoWindow() throws ComException;
   @DeclDISPID(1610809345)  public IVideoWindow getCaptureVideoWindow() throws ComException;
 }

@@ -44,15 +44,15 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(8451)  public void Close(OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(8451)  public void Close(final OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(8451,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
-  @DeclDISPID(8452)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(8452)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(8452,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(8456)  public void HideFormPage(String PageName) throws ComException {
+  @DeclDISPID(8456)  public void HideFormPage(final String PageName) throws ComException {
     assert(PageName != null);
     this._dispatchCall(8456,"HideFormPage", DISPATCH_METHOD,null,PageName);
   }
@@ -61,11 +61,11 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(8460)  public void SetCurrentFormPage(String PageName) throws ComException {
+  @DeclDISPID(8460)  public void SetCurrentFormPage(final String PageName) throws ComException {
     assert(PageName != null);
     this._dispatchCall(8460,"SetCurrentFormPage", DISPATCH_METHOD,null,PageName);
   }
-  @DeclDISPID(8457)  public void ShowFormPage(String PageName) throws ComException {
+  @DeclDISPID(8457)  public void ShowFormPage(final String PageName) throws ComException {
     assert(PageName != null);
     this._dispatchCall(8457,"ShowFormPage", DISPATCH_METHOD,null,PageName);
   }
@@ -84,7 +84,7 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8468)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(8468)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(8468,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -93,7 +93,7 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8469)  public void setLeft(Integer value) throws ComException {
+  @DeclDISPID(8469)  public void setLeft(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(8469,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -102,7 +102,7 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8470)  public void setTop(Integer value) throws ComException {
+  @DeclDISPID(8470)  public void setTop(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(8470,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -111,7 +111,7 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8471)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(8471)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(8471,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -120,14 +120,14 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return OlWindowState.valueOf((Integer)obj);
   }
-  @DeclDISPID(8466)  public void setWindowState(OlWindowState value) throws ComException {
+  @DeclDISPID(8466)  public void setWindowState(final OlWindowState value) throws ComException {
     assert(value != null);
     this._dispatchCall(8466,"WindowState", DISPATCH_PROPERTYPUT,value.value);
   }
   @DeclDISPID(8467)  public void Activate() throws ComException {
     this._dispatchCall(8467,"Activate", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(64201)  public void SetControlItemProperty(IDispatch Control, String PropertyName) throws ComException {
+  @DeclDISPID(64201)  public void SetControlItemProperty(final IDispatch Control, final String PropertyName) throws ComException {
     assert(PropertyName != null);
     this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,(Control!=null?Control:Dispatch.NULL),PropertyName);
   }
@@ -136,13 +136,13 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(64511)  public IDispatch OpenFormRegion(String Path) throws ComException {
+  @DeclDISPID(64511)  public IDispatch OpenFormRegion(final String Path) throws ComException {
     assert(Path != null);
     final Object obj = this._dispatchCall(64511,"OpenFormRegion", DISPATCH_METHOD,null,Path);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(64512)  public void SaveFormRegion(IDispatch Page, String FileName) throws ComException {
+  @DeclDISPID(64512)  public void SaveFormRegion(final IDispatch Page, final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(64512,"SaveFormRegion", DISPATCH_METHOD,null,(Page!=null?Page:Dispatch.NULL),FileName);
   }
@@ -151,7 +151,7 @@ public class Inspector extends Dispatch implements _Inspector {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._AttachmentSelectionImpl.class);
   }
-  @DeclDISPID(64647)  public void SetSchedulingStartTime(java.util.Date Start) throws ComException {
+  @DeclDISPID(64647)  public void SetSchedulingStartTime(final java.util.Date Start) throws ComException {
     assert(Start != null);
     this._dispatchCall(64647,"SetSchedulingStartTime", DISPATCH_METHOD,null,Start);
   }

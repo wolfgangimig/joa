@@ -30,7 +30,7 @@ public class _MarkAsTaskRuleActionImpl extends Dispatch implements com.wilutions
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class _MarkAsTaskRuleActionImpl extends Dispatch implements com.wilutions
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64292)  public void setFlagTo(String value) throws ComException {
+  @DeclDISPID(64292)  public void setFlagTo(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64292,"FlagTo", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class _MarkAsTaskRuleActionImpl extends Dispatch implements com.wilutions
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlMarkInterval.valueOf((Integer)obj);
   }
-  @DeclDISPID(64293)  public void setMarkInterval(com.wilutions.mslib.outlook.OlMarkInterval value) throws ComException {
+  @DeclDISPID(64293)  public void setMarkInterval(final com.wilutions.mslib.outlook.OlMarkInterval value) throws ComException {
     assert(value != null);
     this._dispatchCall(64293,"MarkInterval", DISPATCH_PROPERTYPUT,value.value);
   }

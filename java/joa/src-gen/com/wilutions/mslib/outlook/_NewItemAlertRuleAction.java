@@ -14,8 +14,8 @@ public interface _NewItemAlertRuleAction extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(103)  public Boolean getEnabled() throws ComException;
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException;
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException;
   @DeclDISPID(64271)  public OlRuleActionType getActionType() throws ComException;
   @DeclDISPID(64295)  public String getText() throws ComException;
-  @DeclDISPID(64295)  public void setText(String value) throws ComException;
+  @DeclDISPID(64295)  public void setText(final String value) throws ComException;
 }

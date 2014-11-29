@@ -20,11 +20,11 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(10)  public void IncrementBrightness(Float Increment) throws ComException {
+  @DeclDISPID(10)  public void IncrementBrightness(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(10,"IncrementBrightness", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(11)  public void IncrementContrast(Float Increment) throws ComException {
+  @DeclDISPID(11)  public void IncrementContrast(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(11,"IncrementContrast", DISPATCH_METHOD,null,Increment);
   }
@@ -33,7 +33,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(100)  public void setBrightness(Float value) throws ComException {
+  @DeclDISPID(100)  public void setBrightness(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(100,"Brightness", DISPATCH_PROPERTYPUT,value);
   }
@@ -42,7 +42,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPictureColorType.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setColorType(com.wilutions.mslib.office.MsoPictureColorType value) throws ComException {
+  @DeclDISPID(101)  public void setColorType(final com.wilutions.mslib.office.MsoPictureColorType value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"ColorType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -51,7 +51,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(102)  public void setContrast(Float value) throws ComException {
+  @DeclDISPID(102)  public void setContrast(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"Contrast", DISPATCH_PROPERTYPUT,value);
   }
@@ -60,7 +60,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(103)  public void setCropBottom(Float value) throws ComException {
+  @DeclDISPID(103)  public void setCropBottom(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"CropBottom", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(104)  public void setCropLeft(Float value) throws ComException {
+  @DeclDISPID(104)  public void setCropLeft(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"CropLeft", DISPATCH_PROPERTYPUT,value);
   }
@@ -78,7 +78,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(105)  public void setCropRight(Float value) throws ComException {
+  @DeclDISPID(105)  public void setCropRight(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"CropRight", DISPATCH_PROPERTYPUT,value);
   }
@@ -87,7 +87,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(106)  public void setCropTop(Float value) throws ComException {
+  @DeclDISPID(106)  public void setCropTop(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"CropTop", DISPATCH_PROPERTYPUT,value);
   }
@@ -97,7 +97,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.office.MsoRGBType(als);
   }
-  @DeclDISPID(107)  public void setTransparencyColor(com.wilutions.mslib.office.MsoRGBType value) throws ComException {
+  @DeclDISPID(107)  public void setTransparencyColor(final com.wilutions.mslib.office.MsoRGBType value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"TransparencyColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -106,7 +106,7 @@ public class PictureFormatImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(108)  public void setTransparentBackground(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(108)  public void setTransparentBackground(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(108,"TransparentBackground", DISPATCH_PROPERTYPUT,value.value);
   }

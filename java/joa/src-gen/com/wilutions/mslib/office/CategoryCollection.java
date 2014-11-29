@@ -11,8 +11,8 @@ public interface CategoryCollection extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(118)  public Integer getCount() throws ComException;
-  @DeclDISPID(170)  public IMsoCategory Item(Object Index) throws ComException;
+  @DeclDISPID(170)  public IMsoCategory Item(final Object Index) throws ComException;
   @DeclDISPID(148)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(149)  public Integer getCreator() throws ComException;
-  @DeclDISPID(0)  public IMsoCategory get_Default(Object Index) throws ComException;
+  @DeclDISPID(0)  public IMsoCategory get_Default(final Object Index) throws ComException;
 }

@@ -28,7 +28,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(407)  public void Apply() throws ComException {
     this._dispatchCall(407,"Apply", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61490)  public com.wilutions.mslib.outlook.View Copy(String Name, com.wilutions.mslib.outlook.OlViewSaveOption SaveOption) throws ComException {
+  @DeclDISPID(61490)  public com.wilutions.mslib.outlook.View Copy(final String Name, final com.wilutions.mslib.outlook.OlViewSaveOption SaveOption) throws ComException {
     assert(Name != null);
     assert(SaveOption != null);
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null,Name,SaveOption.value);
@@ -49,7 +49,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64065)  public void setLanguage(String value) throws ComException {
+  @DeclDISPID(64065)  public void setLanguage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64065,"Language", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64064)  public void setLockUserChanges(Boolean value) throws ComException {
+  @DeclDISPID(64064)  public void setLockUserChanges(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64064,"LockUserChanges", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -91,11 +91,11 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64060)  public void setXML(String value) throws ComException {
+  @DeclDISPID(64060)  public void setXML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64060,"XML", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64054)  public void GoToDate(java.util.Date Date) throws ComException {
+  @DeclDISPID(64054)  public void GoToDate(final java.util.Date Date) throws ComException {
     assert(Date != null);
     this._dispatchCall(64054,"GoToDate", DISPATCH_METHOD,null,Date);
   }
@@ -104,7 +104,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(409)  public void setFilter(String value) throws ComException {
+  @DeclDISPID(409)  public void setFilter(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(409,"Filter", DISPATCH_PROPERTYPUT,value);
   }
@@ -113,7 +113,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8449)  public void setStartField(String value) throws ComException {
+  @DeclDISPID(8449)  public void setStartField(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8449,"StartField", DISPATCH_PROPERTYPUT,value);
   }
@@ -122,7 +122,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64379)  public void setEndField(String value) throws ComException {
+  @DeclDISPID(64379)  public void setEndField(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64379,"EndField", DISPATCH_PROPERTYPUT,value);
   }
@@ -137,7 +137,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlDefaultExpandCollapseSetting.valueOf((Integer)obj);
   }
-  @DeclDISPID(64384)  public void setDefaultExpandCollapseSetting(com.wilutions.mslib.outlook.OlDefaultExpandCollapseSetting value) throws ComException {
+  @DeclDISPID(64384)  public void setDefaultExpandCollapseSetting(final com.wilutions.mslib.outlook.OlDefaultExpandCollapseSetting value) throws ComException {
     assert(value != null);
     this._dispatchCall(64384,"DefaultExpandCollapseSetting", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -146,7 +146,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64373)  public void setShowWeekNumbers(Boolean value) throws ComException {
+  @DeclDISPID(64373)  public void setShowWeekNumbers(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64373,"ShowWeekNumbers", DISPATCH_PROPERTYPUT,value);
   }
@@ -155,7 +155,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64043)  public void setMaxLabelWidth(Integer value) throws ComException {
+  @DeclDISPID(64043)  public void setMaxLabelWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(64043,"MaxLabelWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -164,7 +164,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64372)  public void setShowLabelWhenViewingByMonth(Boolean value) throws ComException {
+  @DeclDISPID(64372)  public void setShowLabelWhenViewingByMonth(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64372,"ShowLabelWhenViewingByMonth", DISPATCH_PROPERTYPUT,value);
   }
@@ -191,7 +191,7 @@ public class _TimelineViewImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlTimelineViewMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(64392)  public void setTimelineViewMode(com.wilutions.mslib.outlook.OlTimelineViewMode value) throws ComException {
+  @DeclDISPID(64392)  public void setTimelineViewMode(final com.wilutions.mslib.outlook.OlTimelineViewMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(64392,"TimelineViewMode", DISPATCH_PROPERTYPUT,value.value);
   }

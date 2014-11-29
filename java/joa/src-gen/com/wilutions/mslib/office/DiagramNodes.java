@@ -12,7 +12,7 @@ public interface DiagramNodes extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(0)  public DiagramNode Item(Object Index) throws ComException;
+  @DeclDISPID(0)  public DiagramNode Item(final Object Index) throws ComException;
   @DeclDISPID(10)  public void SelectAll() throws ComException;
   @DeclDISPID(100)  public IDispatch getParent() throws ComException;
   @DeclDISPID(101)  public Integer getCount() throws ComException;

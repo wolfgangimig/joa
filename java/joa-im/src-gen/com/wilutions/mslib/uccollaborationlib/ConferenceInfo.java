@@ -29,7 +29,7 @@ public class ConferenceInfo extends Dispatch implements IConferenceInfo {
     if (obj == null) return null;
     return ConferenceAdmissionType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743811)  public void setAdmissionType(ConferenceAdmissionType value) throws ComException {
+  @DeclDISPID(1610743811)  public void setAdmissionType(final ConferenceAdmissionType value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743811,"AdmissionType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -38,7 +38,7 @@ public class ConferenceInfo extends Dispatch implements IConferenceInfo {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743813)  public void setAdmissionKey(String value) throws ComException {
+  @DeclDISPID(1610743813)  public void setAdmissionKey(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743813,"AdmissionKey", DISPATCH_PROPERTYPUT,value);
   }

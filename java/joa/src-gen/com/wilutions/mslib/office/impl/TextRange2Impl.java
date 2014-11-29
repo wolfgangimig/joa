@@ -20,7 +20,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setText(String value) throws ComException {
+  @DeclDISPID(0)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.TextRange2 Item(Object Index) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.TextRange2 Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(2,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -45,42 +45,42 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(4)  public com.wilutions.mslib.office.TextRange2 getParagraphs(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(4)  public com.wilutions.mslib.office.TextRange2 getParagraphs(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(4,"Paragraphs", DISPATCH_PROPERTYGET,null,Start,Length);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(5)  public com.wilutions.mslib.office.TextRange2 getSentences(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(5)  public com.wilutions.mslib.office.TextRange2 getSentences(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(5,"Sentences", DISPATCH_PROPERTYGET,null,Start,Length);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(6)  public com.wilutions.mslib.office.TextRange2 getWords(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(6)  public com.wilutions.mslib.office.TextRange2 getWords(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(6,"Words", DISPATCH_PROPERTYGET,null,Start,Length);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(7)  public com.wilutions.mslib.office.TextRange2 getCharacters(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(7)  public com.wilutions.mslib.office.TextRange2 getCharacters(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(7,"Characters", DISPATCH_PROPERTYGET,null,Start,Length);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(8)  public com.wilutions.mslib.office.TextRange2 getLines(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(8)  public com.wilutions.mslib.office.TextRange2 getLines(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(8,"Lines", DISPATCH_PROPERTYGET,null,Start,Length);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(9)  public com.wilutions.mslib.office.TextRange2 getRuns(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(9)  public com.wilutions.mslib.office.TextRange2 getRuns(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(9,"Runs", DISPATCH_PROPERTYGET,null,Start,Length);
@@ -132,19 +132,19 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(19)  public com.wilutions.mslib.office.TextRange2 InsertAfter(String NewText) throws ComException {
+  @DeclDISPID(19)  public com.wilutions.mslib.office.TextRange2 InsertAfter(final String NewText) throws ComException {
     assert(NewText != null);
     final Object obj = this._dispatchCall(19,"InsertAfter", DISPATCH_METHOD,null,NewText);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(20)  public com.wilutions.mslib.office.TextRange2 InsertBefore(String NewText) throws ComException {
+  @DeclDISPID(20)  public com.wilutions.mslib.office.TextRange2 InsertBefore(final String NewText) throws ComException {
     assert(NewText != null);
     final Object obj = this._dispatchCall(20,"InsertBefore", DISPATCH_METHOD,null,NewText);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(21)  public com.wilutions.mslib.office.TextRange2 InsertSymbol(String FontName, Integer CharNumber, com.wilutions.mslib.office.MsoTriState Unicode) throws ComException {
+  @DeclDISPID(21)  public com.wilutions.mslib.office.TextRange2 InsertSymbol(final String FontName, final Integer CharNumber, final com.wilutions.mslib.office.MsoTriState Unicode) throws ComException {
     assert(FontName != null);
     assert(CharNumber != null);
     assert(Unicode != null);
@@ -169,13 +169,13 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(27)  public com.wilutions.mslib.office.TextRange2 PasteSpecial(com.wilutions.mslib.office.MsoClipboardFormat Format) throws ComException {
+  @DeclDISPID(27)  public com.wilutions.mslib.office.TextRange2 PasteSpecial(final com.wilutions.mslib.office.MsoClipboardFormat Format) throws ComException {
     assert(Format != null);
     final Object obj = this._dispatchCall(27,"PasteSpecial", DISPATCH_METHOD,null,Format.value);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(28)  public void ChangeCase(com.wilutions.mslib.office.MsoTextChangeCase Type) throws ComException {
+  @DeclDISPID(28)  public void ChangeCase(final com.wilutions.mslib.office.MsoTextChangeCase Type) throws ComException {
     assert(Type != null);
     this._dispatchCall(28,"ChangeCase", DISPATCH_METHOD,null,Type.value);
   }
@@ -185,7 +185,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(30)  public void RemovePeriods() throws ComException {
     this._dispatchCall(30,"RemovePeriods", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(31)  public com.wilutions.mslib.office.TextRange2 Find(String FindWhat, Integer After, com.wilutions.mslib.office.MsoTriState MatchCase, com.wilutions.mslib.office.MsoTriState WholeWords) throws ComException {
+  @DeclDISPID(31)  public com.wilutions.mslib.office.TextRange2 Find(final String FindWhat, final Integer After, final com.wilutions.mslib.office.MsoTriState MatchCase, final com.wilutions.mslib.office.MsoTriState WholeWords) throws ComException {
     assert(FindWhat != null);
     assert(After != null);
     assert(MatchCase != null);
@@ -194,7 +194,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(32)  public com.wilutions.mslib.office.TextRange2 Replace(String FindWhat, String ReplaceWhat, Integer After, com.wilutions.mslib.office.MsoTriState MatchCase, com.wilutions.mslib.office.MsoTriState WholeWords) throws ComException {
+  @DeclDISPID(32)  public com.wilutions.mslib.office.TextRange2 Replace(final String FindWhat, final String ReplaceWhat, final Integer After, final com.wilutions.mslib.office.MsoTriState MatchCase, final com.wilutions.mslib.office.MsoTriState WholeWords) throws ComException {
     assert(FindWhat != null);
     assert(ReplaceWhat != null);
     assert(After != null);
@@ -204,7 +204,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(33)  public void RotatedBounds(ByRef<Float> X1, ByRef<Float> Y1, ByRef<Float> X2, ByRef<Float> Y2, ByRef<Float> X3, ByRef<Float> Y3, ByRef<Float> x4, ByRef<Float> y4) throws ComException {
+  @DeclDISPID(33)  public void RotatedBounds(final ByRef<Float> X1, final ByRef<Float> Y1, final ByRef<Float> X2, final ByRef<Float> Y2, final ByRef<Float> X3, final ByRef<Float> Y3, final ByRef<Float> x4, final ByRef<Float> y4) throws ComException {
     assert(X1 != null);
     assert(Y1 != null);
     assert(X2 != null);
@@ -220,7 +220,7 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoLanguageID.valueOf((Integer)obj);
   }
-  @DeclDISPID(34)  public void setLanguageID(com.wilutions.mslib.office.MsoLanguageID value) throws ComException {
+  @DeclDISPID(34)  public void setLanguageID(final com.wilutions.mslib.office.MsoLanguageID value) throws ComException {
     assert(value != null);
     this._dispatchCall(34,"LanguageID", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -230,14 +230,14 @@ public class TextRange2Impl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(36)  public void LtrRun() throws ComException {
     this._dispatchCall(36,"LtrRun", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(37)  public com.wilutions.mslib.office.TextRange2 getMathZones(Integer Start, Integer Length) throws ComException {
+  @DeclDISPID(37)  public com.wilutions.mslib.office.TextRange2 getMathZones(final Integer Start, final Integer Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(37,"MathZones", DISPATCH_PROPERTYGET,null,Start,Length);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.TextRange2Impl.class);
   }
-  @DeclDISPID(38)  public com.wilutions.mslib.office.TextRange2 InsertChartField(com.wilutions.mslib.office.MsoChartFieldType ChartFieldType, String Formula, Integer Position) throws ComException {
+  @DeclDISPID(38)  public com.wilutions.mslib.office.TextRange2 InsertChartField(final com.wilutions.mslib.office.MsoChartFieldType ChartFieldType, final String Formula, final Integer Position) throws ComException {
     assert(ChartFieldType != null);
     assert(Formula != null);
     assert(Position != null);

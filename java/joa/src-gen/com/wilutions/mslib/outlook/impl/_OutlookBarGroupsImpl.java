@@ -30,20 +30,20 @@ public class _OutlookBarGroupsImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.OutlookBarGroup Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.OutlookBarGroup Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.OutlookBarGroupImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.OutlookBarGroup Add(String Name, Object Index) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.OutlookBarGroup Add(final String Name, final Object Index) throws ComException {
     assert(Name != null);
     assert(Index != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.OutlookBarGroupImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

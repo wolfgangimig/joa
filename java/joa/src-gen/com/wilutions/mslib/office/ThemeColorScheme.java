@@ -13,9 +13,9 @@ public interface ThemeColorScheme extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
   @DeclDISPID(2)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public ThemeColor Colors(MsoThemeColorSchemeIndex Index) throws ComException;
+  @DeclDISPID(0)  public ThemeColor Colors(final MsoThemeColorSchemeIndex Index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(3)  public void Load(String FileName) throws ComException;
-  @DeclDISPID(4)  public void Save(String FileName) throws ComException;
-  @DeclDISPID(5)  public MsoRGBType GetCustomColor(String Name) throws ComException;
+  @DeclDISPID(3)  public void Load(final String FileName) throws ComException;
+  @DeclDISPID(4)  public void Save(final String FileName) throws ComException;
+  @DeclDISPID(5)  public MsoRGBType GetCustomColor(final String Name) throws ComException;
 }

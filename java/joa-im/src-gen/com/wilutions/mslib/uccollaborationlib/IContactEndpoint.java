@@ -12,5 +12,5 @@ public interface IContactEndpoint extends IDispatch {
   @DeclDISPID(1610743808)  public ContactEndpointType getType() throws ComException;
   @DeclDISPID(1610743809)  public String getDisplayName() throws ComException;
   @DeclDISPID(1610743810)  public String getUri() throws ComException;
-  @DeclDISPID(1610743811)  public Boolean CanStart(ModalityTypes _modalityTypes) throws ComException;
+  @DeclDISPID(1610743811)  public Boolean CanStart(final ModalityTypes _modalityTypes) throws ComException;
 }

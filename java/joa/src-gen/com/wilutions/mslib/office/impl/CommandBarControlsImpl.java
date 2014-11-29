@@ -15,7 +15,7 @@ public class CommandBarControlsImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809344)  public com.wilutions.mslib.office.CommandBarControl Add(Object Type, Object Id, Object Parameter, Object Before, Object Temporary) throws ComException {
+  @DeclDISPID(1610809344)  public com.wilutions.mslib.office.CommandBarControl Add(final Object Type, final Object Id, final Object Parameter, final Object Before, final Object Temporary) throws ComException {
     assert(Type != null);
     assert(Id != null);
     assert(Parameter != null);
@@ -30,7 +30,7 @@ public class CommandBarControlsImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.CommandBarControl getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.CommandBarControl getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

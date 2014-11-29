@@ -15,7 +15,7 @@ public class PickerPropertiesImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.PickerProperty getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.PickerProperty getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -26,7 +26,7 @@ public class PickerPropertiesImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.PickerProperty Add(String Id, String Value, com.wilutions.mslib.office.MsoPickerField Type) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.PickerProperty Add(final String Id, final String Value, final com.wilutions.mslib.office.MsoPickerField Type) throws ComException {
     assert(Id != null);
     assert(Value != null);
     assert(Type != null);
@@ -34,7 +34,7 @@ public class PickerPropertiesImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerPropertyImpl.class);
   }
-  @DeclDISPID(3)  public void Remove(String Id) throws ComException {
+  @DeclDISPID(3)  public void Remove(final String Id) throws ComException {
     assert(Id != null);
     this._dispatchCall(3,"Remove", DISPATCH_METHOD,null,Id);
   }

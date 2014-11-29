@@ -9,8 +9,8 @@ import com.wilutions.com.*;
 @CoInterface(guid="{AA186C92-181E-417F-B150-FCA0F367E0FC}")
 public interface _IFrequentContactsEvents extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(500)  public void onOnNameChanged(IGroup _eventSource, IGroupNameChangedEventData _eventData) throws ComException;
-  @DeclDISPID(501)  public void onOnContactAdded(IGroup _eventSource, IGroupMemberChangedEventData _eventData) throws ComException;
-  @DeclDISPID(502)  public void onOnContactRemoved(IGroup _eventSource, IGroupMemberChangedEventData _eventData) throws ComException;
-  @DeclDISPID(504)  public void onOnContactPositionChanged(IFrequentContacts _eventSource, IContactPositionChangedEventData _eventData) throws ComException;
+  @DeclDISPID(500)  public void onOnNameChanged(final IGroup _eventSource, final IGroupNameChangedEventData _eventData) throws ComException;
+  @DeclDISPID(501)  public void onOnContactAdded(final IGroup _eventSource, final IGroupMemberChangedEventData _eventData) throws ComException;
+  @DeclDISPID(502)  public void onOnContactRemoved(final IGroup _eventSource, final IGroupMemberChangedEventData _eventData) throws ComException;
+  @DeclDISPID(504)  public void onOnContactPositionChanged(final IFrequentContacts _eventSource, final IContactPositionChangedEventData _eventData) throws ComException;
 }

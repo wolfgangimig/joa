@@ -14,7 +14,7 @@ public interface IVoiceMailsManager extends IDispatch {
   @DeclDISPID(1610743810)  public void Reset() throws ComException;
   @DeclDISPID(1610743811)  public Integer getNewVoiceMailCountSinceLastReset() throws ComException;
   @DeclDISPID(1610743812)  public Integer getMaxItems() throws ComException;
-  @DeclDISPID(1610743812)  public void setMaxItems(Integer value) throws ComException;
-  @DeclDISPID(1610743814)  public IAsynchronousOperation GetUnreadVoiceMails(Object _voiceMailsManagerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743815)  public IAsynchronousOperation GetAllVoiceMails(Object _voiceMailsManagerCallback, Object _state) throws ComException;
+  @DeclDISPID(1610743812)  public void setMaxItems(final Integer value) throws ComException;
+  @DeclDISPID(1610743814)  public IAsynchronousOperation GetUnreadVoiceMails(final Object _voiceMailsManagerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743815)  public IAsynchronousOperation GetAllVoiceMails(final Object _voiceMailsManagerCallback, final Object _state) throws ComException;
 }

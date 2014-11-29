@@ -30,17 +30,17 @@ public class IConversationWindowImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743813)  public void Move(Integer _left, Integer _top) throws ComException {
+  @DeclDISPID(1610743813)  public void Move(final Integer _left, final Integer _top) throws ComException {
     assert(_left != null);
     assert(_top != null);
     this._dispatchCall(1610743813,"Move", DISPATCH_METHOD,null,_left,_top);
   }
-  @DeclDISPID(1610743814)  public void Resize(Integer _width, Integer _height) throws ComException {
+  @DeclDISPID(1610743814)  public void Resize(final Integer _width, final Integer _height) throws ComException {
     assert(_width != null);
     assert(_height != null);
     this._dispatchCall(1610743814,"Resize", DISPATCH_METHOD,null,_width,_height);
   }
-  @DeclDISPID(1610743815)  public void MoveAndResize(Integer _left, Integer _top, Integer _width, Integer _height) throws ComException {
+  @DeclDISPID(1610743815)  public void MoveAndResize(final Integer _left, final Integer _top, final Integer _width, final Integer _height) throws ComException {
     assert(_left != null);
     assert(_top != null);
     assert(_width != null);
@@ -50,7 +50,7 @@ public class IConversationWindowImpl extends Dispatch implements com.wilutions.m
   @DeclDISPID(1610743816)  public void Close() throws ComException {
     this._dispatchCall(1610743816,"Close", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743817)  public void Dock(Integer _parentHWND) throws ComException {
+  @DeclDISPID(1610743817)  public void Dock(final Integer _parentHWND) throws ComException {
     assert(_parentHWND != null);
     this._dispatchCall(1610743817,"Dock", DISPATCH_METHOD,null,_parentHWND);
   }
@@ -77,7 +77,7 @@ public class IConversationWindowImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743823)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation OpenExtensibilityWindow(String _applicationId, Object _callback, Object _state) throws ComException {
+  @DeclDISPID(1610743823)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation OpenExtensibilityWindow(final String _applicationId, final Object _callback, final Object _state) throws ComException {
     assert(_applicationId != null);
     assert(_callback != null);
     assert(_state != null);
@@ -85,11 +85,11 @@ public class IConversationWindowImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743824)  public void CloseExtensibilityWindow(String _applicationId) throws ComException {
+  @DeclDISPID(1610743824)  public void CloseExtensibilityWindow(final String _applicationId) throws ComException {
     assert(_applicationId != null);
     this._dispatchCall(1610743824,"CloseExtensibilityWindow", DISPATCH_METHOD,null,_applicationId);
   }
-  @DeclDISPID(1610743825)  public void FlashExtensibilityWindow(String _applicationId, Boolean _flash) throws ComException {
+  @DeclDISPID(1610743825)  public void FlashExtensibilityWindow(final String _applicationId, final Boolean _flash) throws ComException {
     assert(_applicationId != null);
     assert(_flash != null);
     this._dispatchCall(1610743825,"FlashExtensibilityWindow", DISPATCH_METHOD,null,_applicationId,_flash);

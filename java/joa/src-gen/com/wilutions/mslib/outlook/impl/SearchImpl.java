@@ -58,7 +58,7 @@ public class SearchImpl extends Dispatch implements com.wilutions.mslib.outlook.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64173)  public com.wilutions.mslib.outlook.MAPIFolder Save(String Name) throws ComException {
+  @DeclDISPID(64173)  public com.wilutions.mslib.outlook.MAPIFolder Save(final String Name) throws ComException {
     assert(Name != null);
     final Object obj = this._dispatchCall(64173,"Save", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;

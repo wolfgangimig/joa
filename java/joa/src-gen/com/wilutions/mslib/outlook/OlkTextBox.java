@@ -14,7 +14,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(217)  public void setAutoTab(Boolean value) throws ComException {
+  @DeclDISPID(217)  public void setAutoTab(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(217,"AutoTab", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(218)  public void setAutoWordSelect(Boolean value) throws ComException {
+  @DeclDISPID(218)  public void setAutoWordSelect(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(218,"AutoWordSelect", DISPATCH_PROPERTYPUT,value);
   }
@@ -42,7 +42,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -51,7 +51,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return OlBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(OlBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final OlBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -60,7 +60,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return OlDragBehavior.valueOf((Integer)obj);
   }
-  @DeclDISPID(225)  public void setDragBehavior(OlDragBehavior value) throws ComException {
+  @DeclDISPID(225)  public void setDragBehavior(final OlDragBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(225,"DragBehavior", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -69,7 +69,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -78,7 +78,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return OlEnterFieldBehavior.valueOf((Integer)obj);
   }
-  @DeclDISPID(224)  public void setEnterFieldBehavior(OlEnterFieldBehavior value) throws ComException {
+  @DeclDISPID(224)  public void setEnterFieldBehavior(final OlEnterFieldBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(224,"EnterFieldBehavior", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -87,7 +87,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-544)  public void setEnterKeyBehavior(Boolean value) throws ComException {
+  @DeclDISPID(-544)  public void setEnterKeyBehavior(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-544,"EnterKeyBehavior", DISPATCH_PROPERTYPUT,value);
   }
@@ -102,7 +102,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -111,7 +111,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(207)  public void setHideSelection(Boolean value) throws ComException {
+  @DeclDISPID(207)  public void setHideSelection(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(207,"HideSelection", DISPATCH_PROPERTYPUT,value);
   }
@@ -120,7 +120,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(604)  public void setIntegralHeight(Boolean value) throws ComException {
+  @DeclDISPID(604)  public void setIntegralHeight(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(604,"IntegralHeight", DISPATCH_PROPERTYPUT,value);
   }
@@ -129,7 +129,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -138,7 +138,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-533)  public void setMaxLength(Integer value) throws ComException {
+  @DeclDISPID(-533)  public void setMaxLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-533,"MaxLength", DISPATCH_PROPERTYPUT,value);
   }
@@ -147,7 +147,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public OlMousePointer getMousePointer() throws ComException {
@@ -155,7 +155,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -164,7 +164,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-537)  public void setMultiLine(Boolean value) throws ComException {
+  @DeclDISPID(-537)  public void setMultiLine(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-537,"MultiLine", DISPATCH_PROPERTYPUT,value);
   }
@@ -173,7 +173,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-534)  public void setPasswordChar(String value) throws ComException {
+  @DeclDISPID(-534)  public void setPasswordChar(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-534,"PasswordChar", DISPATCH_PROPERTYPUT,value);
   }
@@ -182,7 +182,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return OlScrollBars.valueOf((Integer)obj);
   }
-  @DeclDISPID(-535)  public void setScrollbars(OlScrollBars value) throws ComException {
+  @DeclDISPID(-535)  public void setScrollbars(final OlScrollBars value) throws ComException {
     assert(value != null);
     this._dispatchCall(-535,"Scrollbars", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -191,7 +191,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(220)  public void setSelectionMargin(Boolean value) throws ComException {
+  @DeclDISPID(220)  public void setSelectionMargin(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(220,"SelectionMargin", DISPATCH_PROPERTYPUT,value);
   }
@@ -200,7 +200,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-545)  public void setTabKeyBehavior(Boolean value) throws ComException {
+  @DeclDISPID(-545)  public void setTabKeyBehavior(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-545,"TabKeyBehavior", DISPATCH_PROPERTYPUT,value);
   }
@@ -209,7 +209,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-517)  public void setText(String value) throws ComException {
+  @DeclDISPID(-517)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-517,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -218,7 +218,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return OlTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(10004)  public void setTextAlign(OlTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final OlTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -227,7 +227,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -236,7 +236,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
@@ -245,7 +245,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-547)  public void setSelStart(Integer value) throws ComException {
+  @DeclDISPID(-547)  public void setSelStart(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-547,"SelStart", DISPATCH_PROPERTYPUT,value);
   }
@@ -254,7 +254,7 @@ public class OlkTextBox extends Dispatch implements _OlkTextBox {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-548)  public void setSelLength(Integer value) throws ComException {
+  @DeclDISPID(-548)  public void setSelLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-548,"SelLength", DISPATCH_PROPERTYPUT,value);
   }

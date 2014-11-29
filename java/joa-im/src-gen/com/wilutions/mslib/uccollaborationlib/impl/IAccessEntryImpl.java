@@ -20,13 +20,13 @@ public class IAccessEntryImpl extends Dispatch implements com.wilutions.mslib.uc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAccessPermissionImpl.class);
   }
-  @DeclDISPID(1610743811)  public void SetPermission(com.wilutions.mslib.uccollaborationlib.IAccessPermission _permission) throws ComException {
+  @DeclDISPID(1610743811)  public void SetPermission(final com.wilutions.mslib.uccollaborationlib.IAccessPermission _permission) throws ComException {
     this._dispatchCall(1610743811,"SetPermission", DISPATCH_METHOD,null,(_permission!=null?_permission:Dispatch.NULL));
   }
   @DeclDISPID(1610743812)  public void ClearPermission() throws ComException {
     this._dispatchCall(1610743812,"ClearPermission", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743813)  public Boolean CanSetPermission(com.wilutions.mslib.uccollaborationlib.IAccessPermission _permission) throws ComException {
+  @DeclDISPID(1610743813)  public Boolean CanSetPermission(final com.wilutions.mslib.uccollaborationlib.IAccessPermission _permission) throws ComException {
     final Object obj = this._dispatchCall(1610743813,"CanSetPermission", DISPATCH_METHOD,null,(_permission!=null?_permission:Dispatch.NULL));
     if (obj == null) return null;
     return (Boolean)obj;

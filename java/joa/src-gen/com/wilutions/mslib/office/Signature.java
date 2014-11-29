@@ -14,7 +14,7 @@ public interface Signature extends IDispatch {
   @DeclDISPID(1610809350)  public void Delete() throws ComException;
   @DeclDISPID(1610809351)  public IDispatch getParent() throws ComException;
   @DeclDISPID(1610809355)  public Boolean getIsSigned() throws ComException;
-  @DeclDISPID(1610809356)  public void Sign(Object varSigImg, Object varDelSuggSigner, Object varDelSuggSignerLine2, Object varDelSuggSignerEmail) throws ComException;
+  @DeclDISPID(1610809356)  public void Sign(final Object varSigImg, final Object varDelSuggSigner, final Object varDelSuggSignerLine2, final Object varDelSuggSignerEmail) throws ComException;
   @DeclDISPID(1610809357)  public SignatureInfo getDetails() throws ComException;
   @DeclDISPID(1610809358)  public void ShowDetails() throws ComException;
   @DeclDISPID(1610809359)  public Boolean getCanSetup() throws ComException;

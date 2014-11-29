@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{8E618961-0BEB-CA91-05E8-6927EA356569}")
 public class FontEventsImpl extends Dispatch implements com.wilutions.mslib.stdole.FontEvents {
-  @DeclDISPID(9)  public void onFontChanged(String PropertyName) throws ComException {
+  @DeclDISPID(9)  public void onFontChanged(final String PropertyName) throws ComException {
     assert(PropertyName != null);
     this._dispatchCall(9,"FontChanged", DISPATCH_METHOD,null,PropertyName);
   }

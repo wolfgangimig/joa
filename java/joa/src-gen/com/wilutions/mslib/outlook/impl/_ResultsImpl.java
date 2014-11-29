@@ -30,7 +30,7 @@ public class _ResultsImpl extends Dispatch implements com.wilutions.mslib.outloo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public IDispatch Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public IDispatch Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -59,11 +59,11 @@ public class _ResultsImpl extends Dispatch implements com.wilutions.mslib.outloo
   @DeclDISPID(93)  public void ResetColumns() throws ComException {
     this._dispatchCall(93,"ResetColumns", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(92)  public void SetColumns(String Columns) throws ComException {
+  @DeclDISPID(92)  public void SetColumns(final String Columns) throws ComException {
     assert(Columns != null);
     this._dispatchCall(92,"SetColumns", DISPATCH_METHOD,null,Columns);
   }
-  @DeclDISPID(97)  public void Sort(String Property, Object Descending) throws ComException {
+  @DeclDISPID(97)  public void Sort(final String Property, final Object Descending) throws ComException {
     assert(Property != null);
     assert(Descending != null);
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);
@@ -73,7 +73,7 @@ public class _ResultsImpl extends Dispatch implements com.wilutions.mslib.outloo
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlItemType.valueOf((Integer)obj);
   }
-  @DeclDISPID(64143)  public void setDefaultItemType(com.wilutions.mslib.outlook.OlItemType value) throws ComException {
+  @DeclDISPID(64143)  public void setDefaultItemType(final com.wilutions.mslib.outlook.OlItemType value) throws ComException {
     assert(value != null);
     this._dispatchCall(64143,"DefaultItemType", DISPATCH_PROPERTYPUT,value.value);
   }

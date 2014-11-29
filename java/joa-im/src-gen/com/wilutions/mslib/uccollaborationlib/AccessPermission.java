@@ -19,7 +19,7 @@ public class AccessPermission extends Dispatch implements IAccessPermission {
     if (obj == null) return null;
     return (IAccessEntry[])obj;
   }
-  @DeclDISPID(1610743810)  public Boolean TryGetValue(AccessEntryScope _scope, String _entryId, ByRef<IAccessEntry> _accessEntry) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean TryGetValue(final AccessEntryScope _scope, final String _entryId, final ByRef<IAccessEntry> _accessEntry) throws ComException {
     assert(_scope != null);
     assert(_entryId != null);
     assert(_accessEntry != null);
@@ -27,7 +27,7 @@ public class AccessPermission extends Dispatch implements IAccessPermission {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743811)  public void GetAccessEntry(AccessEntryScope _scope, String _entryId, ByRef<IAccessEntry> _accessEntry) throws ComException {
+  @DeclDISPID(1610743811)  public void GetAccessEntry(final AccessEntryScope _scope, final String _entryId, final ByRef<IAccessEntry> _accessEntry) throws ComException {
     assert(_scope != null);
     assert(_entryId != null);
     assert(_accessEntry != null);

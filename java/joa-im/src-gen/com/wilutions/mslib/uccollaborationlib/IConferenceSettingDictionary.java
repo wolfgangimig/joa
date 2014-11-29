@@ -10,16 +10,16 @@ import com.wilutions.com.*;
 public interface IConferenceSettingDictionary extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public Object getItem(ConferenceSetting _key) throws ComException;
-  @DeclDISPID(0)  public void setItem(ConferenceSetting _key, Object value2) throws ComException;
-  @DeclDISPID(1610743811)  public void Add(ConferenceSetting _key, Object _value) throws ComException;
+  @DeclDISPID(0)  public Object getItem(final ConferenceSetting _key) throws ComException;
+  @DeclDISPID(0)  public void setItem(final ConferenceSetting _key, final Object value2) throws ComException;
+  @DeclDISPID(1610743811)  public void Add(final ConferenceSetting _key, final Object _value) throws ComException;
   @DeclDISPID(1610743812)  public ConferenceSetting[] getKeys() throws ComException;
   @DeclDISPID(1610743813)  public Object[] getValues() throws ComException;
-  @DeclDISPID(1610743814)  public Boolean TryGetValue(ConferenceSetting _key, ByRef<Object> _value) throws ComException;
-  @DeclDISPID(1610743815)  public ConferenceSetting GetKeyAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743816)  public Object GetValueAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743817)  public Boolean ContainsKey(ConferenceSetting _key) throws ComException;
-  @DeclDISPID(1610743818)  public void RemoveAt(Integer _index) throws ComException;
-  @DeclDISPID(1610743819)  public void Remove(ConferenceSetting _key) throws ComException;
+  @DeclDISPID(1610743814)  public Boolean TryGetValue(final ConferenceSetting _key, final ByRef<Object> _value) throws ComException;
+  @DeclDISPID(1610743815)  public ConferenceSetting GetKeyAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743816)  public Object GetValueAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743817)  public Boolean ContainsKey(final ConferenceSetting _key) throws ComException;
+  @DeclDISPID(1610743818)  public void RemoveAt(final Integer _index) throws ComException;
+  @DeclDISPID(1610743819)  public void Remove(final ConferenceSetting _key) throws ComException;
   @DeclDISPID(1610743820)  public void RemoveAll() throws ComException;
 }

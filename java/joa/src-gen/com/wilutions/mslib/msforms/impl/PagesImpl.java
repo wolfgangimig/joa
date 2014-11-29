@@ -15,7 +15,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public IDispatch Item(Object varg) throws ComException {
+  @DeclDISPID(0)  public IDispatch Item(final Object varg) throws ComException {
     assert(varg != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,varg);
     if (obj == null) return null;
@@ -26,7 +26,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(66)  public com.wilutions.mslib.msforms.Page Add(Object bstrName, Object bstrCaption, Object lIndex) throws ComException {
+  @DeclDISPID(66)  public com.wilutions.mslib.msforms.Page Add(final Object bstrName, final Object bstrCaption, final Object lIndex) throws ComException {
     assert(bstrName != null);
     assert(bstrCaption != null);
     assert(lIndex != null);
@@ -35,7 +35,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Page.class);
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.msforms.Page _AddCtrl(Integer clsid, String bstrName, String bstrCaption) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.msforms.Page _AddCtrl(final Integer clsid, final String bstrName, final String bstrCaption) throws ComException {
     assert(clsid != null);
     assert(bstrName != null);
     assert(bstrCaption != null);
@@ -44,7 +44,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Page.class);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.msforms.Page _InsertCtrl(Integer clsid, String bstrName, String bstrCaption, Integer lIndex) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.msforms.Page _InsertCtrl(final Integer clsid, final String bstrName, final String bstrCaption, final Integer lIndex) throws ComException {
     assert(clsid != null);
     assert(bstrName != null);
     assert(bstrCaption != null);
@@ -54,21 +54,21 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Page.class);
   }
-  @DeclDISPID(1610743815)  public com.wilutions.mslib.msforms.Control _GetItemByIndex(Integer lIndex) throws ComException {
+  @DeclDISPID(1610743815)  public com.wilutions.mslib.msforms.Control _GetItemByIndex(final Integer lIndex) throws ComException {
     assert(lIndex != null);
     final Object obj = this._dispatchCall(1610743815,"_GetItemByIndex", DISPATCH_METHOD,null,lIndex);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
-  @DeclDISPID(1610743816)  public com.wilutions.mslib.msforms.Control _GetItemByName(String pstrName) throws ComException {
+  @DeclDISPID(1610743816)  public com.wilutions.mslib.msforms.Control _GetItemByName(final String pstrName) throws ComException {
     assert(pstrName != null);
     final Object obj = this._dispatchCall(1610743816,"_GetItemByName", DISPATCH_METHOD,null,pstrName);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);
   }
-  @DeclDISPID(67)  public void Remove(Object varg) throws ComException {
+  @DeclDISPID(67)  public void Remove(final Object varg) throws ComException {
     assert(varg != null);
     this._dispatchCall(67,"Remove", DISPATCH_METHOD,null,varg);
   }

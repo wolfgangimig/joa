@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{82B02374-B5BC-11CF-810F-00A0C9030074}")
 public class ReturnBoolean extends Dispatch implements IReturnBoolean {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(0)  public void setValue(Boolean value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }

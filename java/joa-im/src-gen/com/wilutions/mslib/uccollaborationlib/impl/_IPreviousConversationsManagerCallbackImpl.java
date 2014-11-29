@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{8B3B2DD3-B655-99F9-200F-B8B494BF84F7}")
 public class _IPreviousConversationsManagerCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IPreviousConversationsManagerCallback {
-  @DeclDISPID(4120)  public void OnGetUnreadItems(com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager _source, com.wilutions.mslib.uccollaborationlib.IPreviousConversationCollection _items, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(4120)  public void OnGetUnreadItems(final com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager _source, final com.wilutions.mslib.uccollaborationlib.IPreviousConversationCollection _items, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(4120,"OnGetUnreadItems", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_items!=null?_items:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(4121)  public void OnGetAllItems(com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager _source, com.wilutions.mslib.uccollaborationlib.IPreviousConversationCollection _items, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(4121)  public void OnGetAllItems(final com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager _source, final com.wilutions.mslib.uccollaborationlib.IPreviousConversationCollection _items, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(4121,"OnGetAllItems", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_items!=null?_items:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IPreviousConversationsManagerCallbackImpl(String progId) throws ComException {

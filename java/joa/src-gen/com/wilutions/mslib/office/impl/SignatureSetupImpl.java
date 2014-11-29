@@ -35,7 +35,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setSuggestedSigner(String value) throws ComException {
+  @DeclDISPID(4)  public void setSuggestedSigner(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"SuggestedSigner", DISPATCH_PROPERTYPUT,value);
   }
@@ -44,7 +44,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(5)  public void setSuggestedSignerLine2(String value) throws ComException {
+  @DeclDISPID(5)  public void setSuggestedSignerLine2(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"SuggestedSignerLine2", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(6)  public void setSuggestedSignerEmail(String value) throws ComException {
+  @DeclDISPID(6)  public void setSuggestedSignerEmail(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"SuggestedSignerEmail", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(7)  public void setSigningInstructions(String value) throws ComException {
+  @DeclDISPID(7)  public void setSigningInstructions(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"SigningInstructions", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(8)  public void setAllowComments(Boolean value) throws ComException {
+  @DeclDISPID(8)  public void setAllowComments(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"AllowComments", DISPATCH_PROPERTYPUT,value);
   }
@@ -80,7 +80,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(9)  public void setShowSignDate(Boolean value) throws ComException {
+  @DeclDISPID(9)  public void setShowSignDate(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(9,"ShowSignDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -89,7 +89,7 @@ public class SignatureSetupImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(10)  public void setAdditionalXml(String value) throws ComException {
+  @DeclDISPID(10)  public void setAdditionalXml(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"AdditionalXml", DISPATCH_PROPERTYPUT,value);
   }

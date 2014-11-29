@@ -15,7 +15,7 @@ public class DocumentLibraryVersionsImpl extends Dispatch implements com.wilutio
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.DocumentLibraryVersion getItem(Integer lIndex) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.DocumentLibraryVersion getItem(final Integer lIndex) throws ComException {
     assert(lIndex != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,lIndex);
     if (obj == null) return null;

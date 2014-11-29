@@ -20,7 +20,7 @@ public class SmartDocumentImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void setSolutionID(String value) throws ComException {
+  @DeclDISPID(1)  public void setSolutionID(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"SolutionID", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,11 +29,11 @@ public class SmartDocumentImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setSolutionURL(String value) throws ComException {
+  @DeclDISPID(2)  public void setSolutionURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"SolutionURL", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(3)  public void PickSolution(Boolean ConsiderAllSchemas) throws ComException {
+  @DeclDISPID(3)  public void PickSolution(final Boolean ConsiderAllSchemas) throws ComException {
     assert(ConsiderAllSchemas != null);
     this._dispatchCall(3,"PickSolution", DISPATCH_METHOD,null,ConsiderAllSchemas);
   }

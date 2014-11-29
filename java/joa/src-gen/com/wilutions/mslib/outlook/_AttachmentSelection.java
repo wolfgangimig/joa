@@ -14,7 +14,7 @@ public interface _AttachmentSelection extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Attachment Item(Object Index) throws ComException;
+  @DeclDISPID(81)  public Attachment Item(final Object Index) throws ComException;
   @DeclDISPID(33288)  public OlSelectionLocation getLocation() throws ComException;
-  @DeclDISPID(8706)  public Selection GetSelection(OlSelectionContents SelectionContents) throws ComException;
+  @DeclDISPID(8706)  public Selection GetSelection(final OlSelectionContents SelectionContents) throws ComException;
 }

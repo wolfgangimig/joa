@@ -10,7 +10,7 @@ public class ISharingResourceListImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.ISharingResource getItem(Integer index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.ISharingResource getItem(final Integer index) throws ComException {
     assert(index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,index);
     if (obj == null) return null;
@@ -21,10 +21,10 @@ public class ISharingResourceListImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743811)  public void Add(com.wilutions.mslib.uccollaborationlib.ISharingResource _resource) throws ComException {
+  @DeclDISPID(1610743811)  public void Add(final com.wilutions.mslib.uccollaborationlib.ISharingResource _resource) throws ComException {
     this._dispatchCall(1610743811,"Add", DISPATCH_METHOD,null,(_resource!=null?_resource:Dispatch.NULL));
   }
-  @DeclDISPID(1610743812)  public void Remove(com.wilutions.mslib.uccollaborationlib.ISharingResource _resource) throws ComException {
+  @DeclDISPID(1610743812)  public void Remove(final com.wilutions.mslib.uccollaborationlib.ISharingResource _resource) throws ComException {
     this._dispatchCall(1610743812,"Remove", DISPATCH_METHOD,null,(_resource!=null?_resource:Dispatch.NULL));
   }
   @DeclDISPID(1610743813)  public Boolean getIsShareable() throws ComException {

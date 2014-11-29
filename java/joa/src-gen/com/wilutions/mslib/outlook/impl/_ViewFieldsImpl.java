@@ -30,20 +30,20 @@ public class _ViewFieldsImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._ViewField Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._ViewField Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ViewFieldImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.ViewField Add(String PropertyName) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.ViewField Add(final String PropertyName) throws ComException {
     assert(PropertyName != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,PropertyName);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.ViewField.class);
   }
-  @DeclDISPID(64342)  public com.wilutions.mslib.outlook.ViewField Insert(String PropertyName, Object Index) throws ComException {
+  @DeclDISPID(64342)  public com.wilutions.mslib.outlook.ViewField Insert(final String PropertyName, final Object Index) throws ComException {
     assert(PropertyName != null);
     assert(Index != null);
     final Object obj = this._dispatchCall(64342,"Insert", DISPATCH_METHOD,null,PropertyName,Index);
@@ -51,7 +51,7 @@ public class _ViewFieldsImpl extends Dispatch implements com.wilutions.mslib.out
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.ViewField.class);
   }
-  @DeclDISPID(82)  public void Remove(Object Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }

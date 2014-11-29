@@ -14,7 +14,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     if (obj == null) return null;
     return OlAlignment.valueOf((Integer)obj);
   }
-  @DeclDISPID(710)  public void setAlignment(OlAlignment value) throws ComException {
+  @DeclDISPID(710)  public void setAlignment(final OlAlignment value) throws ComException {
     assert(value != null);
     this._dispatchCall(710,"Alignment", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -23,7 +23,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-518)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(-518)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-518,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -47,7 +47,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -56,7 +56,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public OlMousePointer getMousePointer() throws ComException {
@@ -64,7 +64,7 @@ public class OlkFrameHeader extends Dispatch implements _OlkFrameHeader {
     if (obj == null) return null;
     return OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }

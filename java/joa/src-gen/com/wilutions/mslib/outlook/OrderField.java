@@ -39,7 +39,7 @@ public class OrderField extends Dispatch implements _OrderField {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64394)  public void setIsDescending(Boolean value) throws ComException {
+  @DeclDISPID(64394)  public void setIsDescending(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64394,"IsDescending", DISPATCH_PROPERTYPUT,value);
   }

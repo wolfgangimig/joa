@@ -11,7 +11,7 @@ public interface IRoomManager extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public RoomManagerState getState() throws ComException;
   @DeclDISPID(1610743809)  public IRoom[] getFollowedRooms() throws ComException;
-  @DeclDISPID(1610743810)  public IAsynchronousOperation QueryRooms(String _keyword, RoomSearchModeType _searchType, Object _roomManagerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743811)  public IAsynchronousOperation QueryRoomByUri(String _roomUri, Object _roomManagerCallback, Object _state) throws ComException;
-  @DeclDISPID(1610743812)  public Boolean TryGetRoomByUri(String _roomUri, ByRef<IRoom> _room) throws ComException;
+  @DeclDISPID(1610743810)  public IAsynchronousOperation QueryRooms(final String _keyword, final RoomSearchModeType _searchType, final Object _roomManagerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743811)  public IAsynchronousOperation QueryRoomByUri(final String _roomUri, final Object _roomManagerCallback, final Object _state) throws ComException;
+  @DeclDISPID(1610743812)  public Boolean TryGetRoomByUri(final String _roomUri, final ByRef<IRoom> _room) throws ComException;
 }

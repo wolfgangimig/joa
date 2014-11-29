@@ -35,25 +35,25 @@ public class IRoomImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IRoomMessageDictionaryImpl.class);
   }
-  @DeclDISPID(1610743814)  public void EnableOutgoingMessageFilter(Boolean _noWarning) throws ComException {
+  @DeclDISPID(1610743814)  public void EnableOutgoingMessageFilter(final Boolean _noWarning) throws ComException {
     assert(_noWarning != null);
     this._dispatchCall(1610743814,"EnableOutgoingMessageFilter", DISPATCH_METHOD,null,_noWarning);
   }
   @DeclDISPID(1610743815)  public void DisableOutgoingMessageFilter() throws ComException {
     this._dispatchCall(1610743815,"DisableOutgoingMessageFilter", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SendMessage(com.wilutions.mslib.uccollaborationlib.IRoomMessageDictionary _messageInfo, Object _roomCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SendMessage(final com.wilutions.mslib.uccollaborationlib.IRoomMessageDictionary _messageInfo, final Object _roomCallback, final Object _state) throws ComException {
     assert(_roomCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743816,"SendMessage", DISPATCH_METHOD,null,(_messageInfo!=null?_messageInfo:Dispatch.NULL),_roomCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743817)  public void SendFilteredMessage(com.wilutions.mslib.uccollaborationlib.IRoomMessage _message, com.wilutions.mslib.uccollaborationlib.RoomMessageFilteringAction _action) throws ComException {
+  @DeclDISPID(1610743817)  public void SendFilteredMessage(final com.wilutions.mslib.uccollaborationlib.IRoomMessage _message, final com.wilutions.mslib.uccollaborationlib.RoomMessageFilteringAction _action) throws ComException {
     assert(_action != null);
     this._dispatchCall(1610743817,"SendFilteredMessage", DISPATCH_METHOD,null,(_message!=null?_message:Dispatch.NULL),_action.value);
   }
-  @DeclDISPID(1610743818)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RetrieveAdditionalMessages(Integer _lastMessageID, Integer _count, Object _roomCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743818)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RetrieveAdditionalMessages(final Integer _lastMessageID, final Integer _count, final Object _roomCallback, final Object _state) throws ComException {
     assert(_lastMessageID != null);
     assert(_count != null);
     assert(_roomCallback != null);
@@ -62,14 +62,14 @@ public class IRoomImpl extends Dispatch implements com.wilutions.mslib.uccollabo
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743819)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Join(Object _roomCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743819)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Join(final Object _roomCallback, final Object _state) throws ComException {
     assert(_roomCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743819,"Join", DISPATCH_METHOD,null,_roomCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743820)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Leave(Object _roomCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743820)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Leave(final Object _roomCallback, final Object _state) throws ComException {
     assert(_roomCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743820,"Leave", DISPATCH_METHOD,null,_roomCallback,_state);

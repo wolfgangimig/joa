@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A32-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoDispCagNotifySinkImpl extends Dispatch implements com.wilutions.mslib.office.IMsoDispCagNotifySink {
-  @DeclDISPID(1)  public void InsertClip(Object pClipMoniker, Object pItemMoniker) throws ComException {
+  @DeclDISPID(1)  public void InsertClip(final Object pClipMoniker, final Object pItemMoniker) throws ComException {
     assert(pClipMoniker != null);
     assert(pItemMoniker != null);
     this._dispatchCall(1,"InsertClip", DISPATCH_METHOD,null,pClipMoniker,pItemMoniker);

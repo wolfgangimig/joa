@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{AE379C38-305A-961B-2C48-B5F200BA5448}")
 public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.mslib.office.IMsoDisplayUnitLabel {
-  @DeclDISPID(1610743808)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(1610743808)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743808,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743810)  public com.wilutions.mslib.office.IMsoCharacters getCharacters(Object Start, Object Length) throws ComException {
+  @DeclDISPID(1610743810)  public com.wilutions.mslib.office.IMsoCharacters getCharacters(final Object Start, final Object Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(1610743810,"Characters", DISPATCH_PROPERTYGET,null,Start,Length);
@@ -26,7 +26,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFontImpl.class);
   }
-  @DeclDISPID(1610743812)  public void setHorizontalAlignment(Object value) throws ComException {
+  @DeclDISPID(1610743812)  public void setHorizontalAlignment(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743812,"HorizontalAlignment", DISPATCH_PROPERTYPUT,value);
   }
@@ -40,11 +40,11 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743814)  public void setLeft(Double value) throws ComException {
+  @DeclDISPID(1610743814)  public void setLeft(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743814,"Left", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743816)  public void setOrientation(Object value) throws ComException {
+  @DeclDISPID(1610743816)  public void setOrientation(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743816,"Orientation", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,11 +58,11 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743818)  public void setShadow(Boolean value) throws ComException {
+  @DeclDISPID(1610743818)  public void setShadow(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743818,"Shadow", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743820)  public void setText(String value) throws ComException {
+  @DeclDISPID(1610743820)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743820,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -76,11 +76,11 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743822)  public void setTop(Double value) throws ComException {
+  @DeclDISPID(1610743822)  public void setTop(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743822,"Top", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743824)  public void setVerticalAlignment(Object value) throws ComException {
+  @DeclDISPID(1610743824)  public void setVerticalAlignment(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743824,"VerticalAlignment", DISPATCH_PROPERTYPUT,value);
   }
@@ -94,11 +94,11 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743826)  public void setReadingOrder(Integer value) throws ComException {
+  @DeclDISPID(1610743826)  public void setReadingOrder(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743826,"ReadingOrder", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(1610743828)  public void setAutoScaleFont(Object value) throws ComException {
+  @DeclDISPID(1610743828)  public void setAutoScaleFont(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743828,"AutoScaleFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -147,7 +147,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2418)  public void setIncludeInLayout(Boolean value) throws ComException {
+  @DeclDISPID(2418)  public void setIncludeInLayout(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(2418,"IncludeInLayout", DISPATCH_PROPERTYPUT,value);
   }
@@ -156,7 +156,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlChartElementPosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(1671)  public void setPosition(com.wilutions.mslib.office.XlChartElementPosition value) throws ComException {
+  @DeclDISPID(1671)  public void setPosition(final com.wilutions.mslib.office.XlChartElementPosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(1671,"Position", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -185,7 +185,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(1610743846)  public void setFormula(String value) throws ComException {
+  @DeclDISPID(1610743846)  public void setFormula(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743846,"Formula", DISPATCH_PROPERTYPUT,value);
   }
@@ -194,7 +194,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743848)  public void setFormulaR1C1(String value) throws ComException {
+  @DeclDISPID(1610743848)  public void setFormulaR1C1(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743848,"FormulaR1C1", DISPATCH_PROPERTYPUT,value);
   }
@@ -203,7 +203,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743850)  public void setFormulaLocal(String value) throws ComException {
+  @DeclDISPID(1610743850)  public void setFormulaLocal(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743850,"FormulaLocal", DISPATCH_PROPERTYPUT,value);
   }
@@ -212,7 +212,7 @@ public class IMsoDisplayUnitLabelImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743852)  public void setFormulaR1C1Local(String value) throws ComException {
+  @DeclDISPID(1610743852)  public void setFormulaR1C1Local(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743852,"FormulaR1C1Local", DISPATCH_PROPERTYPUT,value);
   }

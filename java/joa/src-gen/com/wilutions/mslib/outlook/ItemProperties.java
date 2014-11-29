@@ -14,7 +14,7 @@ public interface ItemProperties extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public ItemProperty Item(Object Index) throws ComException;
-  @DeclDISPID(102)  public ItemProperty Add(String Name, OlUserPropertyType Type, Object AddToFolderFields, Object DisplayFormat) throws ComException;
-  @DeclDISPID(82)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(0)  public ItemProperty Item(final Object Index) throws ComException;
+  @DeclDISPID(102)  public ItemProperty Add(final String Name, final OlUserPropertyType Type, final Object AddToFolderFields, final Object DisplayFormat) throws ComException;
+  @DeclDISPID(82)  public void Remove(final Integer Index) throws ComException;
 }

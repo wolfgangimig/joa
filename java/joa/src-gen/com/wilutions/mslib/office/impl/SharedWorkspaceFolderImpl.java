@@ -20,7 +20,7 @@ public class SharedWorkspaceFolderImpl extends Dispatch implements com.wilutions
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void Delete(Object DeleteEventIfFolderContainsFiles) throws ComException {
+  @DeclDISPID(1)  public void Delete(final Object DeleteEventIfFolderContainsFiles) throws ComException {
     assert(DeleteEventIfFolderContainsFiles != null);
     this._dispatchCall(1,"Delete", DISPATCH_METHOD,null,DeleteEventIfFolderContainsFiles);
   }

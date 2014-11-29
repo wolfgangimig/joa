@@ -25,7 +25,7 @@ public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809345)  public void setExtended(String value) throws ComException {
+  @DeclDISPID(1610809345)  public void setExtended(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809345,"Extended", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809347)  public void setId(String value) throws ComException {
+  @DeclDISPID(1610809347)  public void setId(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809347,"Id", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoScriptLanguage.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809349)  public void setLanguage(com.wilutions.mslib.office.MsoScriptLanguage value) throws ComException {
+  @DeclDISPID(1610809349)  public void setLanguage(final com.wilutions.mslib.office.MsoScriptLanguage value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610809349,"Language", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -65,7 +65,7 @@ public class ScriptImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setScriptText(String value) throws ComException {
+  @DeclDISPID(0)  public void setScriptText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"ScriptText", DISPATCH_PROPERTYPUT,value);
   }

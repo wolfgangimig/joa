@@ -20,7 +20,7 @@ public class FreeformBuilderImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(10)  public void AddNodes(com.wilutions.mslib.office.MsoSegmentType SegmentType, com.wilutions.mslib.office.MsoEditingType EditingType, Float X1, Float Y1, Float X2, Float Y2, Float X3, Float Y3) throws ComException {
+  @DeclDISPID(10)  public void AddNodes(final com.wilutions.mslib.office.MsoSegmentType SegmentType, final com.wilutions.mslib.office.MsoEditingType EditingType, final Float X1, final Float Y1, final Float X2, final Float Y2, final Float X3, final Float Y3) throws ComException {
     assert(SegmentType != null);
     assert(EditingType != null);
     assert(X1 != null);

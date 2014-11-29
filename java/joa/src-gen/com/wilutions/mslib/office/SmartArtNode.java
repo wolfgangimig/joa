@@ -12,12 +12,12 @@ public interface SmartArtNode extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(2)  public SmartArtNode AddNode(MsoSmartArtNodePosition Position, MsoSmartArtNodeType Type) throws ComException;
+  @DeclDISPID(2)  public SmartArtNode AddNode(final MsoSmartArtNodePosition Position, final MsoSmartArtNodeType Type) throws ComException;
   @DeclDISPID(3)  public void Delete() throws ComException;
   @DeclDISPID(4)  public void Promote() throws ComException;
   @DeclDISPID(5)  public void Demote() throws ComException;
   @DeclDISPID(6)  public MsoOrgChartLayoutType getOrgChartLayout() throws ComException;
-  @DeclDISPID(6)  public void setOrgChartLayout(MsoOrgChartLayoutType value) throws ComException;
+  @DeclDISPID(6)  public void setOrgChartLayout(final MsoOrgChartLayoutType value) throws ComException;
   @DeclDISPID(7)  public ShapeRange getShapes() throws ComException;
   @DeclDISPID(8)  public TextFrame2 getTextFrame2() throws ComException;
   @DeclDISPID(9)  public void Larger() throws ComException;

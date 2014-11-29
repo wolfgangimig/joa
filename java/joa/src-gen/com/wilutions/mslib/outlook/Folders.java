@@ -34,13 +34,13 @@ public class Folders extends Dispatch implements _Folders {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public MAPIFolder Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public MAPIFolder Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
-  @DeclDISPID(95)  public MAPIFolder Add(String Name, Object Type) throws ComException {
+  @DeclDISPID(95)  public MAPIFolder Add(final String Name, final Object Type) throws ComException {
     assert(Name != null);
     assert(Type != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Type);
@@ -67,7 +67,7 @@ public class Folders extends Dispatch implements _Folders {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

@@ -14,7 +14,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Byte value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Byte value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(Integer value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-513)  public void setForeColor(Integer value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value);
   }
@@ -41,7 +41,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     if (obj == null) return null;
     return (Byte)obj;
   }
-  @DeclDISPID(-2147356664)  public void setReadOnly(Byte value) throws ComException {
+  @DeclDISPID(-2147356664)  public void setReadOnly(final Byte value) throws ComException {
     assert(value != null);
     this._dispatchCall(-2147356664,"ReadOnly", DISPATCH_PROPERTYPUT,value);
   }
@@ -50,7 +50,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(-512)  public void setFont(IDispatch value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final IDispatch value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(12)  public Integer getSpecialEffect() throws ComException {
@@ -58,7 +58,7 @@ public class _RecipientControl extends Dispatch implements _DRecipientControl {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(12)  public void setSpecialEffect(Integer value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value);
   }

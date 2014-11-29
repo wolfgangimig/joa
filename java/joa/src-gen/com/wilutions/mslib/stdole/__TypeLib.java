@@ -1,6 +1,7 @@
+/* ** GENEREATED FILE - DO NOT MODIFY ** */
 package com.wilutions.mslib.stdole;
 import com.wilutions.com.__AllClasses;
-public class __TypeLib { 
+class __TypeLib { 
   private static boolean loaded = false;
   public static boolean load() {
     if (loaded) return true;

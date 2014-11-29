@@ -14,11 +14,11 @@ public interface AddressEntries extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public AddressEntry Item(Object Index) throws ComException;
-  @DeclDISPID(95)  public AddressEntry Add(String Type, Object Name, Object Address) throws ComException;
+  @DeclDISPID(81)  public AddressEntry Item(final Object Index) throws ComException;
+  @DeclDISPID(95)  public AddressEntry Add(final String Type, final Object Name, final Object Address) throws ComException;
   @DeclDISPID(86)  public AddressEntry GetFirst() throws ComException;
   @DeclDISPID(88)  public AddressEntry GetLast() throws ComException;
   @DeclDISPID(87)  public AddressEntry GetNext() throws ComException;
   @DeclDISPID(89)  public AddressEntry GetPrevious() throws ComException;
-  @DeclDISPID(97)  public void Sort(Object Property, Object Order) throws ComException;
+  @DeclDISPID(97)  public void Sort(final Object Property, final Object Order) throws ComException;
 }

@@ -32,7 +32,7 @@ public class IconView extends Dispatch implements _IconView {
   @DeclDISPID(407)  public void Apply() throws ComException {
     this._dispatchCall(407,"Apply", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61490)  public View Copy(String Name, OlViewSaveOption SaveOption) throws ComException {
+  @DeclDISPID(61490)  public View Copy(final String Name, final OlViewSaveOption SaveOption) throws ComException {
     assert(Name != null);
     assert(SaveOption != null);
     final Object obj = this._dispatchCall(61490,"Copy", DISPATCH_METHOD,null,Name,SaveOption.value);
@@ -53,7 +53,7 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64065)  public void setLanguage(String value) throws ComException {
+  @DeclDISPID(64065)  public void setLanguage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64065,"Language", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64064)  public void setLockUserChanges(Boolean value) throws ComException {
+  @DeclDISPID(64064)  public void setLockUserChanges(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64064,"LockUserChanges", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setName(String value) throws ComException {
+  @DeclDISPID(0)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -95,11 +95,11 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64060)  public void setXML(String value) throws ComException {
+  @DeclDISPID(64060)  public void setXML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64060,"XML", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64054)  public void GoToDate(java.util.Date Date) throws ComException {
+  @DeclDISPID(64054)  public void GoToDate(final java.util.Date Date) throws ComException {
     assert(Date != null);
     this._dispatchCall(64054,"GoToDate", DISPATCH_METHOD,null,Date);
   }
@@ -108,7 +108,7 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(409)  public void setFilter(String value) throws ComException {
+  @DeclDISPID(409)  public void setFilter(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(409,"Filter", DISPATCH_PROPERTYPUT,value);
   }
@@ -123,7 +123,7 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return OlIconViewType.valueOf((Integer)obj);
   }
-  @DeclDISPID(64362)  public void setIconViewType(OlIconViewType value) throws ComException {
+  @DeclDISPID(64362)  public void setIconViewType(final OlIconViewType value) throws ComException {
     assert(value != null);
     this._dispatchCall(64362,"IconViewType", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -132,7 +132,7 @@ public class IconView extends Dispatch implements _IconView {
     if (obj == null) return null;
     return OlIconViewPlacement.valueOf((Integer)obj);
   }
-  @DeclDISPID(64363)  public void setIconPlacement(OlIconViewPlacement value) throws ComException {
+  @DeclDISPID(64363)  public void setIconPlacement(final OlIconViewPlacement value) throws ComException {
     assert(value != null);
     this._dispatchCall(64363,"IconPlacement", DISPATCH_PROPERTYPUT,value.value);
   }

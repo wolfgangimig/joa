@@ -15,5 +15,5 @@ public interface _OrderField extends IDispatch {
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(8450)  public String getViewXMLSchemaName() throws ComException;
   @DeclDISPID(64394)  public Boolean getIsDescending() throws ComException;
-  @DeclDISPID(64394)  public void setIsDescending(Boolean value) throws ComException;
+  @DeclDISPID(64394)  public void setIsDescending(final Boolean value) throws ComException;
 }

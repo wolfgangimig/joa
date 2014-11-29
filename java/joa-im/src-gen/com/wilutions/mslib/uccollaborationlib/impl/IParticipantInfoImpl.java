@@ -25,7 +25,7 @@ public class IParticipantInfoImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743811)  public void setDisplayName(String value) throws ComException {
+  @DeclDISPID(1610743811)  public void setDisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743811,"DisplayName", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class IParticipantInfoImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743813)  public void setRepresentedDisplayName(String value) throws ComException {
+  @DeclDISPID(1610743813)  public void setRepresentedDisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1610743813,"RepresentedDisplayName", DISPATCH_PROPERTYPUT,value);
   }

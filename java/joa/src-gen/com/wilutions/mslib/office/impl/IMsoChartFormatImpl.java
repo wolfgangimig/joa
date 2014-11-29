@@ -70,7 +70,7 @@ public class IMsoChartFormatImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoAutoShapeType.valueOf((Integer)obj);
   }
-  @DeclDISPID(201)  public void setAutoShapeType(com.wilutions.mslib.office.MsoAutoShapeType value) throws ComException {
+  @DeclDISPID(201)  public void setAutoShapeType(final com.wilutions.mslib.office.MsoAutoShapeType value) throws ComException {
     assert(value != null);
     this._dispatchCall(201,"AutoShapeType", DISPATCH_PROPERTYPUT,value.value);
   }

@@ -20,7 +20,7 @@ public class SharedWorkspaceLinksImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceLink getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.SharedWorkspaceLink getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,7 +31,7 @@ public class SharedWorkspaceLinksImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceLink Add(String URL, Object Description, Object Notes) throws ComException {
+  @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceLink Add(final String URL, final Object Description, final Object Notes) throws ComException {
     assert(URL != null);
     assert(Description != null);
     assert(Notes != null);

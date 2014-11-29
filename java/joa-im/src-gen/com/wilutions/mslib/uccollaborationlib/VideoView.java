@@ -14,11 +14,11 @@ public class VideoView extends Dispatch implements IVideoView {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IVideoViewInformationDictionaryImpl.class);
   }
-  @DeclDISPID(1610743809)  public void SetVideoViewMode(VideoViewMode _mode) throws ComException {
+  @DeclDISPID(1610743809)  public void SetVideoViewMode(final VideoViewMode _mode) throws ComException {
     assert(_mode != null);
     this._dispatchCall(1610743809,"SetVideoViewMode", DISPATCH_METHOD,null,_mode.value);
   }
-  @DeclDISPID(1610743810)  public void EnterFullScreen(Integer[] _monitorIds) throws ComException {
+  @DeclDISPID(1610743810)  public void EnterFullScreen(final Integer[] _monitorIds) throws ComException {
     assert(_monitorIds != null);
     this._dispatchCall(1610743810,"EnterFullScreen", DISPATCH_METHOD,null,_monitorIds);
   }

@@ -40,7 +40,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(132)  public void setInvertIfNegative(Boolean RHS) throws ComException {
+  @DeclDISPID(132)  public void setInvertIfNegative(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(132,"InvertIfNegative", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -49,7 +49,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(73)  public void setMarkerBackgroundColor(Integer RHS) throws ComException {
+  @DeclDISPID(73)  public void setMarkerBackgroundColor(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(73,"MarkerBackgroundColor", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -58,7 +58,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlColorIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(74)  public void setMarkerBackgroundColorIndex(com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
+  @DeclDISPID(74)  public void setMarkerBackgroundColorIndex(final com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(74,"MarkerBackgroundColorIndex", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -67,7 +67,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(75)  public void setMarkerForegroundColor(Integer RHS) throws ComException {
+  @DeclDISPID(75)  public void setMarkerForegroundColor(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(75,"MarkerForegroundColor", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -76,7 +76,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlColorIndex.valueOf((Integer)obj);
   }
-  @DeclDISPID(76)  public void setMarkerForegroundColorIndex(com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
+  @DeclDISPID(76)  public void setMarkerForegroundColorIndex(final com.wilutions.mslib.office.XlColorIndex RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(76,"MarkerForegroundColorIndex", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -85,7 +85,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(231)  public void setMarkerSize(Integer RHS) throws ComException {
+  @DeclDISPID(231)  public void setMarkerSize(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(231,"MarkerSize", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -94,7 +94,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlMarkerStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(72)  public void setMarkerStyle(com.wilutions.mslib.office.XlMarkerStyle RHS) throws ComException {
+  @DeclDISPID(72)  public void setMarkerStyle(final com.wilutions.mslib.office.XlMarkerStyle RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(72,"MarkerStyle", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -103,7 +103,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(161)  public void setPictureType(Integer RHS) throws ComException {
+  @DeclDISPID(161)  public void setPictureType(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(161,"PictureType", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -112,7 +112,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(162)  public void setPictureUnit(Double RHS) throws ComException {
+  @DeclDISPID(162)  public void setPictureUnit(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(162,"PictureUnit", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -126,7 +126,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(163)  public void setSmooth(Boolean RHS) throws ComException {
+  @DeclDISPID(163)  public void setSmooth(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(163,"Smooth", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -155,7 +155,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setShadow(Boolean RHS) throws ComException {
+  @DeclDISPID(103)  public void setShadow(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(103,"Shadow", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -179,7 +179,7 @@ public class IMsoLegendKeyImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(2649)  public void setPictureUnit2(Double RHS) throws ComException {
+  @DeclDISPID(2649)  public void setPictureUnit2(final Double RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2649,"PictureUnit2", DISPATCH_PROPERTYPUT,RHS);
   }

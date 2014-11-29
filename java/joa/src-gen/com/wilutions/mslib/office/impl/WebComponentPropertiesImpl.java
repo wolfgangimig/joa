@@ -15,7 +15,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setName(String value) throws ComException {
+  @DeclDISPID(2)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -24,7 +24,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setURL(String value) throws ComException {
+  @DeclDISPID(3)  public void setURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"URL", DISPATCH_PROPERTYPUT,value);
   }
@@ -33,7 +33,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setHTML(String value) throws ComException {
+  @DeclDISPID(4)  public void setHTML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"HTML", DISPATCH_PROPERTYPUT,value);
   }
@@ -42,7 +42,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(5)  public void setPreviewGraphic(String value) throws ComException {
+  @DeclDISPID(5)  public void setPreviewGraphic(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"PreviewGraphic", DISPATCH_PROPERTYPUT,value);
   }
@@ -51,7 +51,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(6)  public void setPreviewHTML(String value) throws ComException {
+  @DeclDISPID(6)  public void setPreviewHTML(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"PreviewHTML", DISPATCH_PROPERTYPUT,value);
   }
@@ -60,7 +60,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(7)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(7)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(8)  public void setHeight(Integer value) throws ComException {
+  @DeclDISPID(8)  public void setHeight(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -78,7 +78,7 @@ public class WebComponentPropertiesImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(9)  public void setTag(String value) throws ComException {
+  @DeclDISPID(9)  public void setTag(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(9,"Tag", DISPATCH_PROPERTYPUT,value);
   }

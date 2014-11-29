@@ -44,7 +44,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34101)  public void setBillingInformation(String value) throws ComException {
+  @DeclDISPID(34101)  public void setBillingInformation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,7 +62,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(36865)  public void setCategories(String value) throws ComException {
+  @DeclDISPID(36865)  public void setCategories(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(36865,"Categories", DISPATCH_PROPERTYPUT,value);
   }
@@ -71,7 +71,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34107)  public void setCompanies(String value) throws ComException {
+  @DeclDISPID(34107)  public void setCompanies(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34107,"Companies", DISPATCH_PROPERTYPUT,value);
   }
@@ -110,7 +110,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return OlImportance.valueOf((Integer)obj);
   }
-  @DeclDISPID(23)  public void setImportance(OlImportance value) throws ComException {
+  @DeclDISPID(23)  public void setImportance(final OlImportance value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -124,7 +124,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -133,7 +133,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34100)  public void setMileage(String value) throws ComException {
+  @DeclDISPID(34100)  public void setMileage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34100,"Mileage", DISPATCH_PROPERTYPUT,value);
   }
@@ -142,7 +142,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34062)  public void setNoAging(Boolean value) throws ComException {
+  @DeclDISPID(34062)  public void setNoAging(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34062,"NoAging", DISPATCH_PROPERTYPUT,value);
   }
@@ -166,7 +166,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return OlSensitivity.valueOf((Integer)obj);
   }
-  @DeclDISPID(54)  public void setSensitivity(OlSensitivity value) throws ComException {
+  @DeclDISPID(54)  public void setSensitivity(final OlSensitivity value) throws ComException {
     assert(value != null);
     this._dispatchCall(54,"Sensitivity", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -180,7 +180,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(55,"Subject", DISPATCH_PROPERTYPUT,value);
   }
@@ -189,7 +189,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(61468)  public void setUnRead(Boolean value) throws ComException {
+  @DeclDISPID(61468)  public void setUnRead(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(61468,"UnRead", DISPATCH_PROPERTYPUT,value);
   }
@@ -198,7 +198,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
-  @DeclDISPID(61475)  public void Close(OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(61475)  public void Close(final OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
@@ -210,11 +210,11 @@ public class PostItem extends Dispatch implements _PostItem {
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61606)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public IDispatch Move(MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(final MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
     return (IDispatch)obj;
@@ -225,7 +225,7 @@ public class PostItem extends Dispatch implements _PostItem {
   @DeclDISPID(61512)  public void Save() throws ComException {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException {
+  @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
     this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
@@ -235,7 +235,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(21)  public void setExpiryTime(java.util.Date value) throws ComException {
+  @DeclDISPID(21)  public void setExpiryTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(21,"ExpiryTime", DISPATCH_PROPERTYPUT,value);
   }
@@ -244,7 +244,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(62468)  public void setHTMLBody(String value) throws ComException {
+  @DeclDISPID(62468)  public void setHTMLBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(62468,"HTMLBody", DISPATCH_PROPERTYPUT,value);
   }
@@ -291,7 +291,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return OlBodyFormat.valueOf((Integer)obj);
   }
-  @DeclDISPID(64073)  public void setBodyFormat(OlBodyFormat value) throws ComException {
+  @DeclDISPID(64073)  public void setBodyFormat(final OlBodyFormat value) throws ComException {
     assert(value != null);
     this._dispatchCall(64073,"BodyFormat", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -308,7 +308,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(16350)  public void setInternetCodepage(Integer value) throws ComException {
+  @DeclDISPID(16350)  public void setInternetCodepage(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(16350,"InternetCodepage", DISPATCH_PROPERTYPUT,value);
   }
@@ -317,7 +317,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return OlRemoteStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(34161)  public void setMarkForDownload(OlRemoteStatus value) throws ComException {
+  @DeclDISPID(34161)  public void setMarkForDownload(final OlRemoteStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -357,7 +357,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64543)  public void setTaskSubject(String value) throws ComException {
+  @DeclDISPID(64543)  public void setTaskSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64543,"TaskSubject", DISPATCH_PROPERTYPUT,value);
   }
@@ -366,7 +366,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33029)  public void setTaskDueDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33029)  public void setTaskDueDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33029,"TaskDueDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -375,7 +375,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33028)  public void setTaskStartDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33028)  public void setTaskStartDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33028,"TaskStartDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -384,7 +384,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(33039)  public void setTaskCompletedDate(java.util.Date value) throws ComException {
+  @DeclDISPID(33039)  public void setTaskCompletedDate(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(33039,"TaskCompletedDate", DISPATCH_PROPERTYPUT,value);
   }
@@ -393,7 +393,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34208)  public void setToDoTaskOrdinal(java.util.Date value) throws ComException {
+  @DeclDISPID(34208)  public void setToDoTaskOrdinal(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34208,"ToDoTaskOrdinal", DISPATCH_PROPERTYPUT,value);
   }
@@ -402,7 +402,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34076)  public void setReminderOverrideDefault(Boolean value) throws ComException {
+  @DeclDISPID(34076)  public void setReminderOverrideDefault(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34076,"ReminderOverrideDefault", DISPATCH_PROPERTYPUT,value);
   }
@@ -411,7 +411,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34078)  public void setReminderPlaySound(Boolean value) throws ComException {
+  @DeclDISPID(34078)  public void setReminderPlaySound(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34078,"ReminderPlaySound", DISPATCH_PROPERTYPUT,value);
   }
@@ -420,7 +420,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34051)  public void setReminderSet(Boolean value) throws ComException {
+  @DeclDISPID(34051)  public void setReminderSet(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34051,"ReminderSet", DISPATCH_PROPERTYPUT,value);
   }
@@ -429,7 +429,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34079)  public void setReminderSoundFile(String value) throws ComException {
+  @DeclDISPID(34079)  public void setReminderSoundFile(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34079,"ReminderSoundFile", DISPATCH_PROPERTYPUT,value);
   }
@@ -438,11 +438,11 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34050)  public void setReminderTime(java.util.Date value) throws ComException {
+  @DeclDISPID(34050)  public void setReminderTime(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34050,"ReminderTime", DISPATCH_PROPERTYPUT,value);
   }
-  @DeclDISPID(64510)  public void MarkAsTask(OlMarkInterval MarkInterval) throws ComException {
+  @DeclDISPID(64510)  public void MarkAsTask(final OlMarkInterval MarkInterval) throws ComException {
     assert(MarkInterval != null);
     this._dispatchCall(64510,"MarkAsTask", DISPATCH_METHOD,null,MarkInterval.value);
   }
@@ -469,7 +469,7 @@ public class PostItem extends Dispatch implements _PostItem {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64644)  public void setRTFBody(Object value) throws ComException {
+  @DeclDISPID(64644)  public void setRTFBody(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64644,"RTFBody", DISPATCH_PROPERTYPUT,value);
   }

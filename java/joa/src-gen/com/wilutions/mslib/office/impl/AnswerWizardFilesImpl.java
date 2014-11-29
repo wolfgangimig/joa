@@ -20,7 +20,7 @@ public class AnswerWizardFilesImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(0)  public String getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public String getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,11 +31,11 @@ public class AnswerWizardFilesImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610809347)  public void Add(String FileName) throws ComException {
+  @DeclDISPID(1610809347)  public void Add(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,FileName);
   }
-  @DeclDISPID(1610809348)  public void Delete(String FileName) throws ComException {
+  @DeclDISPID(1610809348)  public void Delete(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(1610809348,"Delete", DISPATCH_METHOD,null,FileName);
   }

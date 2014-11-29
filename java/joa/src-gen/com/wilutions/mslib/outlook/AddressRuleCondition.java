@@ -34,7 +34,7 @@ public class AddressRuleCondition extends Dispatch implements _AddressRuleCondit
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class AddressRuleCondition extends Dispatch implements _AddressRuleCondit
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64295)  public void setAddress(Object value) throws ComException {
+  @DeclDISPID(64295)  public void setAddress(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(64295,"Address", DISPATCH_PROPERTYPUT,value);
   }

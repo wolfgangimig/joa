@@ -15,7 +15,7 @@ public class GradientStopsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.GradientStop getItem(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.GradientStop getItem(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
@@ -31,18 +31,18 @@ public class GradientStopsImpl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(10)  public void Delete(Integer Index) throws ComException {
+  @DeclDISPID(10)  public void Delete(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(10,"Delete", DISPATCH_METHOD,null,Index);
   }
-  @DeclDISPID(11)  public void Insert(com.wilutions.mslib.office.MsoRGBType RGB, Float Position, Float Transparency, Integer Index) throws ComException {
+  @DeclDISPID(11)  public void Insert(final com.wilutions.mslib.office.MsoRGBType RGB, final Float Position, final Float Transparency, final Integer Index) throws ComException {
     assert(RGB != null);
     assert(Position != null);
     assert(Transparency != null);
     assert(Index != null);
     this._dispatchCall(11,"Insert", DISPATCH_METHOD,null,RGB.getValue(),Position,Transparency,Index);
   }
-  @DeclDISPID(12)  public void Insert2(com.wilutions.mslib.office.MsoRGBType RGB, Float Position, Float Transparency, Integer Index, Float Brightness) throws ComException {
+  @DeclDISPID(12)  public void Insert2(final com.wilutions.mslib.office.MsoRGBType RGB, final Float Position, final Float Transparency, final Integer Index, final Float Brightness) throws ComException {
     assert(RGB != null);
     assert(Position != null);
     assert(Transparency != null);

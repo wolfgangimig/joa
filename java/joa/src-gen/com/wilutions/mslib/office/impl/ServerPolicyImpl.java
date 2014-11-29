@@ -15,7 +15,7 @@ public class ServerPolicyImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.PolicyItem getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.PolicyItem getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

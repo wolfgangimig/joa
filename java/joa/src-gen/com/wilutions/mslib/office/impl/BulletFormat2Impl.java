@@ -25,7 +25,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public void setCharacter(Integer value) throws ComException {
+  @DeclDISPID(2)  public void setCharacter(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Character", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(5)  public void Picture(String FileName) throws ComException {
+  @DeclDISPID(5)  public void Picture(final String FileName) throws ComException {
     assert(FileName != null);
     this._dispatchCall(5,"Picture", DISPATCH_METHOD,null,FileName);
   }
@@ -48,7 +48,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(6)  public void setRelativeSize(Float value) throws ComException {
+  @DeclDISPID(6)  public void setRelativeSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"RelativeSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(7)  public void setStartValue(Integer value) throws ComException {
+  @DeclDISPID(7)  public void setStartValue(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"StartValue", DISPATCH_PROPERTYPUT,value);
   }
@@ -66,7 +66,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoNumberedBulletStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(8)  public void setStyle(com.wilutions.mslib.office.MsoNumberedBulletStyle value) throws ComException {
+  @DeclDISPID(8)  public void setStyle(final com.wilutions.mslib.office.MsoNumberedBulletStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"Style", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -75,7 +75,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoBulletType.valueOf((Integer)obj);
   }
-  @DeclDISPID(9)  public void setType(com.wilutions.mslib.office.MsoBulletType value) throws ComException {
+  @DeclDISPID(9)  public void setType(final com.wilutions.mslib.office.MsoBulletType value) throws ComException {
     assert(value != null);
     this._dispatchCall(9,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -84,7 +84,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(10)  public void setUseTextColor(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(10)  public void setUseTextColor(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"UseTextColor", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -93,7 +93,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(11)  public void setUseTextFont(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(11)  public void setUseTextFont(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"UseTextFont", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -102,7 +102,7 @@ public class BulletFormat2Impl extends Dispatch implements com.wilutions.mslib.o
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(12)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(12)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }

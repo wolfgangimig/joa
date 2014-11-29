@@ -30,7 +30,7 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IContactEndpointImpl.class);
   }
-  @DeclDISPID(1610743812)  public void setEndpoint(com.wilutions.mslib.uccollaborationlib.IContactEndpoint value) throws ComException {
+  @DeclDISPID(1610743812)  public void setEndpoint(final com.wilutions.mslib.uccollaborationlib.IContactEndpoint value) throws ComException {
     this._dispatchCall(1610743812,"Endpoint", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IModalityPropertyDictionary getProperties() throws ComException {
@@ -38,7 +38,7 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IModalityPropertyDictionaryImpl.class);
   }
-  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetProperty(com.wilutions.mslib.uccollaborationlib.ModalityProperty _propertyType, Object _propertyValue, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SetProperty(final com.wilutions.mslib.uccollaborationlib.ModalityProperty _propertyType, final Object _propertyValue, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_propertyType != null);
     assert(_propertyValue != null);
     assert(_modalityCallback != null);
@@ -47,7 +47,7 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Connect(com.wilutions.mslib.uccollaborationlib.ModalityConnectOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743816)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Connect(final com.wilutions.mslib.uccollaborationlib.ModalityConnectOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -55,7 +55,7 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Disconnect(com.wilutions.mslib.uccollaborationlib.ModalityDisconnectReason _reason, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743817)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Disconnect(final com.wilutions.mslib.uccollaborationlib.ModalityDisconnectReason _reason, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_reason != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -63,35 +63,35 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743818)  public void Reject(com.wilutions.mslib.uccollaborationlib.ModalityDisconnectReason _reason) throws ComException {
+  @DeclDISPID(1610743818)  public void Reject(final com.wilutions.mslib.uccollaborationlib.ModalityDisconnectReason _reason) throws ComException {
     assert(_reason != null);
     this._dispatchCall(1610743818,"Reject", DISPATCH_METHOD,null,_reason.value);
   }
   @DeclDISPID(1610743819)  public void Accept() throws ComException {
     this._dispatchCall(1610743819,"Accept", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743820)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Hold(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743820)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Hold(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743820,"Hold", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743821)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Retrieve(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743821)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Retrieve(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743821,"Retrieve", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743822)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Forward(IDispatch _contactOrCollaborationEndpoint, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743822)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Forward(final IDispatch _contactOrCollaborationEndpoint, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743822,"Forward", DISPATCH_METHOD,null,(_contactOrCollaborationEndpoint!=null?_contactOrCollaborationEndpoint:Dispatch.NULL),_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743823)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Transfer(IDispatch _contactOrCollaborationEndpoint, com.wilutions.mslib.uccollaborationlib.TransferOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743823)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Transfer(final IDispatch _contactOrCollaborationEndpoint, final com.wilutions.mslib.uccollaborationlib.TransferOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -99,7 +99,7 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743824)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ConsultativeTransfer(com.wilutions.mslib.uccollaborationlib.IConversation _conversation, com.wilutions.mslib.uccollaborationlib.TransferOptions _options, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743824)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ConsultativeTransfer(final com.wilutions.mslib.uccollaborationlib.IConversation _conversation, final com.wilutions.mslib.uccollaborationlib.TransferOptions _options, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_options != null);
     assert(_modalityCallback != null);
     assert(_state != null);
@@ -107,13 +107,13 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743825)  public Boolean CanInvoke(com.wilutions.mslib.uccollaborationlib.ModalityAction _action) throws ComException {
+  @DeclDISPID(1610743825)  public Boolean CanInvoke(final com.wilutions.mslib.uccollaborationlib.ModalityAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743825,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743826)  public Boolean CanSetProperty(com.wilutions.mslib.uccollaborationlib.ModalityProperty _modalityProperty) throws ComException {
+  @DeclDISPID(1610743826)  public Boolean CanSetProperty(final com.wilutions.mslib.uccollaborationlib.ModalityProperty _modalityProperty) throws ComException {
     assert(_modalityProperty != null);
     final Object obj = this._dispatchCall(1610743826,"CanSetProperty", DISPATCH_METHOD,null,_modalityProperty.value);
     if (obj == null) return null;
@@ -129,21 +129,21 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.ISharingResourceListImpl.class);
   }
-  @DeclDISPID(1610809346)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareResources(com.wilutions.mslib.uccollaborationlib.ISharingResourceList _resources, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809346)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareResources(final com.wilutions.mslib.uccollaborationlib.ISharingResourceList _resources, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809346,"ShareResources", DISPATCH_METHOD,null,(_resources!=null?_resources:Dispatch.NULL),_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809347)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareDesktop(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809347)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareDesktop(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809347,"ShareDesktop", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809348)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareMonitorByRect(Integer Left, Integer Top, Integer right, Integer bottom, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809348)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareMonitorByRect(final Integer Left, final Integer Top, final Integer right, final Integer bottom, final Object _modalityCallback, final Object _state) throws ComException {
     assert(Left != null);
     assert(Top != null);
     assert(right != null);
@@ -169,49 +169,49 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.ParticipationState.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610809352)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RequestControl(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809352)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RequestControl(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809352,"RequestControl", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809353)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ReleaseControl(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809353)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ReleaseControl(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809353,"ReleaseControl", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809354)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GrantControl(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809354)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation GrantControl(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809354,"GrantControl", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809355)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RevokeControl(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809355)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RevokeControl(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809355,"RevokeControl", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809356)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AcceptControlRequest(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809356)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation AcceptControlRequest(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809356,"AcceptControlRequest", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809357)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation DeclineControlRequest(Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809357)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation DeclineControlRequest(final Object _modalityCallback, final Object _state) throws ComException {
     assert(_modalityCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809357,"DeclineControlRequest", DISPATCH_METHOD,null,_modalityCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809358)  public com.wilutions.mslib.uccollaborationlib.CanShareDetail CanShare(com.wilutions.mslib.uccollaborationlib.SharingResourceType _resourceType) throws ComException {
+  @DeclDISPID(1610809358)  public com.wilutions.mslib.uccollaborationlib.CanShareDetail CanShare(final com.wilutions.mslib.uccollaborationlib.SharingResourceType _resourceType) throws ComException {
     assert(_resourceType != null);
     final Object obj = this._dispatchCall(1610809358,"CanShare", DISPATCH_METHOD,null,_resourceType.value);
     if (obj == null) return null;
@@ -222,7 +222,7 @@ public class IApplicationSharingModalityImpl extends Dispatch implements com.wil
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IParticipantImpl.class);
   }
-  @DeclDISPID(1610809360)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareMonitor(Integer _monitorId, Object _modalityCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809360)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation ShareMonitor(final Integer _monitorId, final Object _modalityCallback, final Object _state) throws ComException {
     assert(_monitorId != null);
     assert(_modalityCallback != null);
     assert(_state != null);

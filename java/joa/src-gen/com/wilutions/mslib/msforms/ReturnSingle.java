@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{8A683C92-BA84-11CF-8110-00A0C9030074}")
 public class ReturnSingle extends Dispatch implements IReturnSingle {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(0)  public void setValue(Float value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }

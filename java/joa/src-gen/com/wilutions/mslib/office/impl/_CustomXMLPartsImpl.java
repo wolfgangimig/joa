@@ -25,14 +25,14 @@ public class _CustomXMLPartsImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLPart getItem(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.CustomXMLPart getItem(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.office.CustomXMLPart.class);
   }
-  @DeclDISPID(1610809347)  public com.wilutions.mslib.office.CustomXMLPart Add(String XML, Object SchemaCollection) throws ComException {
+  @DeclDISPID(1610809347)  public com.wilutions.mslib.office.CustomXMLPart Add(final String XML, final Object SchemaCollection) throws ComException {
     assert(XML != null);
     assert(SchemaCollection != null);
     final Object obj = this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,XML,SchemaCollection);
@@ -40,14 +40,14 @@ public class _CustomXMLPartsImpl extends Dispatch implements com.wilutions.mslib
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.office.CustomXMLPart.class);
   }
-  @DeclDISPID(1610809348)  public com.wilutions.mslib.office.CustomXMLPart SelectByID(String Id) throws ComException {
+  @DeclDISPID(1610809348)  public com.wilutions.mslib.office.CustomXMLPart SelectByID(final String Id) throws ComException {
     assert(Id != null);
     final Object obj = this._dispatchCall(1610809348,"SelectByID", DISPATCH_METHOD,null,Id);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.office.CustomXMLPart.class);
   }
-  @DeclDISPID(1610809349)  public com.wilutions.mslib.office.CustomXMLParts SelectByNamespace(String NamespaceURI) throws ComException {
+  @DeclDISPID(1610809349)  public com.wilutions.mslib.office.CustomXMLParts SelectByNamespace(final String NamespaceURI) throws ComException {
     assert(NamespaceURI != null);
     final Object obj = this._dispatchCall(1610809349,"SelectByNamespace", DISPATCH_METHOD,null,NamespaceURI);
     if (obj == null) return null;

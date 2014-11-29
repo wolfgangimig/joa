@@ -10,7 +10,7 @@ public class TrendlinesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(181)  public com.wilutions.mslib.office.IMsoTrendline Add(com.wilutions.mslib.office.XlTrendlineType Type, Object Order, Object Period, Object Forward, Object Backward, Object Intercept, Object DisplayEquation, Object DisplayRSquared, Object Name) throws ComException {
+  @DeclDISPID(181)  public com.wilutions.mslib.office.IMsoTrendline Add(final com.wilutions.mslib.office.XlTrendlineType Type, final Object Order, final Object Period, final Object Forward, final Object Backward, final Object Intercept, final Object DisplayEquation, final Object DisplayRSquared, final Object Name) throws ComException {
     assert(Type != null);
     assert(Order != null);
     assert(Period != null);
@@ -29,7 +29,7 @@ public class TrendlinesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoTrendline Item(Object Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoTrendline Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -50,7 +50,7 @@ public class TrendlinesImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoTrendline get_Default(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoTrendline get_Default(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

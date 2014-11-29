@@ -10,30 +10,20 @@
  */
 package com.wilutions.joa;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
 import javafx.application.Platform;
-import javafx.scene.Scene;
-import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
-import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
-import com.wilutions.com.WindowsUtil;
-import com.wilutions.joa.fx.EmbeddedWindow;
-import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.joactrllib.IJoaUtilAddin;
 import com.wilutions.mslib.office.COMAddIn;
 import com.wilutions.mslib.office.COMAddIns;

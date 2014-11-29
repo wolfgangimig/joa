@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{1CDC5048-CE31-9443-0224-3D9CC59EA91D}")
 public class _IAccessPermissionEventsImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IAccessPermissionEvents {
-  @DeclDISPID(1950)  public void onOnAccessEntryAdded(com.wilutions.mslib.uccollaborationlib.IAccessPermission _eventSource, com.wilutions.mslib.uccollaborationlib.IAccessEntryCollectionChangedEventData _eventData) throws ComException {
+  @DeclDISPID(1950)  public void onOnAccessEntryAdded(final com.wilutions.mslib.uccollaborationlib.IAccessPermission _eventSource, final com.wilutions.mslib.uccollaborationlib.IAccessEntryCollectionChangedEventData _eventData) throws ComException {
     this._dispatchCall(1950,"OnAccessEntryAdded", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
-  @DeclDISPID(1951)  public void onOnAccessEntryRemoved(com.wilutions.mslib.uccollaborationlib.IAccessPermission _eventSource, com.wilutions.mslib.uccollaborationlib.IAccessEntryCollectionChangedEventData _eventData) throws ComException {
+  @DeclDISPID(1951)  public void onOnAccessEntryRemoved(final com.wilutions.mslib.uccollaborationlib.IAccessPermission _eventSource, final com.wilutions.mslib.uccollaborationlib.IAccessEntryCollectionChangedEventData _eventData) throws ComException {
     this._dispatchCall(1951,"OnAccessEntryRemoved", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
   public _IAccessPermissionEventsImpl(String progId) throws ComException {

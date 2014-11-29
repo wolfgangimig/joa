@@ -30,7 +30,7 @@ public class ODSOFilterImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setColumn(String value) throws ComException {
+  @DeclDISPID(3)  public void setColumn(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Column", DISPATCH_PROPERTYPUT,value);
   }
@@ -39,7 +39,7 @@ public class ODSOFilterImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoFilterComparison.valueOf((Integer)obj);
   }
-  @DeclDISPID(4)  public void setComparison(com.wilutions.mslib.office.MsoFilterComparison value) throws ComException {
+  @DeclDISPID(4)  public void setComparison(final com.wilutions.mslib.office.MsoFilterComparison value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Comparison", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -48,7 +48,7 @@ public class ODSOFilterImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(5)  public void setCompareTo(String value) throws ComException {
+  @DeclDISPID(5)  public void setCompareTo(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"CompareTo", DISPATCH_PROPERTYPUT,value);
   }
@@ -57,7 +57,7 @@ public class ODSOFilterImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoFilterConjunction.valueOf((Integer)obj);
   }
-  @DeclDISPID(6)  public void setConjunction(com.wilutions.mslib.office.MsoFilterConjunction value) throws ComException {
+  @DeclDISPID(6)  public void setConjunction(final com.wilutions.mslib.office.MsoFilterConjunction value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"Conjunction", DISPATCH_PROPERTYPUT,value.value);
   }

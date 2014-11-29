@@ -20,11 +20,11 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(10)  public void IncrementOffsetX(Float Increment) throws ComException {
+  @DeclDISPID(10)  public void IncrementOffsetX(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(10,"IncrementOffsetX", DISPATCH_METHOD,null,Increment);
   }
-  @DeclDISPID(11)  public void IncrementOffsetY(Float Increment) throws ComException {
+  @DeclDISPID(11)  public void IncrementOffsetY(final Float Increment) throws ComException {
     assert(Increment != null);
     this._dispatchCall(11,"IncrementOffsetY", DISPATCH_METHOD,null,Increment);
   }
@@ -33,7 +33,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
-  @DeclDISPID(100)  public void setForeColor(com.wilutions.mslib.office.ColorFormat value) throws ComException {
+  @DeclDISPID(100)  public void setForeColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
     this._dispatchCall(100,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.MsoTriState getObscured() throws ComException {
@@ -41,7 +41,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(101)  public void setObscured(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(101)  public void setObscured(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(101,"Obscured", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -50,7 +50,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(102)  public void setOffsetX(Float value) throws ComException {
+  @DeclDISPID(102)  public void setOffsetX(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(102,"OffsetX", DISPATCH_PROPERTYPUT,value);
   }
@@ -59,7 +59,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(103)  public void setOffsetY(Float value) throws ComException {
+  @DeclDISPID(103)  public void setOffsetY(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"OffsetY", DISPATCH_PROPERTYPUT,value);
   }
@@ -68,7 +68,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(104)  public void setTransparency(Float value) throws ComException {
+  @DeclDISPID(104)  public void setTransparency(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(104,"Transparency", DISPATCH_PROPERTYPUT,value);
   }
@@ -77,7 +77,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoShadowType.valueOf((Integer)obj);
   }
-  @DeclDISPID(105)  public void setType(com.wilutions.mslib.office.MsoShadowType value) throws ComException {
+  @DeclDISPID(105)  public void setType(final com.wilutions.mslib.office.MsoShadowType value) throws ComException {
     assert(value != null);
     this._dispatchCall(105,"Type", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -86,7 +86,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(106)  public void setVisible(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(106)  public void setVisible(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"Visible", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -95,7 +95,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoShadowStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(107)  public void setStyle(com.wilutions.mslib.office.MsoShadowStyle value) throws ComException {
+  @DeclDISPID(107)  public void setStyle(final com.wilutions.mslib.office.MsoShadowStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(107,"Style", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -104,7 +104,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(108)  public void setBlur(Float value) throws ComException {
+  @DeclDISPID(108)  public void setBlur(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(108,"Blur", DISPATCH_PROPERTYPUT,value);
   }
@@ -113,7 +113,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(109)  public void setSize(Float value) throws ComException {
+  @DeclDISPID(109)  public void setSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(109,"Size", DISPATCH_PROPERTYPUT,value);
   }
@@ -122,7 +122,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(110)  public void setRotateWithShape(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(110)  public void setRotateWithShape(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(110,"RotateWithShape", DISPATCH_PROPERTYPUT,value.value);
   }

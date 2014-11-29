@@ -13,7 +13,7 @@ public interface IParticipantInfo extends IDispatch {
   @DeclDISPID(1610743809)  public Boolean getIsRepresenting() throws ComException;
   @DeclDISPID(1610743810)  public String getRepresentedUri() throws ComException;
   @DeclDISPID(1610743811)  public String getDisplayName() throws ComException;
-  @DeclDISPID(1610743811)  public void setDisplayName(String value) throws ComException;
+  @DeclDISPID(1610743811)  public void setDisplayName(final String value) throws ComException;
   @DeclDISPID(1610743813)  public String getRepresentedDisplayName() throws ComException;
-  @DeclDISPID(1610743813)  public void setRepresentedDisplayName(String value) throws ComException;
+  @DeclDISPID(1610743813)  public void setRepresentedDisplayName(final String value) throws ComException;
 }

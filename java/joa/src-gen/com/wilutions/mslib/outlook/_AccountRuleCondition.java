@@ -14,8 +14,8 @@ public interface _AccountRuleCondition extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(103)  public Boolean getEnabled() throws ComException;
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException;
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException;
   @DeclDISPID(64298)  public OlRuleConditionType getConditionType() throws ComException;
   @DeclDISPID(64209)  public Account getAccount() throws ComException;
-  @DeclDISPID(64209)  public void setAccount(Account value) throws ComException;
+  @DeclDISPID(64209)  public void setAccount(final Account value) throws ComException;
 }

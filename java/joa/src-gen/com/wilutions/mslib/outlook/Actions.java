@@ -14,7 +14,7 @@ public interface Actions extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(80)  public Integer getCount() throws ComException;
-  @DeclDISPID(81)  public Action Item(Object Index) throws ComException;
+  @DeclDISPID(81)  public Action Item(final Object Index) throws ComException;
   @DeclDISPID(100)  public Action Add() throws ComException;
-  @DeclDISPID(82)  public void Remove(Integer Index) throws ComException;
+  @DeclDISPID(82)  public void Remove(final Integer Index) throws ComException;
 }

@@ -30,20 +30,20 @@ public class FileDialogFiltersImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.FileDialogFilter Item(Integer Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.FileDialogFilter Item(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.FileDialogFilterImpl.class);
   }
-  @DeclDISPID(1610809348)  public void Delete(Object filter) throws ComException {
+  @DeclDISPID(1610809348)  public void Delete(final Object filter) throws ComException {
     assert(filter != null);
     this._dispatchCall(1610809348,"Delete", DISPATCH_METHOD,null,filter);
   }
   @DeclDISPID(1610809349)  public void Clear() throws ComException {
     this._dispatchCall(1610809349,"Clear", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610809350)  public com.wilutions.mslib.office.FileDialogFilter Add(String Description, String Extensions, Object Position) throws ComException {
+  @DeclDISPID(1610809350)  public com.wilutions.mslib.office.FileDialogFilter Add(final String Description, final String Extensions, final Object Position) throws ComException {
     assert(Description != null);
     assert(Extensions != null);
     assert(Position != null);

@@ -40,7 +40,7 @@ public class ILyncClientImpl extends Dispatch implements com.wilutions.mslib.ucc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConferenceSchedulerImpl.class);
   }
-  @DeclDISPID(1610809344)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SignIn(String _userUri, String _domainAndUsername, String _password, Object _CommunicatorClientCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809344)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SignIn(final String _userUri, final String _domainAndUsername, final String _password, final Object _CommunicatorClientCallback, final Object _state) throws ComException {
     assert(_userUri != null);
     assert(_domainAndUsername != null);
     assert(_password != null);
@@ -50,7 +50,7 @@ public class ILyncClientImpl extends Dispatch implements com.wilutions.mslib.ucc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809345)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SignOut(Object _CommunicatorClientCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809345)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SignOut(final Object _CommunicatorClientCallback, final Object _state) throws ComException {
     assert(_CommunicatorClientCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809345,"SignOut", DISPATCH_METHOD,null,_CommunicatorClientCallback,_state);
@@ -82,7 +82,7 @@ public class ILyncClientImpl extends Dispatch implements com.wilutions.mslib.ucc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IUtilitiesImpl.class);
   }
-  @DeclDISPID(1610809351)  public com.wilutions.mslib.uccollaborationlib.IApplicationRegistration CreateApplicationRegistration(String _appGuid, String _appName) throws ComException {
+  @DeclDISPID(1610809351)  public com.wilutions.mslib.uccollaborationlib.IApplicationRegistration CreateApplicationRegistration(final String _appGuid, final String _appName) throws ComException {
     assert(_appGuid != null);
     assert(_appName != null);
     final Object obj = this._dispatchCall(1610809351,"CreateApplicationRegistration", DISPATCH_METHOD,null,_appGuid,_appName);
@@ -94,7 +94,7 @@ public class ILyncClientImpl extends Dispatch implements com.wilutions.mslib.ucc
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809353)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Initialize(String _clientName, String _version, String _clientShortName, String _clientNameAbbreviation, String _clientLongName, com.wilutions.mslib.uccollaborationlib.SupportedFeatures _supportedFeatures, Object _CommunicatorClientCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809353)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Initialize(final String _clientName, final String _version, final String _clientShortName, final String _clientNameAbbreviation, final String _clientLongName, final com.wilutions.mslib.uccollaborationlib.SupportedFeatures _supportedFeatures, final Object _CommunicatorClientCallback, final Object _state) throws ComException {
     assert(_clientName != null);
     assert(_version != null);
     assert(_clientShortName != null);
@@ -107,7 +107,7 @@ public class ILyncClientImpl extends Dispatch implements com.wilutions.mslib.ucc
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610809354)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Shutdown(Object _CommunicatorClientCallback, Object _state) throws ComException {
+  @DeclDISPID(1610809354)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation Shutdown(final Object _CommunicatorClientCallback, final Object _state) throws ComException {
     assert(_CommunicatorClientCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610809354,"Shutdown", DISPATCH_METHOD,null,_CommunicatorClientCallback,_state);

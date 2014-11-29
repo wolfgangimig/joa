@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoInterface(guid="{50D86EE2-288F-44F5-8144-69F6E3B24B90}")
 public interface _IContactManagerEvents extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(200)  public void onOnGroupAdded(IContactManager _eventSource, IGroupCollectionChangedEventData _eventData) throws ComException;
-  @DeclDISPID(201)  public void onOnGroupRemoved(IContactManager _eventSource, IGroupCollectionChangedEventData _eventData) throws ComException;
-  @DeclDISPID(202)  public void onOnSearchProviderStateChanged(IContactManager _eventSource, ISearchProviderStateChangedEventData _eventData) throws ComException;
+  @DeclDISPID(200)  public void onOnGroupAdded(final IContactManager _eventSource, final IGroupCollectionChangedEventData _eventData) throws ComException;
+  @DeclDISPID(201)  public void onOnGroupRemoved(final IContactManager _eventSource, final IGroupCollectionChangedEventData _eventData) throws ComException;
+  @DeclDISPID(202)  public void onOnSearchProviderStateChanged(final IContactManager _eventSource, final ISearchProviderStateChangedEventData _eventData) throws ComException;
 }

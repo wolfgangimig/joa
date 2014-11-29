@@ -11,5 +11,5 @@ public interface ILicValidator extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public Object getProducts() throws ComException;
   @DeclDISPID(2)  public Integer getSelection() throws ComException;
-  @DeclDISPID(2)  public void setSelection(Integer value) throws ComException;
+  @DeclDISPID(2)  public void setSelection(final Integer value) throws ComException;
 }

@@ -19,13 +19,13 @@ public class DeviceCollection extends Dispatch implements IDeviceCollection {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public IDevice getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public IDevice getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IDeviceImpl.class);
   }
-  @DeclDISPID(1610743811)  public Integer IndexOf(IDevice _device) throws ComException {
+  @DeclDISPID(1610743811)  public Integer IndexOf(final IDevice _device) throws ComException {
     final Object obj = this._dispatchCall(1610743811,"IndexOf", DISPATCH_METHOD,null,(_device!=null?_device:Dispatch.NULL));
     if (obj == null) return null;
     return (Integer)obj;

@@ -15,7 +15,7 @@ public class CategoryCollectionImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoCategory Item(Object Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoCategory Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -31,7 +31,7 @@ public class CategoryCollectionImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoCategory get_Default(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoCategory get_Default(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;

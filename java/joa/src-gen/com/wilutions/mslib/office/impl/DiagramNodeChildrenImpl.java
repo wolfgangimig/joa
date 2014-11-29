@@ -20,13 +20,13 @@ public class DiagramNodeChildrenImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.DiagramNode Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.DiagramNode Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
-  @DeclDISPID(10)  public com.wilutions.mslib.office.DiagramNode AddNode(Object Index, com.wilutions.mslib.office.MsoDiagramNodeType NodeType) throws ComException {
+  @DeclDISPID(10)  public com.wilutions.mslib.office.DiagramNode AddNode(final Object Index, final com.wilutions.mslib.office.MsoDiagramNodeType NodeType) throws ComException {
     assert(Index != null);
     assert(NodeType != null);
     final Object obj = this._dispatchCall(10,"AddNode", DISPATCH_METHOD,null,Index,NodeType.value);

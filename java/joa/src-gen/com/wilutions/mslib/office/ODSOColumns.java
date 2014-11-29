@@ -13,5 +13,5 @@ public interface ODSOColumns extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public Integer getCount() throws ComException;
   @DeclDISPID(2)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(1610809346)  public IDispatch Item(Object varIndex) throws ComException;
+  @DeclDISPID(1610809346)  public IDispatch Item(final Object varIndex) throws ComException;
 }

@@ -34,13 +34,13 @@ public class UserDefinedProperties extends Dispatch implements _UserDefinedPrope
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _UserDefinedProperty Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public _UserDefinedProperty Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._UserDefinedPropertyImpl.class);
   }
-  @DeclDISPID(102)  public UserDefinedProperty Add(String Name, OlUserPropertyType Type, Object DisplayFormat, Object Formula) throws ComException {
+  @DeclDISPID(102)  public UserDefinedProperty Add(final String Name, final OlUserPropertyType Type, final Object DisplayFormat, final Object Formula) throws ComException {
     assert(Name != null);
     assert(Type != null);
     assert(DisplayFormat != null);
@@ -50,14 +50,14 @@ public class UserDefinedProperties extends Dispatch implements _UserDefinedPrope
     final Dispatch disp = (Dispatch)obj;
     return disp.as(UserDefinedProperty.class);
   }
-  @DeclDISPID(103)  public UserDefinedProperty Find(String Name) throws ComException {
+  @DeclDISPID(103)  public UserDefinedProperty Find(final String Name) throws ComException {
     assert(Name != null);
     final Object obj = this._dispatchCall(103,"Find", DISPATCH_METHOD,null,Name);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(UserDefinedProperty.class);
   }
-  @DeclDISPID(82)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(82)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(82,"Remove", DISPATCH_METHOD,null,Index);
   }

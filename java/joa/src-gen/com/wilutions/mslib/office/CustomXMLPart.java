@@ -45,7 +45,7 @@ public class CustomXMLPart extends Dispatch implements _CustomXMLPart {
     final Dispatch disp = (Dispatch)obj;
     return disp.as(CustomXMLSchemaCollection.class);
   }
-  @DeclDISPID(1610809348)  public void setSchemaCollection(CustomXMLSchemaCollection value) throws ComException {
+  @DeclDISPID(1610809348)  public void setSchemaCollection(final CustomXMLSchemaCollection value) throws ComException {
     this._dispatchCall(1610809348,"SchemaCollection", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(1610809350)  public CustomXMLPrefixMappings getNamespaceManager() throws ComException {
@@ -58,7 +58,7 @@ public class CustomXMLPart extends Dispatch implements _CustomXMLPart {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610809352)  public void AddNode(CustomXMLNode Parent, String Name, String NamespaceURI, CustomXMLNode NextSibling, MsoCustomXMLNodeType NodeType, String NodeValue) throws ComException {
+  @DeclDISPID(1610809352)  public void AddNode(final CustomXMLNode Parent, final String Name, final String NamespaceURI, final CustomXMLNode NextSibling, final MsoCustomXMLNodeType NodeType, final String NodeValue) throws ComException {
     assert(Name != null);
     assert(NamespaceURI != null);
     assert(NodeType != null);
@@ -68,25 +68,25 @@ public class CustomXMLPart extends Dispatch implements _CustomXMLPart {
   @DeclDISPID(1610809353)  public void Delete() throws ComException {
     this._dispatchCall(1610809353,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610809354)  public Boolean Load(String FilePath) throws ComException {
+  @DeclDISPID(1610809354)  public Boolean Load(final String FilePath) throws ComException {
     assert(FilePath != null);
     final Object obj = this._dispatchCall(1610809354,"Load", DISPATCH_METHOD,null,FilePath);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809355)  public Boolean LoadXML(String XML) throws ComException {
+  @DeclDISPID(1610809355)  public Boolean LoadXML(final String XML) throws ComException {
     assert(XML != null);
     final Object obj = this._dispatchCall(1610809355,"LoadXML", DISPATCH_METHOD,null,XML);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610809356)  public CustomXMLNodes SelectNodes(String XPath) throws ComException {
+  @DeclDISPID(1610809356)  public CustomXMLNodes SelectNodes(final String XPath) throws ComException {
     assert(XPath != null);
     final Object obj = this._dispatchCall(1610809356,"SelectNodes", DISPATCH_METHOD,null,XPath);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLNodesImpl.class);
   }
-  @DeclDISPID(1610809357)  public CustomXMLNode SelectSingleNode(String XPath) throws ComException {
+  @DeclDISPID(1610809357)  public CustomXMLNode SelectSingleNode(final String XPath) throws ComException {
     assert(XPath != null);
     final Object obj = this._dispatchCall(1610809357,"SelectSingleNode", DISPATCH_METHOD,null,XPath);
     if (obj == null) return null;

@@ -14,12 +14,12 @@ public interface _AutoFormatRule extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(8450)  public String getName() throws ComException;
-  @DeclDISPID(8450)  public void setName(String value) throws ComException;
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException;
   @DeclDISPID(64024)  public String getFilter() throws ComException;
-  @DeclDISPID(64024)  public void setFilter(String value) throws ComException;
+  @DeclDISPID(64024)  public void setFilter(final String value) throws ComException;
   @DeclDISPID(103)  public Boolean getEnabled() throws ComException;
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException;
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException;
   @DeclDISPID(64023)  public ViewFont getFont() throws ComException;
-  @DeclDISPID(64023)  public void setFont(ViewFont value) throws ComException;
+  @DeclDISPID(64023)  public void setFont(final ViewFont value) throws ComException;
   @DeclDISPID(64062)  public Boolean getStandard() throws ComException;
 }

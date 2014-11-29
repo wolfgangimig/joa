@@ -19,7 +19,7 @@ public class Utilities2 extends Dispatch implements IUtilities2 {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IScheduledConferenceManagerImpl.class);
   }
-  @DeclDISPID(268435459)  public String Normalize(String _displayString) throws ComException {
+  @DeclDISPID(268435459)  public String Normalize(final String _displayString) throws ComException {
     assert(_displayString != null);
     final Object obj = this._dispatchCall(268435459,"Normalize", DISPATCH_METHOD,null,_displayString);
     if (obj == null) return null;

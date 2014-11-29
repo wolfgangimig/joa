@@ -15,13 +15,13 @@ public class LanguageSettingsImpl extends Dispatch implements com.wilutions.msli
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Integer getLanguageID(com.wilutions.mslib.office.MsoAppLanguageID Id) throws ComException {
+  @DeclDISPID(1)  public Integer getLanguageID(final com.wilutions.mslib.office.MsoAppLanguageID Id) throws ComException {
     assert(Id != null);
     final Object obj = this._dispatchCall(1,"LanguageID", DISPATCH_PROPERTYGET,null,Id.value);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(2)  public Boolean getLanguagePreferredForEditing(com.wilutions.mslib.office.MsoLanguageID lid) throws ComException {
+  @DeclDISPID(2)  public Boolean getLanguagePreferredForEditing(final com.wilutions.mslib.office.MsoLanguageID lid) throws ComException {
     assert(lid != null);
     final Object obj = this._dispatchCall(2,"LanguagePreferredForEditing", DISPATCH_PROPERTYGET,null,lid.value);
     if (obj == null) return null;

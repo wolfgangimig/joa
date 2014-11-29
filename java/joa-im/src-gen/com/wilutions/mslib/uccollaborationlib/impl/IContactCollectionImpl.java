@@ -15,7 +15,7 @@ public class IContactCollectionImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1610743810)  public Boolean TryGetContact(String _uri, ByRef<com.wilutions.mslib.uccollaborationlib.IContact> _value) throws ComException {
+  @DeclDISPID(1610743810)  public Boolean TryGetContact(final String _uri, final ByRef<com.wilutions.mslib.uccollaborationlib.IContact> _value) throws ComException {
     assert(_uri != null);
     assert(_value != null);
     final Object obj = this._dispatchCall(1610743810,"TryGetContact", DISPATCH_METHOD,null,_uri,_value);

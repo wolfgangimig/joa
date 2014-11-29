@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A932-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _FormRegionStartupImpl extends Dispatch implements com.wilutions.mslib.outlook._FormRegionStartup {
-  @DeclDISPID(64310)  public Object GetFormRegionStorage(String FormRegionName, IDispatch Item, Integer LCID, com.wilutions.mslib.outlook.OlFormRegionMode FormRegionMode, com.wilutions.mslib.outlook.OlFormRegionSize FormRegionSize) throws ComException {
+  @DeclDISPID(64310)  public Object GetFormRegionStorage(final String FormRegionName, final IDispatch Item, final Integer LCID, final com.wilutions.mslib.outlook.OlFormRegionMode FormRegionMode, final com.wilutions.mslib.outlook.OlFormRegionSize FormRegionSize) throws ComException {
     assert(FormRegionName != null);
     assert(LCID != null);
     assert(FormRegionMode != null);
@@ -14,17 +14,17 @@ public class _FormRegionStartupImpl extends Dispatch implements com.wilutions.ms
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64317)  public void BeforeFormRegionShow(com.wilutions.mslib.outlook.FormRegion FormRegion) throws ComException {
+  @DeclDISPID(64317)  public void BeforeFormRegionShow(final com.wilutions.mslib.outlook.FormRegion FormRegion) throws ComException {
     this._dispatchCall(64317,"BeforeFormRegionShow", DISPATCH_METHOD,null,(FormRegion!=null?FormRegion:Dispatch.NULL));
   }
-  @DeclDISPID(64563)  public Object GetFormRegionManifest(String FormRegionName, Integer LCID) throws ComException {
+  @DeclDISPID(64563)  public Object GetFormRegionManifest(final String FormRegionName, final Integer LCID) throws ComException {
     assert(FormRegionName != null);
     assert(LCID != null);
     final Object obj = this._dispatchCall(64563,"GetFormRegionManifest", DISPATCH_METHOD,null,FormRegionName,LCID);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(64564)  public Object GetFormRegionIcon(String FormRegionName, Integer LCID, com.wilutions.mslib.outlook.OlFormRegionIcon Icon) throws ComException {
+  @DeclDISPID(64564)  public Object GetFormRegionIcon(final String FormRegionName, final Integer LCID, final com.wilutions.mslib.outlook.OlFormRegionIcon Icon) throws ComException {
     assert(FormRegionName != null);
     assert(LCID != null);
     assert(Icon != null);

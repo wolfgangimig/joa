@@ -20,7 +20,7 @@ public class SharedWorkspaceLinkImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setURL(String value) throws ComException {
+  @DeclDISPID(0)  public void setURL(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"URL", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class SharedWorkspaceLinkImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void setDescription(String value) throws ComException {
+  @DeclDISPID(1)  public void setDescription(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Description", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class SharedWorkspaceLinkImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setNotes(String value) throws ComException {
+  @DeclDISPID(2)  public void setNotes(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Notes", DISPATCH_PROPERTYPUT,value);
   }

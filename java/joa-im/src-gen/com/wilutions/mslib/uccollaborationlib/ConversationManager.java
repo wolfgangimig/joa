@@ -26,7 +26,7 @@ public class ConversationManager extends Dispatch implements IConversationManage
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationImpl.class);
   }
-  @DeclDISPID(1610743811)  public IConversation JoinConference(String _conferenceUrl) throws ComException {
+  @DeclDISPID(1610743811)  public IConversation JoinConference(final String _conferenceUrl) throws ComException {
     assert(_conferenceUrl != null);
     final Object obj = this._dispatchCall(1610743811,"JoinConference", DISPATCH_METHOD,null,_conferenceUrl);
     if (obj == null) return null;

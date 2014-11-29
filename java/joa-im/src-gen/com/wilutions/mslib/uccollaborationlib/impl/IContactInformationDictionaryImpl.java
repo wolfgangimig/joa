@@ -15,7 +15,7 @@ public class IContactInformationDictionaryImpl extends Dispatch implements com.w
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public Object getItem(com.wilutions.mslib.uccollaborationlib.ContactInformationType _key) throws ComException {
+  @DeclDISPID(0)  public Object getItem(final com.wilutions.mslib.uccollaborationlib.ContactInformationType _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_key.value);
     if (obj == null) return null;
@@ -26,26 +26,26 @@ public class IContactInformationDictionaryImpl extends Dispatch implements com.w
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.ContactInformationType[])obj;
   }
-  @DeclDISPID(1610743812)  public Boolean TryGetValue(com.wilutions.mslib.uccollaborationlib.ContactInformationType _key, ByRef<Object> _value) throws ComException {
+  @DeclDISPID(1610743812)  public Boolean TryGetValue(final com.wilutions.mslib.uccollaborationlib.ContactInformationType _key, final ByRef<Object> _value) throws ComException {
     assert(_key != null);
     assert(_value != null);
     final Object obj = this._dispatchCall(1610743812,"TryGetValue", DISPATCH_METHOD,null,_key.value,_value);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.ContactInformationType GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.ContactInformationType GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743813,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.ContactInformationType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743814)  public Object GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743814)  public Object GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743814,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(com.wilutions.mslib.uccollaborationlib.ContactInformationType _key) throws ComException {
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final com.wilutions.mslib.uccollaborationlib.ContactInformationType _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(1610743815,"ContainsKey", DISPATCH_METHOD,null,_key.value);
     if (obj == null) return null;

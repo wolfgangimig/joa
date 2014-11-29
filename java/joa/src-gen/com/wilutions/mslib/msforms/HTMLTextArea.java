@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{5512D124-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setValue(String value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -27,7 +27,7 @@ public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(615)  public void setRows(Integer value) throws ComException {
+  @DeclDISPID(615)  public void setRows(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(615,"Rows", DISPATCH_PROPERTYPUT,value);
   }
@@ -36,7 +36,7 @@ public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(616)  public void setColumns(Integer value) throws ComException {
+  @DeclDISPID(616)  public void setColumns(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(616,"Columns", DISPATCH_PROPERTYPUT,value);
   }
@@ -45,7 +45,7 @@ public class HTMLTextArea extends Dispatch implements IWHTMLTextArea {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(617)  public void setWordWrap(String value) throws ComException {
+  @DeclDISPID(617)  public void setWordWrap(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(617,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }

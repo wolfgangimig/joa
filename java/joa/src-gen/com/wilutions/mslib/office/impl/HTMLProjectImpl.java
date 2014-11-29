@@ -20,11 +20,11 @@ public class HTMLProjectImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoHTMLProjectState.valueOf((Integer)obj);
   }
-  @DeclDISPID(1)  public void RefreshProject(Boolean Refresh) throws ComException {
+  @DeclDISPID(1)  public void RefreshProject(final Boolean Refresh) throws ComException {
     assert(Refresh != null);
     this._dispatchCall(1,"RefreshProject", DISPATCH_METHOD,null,Refresh);
   }
-  @DeclDISPID(2)  public void RefreshDocument(Boolean Refresh) throws ComException {
+  @DeclDISPID(2)  public void RefreshDocument(final Boolean Refresh) throws ComException {
     assert(Refresh != null);
     this._dispatchCall(2,"RefreshDocument", DISPATCH_METHOD,null,Refresh);
   }
@@ -38,7 +38,7 @@ public class HTMLProjectImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(5)  public void Open(com.wilutions.mslib.office.MsoHTMLProjectOpen OpenKind) throws ComException {
+  @DeclDISPID(5)  public void Open(final com.wilutions.mslib.office.MsoHTMLProjectOpen OpenKind) throws ComException {
     assert(OpenKind != null);
     this._dispatchCall(5,"Open", DISPATCH_METHOD,null,OpenKind.value);
   }

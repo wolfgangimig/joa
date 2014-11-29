@@ -9,5 +9,5 @@ import com.wilutions.com.*;
 @CoInterface(guid="{92A9EB9B-85EE-444E-A302-00C3C945BAA4}")
 public interface _IDelegatorClientEvents extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(100)  public void onOnStateChanged(IClient _eventSource, IClientStateChangedEventData _eventData) throws ComException;
+  @DeclDISPID(100)  public void onOnStateChanged(final IClient _eventSource, final IClientStateChangedEventData _eventData) throws ComException;
 }

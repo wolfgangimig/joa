@@ -11,9 +11,9 @@ public interface CommandBarControls extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
-  @DeclDISPID(1610809344)  public CommandBarControl Add(Object Type, Object Id, Object Parameter, Object Before, Object Temporary) throws ComException;
+  @DeclDISPID(1610809344)  public CommandBarControl Add(final Object Type, final Object Id, final Object Parameter, final Object Before, final Object Temporary) throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public CommandBarControl getItem(Object Index) throws ComException;
+  @DeclDISPID(0)  public CommandBarControl getItem(final Object Index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610809348)  public CommandBar getParent() throws ComException;
 }

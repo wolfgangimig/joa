@@ -14,11 +14,11 @@ public interface _Category extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(8450)  public String getName() throws ComException;
-  @DeclDISPID(8450)  public void setName(String value) throws ComException;
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException;
   @DeclDISPID(64419)  public OlCategoryColor getColor() throws ComException;
-  @DeclDISPID(64419)  public void setColor(OlCategoryColor value) throws ComException;
+  @DeclDISPID(64419)  public void setColor(final OlCategoryColor value) throws ComException;
   @DeclDISPID(64420)  public OlCategoryShortcutKey getShortcutKey() throws ComException;
-  @DeclDISPID(64420)  public void setShortcutKey(OlCategoryShortcutKey value) throws ComException;
+  @DeclDISPID(64420)  public void setShortcutKey(final OlCategoryShortcutKey value) throws ComException;
   @DeclDISPID(64464)  public String getCategoryID() throws ComException;
   @DeclDISPID(64539)  public com.wilutions.mslib.stdole.OLE_COLOR getCategoryBorderColor() throws ComException;
   @DeclDISPID(64540)  public com.wilutions.mslib.stdole.OLE_COLOR getCategoryGradientTopColor() throws ComException;

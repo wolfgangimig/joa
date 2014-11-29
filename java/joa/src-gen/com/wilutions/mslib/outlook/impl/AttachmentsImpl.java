@@ -30,13 +30,13 @@ public class AttachmentsImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Attachment Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Attachment Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AttachmentImpl.class);
   }
-  @DeclDISPID(101)  public com.wilutions.mslib.outlook.Attachment Add(Object Source, Object Type, Object Position, Object DisplayName) throws ComException {
+  @DeclDISPID(101)  public com.wilutions.mslib.outlook.Attachment Add(final Object Source, final Object Type, final Object Position, final Object DisplayName) throws ComException {
     assert(Source != null);
     assert(Type != null);
     assert(Position != null);
@@ -45,7 +45,7 @@ public class AttachmentsImpl extends Dispatch implements com.wilutions.mslib.out
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AttachmentImpl.class);
   }
-  @DeclDISPID(84)  public void Remove(Integer Index) throws ComException {
+  @DeclDISPID(84)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(84,"Remove", DISPATCH_METHOD,null,Index);
   }

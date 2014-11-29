@@ -40,7 +40,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34101)  public void setBillingInformation(String value) throws ComException {
+  @DeclDISPID(34101)  public void setBillingInformation(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34101,"BillingInformation", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37120)  public void setBody(String value) throws ComException {
+  @DeclDISPID(37120)  public void setBody(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(37120,"Body", DISPATCH_PROPERTYPUT,value);
   }
@@ -58,7 +58,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(36865)  public void setCategories(String value) throws ComException {
+  @DeclDISPID(36865)  public void setCategories(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(36865,"Categories", DISPATCH_PROPERTYPUT,value);
   }
@@ -67,7 +67,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34107)  public void setCompanies(String value) throws ComException {
+  @DeclDISPID(34107)  public void setCompanies(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34107,"Companies", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlImportance.valueOf((Integer)obj);
   }
-  @DeclDISPID(23)  public void setImportance(com.wilutions.mslib.outlook.OlImportance value) throws ComException {
+  @DeclDISPID(23)  public void setImportance(final com.wilutions.mslib.outlook.OlImportance value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"Importance", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -120,7 +120,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(26)  public void setMessageClass(String value) throws ComException {
+  @DeclDISPID(26)  public void setMessageClass(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"MessageClass", DISPATCH_PROPERTYPUT,value);
   }
@@ -129,7 +129,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34100)  public void setMileage(String value) throws ComException {
+  @DeclDISPID(34100)  public void setMileage(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34100,"Mileage", DISPATCH_PROPERTYPUT,value);
   }
@@ -138,7 +138,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34062)  public void setNoAging(Boolean value) throws ComException {
+  @DeclDISPID(34062)  public void setNoAging(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34062,"NoAging", DISPATCH_PROPERTYPUT,value);
   }
@@ -162,7 +162,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlSensitivity.valueOf((Integer)obj);
   }
-  @DeclDISPID(54)  public void setSensitivity(com.wilutions.mslib.outlook.OlSensitivity value) throws ComException {
+  @DeclDISPID(54)  public void setSensitivity(final com.wilutions.mslib.outlook.OlSensitivity value) throws ComException {
     assert(value != null);
     this._dispatchCall(54,"Sensitivity", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -176,7 +176,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(55)  public void setSubject(String value) throws ComException {
+  @DeclDISPID(55)  public void setSubject(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(55,"Subject", DISPATCH_PROPERTYPUT,value);
   }
@@ -185,7 +185,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(61468)  public void setUnRead(Boolean value) throws ComException {
+  @DeclDISPID(61468)  public void setUnRead(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(61468,"UnRead", DISPATCH_PROPERTYPUT,value);
   }
@@ -194,7 +194,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertiesImpl.class);
   }
-  @DeclDISPID(61475)  public void Close(com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
+  @DeclDISPID(61475)  public void Close(final com.wilutions.mslib.outlook.OlInspectorClose SaveMode) throws ComException {
     assert(SaveMode != null);
     this._dispatchCall(61475,"Close", DISPATCH_METHOD,null,SaveMode.value);
   }
@@ -206,11 +206,11 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
   @DeclDISPID(61514)  public void Delete() throws ComException {
     this._dispatchCall(61514,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61606)  public void Display(Object Modal) throws ComException {
+  @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
     this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
   }
-  @DeclDISPID(61492)  public IDispatch Move(com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
+  @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
     final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
     if (obj == null) return null;
     return (IDispatch)obj;
@@ -221,7 +221,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
   @DeclDISPID(61512)  public void Save() throws ComException {
     this._dispatchCall(61512,"Save", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(61521)  public void SaveAs(String Path, Object Type) throws ComException {
+  @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
     this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
@@ -231,7 +231,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3588)  public void setContactNames(String value) throws ComException {
+  @DeclDISPID(3588)  public void setContactNames(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3588,"ContactNames", DISPATCH_PROPERTYPUT,value);
   }
@@ -240,7 +240,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34577)  public void setDocPosted(Boolean value) throws ComException {
+  @DeclDISPID(34577)  public void setDocPosted(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34577,"DocPosted", DISPATCH_PROPERTYPUT,value);
   }
@@ -249,7 +249,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34574)  public void setDocPrinted(Boolean value) throws ComException {
+  @DeclDISPID(34574)  public void setDocPrinted(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34574,"DocPrinted", DISPATCH_PROPERTYPUT,value);
   }
@@ -258,7 +258,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34576)  public void setDocRouted(Boolean value) throws ComException {
+  @DeclDISPID(34576)  public void setDocRouted(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34576,"DocRouted", DISPATCH_PROPERTYPUT,value);
   }
@@ -267,7 +267,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(34575)  public void setDocSaved(Boolean value) throws ComException {
+  @DeclDISPID(34575)  public void setDocSaved(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(34575,"DocSaved", DISPATCH_PROPERTYPUT,value);
   }
@@ -276,7 +276,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(34567)  public void setDuration(Integer value) throws ComException {
+  @DeclDISPID(34567)  public void setDuration(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(34567,"Duration", DISPATCH_PROPERTYPUT,value);
   }
@@ -285,7 +285,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34568)  public void setEnd(java.util.Date value) throws ComException {
+  @DeclDISPID(34568)  public void setEnd(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34568,"End", DISPATCH_PROPERTYPUT,value);
   }
@@ -294,7 +294,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34560)  public void setType(String value) throws ComException {
+  @DeclDISPID(34560)  public void setType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34560,"Type", DISPATCH_PROPERTYPUT,value);
   }
@@ -308,7 +308,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(34566)  public void setStart(java.util.Date value) throws ComException {
+  @DeclDISPID(34566)  public void setStart(final java.util.Date value) throws ComException {
     assert(value != null);
     this._dispatchCall(34566,"Start", DISPATCH_PROPERTYPUT,value);
   }
@@ -354,7 +354,7 @@ public class _JournalItemImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlRemoteStatus.valueOf((Integer)obj);
   }
-  @DeclDISPID(34161)  public void setMarkForDownload(com.wilutions.mslib.outlook.OlRemoteStatus value) throws ComException {
+  @DeclDISPID(34161)  public void setMarkForDownload(final com.wilutions.mslib.outlook.OlRemoteStatus value) throws ComException {
     assert(value != null);
     this._dispatchCall(34161,"MarkForDownload", DISPATCH_PROPERTYPUT,value.value);
   }

@@ -20,7 +20,7 @@ public class WebPageFontImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(10)  public void setProportionalFont(String value) throws ComException {
+  @DeclDISPID(10)  public void setProportionalFont(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"ProportionalFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -29,7 +29,7 @@ public class WebPageFontImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(11)  public void setProportionalFontSize(Float value) throws ComException {
+  @DeclDISPID(11)  public void setProportionalFontSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"ProportionalFontSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -38,7 +38,7 @@ public class WebPageFontImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12)  public void setFixedWidthFont(String value) throws ComException {
+  @DeclDISPID(12)  public void setFixedWidthFont(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"FixedWidthFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -47,7 +47,7 @@ public class WebPageFontImpl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(13)  public void setFixedWidthFontSize(Float value) throws ComException {
+  @DeclDISPID(13)  public void setFixedWidthFontSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(13,"FixedWidthFontSize", DISPATCH_PROPERTYPUT,value);
   }

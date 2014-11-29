@@ -45,26 +45,26 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }
-  @DeclDISPID(266)  public IDispatch CreateItem(com.wilutions.mslib.outlook.OlItemType ItemType) throws ComException {
+  @DeclDISPID(266)  public IDispatch CreateItem(final com.wilutions.mslib.outlook.OlItemType ItemType) throws ComException {
     assert(ItemType != null);
     final Object obj = this._dispatchCall(266,"CreateItem", DISPATCH_METHOD,null,ItemType.value);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(267)  public IDispatch CreateItemFromTemplate(String TemplatePath, Object InFolder) throws ComException {
+  @DeclDISPID(267)  public IDispatch CreateItemFromTemplate(final String TemplatePath, final Object InFolder) throws ComException {
     assert(TemplatePath != null);
     assert(InFolder != null);
     final Object obj = this._dispatchCall(267,"CreateItemFromTemplate", DISPATCH_METHOD,null,TemplatePath,InFolder);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(277)  public IDispatch CreateObject(String ObjectName) throws ComException {
+  @DeclDISPID(277)  public IDispatch CreateObject(final String ObjectName) throws ComException {
     assert(ObjectName != null);
     final Object obj = this._dispatchCall(277,"CreateObject", DISPATCH_METHOD,null,ObjectName);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(272)  public com.wilutions.mslib.outlook._NameSpace GetNamespace(String Type) throws ComException {
+  @DeclDISPID(272)  public com.wilutions.mslib.outlook._NameSpace GetNamespace(final String Type) throws ComException {
     assert(Type != null);
     final Object obj = this._dispatchCall(272,"GetNamespace", DISPATCH_METHOD,null,Type);
     if (obj == null) return null;
@@ -103,14 +103,14 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(64098)  public IDispatch CopyFile(String FilePath, String DestFolderPath) throws ComException {
+  @DeclDISPID(64098)  public IDispatch CopyFile(final String FilePath, final String DestFolderPath) throws ComException {
     assert(FilePath != null);
     assert(DestFolderPath != null);
     final Object obj = this._dispatchCall(64098,"CopyFile", DISPATCH_METHOD,null,FilePath,DestFolderPath);
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(64101)  public com.wilutions.mslib.outlook.Search AdvancedSearch(String Scope, Object Filter, Object SearchSubFolders, Object Tag) throws ComException {
+  @DeclDISPID(64101)  public com.wilutions.mslib.outlook.Search AdvancedSearch(final String Scope, final Object Filter, final Object SearchSubFolders, final Object Tag) throws ComException {
     assert(Scope != null);
     assert(Filter != null);
     assert(SearchSubFolders != null);
@@ -119,7 +119,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.SearchImpl.class);
   }
-  @DeclDISPID(64108)  public Boolean IsSearchSynchronous(String LookInFolders) throws ComException {
+  @DeclDISPID(64108)  public Boolean IsSearchSynchronous(final String LookInFolders) throws ComException {
     assert(LookInFolders != null);
     final Object obj = this._dispatchCall(64108,"IsSearchSynchronous", DISPATCH_METHOD,null,LookInFolders);
     if (obj == null) return null;
@@ -140,7 +140,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64470)  public IDispatch GetObjectReference(IDispatch Item, com.wilutions.mslib.outlook.OlReferenceType ReferenceType) throws ComException {
+  @DeclDISPID(64470)  public IDispatch GetObjectReference(final IDispatch Item, final com.wilutions.mslib.outlook.OlReferenceType ReferenceType) throws ComException {
     assert(ReferenceType != null);
     final Object obj = this._dispatchCall(64470,"GetObjectReference", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL),ReferenceType.value);
     if (obj == null) return null;
@@ -162,7 +162,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerDialogImpl.class);
   }
-  @DeclDISPID(64639)  public void RefreshFormRegionDefinition(String RegionName) throws ComException {
+  @DeclDISPID(64639)  public void RefreshFormRegionDefinition(final String RegionName) throws ComException {
     assert(RegionName != null);
     this._dispatchCall(64639,"RefreshFormRegionDefinition", DISPATCH_METHOD,null,RegionName);
   }

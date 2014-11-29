@@ -20,14 +20,14 @@ public class ConnectorFormatImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return (IDispatch)obj;
   }
-  @DeclDISPID(10)  public void BeginConnect(com.wilutions.mslib.office.Shape ConnectedShape, Integer ConnectionSite) throws ComException {
+  @DeclDISPID(10)  public void BeginConnect(final com.wilutions.mslib.office.Shape ConnectedShape, final Integer ConnectionSite) throws ComException {
     assert(ConnectionSite != null);
     this._dispatchCall(10,"BeginConnect", DISPATCH_METHOD,null,(ConnectedShape!=null?ConnectedShape:Dispatch.NULL),ConnectionSite);
   }
   @DeclDISPID(11)  public void BeginDisconnect() throws ComException {
     this._dispatchCall(11,"BeginDisconnect", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(12)  public void EndConnect(com.wilutions.mslib.office.Shape ConnectedShape, Integer ConnectionSite) throws ComException {
+  @DeclDISPID(12)  public void EndConnect(final com.wilutions.mslib.office.Shape ConnectedShape, final Integer ConnectionSite) throws ComException {
     assert(ConnectionSite != null);
     this._dispatchCall(12,"EndConnect", DISPATCH_METHOD,null,(ConnectedShape!=null?ConnectedShape:Dispatch.NULL),ConnectionSite);
   }
@@ -69,7 +69,7 @@ public class ConnectorFormatImpl extends Dispatch implements com.wilutions.mslib
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoConnectorType.valueOf((Integer)obj);
   }
-  @DeclDISPID(106)  public void setType(com.wilutions.mslib.office.MsoConnectorType value) throws ComException {
+  @DeclDISPID(106)  public void setType(final com.wilutions.mslib.office.MsoConnectorType value) throws ComException {
     assert(value != null);
     this._dispatchCall(106,"Type", DISPATCH_PROPERTYPUT,value.value);
   }

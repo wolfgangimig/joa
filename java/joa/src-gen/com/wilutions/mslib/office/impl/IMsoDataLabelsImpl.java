@@ -40,7 +40,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (com.wilutions.mslib.office.ChartFillFormat)obj;
   }
-  @DeclDISPID(1610743815)  public com.wilutions.mslib.office.IMsoCharacters getCharacters(Object Start, Object Length) throws ComException {
+  @DeclDISPID(1610743815)  public com.wilutions.mslib.office.IMsoCharacters getCharacters(final Object Start, final Object Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
     final Object obj = this._dispatchCall(1610743815,"Characters", DISPATCH_PROPERTYGET,null,Start,Length);
@@ -57,7 +57,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(136)  public void setHorizontalAlignment(Object RHS) throws ComException {
+  @DeclDISPID(136)  public void setHorizontalAlignment(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(136,"HorizontalAlignment", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -66,7 +66,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(134)  public void setOrientation(Object RHS) throws ComException {
+  @DeclDISPID(134)  public void setOrientation(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(134,"Orientation", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -75,7 +75,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setShadow(Boolean RHS) throws ComException {
+  @DeclDISPID(103)  public void setShadow(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(103,"Shadow", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -84,7 +84,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(137)  public void setVerticalAlignment(Object RHS) throws ComException {
+  @DeclDISPID(137)  public void setVerticalAlignment(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(137,"VerticalAlignment", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -93,7 +93,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(975)  public void setReadingOrder(Integer RHS) throws ComException {
+  @DeclDISPID(975)  public void setReadingOrder(final Integer RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(975,"ReadingOrder", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -102,7 +102,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1525)  public void setAutoScaleFont(Object RHS) throws ComException {
+  @DeclDISPID(1525)  public void setAutoScaleFont(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1525,"AutoScaleFont", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -111,7 +111,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(135)  public void setAutoText(Boolean RHS) throws ComException {
+  @DeclDISPID(135)  public void setAutoText(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(135,"AutoText", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -120,7 +120,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(193)  public void setNumberFormat(String RHS) throws ComException {
+  @DeclDISPID(193)  public void setNumberFormat(final String RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(193,"NumberFormat", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -129,7 +129,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(194)  public void setNumberFormatLinked(Boolean RHS) throws ComException {
+  @DeclDISPID(194)  public void setNumberFormatLinked(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(194,"NumberFormatLinked", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -138,7 +138,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1097)  public void setNumberFormatLocal(Object RHS) throws ComException {
+  @DeclDISPID(1097)  public void setNumberFormatLocal(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(1097,"NumberFormatLocal", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -147,7 +147,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(171)  public void setShowLegendKey(Boolean RHS) throws ComException {
+  @DeclDISPID(171)  public void setShowLegendKey(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(171,"ShowLegendKey", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -156,7 +156,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(108)  public void setType(Object RHS) throws ComException {
+  @DeclDISPID(108)  public void setType(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(108,"Type", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -165,7 +165,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlDataLabelPosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(133)  public void setPosition(com.wilutions.mslib.office.XlDataLabelPosition RHS) throws ComException {
+  @DeclDISPID(133)  public void setPosition(final com.wilutions.mslib.office.XlDataLabelPosition RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(133,"Position", DISPATCH_PROPERTYPUT,RHS.value);
   }
@@ -174,7 +174,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2022)  public void setShowSeriesName(Boolean RHS) throws ComException {
+  @DeclDISPID(2022)  public void setShowSeriesName(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2022,"ShowSeriesName", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -183,7 +183,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2023)  public void setShowCategoryName(Boolean RHS) throws ComException {
+  @DeclDISPID(2023)  public void setShowCategoryName(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2023,"ShowCategoryName", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -192,7 +192,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2024)  public void setShowValue(Boolean RHS) throws ComException {
+  @DeclDISPID(2024)  public void setShowValue(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2024,"ShowValue", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -201,7 +201,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2025)  public void setShowPercentage(Boolean RHS) throws ComException {
+  @DeclDISPID(2025)  public void setShowPercentage(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2025,"ShowPercentage", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -210,7 +210,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2026)  public void setShowBubbleSize(Boolean RHS) throws ComException {
+  @DeclDISPID(2026)  public void setShowBubbleSize(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2026,"ShowBubbleSize", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -219,7 +219,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(2027)  public void setSeparator(Object RHS) throws ComException {
+  @DeclDISPID(2027)  public void setSeparator(final Object RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2027,"Separator", DISPATCH_PROPERTYPUT,RHS);
   }
@@ -228,7 +228,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoDataLabel Item(Object Index) throws ComException {
+  @DeclDISPID(170)  public com.wilutions.mslib.office.IMsoDataLabel Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(170,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -254,13 +254,13 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoDataLabel get_Default(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.IMsoDataLabel get_Default(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"_Default", DISPATCH_PROPERTYGET,null,Index);
     if (obj == null) return null;
     return (com.wilutions.mslib.office.IMsoDataLabel)obj;
   }
-  @DeclDISPID(2028)  public void Propagate(Object Index) throws ComException {
+  @DeclDISPID(2028)  public void Propagate(final Object Index) throws ComException {
     assert(Index != null);
     this._dispatchCall(2028,"Propagate", DISPATCH_METHOD,null,Index);
   }
@@ -269,7 +269,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2029)  public void setShowRange(Boolean RHS) throws ComException {
+  @DeclDISPID(2029)  public void setShowRange(final Boolean RHS) throws ComException {
     assert(RHS != null);
     this._dispatchCall(2029,"ShowRange", DISPATCH_PROPERTYPUT,RHS);
   }

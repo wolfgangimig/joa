@@ -25,7 +25,7 @@ public class RulerLevel2Impl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(2)  public void setFirstMargin(Float value) throws ComException {
+  @DeclDISPID(2)  public void setFirstMargin(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"FirstMargin", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class RulerLevel2Impl extends Dispatch implements com.wilutions.mslib.off
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(3)  public void setLeftMargin(Float value) throws ComException {
+  @DeclDISPID(3)  public void setLeftMargin(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"LeftMargin", DISPATCH_PROPERTYPUT,value);
   }

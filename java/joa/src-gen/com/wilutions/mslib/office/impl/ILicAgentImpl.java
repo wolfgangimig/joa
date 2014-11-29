@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C08ED969-7DA0-CA92-10F7-69B7A1747819}")
 public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.office.ILicAgent {
-  @DeclDISPID(1)  public Integer Initialize(Integer dwBPC, Integer dwMode, String bstrLicSource) throws ComException {
+  @DeclDISPID(1)  public Integer Initialize(final Integer dwBPC, final Integer dwMode, final String bstrLicSource) throws ComException {
     assert(dwBPC != null);
     assert(dwMode != null);
     assert(bstrLicSource != null);
@@ -18,7 +18,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void SetFirstName(String bstrNewVal) throws ComException {
+  @DeclDISPID(4)  public void SetFirstName(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(4,"SetFirstName", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -27,7 +27,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(6)  public void SetLastName(String bstrNewVal) throws ComException {
+  @DeclDISPID(6)  public void SetLastName(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(6,"SetLastName", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -36,7 +36,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8)  public void SetOrgName(String bstrNewVal) throws ComException {
+  @DeclDISPID(8)  public void SetOrgName(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(8,"SetOrgName", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -45,7 +45,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(10)  public void SetEmail(String bstrNewVal) throws ComException {
+  @DeclDISPID(10)  public void SetEmail(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(10,"SetEmail", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -54,7 +54,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12)  public void SetPhone(String bstrNewVal) throws ComException {
+  @DeclDISPID(12)  public void SetPhone(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(12,"SetPhone", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -63,7 +63,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(14)  public void SetAddress1(String bstrNewVal) throws ComException {
+  @DeclDISPID(14)  public void SetAddress1(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(14,"SetAddress1", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -72,7 +72,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(16)  public void SetCity(String bstrNewVal) throws ComException {
+  @DeclDISPID(16)  public void SetCity(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(16,"SetCity", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -81,7 +81,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(18)  public void SetState(String bstrNewVal) throws ComException {
+  @DeclDISPID(18)  public void SetState(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(18,"SetState", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -90,7 +90,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(20)  public void SetCountryCode(String bstrNewVal) throws ComException {
+  @DeclDISPID(20)  public void SetCountryCode(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(20,"SetCountryCode", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -99,7 +99,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(22)  public void SetCountryDesc(String bstrNewVal) throws ComException {
+  @DeclDISPID(22)  public void SetCountryDesc(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(22,"SetCountryDesc", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -108,7 +108,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(24)  public void SetZip(String bstrNewVal) throws ComException {
+  @DeclDISPID(24)  public void SetZip(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(24,"SetZip", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -117,7 +117,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(26)  public void SetIsoLanguage(Integer dwNewVal) throws ComException {
+  @DeclDISPID(26)  public void SetIsoLanguage(final Integer dwNewVal) throws ComException {
     assert(dwNewVal != null);
     this._dispatchCall(26,"SetIsoLanguage", DISPATCH_METHOD,null,dwNewVal);
   }
@@ -126,7 +126,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(33)  public void SetMSUpdate(String bstrNewVal) throws ComException {
+  @DeclDISPID(33)  public void SetMSUpdate(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(33,"SetMSUpdate", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -135,7 +135,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(35)  public void SetMSOffer(String bstrNewVal) throws ComException {
+  @DeclDISPID(35)  public void SetMSOffer(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(35,"SetMSOffer", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -144,7 +144,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(37)  public void SetOtherOffer(String bstrNewVal) throws ComException {
+  @DeclDISPID(37)  public void SetOtherOffer(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(37,"SetOtherOffer", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -153,7 +153,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(39)  public void SetAddress2(String bstrNewVal) throws ComException {
+  @DeclDISPID(39)  public void SetAddress2(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(39,"SetAddress2", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -177,7 +177,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(44)  public void SetBillingFirstName(String bstrNewVal) throws ComException {
+  @DeclDISPID(44)  public void SetBillingFirstName(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(44,"SetBillingFirstName", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -186,7 +186,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(46)  public void SetBillingLastName(String bstrNewVal) throws ComException {
+  @DeclDISPID(46)  public void SetBillingLastName(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(46,"SetBillingLastName", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -195,7 +195,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(48)  public void SetBillingPhone(String bstrNewVal) throws ComException {
+  @DeclDISPID(48)  public void SetBillingPhone(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(48,"SetBillingPhone", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -204,7 +204,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(50)  public void SetBillingAddress1(String bstrNewVal) throws ComException {
+  @DeclDISPID(50)  public void SetBillingAddress1(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(50,"SetBillingAddress1", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -213,7 +213,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(52)  public void SetBillingAddress2(String bstrNewVal) throws ComException {
+  @DeclDISPID(52)  public void SetBillingAddress2(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(52,"SetBillingAddress2", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -222,7 +222,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(54)  public void SetBillingCity(String bstrNewVal) throws ComException {
+  @DeclDISPID(54)  public void SetBillingCity(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(54,"SetBillingCity", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -231,7 +231,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(56)  public void SetBillingState(String bstrNewVal) throws ComException {
+  @DeclDISPID(56)  public void SetBillingState(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(56,"SetBillingState", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -240,7 +240,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(58)  public void SetBillingCountryCode(String bstrNewVal) throws ComException {
+  @DeclDISPID(58)  public void SetBillingCountryCode(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(58,"SetBillingCountryCode", DISPATCH_METHOD,null,bstrNewVal);
   }
@@ -249,23 +249,23 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(60)  public void SetBillingZip(String bstrNewVal) throws ComException {
+  @DeclDISPID(60)  public void SetBillingZip(final String bstrNewVal) throws ComException {
     assert(bstrNewVal != null);
     this._dispatchCall(60,"SetBillingZip", DISPATCH_METHOD,null,bstrNewVal);
   }
-  @DeclDISPID(61)  public Integer SaveBillingInfo(Integer bSave) throws ComException {
+  @DeclDISPID(61)  public Integer SaveBillingInfo(final Integer bSave) throws ComException {
     assert(bSave != null);
     final Object obj = this._dispatchCall(61,"SaveBillingInfo", DISPATCH_METHOD,null,bSave);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(64)  public Integer IsCCRenewalCountry(String bstrCountryCode) throws ComException {
+  @DeclDISPID(64)  public Integer IsCCRenewalCountry(final String bstrCountryCode) throws ComException {
     assert(bstrCountryCode != null);
     final Object obj = this._dispatchCall(64,"IsCCRenewalCountry", DISPATCH_METHOD,null,bstrCountryCode);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(65)  public String GetVATLabel(String bstrCountryCode) throws ComException {
+  @DeclDISPID(65)  public String GetVATLabel(final String bstrCountryCode) throws ComException {
     assert(bstrCountryCode != null);
     final Object obj = this._dispatchCall(65,"GetVATLabel", DISPATCH_METHOD,null,bstrCountryCode);
     if (obj == null) return null;
@@ -276,23 +276,23 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(67)  public void SetVATNumber(String bstrVATNumber) throws ComException {
+  @DeclDISPID(67)  public void SetVATNumber(final String bstrVATNumber) throws ComException {
     assert(bstrVATNumber != null);
     this._dispatchCall(67,"SetVATNumber", DISPATCH_METHOD,null,bstrVATNumber);
   }
-  @DeclDISPID(68)  public void SetCreditCardType(String bstrCCCode) throws ComException {
+  @DeclDISPID(68)  public void SetCreditCardType(final String bstrCCCode) throws ComException {
     assert(bstrCCCode != null);
     this._dispatchCall(68,"SetCreditCardType", DISPATCH_METHOD,null,bstrCCCode);
   }
-  @DeclDISPID(69)  public void SetCreditCardNumber(String bstrCCNumber) throws ComException {
+  @DeclDISPID(69)  public void SetCreditCardNumber(final String bstrCCNumber) throws ComException {
     assert(bstrCCNumber != null);
     this._dispatchCall(69,"SetCreditCardNumber", DISPATCH_METHOD,null,bstrCCNumber);
   }
-  @DeclDISPID(70)  public void SetCreditCardExpiryYear(Integer dwCCYear) throws ComException {
+  @DeclDISPID(70)  public void SetCreditCardExpiryYear(final Integer dwCCYear) throws ComException {
     assert(dwCCYear != null);
     this._dispatchCall(70,"SetCreditCardExpiryYear", DISPATCH_METHOD,null,dwCCYear);
   }
-  @DeclDISPID(71)  public void SetCreditCardExpiryMonth(Integer dwCCMonth) throws ComException {
+  @DeclDISPID(71)  public void SetCreditCardExpiryMonth(final Integer dwCCMonth) throws ComException {
     assert(dwCCMonth != null);
     this._dispatchCall(71,"SetCreditCardExpiryMonth", DISPATCH_METHOD,null,dwCCMonth);
   }
@@ -301,13 +301,13 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(73)  public String GetCreditCardCode(Integer dwIndex) throws ComException {
+  @DeclDISPID(73)  public String GetCreditCardCode(final Integer dwIndex) throws ComException {
     assert(dwIndex != null);
     final Object obj = this._dispatchCall(73,"GetCreditCardCode", DISPATCH_METHOD,null,dwIndex);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(74)  public String GetCreditCardName(Integer dwIndex) throws ComException {
+  @DeclDISPID(74)  public String GetCreditCardName(final Integer dwIndex) throws ComException {
     assert(dwIndex != null);
     final Object obj = this._dispatchCall(74,"GetCreditCardName", DISPATCH_METHOD,null,dwIndex);
     if (obj == null) return null;
@@ -343,11 +343,11 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public void SetDisconnectOption(Integer bNewVal) throws ComException {
+  @DeclDISPID(81)  public void SetDisconnectOption(final Integer bNewVal) throws ComException {
     assert(bNewVal != null);
     this._dispatchCall(81,"SetDisconnectOption", DISPATCH_METHOD,null,bNewVal);
   }
-  @DeclDISPID(82)  public void AsyncProcessHandshakeRequest(Integer bReviseCustInfo) throws ComException {
+  @DeclDISPID(82)  public void AsyncProcessHandshakeRequest(final Integer bReviseCustInfo) throws ComException {
     assert(bReviseCustInfo != null);
     this._dispatchCall(82,"AsyncProcessHandshakeRequest", DISPATCH_METHOD,null,bReviseCustInfo);
   }
@@ -379,7 +379,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(92)  public void WantUpgrade(Integer bWantUpgrade) throws ComException {
+  @DeclDISPID(92)  public void WantUpgrade(final Integer bWantUpgrade) throws ComException {
     assert(bWantUpgrade != null);
     this._dispatchCall(92,"WantUpgrade", DISPATCH_METHOD,null,bWantUpgrade);
   }
@@ -391,13 +391,13 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(95)  public Integer DepositConfirmationId(String bstrVal) throws ComException {
+  @DeclDISPID(95)  public Integer DepositConfirmationId(final String bstrVal) throws ComException {
     assert(bstrVal != null);
     final Object obj = this._dispatchCall(95,"DepositConfirmationId", DISPATCH_METHOD,null,bstrVal);
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(96)  public Integer VerifyCheckDigits(String bstrCIDIID) throws ComException {
+  @DeclDISPID(96)  public Integer VerifyCheckDigits(final String bstrCIDIID) throws ComException {
     assert(bstrCIDIID != null);
     final Object obj = this._dispatchCall(96,"VerifyCheckDigits", DISPATCH_METHOD,null,bstrCIDIID);
     if (obj == null) return null;
@@ -408,11 +408,11 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (java.util.Date)obj;
   }
-  @DeclDISPID(98)  public void CancelAsyncProcessRequest(Integer bIsLicenseRequest) throws ComException {
+  @DeclDISPID(98)  public void CancelAsyncProcessRequest(final Integer bIsLicenseRequest) throws ComException {
     assert(bIsLicenseRequest != null);
     this._dispatchCall(98,"CancelAsyncProcessRequest", DISPATCH_METHOD,null,bIsLicenseRequest);
   }
-  @DeclDISPID(100)  public String GetCurrencyDescription(Integer dwCurrencyIndex) throws ComException {
+  @DeclDISPID(100)  public String GetCurrencyDescription(final Integer dwCurrencyIndex) throws ComException {
     assert(dwCurrencyIndex != null);
     final Object obj = this._dispatchCall(100,"GetCurrencyDescription", DISPATCH_METHOD,null,dwCurrencyIndex);
     if (obj == null) return null;
@@ -423,13 +423,13 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(102)  public String GetPriceItemLabel(Integer dwIndex) throws ComException {
+  @DeclDISPID(102)  public String GetPriceItemLabel(final Integer dwIndex) throws ComException {
     assert(dwIndex != null);
     final Object obj = this._dispatchCall(102,"GetPriceItemLabel", DISPATCH_METHOD,null,dwIndex);
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(103)  public String GetPriceItemValue(Integer dwCurrencyIndex, Integer dwIndex) throws ComException {
+  @DeclDISPID(103)  public String GetPriceItemValue(final Integer dwCurrencyIndex, final Integer dwIndex) throws ComException {
     assert(dwCurrencyIndex != null);
     assert(dwIndex != null);
     final Object obj = this._dispatchCall(103,"GetPriceItemValue", DISPATCH_METHOD,null,dwCurrencyIndex,dwIndex);
@@ -451,7 +451,7 @@ public class ILicAgentImpl extends Dispatch implements com.wilutions.mslib.offic
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(107)  public void SetCurrencyOption(Integer dwCurrencyOption) throws ComException {
+  @DeclDISPID(107)  public void SetCurrencyOption(final Integer dwCurrencyOption) throws ComException {
     assert(dwCurrencyOption != null);
     this._dispatchCall(107,"SetCurrencyOption", DISPATCH_METHOD,null,dwCurrencyOption);
   }

@@ -10,7 +10,7 @@ import com.wilutions.com.*;
 public interface IConversationCollection extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1610743808)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public IConversation getItem(Integer _index) throws ComException;
+  @DeclDISPID(0)  public IConversation getItem(final Integer _index) throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
-  @DeclDISPID(1610743811)  public Integer IndexOf(IConversation _conversation) throws ComException;
+  @DeclDISPID(1610743811)  public Integer IndexOf(final IConversation _conversation) throws ComException;
 }

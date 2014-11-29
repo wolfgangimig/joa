@@ -14,7 +14,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException {
+  @DeclDISPID(-543)  public void setAccelerator(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-543,"Accelerator", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -33,7 +33,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -42,7 +42,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return OlBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-502)  public void setBackStyle(OlBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final OlBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -51,7 +51,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return OlBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(OlBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final OlBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -60,7 +60,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-518)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(-518)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-518,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -84,7 +84,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.stdole.OLE_COLOR(als);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.stdole.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -93,7 +93,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-521)  public OlMousePointer getMousePointer() throws ComException {
@@ -101,7 +101,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return OlMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-521)  public void setMousePointer(OlMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final OlMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -110,7 +110,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return OlTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(10004)  public void setTextAlign(OlTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final OlTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -119,7 +119,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
@@ -128,7 +128,7 @@ public class OlkLabel extends Dispatch implements _OlkLabel {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64537)  public void setUseHeaderColor(Boolean value) throws ComException {
+  @DeclDISPID(64537)  public void setUseHeaderColor(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64537,"UseHeaderColor", DISPATCH_PROPERTYPUT,value);
   }

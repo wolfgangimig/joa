@@ -34,14 +34,14 @@ public class Explorers extends Dispatch implements _Explorers {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public Explorer Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public Explorer Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(Explorer.class);
   }
-  @DeclDISPID(95)  public _Explorer Add(Object Folder, OlFolderDisplayMode DisplayMode) throws ComException {
+  @DeclDISPID(95)  public _Explorer Add(final Object Folder, final OlFolderDisplayMode DisplayMode) throws ComException {
     assert(Folder != null);
     assert(DisplayMode != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Folder,DisplayMode.value);

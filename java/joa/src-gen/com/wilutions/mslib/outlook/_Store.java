@@ -24,10 +24,10 @@ public interface _Store extends IDispatch {
   @DeclDISPID(64224)  public Boolean getIsOpen() throws ComException;
   @DeclDISPID(64265)  public Rules GetRules() throws ComException;
   @DeclDISPID(64253)  public PropertyAccessor getPropertyAccessor() throws ComException;
-  @DeclDISPID(8456)  public MAPIFolder GetSpecialFolder(OlSpecialFolders FolderType) throws ComException;
+  @DeclDISPID(8456)  public MAPIFolder GetSpecialFolder(final OlSpecialFolders FolderType) throws ComException;
   @DeclDISPID(64532)  public Boolean getIsInstantSearchEnabled() throws ComException;
   @DeclDISPID(64590)  public void RefreshQuotaDisplay() throws ComException;
-  @DeclDISPID(64621)  public MAPIFolder GetDefaultFolder(OlDefaultFolders FolderType) throws ComException;
+  @DeclDISPID(64621)  public MAPIFolder GetDefaultFolder(final OlDefaultFolders FolderType) throws ComException;
   @DeclDISPID(64630)  public Boolean getIsConversationEnabled() throws ComException;
   @DeclDISPID(64421)  public Categories getCategories() throws ComException;
 }

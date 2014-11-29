@@ -25,7 +25,7 @@ public class RulerLevels2Impl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.RulerLevel2 Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.RulerLevel2 Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

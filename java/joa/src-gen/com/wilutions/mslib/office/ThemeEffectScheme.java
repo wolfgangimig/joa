@@ -12,5 +12,5 @@ public interface ThemeEffectScheme extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(2)  public void Load(String FileName) throws ComException;
+  @DeclDISPID(2)  public void Load(final String FileName) throws ComException;
 }

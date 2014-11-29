@@ -35,7 +35,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ChartFontImpl.class);
   }
-  @DeclDISPID(173)  public IDispatch LegendEntries(Object Index) throws ComException {
+  @DeclDISPID(173)  public IDispatch LegendEntries(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(173,"LegendEntries", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -46,7 +46,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return com.wilutions.mslib.office.XlLegendPosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(133)  public void setPosition(com.wilutions.mslib.office.XlLegendPosition value) throws ComException {
+  @DeclDISPID(133)  public void setPosition(final com.wilutions.mslib.office.XlLegendPosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(133,"Position", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -55,7 +55,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setShadow(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setShadow(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Shadow", DISPATCH_PROPERTYPUT,value);
   }
@@ -69,7 +69,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(123)  public void setHeight(Double value) throws ComException {
+  @DeclDISPID(123)  public void setHeight(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(123,"Height", DISPATCH_PROPERTYPUT,value);
   }
@@ -88,7 +88,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(127)  public void setLeft(Double value) throws ComException {
+  @DeclDISPID(127)  public void setLeft(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(127,"Left", DISPATCH_PROPERTYPUT,value);
   }
@@ -97,7 +97,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(126)  public void setTop(Double value) throws ComException {
+  @DeclDISPID(126)  public void setTop(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(126,"Top", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Double)obj;
   }
-  @DeclDISPID(122)  public void setWidth(Double value) throws ComException {
+  @DeclDISPID(122)  public void setWidth(final Double value) throws ComException {
     assert(value != null);
     this._dispatchCall(122,"Width", DISPATCH_PROPERTYPUT,value);
   }
@@ -115,7 +115,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1525)  public void setAutoScaleFont(Object value) throws ComException {
+  @DeclDISPID(1525)  public void setAutoScaleFont(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(1525,"AutoScaleFont", DISPATCH_PROPERTYPUT,value);
   }
@@ -124,7 +124,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2418)  public void setIncludeInLayout(Boolean value) throws ComException {
+  @DeclDISPID(2418)  public void setIncludeInLayout(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(2418,"IncludeInLayout", DISPATCH_PROPERTYPUT,value);
   }

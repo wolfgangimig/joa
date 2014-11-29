@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{95854870-F8A5-CA8E-10C9-694DA54A32E7}")
 public class IWHTMLTextImpl extends Dispatch implements com.wilutions.mslib.msforms.IWHTMLText {
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class IWHTMLTextImpl extends Dispatch implements com.wilutions.mslib.msfo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setValue(String value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -23,7 +23,7 @@ public class IWHTMLTextImpl extends Dispatch implements com.wilutions.mslib.msfo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(609)  public void setMaxLength(Integer value) throws ComException {
+  @DeclDISPID(609)  public void setMaxLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(609,"MaxLength", DISPATCH_PROPERTYPUT,value);
   }
@@ -32,7 +32,7 @@ public class IWHTMLTextImpl extends Dispatch implements com.wilutions.mslib.msfo
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(610)  public void setWidth(Integer value) throws ComException {
+  @DeclDISPID(610)  public void setWidth(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(610,"Width", DISPATCH_PROPERTYPUT,value);
   }

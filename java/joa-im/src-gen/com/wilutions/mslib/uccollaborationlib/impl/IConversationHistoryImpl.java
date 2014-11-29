@@ -30,14 +30,14 @@ public class IConversationHistoryImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return (Object[])obj;
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RetrievePastHistory(Object _conversationHistoryCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RetrievePastHistory(final Object _conversationHistoryCallback, final Object _state) throws ComException {
     assert(_conversationHistoryCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743813,"RetrievePastHistory", DISPATCH_METHOD,null,_conversationHistoryCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RetrievePastHistoryByEntryId(String _entryId, Object _conversationHistoryCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation RetrievePastHistoryByEntryId(final String _entryId, final Object _conversationHistoryCallback, final Object _state) throws ComException {
     assert(_entryId != null);
     assert(_conversationHistoryCallback != null);
     assert(_state != null);
@@ -45,14 +45,14 @@ public class IConversationHistoryImpl extends Dispatch implements com.wilutions.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SaveAllHistory(Object _conversationHistoryCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743815)  public com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation SaveAllHistory(final Object _conversationHistoryCallback, final Object _state) throws ComException {
     assert(_conversationHistoryCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743815,"SaveAllHistory", DISPATCH_METHOD,null,_conversationHistoryCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743816)  public Boolean CanInvoke(com.wilutions.mslib.uccollaborationlib.ConversationHistoryAction _action) throws ComException {
+  @DeclDISPID(1610743816)  public Boolean CanInvoke(final com.wilutions.mslib.uccollaborationlib.ConversationHistoryAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743816,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;

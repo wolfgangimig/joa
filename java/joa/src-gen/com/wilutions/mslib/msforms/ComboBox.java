@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{8BD21D30-EC42-11CE-9E0D-00AA006002F3}")
 public class ComboBox extends Dispatch implements IMdcCombo {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(217)  public void setAutoTab(Boolean value) throws ComException {
+  @DeclDISPID(217)  public void setAutoTab(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(217,"AutoTab", DISPATCH_PROPERTYPUT,value);
   }
@@ -27,7 +27,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(218)  public void setAutoWordSelect(Boolean value) throws ComException {
+  @DeclDISPID(218)  public void setAutoWordSelect(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(218,"AutoWordSelect", DISPATCH_PROPERTYPUT,value);
   }
@@ -36,7 +36,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -46,7 +46,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(-502)  public void setBackStyle(fmBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final fmBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -55,7 +55,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-503)  public void setBorderColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-503)  public void setBorderColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-503,"BorderColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -65,7 +65,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(fmBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final fmBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -74,7 +74,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(501)  public void setBoundColumn(Object value) throws ComException {
+  @DeclDISPID(501)  public void setBoundColumn(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(501,"BoundColumn", DISPATCH_PROPERTYPUT,value);
   }
@@ -88,7 +88,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(601)  public void setColumnCount(Integer value) throws ComException {
+  @DeclDISPID(601)  public void setColumnCount(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(601,"ColumnCount", DISPATCH_PROPERTYPUT,value);
   }
@@ -97,7 +97,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(602)  public void setColumnHeads(Boolean value) throws ComException {
+  @DeclDISPID(602)  public void setColumnHeads(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(602,"ColumnHeads", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(603)  public void setColumnWidths(String value) throws ComException {
+  @DeclDISPID(603)  public void setColumnWidths(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(603,"ColumnWidths", DISPATCH_PROPERTYPUT,value);
   }
@@ -120,7 +120,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(208)  public void setCurX(Integer value) throws ComException {
+  @DeclDISPID(208)  public void setCurX(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(208,"CurX", DISPATCH_PROPERTYPUT,value);
   }
@@ -129,7 +129,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(305)  public void setDropButtonStyle(fmDropButtonStyle value) throws ComException {
+  @DeclDISPID(305)  public void setDropButtonStyle(final fmDropButtonStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(305,"DropButtonStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -138,7 +138,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmDropButtonStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -147,7 +147,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-512)  public void setFont(Font value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final Font value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-512)  public Font getFont() throws ComException {
@@ -155,7 +155,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
-  @DeclDISPID(-513)  public void setForeColor(OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -165,7 +165,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     final Integer als = (Integer)obj;
     return new OLE_COLOR(als);
   }
-  @DeclDISPID(207)  public void setHideSelection(Boolean value) throws ComException {
+  @DeclDISPID(207)  public void setHideSelection(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(207,"HideSelection", DISPATCH_PROPERTYPUT,value);
   }
@@ -184,7 +184,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-526)  public void setListIndex(Object value) throws ComException {
+  @DeclDISPID(-526)  public void setListIndex(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(-526,"ListIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -193,7 +193,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(605)  public void setListRows(Integer value) throws ComException {
+  @DeclDISPID(605)  public void setListRows(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(605,"ListRows", DISPATCH_PROPERTYPUT,value);
   }
@@ -202,7 +202,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(307)  public void setListStyle(fmListStyle value) throws ComException {
+  @DeclDISPID(307)  public void setListStyle(final fmListStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(307,"ListStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -211,7 +211,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmListStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(606)  public void setListWidth(Object value) throws ComException {
+  @DeclDISPID(606)  public void setListWidth(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(606,"ListWidth", DISPATCH_PROPERTYPUT,value);
   }
@@ -220,7 +220,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(10)  public void setLocked(Boolean value) throws ComException {
+  @DeclDISPID(10)  public void setLocked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Locked", DISPATCH_PROPERTYPUT,value);
   }
@@ -229,7 +229,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(504)  public void setMatchEntry(fmMatchEntry value) throws ComException {
+  @DeclDISPID(504)  public void setMatchEntry(final fmMatchEntry value) throws ComException {
     assert(value != null);
     this._dispatchCall(504,"MatchEntry", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -243,7 +243,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(503)  public void setMatchRequired(Boolean value) throws ComException {
+  @DeclDISPID(503)  public void setMatchRequired(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(503,"MatchRequired", DISPATCH_PROPERTYPUT,value);
   }
@@ -252,7 +252,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-533)  public void setMaxLength(Integer value) throws ComException {
+  @DeclDISPID(-533)  public void setMaxLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-533,"MaxLength", DISPATCH_PROPERTYPUT,value);
   }
@@ -261,7 +261,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -269,7 +269,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-521)  public void setMousePointer(fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -278,7 +278,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(220)  public void setSelectionMargin(Boolean value) throws ComException {
+  @DeclDISPID(220)  public void setSelectionMargin(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(220,"SelectionMargin", DISPATCH_PROPERTYPUT,value);
   }
@@ -287,7 +287,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-548)  public void setSelLength(Integer value) throws ComException {
+  @DeclDISPID(-548)  public void setSelLength(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-548,"SelLength", DISPATCH_PROPERTYPUT,value);
   }
@@ -296,7 +296,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-547)  public void setSelStart(Integer value) throws ComException {
+  @DeclDISPID(-547)  public void setSelStart(final Integer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-547,"SelStart", DISPATCH_PROPERTYPUT,value);
   }
@@ -305,7 +305,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(-546)  public void setSelText(String value) throws ComException {
+  @DeclDISPID(-546)  public void setSelText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-546,"SelText", DISPATCH_PROPERTYPUT,value);
   }
@@ -314,7 +314,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(304)  public void setShowDropButtonWhen(fmShowDropButtonWhen value) throws ComException {
+  @DeclDISPID(304)  public void setShowDropButtonWhen(final fmShowDropButtonWhen value) throws ComException {
     assert(value != null);
     this._dispatchCall(304,"ShowDropButtonWhen", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -323,7 +323,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmShowDropButtonWhen.valueOf((Integer)obj);
   }
-  @DeclDISPID(12)  public void setSpecialEffect(fmSpecialEffect value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final fmSpecialEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -332,7 +332,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmSpecialEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(308)  public void setStyle(fmStyle value) throws ComException {
+  @DeclDISPID(308)  public void setStyle(final fmStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(308,"Style", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -341,7 +341,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-517)  public void setText(String value) throws ComException {
+  @DeclDISPID(-517)  public void setText(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-517,"Text", DISPATCH_PROPERTYPUT,value);
   }
@@ -350,7 +350,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(10004)  public void setTextAlign(fmTextAlign value) throws ComException {
+  @DeclDISPID(10004)  public void setTextAlign(final fmTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(10004,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -359,7 +359,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(502)  public void setTextColumn(Object value) throws ComException {
+  @DeclDISPID(502)  public void setTextColumn(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(502,"TextColumn", DISPATCH_PROPERTYPUT,value);
   }
@@ -373,7 +373,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(611)  public void setTopIndex(Object value) throws ComException {
+  @DeclDISPID(611)  public void setTopIndex(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(611,"TopIndex", DISPATCH_PROPERTYPUT,value);
   }
@@ -382,7 +382,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(0)  public void setValue(Object value) throws ComException {
+  @DeclDISPID(0)  public void setValue(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -391,33 +391,33 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(-529)  public Object getColumn(Object pvargColumn, Object pvargIndex) throws ComException {
+  @DeclDISPID(-529)  public Object getColumn(final Object pvargColumn, final Object pvargIndex) throws ComException {
     assert(pvargColumn != null);
     assert(pvargIndex != null);
     final Object obj = this._dispatchCall(-529,"Column", DISPATCH_PROPERTYGET,null,pvargColumn,pvargIndex);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(-529)  public void setColumn(Object pvargColumn, Object pvargIndex, Object value3) throws ComException {
+  @DeclDISPID(-529)  public void setColumn(final Object pvargColumn, final Object pvargIndex, final Object value3) throws ComException {
     assert(value3 != null);
     assert(pvargColumn != null);
     assert(pvargIndex != null);
     this._dispatchCall(-529,"Column", DISPATCH_PROPERTYPUT,value3,pvargColumn,pvargIndex);
   }
-  @DeclDISPID(-528)  public Object getList(Object pvargIndex, Object pvargColumn) throws ComException {
+  @DeclDISPID(-528)  public Object getList(final Object pvargIndex, final Object pvargColumn) throws ComException {
     assert(pvargIndex != null);
     assert(pvargColumn != null);
     final Object obj = this._dispatchCall(-528,"List", DISPATCH_PROPERTYGET,null,pvargIndex,pvargColumn);
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(-528)  public void setList(Object pvargIndex, Object pvargColumn, Object value3) throws ComException {
+  @DeclDISPID(-528)  public void setList(final Object pvargIndex, final Object pvargColumn, final Object value3) throws ComException {
     assert(value3 != null);
     assert(pvargIndex != null);
     assert(pvargColumn != null);
     this._dispatchCall(-528,"List", DISPATCH_PROPERTYPUT,value3,pvargIndex,pvargColumn);
   }
-  @DeclDISPID(-553)  public void AddItem(Object pvargItem, Object pvargIndex) throws ComException {
+  @DeclDISPID(-553)  public void AddItem(final Object pvargItem, final Object pvargIndex) throws ComException {
     assert(pvargItem != null);
     assert(pvargIndex != null);
     this._dispatchCall(-553,"AddItem", DISPATCH_METHOD,null,pvargItem,pvargIndex);
@@ -428,7 +428,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
   @DeclDISPID(1001)  public void DropDown() throws ComException {
     this._dispatchCall(1001,"DropDown", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(-555)  public void RemoveItem(Object pvargIndex) throws ComException {
+  @DeclDISPID(-555)  public void RemoveItem(final Object pvargIndex) throws ComException {
     assert(pvargIndex != null);
     this._dispatchCall(-555,"RemoveItem", DISPATCH_METHOD,null,pvargIndex);
   }
@@ -441,7 +441,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
   @DeclDISPID(24)  public void Paste() throws ComException {
     this._dispatchCall(24,"Paste", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(-542)  public void setIMEMode(fmIMEMode value) throws ComException {
+  @DeclDISPID(-542)  public void setIMEMode(final fmIMEMode value) throws ComException {
     assert(value != null);
     this._dispatchCall(-542,"IMEMode", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -450,7 +450,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmIMEMode.valueOf((Integer)obj);
   }
-  @DeclDISPID(224)  public void setEnterFieldBehavior(fmEnterFieldBehavior value) throws ComException {
+  @DeclDISPID(224)  public void setEnterFieldBehavior(final fmEnterFieldBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(224,"EnterFieldBehavior", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -459,7 +459,7 @@ public class ComboBox extends Dispatch implements IMdcCombo {
     if (obj == null) return null;
     return fmEnterFieldBehavior.valueOf((Integer)obj);
   }
-  @DeclDISPID(225)  public void setDragBehavior(fmDragBehavior value) throws ComException {
+  @DeclDISPID(225)  public void setDragBehavior(final fmDragBehavior value) throws ComException {
     assert(value != null);
     this._dispatchCall(225,"DragBehavior", DISPATCH_PROPERTYPUT,value.value);
   }

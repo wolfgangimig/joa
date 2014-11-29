@@ -13,12 +13,12 @@ public interface SignatureSet extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException;
   @DeclDISPID(1610809345)  public Integer getCount() throws ComException;
-  @DeclDISPID(0)  public Signature getItem(Integer iSig) throws ComException;
+  @DeclDISPID(0)  public Signature getItem(final Integer iSig) throws ComException;
   @DeclDISPID(1610809349)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(1610809350)  public Signature AddNonVisibleSignature(Object varSigProv) throws ComException;
+  @DeclDISPID(1610809350)  public Signature AddNonVisibleSignature(final Object varSigProv) throws ComException;
   @DeclDISPID(1610809351)  public Boolean getCanAddSignatureLine() throws ComException;
-  @DeclDISPID(1610809352)  public Signature AddSignatureLine(Object varSigProv) throws ComException;
+  @DeclDISPID(1610809352)  public Signature AddSignatureLine(final Object varSigProv) throws ComException;
   @DeclDISPID(1610809353)  public MsoSignatureSubset getSubset() throws ComException;
-  @DeclDISPID(1610809353)  public void setSubset(MsoSignatureSubset value) throws ComException;
-  @DeclDISPID(1610809355)  public void setShowSignaturesPane(Boolean value) throws ComException;
+  @DeclDISPID(1610809353)  public void setSubset(final MsoSignatureSubset value) throws ComException;
+  @DeclDISPID(1610809355)  public void setShowSignaturesPane(final Boolean value) throws ComException;
 }

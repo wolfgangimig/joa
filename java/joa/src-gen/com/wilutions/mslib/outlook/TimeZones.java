@@ -34,13 +34,13 @@ public class TimeZones extends Dispatch implements _TimeZones {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _TimeZone Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public _TimeZone Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._TimeZoneImpl.class);
   }
-  @DeclDISPID(64550)  public java.util.Date ConvertTime(java.util.Date SourceDateTime, _TimeZone SourceTimeZone, _TimeZone DestinationTimeZone) throws ComException {
+  @DeclDISPID(64550)  public java.util.Date ConvertTime(final java.util.Date SourceDateTime, final _TimeZone SourceTimeZone, final _TimeZone DestinationTimeZone) throws ComException {
     assert(SourceDateTime != null);
     final Object obj = this._dispatchCall(64550,"ConvertTime", DISPATCH_METHOD,null,SourceDateTime,(SourceTimeZone!=null?SourceTimeZone:Dispatch.NULL),(DestinationTimeZone!=null?DestinationTimeZone:Dispatch.NULL));
     if (obj == null) return null;

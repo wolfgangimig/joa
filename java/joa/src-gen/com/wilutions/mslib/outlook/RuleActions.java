@@ -34,7 +34,7 @@ public class RuleActions extends Dispatch implements _RuleActions {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _RuleAction Item(Integer Index) throws ComException {
+  @DeclDISPID(81)  public _RuleAction Item(final Integer Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;

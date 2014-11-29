@@ -14,7 +14,7 @@ public class RoomCollection extends Dispatch implements IRoomCollection {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public IRoom getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public IRoom getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
@@ -25,7 +25,7 @@ public class RoomCollection extends Dispatch implements IRoomCollection {
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610743811)  public Integer IndexOf(IRoom _room) throws ComException {
+  @DeclDISPID(1610743811)  public Integer IndexOf(final IRoom _room) throws ComException {
     final Object obj = this._dispatchCall(1610743811,"IndexOf", DISPATCH_METHOD,null,(_room!=null?_room:Dispatch.NULL));
     if (obj == null) return null;
     return (Integer)obj;

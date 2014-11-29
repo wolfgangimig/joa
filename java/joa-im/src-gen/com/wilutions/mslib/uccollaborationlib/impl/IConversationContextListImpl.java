@@ -10,7 +10,7 @@ public class IConversationContextListImpl extends Dispatch implements com.wiluti
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IConversationContext getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IConversationContext getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
@@ -21,13 +21,13 @@ public class IConversationContextListImpl extends Dispatch implements com.wiluti
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(1610809344)  public void Add(com.wilutions.mslib.uccollaborationlib.IConversationContext _context) throws ComException {
+  @DeclDISPID(1610809344)  public void Add(final com.wilutions.mslib.uccollaborationlib.IConversationContext _context) throws ComException {
     this._dispatchCall(1610809344,"Add", DISPATCH_METHOD,null,(_context!=null?_context:Dispatch.NULL));
   }
-  @DeclDISPID(1610809345)  public void Remove(com.wilutions.mslib.uccollaborationlib.IConversationContext _context) throws ComException {
+  @DeclDISPID(1610809345)  public void Remove(final com.wilutions.mslib.uccollaborationlib.IConversationContext _context) throws ComException {
     this._dispatchCall(1610809345,"Remove", DISPATCH_METHOD,null,(_context!=null?_context:Dispatch.NULL));
   }
-  @DeclDISPID(1610809346)  public com.wilutions.mslib.uccollaborationlib.IConversationContext CreateContext(String _id, com.wilutions.mslib.uccollaborationlib.ConversationContextType _contextType, Boolean _doMakeActive) throws ComException {
+  @DeclDISPID(1610809346)  public com.wilutions.mslib.uccollaborationlib.IConversationContext CreateContext(final String _id, final com.wilutions.mslib.uccollaborationlib.ConversationContextType _contextType, final Boolean _doMakeActive) throws ComException {
     assert(_id != null);
     assert(_contextType != null);
     assert(_doMakeActive != null);
@@ -35,7 +35,7 @@ public class IConversationContextListImpl extends Dispatch implements com.wiluti
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IConversationContextImpl.class);
   }
-  @DeclDISPID(1610809347)  public void ModifyActiveContext(String _contextId, String _contextData, com.wilutions.mslib.uccollaborationlib.ConversationContextUpdateOptions _contextUpdateOptions) throws ComException {
+  @DeclDISPID(1610809347)  public void ModifyActiveContext(final String _contextId, final String _contextData, final com.wilutions.mslib.uccollaborationlib.ConversationContextUpdateOptions _contextUpdateOptions) throws ComException {
     assert(_contextId != null);
     assert(_contextData != null);
     assert(_contextUpdateOptions != null);

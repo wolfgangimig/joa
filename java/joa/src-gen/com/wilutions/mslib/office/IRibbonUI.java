@@ -10,9 +10,9 @@ import com.wilutions.com.*;
 public interface IRibbonUI extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(1)  public void Invalidate() throws ComException;
-  @DeclDISPID(2)  public void InvalidateControl(String ControlID) throws ComException;
-  @DeclDISPID(3)  public void InvalidateControlMso(String ControlID) throws ComException;
-  @DeclDISPID(4)  public void ActivateTab(String ControlID) throws ComException;
-  @DeclDISPID(5)  public void ActivateTabMso(String ControlID) throws ComException;
-  @DeclDISPID(6)  public void ActivateTabQ(String ControlID, String Namespace) throws ComException;
+  @DeclDISPID(2)  public void InvalidateControl(final String ControlID) throws ComException;
+  @DeclDISPID(3)  public void InvalidateControlMso(final String ControlID) throws ComException;
+  @DeclDISPID(4)  public void ActivateTab(final String ControlID) throws ComException;
+  @DeclDISPID(5)  public void ActivateTabMso(final String ControlID) throws ComException;
+  @DeclDISPID(6)  public void ActivateTabQ(final String ControlID, final String Namespace) throws ComException;
 }

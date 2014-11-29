@@ -13,7 +13,7 @@ public interface ODSOFilters extends IDispatch {
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public Integer getCount() throws ComException;
   @DeclDISPID(2)  public IDispatch getParent() throws ComException;
-  @DeclDISPID(1610809346)  public IDispatch Item(Integer Index) throws ComException;
-  @DeclDISPID(1610809347)  public void Add(String Column, MsoFilterComparison Comparison, MsoFilterConjunction Conjunction, String bstrCompareTo, Boolean DeferUpdate) throws ComException;
-  @DeclDISPID(1610809348)  public void Delete(Integer Index, Boolean DeferUpdate) throws ComException;
+  @DeclDISPID(1610809346)  public IDispatch Item(final Integer Index) throws ComException;
+  @DeclDISPID(1610809347)  public void Add(final String Column, final MsoFilterComparison Comparison, final MsoFilterConjunction Conjunction, final String bstrCompareTo, final Boolean DeferUpdate) throws ComException;
+  @DeclDISPID(1610809348)  public void Delete(final Integer Index, final Boolean DeferUpdate) throws ComException;
 }

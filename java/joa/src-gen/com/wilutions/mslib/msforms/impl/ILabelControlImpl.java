@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C4CE16AA-220F-CA8E-36D2-694DA5377335}")
 public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.msforms.ILabelControl {
-  @DeclDISPID(-500)  public void setAutoSize(Boolean value) throws ComException {
+  @DeclDISPID(-500)  public void setAutoSize(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-500,"AutoSize", DISPATCH_PROPERTYPUT,value);
   }
@@ -14,7 +14,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-501)  public void setBackColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-501)  public void setBackColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-501,"BackColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -24,7 +24,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-502)  public void setBackStyle(com.wilutions.mslib.msforms.fmBackStyle value) throws ComException {
+  @DeclDISPID(-502)  public void setBackStyle(final com.wilutions.mslib.msforms.fmBackStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-502,"BackStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -33,7 +33,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmBackStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(-503)  public void setBorderColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-503)  public void setBorderColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-503,"BorderColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -43,7 +43,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-504)  public void setBorderStyle(com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
+  @DeclDISPID(-504)  public void setBorderStyle(final com.wilutions.mslib.msforms.fmBorderStyle value) throws ComException {
     assert(value != null);
     this._dispatchCall(-504,"BorderStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -52,7 +52,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmBorderStyle.valueOf((Integer)obj);
   }
-  @DeclDISPID(0)  public void setCaption(String value) throws ComException {
+  @DeclDISPID(0)  public void setCaption(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Caption", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(-514)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(-514)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-514,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -70,7 +70,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-512)  public void setFont(com.wilutions.mslib.msforms.Font value) throws ComException {
+  @DeclDISPID(-512)  public void setFont(final com.wilutions.mslib.msforms.Font value) throws ComException {
     this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
@@ -78,7 +78,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.FontImpl.class);
   }
-  @DeclDISPID(-513)  public void setForeColor(com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
+  @DeclDISPID(-513)  public void setForeColor(final com.wilutions.mslib.msforms.OLE_COLOR value) throws ComException {
     assert(value != null);
     this._dispatchCall(-513,"ForeColor", DISPATCH_PROPERTYPUT,value.getValue());
   }
@@ -88,7 +88,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     final Integer als = (Integer)obj;
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
-  @DeclDISPID(-522)  public void setMouseIcon(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
@@ -96,7 +96,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(-521)  public void setMousePointer(com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
+  @DeclDISPID(-521)  public void setMousePointer(final com.wilutions.mslib.msforms.fmMousePointer value) throws ComException {
     assert(value != null);
     this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -105,7 +105,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmMousePointer.valueOf((Integer)obj);
   }
-  @DeclDISPID(-523)  public void setPicture(com.wilutions.mslib.stdole.Picture value) throws ComException {
+  @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
     this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
@@ -113,7 +113,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
-  @DeclDISPID(11)  public void setPicturePosition(com.wilutions.mslib.msforms.fmPicturePosition value) throws ComException {
+  @DeclDISPID(11)  public void setPicturePosition(final com.wilutions.mslib.msforms.fmPicturePosition value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"PicturePosition", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -122,7 +122,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmPicturePosition.valueOf((Integer)obj);
   }
-  @DeclDISPID(12)  public void setSpecialEffect(com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
+  @DeclDISPID(12)  public void setSpecialEffect(final com.wilutions.mslib.msforms.fmSpecialEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -131,7 +131,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmSpecialEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(13)  public void setTextAlign(com.wilutions.mslib.msforms.fmTextAlign value) throws ComException {
+  @DeclDISPID(13)  public void setTextAlign(final com.wilutions.mslib.msforms.fmTextAlign value) throws ComException {
     assert(value != null);
     this._dispatchCall(13,"TextAlign", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -140,7 +140,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmTextAlign.valueOf((Integer)obj);
   }
-  @DeclDISPID(-536)  public void setWordWrap(Boolean value) throws ComException {
+  @DeclDISPID(-536)  public void setWordWrap(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(-536,"WordWrap", DISPATCH_PROPERTYPUT,value);
   }
@@ -149,7 +149,7 @@ public class ILabelControlImpl extends Dispatch implements com.wilutions.mslib.m
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(-543)  public void setAccelerator(String value) throws ComException {
+  @DeclDISPID(-543)  public void setAccelerator(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-543,"Accelerator", DISPATCH_PROPERTYPUT,value);
   }

@@ -14,7 +14,7 @@ public class OlkPageControl extends Dispatch implements _OlkPageControl {
     if (obj == null) return null;
     return OlPageType.valueOf((Integer)obj);
   }
-  @DeclDISPID(64465)  public void setPage(OlPageType value) throws ComException {
+  @DeclDISPID(64465)  public void setPage(final OlPageType value) throws ComException {
     assert(value != null);
     this._dispatchCall(64465,"Page", DISPATCH_PROPERTYPUT,value.value);
   }

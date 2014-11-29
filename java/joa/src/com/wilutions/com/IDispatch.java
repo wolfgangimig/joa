@@ -10,6 +10,8 @@
  */
 package com.wilutions.com;
 
+import java.util.function.Consumer;
+
 /**
  * Objects received from COM and Java objects that implement a COM interface
  * implement IDispatch.
@@ -80,4 +82,7 @@ public interface IDispatch extends IUnknown {
 		throw new UnsupportedOperationException();
 	}
 	
+	default <T extends IUnknown> void _fireEvent(Class<T> listenerClass, Consumer<T> action) {
+		throw new UnsupportedOperationException();
+	}
 }

@@ -25,7 +25,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void setDisplayName(String value) throws ComException {
+  @DeclDISPID(2)  public void setDisplayName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"DisplayName", DISPATCH_PROPERTYPUT,value);
   }
@@ -34,7 +34,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(3)  public void setType(String value) throws ComException {
+  @DeclDISPID(3)  public void setType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Type", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(4)  public void setSIPId(String value) throws ComException {
+  @DeclDISPID(4)  public void setSIPId(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"SIPId", DISPATCH_PROPERTYPUT,value);
   }
@@ -52,7 +52,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(5)  public void setItemData(Object value) throws ComException {
+  @DeclDISPID(5)  public void setItemData(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"ItemData", DISPATCH_PROPERTYPUT,value);
   }
@@ -61,7 +61,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(6)  public void setSubItems(Object value) throws ComException {
+  @DeclDISPID(6)  public void setSubItems(final Object value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"SubItems", DISPATCH_PROPERTYPUT,value);
   }
@@ -75,7 +75,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerFieldsImpl.class);
   }
-  @DeclDISPID(8)  public void setFields(com.wilutions.mslib.office.PickerFields value) throws ComException {
+  @DeclDISPID(8)  public void setFields(final com.wilutions.mslib.office.PickerFields value) throws ComException {
     this._dispatchCall(8,"Fields", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public PickerResultImpl(String progId) throws ComException {

@@ -5,10 +5,10 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{40FAAB4C-E8DB-9C85-05CA-14AA5103BC93}")
 public class _IAutomationCallbackImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IAutomationCallback {
-  @DeclDISPID(4100)  public void OnStartConversation(com.wilutions.mslib.uccollaborationlib.IAutomation _source, com.wilutions.mslib.uccollaborationlib.IConversationWindow _uiWindow, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(4100)  public void OnStartConversation(final com.wilutions.mslib.uccollaborationlib.IAutomation _source, final com.wilutions.mslib.uccollaborationlib.IConversationWindow _uiWindow, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(4100,"OnStartConversation", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_uiWindow!=null?_uiWindow:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
-  @DeclDISPID(4101)  public void OnJoinConference(com.wilutions.mslib.uccollaborationlib.IAutomation _source, com.wilutions.mslib.uccollaborationlib.IConversationWindow _uiWindow, com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
+  @DeclDISPID(4101)  public void OnJoinConference(final com.wilutions.mslib.uccollaborationlib.IAutomation _source, final com.wilutions.mslib.uccollaborationlib.IConversationWindow _uiWindow, final com.wilutions.mslib.uccollaborationlib.IAsynchronousOperation _asyncOperation) throws ComException {
     this._dispatchCall(4101,"OnJoinConference", DISPATCH_METHOD,null,(_source!=null?_source:Dispatch.NULL),(_uiWindow!=null?_uiWindow:Dispatch.NULL),(_asyncOperation!=null?_asyncOperation:Dispatch.NULL));
   }
   public _IAutomationCallbackImpl(String progId) throws ComException {

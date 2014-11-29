@@ -14,5 +14,5 @@ public interface IUCOfficeIntegrationHelper extends IDispatch {
   @DeclDISPID(1610678274)  public IDispatch GetInteropHelper() throws ComException;
   @DeclDISPID(1610678275)  public String GetAuthenticationInfo() throws ComException;
   @DeclDISPID(1610678276)  public void Cleanup() throws ComException;
-  @DeclDISPID(1610678277)  public void Notify(OIHelperAction Action, HRESULT hrRes) throws ComException;
+  @DeclDISPID(1610678277)  public void Notify(final OIHelperAction Action, final HRESULT hrRes) throws ComException;
 }

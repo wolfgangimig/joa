@@ -25,7 +25,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(2)  public void setBold(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(2)  public void setBold(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(2,"Bold", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -34,7 +34,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(3)  public void setItalic(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(3)  public void setItalic(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(3,"Italic", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -43,7 +43,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextStrike.valueOf((Integer)obj);
   }
-  @DeclDISPID(4)  public void setStrike(com.wilutions.mslib.office.MsoTextStrike value) throws ComException {
+  @DeclDISPID(4)  public void setStrike(final com.wilutions.mslib.office.MsoTextStrike value) throws ComException {
     assert(value != null);
     this._dispatchCall(4,"Strike", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -52,7 +52,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextCaps.valueOf((Integer)obj);
   }
-  @DeclDISPID(5)  public void setCaps(com.wilutions.mslib.office.MsoTextCaps value) throws ComException {
+  @DeclDISPID(5)  public void setCaps(final com.wilutions.mslib.office.MsoTextCaps value) throws ComException {
     assert(value != null);
     this._dispatchCall(5,"Caps", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -61,7 +61,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(6)  public void setAutorotateNumbers(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(6)  public void setAutorotateNumbers(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(6,"AutorotateNumbers", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -70,7 +70,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(7)  public void setBaselineOffset(Float value) throws ComException {
+  @DeclDISPID(7)  public void setBaselineOffset(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(7,"BaselineOffset", DISPATCH_PROPERTYPUT,value);
   }
@@ -79,7 +79,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(8)  public void setKerning(Float value) throws ComException {
+  @DeclDISPID(8)  public void setKerning(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(8,"Kerning", DISPATCH_PROPERTYPUT,value);
   }
@@ -88,7 +88,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(9)  public void setSize(Float value) throws ComException {
+  @DeclDISPID(9)  public void setSize(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(9,"Size", DISPATCH_PROPERTYPUT,value);
   }
@@ -97,7 +97,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (Float)obj;
   }
-  @DeclDISPID(10)  public void setSpacing(Float value) throws ComException {
+  @DeclDISPID(10)  public void setSpacing(final Float value) throws ComException {
     assert(value != null);
     this._dispatchCall(10,"Spacing", DISPATCH_PROPERTYPUT,value);
   }
@@ -106,7 +106,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTextUnderlineType.valueOf((Integer)obj);
   }
-  @DeclDISPID(11)  public void setUnderlineStyle(com.wilutions.mslib.office.MsoTextUnderlineType value) throws ComException {
+  @DeclDISPID(11)  public void setUnderlineStyle(final com.wilutions.mslib.office.MsoTextUnderlineType value) throws ComException {
     assert(value != null);
     this._dispatchCall(11,"UnderlineStyle", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -115,7 +115,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(12)  public void setAllcaps(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(12)  public void setAllcaps(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(12,"Allcaps", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -124,7 +124,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(13)  public void setDoubleStrikeThrough(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(13)  public void setDoubleStrikeThrough(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(13,"DoubleStrikeThrough", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -133,7 +133,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(14)  public void setEqualize(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(14)  public void setEqualize(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(14,"Equalize", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -177,7 +177,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(22)  public void setSmallcaps(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(22)  public void setSmallcaps(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(22,"Smallcaps", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -186,7 +186,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoSoftEdgeType.valueOf((Integer)obj);
   }
-  @DeclDISPID(23)  public void setSoftEdgeFormat(com.wilutions.mslib.office.MsoSoftEdgeType value) throws ComException {
+  @DeclDISPID(23)  public void setSoftEdgeFormat(final com.wilutions.mslib.office.MsoSoftEdgeType value) throws ComException {
     assert(value != null);
     this._dispatchCall(23,"SoftEdgeFormat", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -195,7 +195,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(24)  public void setStrikeThrough(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(24)  public void setStrikeThrough(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(24,"StrikeThrough", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -204,7 +204,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(25)  public void setSubscript(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(25)  public void setSubscript(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(25,"Subscript", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -213,7 +213,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoTriState.valueOf((Integer)obj);
   }
-  @DeclDISPID(26)  public void setSuperscript(com.wilutions.mslib.office.MsoTriState value) throws ComException {
+  @DeclDISPID(26)  public void setSuperscript(final com.wilutions.mslib.office.MsoTriState value) throws ComException {
     assert(value != null);
     this._dispatchCall(26,"Superscript", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -222,7 +222,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return com.wilutions.mslib.office.MsoPresetTextEffect.valueOf((Integer)obj);
   }
-  @DeclDISPID(27)  public void setWordArtformat(com.wilutions.mslib.office.MsoPresetTextEffect value) throws ComException {
+  @DeclDISPID(27)  public void setWordArtformat(final com.wilutions.mslib.office.MsoPresetTextEffect value) throws ComException {
     assert(value != null);
     this._dispatchCall(27,"WordArtformat", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -241,7 +241,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(30)  public void setName(String value) throws ComException {
+  @DeclDISPID(30)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(30,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -250,7 +250,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(31)  public void setNameAscii(String value) throws ComException {
+  @DeclDISPID(31)  public void setNameAscii(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(31,"NameAscii", DISPATCH_PROPERTYPUT,value);
   }
@@ -259,7 +259,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(32)  public void setNameComplexScript(String value) throws ComException {
+  @DeclDISPID(32)  public void setNameComplexScript(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(32,"NameComplexScript", DISPATCH_PROPERTYPUT,value);
   }
@@ -268,7 +268,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(33)  public void setNameFarEast(String value) throws ComException {
+  @DeclDISPID(33)  public void setNameFarEast(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(33,"NameFarEast", DISPATCH_PROPERTYPUT,value);
   }
@@ -277,7 +277,7 @@ public class Font2Impl extends Dispatch implements com.wilutions.mslib.office.Fo
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(34)  public void setNameOther(String value) throws ComException {
+  @DeclDISPID(34)  public void setNameOther(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(34,"NameOther", DISPATCH_PROPERTYPUT,value);
   }

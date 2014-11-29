@@ -30,14 +30,14 @@ public class _ExplorersImpl extends Dispatch implements com.wilutions.mslib.outl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Explorer Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.Explorer Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.Explorer.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook._Explorer Add(Object Folder, com.wilutions.mslib.outlook.OlFolderDisplayMode DisplayMode) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook._Explorer Add(final Object Folder, final com.wilutions.mslib.outlook.OlFolderDisplayMode DisplayMode) throws ComException {
     assert(Folder != null);
     assert(DisplayMode != null);
     final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Folder,DisplayMode.value);

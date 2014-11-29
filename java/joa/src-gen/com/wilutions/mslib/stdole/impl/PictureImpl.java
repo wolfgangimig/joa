@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{BB6F90EA-1B51-CB5B-1615-694DA5C7F051}")
 public class PictureImpl extends Dispatch implements com.wilutions.mslib.stdole.Picture {
-  @DeclDISPID(6)  public void Render(Integer hdc, Integer x, Integer y, Integer cx, Integer cy, com.wilutions.mslib.stdole.OLE_XPOS_HIMETRIC xSrc, com.wilutions.mslib.stdole.OLE_YPOS_HIMETRIC ySrc, com.wilutions.mslib.stdole.OLE_XSIZE_HIMETRIC cxSrc, com.wilutions.mslib.stdole.OLE_YSIZE_HIMETRIC cySrc, byte[] prcWBounds) throws ComException {
+  @DeclDISPID(6)  public void Render(final Integer hdc, final Integer x, final Integer y, final Integer cx, final Integer cy, final com.wilutions.mslib.stdole.OLE_XPOS_HIMETRIC xSrc, final com.wilutions.mslib.stdole.OLE_YPOS_HIMETRIC ySrc, final com.wilutions.mslib.stdole.OLE_XSIZE_HIMETRIC cxSrc, final com.wilutions.mslib.stdole.OLE_YSIZE_HIMETRIC cySrc, final byte[] prcWBounds) throws ComException {
     assert(hdc != null);
     assert(x != null);
     assert(y != null);

@@ -25,12 +25,12 @@ public class DocumentInspectorImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(2)  public void Inspect(ByRef<com.wilutions.mslib.office.MsoDocInspectorStatus> Status, ByRef<String> Results) throws ComException {
+  @DeclDISPID(2)  public void Inspect(final ByRef<com.wilutions.mslib.office.MsoDocInspectorStatus> Status, final ByRef<String> Results) throws ComException {
     assert(Status != null);
     assert(Results != null);
     this._dispatchCall(2,"Inspect", DISPATCH_METHOD,null,Status,Results);
   }
-  @DeclDISPID(3)  public void Fix(ByRef<com.wilutions.mslib.office.MsoDocInspectorStatus> Status, ByRef<String> Results) throws ComException {
+  @DeclDISPID(3)  public void Fix(final ByRef<com.wilutions.mslib.office.MsoDocInspectorStatus> Status, final ByRef<String> Results) throws ComException {
     assert(Status != null);
     assert(Results != null);
     this._dispatchCall(3,"Fix", DISPATCH_METHOD,null,Status,Results);

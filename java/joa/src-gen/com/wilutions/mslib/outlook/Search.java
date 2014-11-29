@@ -20,6 +20,6 @@ public interface Search extends IDispatch {
   @DeclDISPID(64103)  public void Stop() throws ComException;
   @DeclDISPID(64109)  public String getTag() throws ComException;
   @DeclDISPID(64165)  public String getScope() throws ComException;
-  @DeclDISPID(64173)  public MAPIFolder Save(String Name) throws ComException;
+  @DeclDISPID(64173)  public MAPIFolder Save(final String Name) throws ComException;
   @DeclDISPID(64285)  public Table GetTable() throws ComException;
 }

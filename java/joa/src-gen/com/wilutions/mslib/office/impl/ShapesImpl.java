@@ -25,7 +25,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.office.Shape Item(Object Index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.office.Shape Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -36,7 +36,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return (Object)obj;
   }
-  @DeclDISPID(10)  public com.wilutions.mslib.office.Shape AddCallout(com.wilutions.mslib.office.MsoCalloutType Type, Float Left, Float Top, Float Width, Float Height) throws ComException {
+  @DeclDISPID(10)  public com.wilutions.mslib.office.Shape AddCallout(final com.wilutions.mslib.office.MsoCalloutType Type, final Float Left, final Float Top, final Float Width, final Float Height) throws ComException {
     assert(Type != null);
     assert(Left != null);
     assert(Top != null);
@@ -46,7 +46,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(11)  public com.wilutions.mslib.office.Shape AddConnector(com.wilutions.mslib.office.MsoConnectorType Type, Float BeginX, Float BeginY, Float EndX, Float EndY) throws ComException {
+  @DeclDISPID(11)  public com.wilutions.mslib.office.Shape AddConnector(final com.wilutions.mslib.office.MsoConnectorType Type, final Float BeginX, final Float BeginY, final Float EndX, final Float EndY) throws ComException {
     assert(Type != null);
     assert(BeginX != null);
     assert(BeginY != null);
@@ -56,13 +56,13 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(12)  public com.wilutions.mslib.office.Shape AddCurve(Object SafeArrayOfPoints) throws ComException {
+  @DeclDISPID(12)  public com.wilutions.mslib.office.Shape AddCurve(final Object SafeArrayOfPoints) throws ComException {
     assert(SafeArrayOfPoints != null);
     final Object obj = this._dispatchCall(12,"AddCurve", DISPATCH_METHOD,null,SafeArrayOfPoints);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(13)  public com.wilutions.mslib.office.Shape AddLabel(com.wilutions.mslib.office.MsoTextOrientation Orientation, Float Left, Float Top, Float Width, Float Height) throws ComException {
+  @DeclDISPID(13)  public com.wilutions.mslib.office.Shape AddLabel(final com.wilutions.mslib.office.MsoTextOrientation Orientation, final Float Left, final Float Top, final Float Width, final Float Height) throws ComException {
     assert(Orientation != null);
     assert(Left != null);
     assert(Top != null);
@@ -72,7 +72,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(14)  public com.wilutions.mslib.office.Shape AddLine(Float BeginX, Float BeginY, Float EndX, Float EndY) throws ComException {
+  @DeclDISPID(14)  public com.wilutions.mslib.office.Shape AddLine(final Float BeginX, final Float BeginY, final Float EndX, final Float EndY) throws ComException {
     assert(BeginX != null);
     assert(BeginY != null);
     assert(EndX != null);
@@ -81,7 +81,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(15)  public com.wilutions.mslib.office.Shape AddPicture(String FileName, com.wilutions.mslib.office.MsoTriState LinkToFile, com.wilutions.mslib.office.MsoTriState SaveWithDocument, Float Left, Float Top, Float Width, Float Height) throws ComException {
+  @DeclDISPID(15)  public com.wilutions.mslib.office.Shape AddPicture(final String FileName, final com.wilutions.mslib.office.MsoTriState LinkToFile, final com.wilutions.mslib.office.MsoTriState SaveWithDocument, final Float Left, final Float Top, final Float Width, final Float Height) throws ComException {
     assert(FileName != null);
     assert(LinkToFile != null);
     assert(SaveWithDocument != null);
@@ -93,13 +93,13 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(16)  public com.wilutions.mslib.office.Shape AddPolyline(Object SafeArrayOfPoints) throws ComException {
+  @DeclDISPID(16)  public com.wilutions.mslib.office.Shape AddPolyline(final Object SafeArrayOfPoints) throws ComException {
     assert(SafeArrayOfPoints != null);
     final Object obj = this._dispatchCall(16,"AddPolyline", DISPATCH_METHOD,null,SafeArrayOfPoints);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(17)  public com.wilutions.mslib.office.Shape AddShape(com.wilutions.mslib.office.MsoAutoShapeType Type, Float Left, Float Top, Float Width, Float Height) throws ComException {
+  @DeclDISPID(17)  public com.wilutions.mslib.office.Shape AddShape(final com.wilutions.mslib.office.MsoAutoShapeType Type, final Float Left, final Float Top, final Float Width, final Float Height) throws ComException {
     assert(Type != null);
     assert(Left != null);
     assert(Top != null);
@@ -109,7 +109,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(18)  public com.wilutions.mslib.office.Shape AddTextEffect(com.wilutions.mslib.office.MsoPresetTextEffect PresetTextEffect, String Text, String FontName, Float FontSize, com.wilutions.mslib.office.MsoTriState FontBold, com.wilutions.mslib.office.MsoTriState FontItalic, Float Left, Float Top) throws ComException {
+  @DeclDISPID(18)  public com.wilutions.mslib.office.Shape AddTextEffect(final com.wilutions.mslib.office.MsoPresetTextEffect PresetTextEffect, final String Text, final String FontName, final Float FontSize, final com.wilutions.mslib.office.MsoTriState FontBold, final com.wilutions.mslib.office.MsoTriState FontItalic, final Float Left, final Float Top) throws ComException {
     assert(PresetTextEffect != null);
     assert(Text != null);
     assert(FontName != null);
@@ -122,7 +122,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(19)  public com.wilutions.mslib.office.Shape AddTextbox(com.wilutions.mslib.office.MsoTextOrientation Orientation, Float Left, Float Top, Float Width, Float Height) throws ComException {
+  @DeclDISPID(19)  public com.wilutions.mslib.office.Shape AddTextbox(final com.wilutions.mslib.office.MsoTextOrientation Orientation, final Float Left, final Float Top, final Float Width, final Float Height) throws ComException {
     assert(Orientation != null);
     assert(Left != null);
     assert(Top != null);
@@ -132,7 +132,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(20)  public com.wilutions.mslib.office.FreeformBuilder BuildFreeform(com.wilutions.mslib.office.MsoEditingType EditingType, Float X1, Float Y1) throws ComException {
+  @DeclDISPID(20)  public com.wilutions.mslib.office.FreeformBuilder BuildFreeform(final com.wilutions.mslib.office.MsoEditingType EditingType, final Float X1, final Float Y1) throws ComException {
     assert(EditingType != null);
     assert(X1 != null);
     assert(Y1 != null);
@@ -140,7 +140,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.FreeformBuilderImpl.class);
   }
-  @DeclDISPID(21)  public com.wilutions.mslib.office.ShapeRange Range(Object Index) throws ComException {
+  @DeclDISPID(21)  public com.wilutions.mslib.office.ShapeRange Range(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(21,"Range", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
@@ -159,7 +159,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(28)  public com.wilutions.mslib.office.Shape AddSmartArt(com.wilutions.mslib.office.SmartArtLayout Layout, Float Left, Float Top, Float Width, Float Height) throws ComException {
+  @DeclDISPID(28)  public com.wilutions.mslib.office.Shape AddSmartArt(final com.wilutions.mslib.office.SmartArtLayout Layout, final Float Left, final Float Top, final Float Width, final Float Height) throws ComException {
     assert(Left != null);
     assert(Top != null);
     assert(Width != null);
@@ -168,7 +168,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(29)  public com.wilutions.mslib.office.Shape AddChart2(Integer Style, com.wilutions.mslib.office.XlChartType Type, Float Left, Float Top, Float Width, Float Height, Boolean NewLayout) throws ComException {
+  @DeclDISPID(29)  public com.wilutions.mslib.office.Shape AddChart2(final Integer Style, final com.wilutions.mslib.office.XlChartType Type, final Float Left, final Float Top, final Float Width, final Float Height, final Boolean NewLayout) throws ComException {
     assert(Style != null);
     assert(Type != null);
     assert(Left != null);
@@ -180,7 +180,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
-  @DeclDISPID(30)  public com.wilutions.mslib.office.Shape AddPicture2(String FileName, com.wilutions.mslib.office.MsoTriState LinkToFile, com.wilutions.mslib.office.MsoTriState SaveWithDocument, Float Left, Float Top, Float Width, Float Height, com.wilutions.mslib.office.MsoPictureCompress Compress) throws ComException {
+  @DeclDISPID(30)  public com.wilutions.mslib.office.Shape AddPicture2(final String FileName, final com.wilutions.mslib.office.MsoTriState LinkToFile, final com.wilutions.mslib.office.MsoTriState SaveWithDocument, final Float Left, final Float Top, final Float Width, final Float Height, final com.wilutions.mslib.office.MsoPictureCompress Compress) throws ComException {
     assert(FileName != null);
     assert(LinkToFile != null);
     assert(SaveWithDocument != null);

@@ -16,7 +16,7 @@ public interface _NavigationGroup extends IDispatch {
   @DeclDISPID(64448)  public OlGroupType getGroupType() throws ComException;
   @DeclDISPID(64449)  public NavigationFolders getNavigationFolders() throws ComException;
   @DeclDISPID(8450)  public String getName() throws ComException;
-  @DeclDISPID(8450)  public void setName(String value) throws ComException;
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException;
   @DeclDISPID(64455)  public Integer getPosition() throws ComException;
-  @DeclDISPID(64455)  public void setPosition(Integer value) throws ComException;
+  @DeclDISPID(64455)  public void setPosition(final Integer value) throws ComException;
 }

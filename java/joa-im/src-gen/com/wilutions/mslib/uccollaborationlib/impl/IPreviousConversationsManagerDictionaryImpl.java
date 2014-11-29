@@ -10,7 +10,7 @@ public class IPreviousConversationsManagerDictionaryImpl extends Dispatch implem
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager getItem(com.wilutions.mslib.uccollaborationlib.PreviousConversationsType _key) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager getItem(final com.wilutions.mslib.uccollaborationlib.PreviousConversationsType _key) throws ComException {
     assert(_key != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_key.value);
     if (obj == null) return null;
@@ -26,26 +26,26 @@ public class IPreviousConversationsManagerDictionaryImpl extends Dispatch implem
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager[])obj;
   }
-  @DeclDISPID(1610743812)  public com.wilutions.mslib.uccollaborationlib.PreviousConversationsType GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743812)  public com.wilutions.mslib.uccollaborationlib.PreviousConversationsType GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743812,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.PreviousConversationsType.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743813,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IPreviousConversationsManagerImpl.class);
   }
-  @DeclDISPID(1610743814)  public Boolean TryGetValue(com.wilutions.mslib.uccollaborationlib.PreviousConversationsType _type, ByRef<com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager> _pastConversations) throws ComException {
+  @DeclDISPID(1610743814)  public Boolean TryGetValue(final com.wilutions.mslib.uccollaborationlib.PreviousConversationsType _type, final ByRef<com.wilutions.mslib.uccollaborationlib.IPreviousConversationsManager> _pastConversations) throws ComException {
     assert(_type != null);
     assert(_pastConversations != null);
     final Object obj = this._dispatchCall(1610743814,"TryGetValue", DISPATCH_METHOD,null,_type.value,_pastConversations);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(com.wilutions.mslib.uccollaborationlib.PreviousConversationsType _type) throws ComException {
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final com.wilutions.mslib.uccollaborationlib.PreviousConversationsType _type) throws ComException {
     assert(_type != null);
     final Object obj = this._dispatchCall(1610743815,"ContainsKey", DISPATCH_METHOD,null,_type.value);
     if (obj == null) return null;

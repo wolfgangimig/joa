@@ -34,7 +34,7 @@ public class Category extends Dispatch implements _Category {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(8450)  public void setName(String value) throws ComException {
+  @DeclDISPID(8450)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(8450,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -43,7 +43,7 @@ public class Category extends Dispatch implements _Category {
     if (obj == null) return null;
     return OlCategoryColor.valueOf((Integer)obj);
   }
-  @DeclDISPID(64419)  public void setColor(OlCategoryColor value) throws ComException {
+  @DeclDISPID(64419)  public void setColor(final OlCategoryColor value) throws ComException {
     assert(value != null);
     this._dispatchCall(64419,"Color", DISPATCH_PROPERTYPUT,value.value);
   }
@@ -52,7 +52,7 @@ public class Category extends Dispatch implements _Category {
     if (obj == null) return null;
     return OlCategoryShortcutKey.valueOf((Integer)obj);
   }
-  @DeclDISPID(64420)  public void setShortcutKey(OlCategoryShortcutKey value) throws ComException {
+  @DeclDISPID(64420)  public void setShortcutKey(final OlCategoryShortcutKey value) throws ComException {
     assert(value != null);
     this._dispatchCall(64420,"ShortcutKey", DISPATCH_PROPERTYPUT,value.value);
   }

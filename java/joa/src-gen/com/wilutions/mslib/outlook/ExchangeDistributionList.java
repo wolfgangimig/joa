@@ -34,7 +34,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12291)  public void setAddress(String value) throws ComException {
+  @DeclDISPID(12291)  public void setAddress(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12291,"Address", DISPATCH_PROPERTYPUT,value);
   }
@@ -53,7 +53,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12289)  public void setName(String value) throws ComException {
+  @DeclDISPID(12289)  public void setName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12289,"Name", DISPATCH_PROPERTYPUT,value);
   }
@@ -62,18 +62,18 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12290)  public void setType(String value) throws ComException {
+  @DeclDISPID(12290)  public void setType(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12290,"Type", DISPATCH_PROPERTYPUT,value);
   }
   @DeclDISPID(770)  public void Delete() throws ComException {
     this._dispatchCall(770,"Delete", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(769)  public void Details(Object HWnd) throws ComException {
+  @DeclDISPID(769)  public void Details(final Object HWnd) throws ComException {
     assert(HWnd != null);
     this._dispatchCall(769,"Details", DISPATCH_METHOD,null,HWnd);
   }
-  @DeclDISPID(774)  public String GetFreeBusy(java.util.Date Start, Integer MinPerChar, Object CompleteFormat) throws ComException {
+  @DeclDISPID(774)  public String GetFreeBusy(final java.util.Date Start, final Integer MinPerChar, final Object CompleteFormat) throws ComException {
     assert(Start != null);
     assert(MinPerChar != null);
     assert(CompleteFormat != null);
@@ -81,7 +81,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(768)  public void Update(Object MakePermanent, Object Refresh) throws ComException {
+  @DeclDISPID(768)  public void Update(final Object MakePermanent, final Object Refresh) throws ComException {
     assert(MakePermanent != null);
     assert(Refresh != null);
     this._dispatchCall(768,"Update", DISPATCH_METHOD,null,MakePermanent,Refresh);
@@ -134,7 +134,7 @@ public class ExchangeDistributionList extends Dispatch implements _ExchangeDistr
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(12292)  public void setComments(String value) throws ComException {
+  @DeclDISPID(12292)  public void setComments(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(12292,"Comments", DISPATCH_PROPERTYPUT,value);
   }

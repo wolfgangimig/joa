@@ -16,5 +16,5 @@ public interface _OutlookBarPane extends IDispatch {
   @DeclDISPID(8448)  public OutlookBarStorage getContents() throws ComException;
   @DeclDISPID(0)  public String getName() throws ComException;
   @DeclDISPID(8451)  public Boolean getVisible() throws ComException;
-  @DeclDISPID(8451)  public void setVisible(Boolean value) throws ComException;
+  @DeclDISPID(8451)  public void setVisible(final Boolean value) throws ComException;
 }

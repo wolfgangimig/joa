@@ -12,9 +12,9 @@ public interface TextColumn2 extends IDispatch {
   @DeclDISPID(1610743808)  public IDispatch getApplication() throws ComException;
   @DeclDISPID(1610743809)  public Integer getCreator() throws ComException;
   @DeclDISPID(1)  public Integer getNumber() throws ComException;
-  @DeclDISPID(1)  public void setNumber(Integer value) throws ComException;
+  @DeclDISPID(1)  public void setNumber(final Integer value) throws ComException;
   @DeclDISPID(2)  public Float getSpacing() throws ComException;
-  @DeclDISPID(2)  public void setSpacing(Float value) throws ComException;
+  @DeclDISPID(2)  public void setSpacing(final Float value) throws ComException;
   @DeclDISPID(3)  public MsoTextDirection getTextDirection() throws ComException;
-  @DeclDISPID(3)  public void setTextDirection(MsoTextDirection value) throws ComException;
+  @DeclDISPID(3)  public void setTextDirection(final MsoTextDirection value) throws ComException;
 }

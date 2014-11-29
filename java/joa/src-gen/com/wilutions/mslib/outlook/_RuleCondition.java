@@ -14,6 +14,6 @@ public interface _RuleCondition extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(103)  public Boolean getEnabled() throws ComException;
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException;
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException;
   @DeclDISPID(64298)  public OlRuleConditionType getConditionType() throws ComException;
 }

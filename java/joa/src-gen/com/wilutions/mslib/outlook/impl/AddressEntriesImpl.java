@@ -30,13 +30,13 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook.AddressEntry Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook.AddressEntry Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
-  @DeclDISPID(95)  public com.wilutions.mslib.outlook.AddressEntry Add(String Type, Object Name, Object Address) throws ComException {
+  @DeclDISPID(95)  public com.wilutions.mslib.outlook.AddressEntry Add(final String Type, final Object Name, final Object Address) throws ComException {
     assert(Type != null);
     assert(Name != null);
     assert(Address != null);
@@ -64,7 +64,7 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
-  @DeclDISPID(97)  public void Sort(Object Property, Object Order) throws ComException {
+  @DeclDISPID(97)  public void Sort(final Object Property, final Object Order) throws ComException {
     assert(Property != null);
     assert(Order != null);
     this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Order);

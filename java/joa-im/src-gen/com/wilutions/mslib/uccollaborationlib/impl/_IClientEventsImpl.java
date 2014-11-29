@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{A4C18A1A-D3C1-9095-34A7-8F3914423A35}")
 public class _IClientEventsImpl extends Dispatch implements com.wilutions.mslib.uccollaborationlib._IClientEvents {
-  @DeclDISPID(100)  public void onOnStateChanged(com.wilutions.mslib.uccollaborationlib.IClient _eventSource, com.wilutions.mslib.uccollaborationlib.IClientStateChangedEventData _eventData) throws ComException {
+  @DeclDISPID(100)  public void onOnStateChanged(final com.wilutions.mslib.uccollaborationlib.IClient _eventSource, final com.wilutions.mslib.uccollaborationlib.IClientStateChangedEventData _eventData) throws ComException {
     this._dispatchCall(100,"OnStateChanged", DISPATCH_METHOD,null,(_eventSource!=null?_eventSource:Dispatch.NULL),(_eventData!=null?_eventData:Dispatch.NULL));
   }
   public _IClientEventsImpl(String progId) throws ComException {

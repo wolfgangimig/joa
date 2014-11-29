@@ -5,11 +5,11 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B9A19-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class IMsoEServicesDialogImpl extends Dispatch implements com.wilutions.mslib.office.IMsoEServicesDialog {
-  @DeclDISPID(1610743808)  public void Close(Boolean ApplyWebComponentChanges) throws ComException {
+  @DeclDISPID(1610743808)  public void Close(final Boolean ApplyWebComponentChanges) throws ComException {
     assert(ApplyWebComponentChanges != null);
     this._dispatchCall(1610743808,"Close", DISPATCH_METHOD,null,ApplyWebComponentChanges);
   }
-  @DeclDISPID(1610743809)  public void AddTrustedDomain(String Domain) throws ComException {
+  @DeclDISPID(1610743809)  public void AddTrustedDomain(final String Domain) throws ComException {
     assert(Domain != null);
     this._dispatchCall(1610743809,"AddTrustedDomain", DISPATCH_METHOD,null,Domain);
   }

@@ -34,23 +34,23 @@ public class NavigationGroups extends Dispatch implements _NavigationGroups {
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public _NavigationGroup Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public _NavigationGroup Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationGroupImpl.class);
   }
-  @DeclDISPID(64445)  public NavigationGroup Create(String GroupDisplayName) throws ComException {
+  @DeclDISPID(64445)  public NavigationGroup Create(final String GroupDisplayName) throws ComException {
     assert(GroupDisplayName != null);
     final Object obj = this._dispatchCall(64445,"Create", DISPATCH_METHOD,null,GroupDisplayName);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(NavigationGroup.class);
   }
-  @DeclDISPID(64446)  public void Delete(NavigationGroup Group) throws ComException {
+  @DeclDISPID(64446)  public void Delete(final NavigationGroup Group) throws ComException {
     this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,(Group!=null?Group:Dispatch.NULL));
   }
-  @DeclDISPID(64447)  public NavigationGroup GetDefaultNavigationGroup(OlGroupType DefaultFolderGroup) throws ComException {
+  @DeclDISPID(64447)  public NavigationGroup GetDefaultNavigationGroup(final OlGroupType DefaultFolderGroup) throws ComException {
     assert(DefaultFolderGroup != null);
     final Object obj = this._dispatchCall(64447,"GetDefaultNavigationGroup", DISPATCH_METHOD,null,DefaultFolderGroup.value);
     if (obj == null) return null;

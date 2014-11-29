@@ -30,21 +30,21 @@ public class VideoChannel extends Dispatch implements IVideoChannel {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743812)  public IAsynchronousOperation Start(Object _mediaChannelCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743812)  public IAsynchronousOperation Start(final Object _mediaChannelCallback, final Object _state) throws ComException {
     assert(_mediaChannelCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743812,"Start", DISPATCH_METHOD,null,_mediaChannelCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743813)  public IAsynchronousOperation Stop(Object _mediaChannelCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743813)  public IAsynchronousOperation Stop(final Object _mediaChannelCallback, final Object _state) throws ComException {
     assert(_mediaChannelCallback != null);
     assert(_state != null);
     final Object obj = this._dispatchCall(1610743813,"Stop", DISPATCH_METHOD,null,_mediaChannelCallback,_state);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743814)  public Boolean CanInvoke(ChannelAction _action) throws ComException {
+  @DeclDISPID(1610743814)  public Boolean CanInvoke(final ChannelAction _action) throws ComException {
     assert(_action != null);
     final Object obj = this._dispatchCall(1610743814,"CanInvoke", DISPATCH_METHOD,null,_action.value);
     if (obj == null) return null;

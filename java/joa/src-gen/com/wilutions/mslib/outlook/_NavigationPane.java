@@ -14,10 +14,10 @@ public interface _NavigationPane extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(64436)  public Boolean getIsCollapsed() throws ComException;
-  @DeclDISPID(64436)  public void setIsCollapsed(Boolean value) throws ComException;
+  @DeclDISPID(64436)  public void setIsCollapsed(final Boolean value) throws ComException;
   @DeclDISPID(64437)  public NavigationModule getCurrentModule() throws ComException;
-  @DeclDISPID(64437)  public void setCurrentModule(NavigationModule value) throws ComException;
+  @DeclDISPID(64437)  public void setCurrentModule(final NavigationModule value) throws ComException;
   @DeclDISPID(64438)  public Integer getDisplayedModuleCount() throws ComException;
-  @DeclDISPID(64438)  public void setDisplayedModuleCount(Integer value) throws ComException;
+  @DeclDISPID(64438)  public void setDisplayedModuleCount(final Integer value) throws ComException;
   @DeclDISPID(64439)  public NavigationModules getModules() throws ComException;
 }

@@ -30,23 +30,23 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(81)  public com.wilutions.mslib.outlook._NavigationGroup Item(Object Index) throws ComException {
+  @DeclDISPID(81)  public com.wilutions.mslib.outlook._NavigationGroup Item(final Object Index) throws ComException {
     assert(Index != null);
     final Object obj = this._dispatchCall(81,"Item", DISPATCH_METHOD,null,Index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationGroupImpl.class);
   }
-  @DeclDISPID(64445)  public com.wilutions.mslib.outlook.NavigationGroup Create(String GroupDisplayName) throws ComException {
+  @DeclDISPID(64445)  public com.wilutions.mslib.outlook.NavigationGroup Create(final String GroupDisplayName) throws ComException {
     assert(GroupDisplayName != null);
     final Object obj = this._dispatchCall(64445,"Create", DISPATCH_METHOD,null,GroupDisplayName);
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.NavigationGroup.class);
   }
-  @DeclDISPID(64446)  public void Delete(com.wilutions.mslib.outlook.NavigationGroup Group) throws ComException {
+  @DeclDISPID(64446)  public void Delete(final com.wilutions.mslib.outlook.NavigationGroup Group) throws ComException {
     this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,(Group!=null?Group:Dispatch.NULL));
   }
-  @DeclDISPID(64447)  public com.wilutions.mslib.outlook.NavigationGroup GetDefaultNavigationGroup(com.wilutions.mslib.outlook.OlGroupType DefaultFolderGroup) throws ComException {
+  @DeclDISPID(64447)  public com.wilutions.mslib.outlook.NavigationGroup GetDefaultNavigationGroup(final com.wilutions.mslib.outlook.OlGroupType DefaultFolderGroup) throws ComException {
     assert(DefaultFolderGroup != null);
     final Object obj = this._dispatchCall(64447,"GetDefaultNavigationGroup", DISPATCH_METHOD,null,DefaultFolderGroup.value);
     if (obj == null) return null;

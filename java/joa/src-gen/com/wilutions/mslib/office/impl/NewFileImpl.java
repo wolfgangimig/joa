@@ -15,7 +15,7 @@ public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(1)  public Boolean Add(String FileName, Object Section, Object DisplayName, Object Action) throws ComException {
+  @DeclDISPID(1)  public Boolean Add(final String FileName, final Object Section, final Object DisplayName, final Object Action) throws ComException {
     assert(FileName != null);
     assert(Section != null);
     assert(DisplayName != null);
@@ -24,7 +24,7 @@ public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(2)  public Boolean Remove(String FileName, Object Section, Object DisplayName, Object Action) throws ComException {
+  @DeclDISPID(2)  public Boolean Remove(final String FileName, final Object Section, final Object DisplayName, final Object Action) throws ComException {
     assert(FileName != null);
     assert(Section != null);
     assert(DisplayName != null);

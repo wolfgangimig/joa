@@ -14,7 +14,7 @@ public class MsoEnvelope extends Dispatch implements IMsoEnvelopeVB {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1)  public void setIntroduction(String value) throws ComException {
+  @DeclDISPID(1)  public void setIntroduction(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(1,"Introduction", DISPATCH_PROPERTYPUT,value);
   }

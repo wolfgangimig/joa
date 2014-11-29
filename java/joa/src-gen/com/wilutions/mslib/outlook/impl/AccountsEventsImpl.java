@@ -5,7 +5,7 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C091A86E-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class AccountsEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.AccountsEvents {
-  @DeclDISPID(64620)  public void onAutoDiscoverComplete(com.wilutions.mslib.outlook.Account Account) throws ComException {
+  @DeclDISPID(64620)  public void onAutoDiscoverComplete(final com.wilutions.mslib.outlook.Account Account) throws ComException {
     this._dispatchCall(64620,"AutoDiscoverComplete", DISPATCH_METHOD,null,(Account!=null?Account:Dispatch.NULL));
   }
   public AccountsEventsImpl(String progId) throws ComException {

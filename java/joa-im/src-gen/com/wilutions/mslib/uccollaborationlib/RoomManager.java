@@ -19,7 +19,7 @@ public class RoomManager extends Dispatch implements IRoomManager {
     if (obj == null) return null;
     return (IRoom[])obj;
   }
-  @DeclDISPID(1610743810)  public IAsynchronousOperation QueryRooms(String _keyword, RoomSearchModeType _searchType, Object _roomManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743810)  public IAsynchronousOperation QueryRooms(final String _keyword, final RoomSearchModeType _searchType, final Object _roomManagerCallback, final Object _state) throws ComException {
     assert(_keyword != null);
     assert(_searchType != null);
     assert(_roomManagerCallback != null);
@@ -28,7 +28,7 @@ public class RoomManager extends Dispatch implements IRoomManager {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743811)  public IAsynchronousOperation QueryRoomByUri(String _roomUri, Object _roomManagerCallback, Object _state) throws ComException {
+  @DeclDISPID(1610743811)  public IAsynchronousOperation QueryRoomByUri(final String _roomUri, final Object _roomManagerCallback, final Object _state) throws ComException {
     assert(_roomUri != null);
     assert(_roomManagerCallback != null);
     assert(_state != null);
@@ -36,7 +36,7 @@ public class RoomManager extends Dispatch implements IRoomManager {
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IAsynchronousOperationImpl.class);
   }
-  @DeclDISPID(1610743812)  public Boolean TryGetRoomByUri(String _roomUri, ByRef<IRoom> _room) throws ComException {
+  @DeclDISPID(1610743812)  public Boolean TryGetRoomByUri(final String _roomUri, final ByRef<IRoom> _room) throws ComException {
     assert(_roomUri != null);
     assert(_room != null);
     final Object obj = this._dispatchCall(1610743812,"TryGetRoomByUri", DISPATCH_METHOD,null,_roomUri,_room);

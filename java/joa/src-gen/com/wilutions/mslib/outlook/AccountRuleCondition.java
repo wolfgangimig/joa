@@ -34,7 +34,7 @@ public class AccountRuleCondition extends Dispatch implements _AccountRuleCondit
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -49,7 +49,7 @@ public class AccountRuleCondition extends Dispatch implements _AccountRuleCondit
     final Dispatch disp = (Dispatch)obj;
     return disp.as(Account.class);
   }
-  @DeclDISPID(64209)  public void setAccount(Account value) throws ComException {
+  @DeclDISPID(64209)  public void setAccount(final Account value) throws ComException {
     this._dispatchCall(64209,"Account", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
   }
   public AccountRuleCondition() throws ComException {

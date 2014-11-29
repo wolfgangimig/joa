@@ -14,7 +14,7 @@ public interface _Reminder extends IDispatch {
   @DeclDISPID(61451)  public _NameSpace getSession() throws ComException;
   @DeclDISPID(61441)  public IDispatch getParent() throws ComException;
   @DeclDISPID(64154)  public void Dismiss() throws ComException;
-  @DeclDISPID(64155)  public void Snooze(Object SnoozeTime) throws ComException;
+  @DeclDISPID(64155)  public void Snooze(final Object SnoozeTime) throws ComException;
   @DeclDISPID(0)  public String getCaption() throws ComException;
   @DeclDISPID(64157)  public Boolean getIsVisible() throws ComException;
   @DeclDISPID(64158)  public IDispatch getItem() throws ComException;

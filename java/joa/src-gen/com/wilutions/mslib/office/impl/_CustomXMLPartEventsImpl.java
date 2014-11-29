@@ -5,15 +5,15 @@ import com.wilutions.com.*;
 @SuppressWarnings("all")
 @CoClass(guid="{C09B426C-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _CustomXMLPartEventsImpl extends Dispatch implements com.wilutions.mslib.office._CustomXMLPartEvents {
-  @DeclDISPID(1)  public void onNodeAfterInsert(com.wilutions.mslib.office.CustomXMLNode NewNode, Boolean InUndoRedo) throws ComException {
+  @DeclDISPID(1)  public void onNodeAfterInsert(final com.wilutions.mslib.office.CustomXMLNode NewNode, final Boolean InUndoRedo) throws ComException {
     assert(InUndoRedo != null);
     this._dispatchCall(1,"NodeAfterInsert", DISPATCH_METHOD,null,(NewNode!=null?NewNode:Dispatch.NULL),InUndoRedo);
   }
-  @DeclDISPID(2)  public void onNodeAfterDelete(com.wilutions.mslib.office.CustomXMLNode OldNode, com.wilutions.mslib.office.CustomXMLNode OldParentNode, com.wilutions.mslib.office.CustomXMLNode OldNextSibling, Boolean InUndoRedo) throws ComException {
+  @DeclDISPID(2)  public void onNodeAfterDelete(final com.wilutions.mslib.office.CustomXMLNode OldNode, final com.wilutions.mslib.office.CustomXMLNode OldParentNode, final com.wilutions.mslib.office.CustomXMLNode OldNextSibling, final Boolean InUndoRedo) throws ComException {
     assert(InUndoRedo != null);
     this._dispatchCall(2,"NodeAfterDelete", DISPATCH_METHOD,null,(OldNode!=null?OldNode:Dispatch.NULL),(OldParentNode!=null?OldParentNode:Dispatch.NULL),(OldNextSibling!=null?OldNextSibling:Dispatch.NULL),InUndoRedo);
   }
-  @DeclDISPID(3)  public void onNodeAfterReplace(com.wilutions.mslib.office.CustomXMLNode OldNode, com.wilutions.mslib.office.CustomXMLNode NewNode, Boolean InUndoRedo) throws ComException {
+  @DeclDISPID(3)  public void onNodeAfterReplace(final com.wilutions.mslib.office.CustomXMLNode OldNode, final com.wilutions.mslib.office.CustomXMLNode NewNode, final Boolean InUndoRedo) throws ComException {
     assert(InUndoRedo != null);
     this._dispatchCall(3,"NodeAfterReplace", DISPATCH_METHOD,null,(OldNode!=null?OldNode:Dispatch.NULL),(NewNode!=null?NewNode:Dispatch.NULL),InUndoRedo);
   }

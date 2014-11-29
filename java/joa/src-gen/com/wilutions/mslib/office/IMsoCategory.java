@@ -12,5 +12,5 @@ public interface IMsoCategory extends IDispatch {
   @DeclDISPID(150)  public IDispatch getParent() throws ComException;
   @DeclDISPID(110)  public String getName() throws ComException;
   @DeclDISPID(2887)  public Boolean getIsFiltered() throws ComException;
-  @DeclDISPID(2887)  public void setIsFiltered(Boolean pfIsFiltered) throws ComException;
+  @DeclDISPID(2887)  public void setIsFiltered(final Boolean pfIsFiltered) throws ComException;
 }

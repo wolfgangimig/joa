@@ -44,7 +44,7 @@ public class FormRegion extends Dispatch implements _FormRegion {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64309)  public void setDetail(String value) throws ComException {
+  @DeclDISPID(64309)  public void setDetail(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64309,"Detail", DISPATCH_PROPERTYPUT,value);
   }
@@ -81,7 +81,7 @@ public class FormRegion extends Dispatch implements _FormRegion {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64201)  public void SetControlItemProperty(IDispatch Control, String PropertyName) throws ComException {
+  @DeclDISPID(64201)  public void SetControlItemProperty(final IDispatch Control, final String PropertyName) throws ComException {
     assert(PropertyName != null);
     this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,(Control!=null?Control:Dispatch.NULL),PropertyName);
   }
@@ -90,7 +90,7 @@ public class FormRegion extends Dispatch implements _FormRegion {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64518)  public void setSuppressControlReplacement(Boolean value) throws ComException {
+  @DeclDISPID(64518)  public void setSuppressControlReplacement(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64518,"SuppressControlReplacement", DISPATCH_PROPERTYPUT,value);
   }
@@ -102,7 +102,7 @@ public class FormRegion extends Dispatch implements _FormRegion {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(64538)  public void setEnableAutoLayout(Boolean value) throws ComException {
+  @DeclDISPID(64538)  public void setEnableAutoLayout(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(64538,"EnableAutoLayout", DISPATCH_PROPERTYPUT,value);
   }
@@ -111,7 +111,7 @@ public class FormRegion extends Dispatch implements _FormRegion {
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(8451)  public void setVisible(Boolean value) throws ComException {
+  @DeclDISPID(8451)  public void setVisible(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(8451,"Visible", DISPATCH_PROPERTYPUT,value);
   }

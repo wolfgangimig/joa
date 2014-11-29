@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{5512D116-5CC6-11CF-8D67-00AA00BDCE1D}")
 public class HTMLCheckbox extends Dispatch implements IWHTMLCheckbox {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(-541)  public void setHTMLName(String value) throws ComException {
+  @DeclDISPID(-541)  public void setHTMLName(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(-541,"HTMLName", DISPATCH_PROPERTYPUT,value);
   }
@@ -18,7 +18,7 @@ public class HTMLCheckbox extends Dispatch implements IWHTMLCheckbox {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(607)  public void setValue(String value) throws ComException {
+  @DeclDISPID(607)  public void setValue(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(607,"Value", DISPATCH_PROPERTYPUT,value);
   }
@@ -27,7 +27,7 @@ public class HTMLCheckbox extends Dispatch implements IWHTMLCheckbox {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(0)  public void setChecked(Boolean value) throws ComException {
+  @DeclDISPID(0)  public void setChecked(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(0,"Checked", DISPATCH_PROPERTYPUT,value);
   }

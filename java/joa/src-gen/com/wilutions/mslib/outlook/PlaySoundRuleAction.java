@@ -34,7 +34,7 @@ public class PlaySoundRuleAction extends Dispatch implements _PlaySoundRuleActio
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(103)  public void setEnabled(Boolean value) throws ComException {
+  @DeclDISPID(103)  public void setEnabled(final Boolean value) throws ComException {
     assert(value != null);
     this._dispatchCall(103,"Enabled", DISPATCH_PROPERTYPUT,value);
   }
@@ -48,7 +48,7 @@ public class PlaySoundRuleAction extends Dispatch implements _PlaySoundRuleActio
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(64221)  public void setFilePath(String value) throws ComException {
+  @DeclDISPID(64221)  public void setFilePath(final String value) throws ComException {
     assert(value != null);
     this._dispatchCall(64221,"FilePath", DISPATCH_PROPERTYPUT,value);
   }

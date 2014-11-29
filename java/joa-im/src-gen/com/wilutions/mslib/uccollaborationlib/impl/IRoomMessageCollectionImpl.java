@@ -10,7 +10,7 @@ public class IRoomMessageCollectionImpl extends Dispatch implements com.wilution
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IRoomMessage getItem(Integer _index) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IRoomMessage getItem(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_index);
     if (obj == null) return null;
@@ -24,7 +24,7 @@ public class IRoomMessageCollectionImpl extends Dispatch implements com.wilution
   @DeclDISPID(1610743811)  public void Clear() throws ComException {
     this._dispatchCall(1610743811,"Clear", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743812)  public Integer IndexOf(com.wilutions.mslib.uccollaborationlib.IRoomMessage _roomMesssage) throws ComException {
+  @DeclDISPID(1610743812)  public Integer IndexOf(final com.wilutions.mslib.uccollaborationlib.IRoomMessage _roomMesssage) throws ComException {
     final Object obj = this._dispatchCall(1610743812,"IndexOf", DISPATCH_METHOD,null,(_roomMesssage!=null?_roomMesssage:Dispatch.NULL));
     if (obj == null) return null;
     return (Integer)obj;

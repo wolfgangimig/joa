@@ -9,7 +9,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{FEAEFFD6-C800-46A0-B634-FDC415FEC211}")
 public class ContactSubscription extends Dispatch implements IContactSubscription {
   static boolean __typelib__loaded = __TypeLib.load();
-  @DeclDISPID(1610743808)  public void Subscribe(ContactSubscriptionRefreshRate _subscriptionFreshness, ContactInformationType[] _contactInformationTypes) throws ComException {
+  @DeclDISPID(1610743808)  public void Subscribe(final ContactSubscriptionRefreshRate _subscriptionFreshness, final ContactInformationType[] _contactInformationTypes) throws ComException {
     assert(_subscriptionFreshness != null);
     assert(_contactInformationTypes != null);
     this._dispatchCall(1610743808,"Subscribe", DISPATCH_METHOD,null,_subscriptionFreshness.value,_contactInformationTypes);
@@ -17,10 +17,10 @@ public class ContactSubscription extends Dispatch implements IContactSubscriptio
   @DeclDISPID(1610743809)  public void Unsubscribe() throws ComException {
     this._dispatchCall(1610743809,"Unsubscribe", DISPATCH_METHOD,null);
   }
-  @DeclDISPID(1610743810)  public void AddContact(IContact _contact) throws ComException {
+  @DeclDISPID(1610743810)  public void AddContact(final IContact _contact) throws ComException {
     this._dispatchCall(1610743810,"AddContact", DISPATCH_METHOD,null,(_contact!=null?_contact:Dispatch.NULL));
   }
-  @DeclDISPID(1610743811)  public void RemoveContact(IContact _contact) throws ComException {
+  @DeclDISPID(1610743811)  public void RemoveContact(final IContact _contact) throws ComException {
     this._dispatchCall(1610743811,"RemoveContact", DISPATCH_METHOD,null,(_contact!=null?_contact:Dispatch.NULL));
   }
   @DeclDISPID(1610743812)  public ContactSubscriptionRefreshRate getLastSubscribedRefreshRate() throws ComException {
@@ -38,11 +38,11 @@ public class ContactSubscription extends Dispatch implements IContactSubscriptio
     if (obj == null) return null;
     return (IContact[])obj;
   }
-  @DeclDISPID(1610743815)  public void AddContactByUri(String _contactUri) throws ComException {
+  @DeclDISPID(1610743815)  public void AddContactByUri(final String _contactUri) throws ComException {
     assert(_contactUri != null);
     this._dispatchCall(1610743815,"AddContactByUri", DISPATCH_METHOD,null,_contactUri);
   }
-  @DeclDISPID(1610743816)  public void AddContacts(IContact[] _contacts) throws ComException {
+  @DeclDISPID(1610743816)  public void AddContacts(final IContact[] _contacts) throws ComException {
     assert(_contacts != null);
     this._dispatchCall(1610743816,"AddContacts", DISPATCH_METHOD,null,_contacts);
   }

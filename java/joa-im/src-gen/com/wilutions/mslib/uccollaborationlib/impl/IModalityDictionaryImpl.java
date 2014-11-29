@@ -10,7 +10,7 @@ public class IModalityDictionaryImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (Integer)obj;
   }
-  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IModality getItem(com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityType) throws ComException {
+  @DeclDISPID(0)  public com.wilutions.mslib.uccollaborationlib.IModality getItem(final com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityType) throws ComException {
     assert(_modalityType != null);
     final Object obj = this._dispatchCall(0,"Item", DISPATCH_PROPERTYGET,null,_modalityType.value);
     if (obj == null) return null;
@@ -26,26 +26,26 @@ public class IModalityDictionaryImpl extends Dispatch implements com.wilutions.m
     if (obj == null) return null;
     return (com.wilutions.mslib.uccollaborationlib.IModality[])obj;
   }
-  @DeclDISPID(1610743812)  public Boolean TryGetValue(com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityType, ByRef<com.wilutions.mslib.uccollaborationlib.IModality> _itemValue) throws ComException {
+  @DeclDISPID(1610743812)  public Boolean TryGetValue(final com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityType, final ByRef<com.wilutions.mslib.uccollaborationlib.IModality> _itemValue) throws ComException {
     assert(_modalityType != null);
     assert(_itemValue != null);
     final Object obj = this._dispatchCall(1610743812,"TryGetValue", DISPATCH_METHOD,null,_modalityType.value,_itemValue);
     if (obj == null) return null;
     return (Boolean)obj;
   }
-  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.ModalityTypes GetKeyAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743813)  public com.wilutions.mslib.uccollaborationlib.ModalityTypes GetKeyAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743813,"GetKeyAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return com.wilutions.mslib.uccollaborationlib.ModalityTypes.valueOf((Integer)obj);
   }
-  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IModality GetValueAt(Integer _index) throws ComException {
+  @DeclDISPID(1610743814)  public com.wilutions.mslib.uccollaborationlib.IModality GetValueAt(final Integer _index) throws ComException {
     assert(_index != null);
     final Object obj = this._dispatchCall(1610743814,"GetValueAt", DISPATCH_METHOD,null,_index);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.uccollaborationlib.impl.IModalityImpl.class);
   }
-  @DeclDISPID(1610743815)  public Boolean ContainsKey(com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityType) throws ComException {
+  @DeclDISPID(1610743815)  public Boolean ContainsKey(final com.wilutions.mslib.uccollaborationlib.ModalityTypes _modalityType) throws ComException {
     assert(_modalityType != null);
     final Object obj = this._dispatchCall(1610743815,"ContainsKey", DISPATCH_METHOD,null,_modalityType.value);
     if (obj == null) return null;

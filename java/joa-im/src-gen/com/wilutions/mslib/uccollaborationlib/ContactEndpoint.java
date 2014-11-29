@@ -24,7 +24,7 @@ public class ContactEndpoint extends Dispatch implements IContactEndpoint {
     if (obj == null) return null;
     return (String)obj;
   }
-  @DeclDISPID(1610743811)  public Boolean CanStart(ModalityTypes _modalityTypes) throws ComException {
+  @DeclDISPID(1610743811)  public Boolean CanStart(final ModalityTypes _modalityTypes) throws ComException {
     assert(_modalityTypes != null);
     final Object obj = this._dispatchCall(1610743811,"CanStart", DISPATCH_METHOD,null,_modalityTypes.value);
     if (obj == null) return null;
