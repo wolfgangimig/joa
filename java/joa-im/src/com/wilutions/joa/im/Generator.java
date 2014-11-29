@@ -16,8 +16,9 @@ import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
 
 /**
- * Generate Java wrapper classes from COM type libraries. This class was used to
- * generated the com.wilutions.jao.ms*, office*, outlook*, stdole* packages.
+ * Generate Java wrapper classes from COM type libraries for IM integration.
+ * This joa-im package belongs to the IMClient example and is not required for 
+ * developing Add-ins.
  */
 public class Generator {
 	

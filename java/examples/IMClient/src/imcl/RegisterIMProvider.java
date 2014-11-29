@@ -18,8 +18,13 @@ public class RegisterIMProvider {
 			String regkeyDef = "HKEY_CURRENT_USER\\Software\\IM Providers";
 			RegUtil.setRegistryValue(regkeyDef, "DefaultIMApp", applicationName);
 			
-			// Logging: http://technet.microsoft.com/en-us/library/ff678502.aspx
+			// Office 2010 Logging
+			// http://technet.microsoft.com/en-us/library/ff678502.aspx
 			RegUtil.setRegistryValue(regkeyDef, "OfficePresenceLogging", 1);
+			
+			// Office 2013 Logging
+			// https://social.msdn.microsoft.com/Forums/office/en-US/a174ca43-cdcf-4f78-a032-8e0cf6d29080/officepresencelogging-in-outlook-2013
+			RegUtil.setRegistryValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\15.0\\Common\\General", "EnablePCXLogging", 1);
 		}
 	}
 	
