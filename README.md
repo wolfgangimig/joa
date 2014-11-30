@@ -8,7 +8,7 @@ This library enables you to create Add-ins for Microsoft Outlook with Java. It i
 - Access the Outlook object model
 
 ![Screenshot](https://github.com/wolfgangimig/joa/blob/master/Screenshot1.png)
-This screenshot was taken from the [CreateNoteAddin](https://github.com/wolfgangimig/joa/wiki/MSDN-Article-How-to-Display-Custom-Task-Panes-with-E-Mail-Messages-in-Outlook) example.
+This screenshot was taken from the [CreateNoteAddin](https://github.com/wolfgangimig/joa/wiki/PoC%3A-MSDN-Article-How-to-Display-Custom-Task-Panes-with-E-Mail-Messages-in-Outlook) example.
 
 
 In order to develop Add-ins, the following additional software is required:
