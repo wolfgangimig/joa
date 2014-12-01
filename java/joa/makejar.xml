@@ -6,7 +6,7 @@
 	<property name="project.dir" value="." />
 	<property name="lib.dir" value="${project.dir}/../lib" />
 	<property name="dest.dir" value="${lib.dir}" />
-	<property name="dll.dir" value="${lib.dir}" />
+	<property name="dll.dir" value="${lib.dir}/bin" />
 	<property name="native.dir" value="${project.dir}/native/" />
 	<property name="native.package.dir" value="${native.dir}/com/wilutions/com" />
 
@@ -29,7 +29,6 @@
 			<fileset dir="${native.dir}" />
 		</jar>
 		
-		<delete dir="${native.dir}"/>
 	</target>
 		
 	<!--

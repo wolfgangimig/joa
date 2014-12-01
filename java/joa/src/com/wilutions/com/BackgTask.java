@@ -74,7 +74,16 @@ public class BackgTask {
 
 		tpool = Executors.newCachedThreadPool(new ThreadFactory() {
 			public Thread newThread(Runnable r) {
-				return new Thread(r, "Joa-backg-" + threadCount.incrementAndGet());
+				return new Thread(r, "Joa-backg-" + threadCount.incrementAndGet()) {
+					public void run() {
+						try {
+							super.run();
+						}
+						catch (ComException e) {
+							e.printStackTrace();
+						}
+					}
+				};
 			}
 		});
 

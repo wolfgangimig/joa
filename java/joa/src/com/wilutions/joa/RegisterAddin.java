@@ -10,6 +10,8 @@
  */
 package com.wilutions.joa;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -41,9 +43,57 @@ public class RegisterAddin {
 		registerAddin(officeApplication, progId, name, desc, loadBehavior, perUserNotMachine);
 
 		// Register ActiveX JoaBridgeCtrl.Class
-		JoaDll.nativeDllRegisterServer(progId, perUserNotMachine, true);
+		registerBridgeCtrl(progId, perUserNotMachine, true);
 
 		registerJoaUtilAddin(officeApplication, progId, perUserNotMachine);
+	}
+	
+	private static void registerBridgeCtrl(String referencedByProgId, boolean perUserNotMachine, boolean registerNotUnregister) {
+		
+		final File joaDllInstDir = new File(JoaDll.nativeGetModuleFileName()).getParentFile();
+		final String regcmdTemplate = "%s\\%s\\regsvr32 /s /n %s /i:\"%s %s\" \"%s\"";
+    	File joa32 = new File(joaDllInstDir, "joa32.dll");
+    	File joa64 = new File(joaDllInstDir, "joa64.dll");
+
+		String windir = System.getenv("SYSTEMROOT");
+        if (windir == null || windir.length() == 0) windir = System.getenv("WINDIR");
+        
+        try {
+	        if (joa32.exists()) {
+				String regcmd = String.format(regcmdTemplate,
+						windir, 
+						"SysWOW64", 
+						(registerNotUnregister ? "" : "/u"), 
+						(perUserNotMachine ? "user" : "all"),
+						referencedByProgId,
+						joa32);
+				regsvr32(regcmd);
+	        }
+	        
+	        if (joa64.exists()) {
+				String regcmd = String.format(regcmdTemplate,
+						windir, 
+						"System32", 
+						(registerNotUnregister ? "" : "/u"), 
+						(perUserNotMachine ? "user" : "all"),
+						referencedByProgId,
+						joa64);
+				regsvr32(regcmd);
+	        }
+        }
+        catch (Exception e) {
+        	throw new IllegalStateException(e);
+        }
+		
+	}
+
+	protected static void regsvr32(String regcmd) throws IOException, InterruptedException {
+		System.out.println(regcmd);
+		Process proc = Runtime.getRuntime().exec(regcmd);
+		proc.waitFor();
+		if (proc.exitValue() != 0) {
+			throw new IOException("Register JOA native library failed, command=" + regcmd + ", error=" + proc.exitValue());
+		}
 	}
 
 	private static void registerAddin(String officeApplication, String progId, String name, String desc,
@@ -110,7 +160,7 @@ public class RegisterAddin {
 		unregisterJoaUtilAddin(officeApplication, progId, perUserNotMachine);
 
 		// Unregister ActiveX JoaBridgeCtrl.Class
-		JoaDll.nativeDllRegisterServer(progId, perUserNotMachine, false);
+		registerBridgeCtrl(progId, perUserNotMachine, false);
 
 	}
 

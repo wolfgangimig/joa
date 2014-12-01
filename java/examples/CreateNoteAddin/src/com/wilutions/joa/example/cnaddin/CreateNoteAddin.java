@@ -24,6 +24,7 @@ import com.wilutions.com.JoaDll;
 import com.wilutions.com.reg.Registry;
 import com.wilutions.joa.DeclAddin;
 import com.wilutions.joa.LoadBehavior;
+import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.TaskPane;
 import com.wilutions.joa.outlook.OutlookAddin;
@@ -99,6 +100,18 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 			}
 		}
 		return ret;
+	}
+	
+	public void onSmileButtonClicked(Dispatch control, Boolean pressed) throws ComException {
+		Object owner = getApplication().ActiveExplorer();
+		MessageBox.show(owner, "JOA Example", "This example application shows a custom task pane in mail inspector windows.", (result, ex) -> {
+			if (ex != null) {
+				ex.printStackTrace();
+			}
+			else {
+				System.out.println("Message box closed with button=" + result);
+			}
+		});
 	}
 
 	public void onButtonClicked(Dispatch control, Boolean pressed) throws ComException {

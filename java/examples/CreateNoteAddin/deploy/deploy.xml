@@ -18,6 +18,13 @@
 		"Bundler "MSI Installer" (msi) failed to produce a bundle."
 		The MSI is created anyway and can be installed.  
 	 -->
+	
+	<!--
+		Hint: Due to a bug in the JDK, 
+		the packaged application requires to have 
+		Visual Studio 2010 Runtime installed.
+		https://github.com/zonski/javafx-maven-plugin/issues/74
+	-->
 
 	<!--
 		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -80,7 +87,7 @@
 	<!-- 
 		Directory for 32/64 bit DLL 
 	-->
-	<property name="dll.dir" value="${lib.dir}/${sun.arch.data.model}" />
+	<property name="dll.dir" value="${lib.dir}/bin" />
 
 	<!-- 
 		Target directory, the MSI will be placed in ./dist/32/bundles/ 

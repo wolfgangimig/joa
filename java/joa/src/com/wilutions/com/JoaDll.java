@@ -23,31 +23,32 @@ import java.util.Properties;
  * subsequent versions.
  */
 public class JoaDll {
-
+	
 	static {
 		// Debugging: set this command line option in order to debug the DLL. 
 		// This option only makes sense, if the source code of the DLL is available.
 //		String strDebugJoaDll = System.getProperty("com.wilutions.joa.DebugJoaDll");
 //		boolean isDebug = strDebugJoaDll != null && strDebugJoaDll.equalsIgnoreCase("true");
 		
-		boolean isDebug = true;
-		
+		boolean isDebug = false;
+		String fileName = "joa" + get3264();
+		String fileNameWithExt = fileName + ".dll";
 		
 		// Debugging: load from C++ output directories
-		if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\x64\\Debug\\JoaCtrl.dll", false)) {
+		if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\x64\\Debug\\" + fileNameWithExt, false)) {
 		}
-		else if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\Debug\\JoaCtrl.dll", false)) {
+		else if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\Debug\\" + fileNameWithExt, false)) {
 		}
 		
 		// Packaged application loads joa.dll from current directory
-		else if (loadLib("joa", false)) {
+		else if (loadLib(fileName, false)) {
 		}
 		
 		// Java archive joa-with-dlls.jar loads joa.dll from temporary directory
 		else {
 			try {
 				File tempDir = getTempDir();
-				File joadll = new File(tempDir, "joa.dll");
+				File joadll = new File(tempDir, fileNameWithExt);
 				
 				// try to load from temp dir
 				if (!loadLib(joadll.getAbsolutePath(), false)) {
@@ -73,7 +74,8 @@ public class JoaDll {
 			else {
 				System.loadLibrary(lib);
 			}
-			System.out.println("joa.dll loaded from " + lib);
+			String path = nativeGetModuleFileName();
+			System.out.println("joa.dll loaded from " + path);
 			succ = true;
 		}
 		catch (UnsatisfiedLinkError ex) {
@@ -82,7 +84,7 @@ public class JoaDll {
 		return succ;
 	}
 	
-	private static String getArchitectureSubdir() {
+	private static String get3264() {
 		boolean is64 = System.getProperty("os.arch").indexOf("64") >= 0;
 		return is64 ? "64" : "32";
 	}
@@ -91,13 +93,13 @@ public class JoaDll {
 		
 		File tempDir = new File(System.getProperty("java.io.tmpdir"));
 		tempDir = new File(tempDir, "joa_" + getVersion().replace('.', '_'));
-		tempDir = new File(tempDir, getArchitectureSubdir());
 		return tempDir;
 	}
 
 	private static void copyNativesToTemp(File tempDir) throws IOException {
 		tempDir.mkdirs();
-		copyFileFromResourceToTemp(tempDir, "joa.dll");
+		copyFileFromResourceToTemp(tempDir, "joa32.dll");
+		copyFileFromResourceToTemp(tempDir, "joa64.dll");
 	}
 
 	private static void copyFileFromResourceToTemp(File tempDir, String resourceName) throws IOException {
@@ -107,7 +109,7 @@ public class JoaDll {
 		InputStream is = null;
 		try {
 			fos = new FileOutputStream(file);
-			is = JoaDll.class.getResourceAsStream(getArchitectureSubdir() + "/" + resourceName);
+			is = JoaDll.class.getResourceAsStream(resourceName);
 			if (is == null) {
 				throw new IOException(resourceName + " not found in package " + JoaDll.class.getPackage().getName());
 			}
@@ -208,4 +210,5 @@ public class JoaDll {
 	
 	public static native void nativeActivateSceneInDialog(long hwnd);
 	
+	public static native String nativeGetModuleFileName();
 }
