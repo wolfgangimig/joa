@@ -9,7 +9,6 @@ This library enables you to create Add-ins for Microsoft Outlook with Java. It i
 
 Here is an example:
 ![Screenshot](https://github.com/wolfgangimig/joa/blob/master/Screenshot1.png)
-This screenshot was taken from the [CreateNoteAddin](https://github.com/wolfgangimig/joa/wiki/PoC%3A-MSDN-Article-How-to-Display-Custom-Task-Panes-with-E-Mail-Messages-in-Outlook) example.
 
 What are the advantages in developing Outlook Addins in Java?
 
