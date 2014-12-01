@@ -17,11 +17,8 @@ What are the advantages in developing Outlook Addins in Java?
 - You can re-use existing Java code from your tools libraries or other projects.
 - Numerous free libraries are available for the Java platform, which can be integrated with your Addin: e.g. Apache POI, PDFBox, Lucene.
 - Java IDEs are free of charge.
-- More information can be found in the Wiki.
 
-Please give it a try and post your comments, questions, and bug reports in the [issues](https://github.com/wolfgangimig/joa/issues) section or send an [email](mailto:wilutions@googlemail.com). The MIT license allows you to use JOA in any project.
-
-More information can be found in the wiki. You may want to start reading with the  [Wiki](https://github.com/wolfgangimig/joa/wiki/).
+More information can be found in the [Wiki](https://github.com/wolfgangimig/joa/wiki/).
 
 Kind regards
 
