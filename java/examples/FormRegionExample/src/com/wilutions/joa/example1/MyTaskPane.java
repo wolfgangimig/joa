@@ -10,24 +10,25 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
+import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
-import com.wilutions.joa.TaskPane;
+import com.wilutions.joa.fx.TaskPaneFX;
 import com.wilutions.mslib.office.CustomTaskPane;
 import com.wilutions.mslib.office.MsoCTPDockPosition;
 import com.wilutions.mslib.outlook.OlItemType;
 
-public class MyTaskPane extends TaskPane {
+public class MyTaskPane extends TaskPaneFX {
 
 	@Override
-	public void show(CustomTaskPane taskPane) throws ComException {
+	public void showAsync(CustomTaskPane taskPane, AsyncResult<Boolean> asyncResult) throws ComException {
 		taskPane.setDockPosition(MsoCTPDockPosition.msoCTPDockPositionBottom);
-		super.show(taskPane);
+		super.showAsync(taskPane, asyncResult);
 	}
 
 	@Override
-	protected Scene createScene() throws ComException {
+	public Scene createScene() throws ComException {
 
 		// Creating a GridPane container
 		GridPane grid = new GridPane();

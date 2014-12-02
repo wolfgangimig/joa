@@ -54,7 +54,7 @@ import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
 import com.wilutions.com.reg.DeclRegistryValue;
 import com.wilutions.com.reg.RegUtil;
-import com.wilutions.joa.TaskPane;
+import com.wilutions.joa.fx.TaskPaneFX;
 import com.wilutions.joa.outlook.fx.CategoryItem;
 import com.wilutions.mslib.office.IRibbonUI;
 import com.wilutions.mslib.office.MsoCTPDockPositionRestrict;
@@ -65,7 +65,7 @@ import com.wilutions.mslib.outlook.MailItem;
 import com.wilutions.mslib.outlook.NoteItem;
 import com.wilutions.mslib.outlook.OlItemType;
 
-public class NoteTaskPane extends TaskPane {
+public class NoteTaskPane extends TaskPaneFX {
 
 	private Inspector inspector;
 	private GridPane noteGrid;
@@ -169,7 +169,7 @@ public class NoteTaskPane extends TaskPane {
 	}
 
 	@Override
-	protected Scene createScene() throws ComException {
+	public Scene createScene() throws ComException {
 
 		// The Outlook application interface
 		app = Globals.getThisAddin().getApplication();

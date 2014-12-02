@@ -14,26 +14,23 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javafx.application.Platform;
 import javafx.scene.Scene;
 
+import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.IDispatch;
+import com.wilutions.com.WindowHandle;
 import com.wilutions.joa.OfficeAddinUtil;
-import com.wilutions.joa.fx.EmbeddedWindow;
-import com.wilutions.joa.fx.EmbeddedWindowFactory;
-import com.wilutions.mslib.msforms.Control;
 import com.wilutions.mslib.msforms.UserForm;
 import com.wilutions.mslib.outlook.FormRegion;
 import com.wilutions.mslib.outlook.FormRegionEvents;
 
-public abstract class OutlookFormRegion extends DispatchImpl implements FormRegionEvents {
+public abstract class OutlookFormRegion extends DispatchImpl implements WindowHandle, FormRegionEvents {
 
 	protected FormRegion formRegion;
 	protected UserForm userForm;
-	protected Control joaCtrl;
-	protected EmbeddedWindow fxFrame;
 
 	// protected float initialWidth;
 	// protected float initialHeight;
@@ -48,31 +45,32 @@ public abstract class OutlookFormRegion extends DispatchImpl implements FormRegi
 
 	protected abstract Scene createScene() throws ComException;
 
-	public void show(FormRegion formRegion) throws ComException {
-
-		this.formRegion = formRegion;
-		this.formRegion.withEvents(OutlookFormRegion.this);
-
-		userForm = formRegion.getForm().as(UserForm.class);
-		joaCtrl = userForm.getControls().Item("JoaCtrl").as(Control.class);
-
-		createSceneAndShowWindow();
+	public void showAsync(FormRegion formRegion, AsyncResult<Boolean> asyncResult) {
+		try {
+			this.formRegion = formRegion;
+			this.formRegion.withEvents(OutlookFormRegion.this);
+	
+			userForm = formRegion.getForm().as(UserForm.class);
+			
+			// Get the native window handle of the JoaBridgeCtrl
+			IDispatch joaCtrl = userForm.getControls().Item("JoaCtrl");
+			final long hwndJoaCtrl = ((Number) joaCtrl._get("HWND")).longValue();
+	
+			createAndShowEmbeddedWindowAsync(hwndJoaCtrl, asyncResult);
+		}
+		catch (Throwable ex) {
+			asyncResult.setAsyncResult(false, ex);
+		}
 	}
 
-	private void createSceneAndShowWindow() throws ComException {
-
-		Platform.runLater(() -> {
-			try {
-				final long hwndJoaCtrl = joaCtrl._GethWnd().longValue();
-				final Scene scene = createScene();
-				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndJoaCtrl, scene);
-			} catch (Throwable e) {
-				e.printStackTrace();
-			}
-		});
-
-	}
-
+	/**
+	 * Create and show the task pane's view.
+	 * @param hwndParent Native parent window handle.
+	 * @param asyncResult Expression to be called after the new task pane was made visible. 
+	 * This call is made from the Tookit's UI thread. This parameter can be null. 
+	 */
+	protected abstract void createAndShowEmbeddedWindowAsync(final long hwndParent, AsyncResult<Boolean> asyncResult);
+	
 	public static byte[] getFormRegionOfs() throws IOException {
 		InputStream is = null;
 		try {

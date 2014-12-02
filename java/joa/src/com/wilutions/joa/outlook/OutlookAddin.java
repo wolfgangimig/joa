@@ -17,8 +17,6 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 import javafx.application.Platform;
-import javafx.scene.Scene;
-import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
@@ -32,8 +30,6 @@ import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.ModalDialog;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joa.OfficeAddinUtil;
-import com.wilutions.joa.fx.EmbeddedWindow;
-import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.mslib.outlook.ApplicationEvents_11;
 import com.wilutions.mslib.outlook.FormRegion;
 import com.wilutions.mslib.outlook.MAPIFolder;
@@ -46,10 +42,6 @@ import com.wilutions.mslib.outlook._Explorer;
 import com.wilutions.mslib.outlook._FormRegionStartup;
 import com.wilutions.mslib.outlook.impl._ExplorerImpl;
 
-// Direkt über Windows-API eingeklinkte Erweiterungen: 
-// http://www.codeproject.com/Articles/27262/Additional-custom-panel-in-Microsoft-Outlook
-
-// Java Outlook Plugin nicht möglich:
 // https://social.technet.microsoft.com/Forums/en-US/419e76eb-5728-432f-b3b9-04769b32fe1a/is-it-possible-to-develop-microsoft-outlook-plugins-in-java?forum=outlookdev
 
 /**
@@ -80,7 +72,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 
 	public <T> void showModalDialogAsync(ModalDialog<T> dialog, AsyncResult<T> asyncResult) {
 		_Explorer _exp = getApplication().ActiveExplorer();
-		_ExplorerImpl explorer = Dispatch.as(_exp, _ExplorerImpl.class); 
+		_ExplorerImpl explorer = Dispatch.as(_exp, _ExplorerImpl.class);
 		dialog.showAsync(explorer, asyncResult);
 	}
 
@@ -130,12 +122,8 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	public final void BeforeFormRegionShow(final FormRegion formRegion) throws ComException {
 
 		BackgTask.run(() -> {
-			try {
-				final OutlookFormRegion myFormRegion = createFormRegion(formRegion);
-				myFormRegion.show(formRegion);
-			} catch (Throwable e) {
-				e.printStackTrace();
-			}
+			final OutlookFormRegion myFormRegion = createFormRegion(formRegion);
+			myFormRegion.showAsync(formRegion, null);
 		});
 
 	}
@@ -206,16 +194,24 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	@Override
 	public void onBeforeFolderSharingDialog(MAPIFolder FolderToShare, ByRef<Boolean> Cancel) throws ComException {
 	}
-	
+
 	/**
 	 * Assign the viewType as view for the folder.
-	 * @param folder Outlook folder
-	 * @param viewType FolderView class.
-	 * @param title Folder view title. This title is displayed in the caption bar of Outlook.
-	 * @param viewId Arbitrary string to be passed in {@link FolderView#setId(String)}. 
+	 * 
+	 * @param folder
+	 *            Outlook folder
+	 * @param viewType
+	 *            FolderView class.
+	 * @param title
+	 *            Folder view title. This title is displayed in the caption bar
+	 *            of Outlook.
+	 * @param viewId
+	 *            Arbitrary string to be passed in
+	 *            {@link FolderView#setId(String)}.
 	 * @throws IOException
 	 */
-	public void assignFolderView(MAPIFolder folder, Class<? extends FolderView> viewType, String title, String viewId) throws IOException {
+	public void assignFolderView(MAPIFolder folder, Class<? extends FolderView> viewType, String title, String viewId)
+			throws IOException {
 		String webViewFile = createFolderViewHtml(viewType, title, viewId);
 		folder.setWebViewURL(webViewFile);
 		folder.setWebViewOn(true);
@@ -223,13 +219,21 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 
 	/**
 	 * Create an HTML file to display the given view in a folder.
-	 * @param viewType FolderView class. The explorer will call createWebView() to create an instance.
-	 * @param title Folder view title. This title is displayed in the caption bar of Outlook.
-	 * @param viewId Arbitrary string to be passed in {@link FolderView#setId(String)}. 
+	 * 
+	 * @param viewType
+	 *            FolderView class. The explorer will call createWebView() to
+	 *            create an instance.
+	 * @param title
+	 *            Folder view title. This title is displayed in the caption bar
+	 *            of Outlook.
+	 * @param viewId
+	 *            Arbitrary string to be passed in
+	 *            {@link FolderView#setId(String)}.
 	 * @return Temporary file that defines the folder's view.
 	 * @throws ComException
 	 */
-	protected String createFolderViewHtml(Class<? extends FolderView> viewType, String title, String viewId) throws ComException {
+	protected String createFolderViewHtml(Class<? extends FolderView> viewType, String title, String viewId)
+			throws ComException {
 		PrintWriter pr = null;
 		File webViewFile = null;
 
@@ -270,39 +274,35 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	}
 
 	/**
-	 * This function is called from the HTML page of a folder view.
-	 * Do not call this function directly. The HTML page has been created by {@link #createFolderViewHtml(Class, String, String)}.
-	 * @param hwndJoaCtrlStr JoaBridgeCtrl window handle
-	 * @param viewClassName Class name passed to {@link #createFolderViewHtml(Class, String, String)}
-	 * @param viewId View ID passed to {@link #createFolderViewHtml(Class, String, String)}
+	 * This function is called from the HTML page of a folder view. Do not call
+	 * this function directly. The HTML page has been created by
+	 * {@link #createFolderViewHtml(Class, String, String)}.
+	 * 
+	 * @param hwndJoaCtrlStr
+	 *            JoaBridgeCtrl window handle
+	 * @param viewClassName
+	 *            Class name passed to
+	 *            {@link #createFolderViewHtml(Class, String, String)}
+	 * @param viewId
+	 *            View ID passed to
+	 *            {@link #createFolderViewHtml(Class, String, String)}
 	 */
 	@Deprecated
 	public void createWebView(final String hwndJoaCtrlStr, final String viewClassName, final String viewId) {
 
 		// Create the Java window as a child window of the JoaBridgeCtrl.
-		Platform.runLater(() -> {
-			try {
-				final Class<?> viewClass = Class.forName(viewClassName);
-				final FolderView viewObject = (FolderView) viewClass.newInstance();
+		try {
+			final Class<?> viewClass = Class.forName(viewClassName);
+			final FolderView viewObject = (FolderView) viewClass.newInstance();
 
-				viewObject.setId(viewId);
+			viewObject.setId(viewId);
 
-				final Scene scene = viewObject.createScene();
+			long hwndJoaCtrl = Long.parseLong(hwndJoaCtrlStr);
+			viewObject.createAndShowEmbeddedWindowAsync(hwndJoaCtrl, null);
 
-				long hwndJoaCtrl = Long.parseLong(hwndJoaCtrlStr);
-				EmbeddedWindow fxFrame = EmbeddedWindowFactory.getInstance().create(hwndJoaCtrl, scene);
-				
-				viewObject.setFxFrame(fxFrame);
-
-				Platform.runLater(() -> {
-					WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
-					viewObject.handleEvent(event);
-				});
-
-			} catch (Throwable e) {
-				e.printStackTrace();
-			}
-		});
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 	}
 
 }

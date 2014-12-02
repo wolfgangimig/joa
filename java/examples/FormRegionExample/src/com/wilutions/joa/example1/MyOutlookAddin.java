@@ -5,6 +5,7 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.IDispatch;
 import com.wilutions.joa.DeclAddin;
+import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.TaskPane;
 import com.wilutions.joa.outlook.OutlookAddin;
@@ -20,7 +21,7 @@ import com.wilutions.mslib.outlook._NameSpace;
 import com.wilutions.mslib.outlook.impl.PagesImpl;
 
 @CoClass(progId = "JoaExample1.Addin", guid = "{0020ABA7-EC2D-481F-A6A3-406FDE391259}")
-@DeclAddin(application = OfficeApplication.Outlook, friendlyName = "Example1 Java Addin", description = "First example for an Outlook Addin developed in Java")
+@DeclAddin(loadBehavior=LoadBehavior.LoadOnStart, application = OfficeApplication.Outlook, friendlyName = "Example1 Java Addin", description = "First example for an Outlook Addin developed in Java")
 public class MyOutlookAddin extends OutlookAddin {
 
 	private static MyOutlookAddin instance;

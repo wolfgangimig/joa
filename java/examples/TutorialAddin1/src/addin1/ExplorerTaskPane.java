@@ -6,12 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 
 import com.wilutions.com.ComException;
-import com.wilutions.joa.TaskPane;
+import com.wilutions.joa.fx.TaskPaneFX;
 
-public class ExplorerTaskPane extends TaskPane {
+public class ExplorerTaskPane extends TaskPaneFX {
 	
 	@Override
-	protected Scene createScene() throws ComException {
+	public Scene createScene() throws ComException {
         GridPane grid = new GridPane();
         Button clear = new Button("Klickme!");
         GridPane.setConstraints(clear, 0, 0);

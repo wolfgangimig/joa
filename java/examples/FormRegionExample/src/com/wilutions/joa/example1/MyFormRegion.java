@@ -19,14 +19,14 @@ import javafx.scene.paint.Color;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
+import com.wilutions.joa.fx.FormRegionFX;
 import com.wilutions.joa.outlook.DeclFormRegion;
 import com.wilutions.joa.outlook.MessageClass;
-import com.wilutions.joa.outlook.OutlookFormRegion;
 import com.wilutions.mslib.outlook.MailItem;
 import com.wilutions.mslib.outlook.OlItemType;
 
 @DeclFormRegion(addinClass = MyOutlookAddin.class, messageClasses = { MessageClass.Note })
-public class MyFormRegion extends OutlookFormRegion {
+public class MyFormRegion extends FormRegionFX {
 
 	TextField name;
 	TextField lastName;
@@ -50,7 +50,7 @@ public class MyFormRegion extends OutlookFormRegion {
 		});
 	}
 
-	protected Scene createScene() throws ComException {
+	public Scene createScene() {
 
 		// Creating a GridPane container
 		GridPane grid = new GridPane();

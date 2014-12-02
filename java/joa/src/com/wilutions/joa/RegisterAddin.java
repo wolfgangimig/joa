@@ -26,7 +26,7 @@ import com.wilutions.com.reg.RegUtil;
 public class RegisterAddin {
 
 	public static void register(boolean perUserNotMachine, Class<?> addinClass) throws ComException {
-		System.out.println("register " + addinClass + " " + (perUserNotMachine ? "/user" : "/all") );
+		System.out.println("register " + addinClass.getName() + " " + (perUserNotMachine ? "/user" : "/all") );
 		CoClass coClassAnnotation = addinClass.getAnnotation(CoClass.class);
 		if (coClassAnnotation == null)
 			throw new ComException("Failed to unregister Addin, missing annotation " + CoClass.class);

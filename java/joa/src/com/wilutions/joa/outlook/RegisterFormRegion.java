@@ -34,6 +34,7 @@ public class RegisterFormRegion {
 				perUserNotMachine, rootKey);
 				
 		String addinProgId = coClassAnnotation.progId();
+		System.out.println("registerFormRegion " + formRegion.getSimpleName() + ", progId=" + addinProgId);
 		
 		for (String formRegionBaseKey : formRegionBaseKeys) {
 			String[] messageClasses = formRegionAnnotation.messageClasses();

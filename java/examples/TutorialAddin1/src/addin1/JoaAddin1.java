@@ -83,7 +83,7 @@ public class JoaAddin1 extends OutlookAddin {
                 taskPane.setVisible(pressed);
             } else {
                 Object parentWindow = getApplication().ActiveExplorer();
-                createTaskPaneWindowAsync(taskPane, "JOA TaskPane", parentWindow, (taskPane, ex) -> {
+                createTaskPaneWindowAsync(taskPane, "JOA TaskPane", parentWindow, (succ, ex) -> {
                     if (ex == null) {
                         taskPane.setVisible(true);
                     }

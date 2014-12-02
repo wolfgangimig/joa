@@ -15,9 +15,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
 import com.wilutions.joa.MessageBox;
-import com.wilutions.joa.outlook.FolderView;
+import com.wilutions.joa.fx.FolderViewFX;
 
-public class MyFolderView extends FolderView {
+public class MyFolderView extends FolderViewFX {
 
 	CheckBox ckSyncToggleButton;
 	

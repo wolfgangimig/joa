@@ -9,5 +9,5 @@
   <showInspectorCompose>true</showInspectorCompose>
   <showInspectorRead>true</showInspectorRead>
   <showReadingPane>false</showReadingPane>
-  <addin>MyJava.Addin</addin>
+  <addin>JoaExample1.Addin</addin>
 </FormRegion>

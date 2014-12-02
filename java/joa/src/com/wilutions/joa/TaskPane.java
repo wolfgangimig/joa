@@ -10,22 +10,13 @@
 */
 package com.wilutions.joa;
 
-import javafx.application.Platform;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
-import javafx.scene.Scene;
-import javafx.stage.WindowEvent;
-
+import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.WindowHandle;
-import com.wilutions.com.WindowsUtil;
 import com.wilutions.com.reg.DeclRegistryValue;
-import com.wilutions.joa.fx.EmbeddedWindow;
-import com.wilutions.joa.fx.EmbeddedWindowFactory;
 import com.wilutions.mslib.office.CustomTaskPane;
 import com.wilutions.mslib.office.MsoCTPDockPosition;
 import com.wilutions.mslib.office._CustomTaskPane;
@@ -48,11 +39,6 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	protected CustomTaskPane customTaskPane;
 	
 	/**
-	 * JavaFX view.
-	 */
-	protected volatile EmbeddedWindow fxFrame;
-	
-	/**
 	 * Persistent dock position.
 	 * This member is load and stored in the Windows registry.
 	 */
@@ -64,12 +50,6 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	 */
 	@DeclRegistryValue
 	private boolean reg_visible;
-	
-	/**
-	 * Event handlers usually added to a Stage.
-	 * Currently, only WindowEvent.WINDOW_SHOWN is supported.
-	 */
-	private EventHandler<WindowEvent> eventHandlerWindowShown;
 	
 	/**
 	 * Constructor.
@@ -101,27 +81,23 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 			customTaskPane.releaseComObject();		
 		}
 		
-		// Remove the JavaFX view.
-		if (fxFrame != null) {
-			fxFrame.dispose();
-			// ? Platform.runLater(() -> fxFrame.dispose());
-		}
-		
 	}
-
+	
 	/**
-	 * Create JavaFX scene.
-	 * @return Scene object
-	 * @throws ComException
+	 * Create and show the task pane's view.
+	 * @param hwndParent Native parent window handle.
+	 * @param asyncResult Expression to be called after the new task pane was made visible. 
+	 * This call is made from the Tookit's UI thread. This parameter can be null. 
 	 */
-	protected abstract Scene createScene() throws ComException;
+	protected abstract void createAndShowEmbeddedWindowAsync(final long hwndParent, AsyncResult<Boolean> asyncResult);
 
 	/**
 	 * Build a Java window inside the given task pane created by Office.
 	 * @param taskPane COM object created by Office in a call to {@link OfficeAddin#createTaskPaneWindowAsync(TaskPane, String, Object, com.wilutions.com.AsyncResult)}.
+	 * @param asyncResult Callback object to be called after the new task pane is made visible. This parameter can be null. 
 	 * @throws ComException
 	 */
-	public void show(final CustomTaskPane taskPane) throws ComException {
+	public void showAsync(final CustomTaskPane taskPane, AsyncResult<Boolean> asyncResult) throws ComException {
 
 		this.customTaskPane = taskPane;
 		
@@ -144,23 +120,8 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 		Dispatch ctrl = taskPane.getContentControl().as(Dispatch.class);
 		final long hwndJoaCtrl = ((Number) ctrl._get("HWND")).longValue();
 		
-		// Create the Java window as a child window of the JoaBridgeCtrl.
-		Platform.runLater(() -> {
-			try {
-				final Scene scene = TaskPane.this.createScene();
-				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndJoaCtrl, scene);
-				
-				Platform.runLater(() -> {
-					if (eventHandlerWindowShown != null) {
-						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN); 
-						eventHandlerWindowShown.handle(event);
-					}
-				});
-				
-			} catch (ComException e) {
-				throw new IllegalStateException(e);
-			}
-		});
+		// Create view
+		createAndShowEmbeddedWindowAsync(hwndJoaCtrl, asyncResult);
 	}
 
 	@Override
@@ -209,22 +170,4 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	}
 	
 	
-	/**
-	 * Set event handler for WindowEvent.WINDOW_SHOWN.
-	 * Only one hander is supported. Only WINDOW_SHOWN is supported.
-	 * The handler receives null as source parameter.
-	 * @param eventType must be WindowEvent.WINDOW_SHOWN
-	 * @param eventHandler handler expression
-	 */
-	@SuppressWarnings("unchecked")
-	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
-		assert eventType == WindowEvent.WINDOW_SHOWN;
-		assert eventHandler != null;
-		eventHandlerWindowShown = (EventHandler<WindowEvent>)eventHandler;
-	}
-
-	@Override
-	public long getWindowHandle() {
-		return WindowsUtil.getWindowHandle(fxFrame);
-	}
 }

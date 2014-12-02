@@ -38,10 +38,11 @@ public class WindowsUtil {
 	
 	@SuppressWarnings("deprecation")
 	public static long getWindowHandle(java.awt.Window window) {
-		return window.getPeer() != null ? ((WComponentPeer) window.getPeer()).getHWnd() : 0;
+		return window != null && window.getPeer() != null ? ((WComponentPeer) window.getPeer()).getHWnd() : 0;
 	}
 	
 	public static long getWindowHandle(EmbeddedWindow fxFrame) {
+		if (fxFrame == null) return 0;
 		return getWindowHandle((java.awt.Window)fxFrame);
 	}
 	

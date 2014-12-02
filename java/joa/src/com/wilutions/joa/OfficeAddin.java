@@ -12,8 +12,6 @@ package com.wilutions.joa;
 
 import java.io.IOException;
 
-import javafx.application.Platform;
-
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
@@ -80,7 +78,7 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 
 		COMAddInImpl coAddin = addin.as(COMAddInImpl.class);
 		// Currently, a DispatchImpl cannot be converted into a Dispatch.
-		// Thus, coAddin.setObject cannot be called. 
+		// Thus, coAddin.setObject cannot be called.
 		coAddin._put(7, this); // setObject()
 	}
 
@@ -118,26 +116,12 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	 * @param asyncResult
 	 */
 	public void createTaskPaneWindowAsync(final TaskPane taskPane, final String title,
-			final Object explorerOrInspector, final AsyncResult<TaskPane> asyncResult) {
+			final Object explorerOrInspector, final AsyncResult<Boolean> asyncResult) {
 
-		Platform.runLater(new Runnable() {
-			public void run() {
-				try {
-					final _CustomTaskPane _ctp = customTaskPaneFactory.CreateCTP(TASK_PANE_CONTROL_PROGID, title,
-							explorerOrInspector);
-					final CustomTaskPane ctp = ((Dispatch) _ctp).as(CustomTaskPane.class);
-					taskPane.show(ctp);
-					if (asyncResult != null) {
-						asyncResult.setAsyncResult(taskPane, null);
-					}
-				} catch (Throwable e) {
-					if (asyncResult != null) {
-						asyncResult.setAsyncResult(null, e);
-					}
-				}
-			}
-		});
-
+		final _CustomTaskPane _ctp = customTaskPaneFactory.CreateCTP(TASK_PANE_CONTROL_PROGID, title,
+				explorerOrInspector);
+		final CustomTaskPane ctp = ((Dispatch) _ctp).as(CustomTaskPane.class);
+		taskPane.showAsync(ctp, asyncResult);
 	}
 
 	@Override
