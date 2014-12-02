@@ -13,7 +13,6 @@ package com.wilutions.joa.example.cnaddin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.CoClass;
@@ -23,6 +22,7 @@ import com.wilutions.com.IDispatch;
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.reg.Registry;
 import com.wilutions.joa.DeclAddin;
+import com.wilutions.joa.IconManager;
 import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeApplication;
@@ -51,12 +51,11 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 	private final Registry registry = new Registry(getClass());
 	private volatile _Inspectors inspectors;
 	private volatile IRibbonUI ribbon;
-	private volatile Map<String, Dispatch> ribbonIcons;
+	private final IconManager ribbonIcons;
 	
 	public CreateNoteAddin() {
 		Globals.setThisAddin(this);
-		ribbonIcons = createRibbonIconsFromResources(this.getClass(), 
-				new String[] {"Ribbon-Note.png"});
+		ribbonIcons = new IconManager(this);
 	}	
 
 	public List<TaskPane> getTaskPanes() {

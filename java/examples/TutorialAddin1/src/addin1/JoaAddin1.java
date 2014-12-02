@@ -1,7 +1,5 @@
 package addin1;
 
-import java.util.Map;
-
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -16,6 +14,7 @@ import com.wilutions.com.BackgTask;
 import com.wilutions.com.CoClass;
 import com.wilutions.com.Dispatch;
 import com.wilutions.joa.DeclAddin;
+import com.wilutions.joa.IconManager;
 import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.OfficeApplication;
@@ -30,12 +29,12 @@ import com.wilutions.mslib.outlook.OlItemType;
 public class JoaAddin1 extends OutlookAddin {
 
     final ExplorerTaskPane taskPane = new ExplorerTaskPane();
-    final Map<String, Dispatch> ribbonIcons;
+    final IconManager ribbonIcons;
 	private IRibbonUI ribbon;
 
     public JoaAddin1() {
         Globals.setThisAddin(this);
-        ribbonIcons = createRibbonIconsFromResources(this.getClass(), new String[] { "MyHappyFaceIcon.png" });
+        ribbonIcons = new IconManager(this);
     }
 
     public void onSmileButtonClicked2(Dispatch ribbonControl) {

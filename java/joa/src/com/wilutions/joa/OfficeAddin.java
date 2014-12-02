@@ -11,8 +11,6 @@
 package com.wilutions.joa;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javafx.application.Platform;
 
@@ -23,7 +21,6 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
-import com.wilutions.com.JoaDll;
 import com.wilutions.joactrllib.IJoaUtilAddin;
 import com.wilutions.mslib.office.COMAddIn;
 import com.wilutions.mslib.office.COMAddIns;
@@ -188,30 +185,6 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	@Override
 	public void onButtonClicked(Dispatch ribbonControl) throws ComException {
 
-	}
-
-	public Dispatch createIPictureDisp(byte[] image, String contentType) throws ComException {
-		return (Dispatch) JoaDll.nativeCreateIPictureDisp(image);
-	}
-
-	public Map<String, Dispatch> createRibbonIconsFromResources(Class<?> forClass, String[] fileNames)
-			throws ComException {
-		Map<String, Dispatch> ret = new HashMap<String, Dispatch>(fileNames.length);
-		for (String fileName : fileNames) {
-			try {
-				byte[] image = OfficeAddinUtil.getResourceAsBytes(forClass, fileName);
-				String contentType = fileName;
-				int p = contentType.lastIndexOf('.');
-				if (p >= 0) {
-					contentType = contentType.substring(p + 1);
-				}
-				Dispatch pictureDisp = createIPictureDisp(image, contentType);
-				ret.put(fileName, pictureDisp);
-			} catch (IOException ex) {
-				throw new ComException("Missing resource " + fileName);
-			}
-		}
-		return ret;
 	}
 
 	/**
