@@ -71,7 +71,11 @@ public class AddinApplication extends javafx.application.Application {
 
 		} catch (Throwable e) {
 			e.printStackTrace();
-			Platform.exit();
+		}
+		finally {
+			// This call ensures that the application is terminated
+			// even if there are Swing windows visible.
+			System.exit(0);
 		}
 
 	}

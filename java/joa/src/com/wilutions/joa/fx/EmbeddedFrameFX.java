@@ -32,14 +32,14 @@ public class EmbeddedFrameFX implements WindowHandle {
 		}
 	}
 
-	protected void createAndShowEmbeddedWindowAsync(final long hwndParent, final SceneFactory sceneFactory, final AsyncResult<Boolean> asyncResult) {
+	protected void createAndShowEmbeddedWindowAsync(final long hwndParent, final FrameContentFactory sceneFactory, final AsyncResult<Boolean> asyncResult) {
 		assert hwndParent != 0;
 		assert sceneFactory != null;
 
 		Platform.runLater(() -> {
 			Throwable ex = null;
 			try {
-				Scene scene = sceneFactory.createScene();
+				Scene scene = sceneFactory.createFrameContent();
 				
 				// Create the Java window as a child window of the JoaBridgeCtrl.
 				window = EmbeddedWindowFactory.getInstance().create(hwndParent, scene);

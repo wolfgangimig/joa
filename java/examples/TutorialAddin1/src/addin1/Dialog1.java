@@ -14,11 +14,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-import com.wilutions.com.ComException;
-import com.wilutions.joa.MessageBox;
-import com.wilutions.joa.ModalDialog;
+import com.wilutions.joa.fx.MessageBox;
+import com.wilutions.joa.fx.ModalDialogFX;
 
-public class Dialog1 extends ModalDialog<String> {
+public class Dialog1 extends ModalDialogFX<String> {
 
 	TextField textField;
 
@@ -27,7 +26,7 @@ public class Dialog1 extends ModalDialog<String> {
 	}
 
 	@Override
-	protected Scene createScene() throws ComException {
+	public Scene createFrameContent() {
 		
 		VBox root = new VBox();
 

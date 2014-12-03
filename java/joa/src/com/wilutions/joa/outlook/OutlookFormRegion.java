@@ -14,8 +14,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javafx.scene.Scene;
-
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
@@ -43,7 +41,6 @@ public abstract class OutlookFormRegion extends DispatchImpl implements WindowHa
 		return "[OutlookFormRegion " + super.toString() + " ]";
 	}
 
-	protected abstract Scene createScene() throws ComException;
 
 	public void showAsync(FormRegion formRegion, AsyncResult<Boolean> asyncResult) {
 		try {
@@ -64,9 +61,9 @@ public abstract class OutlookFormRegion extends DispatchImpl implements WindowHa
 	}
 
 	/**
-	 * Create and show the task pane's view.
+	 * Create and show the form region's view.
 	 * @param hwndParent Native parent window handle.
-	 * @param asyncResult Expression to be called after the new task pane was made visible. 
+	 * @param asyncResult Expression to be called after the new form region was made visible. 
 	 * This call is made from the Tookit's UI thread. This parameter can be null. 
 	 */
 	protected abstract void createAndShowEmbeddedWindowAsync(final long hwndParent, AsyncResult<Boolean> asyncResult);

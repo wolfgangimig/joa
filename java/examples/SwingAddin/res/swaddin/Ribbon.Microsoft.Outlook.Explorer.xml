@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui"
+	onLoad="onLoadRibbon">
+	<ribbon>
+		<tabs>
+			<tab id="ExplorerTab" label="JOA Tutorial">
+				<group id="Group1" label="Happy Group">
+					<button id="SmileButton" imageMso="HappyFace" size="large"
+						label="Smile" onAction="onSmileButtonClicked" />
+					<toggleButton id="JoaTaskPane" imageMso="HappyFace"
+						size="large" label="Show/Hide" 
+						onAction="onJoaTaskPaneClicked"
+						getPressed="onJoaTaskPaneGetPressed" />
+					<button id="SmileButton2" getImage="onSmileButton2GetImage"
+						size="large" label="Smile" onAction="onSmileButton2Clicked"/>
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

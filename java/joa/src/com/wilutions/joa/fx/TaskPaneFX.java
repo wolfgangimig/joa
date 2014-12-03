@@ -7,7 +7,7 @@ import com.wilutions.joa.TaskPane;
  * Taks pane base class for JavaFX views.
  *
  */
-public abstract class TaskPaneFX extends TaskPane implements SceneFactory {
+public abstract class TaskPaneFX extends TaskPane implements FrameContentFactory {
 
 	protected final EmbeddedFrameFX frameFX = new EmbeddedFrameFX();
 

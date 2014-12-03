@@ -3,7 +3,7 @@ package com.wilutions.joa.fx;
 import com.wilutions.com.AsyncResult;
 import com.wilutions.joa.outlook.OutlookFormRegion;
 
-public abstract class FormRegionFX extends OutlookFormRegion implements SceneFactory {
+public abstract class FormRegionFX extends OutlookFormRegion implements FrameContentFactory {
 
 	protected final EmbeddedFrameFX frameFX = new EmbeddedFrameFX();
 	

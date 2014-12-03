@@ -1,4 +1,4 @@
-package com.wilutions.joa;
+package com.wilutions.joa.fx;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
-import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 
 /**
@@ -21,8 +20,8 @@ import com.wilutions.com.Dispatch;
  */
 public class MessageBox {
 
-	public final static int CANCEL = ModalDialog.CANCEL;
-	public final static int OK = ModalDialog.OK;
+	public final static int CANCEL = ModalDialogFX.CANCEL;
+	public final static int OK = ModalDialogFX.OK;
 
 	public final static double DEFAULT_BUTTON_MIN_WIDTH = 100;
 
@@ -57,8 +56,8 @@ public class MessageBox {
 		private List<ButtonDefinition> _buttonDefinitions = new ArrayList<ButtonDefinition>();
 
 		public Builder owner(Object v) {
-			assert (v instanceof Dispatch) || (v instanceof ModalDialog);
-			if (v instanceof ModalDialog) {
+			assert (v instanceof Dispatch) || (v instanceof ModalDialogFX);
+			if (v instanceof ModalDialogFX) {
 				_owner = v;
 			}
 			else {
@@ -151,7 +150,7 @@ public class MessageBox {
 		dialog.showAsync(owner, asyncResult);
 	}
 
-	protected static class DialogBox extends ModalDialog<Integer> {
+	protected static class DialogBox extends ModalDialogFX<Integer> {
 
 		private String text;
 		private List<ButtonDefinition> buttonDefinitions;
@@ -165,7 +164,7 @@ public class MessageBox {
 		}
 
 		@Override
-		protected Scene createScene() throws ComException {
+		public Scene createFrameContent() {
 
 			VBox vbox = new VBox();
 			vbox.setAlignment(Pos.CENTER);

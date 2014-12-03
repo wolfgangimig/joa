@@ -14,8 +14,8 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
-import com.wilutions.joa.MessageBox;
 import com.wilutions.joa.fx.FolderViewFX;
+import com.wilutions.joa.fx.MessageBox;
 
 public class MyFolderView extends FolderViewFX {
 
@@ -26,7 +26,7 @@ public class MyFolderView extends FolderViewFX {
 	}
 
 	@Override
-	public Scene createScene() {
+	public Scene createFrameContent() {
 		GridPane grid = new GridPane();
 		grid.setAlignment(Pos.CENTER);
 		grid.setHgap(10);

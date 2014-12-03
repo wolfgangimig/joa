@@ -27,9 +27,9 @@ import com.wilutions.com.Dispatch;
 import com.wilutions.com.IDispatch;
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowsUtil;
-import com.wilutions.joa.ModalDialog;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joa.OfficeAddinUtil;
+import com.wilutions.joa.fx.ModalDialogFX;
 import com.wilutions.mslib.outlook.ApplicationEvents_11;
 import com.wilutions.mslib.outlook.FormRegion;
 import com.wilutions.mslib.outlook.MAPIFolder;
@@ -70,7 +70,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 		return "[OutlookAddin " + super.toString() + " ]";
 	}
 
-	public <T> void showModalDialogAsync(ModalDialog<T> dialog, AsyncResult<T> asyncResult) {
+	public <T> void showModalDialogAsync(ModalDialogFX<T> dialog, AsyncResult<T> asyncResult) {
 		_Explorer _exp = getApplication().ActiveExplorer();
 		_ExplorerImpl explorer = Dispatch.as(_exp, _ExplorerImpl.class);
 		dialog.showAsync(explorer, asyncResult);
@@ -133,10 +133,9 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 		ClassLoader classLoader = this.getClass().getClassLoader();
 		String ret = null;
 		try {
-			ret = OfficeAddinUtil.getResourceAsString(classLoader, "com/wilutions/joa/example1/FormRegionManifest.xml");
-
+			ret = OfficeAddinUtil.getResourceAsString(classLoader, "swaddin/FormRegionManifest.xml");
 		} catch (IOException e) {
-			throw new IllegalStateException(e);
+			e.printStackTrace();
 		}
 		return ret;
 	}
@@ -152,6 +151,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 
 	@Override
 	public void onQuit() throws ComException {
+		//System.exit(0);
 		Platform.exit();
 	}
 

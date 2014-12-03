@@ -1,21 +1,17 @@
-package com.wilutions.joa;
+package com.wilutions.joa.swing;
 
-import javafx.application.Platform;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
-import javafx.scene.Scene;
-import javafx.stage.WindowEvent;
+import java.awt.Component;
+
+import javax.swing.SwingUtilities;
+
+import sun.awt.windows.WEmbeddedFrame;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
-import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowHandle;
-import com.wilutions.com.WindowsUtil;
-import com.wilutions.joa.fx.EmbeddedWindow;
-import com.wilutions.joa.fx.EmbeddedWindowFactory;
+import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
 import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
 
@@ -25,7 +21,7 @@ import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
  * @param <T>
  *            Result type of callback expression.
  */
-public abstract class ModalDialog<T> implements WindowHandle {
+public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentFactory {
 
 	/**
 	 * Helper object to show an empty modal dialog in the UI thread of Outlook.
@@ -33,9 +29,9 @@ public abstract class ModalDialog<T> implements WindowHandle {
 	protected IJoaBridgeDialog joaDlg;
 
 	/**
-	 * JavaFX frame window placed inside the {@link #joaDlg}.
+	 * Frame window placed inside the {@link #joaDlg}.
 	 */
-	private EmbeddedWindow fxFrame;
+	protected WEmbeddedFrame window;
 
 	/**
 	 * Native window handle of the {@link #joaDlg}
@@ -83,12 +79,6 @@ public abstract class ModalDialog<T> implements WindowHandle {
 	private String title;
 
 	/**
-	 * Event handlers usually added to a Stage. Currently, only
-	 * WindowEvent.WINDOW_SHOWN is supported.
-	 */
-	private EventHandler<WindowEvent> eventHandlerWindowShown;
-
-	/**
 	 * Definition for cancel button ID.
 	 */
 	public final static int CANCEL = 0;
@@ -109,33 +99,26 @@ public abstract class ModalDialog<T> implements WindowHandle {
 	private State state = State.Initialized;
 
 	/**
-	 * Create JavaFX scene.
-	 * 
-	 * @return Scene object
-	 * @throws ComException
-	 */
-	protected abstract Scene createScene() throws ComException;
-
-	/**
 	 * Constructor.
 	 */
-	public ModalDialog() {
+	public ModalDialogSwing() {
 	}
 
 	/**
 	 * Show the dialog box.
 	 * 
 	 * @param _owner
-	 *            Owner object, explorer or inspector window, or an implementation of WindowHandle.
+	 *            Owner object, explorer or inspector window, or an
+	 *            implementation of WindowHandle.
 	 * @param asyncResult
 	 *            Callback expression which is called, when the dialog is
 	 *            closed.
 	 */
 	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
-		if (Platform.isFxApplicationThread()) {
+		if (SwingUtilities.isEventDispatchThread()) {
 			internalShowAsync(_owner, asyncResult);
 		} else {
-			Platform.runLater(() -> internalShowAsync(_owner, asyncResult));
+			SwingUtilities.invokeLater(() -> internalShowAsync(_owner, asyncResult));
 		}
 	}
 
@@ -298,23 +281,6 @@ public abstract class ModalDialog<T> implements WindowHandle {
 		this.maximizeBox = maximizeBox;
 	}
 
-	/**
-	 * Set event handler for WindowEvent.WINDOW_SHOWN. Only one hander is
-	 * supported. Only the event type WINDOW_SHOWN is supported. The handler
-	 * receives null as source parameter.
-	 * 
-	 * @param eventType
-	 *            must be WindowEvent.WINDOW_SHOWN
-	 * @param eventHandler
-	 *            handler expression
-	 */
-	@SuppressWarnings("unchecked")
-	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
-		assert eventType == WindowEvent.WINDOW_SHOWN;
-		assert eventHandler != null;
-		eventHandlerWindowShown = (EventHandler<WindowEvent>) eventHandler;
-	}
-
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
@@ -326,7 +292,7 @@ public abstract class ModalDialog<T> implements WindowHandle {
 		Dispatch dispOwner = null;
 		long hwndOwner = 0;
 		if (_owner instanceof WindowHandle) {
-			hwndOwner = ((WindowHandle)_owner).getWindowHandle();
+			hwndOwner = ((WindowHandle) _owner).getWindowHandle();
 		} else if (_owner instanceof Dispatch) {
 			dispOwner = (Dispatch) _owner;
 		}
@@ -334,18 +300,18 @@ public abstract class ModalDialog<T> implements WindowHandle {
 
 		DialogEventHandler dialogHandler = null;
 		try {
-			
-			// Create the scene. Has to be implemented by subclass.
-			Scene scene = createScene();
 
-			// If width and height is not set, make the dialog 
+			// Create the scene. Has to be implemented by subclass.
+			Component scene = createFrameContent();
+
+			// If width and height is not set, make the dialog
 			// as large as the scene.
 			maybeSetWidthAndHightFromSceneExtent(scene);
 
 			// Create the native dialog object.
-			// This is the task of the JOA Util Add-in. Because 
-			// the dialog has to be created in the UI thread 
-			// inside Outlook. 
+			// This is the task of the JOA Util Add-in. Because
+			// the dialog has to be created in the UI thread
+			// inside Outlook.
 			joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
 
 			joaDlg.setWidth(toWin(width));
@@ -386,23 +352,17 @@ public abstract class ModalDialog<T> implements WindowHandle {
 			// Native dialog initialized?
 			if (state == State.HasParentHwnd) {
 
-				// Create a JavaFX frame inside the native dialog
-				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndParent, scene);
+				// Create the Java window as a child window of the
+				// JoaBridgeCtrl.
+				window = new WEmbeddedFrame(hwndParent);
 
-				Platform.runLater(() -> {
-					
-					// Ensure the JavaFX frame is in the foreground.
-					long hwndChild = WindowsUtil.getWindowHandle(fxFrame);
-					JoaDll.nativeActivateSceneInDialog(hwndChild);
+				// Create and add the View to the window.
+				window.add(scene);
 
-					// Call event handler for WINDOW_SHOW
-					if (eventHandlerWindowShown != null) {
-						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
-						eventHandlerWindowShown.handle(event);
-					}
-				});
+				window.setVisible(true);
 
 				this.asyncResult = asyncResult;
+
 			} else {
 				asyncResult.setAsyncResult(null, new IllegalStateException(
 						"Excpected response from Office application."));
@@ -420,17 +380,17 @@ public abstract class ModalDialog<T> implements WindowHandle {
 	}
 
 	@SuppressWarnings("deprecation")
-	private void maybeSetWidthAndHightFromSceneExtent(Scene scene) {
+	private void maybeSetWidthAndHightFromSceneExtent(Component scene) {
 		if (width == 0 || height == 0) {
-			scene.impl_preferredSize();
-			double sceneWidth = scene.getWidth();
-			double sceneHeight = scene.getHeight();
-			if (width == 0) {
-				width = sceneWidth + 20;
-			}
-			if (height == 0) {
-				height = sceneHeight + 40;
-			}
+			// scene.impl_preferredSize();
+			// double sceneWidth = scene.getWidth();
+			// double sceneHeight = scene.getHeight();
+			// if (width == 0) {
+			// width = sceneWidth + 20;
+			// }
+			// if (height == 0) {
+			// height = sceneHeight + 40;
+			// }
 		}
 	}
 
@@ -438,35 +398,35 @@ public abstract class ModalDialog<T> implements WindowHandle {
 
 		@Override
 		public void onShow(final Long hwndParent) throws ComException {
-			synchronized (ModalDialog.this) {
-				ModalDialog.this.hwndParent = hwndParent;
-				ModalDialog.this.state = State.HasParentHwnd;
-				ModalDialog.this.notify();
+			synchronized (ModalDialogSwing.this) {
+				ModalDialogSwing.this.hwndParent = hwndParent;
+				ModalDialogSwing.this.state = State.HasParentHwnd;
+				ModalDialogSwing.this.notify();
 			}
 		}
 
 		@Override
 		public void onSystemMenuClose() throws ComException {
-			ModalDialog.this.onSystemMenuClose();
+			ModalDialogSwing.this.onSystemMenuClose();
 		}
 
 		@Override
 		public void onClosed() throws ComException {
-			if (ModalDialog.this.joaDlg != null) {
-				Dispatch.releaseEvents(ModalDialog.this.joaDlg, this);
+			if (ModalDialogSwing.this.joaDlg != null) {
+				Dispatch.releaseEvents(ModalDialogSwing.this.joaDlg, this);
 			}
-			if (ModalDialog.this.fxFrame != null) {
-				ModalDialog.this.fxFrame.dispose();
+			if (ModalDialogSwing.this.window != null) {
+				ModalDialogSwing.this.window.dispose();
 			}
 
-			synchronized (ModalDialog.this) {
-				ModalDialog.this.state = State.IsClosed;
-				ModalDialog.this.notify();
+			synchronized (ModalDialogSwing.this) {
+				ModalDialogSwing.this.state = State.IsClosed;
+				ModalDialogSwing.this.notify();
 			}
 		}
 
 	}
-	
+
 	@Override
 	public long getWindowHandle() {
 		return joaDlg.getHWND();

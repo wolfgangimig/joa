@@ -1,11 +1,15 @@
-package com.wilutions.joa.fx;
+package com.wilutions.joa.swing;
 
 import com.wilutions.com.AsyncResult;
-import com.wilutions.joa.outlook.FolderView;
+import com.wilutions.joa.TaskPane;
 
-public abstract class FolderViewFX extends FolderView implements FrameContentFactory {
+/**
+ * Taks pane base class for Java Swing views.
+ *
+ */
+public abstract class TaskPaneSwing extends TaskPane implements FrameContentFactory {
 
-	protected final EmbeddedFrameFX frameFX = new EmbeddedFrameFX();
+	protected final EmbeddedFrameSwing embeddedFrame = new EmbeddedFrameSwing();
 
 	/**
 	 * Create and show the task pane's view.
@@ -18,11 +22,17 @@ public abstract class FolderViewFX extends FolderView implements FrameContentFac
 	 *            parameter can be null.
 	 */
 	protected void createAndShowEmbeddedWindowAsync(final long hwndParent, final AsyncResult<Boolean> asyncResult) {
-		frameFX.createAndShowEmbeddedWindowAsync(hwndParent, this, asyncResult);
+		embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, this, asyncResult);
 	}
 
 	@Override
 	public long getWindowHandle() {
-		return frameFX.getWindowHandle();
+		return embeddedFrame.getWindowHandle();
+	}
+
+	@Override
+	public void close() {
+		super.close();
+		embeddedFrame.close();
 	}
 }

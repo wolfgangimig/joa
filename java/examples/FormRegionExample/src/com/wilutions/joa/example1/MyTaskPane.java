@@ -28,7 +28,7 @@ public class MyTaskPane extends TaskPaneFX {
 	}
 
 	@Override
-	public Scene createScene() throws ComException {
+	public Scene createFrameContent() throws ComException {
 
 		// Creating a GridPane container
 		GridPane grid = new GridPane();
