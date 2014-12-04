@@ -59,7 +59,7 @@ public class RegisterAddin {
         if (windir == null || windir.length() == 0) windir = System.getenv("WINDIR");
         
         try {
-	        if (joa32.exists()) {
+	        if (RegUtil.is64()) {
 				String regcmd = String.format(regcmdTemplate,
 						windir, 
 						"SysWOW64", 
@@ -70,14 +70,14 @@ public class RegisterAddin {
 				regsvr32(regcmd);
 	        }
 	        
-	        if (joa64.exists()) {
+	        {
 				String regcmd = String.format(regcmdTemplate,
 						windir, 
 						"System32", 
 						(registerNotUnregister ? "" : "/u"), 
 						(perUserNotMachine ? "user" : "all"),
 						referencedByProgId,
-						joa64);
+						RegUtil.is64() ? joa64 : joa32);
 				regsvr32(regcmd);
 	        }
         }

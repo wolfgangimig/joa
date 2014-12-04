@@ -78,10 +78,10 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 		applicationObject = app.as(applicationClass);
 		applicationObject.withEvents(this);
 
+		// Put this object into the COMAddIn wrapper supplied by the Office application.
+		// This is required to support folder views in Outlook.
 		COMAddInImpl coAddin = addin.as(COMAddInImpl.class);
-		// Currently, a DispatchImpl cannot be converted into a Dispatch.
-		// Thus, coAddin.setObject cannot be called. 
-		coAddin._put(7, this); // setObject()
+		coAddin.setObject(this);
 	}
 
 	@Override
