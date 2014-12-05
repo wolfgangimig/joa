@@ -2,6 +2,7 @@ package com.wilutions.joa.swing;
 
 import java.awt.Component;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.Dispatch;
@@ -16,12 +18,12 @@ import com.wilutions.com.Dispatch;
 /**
  * This class provides convenient functions to display message boxes.
  */
-public class MessageBox {
+public class MessageBoxSwing {
 
 	public final static int CANCEL = ModalDialogSwing.CANCEL;
 	public final static int OK = ModalDialogSwing.OK;
 
-	public final static double DEFAULT_BUTTON_MIN_WIDTH = 100;
+	public final static int DEFAULT_BUTTON_MIN_WIDTH = 100;
 
 	/**
 	 * Defines a message box button.
@@ -35,7 +37,7 @@ public class MessageBox {
 
 		/**
 		 * ID to be passed as result to the callback expression of
-		 * {@link MessageBox#show(Object, String, String, AsyncResult)}
+		 * {@link MessageBoxSwing#show(Object, String, String, AsyncResult)}
 		 */
 		public int id;
 
@@ -83,7 +85,7 @@ public class MessageBox {
 
 		public Builder button(int id, String text) {
 			JButton button = new JButton(text);
-			//button.setMinWidth(_buttonMinWidth);
+			// button.setMinWidth(_buttonMinWidth);
 			return button(id, button);
 		}
 
@@ -93,12 +95,14 @@ public class MessageBox {
 		}
 
 		public Builder bdefault() {
-//			_buttonDefinitions.get(_buttonDefinitions.size() - 1).button.setDefaultButton(true);
+			// _buttonDefinitions.get(_buttonDefinitions.size() -
+			// 1).button.setDefaultButton(true);
 			return this;
 		}
 
 		public Builder cancel() {
-//			_buttonDefinitions.get(_buttonDefinitions.size() - 1).button.setCancelButton(true);
+			// _buttonDefinitions.get(_buttonDefinitions.size() -
+			// 1).button.setCancelButton(true);
 			return this;
 		}
 
@@ -134,8 +138,8 @@ public class MessageBox {
 	public static void show(Object owner, String title, String text, AsyncResult<Integer> asyncResult) {
 
 		JButton button = new JButton("OK");
-//		button.setMinWidth(DEFAULT_BUTTON_MIN_WIDTH);
-//		button.setDefaultButton(true);
+		  
+		// button.setDefaultButton(true);
 
 		List<ButtonDefinition> buttonDefinitions = new ArrayList<ButtonDefinition>();
 		ButtonDefinition bd = new ButtonDefinition();
@@ -162,43 +166,44 @@ public class MessageBox {
 
 		@Override
 		public Component createFrameContent() {
-			
+
 			JFrame jframe = new JFrame();
-			
+
 			Container vbox = jframe.getContentPane();
-			//vbox.setLayout(new BoxLayout(vbox, BoxLayout.Y_AXIS));
-			
+			vbox.setLayout(new BoxLayout(vbox, BoxLayout.Y_AXIS));
+
 			JLabel textBox = new JLabel(text);
 			textBox.setAlignmentX(Component.CENTER_ALIGNMENT);
 			vbox.add(textBox);
 
-//			JPanel hbox = new JPanel();
-//			hbox.setLayout(new BoxLayout(hbox, BoxLayout.X_AXIS));
-//			vbox.add(hbox);
-//
-//			for (ButtonDefinition buttonDefinition : buttonDefinitions) {
-//
-//				final int buttonId = buttonDefinition.id;
-//				final JButton bn = buttonDefinition.button;
-//				hbox.add(bn);
-//				
-//				bn.addActionListener((e) -> {
-//					DialogBox.this.finish(buttonId);
-//				});
-//
-////				bn.setOnAction((e) -> {
-////					DialogBox.this.finish(buttonId);
-////				});
-////
-////				if (buttonDefinition.focus) {
-////					DialogBox.this.addEventHandler(WindowEvent.WINDOW_SHOWN, (e) -> {
-////						bn.requestFocus();
-////					});
-////				}
-//			}
+			JPanel hbox = new JPanel();
+			hbox.setLayout(new BoxLayout(hbox, BoxLayout.X_AXIS));
+			vbox.add(hbox);
+
+			for (ButtonDefinition buttonDefinition : buttonDefinitions) {
+
+				final int buttonId = buttonDefinition.id;
+				final JButton bn = buttonDefinition.button;
+				hbox.add(bn);
+
+				bn.addActionListener((e) -> {
+					DialogBox.this.finish(buttonId);
+				});
+
+				// bn.setOnAction((e) -> {
+				// DialogBox.this.finish(buttonId);
+				// });
+				//
+				// if (buttonDefinition.focus) {
+				// DialogBox.this.addEventHandler(WindowEvent.WINDOW_SHOWN, (e)
+				// -> {
+				// bn.requestFocus();
+				// });
+				// }
+			}
 
 			jframe.pack();
-			
+
 			return jframe.getContentPane();
 		}
 

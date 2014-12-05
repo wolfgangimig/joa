@@ -5,7 +5,7 @@ import java.awt.Component;
 import javafx.scene.control.TextField;
 import learn.CelsiusConverterGUI;
 
-import com.wilutions.joa.swing.MessageBox;
+import com.wilutions.joa.fx.MessageBox;
 import com.wilutions.joa.swing.ModalDialogSwing;
 
 public class Dialog1 extends ModalDialogSwing<String> {
@@ -25,17 +25,17 @@ public class Dialog1 extends ModalDialogSwing<String> {
 
 	@Override
 	public void onSystemMenuClose() {
+		
+		//super.onSystemMenuClose();
 
 		boolean hasText = true;
 		if (hasText) {
-			MessageBox.create(this).title("Confirm").text("Are you sure to close the dialog?")
-				.button(1, "YES")
-				.button(0, "NO").focus().cancel().bdefault()
-				.show((result, ex) -> {
-					if (result == OK) {
-						Dialog1.this.finish("");
-					}
-				});
+			MessageBox.create(this).title("Confirm").text("Are you sure to close the dialog?").button(1, "YES")
+					.button(0, "NO").focus().cancel().bdefault().show((result, ex) -> {
+						if (result == OK) {
+							Dialog1.this.finish("");
+						}
+					});
 		} else {
 			super.onSystemMenuClose();
 		}

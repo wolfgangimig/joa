@@ -8,6 +8,7 @@ import com.wilutions.joa.IconManager;
 import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.outlook.OutlookAddin;
+import com.wilutions.joa.swing.MessageBoxSwing;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
 import com.wilutions.mslib.outlook._Explorer;
@@ -31,6 +32,13 @@ public class SwingAddin extends OutlookAddin {
 
 	public void onLoadRibbon(IRibbonUI ribbon) {
 		this.ribbon = ribbon;
+	}
+	
+	public void onSmileButtonClicked(IRibbonControl control) {
+		_Explorer owner = Globals.getThisAddin().getApplication().ActiveExplorer();
+		MessageBoxSwing.show(owner, "Dialog Title", "You pressed the Smile button", (ret, ex) -> {
+			System.out.println("msgbox button=" + ret);
+		});
 	}
 
 	public Dispatch onSmileButton2GetImage(IRibbonControl control) {

@@ -303,9 +303,7 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 
 			// Create the scene. Has to be implemented by subclass.
 			Component scene = createFrameContent();
-
-			// If width and height is not set, make the dialog
-			// as large as the scene.
+			
 			maybeSetWidthAndHightFromSceneExtent(scene);
 
 			// Create the native dialog object.
@@ -358,7 +356,9 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 
 				// Create and add the View to the window.
 				window.add(scene);
-
+				
+				window.pack();
+				
 				window.setVisible(true);
 
 				this.asyncResult = asyncResult;
@@ -379,18 +379,16 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	private void maybeSetWidthAndHightFromSceneExtent(Component scene) {
 		if (width == 0 || height == 0) {
-			// scene.impl_preferredSize();
-			// double sceneWidth = scene.getWidth();
-			// double sceneHeight = scene.getHeight();
-			// if (width == 0) {
-			// width = sceneWidth + 20;
-			// }
-			// if (height == 0) {
-			// height = sceneHeight + 40;
-			// }
+			double sceneWidth = scene.getWidth();
+			double sceneHeight = scene.getHeight();
+			if (width == 0) {
+				width = sceneWidth + 20;
+			}
+			if (height == 0) {
+				height = sceneHeight + 40;
+			}
 		}
 	}
 

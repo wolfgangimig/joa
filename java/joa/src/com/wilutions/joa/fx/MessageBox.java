@@ -14,6 +14,7 @@ import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.Dispatch;
+import com.wilutions.com.WindowHandle;
 
 /**
  * This class provides convenient functions to display message boxes.
@@ -56,8 +57,8 @@ public class MessageBox {
 		private List<ButtonDefinition> _buttonDefinitions = new ArrayList<ButtonDefinition>();
 
 		public Builder owner(Object v) {
-			assert (v instanceof Dispatch) || (v instanceof ModalDialogFX);
-			if (v instanceof ModalDialogFX) {
+			assert (v instanceof Dispatch) || (v instanceof WindowHandle);
+			if (v instanceof WindowHandle) {
 				_owner = v;
 			}
 			else {
