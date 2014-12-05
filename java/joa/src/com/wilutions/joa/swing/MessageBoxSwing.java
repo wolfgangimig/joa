@@ -2,7 +2,6 @@ package com.wilutions.joa.swing;
 
 import java.awt.Component;
 import java.awt.Container;
-import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +48,7 @@ public class MessageBoxSwing {
 
 	public static class Builder {
 
+		@SuppressWarnings("unused")
 		private double _buttonMinWidth = DEFAULT_BUTTON_MIN_WIDTH;
 		private Object _owner;
 		private String _title;

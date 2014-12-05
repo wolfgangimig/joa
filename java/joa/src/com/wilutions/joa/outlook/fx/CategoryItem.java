@@ -55,7 +55,6 @@ public class CategoryItem {
 
 			for (int i = 0; i < nbOfCats; i++) {
 				final _Category cat = categories.Item(i + 1);
-				OlCategoryColor oColor = cat.getColor();
 				list.add(new CategoryItem(cat));
 			}
 		} catch (ComException ignored) {

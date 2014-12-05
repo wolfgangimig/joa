@@ -42,11 +42,11 @@ public class ComException extends RuntimeException {
 		this.hr = hr.value;
 	}
 	
-	public static class NotImpl extends ComException {
-		public NotImpl() {
-			super("", HRESULT.E_NOTIMPL);
-		}
-	}
+//	public static class NotImpl extends ComException {
+//		public NotImpl() {
+//			super("", HRESULT.E_NOTIMPL);
+//		}
+//	}
 	
 	public String toString() {
 		StringBuilder sbuf = new StringBuilder();

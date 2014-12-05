@@ -2,7 +2,6 @@ package com.wilutions.joa.swing;
 
 import java.awt.Component;
 
-import javax.swing.JMenuBar;
 import javax.swing.SwingUtilities;
 
 import com.wilutions.com.AsyncResult;
