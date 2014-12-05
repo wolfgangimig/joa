@@ -20,7 +20,7 @@
 			<fileset dir="${dll.dir}" includes="**/*.dll"/>
 		</copy>
 		
-		<jar destfile="${dest.dir}/joa-with-dlls.jar" filesetmanifest="mergewithoutmain">
+		<jar destfile="${dest.dir}/joa.jar" filesetmanifest="mergewithoutmain">
 			<manifest>
 				<attribute name="Main-Class" value="com.wilutions.joa.AddinApplication" />
 				<attribute name="Class-Path" value="." />

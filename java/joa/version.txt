@@ -4,5 +4,8 @@ JOA Version History
 
 - Swing components can be integrated with JOA. Exception: JMenuBar cannot be used.
 
-- View classes with JavaFX content were renamed and moved to package com.wilutions.joa.fx:
+- View classes for JavaFX content were renamed and moved to package com.wilutions.joa.fx:
   TaskPaneFX, FolderViewFX, FormRegionFX, ModalDialogFX.
+  
+- Renamed the joa-with-dlls.jar to joa.jar. This should make it less likely to mix it up
+  with joa-without-dlls.jar.

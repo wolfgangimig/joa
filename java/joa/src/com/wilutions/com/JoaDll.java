@@ -25,12 +25,7 @@ import java.util.Properties;
 public class JoaDll {
 	
 	static {
-		// Debugging: set this command line option in order to debug the DLL. 
-		// This option only makes sense, if the source code of the DLL is available.
-//		String strDebugJoaDll = System.getProperty("com.wilutions.joa.DebugJoaDll");
-//		boolean isDebug = strDebugJoaDll != null && strDebugJoaDll.equalsIgnoreCase("true");
-		
-		boolean isDebug = true;
+		boolean isDebug = false;
 		String fileName = "joa" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		
