@@ -9,3 +9,5 @@ JOA Version History
   
 - Renamed the joa-with-dlls.jar to joa.jar. This should make it less likely to mix it up
   with joa-without-dlls.jar.
+  
+- Previous versions did not run on 32bit Windows. 
