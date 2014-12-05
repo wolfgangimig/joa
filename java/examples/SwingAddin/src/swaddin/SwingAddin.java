@@ -13,6 +13,9 @@ import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
 import com.wilutions.mslib.outlook._Explorer;
 
+/**
+ * This example uses Swing UI components.
+ */
 @CoClass(progId = "SwingAddin.Class", guid = "{4ba197f5-81d6-4150-a710-4d6a30fd7a38}")
 @DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "Swing Addin", description = "Java Swing Outlook Addin Example.")
 public class SwingAddin extends OutlookAddin {

@@ -26,7 +26,7 @@ public class Dialog1 extends ModalDialogFX<String> {
 	}
 
 	@Override
-	public Scene createFrameContent() {
+	public Scene createScene() {
 		
 		VBox root = new VBox();
 

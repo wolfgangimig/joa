@@ -5,15 +5,12 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
-import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
-import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowHandle;
-import com.wilutions.com.WindowsUtil;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
 import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
@@ -34,7 +31,7 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	/**
 	 * JavaFX frame window placed inside the {@link #joaDlg}.
 	 */
-	private EmbeddedWindow fxFrame;
+	private EmbeddedFrameFX embeddedFrame = new EmbeddedFrameFX();
 
 	/**
 	 * Native window handle of the {@link #joaDlg}
@@ -80,12 +77,6 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	 * Caption
 	 */
 	private String title;
-
-	/**
-	 * Event handlers usually added to a Stage. Currently, only
-	 * WindowEvent.WINDOW_SHOWN is supported.
-	 */
-	private EventHandler<WindowEvent> eventHandlerWindowShown;
 
 	/**
 	 * Definition for cancel button ID.
@@ -299,13 +290,10 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	 * @param eventHandler
 	 *            handler expression
 	 */
-	@SuppressWarnings("unchecked")
 	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
-		assert eventType == WindowEvent.WINDOW_SHOWN;
-		assert eventHandler != null;
-		eventHandlerWindowShown = (EventHandler<WindowEvent>) eventHandler;
+		embeddedFrame.addEventHandler(eventType, eventHandler);
 	}
-
+	
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
@@ -327,7 +315,7 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		try {
 			
 			// Create the scene. Has to be implemented by subclass.
-			Scene scene = createFrameContent();
+			Scene scene = createScene();
 
 			// If width and height is not set, make the dialog 
 			// as large as the scene.
@@ -376,24 +364,16 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 
 			// Native dialog initialized?
 			if (state == State.HasParentHwnd) {
-
+				
 				// Create a JavaFX frame inside the native dialog
-				fxFrame = EmbeddedWindowFactory.getInstance().create(hwndParent, scene);
-
-				Platform.runLater(() -> {
-					
-					// Ensure the JavaFX frame is in the foreground.
-					long hwndChild = WindowsUtil.getWindowHandle(fxFrame);
-					JoaDll.nativeActivateSceneInDialog(hwndChild);
-
-					// Call event handler for WINDOW_SHOW
-					if (eventHandlerWindowShown != null) {
-						WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
-						eventHandlerWindowShown.handle(event);
+				embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, scene, (succ, ex) -> {
+					if (ex != null) {
+						asyncResult.setAsyncResult(null, ex);
 					}
 				});
 
 				this.asyncResult = asyncResult;
+				
 			} else {
 				asyncResult.setAsyncResult(null, new IllegalStateException(
 						"Excpected response from Office application."));
@@ -446,8 +426,8 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 			if (ModalDialogFX.this.joaDlg != null) {
 				Dispatch.releaseEvents(ModalDialogFX.this.joaDlg, this);
 			}
-			if (ModalDialogFX.this.fxFrame != null) {
-				ModalDialogFX.this.fxFrame.dispose();
+			if (ModalDialogFX.this.embeddedFrame != null) {
+				ModalDialogFX.this.embeddedFrame.close();
 			}
 
 			synchronized (ModalDialogFX.this) {

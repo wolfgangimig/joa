@@ -11,7 +11,7 @@ import com.wilutions.joa.fx.TaskPaneFX;
 public class ExplorerTaskPane extends TaskPaneFX {
 	
 	@Override
-	public Scene createFrameContent() throws ComException {
+	public Scene createScene() throws ComException {
         GridPane grid = new GridPane();
         Button clear = new Button("Klickme!");
         GridPane.setConstraints(clear, 0, 0);

@@ -1,6 +1,5 @@
 package addin1;
 
-import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -37,12 +36,6 @@ public class JoaAddin1 extends OutlookAddin {
         ribbonIcons = new IconManager(this);
     }
 
-    public void onSmileButtonClicked2(Dispatch ribbonControl) {
-    	Platform.runLater(() -> {
-    		showDialog();
-    	});
-    }
-    
     public void onSmileButtonClicked1(IRibbonControl ribbonControl) {
     	Object owner = getApplication().ActiveWindow();
     	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
@@ -75,6 +68,14 @@ public class JoaAddin1 extends OutlookAddin {
     public Dispatch onSmileButton2GetImage(IRibbonControl control) {
         Dispatch picdisp = ribbonIcons.get("MyHappyFaceIcon.png");
         return picdisp;
+    }
+    
+    public void onSmileButton2Clicked(Dispatch ribbonControl) {
+    	Dialog1 dialog = new Dialog1();
+    	Object parentWindow = getApplication().ActiveExplorer();
+    	dialog.showAsync(parentWindow, (ret, ex) -> {
+    		System.out.println("dialog returned=" + ret);
+    	});
     }
     
     public void onJoaTaskPaneClicked(Dispatch control, Boolean pressed) {

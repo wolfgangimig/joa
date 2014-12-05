@@ -165,7 +165,7 @@ public class MessageBox {
 		}
 
 		@Override
-		public Scene createFrameContent() {
+		public Scene createScene() {
 
 			VBox vbox = new VBox();
 			vbox.setAlignment(Pos.CENTER);

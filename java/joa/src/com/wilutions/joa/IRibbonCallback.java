@@ -12,10 +12,9 @@ package com.wilutions.joa;
 
 import com.wilutions.com.CoInterface;
 import com.wilutions.com.ComException;
-import com.wilutions.com.Dispatch;
 import com.wilutions.com.IDispatch;
 
 @CoInterface(guid="{B65AD801-ABAF-11D0-BB8B-00A0C90F2744}")
 public interface IRibbonCallback extends IDispatch {
-	public void onButtonClicked(Dispatch ribbonControl) throws ComException;
+	public void onButtonClicked(IDispatch ribbonControl) throws ComException;
 }

@@ -130,10 +130,9 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 
 	@Override
 	public Object GetFormRegionManifest(String FormRegionName, Integer LCID) throws ComException {
-		ClassLoader classLoader = this.getClass().getClassLoader();
 		String ret = null;
 		try {
-			ret = OfficeAddinUtil.getResourceAsString(classLoader, "swaddin/FormRegionManifest.xml");
+			ret = OfficeAddinUtil.getResourceAsString(this.getClass(), "FormRegionManifest.xml");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

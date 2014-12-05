@@ -2,9 +2,8 @@ package com.wilutions.joa.swing;
 
 import java.awt.Component;
 
+import javax.swing.JMenuBar;
 import javax.swing.SwingUtilities;
-
-import sun.awt.windows.WEmbeddedFrame;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
@@ -31,7 +30,7 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 	/**
 	 * Frame window placed inside the {@link #joaDlg}.
 	 */
-	protected WEmbeddedFrame window;
+	protected final EmbeddedFrameSwing embeddedFrame = new EmbeddedFrameSwing();
 
 	/**
 	 * Native window handle of the {@link #joaDlg}
@@ -280,7 +279,7 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 	public void setMaximizeBox(boolean maximizeBox) {
 		this.maximizeBox = maximizeBox;
 	}
-
+	
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
 	}
@@ -350,17 +349,12 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 			// Native dialog initialized?
 			if (state == State.HasParentHwnd) {
 
-				// Create the Java window as a child window of the
-				// JoaBridgeCtrl.
-				window = new WEmbeddedFrame(hwndParent);
-
-				// Create and add the View to the window.
-				window.add(scene);
+				embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, scene, (succ, ex) -> {
+					if (ex != null) {
+						asyncResult.setAsyncResult(null, ex);
+					}
+				});
 				
-				window.pack();
-				
-				window.setVisible(true);
-
 				this.asyncResult = asyncResult;
 
 			} else {
@@ -413,8 +407,8 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 			if (ModalDialogSwing.this.joaDlg != null) {
 				Dispatch.releaseEvents(ModalDialogSwing.this.joaDlg, this);
 			}
-			if (ModalDialogSwing.this.window != null) {
-				ModalDialogSwing.this.window.dispose();
+			if (ModalDialogSwing.this.embeddedFrame != null) {
+				ModalDialogSwing.this.embeddedFrame.close();
 			}
 
 			synchronized (ModalDialogSwing.this) {

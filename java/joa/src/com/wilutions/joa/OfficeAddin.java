@@ -19,6 +19,7 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.IDispatch;
 import com.wilutions.joactrllib.IJoaUtilAddin;
 import com.wilutions.mslib.office.COMAddIn;
 import com.wilutions.mslib.office.COMAddIns;
@@ -71,7 +72,7 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	}
 
 	@Override
-	public void onConnection(Dispatch app, ext_ConnectMode connectMode, Dispatch addin, ByRef<Object[]> custom)
+	public void onConnection(IDispatch app, ext_ConnectMode connectMode, IDispatch addin, ByRef<Object[]> custom)
 			throws ComException {
 		applicationObject = app.as(applicationClass);
 		applicationObject.withEvents(this);
@@ -167,8 +168,7 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	}
 
 	@Override
-	public void onButtonClicked(Dispatch ribbonControl) throws ComException {
-
+	public void onButtonClicked(IDispatch ribbonControl) throws ComException {
 	}
 
 	/**

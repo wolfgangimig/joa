@@ -30,7 +30,7 @@ public class JoaDll {
 //		String strDebugJoaDll = System.getProperty("com.wilutions.joa.DebugJoaDll");
 //		boolean isDebug = strDebugJoaDll != null && strDebugJoaDll.equalsIgnoreCase("true");
 		
-		boolean isDebug = false;
+		boolean isDebug = true;
 		String fileName = "joa" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		

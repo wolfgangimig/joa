@@ -26,7 +26,7 @@ public class MyFolderView extends FolderViewFX {
 	}
 
 	@Override
-	public Scene createFrameContent() {
+	public Scene createScene() {
 		GridPane grid = new GridPane();
 		grid.setAlignment(Pos.CENTER);
 		grid.setHgap(10);

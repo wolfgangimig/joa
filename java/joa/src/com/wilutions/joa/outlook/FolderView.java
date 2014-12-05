@@ -18,6 +18,16 @@ public abstract class FolderView implements WindowHandle {
 		this.id = id;
 	}
 
+	/**
+	 * Create and show the view.
+	 * 
+	 * @param hwndParent
+	 *            Native parent window handle.
+	 * @param asyncResult
+	 *            Expression to be called after the new view was made
+	 *            visible. This call is made from the Tookit's UI thread. This
+	 *            parameter can be null.
+	 */
 	protected abstract void createAndShowEmbeddedWindowAsync(final long hwndParent, final AsyncResult<Boolean> asyncResult);
 
 }
