@@ -169,7 +169,7 @@ public class NoteTaskPane extends TaskPaneFX {
 	}
 
 	@Override
-	public Scene createFrameContent() throws ComException {
+	public Scene createScene() throws ComException {
 
 		// The Outlook application interface
 		app = Globals.getThisAddin().getApplication();

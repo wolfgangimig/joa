@@ -36,7 +36,7 @@ public class MyOutlookAddin extends OutlookAddin {
 	}
 
 	@Override
-	public void onButtonClicked(Dispatch ribbonControl) {
+	public void onButtonClicked(IDispatch ribbonControl) {
 		System.out.println("onButtonClicked " + ribbonControl);
 
 		try {
@@ -200,11 +200,13 @@ public class MyOutlookAddin extends OutlookAddin {
 	public void AddTaskPaneClicked(final Dispatch ribbonControl) throws ComException {
 		System.out.println("AddTaskPaneClicked " + ribbonControl);
 		Object parentWindow = getApplication().ActiveExplorer();
-		createTaskPaneWindowAsync(new MyTaskPane(), "New TaskPane", parentWindow, (taskPane, ex) -> {
+		final TaskPane taskPane = new MyTaskPane();
+		createTaskPaneWindowAsync(taskPane, "New TaskPane", parentWindow, (succ, ex) -> {
 			if (ex != null) {
 				ex.printStackTrace();
 			}
 			else {
+				taskPane.setVisible(true);
 				System.out.println("Task pane added");
 			}
 		});

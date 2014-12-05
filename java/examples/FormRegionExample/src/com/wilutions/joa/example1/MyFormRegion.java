@@ -50,7 +50,7 @@ public class MyFormRegion extends FormRegionFX {
 		});
 	}
 
-	public Scene createFrameContent() {
+	public Scene createScene() {
 
 		// Creating a GridPane container
 		GridPane grid = new GridPane();
