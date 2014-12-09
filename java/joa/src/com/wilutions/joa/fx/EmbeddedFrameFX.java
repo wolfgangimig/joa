@@ -103,9 +103,17 @@ public class EmbeddedFrameFX implements WindowHandle {
 			// Create the Java window as a child window of the JoaBridgeCtrl.
 			window = EmbeddedWindowFactory.getInstance().create(hwndParent, frameContent);
 
+			
+
+// Seems that it's not necessary to set the focus for dialogs.
+// If the frame is shown for a FormRegion and this code is executed, 
+// the focus is set into the first control of the FormRegion.
+// This is not what we want if the FormRegion is part of a new mail or contact etc.
+
 			// Ensure the JavaFX frame is in the foreground.
-			long hwndChild = WindowsUtil.getWindowHandle(window);
-			JoaDll.nativeActivateSceneInDialog(hwndChild);
+//			long hwndChild = WindowsUtil.getWindowHandle(window);
+//			JoaDll.nativeActivateSceneInDialog(hwndChild);
+			
 
 			if (eventHandlerWindowShown != null) {
 				WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);

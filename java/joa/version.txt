@@ -1,5 +1,9 @@
 JOA Version History
 
+- Do not focus the Java frame window after creation anymore. If the Java frame is 
+  e.g. shown in a FormRegion of a new appointment form, the focus should start as
+  usually in the subject line and not in the FormRegion.
+
 0.4.0 2014-12-05
 
 - Swing components can be integrated with JOA. Exception: JMenuBar cannot be used.
