@@ -2,11 +2,8 @@ package swaddin;
 
 import java.awt.Component;
 
-import javax.swing.JComponent;
-
 import javafx.scene.control.TextField;
 import learn.CelsiusConverterGUI;
-import learn.ComboBoxDemo;
 
 import com.wilutions.joa.fx.MessageBox;
 import com.wilutions.joa.swing.ModalDialogSwing;

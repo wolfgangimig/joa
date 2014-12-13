@@ -1,9 +1,9 @@
 package com.wilutions.joa.fx;
 
 import com.wilutions.com.AsyncResult;
-import com.wilutions.com.WindowHandle;
+import com.wilutions.joa.outlook.FormPage;
 
-public abstract class FormPageFX implements WindowHandle, FrameContentFactory {
+public abstract class FormPageFX extends FormPage implements FrameContentFactory {
 
 	protected final EmbeddedFrameFX embeddedFrame = new EmbeddedFrameFX();
 
