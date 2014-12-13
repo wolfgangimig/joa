@@ -17,9 +17,8 @@ import java.lang.annotation.Target;
 
 /**
  * Declare the DISPID for a function or property.
- * This class is currently not evaluated during runtime.
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.FIELD})
 public @interface DeclDISPID {
 	int value();
