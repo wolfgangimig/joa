@@ -5,6 +5,7 @@ import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.WindowHandle;
+import com.wilutions.com.reg.RegUtil;
 import com.wilutions.mslib.msforms.Control;
 import com.wilutions.mslib.msforms.DataObject;
 import com.wilutions.mslib.msforms.FormEvents;
@@ -21,6 +22,18 @@ import com.wilutions.mslib.msforms.fmScrollBars;
 import com.wilutions.mslib.outlook.Pages;
 import com.wilutions.mslib.outlook._Inspector;
 
+/**
+ * This class is used to create a form page in an inspector window.
+ * 
+ * Objects are one-off forms that use the JoaBridgeCtrl ActiveX. Since ActiveXes
+ * are disabled by default on one-off forms, a particular registry value has to be
+ * set that allows ActiveX controls to be executed. If the registry value is not
+ * set, a message box appears when opening the form page (for an existing item):
+ * "To help prevent malicious code from running, one or more objects in this form 
+ * were not loaded. For more information, contact your administrator."
+ * 
+ * @see http://www.outlookcode.com/article.aspx?id=67
+ */
 public abstract class FormPage extends DispatchImpl implements FormEvents, WindowHandle {
 
 	private _UserForm page;
@@ -148,6 +161,22 @@ public abstract class FormPage extends DispatchImpl implements FormEvents, Windo
 
 	@Override
 	public void onZoom(ByRef<Short> Percent) throws ComException {
+	}
+
+	private static void allowActiveXOneOffForms(String outlookVersion) {
+		// 0 Load only the frm20.dll controls, the Outlook View Control, Outlook
+		// Recipient Control, and the docsite (message body) control
+		// 1 Allow only controls marked as "safe for initialization" to load
+		// 2 Allow all ActiveX controls to load
+		String regkeyOutlook = "HKCU\\Software\\Microsoft\\Office\\" + outlookVersion + "\\Outlook";
+		if (!RegUtil.getRegistryValue(regkeyOutlook, "OutlookName", "").equals("")) {
+			RegUtil.setRegistryValue(regkeyOutlook + "\\Security", "AllowActiveXOneOffForms", 1);
+		}
+	}
+
+	static {
+		allowActiveXOneOffForms("14.0");
+		allowActiveXOneOffForms("15.0");
 	}
 
 }

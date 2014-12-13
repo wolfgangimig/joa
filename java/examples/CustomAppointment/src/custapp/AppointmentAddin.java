@@ -63,8 +63,6 @@ public class AppointmentAddin extends OutlookAddin implements InspectorsEvents {
 			// Otherwise their icons might not be visible in the ribbon bar.
 			BackgTask.run(() -> {
 				
-				AppointmentInspectorWrapper appointmentInspector = new AppointmentInspectorWrapper(inspector);
-				
 				FormPage fp = new MyFormPageFX();
 				fp.setTitle("FX Page");
 				fp.showAsync(inspector, null);
@@ -73,8 +71,8 @@ public class AppointmentAddin extends OutlookAddin implements InspectorsEvents {
 				fp2.setTitle("Swing Page");
 				fp2.showAsync(inspector, null);
 				
-				inspector.SetCurrentFormPage("FX Page");
-				inspector.HideFormPage("Termin");
+//				inspector.SetCurrentFormPage("FX Page");
+//				inspector.HideFormPage("Termin");
 
 			});
 		}
