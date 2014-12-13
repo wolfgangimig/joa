@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{3439EA79-5069-4404-A6E3-8EE3A1B9BD0E}")
-public class XlDisplayBlanksAs {
+public class XlDisplayBlanksAs implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlDisplayBlanksAs {
     case 1: return xlNotPlotted;
     case 2: return xlZero;
     default: return new XlDisplayBlanksAs(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 3: return "xlInterpolated";
+    case 1: return "xlNotPlotted";
+    case 2: return "xlZero";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 3) != 0) sbuf.append("|xlInterpolated");
+      if ((value & 1) != 0) sbuf.append("|xlNotPlotted");
+      if ((value & 2) != 0) sbuf.append("|xlZero");
+      return sbuf.toString();
+      }
     }
   }
 }

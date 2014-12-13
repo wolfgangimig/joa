@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoMergeCmd {
+public class MsoMergeCmd implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoMergeCmd {
     case 4: return msoMergeSubtract;
     case 5: return msoMergeFragment;
     default: return new MsoMergeCmd(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoMergeUnion";
+    case 2: return "msoMergeCombine";
+    case 3: return "msoMergeIntersect";
+    case 4: return "msoMergeSubtract";
+    case 5: return "msoMergeFragment";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoMergeUnion");
+      if ((value & 2) != 0) sbuf.append("|msoMergeCombine");
+      if ((value & 3) != 0) sbuf.append("|msoMergeIntersect");
+      if ((value & 4) != 0) sbuf.append("|msoMergeSubtract");
+      if ((value & 5) != 0) sbuf.append("|msoMergeFragment");
+      return sbuf.toString();
+      }
     }
   }
 }

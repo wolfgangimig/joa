@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoButtonStyle {
+public class MsoButtonStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class MsoButtonStyle {
     case 14: return msoButtonWrapCaption;
     case 15: return msoButtonIconAndWrapCaptionBelow;
     default: return new MsoButtonStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoButtonAutomatic";
+    case 11: return "msoButtonIconAndCaptionBelow";
+    case 1: return "msoButtonIcon";
+    case 2: return "msoButtonCaption";
+    case 3: return "msoButtonIconAndCaption";
+    case 7: return "msoButtonIconAndWrapCaption";
+    case 14: return "msoButtonWrapCaption";
+    case 15: return "msoButtonIconAndWrapCaptionBelow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoButtonAutomatic");
+      if ((value & 11) != 0) sbuf.append("|msoButtonIconAndCaptionBelow");
+      if ((value & 1) != 0) sbuf.append("|msoButtonIcon");
+      if ((value & 2) != 0) sbuf.append("|msoButtonCaption");
+      if ((value & 3) != 0) sbuf.append("|msoButtonIconAndCaption");
+      if ((value & 7) != 0) sbuf.append("|msoButtonIconAndWrapCaption");
+      if ((value & 14) != 0) sbuf.append("|msoButtonWrapCaption");
+      if ((value & 15) != 0) sbuf.append("|msoButtonIconAndWrapCaptionBelow");
+      return sbuf.toString();
+      }
     }
   }
 }

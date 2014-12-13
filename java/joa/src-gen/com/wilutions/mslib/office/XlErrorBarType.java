@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlErrorBarType {
+public class XlErrorBarType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class XlErrorBarType {
     case -4155: return xlErrorBarTypeStDev;
     case 4: return xlErrorBarTypeStError;
     default: return new XlErrorBarType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4114: return "xlErrorBarTypeCustom";
+    case 1: return "xlErrorBarTypeFixedValue";
+    case -4155: return "xlErrorBarTypeStDev";
+    case 2: return "xlErrorBarTypePercent";
+    case 4: return "xlErrorBarTypeStError";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4114) != 0) sbuf.append("|xlErrorBarTypeCustom");
+      if ((value & 1) != 0) sbuf.append("|xlErrorBarTypeFixedValue");
+      if ((value & -4155) != 0) sbuf.append("|xlErrorBarTypeStDev");
+      if ((value & 2) != 0) sbuf.append("|xlErrorBarTypePercent");
+      if ((value & 4) != 0) sbuf.append("|xlErrorBarTypeStError");
+      return sbuf.toString();
+      }
     }
   }
 }

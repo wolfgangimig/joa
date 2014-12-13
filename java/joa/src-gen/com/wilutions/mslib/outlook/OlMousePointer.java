@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{1BA5FCB6-05E9-4721-979D-3CE2C9084479}")
-public class OlMousePointer {
+public class OlMousePointer implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -70,6 +70,46 @@ public class OlMousePointer {
     case 15: return olMousePointerSizeAll;
     case 99: return olMousePointerCustom;
     default: return new OlMousePointer(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olMousePointerDefault";
+    case 10: return "olMousePointerUpArrow";
+    case 8: return "olMousePointerSizeNWSE";
+    case 9: return "olMousePointerSizeWE";
+    case 99: return "olMousePointerCustom";
+    case 1: return "olMousePointerArrow";
+    case 2: return "olMousePointerCross";
+    case 3: return "olMousePointerIBeam";
+    case 6: return "olMousePointerSizeNESW";
+    case 7: return "olMousePointerSizeNS";
+    case 11: return "olMousePointerHourGlass";
+    case 12: return "olMousePointerNoDrop";
+    case 13: return "olMousePointerAppStarting";
+    case 14: return "olMousePointerHelp";
+    case 15: return "olMousePointerSizeAll";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olMousePointerDefault");
+      if ((value & 10) != 0) sbuf.append("|olMousePointerUpArrow");
+      if ((value & 8) != 0) sbuf.append("|olMousePointerSizeNWSE");
+      if ((value & 9) != 0) sbuf.append("|olMousePointerSizeWE");
+      if ((value & 99) != 0) sbuf.append("|olMousePointerCustom");
+      if ((value & 1) != 0) sbuf.append("|olMousePointerArrow");
+      if ((value & 2) != 0) sbuf.append("|olMousePointerCross");
+      if ((value & 3) != 0) sbuf.append("|olMousePointerIBeam");
+      if ((value & 6) != 0) sbuf.append("|olMousePointerSizeNESW");
+      if ((value & 7) != 0) sbuf.append("|olMousePointerSizeNS");
+      if ((value & 11) != 0) sbuf.append("|olMousePointerHourGlass");
+      if ((value & 12) != 0) sbuf.append("|olMousePointerNoDrop");
+      if ((value & 13) != 0) sbuf.append("|olMousePointerAppStarting");
+      if ((value & 14) != 0) sbuf.append("|olMousePointerHelp");
+      if ((value & 15) != 0) sbuf.append("|olMousePointerSizeAll");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatInteger {
+public class OlFormatInteger implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlFormatInteger {
     case 3: return olFormatIntegerComputer2;
     case 4: return olFormatIntegerComputer3;
     default: return new OlFormatInteger(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olFormatIntegerPlain";
+    case 2: return "olFormatIntegerComputer1";
+    case 3: return "olFormatIntegerComputer2";
+    case 4: return "olFormatIntegerComputer3";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olFormatIntegerPlain");
+      if ((value & 2) != 0) sbuf.append("|olFormatIntegerComputer1");
+      if ((value & 3) != 0) sbuf.append("|olFormatIntegerComputer2");
+      if ((value & 4) != 0) sbuf.append("|olFormatIntegerComputer3");
+      return sbuf.toString();
+      }
     }
   }
 }

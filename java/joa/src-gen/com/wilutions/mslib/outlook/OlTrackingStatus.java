@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlTrackingStatus {
+public class OlTrackingStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class OlTrackingStatus {
     case 6: return olTrackingRead;
     case 7: return olTrackingReplied;
     default: return new OlTrackingStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTrackingNone";
+    case 1: return "olTrackingDelivered";
+    case 2: return "olTrackingNotDelivered";
+    case 3: return "olTrackingNotRead";
+    case 4: return "olTrackingRecallFailure";
+    case 5: return "olTrackingRecallSuccess";
+    case 6: return "olTrackingRead";
+    case 7: return "olTrackingReplied";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTrackingNone");
+      if ((value & 1) != 0) sbuf.append("|olTrackingDelivered");
+      if ((value & 2) != 0) sbuf.append("|olTrackingNotDelivered");
+      if ((value & 3) != 0) sbuf.append("|olTrackingNotRead");
+      if ((value & 4) != 0) sbuf.append("|olTrackingRecallFailure");
+      if ((value & 5) != 0) sbuf.append("|olTrackingRecallSuccess");
+      if ((value & 6) != 0) sbuf.append("|olTrackingRead");
+      if ((value & 7) != 0) sbuf.append("|olTrackingReplied");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoScreenSize {
+public class MsoScreenSize implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -58,6 +58,38 @@ public class MsoScreenSize {
     case 9: return msoScreenSize1800x1440;
     case 10: return msoScreenSize1920x1200;
     default: return new MsoScreenSize(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "msoScreenSize1600x1200";
+    case 10: return "msoScreenSize1920x1200";
+    case 0: return "msoScreenSize544x376";
+    case 1: return "msoScreenSize640x480";
+    case 2: return "msoScreenSize720x512";
+    case 3: return "msoScreenSize800x600";
+    case 4: return "msoScreenSize1024x768";
+    case 5: return "msoScreenSize1152x882";
+    case 6: return "msoScreenSize1152x900";
+    case 7: return "msoScreenSize1280x1024";
+    case 9: return "msoScreenSize1800x1440";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|msoScreenSize1600x1200");
+      if ((value & 10) != 0) sbuf.append("|msoScreenSize1920x1200");
+      if ((value & 0) != 0) sbuf.append("|msoScreenSize544x376");
+      if ((value & 1) != 0) sbuf.append("|msoScreenSize640x480");
+      if ((value & 2) != 0) sbuf.append("|msoScreenSize720x512");
+      if ((value & 3) != 0) sbuf.append("|msoScreenSize800x600");
+      if ((value & 4) != 0) sbuf.append("|msoScreenSize1024x768");
+      if ((value & 5) != 0) sbuf.append("|msoScreenSize1152x882");
+      if ((value & 6) != 0) sbuf.append("|msoScreenSize1152x900");
+      if ((value & 7) != 0) sbuf.append("|msoScreenSize1280x1024");
+      if ((value & 9) != 0) sbuf.append("|msoScreenSize1800x1440");
+      return sbuf.toString();
+      }
     }
   }
 }

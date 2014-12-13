@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{14C73C30-1612-11CE-9E98-00AA00574A4F}")
-public class fmZOrder {
+public class fmZOrder implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmZOrder {
     case 0: return fmZOrderFront;
     case 1: return fmZOrderBack;
     default: return new fmZOrder(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmZOrderFront";
+    case 1: return "fmZOrderBack";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmZOrderFront");
+      if ((value & 1) != 0) sbuf.append("|fmZOrderBack");
+      return sbuf.toString();
+      }
     }
   }
 }

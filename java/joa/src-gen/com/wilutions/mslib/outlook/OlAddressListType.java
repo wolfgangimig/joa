@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlAddressListType {
+public class OlAddressListType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlAddressListType {
     case 3: return olOutlookLdapAddressList;
     case 4: return olCustomAddressList;
     default: return new OlAddressListType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olExchangeGlobalAddressList";
+    case 1: return "olExchangeContainer";
+    case 2: return "olOutlookAddressList";
+    case 3: return "olOutlookLdapAddressList";
+    case 4: return "olCustomAddressList";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olExchangeGlobalAddressList");
+      if ((value & 1) != 0) sbuf.append("|olExchangeContainer");
+      if ((value & 2) != 0) sbuf.append("|olOutlookAddressList");
+      if ((value & 3) != 0) sbuf.append("|olOutlookLdapAddressList");
+      if ((value & 4) != 0) sbuf.append("|olCustomAddressList");
+      return sbuf.toString();
+      }
     }
   }
 }

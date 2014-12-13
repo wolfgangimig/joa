@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlItemType {
+public class OlItemType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -55,6 +55,36 @@ public class OlItemType {
     case 11: return olMobileItemSMS;
     case 12: return olMobileItemMMS;
     default: return new OlItemType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olMailItem";
+    case 11: return "olMobileItemSMS";
+    case 1: return "olAppointmentItem";
+    case 2: return "olContactItem";
+    case 3: return "olTaskItem";
+    case 4: return "olJournalItem";
+    case 5: return "olNoteItem";
+    case 6: return "olPostItem";
+    case 7: return "olDistributionListItem";
+    case 12: return "olMobileItemMMS";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olMailItem");
+      if ((value & 11) != 0) sbuf.append("|olMobileItemSMS");
+      if ((value & 1) != 0) sbuf.append("|olAppointmentItem");
+      if ((value & 2) != 0) sbuf.append("|olContactItem");
+      if ((value & 3) != 0) sbuf.append("|olTaskItem");
+      if ((value & 4) != 0) sbuf.append("|olJournalItem");
+      if ((value & 5) != 0) sbuf.append("|olNoteItem");
+      if ((value & 6) != 0) sbuf.append("|olPostItem");
+      if ((value & 7) != 0) sbuf.append("|olDistributionListItem");
+      if ((value & 12) != 0) sbuf.append("|olMobileItemMMS");
+      return sbuf.toString();
+      }
     }
   }
 }

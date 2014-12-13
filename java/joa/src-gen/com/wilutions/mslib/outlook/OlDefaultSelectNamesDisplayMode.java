@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlDefaultSelectNamesDisplayMode {
+public class OlDefaultSelectNamesDisplayMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class OlDefaultSelectNamesDisplayMode {
     case 7: return olDefaultSingleName;
     case 8: return olDefaultPickRooms;
     default: return new OlDefaultSelectNamesDisplayMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olDefaultMail";
+    case 2: return "olDefaultMeeting";
+    case 4: return "olDefaultSharingRequest";
+    case 3: return "olDefaultTask";
+    case 5: return "olDefaultMembers";
+    case 6: return "olDefaultDelegates";
+    case 7: return "olDefaultSingleName";
+    case 8: return "olDefaultPickRooms";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olDefaultMail");
+      if ((value & 2) != 0) sbuf.append("|olDefaultMeeting");
+      if ((value & 4) != 0) sbuf.append("|olDefaultSharingRequest");
+      if ((value & 3) != 0) sbuf.append("|olDefaultTask");
+      if ((value & 5) != 0) sbuf.append("|olDefaultMembers");
+      if ((value & 6) != 0) sbuf.append("|olDefaultDelegates");
+      if ((value & 7) != 0) sbuf.append("|olDefaultSingleName");
+      if ((value & 8) != 0) sbuf.append("|olDefaultPickRooms");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{6A0D7E5C-F9AD-4927-A850-5638891724B2}")
-public class XlScaleType {
+public class XlScaleType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class XlScaleType {
     case -4132: return xlScaleLinear;
     case -4133: return xlScaleLogarithmic;
     default: return new XlScaleType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4132: return "xlScaleLinear";
+    case -4133: return "xlScaleLogarithmic";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4132) != 0) sbuf.append("|xlScaleLinear");
+      if ((value & -4133) != 0) sbuf.append("|xlScaleLogarithmic");
+      return sbuf.toString();
+      }
     }
   }
 }

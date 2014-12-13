@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFlagStatus {
+public class OlFlagStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlFlagStatus {
     case 1: return olFlagComplete;
     case 2: return olFlagMarked;
     default: return new OlFlagStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olNoFlag";
+    case 1: return "olFlagComplete";
+    case 2: return "olFlagMarked";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olNoFlag");
+      if ((value & 1) != 0) sbuf.append("|olFlagComplete");
+      if ((value & 2) != 0) sbuf.append("|olFlagMarked");
+      return sbuf.toString();
+      }
     }
   }
 }

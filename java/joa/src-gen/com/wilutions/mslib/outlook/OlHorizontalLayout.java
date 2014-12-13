@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{634EE3C4-6BCB-4BD6-8997-30C9DB02E223}")
-public class OlHorizontalLayout {
+public class OlHorizontalLayout implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlHorizontalLayout {
     case 2: return olHorizontalLayoutAlignRight;
     case 3: return olHorizontalLayoutGrow;
     default: return new OlHorizontalLayout(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olHorizontalLayoutAlignLeft";
+    case 1: return "olHorizontalLayoutAlignCenter";
+    case 2: return "olHorizontalLayoutAlignRight";
+    case 3: return "olHorizontalLayoutGrow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olHorizontalLayoutAlignLeft");
+      if ((value & 1) != 0) sbuf.append("|olHorizontalLayoutAlignCenter");
+      if ((value & 2) != 0) sbuf.append("|olHorizontalLayoutAlignRight");
+      if ((value & 3) != 0) sbuf.append("|olHorizontalLayoutGrow");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{14D122B0-C6E7-11CE-827C-00AA004BA6AE}")
-public class fmDropButtonStyle {
+public class fmDropButtonStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmDropButtonStyle {
     case 2: return fmDropButtonStyleEllipsis;
     case 3: return fmDropButtonStyleReduce;
     default: return new fmDropButtonStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmDropButtonStylePlain";
+    case 1: return "fmDropButtonStyleArrow";
+    case 2: return "fmDropButtonStyleEllipsis";
+    case 3: return "fmDropButtonStyleReduce";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmDropButtonStylePlain");
+      if ((value & 1) != 0) sbuf.append("|fmDropButtonStyleArrow");
+      if ((value & 2) != 0) sbuf.append("|fmDropButtonStyleEllipsis");
+      if ((value & 3) != 0) sbuf.append("|fmDropButtonStyleReduce");
+      return sbuf.toString();
+      }
     }
   }
 }

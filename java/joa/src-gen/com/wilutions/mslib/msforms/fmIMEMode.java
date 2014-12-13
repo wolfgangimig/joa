@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{4D067CD0-0D74-11CF-B474-00AA006EB734}")
-public class fmIMEMode {
+public class fmIMEMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -64,6 +64,42 @@ public class fmIMEMode {
     case 11: return fmIMEModeHanziFull;
     case 12: return fmIMEModeHanzi;
     default: return new fmIMEMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "fmIMEModeAlpha";
+    case 10: return "fmIMEModeHangul";
+    case 0: return "fmIMEModeNoControl";
+    case 1: return "fmIMEModeOn";
+    case 2: return "fmIMEModeOff";
+    case 3: return "fmIMEModeDisable";
+    case 4: return "fmIMEModeHiragana";
+    case 5: return "fmIMEModeKatakana";
+    case 6: return "fmIMEModeKatakanaHalf";
+    case 7: return "fmIMEModeAlphaFull";
+    case 9: return "fmIMEModeHangulFull";
+    case 11: return "fmIMEModeHanziFull";
+    case 12: return "fmIMEModeHanzi";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|fmIMEModeAlpha");
+      if ((value & 10) != 0) sbuf.append("|fmIMEModeHangul");
+      if ((value & 0) != 0) sbuf.append("|fmIMEModeNoControl");
+      if ((value & 1) != 0) sbuf.append("|fmIMEModeOn");
+      if ((value & 2) != 0) sbuf.append("|fmIMEModeOff");
+      if ((value & 3) != 0) sbuf.append("|fmIMEModeDisable");
+      if ((value & 4) != 0) sbuf.append("|fmIMEModeHiragana");
+      if ((value & 5) != 0) sbuf.append("|fmIMEModeKatakana");
+      if ((value & 6) != 0) sbuf.append("|fmIMEModeKatakanaHalf");
+      if ((value & 7) != 0) sbuf.append("|fmIMEModeAlphaFull");
+      if ((value & 9) != 0) sbuf.append("|fmIMEModeHangulFull");
+      if ((value & 11) != 0) sbuf.append("|fmIMEModeHanziFull");
+      if ((value & 12) != 0) sbuf.append("|fmIMEModeHanzi");
+      return sbuf.toString();
+      }
     }
   }
 }

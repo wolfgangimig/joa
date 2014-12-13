@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlGridLineStyle {
+public class OlGridLineStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlGridLineStyle {
     case 3: return olGridLineDashes;
     case 4: return olGridLineSolid;
     default: return new OlGridLineStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olGridLineNone";
+    case 1: return "olGridLineSmallDots";
+    case 2: return "olGridLineLargeDots";
+    case 3: return "olGridLineDashes";
+    case 4: return "olGridLineSolid";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olGridLineNone");
+      if ((value & 1) != 0) sbuf.append("|olGridLineSmallDots");
+      if ((value & 2) != 0) sbuf.append("|olGridLineLargeDots");
+      if ((value & 3) != 0) sbuf.append("|olGridLineDashes");
+      if ((value & 4) != 0) sbuf.append("|olGridLineSolid");
+      return sbuf.toString();
+      }
     }
   }
 }

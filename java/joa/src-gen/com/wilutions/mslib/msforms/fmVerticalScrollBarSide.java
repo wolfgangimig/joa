@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{D625CA10-CC59-11CE-B653-00AA004CD6D8}")
-public class fmVerticalScrollBarSide {
+public class fmVerticalScrollBarSide implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmVerticalScrollBarSide {
     case 0: return fmVerticalScrollBarSideRight;
     case 1: return fmVerticalScrollBarSideLeft;
     default: return new fmVerticalScrollBarSide(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmVerticalScrollBarSideRight";
+    case 1: return "fmVerticalScrollBarSideLeft";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmVerticalScrollBarSideRight");
+      if ((value & 1) != 0) sbuf.append("|fmVerticalScrollBarSideLeft");
+      return sbuf.toString();
+      }
     }
   }
 }

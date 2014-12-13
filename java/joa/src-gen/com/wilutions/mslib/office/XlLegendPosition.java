@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{04D217CD-1859-4786-B583-07BA2092A552}")
-public class XlLegendPosition {
+public class XlLegendPosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class XlLegendPosition {
     case -4160: return xlLegendPositionTop;
     case -4161: return xlLegendPositionCustom;
     default: return new XlLegendPosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4161: return "xlLegendPositionCustom";
+    case -4107: return "xlLegendPositionBottom";
+    case -4160: return "xlLegendPositionTop";
+    case 2: return "xlLegendPositionCorner";
+    case -4131: return "xlLegendPositionLeft";
+    case -4152: return "xlLegendPositionRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4161) != 0) sbuf.append("|xlLegendPositionCustom");
+      if ((value & -4107) != 0) sbuf.append("|xlLegendPositionBottom");
+      if ((value & -4160) != 0) sbuf.append("|xlLegendPositionTop");
+      if ((value & 2) != 0) sbuf.append("|xlLegendPositionCorner");
+      if ((value & -4131) != 0) sbuf.append("|xlLegendPositionLeft");
+      if ((value & -4152) != 0) sbuf.append("|xlLegendPositionRight");
+      return sbuf.toString();
+      }
     }
   }
 }

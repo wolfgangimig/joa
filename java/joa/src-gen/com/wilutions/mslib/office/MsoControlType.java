@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoControlType {
+public class MsoControlType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -106,6 +106,70 @@ public class MsoControlType {
     case 25: return msoControlWorkPane;
     case 26: return msoControlAutoCompleteCombo;
     default: return new MsoControlType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 18: return "msoControlGrid";
+    case 8: return "msoControlGenericDropdown";
+    case 10: return "msoControlPopup";
+    case 0: return "msoControlCustom";
+    case 1: return "msoControlButton";
+    case 2: return "msoControlEdit";
+    case 3: return "msoControlDropdown";
+    case 4: return "msoControlComboBox";
+    case 5: return "msoControlButtonDropdown";
+    case 6: return "msoControlSplitDropdown";
+    case 7: return "msoControlOCXDropdown";
+    case 20: return "msoControlGraphicCombo";
+    case 9: return "msoControlGraphicDropdown";
+    case 11: return "msoControlGraphicPopup";
+    case 12: return "msoControlButtonPopup";
+    case 13: return "msoControlSplitButtonPopup";
+    case 14: return "msoControlSplitButtonMRUPopup";
+    case 15: return "msoControlLabel";
+    case 16: return "msoControlExpandingGrid";
+    case 17: return "msoControlSplitExpandingGrid";
+    case 19: return "msoControlGauge";
+    case 21: return "msoControlPane";
+    case 22: return "msoControlActiveX";
+    case 23: return "msoControlSpinner";
+    case 24: return "msoControlLabelEx";
+    case 25: return "msoControlWorkPane";
+    case 26: return "msoControlAutoCompleteCombo";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 18) != 0) sbuf.append("|msoControlGrid");
+      if ((value & 8) != 0) sbuf.append("|msoControlGenericDropdown");
+      if ((value & 10) != 0) sbuf.append("|msoControlPopup");
+      if ((value & 0) != 0) sbuf.append("|msoControlCustom");
+      if ((value & 1) != 0) sbuf.append("|msoControlButton");
+      if ((value & 2) != 0) sbuf.append("|msoControlEdit");
+      if ((value & 3) != 0) sbuf.append("|msoControlDropdown");
+      if ((value & 4) != 0) sbuf.append("|msoControlComboBox");
+      if ((value & 5) != 0) sbuf.append("|msoControlButtonDropdown");
+      if ((value & 6) != 0) sbuf.append("|msoControlSplitDropdown");
+      if ((value & 7) != 0) sbuf.append("|msoControlOCXDropdown");
+      if ((value & 20) != 0) sbuf.append("|msoControlGraphicCombo");
+      if ((value & 9) != 0) sbuf.append("|msoControlGraphicDropdown");
+      if ((value & 11) != 0) sbuf.append("|msoControlGraphicPopup");
+      if ((value & 12) != 0) sbuf.append("|msoControlButtonPopup");
+      if ((value & 13) != 0) sbuf.append("|msoControlSplitButtonPopup");
+      if ((value & 14) != 0) sbuf.append("|msoControlSplitButtonMRUPopup");
+      if ((value & 15) != 0) sbuf.append("|msoControlLabel");
+      if ((value & 16) != 0) sbuf.append("|msoControlExpandingGrid");
+      if ((value & 17) != 0) sbuf.append("|msoControlSplitExpandingGrid");
+      if ((value & 19) != 0) sbuf.append("|msoControlGauge");
+      if ((value & 21) != 0) sbuf.append("|msoControlPane");
+      if ((value & 22) != 0) sbuf.append("|msoControlActiveX");
+      if ((value & 23) != 0) sbuf.append("|msoControlSpinner");
+      if ((value & 24) != 0) sbuf.append("|msoControlLabelEx");
+      if ((value & 25) != 0) sbuf.append("|msoControlWorkPane");
+      if ((value & 26) != 0) sbuf.append("|msoControlAutoCompleteCombo");
+      return sbuf.toString();
+      }
     }
   }
 }

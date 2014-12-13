@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlMailingAddress {
+public class OlMailingAddress implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlMailingAddress {
     case 2: return olBusiness;
     case 3: return olOther;
     default: return new OlMailingAddress(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olNone";
+    case 1: return "olHome";
+    case 2: return "olBusiness";
+    case 3: return "olOther";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olNone");
+      if ((value & 1) != 0) sbuf.append("|olHome");
+      if ((value & 2) != 0) sbuf.append("|olBusiness");
+      if ((value & 3) != 0) sbuf.append("|olOther");
+      return sbuf.toString();
+      }
     }
   }
 }

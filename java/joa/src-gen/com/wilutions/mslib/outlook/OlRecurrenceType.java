@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRecurrenceType {
+public class OlRecurrenceType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class OlRecurrenceType {
     case 5: return olRecursYearly;
     case 6: return olRecursYearNth;
     default: return new OlRecurrenceType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olRecursDaily";
+    case 1: return "olRecursWeekly";
+    case 2: return "olRecursMonthly";
+    case 3: return "olRecursMonthNth";
+    case 5: return "olRecursYearly";
+    case 6: return "olRecursYearNth";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olRecursDaily");
+      if ((value & 1) != 0) sbuf.append("|olRecursWeekly");
+      if ((value & 2) != 0) sbuf.append("|olRecursMonthly");
+      if ((value & 3) != 0) sbuf.append("|olRecursMonthNth");
+      if ((value & 5) != 0) sbuf.append("|olRecursYearly");
+      if ((value & 6) != 0) sbuf.append("|olRecursYearNth");
+      return sbuf.toString();
+      }
     }
   }
 }

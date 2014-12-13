@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRuleExecuteOption {
+public class OlRuleExecuteOption implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlRuleExecuteOption {
     case 1: return olRuleExecuteReadMessages;
     case 2: return olRuleExecuteUnreadMessages;
     default: return new OlRuleExecuteOption(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olRuleExecuteAllMessages";
+    case 1: return "olRuleExecuteReadMessages";
+    case 2: return "olRuleExecuteUnreadMessages";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olRuleExecuteAllMessages");
+      if ((value & 1) != 0) sbuf.append("|olRuleExecuteReadMessages");
+      if ((value & 2) != 0) sbuf.append("|olRuleExecuteUnreadMessages");
+      return sbuf.toString();
+      }
     }
   }
 }

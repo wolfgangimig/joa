@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{4FD8B708-E730-49B5-BDD3-B807F48E5B83}")
-public class OlTimeStyle {
+public class OlTimeStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlTimeStyle {
     case 1: return olTimeStyleTimeDuration;
     case 4: return olTimeStyleShortDuration;
     default: return new OlTimeStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTimeStyleTimeOnly";
+    case 1: return "olTimeStyleTimeDuration";
+    case 4: return "olTimeStyleShortDuration";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTimeStyleTimeOnly");
+      if ((value & 1) != 0) sbuf.append("|olTimeStyleTimeDuration");
+      if ((value & 4) != 0) sbuf.append("|olTimeStyleShortDuration");
+      return sbuf.toString();
+      }
     }
   }
 }

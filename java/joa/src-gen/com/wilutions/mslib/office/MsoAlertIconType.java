@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAlertIconType {
+public class MsoAlertIconType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoAlertIconType {
     case 3: return msoAlertIconWarning;
     case 4: return msoAlertIconInfo;
     default: return new MsoAlertIconType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoAlertIconNoIcon";
+    case 1: return "msoAlertIconCritical";
+    case 2: return "msoAlertIconQuery";
+    case 3: return "msoAlertIconWarning";
+    case 4: return "msoAlertIconInfo";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoAlertIconNoIcon");
+      if ((value & 1) != 0) sbuf.append("|msoAlertIconCritical");
+      if ((value & 2) != 0) sbuf.append("|msoAlertIconQuery");
+      if ((value & 3) != 0) sbuf.append("|msoAlertIconWarning");
+      if ((value & 4) != 0) sbuf.append("|msoAlertIconInfo");
+      return sbuf.toString();
+      }
     }
   }
 }

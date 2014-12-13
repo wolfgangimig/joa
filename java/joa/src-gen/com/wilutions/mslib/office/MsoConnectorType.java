@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoConnectorType {
+public class MsoConnectorType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoConnectorType {
     case 2: return msoConnectorElbow;
     case 3: return msoConnectorCurve;
     default: return new MsoConnectorType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoConnectorElbow";
+    case -2: return "msoConnectorTypeMixed";
+    case 1: return "msoConnectorStraight";
+    case 3: return "msoConnectorCurve";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoConnectorElbow");
+      if ((value & -2) != 0) sbuf.append("|msoConnectorTypeMixed");
+      if ((value & 1) != 0) sbuf.append("|msoConnectorStraight");
+      if ((value & 3) != 0) sbuf.append("|msoConnectorCurve");
+      return sbuf.toString();
+      }
     }
   }
 }

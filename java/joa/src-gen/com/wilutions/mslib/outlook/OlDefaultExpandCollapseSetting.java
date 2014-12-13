@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlDefaultExpandCollapseSetting {
+public class OlDefaultExpandCollapseSetting implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlDefaultExpandCollapseSetting {
     case 1: return olAllCollapsed;
     case 2: return olLastViewed;
     default: return new OlDefaultExpandCollapseSetting(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olAllExpanded";
+    case 1: return "olAllCollapsed";
+    case 2: return "olLastViewed";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olAllExpanded");
+      if ((value & 1) != 0) sbuf.append("|olAllCollapsed");
+      if ((value & 2) != 0) sbuf.append("|olLastViewed");
+      return sbuf.toString();
+      }
     }
   }
 }

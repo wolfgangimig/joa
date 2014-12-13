@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoCustomXMLNodeType {
+public class MsoCustomXMLNodeType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoCustomXMLNodeType {
     case 8: return msoCustomXMLNodeComment;
     case 9: return msoCustomXMLNodeDocument;
     default: return new MsoCustomXMLNodeType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "msoCustomXMLNodeDocument";
+    case 1: return "msoCustomXMLNodeElement";
+    case 2: return "msoCustomXMLNodeAttribute";
+    case 3: return "msoCustomXMLNodeText";
+    case 4: return "msoCustomXMLNodeCData";
+    case 7: return "msoCustomXMLNodeProcessingInstruction";
+    case 8: return "msoCustomXMLNodeComment";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|msoCustomXMLNodeDocument");
+      if ((value & 1) != 0) sbuf.append("|msoCustomXMLNodeElement");
+      if ((value & 2) != 0) sbuf.append("|msoCustomXMLNodeAttribute");
+      if ((value & 3) != 0) sbuf.append("|msoCustomXMLNodeText");
+      if ((value & 4) != 0) sbuf.append("|msoCustomXMLNodeCData");
+      if ((value & 7) != 0) sbuf.append("|msoCustomXMLNodeProcessingInstruction");
+      if ((value & 8) != 0) sbuf.append("|msoCustomXMLNodeComment");
+      return sbuf.toString();
+      }
     }
   }
 }

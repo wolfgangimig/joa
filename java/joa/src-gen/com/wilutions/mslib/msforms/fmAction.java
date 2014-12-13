@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{570C03E0-F797-11CE-B9EC-00AA006B1A69}")
-public class fmAction {
+public class fmAction implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmAction {
     case 2: return fmActionPaste;
     case 3: return fmActionDragDrop;
     default: return new fmAction(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmActionCut";
+    case 1: return "fmActionCopy";
+    case 2: return "fmActionPaste";
+    case 3: return "fmActionDragDrop";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmActionCut");
+      if ((value & 1) != 0) sbuf.append("|fmActionCopy");
+      if ((value & 2) != 0) sbuf.append("|fmActionPaste");
+      if ((value & 3) != 0) sbuf.append("|fmActionDragDrop");
+      return sbuf.toString();
+      }
     }
   }
 }

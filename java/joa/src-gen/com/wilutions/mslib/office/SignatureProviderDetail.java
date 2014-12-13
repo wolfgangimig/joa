@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class SignatureProviderDetail {
+public class SignatureProviderDetail implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class SignatureProviderDetail {
     case 3: return sigprovdetUseOfficeUI;
     case 4: return sigprovdetUseOfficeStampUI;
     default: return new SignatureProviderDetail(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "sigprovdetUrl";
+    case 1: return "sigprovdetHashAlgorithm";
+    case 2: return "sigprovdetUIOnly";
+    case 3: return "sigprovdetUseOfficeUI";
+    case 4: return "sigprovdetUseOfficeStampUI";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|sigprovdetUrl");
+      if ((value & 1) != 0) sbuf.append("|sigprovdetHashAlgorithm");
+      if ((value & 2) != 0) sbuf.append("|sigprovdetUIOnly");
+      if ((value & 3) != 0) sbuf.append("|sigprovdetUseOfficeUI");
+      if ((value & 4) != 0) sbuf.append("|sigprovdetUseOfficeStampUI");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlBusyStatus {
+public class OlBusyStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlBusyStatus {
     case 3: return olOutOfOffice;
     case 4: return olWorkingElsewhere;
     default: return new OlBusyStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olFree";
+    case 1: return "olTentative";
+    case 2: return "olBusy";
+    case 3: return "olOutOfOffice";
+    case 4: return "olWorkingElsewhere";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olFree");
+      if ((value & 1) != 0) sbuf.append("|olTentative");
+      if ((value & 2) != 0) sbuf.append("|olBusy");
+      if ((value & 3) != 0) sbuf.append("|olOutOfOffice");
+      if ((value & 4) != 0) sbuf.append("|olWorkingElsewhere");
+      return sbuf.toString();
+      }
     }
   }
 }

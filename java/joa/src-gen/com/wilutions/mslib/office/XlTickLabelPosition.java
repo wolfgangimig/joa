@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{964562FD-22B1-4E15-9931-C555434E6538}")
-public class XlTickLabelPosition {
+public class XlTickLabelPosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class XlTickLabelPosition {
     case 4: return xlTickLabelPositionNextToAxis;
     case -4142: return xlTickLabelPositionNone;
     default: return new XlTickLabelPosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4134: return "xlTickLabelPositionLow";
+    case -4127: return "xlTickLabelPositionHigh";
+    case 4: return "xlTickLabelPositionNextToAxis";
+    case -4142: return "xlTickLabelPositionNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4134) != 0) sbuf.append("|xlTickLabelPositionLow");
+      if ((value & -4127) != 0) sbuf.append("|xlTickLabelPositionHigh");
+      if ((value & 4) != 0) sbuf.append("|xlTickLabelPositionNextToAxis");
+      if ((value & -4142) != 0) sbuf.append("|xlTickLabelPositionNone");
+      return sbuf.toString();
+      }
     }
   }
 }

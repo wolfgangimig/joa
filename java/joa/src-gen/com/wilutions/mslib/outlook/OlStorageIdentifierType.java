@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlStorageIdentifierType {
+public class OlStorageIdentifierType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlStorageIdentifierType {
     case 1: return olIdentifyByEntryID;
     case 2: return olIdentifyByMessageClass;
     default: return new OlStorageIdentifierType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olIdentifyBySubject";
+    case 1: return "olIdentifyByEntryID";
+    case 2: return "olIdentifyByMessageClass";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olIdentifyBySubject");
+      if ((value & 1) != 0) sbuf.append("|olIdentifyByEntryID");
+      if ((value & 2) != 0) sbuf.append("|olIdentifyByMessageClass");
+      return sbuf.toString();
+      }
     }
   }
 }

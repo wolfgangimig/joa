@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class RibbonControlSize {
+public class RibbonControlSize implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class RibbonControlSize {
     case 0: return RibbonControlSizeRegular;
     case 1: return RibbonControlSizeLarge;
     default: return new RibbonControlSize(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "RibbonControlSizeRegular";
+    case 1: return "RibbonControlSizeLarge";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|RibbonControlSizeRegular");
+      if ((value & 1) != 0) sbuf.append("|RibbonControlSizeLarge");
+      return sbuf.toString();
+      }
     }
   }
 }

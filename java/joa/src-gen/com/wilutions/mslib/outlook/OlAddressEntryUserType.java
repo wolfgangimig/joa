@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlAddressEntryUserType {
+public class OlAddressEntryUserType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -58,6 +58,38 @@ public class OlAddressEntryUserType {
     case 30: return olSmtpAddressEntry;
     case 40: return olOtherAddressEntry;
     default: return new OlAddressEntryUserType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olExchangeUserAddressEntry";
+    case 10: return "olOutlookContactAddressEntry";
+    case 20: return "olLdapAddressEntry";
+    case 11: return "olOutlookDistributionListAddressEntry";
+    case 1: return "olExchangeDistributionListAddressEntry";
+    case 2: return "olExchangePublicFolderAddressEntry";
+    case 3: return "olExchangeAgentAddressEntry";
+    case 4: return "olExchangeOrganizationAddressEntry";
+    case 5: return "olExchangeRemoteUserAddressEntry";
+    case 30: return "olSmtpAddressEntry";
+    case 40: return "olOtherAddressEntry";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olExchangeUserAddressEntry");
+      if ((value & 10) != 0) sbuf.append("|olOutlookContactAddressEntry");
+      if ((value & 20) != 0) sbuf.append("|olLdapAddressEntry");
+      if ((value & 11) != 0) sbuf.append("|olOutlookDistributionListAddressEntry");
+      if ((value & 1) != 0) sbuf.append("|olExchangeDistributionListAddressEntry");
+      if ((value & 2) != 0) sbuf.append("|olExchangePublicFolderAddressEntry");
+      if ((value & 3) != 0) sbuf.append("|olExchangeAgentAddressEntry");
+      if ((value & 4) != 0) sbuf.append("|olExchangeOrganizationAddressEntry");
+      if ((value & 5) != 0) sbuf.append("|olExchangeRemoteUserAddressEntry");
+      if ((value & 30) != 0) sbuf.append("|olSmtpAddressEntry");
+      if ((value & 40) != 0) sbuf.append("|olOtherAddressEntry");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{78F07E6C-4BC5-41B8-8FE1-F1643184BA3F}")
-public class XlCategoryType {
+public class XlCategoryType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlCategoryType {
     case 3: return xlTimeScale;
     case -4105: return xlAutomaticScale;
     default: return new XlCategoryType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "xlCategoryScale";
+    case 3: return "xlTimeScale";
+    case -4105: return "xlAutomaticScale";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|xlCategoryScale");
+      if ((value & 3) != 0) sbuf.append("|xlTimeScale");
+      if ((value & -4105) != 0) sbuf.append("|xlAutomaticScale");
+      return sbuf.toString();
+      }
     }
   }
 }

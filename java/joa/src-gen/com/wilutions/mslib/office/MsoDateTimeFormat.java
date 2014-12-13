@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoDateTimeFormat {
+public class MsoDateTimeFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -70,6 +70,46 @@ public class MsoDateTimeFormat {
     case 13: return msoDateTimehmmssAMPM;
     case 14: return msoDateTimeFigureOut;
     default: return new MsoDateTimeFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoDateTimeFormatMixed";
+    case 2: return "msoDateTimeddddMMMMddyyyy";
+    case 1: return "msoDateTimeMdyy";
+    case 3: return "msoDateTimedMMMMyyyy";
+    case 4: return "msoDateTimeMMMMdyyyy";
+    case 5: return "msoDateTimedMMMyy";
+    case 6: return "msoDateTimeMMMMyy";
+    case 7: return "msoDateTimeMMyy";
+    case 8: return "msoDateTimeMMddyyHmm";
+    case 9: return "msoDateTimeMMddyyhmmAMPM";
+    case 10: return "msoDateTimeHmm";
+    case 11: return "msoDateTimeHmmss";
+    case 12: return "msoDateTimehmmAMPM";
+    case 13: return "msoDateTimehmmssAMPM";
+    case 14: return "msoDateTimeFigureOut";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoDateTimeFormatMixed");
+      if ((value & 2) != 0) sbuf.append("|msoDateTimeddddMMMMddyyyy");
+      if ((value & 1) != 0) sbuf.append("|msoDateTimeMdyy");
+      if ((value & 3) != 0) sbuf.append("|msoDateTimedMMMMyyyy");
+      if ((value & 4) != 0) sbuf.append("|msoDateTimeMMMMdyyyy");
+      if ((value & 5) != 0) sbuf.append("|msoDateTimedMMMyy");
+      if ((value & 6) != 0) sbuf.append("|msoDateTimeMMMMyy");
+      if ((value & 7) != 0) sbuf.append("|msoDateTimeMMyy");
+      if ((value & 8) != 0) sbuf.append("|msoDateTimeMMddyyHmm");
+      if ((value & 9) != 0) sbuf.append("|msoDateTimeMMddyyhmmAMPM");
+      if ((value & 10) != 0) sbuf.append("|msoDateTimeHmm");
+      if ((value & 11) != 0) sbuf.append("|msoDateTimeHmmss");
+      if ((value & 12) != 0) sbuf.append("|msoDateTimehmmAMPM");
+      if ((value & 13) != 0) sbuf.append("|msoDateTimehmmssAMPM");
+      if ((value & 14) != 0) sbuf.append("|msoDateTimeFigureOut");
+      return sbuf.toString();
+      }
     }
   }
 }

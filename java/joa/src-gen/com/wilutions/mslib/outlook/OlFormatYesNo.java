@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatYesNo {
+public class OlFormatYesNo implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlFormatYesNo {
     case 3: return olFormatYesNoTrueFalse;
     case 4: return olFormatYesNoIcon;
     default: return new OlFormatYesNo(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olFormatYesNoYesNo";
+    case 2: return "olFormatYesNoOnOff";
+    case 3: return "olFormatYesNoTrueFalse";
+    case 4: return "olFormatYesNoIcon";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olFormatYesNoYesNo");
+      if ((value & 2) != 0) sbuf.append("|olFormatYesNoOnOff");
+      if ((value & 3) != 0) sbuf.append("|olFormatYesNoTrueFalse");
+      if ((value & 4) != 0) sbuf.append("|olFormatYesNoIcon");
+      return sbuf.toString();
+      }
     }
   }
 }

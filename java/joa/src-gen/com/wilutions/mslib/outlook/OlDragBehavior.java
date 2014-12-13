@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{25B06F72-02C5-4AF8-8366-28C2C65CB035}")
-public class OlDragBehavior {
+public class OlDragBehavior implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlDragBehavior {
     case 0: return olDragBehaviorDisabled;
     case 1: return olDragBehaviorEnabled;
     default: return new OlDragBehavior(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olDragBehaviorDisabled";
+    case 1: return "olDragBehaviorEnabled";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olDragBehaviorDisabled");
+      if ((value & 1) != 0) sbuf.append("|olDragBehaviorEnabled");
+      return sbuf.toString();
+      }
     }
   }
 }

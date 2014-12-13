@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoRelativeNodePosition {
+public class MsoRelativeNodePosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoRelativeNodePosition {
     case 3: return msoBeforeFirstSibling;
     case 4: return msoAfterLastSibling;
     default: return new MsoRelativeNodePosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoBeforeNode";
+    case 2: return "msoAfterNode";
+    case 3: return "msoBeforeFirstSibling";
+    case 4: return "msoAfterLastSibling";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoBeforeNode");
+      if ((value & 2) != 0) sbuf.append("|msoAfterNode");
+      if ((value & 3) != 0) sbuf.append("|msoBeforeFirstSibling");
+      if ((value & 4) != 0) sbuf.append("|msoAfterLastSibling");
+      return sbuf.toString();
+      }
     }
   }
 }

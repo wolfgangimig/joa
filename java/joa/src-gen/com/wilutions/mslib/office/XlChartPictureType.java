@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlChartPictureType {
+public class XlChartPictureType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlChartPictureType {
     case 2: return xlStack;
     case 1: return xlStretch;
     default: return new XlChartPictureType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 3: return "xlStackScale";
+    case 2: return "xlStack";
+    case 1: return "xlStretch";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 3) != 0) sbuf.append("|xlStackScale");
+      if ((value & 2) != 0) sbuf.append("|xlStack");
+      if ((value & 1) != 0) sbuf.append("|xlStretch");
+      return sbuf.toString();
+      }
     }
   }
 }

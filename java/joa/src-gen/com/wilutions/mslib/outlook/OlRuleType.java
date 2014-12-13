@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRuleType {
+public class OlRuleType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlRuleType {
     case 0: return olRuleReceive;
     case 1: return olRuleSend;
     default: return new OlRuleType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olRuleReceive";
+    case 1: return "olRuleSend";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olRuleReceive");
+      if ((value & 1) != 0) sbuf.append("|olRuleSend");
+      return sbuf.toString();
+      }
     }
   }
 }

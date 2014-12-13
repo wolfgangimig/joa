@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlAccountType {
+public class OlAccountType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class OlAccountType {
     case 4: return olEas;
     case 5: return olOtherAccount;
     default: return new OlAccountType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olExchange";
+    case 1: return "olImap";
+    case 2: return "olPop3";
+    case 3: return "olHttp";
+    case 4: return "olEas";
+    case 5: return "olOtherAccount";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olExchange");
+      if ((value & 1) != 0) sbuf.append("|olImap");
+      if ((value & 2) != 0) sbuf.append("|olPop3");
+      if ((value & 3) != 0) sbuf.append("|olHttp");
+      if ((value & 4) != 0) sbuf.append("|olEas");
+      if ((value & 5) != 0) sbuf.append("|olOtherAccount");
+      return sbuf.toString();
+      }
     }
   }
 }

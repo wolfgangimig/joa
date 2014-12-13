@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{0B17239E-C724-444B-ACB1-579893197A3C}")
-public class OlBorderStyle {
+public class OlBorderStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlBorderStyle {
     case 0: return olBorderStyleNone;
     case 1: return olBorderStyleSingle;
     default: return new OlBorderStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olBorderStyleNone";
+    case 1: return "olBorderStyleSingle";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olBorderStyleNone");
+      if ((value & 1) != 0) sbuf.append("|olBorderStyleSingle");
+      return sbuf.toString();
+      }
     }
   }
 }

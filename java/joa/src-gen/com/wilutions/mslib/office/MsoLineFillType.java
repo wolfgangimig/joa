@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoLineFillType {
+public class MsoLineFillType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class MsoLineFillType {
     case 5: return msoLineFillBackground;
     case 6: return msoLineFillPicture;
     default: return new MsoLineFillType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoLineFillPatterned";
+    case -2: return "msoLineFillMixed";
+    case 0: return "msoLineFillNone";
+    case 1: return "msoLineFillSolid";
+    case 3: return "msoLineFillGradient";
+    case 4: return "msoLineFillTextured";
+    case 5: return "msoLineFillBackground";
+    case 6: return "msoLineFillPicture";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoLineFillPatterned");
+      if ((value & -2) != 0) sbuf.append("|msoLineFillMixed");
+      if ((value & 0) != 0) sbuf.append("|msoLineFillNone");
+      if ((value & 1) != 0) sbuf.append("|msoLineFillSolid");
+      if ((value & 3) != 0) sbuf.append("|msoLineFillGradient");
+      if ((value & 4) != 0) sbuf.append("|msoLineFillTextured");
+      if ((value & 5) != 0) sbuf.append("|msoLineFillBackground");
+      if ((value & 6) != 0) sbuf.append("|msoLineFillPicture");
+      return sbuf.toString();
+      }
     }
   }
 }

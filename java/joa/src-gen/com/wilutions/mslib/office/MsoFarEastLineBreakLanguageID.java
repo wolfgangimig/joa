@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFarEastLineBreakLanguageID {
+public class MsoFarEastLineBreakLanguageID implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoFarEastLineBreakLanguageID {
     case 2052: return MsoFarEastLineBreakLanguageSimplifiedChinese;
     case 1028: return MsoFarEastLineBreakLanguageTraditionalChinese;
     default: return new MsoFarEastLineBreakLanguageID(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1041: return "MsoFarEastLineBreakLanguageJapanese";
+    case 1028: return "MsoFarEastLineBreakLanguageTraditionalChinese";
+    case 1042: return "MsoFarEastLineBreakLanguageKorean";
+    case 2052: return "MsoFarEastLineBreakLanguageSimplifiedChinese";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1041) != 0) sbuf.append("|MsoFarEastLineBreakLanguageJapanese");
+      if ((value & 1028) != 0) sbuf.append("|MsoFarEastLineBreakLanguageTraditionalChinese");
+      if ((value & 1042) != 0) sbuf.append("|MsoFarEastLineBreakLanguageKorean");
+      if ((value & 2052) != 0) sbuf.append("|MsoFarEastLineBreakLanguageSimplifiedChinese");
+      return sbuf.toString();
+      }
     }
   }
 }

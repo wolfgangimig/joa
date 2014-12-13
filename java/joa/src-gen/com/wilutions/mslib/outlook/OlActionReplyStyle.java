@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlActionReplyStyle {
+public class OlActionReplyStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class OlActionReplyStyle {
     case 5: return olUserPreference;
     case 1000: return olReplyTickOriginalText;
     default: return new OlActionReplyStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olOmitOriginalText";
+    case 1: return "olEmbedOriginalItem";
+    case 2: return "olIncludeOriginalText";
+    case 3: return "olIndentOriginalText";
+    case 4: return "olLinkOriginalItem";
+    case 1000: return "olReplyTickOriginalText";
+    case 5: return "olUserPreference";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olOmitOriginalText");
+      if ((value & 1) != 0) sbuf.append("|olEmbedOriginalItem");
+      if ((value & 2) != 0) sbuf.append("|olIncludeOriginalText");
+      if ((value & 3) != 0) sbuf.append("|olIndentOriginalText");
+      if ((value & 4) != 0) sbuf.append("|olLinkOriginalItem");
+      if ((value & 1000) != 0) sbuf.append("|olReplyTickOriginalText");
+      if ((value & 5) != 0) sbuf.append("|olUserPreference");
+      return sbuf.toString();
+      }
     }
   }
 }

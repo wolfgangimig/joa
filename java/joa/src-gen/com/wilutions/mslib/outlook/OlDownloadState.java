@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlDownloadState {
+public class OlDownloadState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlDownloadState {
     case 0: return olHeaderOnly;
     case 1: return olFullItem;
     default: return new OlDownloadState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olHeaderOnly";
+    case 1: return "olFullItem";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olHeaderOnly");
+      if ((value & 1) != 0) sbuf.append("|olFullItem");
+      return sbuf.toString();
+      }
     }
   }
 }

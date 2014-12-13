@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{5931055C-16BA-101B-989C-00006B82871A}")
-public class fmBorderStyle {
+public class fmBorderStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmBorderStyle {
     case 0: return fmBorderStyleNone;
     case 1: return fmBorderStyleSingle;
     default: return new fmBorderStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmBorderStyleNone";
+    case 1: return "fmBorderStyleSingle";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmBorderStyleNone");
+      if ((value & 1) != 0) sbuf.append("|fmBorderStyleSingle");
+      return sbuf.toString();
+      }
     }
   }
 }

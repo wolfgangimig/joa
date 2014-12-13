@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{9C37F9D0-FDE5-11CE-9560-00AA004B9DFA}")
-public class fmStyle {
+public class fmStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmStyle {
     case 0: return fmStyleDropDownCombo;
     case 2: return fmStyleDropDownList;
     default: return new fmStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmStyleDropDownCombo";
+    case 2: return "fmStyleDropDownList";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmStyleDropDownCombo");
+      if ((value & 2) != 0) sbuf.append("|fmStyleDropDownList");
+      return sbuf.toString();
+      }
     }
   }
 }

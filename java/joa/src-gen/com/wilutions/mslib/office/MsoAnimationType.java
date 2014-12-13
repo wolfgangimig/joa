@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAnimationType {
+public class MsoAnimationType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -130,6 +130,86 @@ public class MsoAnimationType {
     case 115: return msoAnimationGestureUp;
     case 116: return msoAnimationEmptyTrash;
     default: return new MsoAnimationType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 11: return "msoAnimationGetAttentionMajor";
+    case 1: return "msoAnimationIdle";
+    case 2: return "msoAnimationGreeting";
+    case 3: return "msoAnimationGoodbye";
+    case 4: return "msoAnimationBeginSpeaking";
+    case 5: return "msoAnimationRestPose";
+    case 103: return "msoAnimationCheckingSomething";
+    case 12: return "msoAnimationGetAttentionMinor";
+    case 6: return "msoAnimationCharacterSuccessMajor";
+    case 102: return "msoAnimationGetWizardy";
+    case 13: return "msoAnimationSearching";
+    case 116: return "msoAnimationEmptyTrash";
+    case 18: return "msoAnimationPrinting";
+    case 19: return "msoAnimationGestureRight";
+    case 22: return "msoAnimationWritingNotingSomething";
+    case 23: return "msoAnimationWorkingAtSomething";
+    case 24: return "msoAnimationThinking";
+    case 25: return "msoAnimationSendingMail";
+    case 26: return "msoAnimationListensToComputer";
+    case 106: return "msoAnimationLookDownRight";
+    case 31: return "msoAnimationDisappear";
+    case 101: return "msoAnimationGetTechy";
+    case 32: return "msoAnimationAppear";
+    case 100: return "msoAnimationGetArtsy";
+    case 104: return "msoAnimationLookDown";
+    case 105: return "msoAnimationLookDownLeft";
+    case 107: return "msoAnimationLookLeft";
+    case 108: return "msoAnimationLookRight";
+    case 109: return "msoAnimationLookUp";
+    case 110: return "msoAnimationLookUpLeft";
+    case 111: return "msoAnimationLookUpRight";
+    case 112: return "msoAnimationSaving";
+    case 113: return "msoAnimationGestureDown";
+    case 114: return "msoAnimationGestureLeft";
+    case 115: return "msoAnimationGestureUp";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 11) != 0) sbuf.append("|msoAnimationGetAttentionMajor");
+      if ((value & 1) != 0) sbuf.append("|msoAnimationIdle");
+      if ((value & 2) != 0) sbuf.append("|msoAnimationGreeting");
+      if ((value & 3) != 0) sbuf.append("|msoAnimationGoodbye");
+      if ((value & 4) != 0) sbuf.append("|msoAnimationBeginSpeaking");
+      if ((value & 5) != 0) sbuf.append("|msoAnimationRestPose");
+      if ((value & 103) != 0) sbuf.append("|msoAnimationCheckingSomething");
+      if ((value & 12) != 0) sbuf.append("|msoAnimationGetAttentionMinor");
+      if ((value & 6) != 0) sbuf.append("|msoAnimationCharacterSuccessMajor");
+      if ((value & 102) != 0) sbuf.append("|msoAnimationGetWizardy");
+      if ((value & 13) != 0) sbuf.append("|msoAnimationSearching");
+      if ((value & 116) != 0) sbuf.append("|msoAnimationEmptyTrash");
+      if ((value & 18) != 0) sbuf.append("|msoAnimationPrinting");
+      if ((value & 19) != 0) sbuf.append("|msoAnimationGestureRight");
+      if ((value & 22) != 0) sbuf.append("|msoAnimationWritingNotingSomething");
+      if ((value & 23) != 0) sbuf.append("|msoAnimationWorkingAtSomething");
+      if ((value & 24) != 0) sbuf.append("|msoAnimationThinking");
+      if ((value & 25) != 0) sbuf.append("|msoAnimationSendingMail");
+      if ((value & 26) != 0) sbuf.append("|msoAnimationListensToComputer");
+      if ((value & 106) != 0) sbuf.append("|msoAnimationLookDownRight");
+      if ((value & 31) != 0) sbuf.append("|msoAnimationDisappear");
+      if ((value & 101) != 0) sbuf.append("|msoAnimationGetTechy");
+      if ((value & 32) != 0) sbuf.append("|msoAnimationAppear");
+      if ((value & 100) != 0) sbuf.append("|msoAnimationGetArtsy");
+      if ((value & 104) != 0) sbuf.append("|msoAnimationLookDown");
+      if ((value & 105) != 0) sbuf.append("|msoAnimationLookDownLeft");
+      if ((value & 107) != 0) sbuf.append("|msoAnimationLookLeft");
+      if ((value & 108) != 0) sbuf.append("|msoAnimationLookRight");
+      if ((value & 109) != 0) sbuf.append("|msoAnimationLookUp");
+      if ((value & 110) != 0) sbuf.append("|msoAnimationLookUpLeft");
+      if ((value & 111) != 0) sbuf.append("|msoAnimationLookUpRight");
+      if ((value & 112) != 0) sbuf.append("|msoAnimationSaving");
+      if ((value & 113) != 0) sbuf.append("|msoAnimationGestureDown");
+      if ((value & 114) != 0) sbuf.append("|msoAnimationGestureLeft");
+      if ((value & 115) != 0) sbuf.append("|msoAnimationGestureUp");
+      return sbuf.toString();
+      }
     }
   }
 }

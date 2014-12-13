@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlDayWeekTimeScale {
+public class OlDayWeekTimeScale implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class OlDayWeekTimeScale {
     case 4: return olTimeScale30Minutes;
     case 5: return olTimeScale60Minutes;
     default: return new OlDayWeekTimeScale(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTimeScale5Minutes";
+    case 1: return "olTimeScale6Minutes";
+    case 2: return "olTimeScale10Minutes";
+    case 3: return "olTimeScale15Minutes";
+    case 4: return "olTimeScale30Minutes";
+    case 5: return "olTimeScale60Minutes";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTimeScale5Minutes");
+      if ((value & 1) != 0) sbuf.append("|olTimeScale6Minutes");
+      if ((value & 2) != 0) sbuf.append("|olTimeScale10Minutes");
+      if ((value & 3) != 0) sbuf.append("|olTimeScale15Minutes");
+      if ((value & 4) != 0) sbuf.append("|olTimeScale30Minutes");
+      if ((value & 5) != 0) sbuf.append("|olTimeScale60Minutes");
+      return sbuf.toString();
+      }
     }
   }
 }

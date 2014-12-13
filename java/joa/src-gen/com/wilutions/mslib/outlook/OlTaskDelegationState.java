@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlTaskDelegationState {
+public class OlTaskDelegationState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlTaskDelegationState {
     case 2: return olTaskDelegationAccepted;
     case 3: return olTaskDelegationDeclined;
     default: return new OlTaskDelegationState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTaskNotDelegated";
+    case 1: return "olTaskDelegationUnknown";
+    case 2: return "olTaskDelegationAccepted";
+    case 3: return "olTaskDelegationDeclined";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTaskNotDelegated");
+      if ((value & 1) != 0) sbuf.append("|olTaskDelegationUnknown");
+      if ((value & 2) != 0) sbuf.append("|olTaskDelegationAccepted");
+      if ((value & 3) != 0) sbuf.append("|olTaskDelegationDeclined");
+      return sbuf.toString();
+      }
     }
   }
 }

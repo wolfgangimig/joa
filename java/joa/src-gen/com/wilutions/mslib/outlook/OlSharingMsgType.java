@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSharingMsgType {
+public class OlSharingMsgType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class OlSharingMsgType {
     case 4: return olSharingMsgTypeResponseAllow;
     case 5: return olSharingMsgTypeResponseDeny;
     default: return new OlSharingMsgType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olSharingMsgTypeUnknown";
+    case 1: return "olSharingMsgTypeRequest";
+    case 2: return "olSharingMsgTypeInvite";
+    case 3: return "olSharingMsgTypeInviteAndRequest";
+    case 4: return "olSharingMsgTypeResponseAllow";
+    case 5: return "olSharingMsgTypeResponseDeny";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olSharingMsgTypeUnknown");
+      if ((value & 1) != 0) sbuf.append("|olSharingMsgTypeRequest");
+      if ((value & 2) != 0) sbuf.append("|olSharingMsgTypeInvite");
+      if ((value & 3) != 0) sbuf.append("|olSharingMsgTypeInviteAndRequest");
+      if ((value & 4) != 0) sbuf.append("|olSharingMsgTypeResponseAllow");
+      if ((value & 5) != 0) sbuf.append("|olSharingMsgTypeResponseDeny");
+      return sbuf.toString();
+      }
     }
   }
 }

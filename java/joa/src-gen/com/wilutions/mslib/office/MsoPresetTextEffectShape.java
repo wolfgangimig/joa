@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetTextEffectShape {
+public class MsoPresetTextEffectShape implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -148,6 +148,98 @@ public class MsoPresetTextEffectShape {
     case 39: return msoTextEffectShapeCascadeUp;
     case 40: return msoTextEffectShapeCascadeDown;
     default: return new MsoPresetTextEffectShape(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoTextEffectShapeMixed";
+    case 2: return "msoTextEffectShapeStop";
+    case 28: return "msoTextEffectShapeDeflateBottom";
+    case 1: return "msoTextEffectShapePlainText";
+    case 3: return "msoTextEffectShapeTriangleUp";
+    case 4: return "msoTextEffectShapeTriangleDown";
+    case 5: return "msoTextEffectShapeChevronUp";
+    case 6: return "msoTextEffectShapeChevronDown";
+    case 7: return "msoTextEffectShapeRingInside";
+    case 18: return "msoTextEffectShapeCurveDown";
+    case 8: return "msoTextEffectShapeRingOutside";
+    case 20: return "msoTextEffectShapeCanDown";
+    case 9: return "msoTextEffectShapeArchUpCurve";
+    case 10: return "msoTextEffectShapeArchDownCurve";
+    case 11: return "msoTextEffectShapeCircleCurve";
+    case 12: return "msoTextEffectShapeButtonCurve";
+    case 13: return "msoTextEffectShapeArchUpPour";
+    case 14: return "msoTextEffectShapeArchDownPour";
+    case 15: return "msoTextEffectShapeCirclePour";
+    case 16: return "msoTextEffectShapeButtonPour";
+    case 17: return "msoTextEffectShapeCurveUp";
+    case 19: return "msoTextEffectShapeCanUp";
+    case 21: return "msoTextEffectShapeWave1";
+    case 22: return "msoTextEffectShapeWave2";
+    case 23: return "msoTextEffectShapeDoubleWave1";
+    case 24: return "msoTextEffectShapeDoubleWave2";
+    case 25: return "msoTextEffectShapeInflate";
+    case 26: return "msoTextEffectShapeDeflate";
+    case 27: return "msoTextEffectShapeInflateBottom";
+    case 29: return "msoTextEffectShapeInflateTop";
+    case 30: return "msoTextEffectShapeDeflateTop";
+    case 40: return "msoTextEffectShapeCascadeDown";
+    case 31: return "msoTextEffectShapeDeflateInflate";
+    case 32: return "msoTextEffectShapeDeflateInflateDeflate";
+    case 33: return "msoTextEffectShapeFadeRight";
+    case 34: return "msoTextEffectShapeFadeLeft";
+    case 35: return "msoTextEffectShapeFadeUp";
+    case 36: return "msoTextEffectShapeFadeDown";
+    case 37: return "msoTextEffectShapeSlantUp";
+    case 38: return "msoTextEffectShapeSlantDown";
+    case 39: return "msoTextEffectShapeCascadeUp";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoTextEffectShapeMixed");
+      if ((value & 2) != 0) sbuf.append("|msoTextEffectShapeStop");
+      if ((value & 28) != 0) sbuf.append("|msoTextEffectShapeDeflateBottom");
+      if ((value & 1) != 0) sbuf.append("|msoTextEffectShapePlainText");
+      if ((value & 3) != 0) sbuf.append("|msoTextEffectShapeTriangleUp");
+      if ((value & 4) != 0) sbuf.append("|msoTextEffectShapeTriangleDown");
+      if ((value & 5) != 0) sbuf.append("|msoTextEffectShapeChevronUp");
+      if ((value & 6) != 0) sbuf.append("|msoTextEffectShapeChevronDown");
+      if ((value & 7) != 0) sbuf.append("|msoTextEffectShapeRingInside");
+      if ((value & 18) != 0) sbuf.append("|msoTextEffectShapeCurveDown");
+      if ((value & 8) != 0) sbuf.append("|msoTextEffectShapeRingOutside");
+      if ((value & 20) != 0) sbuf.append("|msoTextEffectShapeCanDown");
+      if ((value & 9) != 0) sbuf.append("|msoTextEffectShapeArchUpCurve");
+      if ((value & 10) != 0) sbuf.append("|msoTextEffectShapeArchDownCurve");
+      if ((value & 11) != 0) sbuf.append("|msoTextEffectShapeCircleCurve");
+      if ((value & 12) != 0) sbuf.append("|msoTextEffectShapeButtonCurve");
+      if ((value & 13) != 0) sbuf.append("|msoTextEffectShapeArchUpPour");
+      if ((value & 14) != 0) sbuf.append("|msoTextEffectShapeArchDownPour");
+      if ((value & 15) != 0) sbuf.append("|msoTextEffectShapeCirclePour");
+      if ((value & 16) != 0) sbuf.append("|msoTextEffectShapeButtonPour");
+      if ((value & 17) != 0) sbuf.append("|msoTextEffectShapeCurveUp");
+      if ((value & 19) != 0) sbuf.append("|msoTextEffectShapeCanUp");
+      if ((value & 21) != 0) sbuf.append("|msoTextEffectShapeWave1");
+      if ((value & 22) != 0) sbuf.append("|msoTextEffectShapeWave2");
+      if ((value & 23) != 0) sbuf.append("|msoTextEffectShapeDoubleWave1");
+      if ((value & 24) != 0) sbuf.append("|msoTextEffectShapeDoubleWave2");
+      if ((value & 25) != 0) sbuf.append("|msoTextEffectShapeInflate");
+      if ((value & 26) != 0) sbuf.append("|msoTextEffectShapeDeflate");
+      if ((value & 27) != 0) sbuf.append("|msoTextEffectShapeInflateBottom");
+      if ((value & 29) != 0) sbuf.append("|msoTextEffectShapeInflateTop");
+      if ((value & 30) != 0) sbuf.append("|msoTextEffectShapeDeflateTop");
+      if ((value & 40) != 0) sbuf.append("|msoTextEffectShapeCascadeDown");
+      if ((value & 31) != 0) sbuf.append("|msoTextEffectShapeDeflateInflate");
+      if ((value & 32) != 0) sbuf.append("|msoTextEffectShapeDeflateInflateDeflate");
+      if ((value & 33) != 0) sbuf.append("|msoTextEffectShapeFadeRight");
+      if ((value & 34) != 0) sbuf.append("|msoTextEffectShapeFadeLeft");
+      if ((value & 35) != 0) sbuf.append("|msoTextEffectShapeFadeUp");
+      if ((value & 36) != 0) sbuf.append("|msoTextEffectShapeFadeDown");
+      if ((value & 37) != 0) sbuf.append("|msoTextEffectShapeSlantUp");
+      if ((value & 38) != 0) sbuf.append("|msoTextEffectShapeSlantDown");
+      if ((value & 39) != 0) sbuf.append("|msoTextEffectShapeCascadeUp");
+      return sbuf.toString();
+      }
     }
   }
 }

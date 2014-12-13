@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{5A0FB768-AAF4-4E8C-9C57-89ACA8B6249F}")
-public class OlMultiSelect {
+public class OlMultiSelect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlMultiSelect {
     case 1: return olMultiSelectMulti;
     case 2: return olMultiSelectExtended;
     default: return new OlMultiSelect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olMultiSelectSingle";
+    case 1: return "olMultiSelectMulti";
+    case 2: return "olMultiSelectExtended";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olMultiSelectSingle");
+      if ((value & 1) != 0) sbuf.append("|olMultiSelectMulti");
+      if ((value & 2) != 0) sbuf.append("|olMultiSelectExtended");
+      return sbuf.toString();
+      }
     }
   }
 }

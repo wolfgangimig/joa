@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{8CCD0AC2-B1AD-11CE-8276-00AA004BA6AE}")
-public class fmMatchEntry {
+public class fmMatchEntry implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmMatchEntry {
     case 1: return fmMatchEntryComplete;
     case 2: return fmMatchEntryNone;
     default: return new fmMatchEntry(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmMatchEntryFirstLetter";
+    case 1: return "fmMatchEntryComplete";
+    case 2: return "fmMatchEntryNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmMatchEntryFirstLetter");
+      if ((value & 1) != 0) sbuf.append("|fmMatchEntryComplete");
+      if ((value & 2) != 0) sbuf.append("|fmMatchEntryNone");
+      return sbuf.toString();
+      }
     }
   }
 }

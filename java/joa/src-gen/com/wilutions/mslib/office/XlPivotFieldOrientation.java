@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlPivotFieldOrientation {
+public class XlPivotFieldOrientation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class XlPivotFieldOrientation {
     case 3: return xlPageField;
     case 1: return xlRowField;
     default: return new XlPivotFieldOrientation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "xlColumnField";
+    case 4: return "xlDataField";
+    case 0: return "xlHidden";
+    case 3: return "xlPageField";
+    case 1: return "xlRowField";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|xlColumnField");
+      if ((value & 4) != 0) sbuf.append("|xlDataField");
+      if ((value & 0) != 0) sbuf.append("|xlHidden");
+      if ((value & 3) != 0) sbuf.append("|xlPageField");
+      if ((value & 1) != 0) sbuf.append("|xlRowField");
+      return sbuf.toString();
+      }
     }
   }
 }

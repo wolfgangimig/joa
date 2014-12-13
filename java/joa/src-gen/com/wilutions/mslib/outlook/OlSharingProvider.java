@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSharingProvider {
+public class OlSharingProvider implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class OlSharingProvider {
     case 6: return olProviderRSS;
     case 7: return olProviderFederate;
     default: return new OlSharingProvider(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olProviderUnknown";
+    case 1: return "olProviderExchange";
+    case 2: return "olProviderWebCal";
+    case 3: return "olProviderPubCal";
+    case 4: return "olProviderICal";
+    case 5: return "olProviderSharePoint";
+    case 6: return "olProviderRSS";
+    case 7: return "olProviderFederate";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olProviderUnknown");
+      if ((value & 1) != 0) sbuf.append("|olProviderExchange");
+      if ((value & 2) != 0) sbuf.append("|olProviderWebCal");
+      if ((value & 3) != 0) sbuf.append("|olProviderPubCal");
+      if ((value & 4) != 0) sbuf.append("|olProviderICal");
+      if ((value & 5) != 0) sbuf.append("|olProviderSharePoint");
+      if ((value & 6) != 0) sbuf.append("|olProviderRSS");
+      if ((value & 7) != 0) sbuf.append("|olProviderFederate");
+      return sbuf.toString();
+      }
     }
   }
 }

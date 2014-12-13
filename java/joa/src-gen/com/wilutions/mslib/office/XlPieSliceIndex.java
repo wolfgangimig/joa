@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{2B4C8AB7-6E70-422A-B7CC-206452289F16}")
-public class XlPieSliceIndex {
+public class XlPieSliceIndex implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -52,6 +52,34 @@ public class XlPieSliceIndex {
     case 8: return xlInnerCenterPoint;
     case 9: return xlInnerCounterClockwisePoint;
     default: return new XlPieSliceIndex(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "xlInnerCounterClockwisePoint";
+    case 1: return "xlOuterCounterClockwisePoint";
+    case 2: return "xlOuterCenterPoint";
+    case 3: return "xlOuterClockwisePoint";
+    case 4: return "xlMidClockwiseRadiusPoint";
+    case 5: return "xlCenterPoint";
+    case 6: return "xlMidCounterClockwiseRadiusPoint";
+    case 7: return "xlInnerClockwisePoint";
+    case 8: return "xlInnerCenterPoint";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|xlInnerCounterClockwisePoint");
+      if ((value & 1) != 0) sbuf.append("|xlOuterCounterClockwisePoint");
+      if ((value & 2) != 0) sbuf.append("|xlOuterCenterPoint");
+      if ((value & 3) != 0) sbuf.append("|xlOuterClockwisePoint");
+      if ((value & 4) != 0) sbuf.append("|xlMidClockwiseRadiusPoint");
+      if ((value & 5) != 0) sbuf.append("|xlCenterPoint");
+      if ((value & 6) != 0) sbuf.append("|xlMidCounterClockwiseRadiusPoint");
+      if ((value & 7) != 0) sbuf.append("|xlInnerClockwisePoint");
+      if ((value & 8) != 0) sbuf.append("|xlInnerCenterPoint");
+      return sbuf.toString();
+      }
     }
   }
 }

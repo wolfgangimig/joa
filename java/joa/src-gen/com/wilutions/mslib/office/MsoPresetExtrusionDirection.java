@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetExtrusionDirection {
+public class MsoPresetExtrusionDirection implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -55,6 +55,36 @@ public class MsoPresetExtrusionDirection {
     case 8: return msoExtrusionTop;
     case 9: return msoExtrusionTopLeft;
     default: return new MsoPresetExtrusionDirection(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoPresetExtrusionDirectionMixed";
+    case 2: return "msoExtrusionBottom";
+    case 1: return "msoExtrusionBottomRight";
+    case 3: return "msoExtrusionBottomLeft";
+    case 4: return "msoExtrusionRight";
+    case 5: return "msoExtrusionNone";
+    case 6: return "msoExtrusionLeft";
+    case 7: return "msoExtrusionTopRight";
+    case 8: return "msoExtrusionTop";
+    case 9: return "msoExtrusionTopLeft";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoPresetExtrusionDirectionMixed");
+      if ((value & 2) != 0) sbuf.append("|msoExtrusionBottom");
+      if ((value & 1) != 0) sbuf.append("|msoExtrusionBottomRight");
+      if ((value & 3) != 0) sbuf.append("|msoExtrusionBottomLeft");
+      if ((value & 4) != 0) sbuf.append("|msoExtrusionRight");
+      if ((value & 5) != 0) sbuf.append("|msoExtrusionNone");
+      if ((value & 6) != 0) sbuf.append("|msoExtrusionLeft");
+      if ((value & 7) != 0) sbuf.append("|msoExtrusionTopRight");
+      if ((value & 8) != 0) sbuf.append("|msoExtrusionTop");
+      if ((value & 9) != 0) sbuf.append("|msoExtrusionTopLeft");
+      return sbuf.toString();
+      }
     }
   }
 }

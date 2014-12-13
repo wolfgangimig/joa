@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoCalloutType {
+public class MsoCalloutType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoCalloutType {
     case 3: return msoCalloutThree;
     case 4: return msoCalloutFour;
     default: return new MsoCalloutType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoCalloutTwo";
+    case -2: return "msoCalloutMixed";
+    case 1: return "msoCalloutOne";
+    case 3: return "msoCalloutThree";
+    case 4: return "msoCalloutFour";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoCalloutTwo");
+      if ((value & -2) != 0) sbuf.append("|msoCalloutMixed");
+      if ((value & 1) != 0) sbuf.append("|msoCalloutOne");
+      if ((value & 3) != 0) sbuf.append("|msoCalloutThree");
+      if ((value & 4) != 0) sbuf.append("|msoCalloutFour");
+      return sbuf.toString();
+      }
     }
   }
 }

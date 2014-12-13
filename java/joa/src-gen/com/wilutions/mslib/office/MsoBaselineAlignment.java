@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBaselineAlignment {
+public class MsoBaselineAlignment implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoBaselineAlignment {
     case 4: return msoBaselineAlignFarEast50;
     case 5: return msoBaselineAlignAuto;
     default: return new MsoBaselineAlignment(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoBaselineAlignTop";
+    case -2: return "msoBaselineAlignMixed";
+    case 1: return "msoBaselineAlignBaseline";
+    case 3: return "msoBaselineAlignCenter";
+    case 4: return "msoBaselineAlignFarEast50";
+    case 5: return "msoBaselineAlignAuto";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoBaselineAlignTop");
+      if ((value & -2) != 0) sbuf.append("|msoBaselineAlignMixed");
+      if ((value & 1) != 0) sbuf.append("|msoBaselineAlignBaseline");
+      if ((value & 3) != 0) sbuf.append("|msoBaselineAlignCenter");
+      if ((value & 4) != 0) sbuf.append("|msoBaselineAlignFarEast50");
+      if ((value & 5) != 0) sbuf.append("|msoBaselineAlignAuto");
+      return sbuf.toString();
+      }
     }
   }
 }

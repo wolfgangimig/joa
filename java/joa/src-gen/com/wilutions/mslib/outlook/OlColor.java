@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlColor {
+public class OlColor implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -76,6 +76,50 @@ public class OlColor {
     case 15: return olColorAqua;
     case 16: return olColorWhite;
     default: return new OlColor(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "olColorGray";
+    case 10: return "olColorRed";
+    case 0: return "olAutoColor";
+    case 1: return "olColorBlack";
+    case 2: return "olColorMaroon";
+    case 3: return "olColorGreen";
+    case 4: return "olColorOlive";
+    case 5: return "olColorNavy";
+    case 6: return "olColorPurple";
+    case 7: return "olColorTeal";
+    case 9: return "olColorSilver";
+    case 11: return "olColorLime";
+    case 12: return "olColorYellow";
+    case 13: return "olColorBlue";
+    case 14: return "olColorFuchsia";
+    case 15: return "olColorAqua";
+    case 16: return "olColorWhite";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|olColorGray");
+      if ((value & 10) != 0) sbuf.append("|olColorRed");
+      if ((value & 0) != 0) sbuf.append("|olAutoColor");
+      if ((value & 1) != 0) sbuf.append("|olColorBlack");
+      if ((value & 2) != 0) sbuf.append("|olColorMaroon");
+      if ((value & 3) != 0) sbuf.append("|olColorGreen");
+      if ((value & 4) != 0) sbuf.append("|olColorOlive");
+      if ((value & 5) != 0) sbuf.append("|olColorNavy");
+      if ((value & 6) != 0) sbuf.append("|olColorPurple");
+      if ((value & 7) != 0) sbuf.append("|olColorTeal");
+      if ((value & 9) != 0) sbuf.append("|olColorSilver");
+      if ((value & 11) != 0) sbuf.append("|olColorLime");
+      if ((value & 12) != 0) sbuf.append("|olColorYellow");
+      if ((value & 13) != 0) sbuf.append("|olColorBlue");
+      if ((value & 14) != 0) sbuf.append("|olColorFuchsia");
+      if ((value & 15) != 0) sbuf.append("|olColorAqua");
+      if ((value & 16) != 0) sbuf.append("|olColorWhite");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoThemeColorSchemeIndex {
+public class MsoThemeColorSchemeIndex implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -61,6 +61,40 @@ public class MsoThemeColorSchemeIndex {
     case 11: return msoThemeHyperlink;
     case 12: return msoThemeFollowedHyperlink;
     default: return new MsoThemeColorSchemeIndex(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "msoThemeAccent5";
+    case 1: return "msoThemeDark1";
+    case 2: return "msoThemeLight1";
+    case 3: return "msoThemeDark2";
+    case 4: return "msoThemeLight2";
+    case 5: return "msoThemeAccent1";
+    case 6: return "msoThemeAccent2";
+    case 7: return "msoThemeAccent3";
+    case 8: return "msoThemeAccent4";
+    case 10: return "msoThemeAccent6";
+    case 11: return "msoThemeHyperlink";
+    case 12: return "msoThemeFollowedHyperlink";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|msoThemeAccent5");
+      if ((value & 1) != 0) sbuf.append("|msoThemeDark1");
+      if ((value & 2) != 0) sbuf.append("|msoThemeLight1");
+      if ((value & 3) != 0) sbuf.append("|msoThemeDark2");
+      if ((value & 4) != 0) sbuf.append("|msoThemeLight2");
+      if ((value & 5) != 0) sbuf.append("|msoThemeAccent1");
+      if ((value & 6) != 0) sbuf.append("|msoThemeAccent2");
+      if ((value & 7) != 0) sbuf.append("|msoThemeAccent3");
+      if ((value & 8) != 0) sbuf.append("|msoThemeAccent4");
+      if ((value & 10) != 0) sbuf.append("|msoThemeAccent6");
+      if ((value & 11) != 0) sbuf.append("|msoThemeHyperlink");
+      if ((value & 12) != 0) sbuf.append("|msoThemeFollowedHyperlink");
+      return sbuf.toString();
+      }
     }
   }
 }

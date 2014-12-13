@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlIconViewType {
+public class OlIconViewType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlIconViewType {
     case 1: return olIconViewSmall;
     case 2: return olIconViewList;
     default: return new OlIconViewType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olIconViewLarge";
+    case 1: return "olIconViewSmall";
+    case 2: return "olIconViewList";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olIconViewLarge");
+      if ((value & 1) != 0) sbuf.append("|olIconViewSmall");
+      if ((value & 2) != 0) sbuf.append("|olIconViewList");
+      return sbuf.toString();
+      }
     }
   }
 }

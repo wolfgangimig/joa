@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{EC67AF3B-F2DF-4A52-9B85-E06A7FF28DB7}")
-public class MsoContactCardAddressType {
+public class MsoContactCardAddressType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoContactCardAddressType {
     case 2: return msoContactCardAddressTypeSMTP;
     case 3: return msoContactCardAddressTypeIM;
     default: return new MsoContactCardAddressType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoContactCardAddressTypeUnknown";
+    case 1: return "msoContactCardAddressTypeOutlook";
+    case 2: return "msoContactCardAddressTypeSMTP";
+    case 3: return "msoContactCardAddressTypeIM";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoContactCardAddressTypeUnknown");
+      if ((value & 1) != 0) sbuf.append("|msoContactCardAddressTypeOutlook");
+      if ((value & 2) != 0) sbuf.append("|msoContactCardAddressTypeSMTP");
+      if ((value & 3) != 0) sbuf.append("|msoContactCardAddressTypeIM");
+      return sbuf.toString();
+      }
     }
   }
 }

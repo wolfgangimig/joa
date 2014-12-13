@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSignatureSubset {
+public class MsoSignatureSubset implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoSignatureSubset {
     case 4: return msoSignatureSubsetSignatureLinesUnsigned;
     case 5: return msoSignatureSubsetAll;
     default: return new MsoSignatureSubset(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoSignatureSubsetSignaturesAllSigs";
+    case 1: return "msoSignatureSubsetSignaturesNonVisible";
+    case 2: return "msoSignatureSubsetSignatureLines";
+    case 3: return "msoSignatureSubsetSignatureLinesSigned";
+    case 4: return "msoSignatureSubsetSignatureLinesUnsigned";
+    case 5: return "msoSignatureSubsetAll";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoSignatureSubsetSignaturesAllSigs");
+      if ((value & 1) != 0) sbuf.append("|msoSignatureSubsetSignaturesNonVisible");
+      if ((value & 2) != 0) sbuf.append("|msoSignatureSubsetSignatureLines");
+      if ((value & 3) != 0) sbuf.append("|msoSignatureSubsetSignatureLinesSigned");
+      if ((value & 4) != 0) sbuf.append("|msoSignatureSubsetSignatureLinesUnsigned");
+      if ((value & 5) != 0) sbuf.append("|msoSignatureSubsetAll");
+      return sbuf.toString();
+      }
     }
   }
 }

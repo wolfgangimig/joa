@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoShapeType {
+public class MsoShapeType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -109,6 +109,72 @@ public class MsoShapeType {
     case 26: return msoWebVideo;
     case 27: return msoContentApp;
     default: return new MsoShapeType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoShapeTypeMixed";
+    case 2: return "msoCallout";
+    case 1: return "msoAutoShape";
+    case 3: return "msoChart";
+    case 4: return "msoComment";
+    case 5: return "msoFreeform";
+    case 6: return "msoGroup";
+    case 7: return "msoEmbeddedOLEObject";
+    case 18: return "msoScriptAnchor";
+    case 8: return "msoFormControl";
+    case 20: return "msoCanvas";
+    case 9: return "msoLine";
+    case 10: return "msoLinkedOLEObject";
+    case 11: return "msoLinkedPicture";
+    case 12: return "msoOLEControlObject";
+    case 13: return "msoPicture";
+    case 14: return "msoPlaceholder";
+    case 15: return "msoTextEffect";
+    case 16: return "msoMedia";
+    case 17: return "msoTextBox";
+    case 19: return "msoTable";
+    case 21: return "msoDiagram";
+    case 22: return "msoInk";
+    case 23: return "msoInkComment";
+    case 24: return "msoSmartArt";
+    case 25: return "msoSlicer";
+    case 26: return "msoWebVideo";
+    case 27: return "msoContentApp";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoShapeTypeMixed");
+      if ((value & 2) != 0) sbuf.append("|msoCallout");
+      if ((value & 1) != 0) sbuf.append("|msoAutoShape");
+      if ((value & 3) != 0) sbuf.append("|msoChart");
+      if ((value & 4) != 0) sbuf.append("|msoComment");
+      if ((value & 5) != 0) sbuf.append("|msoFreeform");
+      if ((value & 6) != 0) sbuf.append("|msoGroup");
+      if ((value & 7) != 0) sbuf.append("|msoEmbeddedOLEObject");
+      if ((value & 18) != 0) sbuf.append("|msoScriptAnchor");
+      if ((value & 8) != 0) sbuf.append("|msoFormControl");
+      if ((value & 20) != 0) sbuf.append("|msoCanvas");
+      if ((value & 9) != 0) sbuf.append("|msoLine");
+      if ((value & 10) != 0) sbuf.append("|msoLinkedOLEObject");
+      if ((value & 11) != 0) sbuf.append("|msoLinkedPicture");
+      if ((value & 12) != 0) sbuf.append("|msoOLEControlObject");
+      if ((value & 13) != 0) sbuf.append("|msoPicture");
+      if ((value & 14) != 0) sbuf.append("|msoPlaceholder");
+      if ((value & 15) != 0) sbuf.append("|msoTextEffect");
+      if ((value & 16) != 0) sbuf.append("|msoMedia");
+      if ((value & 17) != 0) sbuf.append("|msoTextBox");
+      if ((value & 19) != 0) sbuf.append("|msoTable");
+      if ((value & 21) != 0) sbuf.append("|msoDiagram");
+      if ((value & 22) != 0) sbuf.append("|msoInk");
+      if ((value & 23) != 0) sbuf.append("|msoInkComment");
+      if ((value & 24) != 0) sbuf.append("|msoSmartArt");
+      if ((value & 25) != 0) sbuf.append("|msoSlicer");
+      if ((value & 26) != 0) sbuf.append("|msoWebVideo");
+      if ((value & 27) != 0) sbuf.append("|msoContentApp");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormRegionIcon {
+public class OlFormRegionIcon implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -61,6 +61,40 @@ public class OlFormRegionIcon {
     case 11: return olFormRegionIconPage;
     case 12: return olFormRegionIconRecurring;
     default: return new OlFormRegionIcon(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "olFormRegionIconEncrypted";
+    case 1: return "olFormRegionIconDefault";
+    case 2: return "olFormRegionIconUnread";
+    case 3: return "olFormRegionIconRead";
+    case 4: return "olFormRegionIconReplied";
+    case 5: return "olFormRegionIconForwarded";
+    case 6: return "olFormRegionIconUnsent";
+    case 7: return "olFormRegionIconSubmitted";
+    case 8: return "olFormRegionIconSigned";
+    case 10: return "olFormRegionIconWindow";
+    case 11: return "olFormRegionIconPage";
+    case 12: return "olFormRegionIconRecurring";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|olFormRegionIconEncrypted");
+      if ((value & 1) != 0) sbuf.append("|olFormRegionIconDefault");
+      if ((value & 2) != 0) sbuf.append("|olFormRegionIconUnread");
+      if ((value & 3) != 0) sbuf.append("|olFormRegionIconRead");
+      if ((value & 4) != 0) sbuf.append("|olFormRegionIconReplied");
+      if ((value & 5) != 0) sbuf.append("|olFormRegionIconForwarded");
+      if ((value & 6) != 0) sbuf.append("|olFormRegionIconUnsent");
+      if ((value & 7) != 0) sbuf.append("|olFormRegionIconSubmitted");
+      if ((value & 8) != 0) sbuf.append("|olFormRegionIconSigned");
+      if ((value & 10) != 0) sbuf.append("|olFormRegionIconWindow");
+      if ((value & 11) != 0) sbuf.append("|olFormRegionIconPage");
+      if ((value & 12) != 0) sbuf.append("|olFormRegionIconRecurring");
+      return sbuf.toString();
+      }
     }
   }
 }

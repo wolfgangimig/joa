@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoDiagramType {
+public class MsoDiagramType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoDiagramType {
     case 5: return msoDiagramVenn;
     case 6: return msoDiagramTarget;
     default: return new MsoDiagramType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoDiagramCycle";
+    case -2: return "msoDiagramMixed";
+    case 1: return "msoDiagramOrgChart";
+    case 3: return "msoDiagramRadial";
+    case 4: return "msoDiagramPyramid";
+    case 5: return "msoDiagramVenn";
+    case 6: return "msoDiagramTarget";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoDiagramCycle");
+      if ((value & -2) != 0) sbuf.append("|msoDiagramMixed");
+      if ((value & 1) != 0) sbuf.append("|msoDiagramOrgChart");
+      if ((value & 3) != 0) sbuf.append("|msoDiagramRadial");
+      if ((value & 4) != 0) sbuf.append("|msoDiagramPyramid");
+      if ((value & 5) != 0) sbuf.append("|msoDiagramVenn");
+      if ((value & 6) != 0) sbuf.append("|msoDiagramTarget");
+      return sbuf.toString();
+      }
     }
   }
 }

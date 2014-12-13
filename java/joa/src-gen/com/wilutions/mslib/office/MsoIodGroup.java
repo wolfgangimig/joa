@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{750D0562-9930-40DD-9DA7-887B50F2111F}")
-public class MsoIodGroup {
+public class MsoIodGroup implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoIodGroup {
     case 1: return msoIodGroupVSTOR35Mgd;
     case 2: return msoIodGroupVSTOR40Mgd;
     default: return new MsoIodGroup(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoIodGroupPIAs";
+    case 1: return "msoIodGroupVSTOR35Mgd";
+    case 2: return "msoIodGroupVSTOR40Mgd";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoIodGroupPIAs");
+      if ((value & 1) != 0) sbuf.append("|msoIodGroupVSTOR35Mgd");
+      if ((value & 2) != 0) sbuf.append("|msoIodGroupVSTOR40Mgd");
+      return sbuf.toString();
+      }
     }
   }
 }

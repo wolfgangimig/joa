@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlPermission {
+public class OlPermission implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlPermission {
     case 1: return olDoNotForward;
     case 2: return olPermissionTemplate;
     default: return new OlPermission(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olUnrestricted";
+    case 1: return "olDoNotForward";
+    case 2: return "olPermissionTemplate";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olUnrestricted");
+      if ((value & 1) != 0) sbuf.append("|olDoNotForward");
+      if ((value & 2) != 0) sbuf.append("|olPermissionTemplate");
+      return sbuf.toString();
+      }
     }
   }
 }

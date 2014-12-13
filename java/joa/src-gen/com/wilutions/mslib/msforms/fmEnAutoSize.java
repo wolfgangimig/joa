@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C3689F20-C231-11CE-A30C-00AA004A3D3D}")
-public class fmEnAutoSize {
+public class fmEnAutoSize implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmEnAutoSize {
     case 2: return _fmEnAutoSizeVertical;
     case 3: return _fmEnAutoSizeBoth;
     default: return new fmEnAutoSize(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "_fmEnAutoSizeNone";
+    case 1: return "_fmEnAutoSizeHorizontal";
+    case 2: return "_fmEnAutoSizeVertical";
+    case 3: return "_fmEnAutoSizeBoth";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|_fmEnAutoSizeNone");
+      if ((value & 1) != 0) sbuf.append("|_fmEnAutoSizeHorizontal");
+      if ((value & 2) != 0) sbuf.append("|_fmEnAutoSizeVertical");
+      if ((value & 3) != 0) sbuf.append("|_fmEnAutoSizeBoth");
+      return sbuf.toString();
+      }
     }
   }
 }

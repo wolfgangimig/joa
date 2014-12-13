@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFontLanguageIndex {
+public class MsoFontLanguageIndex implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoFontLanguageIndex {
     case 2: return msoThemeComplexScript;
     case 3: return msoThemeEastAsian;
     default: return new MsoFontLanguageIndex(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoThemeLatin";
+    case 2: return "msoThemeComplexScript";
+    case 3: return "msoThemeEastAsian";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoThemeLatin");
+      if ((value & 2) != 0) sbuf.append("|msoThemeComplexScript");
+      if ((value & 3) != 0) sbuf.append("|msoThemeEastAsian");
+      return sbuf.toString();
+      }
     }
   }
 }

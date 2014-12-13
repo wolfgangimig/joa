@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoOLEMenuGroup {
+public class MsoOLEMenuGroup implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoOLEMenuGroup {
     case 4: return msoOLEMenuGroupWindow;
     case 5: return msoOLEMenuGroupHelp;
     default: return new MsoOLEMenuGroup(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 5: return "msoOLEMenuGroupHelp";
+    case -1: return "msoOLEMenuGroupNone";
+    case 0: return "msoOLEMenuGroupFile";
+    case 1: return "msoOLEMenuGroupEdit";
+    case 2: return "msoOLEMenuGroupContainer";
+    case 3: return "msoOLEMenuGroupObject";
+    case 4: return "msoOLEMenuGroupWindow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 5) != 0) sbuf.append("|msoOLEMenuGroupHelp");
+      if ((value & -1) != 0) sbuf.append("|msoOLEMenuGroupNone");
+      if ((value & 0) != 0) sbuf.append("|msoOLEMenuGroupFile");
+      if ((value & 1) != 0) sbuf.append("|msoOLEMenuGroupEdit");
+      if ((value & 2) != 0) sbuf.append("|msoOLEMenuGroupContainer");
+      if ((value & 3) != 0) sbuf.append("|msoOLEMenuGroupObject");
+      if ((value & 4) != 0) sbuf.append("|msoOLEMenuGroupWindow");
+      return sbuf.toString();
+      }
     }
   }
 }

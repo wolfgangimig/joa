@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{7D8D95F5-EFE7-4189-8D68-0B3BCCEA097A}")
-public class XlAxisGroup {
+public class XlAxisGroup implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class XlAxisGroup {
     case 1: return xlPrimary;
     case 2: return xlSecondary;
     default: return new XlAxisGroup(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "xlPrimary";
+    case 2: return "xlSecondary";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|xlPrimary");
+      if ((value & 2) != 0) sbuf.append("|xlSecondary");
+      return sbuf.toString();
+      }
     }
   }
 }

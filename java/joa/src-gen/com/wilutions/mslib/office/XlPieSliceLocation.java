@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{B270C821-56A3-4F6D-9274-74E6CDF4D10C}")
-public class XlPieSliceLocation {
+public class XlPieSliceLocation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class XlPieSliceLocation {
     case 1: return xlHorizontalCoordinate;
     case 2: return xlVerticalCoordinate;
     default: return new XlPieSliceLocation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "xlHorizontalCoordinate";
+    case 2: return "xlVerticalCoordinate";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|xlHorizontalCoordinate");
+      if ((value & 2) != 0) sbuf.append("|xlVerticalCoordinate");
+      return sbuf.toString();
+      }
     }
   }
 }

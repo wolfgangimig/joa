@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRuleActionType {
+public class OlRuleActionType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -118,6 +118,78 @@ public class OlRuleActionType {
     case 29: return olRuleActionMarkAsTask;
     case 30: return olRuleActionClearCategories;
     default: return new OlRuleActionType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 18: return "olRuleActionStartApplication";
+    case 8: return "olRuleActionRedirect";
+    case 10: return "olRuleActionTemplate";
+    case 0: return "olRuleActionUnknown";
+    case 28: return "olRuleActionDefer";
+    case 1: return "olRuleActionMoveToFolder";
+    case 2: return "olRuleActionAssignToCategory";
+    case 3: return "olRuleActionDelete";
+    case 4: return "olRuleActionDeletePermanently";
+    case 5: return "olRuleActionCopyToFolder";
+    case 6: return "olRuleActionForward";
+    case 7: return "olRuleActionForwardAsAttachment";
+    case 20: return "olRuleActionRunScript";
+    case 9: return "olRuleActionServerReply";
+    case 11: return "olRuleActionFlagForActionInDays";
+    case 12: return "olRuleActionFlagColor";
+    case 13: return "olRuleActionFlagClear";
+    case 14: return "olRuleActionImportance";
+    case 15: return "olRuleActionSensitivity";
+    case 16: return "olRuleActionPrint";
+    case 17: return "olRuleActionPlaySound";
+    case 19: return "olRuleActionMarkRead";
+    case 21: return "olRuleActionStop";
+    case 22: return "olRuleActionCustomAction";
+    case 23: return "olRuleActionNewItemAlert";
+    case 24: return "olRuleActionDesktopAlert";
+    case 25: return "olRuleActionNotifyRead";
+    case 26: return "olRuleActionNotifyDelivery";
+    case 27: return "olRuleActionCcMessage";
+    case 29: return "olRuleActionMarkAsTask";
+    case 30: return "olRuleActionClearCategories";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 18) != 0) sbuf.append("|olRuleActionStartApplication");
+      if ((value & 8) != 0) sbuf.append("|olRuleActionRedirect");
+      if ((value & 10) != 0) sbuf.append("|olRuleActionTemplate");
+      if ((value & 0) != 0) sbuf.append("|olRuleActionUnknown");
+      if ((value & 28) != 0) sbuf.append("|olRuleActionDefer");
+      if ((value & 1) != 0) sbuf.append("|olRuleActionMoveToFolder");
+      if ((value & 2) != 0) sbuf.append("|olRuleActionAssignToCategory");
+      if ((value & 3) != 0) sbuf.append("|olRuleActionDelete");
+      if ((value & 4) != 0) sbuf.append("|olRuleActionDeletePermanently");
+      if ((value & 5) != 0) sbuf.append("|olRuleActionCopyToFolder");
+      if ((value & 6) != 0) sbuf.append("|olRuleActionForward");
+      if ((value & 7) != 0) sbuf.append("|olRuleActionForwardAsAttachment");
+      if ((value & 20) != 0) sbuf.append("|olRuleActionRunScript");
+      if ((value & 9) != 0) sbuf.append("|olRuleActionServerReply");
+      if ((value & 11) != 0) sbuf.append("|olRuleActionFlagForActionInDays");
+      if ((value & 12) != 0) sbuf.append("|olRuleActionFlagColor");
+      if ((value & 13) != 0) sbuf.append("|olRuleActionFlagClear");
+      if ((value & 14) != 0) sbuf.append("|olRuleActionImportance");
+      if ((value & 15) != 0) sbuf.append("|olRuleActionSensitivity");
+      if ((value & 16) != 0) sbuf.append("|olRuleActionPrint");
+      if ((value & 17) != 0) sbuf.append("|olRuleActionPlaySound");
+      if ((value & 19) != 0) sbuf.append("|olRuleActionMarkRead");
+      if ((value & 21) != 0) sbuf.append("|olRuleActionStop");
+      if ((value & 22) != 0) sbuf.append("|olRuleActionCustomAction");
+      if ((value & 23) != 0) sbuf.append("|olRuleActionNewItemAlert");
+      if ((value & 24) != 0) sbuf.append("|olRuleActionDesktopAlert");
+      if ((value & 25) != 0) sbuf.append("|olRuleActionNotifyRead");
+      if ((value & 26) != 0) sbuf.append("|olRuleActionNotifyDelivery");
+      if ((value & 27) != 0) sbuf.append("|olRuleActionCcMessage");
+      if ((value & 29) != 0) sbuf.append("|olRuleActionMarkAsTask");
+      if ((value & 30) != 0) sbuf.append("|olRuleActionClearCategories");
+      return sbuf.toString();
+      }
     }
   }
 }

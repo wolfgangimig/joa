@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSortOrder {
+public class OlSortOrder implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlSortOrder {
     case 1: return olAscending;
     case 2: return olDescending;
     default: return new OlSortOrder(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olSortNone";
+    case 1: return "olAscending";
+    case 2: return "olDescending";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olSortNone");
+      if ((value & 1) != 0) sbuf.append("|olAscending");
+      if ((value & 2) != 0) sbuf.append("|olDescending");
+      return sbuf.toString();
+      }
     }
   }
 }

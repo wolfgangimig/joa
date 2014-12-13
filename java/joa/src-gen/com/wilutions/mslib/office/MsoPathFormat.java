@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPathFormat {
+public class MsoPathFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoPathFormat {
     case 3: return msoPathType3;
     case 4: return msoPathType4;
     default: return new MsoPathFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoPathType2";
+    case -2: return "msoPathTypeMixed";
+    case 0: return "msoPathTypeNone";
+    case 1: return "msoPathType1";
+    case 3: return "msoPathType3";
+    case 4: return "msoPathType4";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoPathType2");
+      if ((value & -2) != 0) sbuf.append("|msoPathTypeMixed");
+      if ((value & 0) != 0) sbuf.append("|msoPathTypeNone");
+      if ((value & 1) != 0) sbuf.append("|msoPathType1");
+      if ((value & 3) != 0) sbuf.append("|msoPathType3");
+      if ((value & 4) != 0) sbuf.append("|msoPathType4");
+      return sbuf.toString();
+      }
     }
   }
 }

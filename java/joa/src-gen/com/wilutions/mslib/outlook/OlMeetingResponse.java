@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlMeetingResponse {
+public class OlMeetingResponse implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlMeetingResponse {
     case 3: return olMeetingAccepted;
     case 4: return olMeetingDeclined;
     default: return new OlMeetingResponse(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "olMeetingTentative";
+    case 3: return "olMeetingAccepted";
+    case 4: return "olMeetingDeclined";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|olMeetingTentative");
+      if ((value & 3) != 0) sbuf.append("|olMeetingAccepted");
+      if ((value & 4) != 0) sbuf.append("|olMeetingDeclined");
+      return sbuf.toString();
+      }
     }
   }
 }

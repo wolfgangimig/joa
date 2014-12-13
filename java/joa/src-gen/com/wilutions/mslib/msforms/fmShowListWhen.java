@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{A4069F24-4221-11CE-8EA0-00AA004BA6AE}")
-public class fmShowListWhen {
+public class fmShowListWhen implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmShowListWhen {
     case 2: return fmShowListWhenFocus;
     case 3: return fmShowListWhenAlways;
     default: return new fmShowListWhen(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmShowListWhenNever";
+    case 1: return "fmShowListWhenButton";
+    case 2: return "fmShowListWhenFocus";
+    case 3: return "fmShowListWhenAlways";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmShowListWhenNever");
+      if ((value & 1) != 0) sbuf.append("|fmShowListWhenButton");
+      if ((value & 2) != 0) sbuf.append("|fmShowListWhenFocus");
+      if ((value & 3) != 0) sbuf.append("|fmShowListWhenAlways");
+      return sbuf.toString();
+      }
     }
   }
 }

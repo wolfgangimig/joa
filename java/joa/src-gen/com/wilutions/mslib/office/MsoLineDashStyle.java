@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoLineDashStyle {
+public class MsoLineDashStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -64,6 +64,42 @@ public class MsoLineDashStyle {
     case 11: return msoLineSysDot;
     case 12: return msoLineSysDashDot;
     default: return new MsoLineDashStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoLineDashStyleMixed";
+    case 2: return "msoLineSquareDot";
+    case 1: return "msoLineSolid";
+    case 3: return "msoLineRoundDot";
+    case 4: return "msoLineDash";
+    case 5: return "msoLineDashDot";
+    case 6: return "msoLineDashDotDot";
+    case 7: return "msoLineLongDash";
+    case 8: return "msoLineLongDashDot";
+    case 9: return "msoLineLongDashDotDot";
+    case 10: return "msoLineSysDash";
+    case 11: return "msoLineSysDot";
+    case 12: return "msoLineSysDashDot";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoLineDashStyleMixed");
+      if ((value & 2) != 0) sbuf.append("|msoLineSquareDot");
+      if ((value & 1) != 0) sbuf.append("|msoLineSolid");
+      if ((value & 3) != 0) sbuf.append("|msoLineRoundDot");
+      if ((value & 4) != 0) sbuf.append("|msoLineDash");
+      if ((value & 5) != 0) sbuf.append("|msoLineDashDot");
+      if ((value & 6) != 0) sbuf.append("|msoLineDashDotDot");
+      if ((value & 7) != 0) sbuf.append("|msoLineLongDash");
+      if ((value & 8) != 0) sbuf.append("|msoLineLongDashDot");
+      if ((value & 9) != 0) sbuf.append("|msoLineLongDashDotDot");
+      if ((value & 10) != 0) sbuf.append("|msoLineSysDash");
+      if ((value & 11) != 0) sbuf.append("|msoLineSysDot");
+      if ((value & 12) != 0) sbuf.append("|msoLineSysDashDot");
+      return sbuf.toString();
+      }
     }
   }
 }

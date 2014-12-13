@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatDateTime {
+public class OlFormatDateTime implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -73,6 +73,48 @@ public class OlFormatDateTime {
     case 16: return olFormatDateTimeShortTime;
     case 17: return olFormatDateTimeBestFit;
     default: return new OlFormatDateTime(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "olFormatDateTimeShortDateNumOnly";
+    case 1: return "olFormatDateTimeLongDayDateTime";
+    case 2: return "olFormatDateTimeShortDateTime";
+    case 3: return "olFormatDateTimeShortDayDateTime";
+    case 4: return "olFormatDateTimeShortDayMonthDateTime";
+    case 5: return "OlFormatDateTimeLongDayDate";
+    case 6: return "olFormatDateTimeLongDate";
+    case 7: return "olFormatDateTimeLongDateReversed";
+    case 8: return "olFormatDateTimeShortDate";
+    case 10: return "olFormatDateTimeShortDayMonth";
+    case 11: return "olFormatDateTimeShortMonthYear";
+    case 12: return "olFormatDateTimeShortMonthYearNumOnly";
+    case 13: return "olFormatDateTimeShortDayDate";
+    case 15: return "olFormatDateTimeLongTime";
+    case 16: return "olFormatDateTimeShortTime";
+    case 17: return "olFormatDateTimeBestFit";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|olFormatDateTimeShortDateNumOnly");
+      if ((value & 1) != 0) sbuf.append("|olFormatDateTimeLongDayDateTime");
+      if ((value & 2) != 0) sbuf.append("|olFormatDateTimeShortDateTime");
+      if ((value & 3) != 0) sbuf.append("|olFormatDateTimeShortDayDateTime");
+      if ((value & 4) != 0) sbuf.append("|olFormatDateTimeShortDayMonthDateTime");
+      if ((value & 5) != 0) sbuf.append("|OlFormatDateTimeLongDayDate");
+      if ((value & 6) != 0) sbuf.append("|olFormatDateTimeLongDate");
+      if ((value & 7) != 0) sbuf.append("|olFormatDateTimeLongDateReversed");
+      if ((value & 8) != 0) sbuf.append("|olFormatDateTimeShortDate");
+      if ((value & 10) != 0) sbuf.append("|olFormatDateTimeShortDayMonth");
+      if ((value & 11) != 0) sbuf.append("|olFormatDateTimeShortMonthYear");
+      if ((value & 12) != 0) sbuf.append("|olFormatDateTimeShortMonthYearNumOnly");
+      if ((value & 13) != 0) sbuf.append("|olFormatDateTimeShortDayDate");
+      if ((value & 15) != 0) sbuf.append("|olFormatDateTimeLongTime");
+      if ((value & 16) != 0) sbuf.append("|olFormatDateTimeShortTime");
+      if ((value & 17) != 0) sbuf.append("|olFormatDateTimeBestFit");
+      return sbuf.toString();
+      }
     }
   }
 }

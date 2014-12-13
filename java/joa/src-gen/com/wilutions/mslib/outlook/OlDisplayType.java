@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlDisplayType {
+public class OlDisplayType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class OlDisplayType {
     case 5: return olPrivateDistList;
     case 6: return olRemoteUser;
     default: return new OlDisplayType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olUser";
+    case 1: return "olDistList";
+    case 2: return "olForum";
+    case 3: return "olAgent";
+    case 4: return "olOrganization";
+    case 5: return "olPrivateDistList";
+    case 6: return "olRemoteUser";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olUser");
+      if ((value & 1) != 0) sbuf.append("|olDistList");
+      if ((value & 2) != 0) sbuf.append("|olForum");
+      if ((value & 3) != 0) sbuf.append("|olAgent");
+      if ((value & 4) != 0) sbuf.append("|olOrganization");
+      if ((value & 5) != 0) sbuf.append("|olPrivateDistList");
+      if ((value & 6) != 0) sbuf.append("|olRemoteUser");
+      return sbuf.toString();
+      }
     }
   }
 }

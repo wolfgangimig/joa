@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlTaskResponse {
+public class OlTaskResponse implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlTaskResponse {
     case 2: return olTaskAccept;
     case 3: return olTaskDecline;
     default: return new OlTaskResponse(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTaskSimple";
+    case 1: return "olTaskAssign";
+    case 2: return "olTaskAccept";
+    case 3: return "olTaskDecline";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTaskSimple");
+      if ((value & 1) != 0) sbuf.append("|olTaskAssign");
+      if ((value & 2) != 0) sbuf.append("|olTaskAccept");
+      if ((value & 3) != 0) sbuf.append("|olTaskDecline");
+      return sbuf.toString();
+      }
     }
   }
 }

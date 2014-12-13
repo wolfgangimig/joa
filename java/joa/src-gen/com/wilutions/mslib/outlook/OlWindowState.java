@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlWindowState {
+public class OlWindowState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlWindowState {
     case 1: return olMinimized;
     case 2: return olNormalWindow;
     default: return new OlWindowState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olMaximized";
+    case 1: return "olMinimized";
+    case 2: return "olNormalWindow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olMaximized");
+      if ((value & 1) != 0) sbuf.append("|olMinimized");
+      if ((value & 2) != 0) sbuf.append("|olNormalWindow");
+      return sbuf.toString();
+      }
     }
   }
 }

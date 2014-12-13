@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoModeType {
+public class MsoModeType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoModeType {
     case 1: return msoModeAutoDown;
     case 2: return msoModeModeless;
     default: return new MsoModeType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoModeModal";
+    case 1: return "msoModeAutoDown";
+    case 2: return "msoModeModeless";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoModeModal");
+      if ((value & 1) != 0) sbuf.append("|msoModeAutoDown");
+      if ((value & 2) != 0) sbuf.append("|msoModeModeless");
+      return sbuf.toString();
+      }
     }
   }
 }

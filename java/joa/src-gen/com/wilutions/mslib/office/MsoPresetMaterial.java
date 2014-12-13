@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetMaterial {
+public class MsoPresetMaterial implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -73,6 +73,48 @@ public class MsoPresetMaterial {
     case 14: return msoMaterialFlat;
     case 15: return msoMaterialSoftMetal;
     default: return new MsoPresetMaterial(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoPresetMaterialMixed";
+    case 2: return "msoMaterialPlastic";
+    case 1: return "msoMaterialMatte";
+    case 3: return "msoMaterialMetal";
+    case 4: return "msoMaterialWireFrame";
+    case 5: return "msoMaterialMatte2";
+    case 6: return "msoMaterialPlastic2";
+    case 7: return "msoMaterialMetal2";
+    case 8: return "msoMaterialWarmMatte";
+    case 9: return "msoMaterialTranslucentPowder";
+    case 10: return "msoMaterialPowder";
+    case 11: return "msoMaterialDarkEdge";
+    case 12: return "msoMaterialSoftEdge";
+    case 13: return "msoMaterialClear";
+    case 14: return "msoMaterialFlat";
+    case 15: return "msoMaterialSoftMetal";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoPresetMaterialMixed");
+      if ((value & 2) != 0) sbuf.append("|msoMaterialPlastic");
+      if ((value & 1) != 0) sbuf.append("|msoMaterialMatte");
+      if ((value & 3) != 0) sbuf.append("|msoMaterialMetal");
+      if ((value & 4) != 0) sbuf.append("|msoMaterialWireFrame");
+      if ((value & 5) != 0) sbuf.append("|msoMaterialMatte2");
+      if ((value & 6) != 0) sbuf.append("|msoMaterialPlastic2");
+      if ((value & 7) != 0) sbuf.append("|msoMaterialMetal2");
+      if ((value & 8) != 0) sbuf.append("|msoMaterialWarmMatte");
+      if ((value & 9) != 0) sbuf.append("|msoMaterialTranslucentPowder");
+      if ((value & 10) != 0) sbuf.append("|msoMaterialPowder");
+      if ((value & 11) != 0) sbuf.append("|msoMaterialDarkEdge");
+      if ((value & 12) != 0) sbuf.append("|msoMaterialSoftEdge");
+      if ((value & 13) != 0) sbuf.append("|msoMaterialClear");
+      if ((value & 14) != 0) sbuf.append("|msoMaterialFlat");
+      if ((value & 15) != 0) sbuf.append("|msoMaterialSoftMetal");
+      return sbuf.toString();
+      }
     }
   }
 }

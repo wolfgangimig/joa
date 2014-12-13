@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlCalendarDetail {
+public class OlCalendarDetail implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlCalendarDetail {
     case 1: return olFreeBusyAndSubject;
     case 2: return olFullDetails;
     default: return new OlCalendarDetail(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olFreeBusyOnly";
+    case 1: return "olFreeBusyAndSubject";
+    case 2: return "olFullDetails";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olFreeBusyOnly");
+      if ((value & 1) != 0) sbuf.append("|olFreeBusyAndSubject");
+      if ((value & 2) != 0) sbuf.append("|olFullDetails");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoEditingType {
+public class MsoEditingType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoEditingType {
     case 2: return msoEditingSmooth;
     case 3: return msoEditingSymmetric;
     default: return new MsoEditingType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoEditingAuto";
+    case 1: return "msoEditingCorner";
+    case 2: return "msoEditingSmooth";
+    case 3: return "msoEditingSymmetric";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoEditingAuto");
+      if ((value & 1) != 0) sbuf.append("|msoEditingCorner");
+      if ((value & 2) != 0) sbuf.append("|msoEditingSmooth");
+      if ((value & 3) != 0) sbuf.append("|msoEditingSymmetric");
+      return sbuf.toString();
+      }
     }
   }
 }

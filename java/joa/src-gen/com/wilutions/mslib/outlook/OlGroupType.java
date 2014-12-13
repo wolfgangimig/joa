@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlGroupType {
+public class OlGroupType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class OlGroupType {
     case 5: return olRoomsGroup;
     case 6: return olReadOnlyGroup;
     default: return new OlGroupType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olCustomFoldersGroup";
+    case 1: return "olMyFoldersGroup";
+    case 2: return "olPeopleFoldersGroup";
+    case 3: return "olOtherFoldersGroup";
+    case 4: return "olFavoriteFoldersGroup";
+    case 5: return "olRoomsGroup";
+    case 6: return "olReadOnlyGroup";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olCustomFoldersGroup");
+      if ((value & 1) != 0) sbuf.append("|olMyFoldersGroup");
+      if ((value & 2) != 0) sbuf.append("|olPeopleFoldersGroup");
+      if ((value & 3) != 0) sbuf.append("|olOtherFoldersGroup");
+      if ((value & 4) != 0) sbuf.append("|olFavoriteFoldersGroup");
+      if ((value & 5) != 0) sbuf.append("|olRoomsGroup");
+      if ((value & 6) != 0) sbuf.append("|olReadOnlyGroup");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C4B07795-AE88-400C-AF72-6F7F75A3EC0B}")
-public class MsoPickerField {
+public class MsoPickerField implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoPickerField {
     case 4: return msoPickerFieldUser;
     case 5: return msoPickerFieldMax;
     default: return new MsoPickerField(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoPickerFieldUnknown";
+    case 1: return "msoPickerFieldDateTime";
+    case 2: return "msoPickerFieldNumber";
+    case 3: return "msoPickerFieldText";
+    case 4: return "msoPickerFieldUser";
+    case 5: return "msoPickerFieldMax";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoPickerFieldUnknown");
+      if ((value & 1) != 0) sbuf.append("|msoPickerFieldDateTime");
+      if ((value & 2) != 0) sbuf.append("|msoPickerFieldNumber");
+      if ((value & 3) != 0) sbuf.append("|msoPickerFieldText");
+      if ((value & 4) != 0) sbuf.append("|msoPickerFieldUser");
+      if ((value & 5) != 0) sbuf.append("|msoPickerFieldMax");
+      return sbuf.toString();
+      }
     }
   }
 }

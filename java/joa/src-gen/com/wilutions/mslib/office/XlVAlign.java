@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlVAlign {
+public class XlVAlign implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class XlVAlign {
     case -4130: return xlVAlignJustify;
     case -4160: return xlVAlignTop;
     default: return new XlVAlign(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4107: return "xlVAlignBottom";
+    case -4117: return "xlVAlignDistributed";
+    case -4108: return "xlVAlignCenter";
+    case -4130: return "xlVAlignJustify";
+    case -4160: return "xlVAlignTop";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4107) != 0) sbuf.append("|xlVAlignBottom");
+      if ((value & -4117) != 0) sbuf.append("|xlVAlignDistributed");
+      if ((value & -4108) != 0) sbuf.append("|xlVAlignCenter");
+      if ((value & -4130) != 0) sbuf.append("|xlVAlignJustify");
+      if ((value & -4160) != 0) sbuf.append("|xlVAlignTop");
+      return sbuf.toString();
+      }
     }
   }
 }

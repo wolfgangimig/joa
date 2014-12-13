@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPictureEffectType {
+public class MsoPictureEffectType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -109,6 +109,72 @@ public class MsoPictureEffectType {
     case 26: return msoEffectTexturizer;
     case 27: return msoEffectWatercolorSponge;
     default: return new MsoPictureEffectType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 18: return "msoEffectPaintStrokes";
+    case 8: return "msoEffectCutout";
+    case 10: return "msoEffectGlass";
+    case 0: return "msoEffectNone";
+    case 1: return "msoEffectBackgroundRemoval";
+    case 2: return "msoEffectBlur";
+    case 3: return "msoEffectBrightnessContrast";
+    case 4: return "msoEffectCement";
+    case 5: return "msoEffectCrisscrossEtching";
+    case 6: return "msoEffectChalkSketch";
+    case 7: return "msoEffectColorTemperature";
+    case 20: return "msoEffectPencilGrayscale";
+    case 9: return "msoEffectFilmGrain";
+    case 11: return "msoEffectGlowDiffused";
+    case 12: return "msoEffectGlowEdges";
+    case 13: return "msoEffectLightScreen";
+    case 14: return "msoEffectLineDrawing";
+    case 15: return "msoEffectMarker";
+    case 16: return "msoEffectMosiaicBubbles";
+    case 17: return "msoEffectPaintBrush";
+    case 19: return "msoEffectPastelsSmooth";
+    case 21: return "msoEffectPencilSketch";
+    case 22: return "msoEffectPhotocopy";
+    case 23: return "msoEffectPlasticWrap";
+    case 24: return "msoEffectSaturation";
+    case 25: return "msoEffectSharpenSoften";
+    case 26: return "msoEffectTexturizer";
+    case 27: return "msoEffectWatercolorSponge";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 18) != 0) sbuf.append("|msoEffectPaintStrokes");
+      if ((value & 8) != 0) sbuf.append("|msoEffectCutout");
+      if ((value & 10) != 0) sbuf.append("|msoEffectGlass");
+      if ((value & 0) != 0) sbuf.append("|msoEffectNone");
+      if ((value & 1) != 0) sbuf.append("|msoEffectBackgroundRemoval");
+      if ((value & 2) != 0) sbuf.append("|msoEffectBlur");
+      if ((value & 3) != 0) sbuf.append("|msoEffectBrightnessContrast");
+      if ((value & 4) != 0) sbuf.append("|msoEffectCement");
+      if ((value & 5) != 0) sbuf.append("|msoEffectCrisscrossEtching");
+      if ((value & 6) != 0) sbuf.append("|msoEffectChalkSketch");
+      if ((value & 7) != 0) sbuf.append("|msoEffectColorTemperature");
+      if ((value & 20) != 0) sbuf.append("|msoEffectPencilGrayscale");
+      if ((value & 9) != 0) sbuf.append("|msoEffectFilmGrain");
+      if ((value & 11) != 0) sbuf.append("|msoEffectGlowDiffused");
+      if ((value & 12) != 0) sbuf.append("|msoEffectGlowEdges");
+      if ((value & 13) != 0) sbuf.append("|msoEffectLightScreen");
+      if ((value & 14) != 0) sbuf.append("|msoEffectLineDrawing");
+      if ((value & 15) != 0) sbuf.append("|msoEffectMarker");
+      if ((value & 16) != 0) sbuf.append("|msoEffectMosiaicBubbles");
+      if ((value & 17) != 0) sbuf.append("|msoEffectPaintBrush");
+      if ((value & 19) != 0) sbuf.append("|msoEffectPastelsSmooth");
+      if ((value & 21) != 0) sbuf.append("|msoEffectPencilSketch");
+      if ((value & 22) != 0) sbuf.append("|msoEffectPhotocopy");
+      if ((value & 23) != 0) sbuf.append("|msoEffectPlasticWrap");
+      if ((value & 24) != 0) sbuf.append("|msoEffectSaturation");
+      if ((value & 25) != 0) sbuf.append("|msoEffectSharpenSoften");
+      if ((value & 26) != 0) sbuf.append("|msoEffectTexturizer");
+      if ((value & 27) != 0) sbuf.append("|msoEffectWatercolorSponge");
+      return sbuf.toString();
+      }
     }
   }
 }

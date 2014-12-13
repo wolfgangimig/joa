@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoParagraphAlignment {
+public class MsoParagraphAlignment implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class MsoParagraphAlignment {
     case 6: return msoAlignThaiDistribute;
     case 7: return msoAlignJustifyLow;
     default: return new MsoParagraphAlignment(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoAlignCenter";
+    case -2: return "msoAlignMixed";
+    case 1: return "msoAlignLeft";
+    case 3: return "msoAlignRight";
+    case 4: return "msoAlignJustify";
+    case 5: return "msoAlignDistribute";
+    case 6: return "msoAlignThaiDistribute";
+    case 7: return "msoAlignJustifyLow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoAlignCenter");
+      if ((value & -2) != 0) sbuf.append("|msoAlignMixed");
+      if ((value & 1) != 0) sbuf.append("|msoAlignLeft");
+      if ((value & 3) != 0) sbuf.append("|msoAlignRight");
+      if ((value & 4) != 0) sbuf.append("|msoAlignJustify");
+      if ((value & 5) != 0) sbuf.append("|msoAlignDistribute");
+      if ((value & 6) != 0) sbuf.append("|msoAlignThaiDistribute");
+      if ((value & 7) != 0) sbuf.append("|msoAlignJustifyLow");
+      return sbuf.toString();
+      }
     }
   }
 }

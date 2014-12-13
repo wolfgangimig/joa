@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{F00164C2-B17B-11CE-A95D-00AA006CB389}")
-public class fmListBoxStyles {
+public class fmListBoxStyles implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmListBoxStyles {
     case 1: return _fmListBoxStylesListBox;
     case 2: return _fmListBoxStylesComboBox;
     default: return new fmListBoxStyles(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "_fmListBoxStylesNone";
+    case 1: return "_fmListBoxStylesListBox";
+    case 2: return "_fmListBoxStylesComboBox";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|_fmListBoxStylesNone");
+      if ((value & 1) != 0) sbuf.append("|_fmListBoxStylesListBox");
+      if ((value & 2) != 0) sbuf.append("|_fmListBoxStylesComboBox");
+      return sbuf.toString();
+      }
     }
   }
 }

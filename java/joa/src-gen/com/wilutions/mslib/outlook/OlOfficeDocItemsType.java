@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlOfficeDocItemsType {
+public class OlOfficeDocItemsType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlOfficeDocItemsType {
     case 9: return olWordDocumentItem;
     case 10: return olPowerPointShowItem;
     default: return new OlOfficeDocItemsType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 10: return "olPowerPointShowItem";
+    case 8: return "olExcelWorkSheetItem";
+    case 9: return "olWordDocumentItem";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 10) != 0) sbuf.append("|olPowerPointShowItem");
+      if ((value & 8) != 0) sbuf.append("|olExcelWorkSheetItem");
+      if ((value & 9) != 0) sbuf.append("|olWordDocumentItem");
+      return sbuf.toString();
+      }
     }
   }
 }

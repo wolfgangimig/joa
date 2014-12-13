@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFolderDisplayMode {
+public class OlFolderDisplayMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlFolderDisplayMode {
     case 1: return olFolderDisplayFolderOnly;
     case 2: return olFolderDisplayNoNavigation;
     default: return new OlFolderDisplayMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olFolderDisplayNormal";
+    case 1: return "olFolderDisplayFolderOnly";
+    case 2: return "olFolderDisplayNoNavigation";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olFolderDisplayNormal");
+      if ((value & 1) != 0) sbuf.append("|olFolderDisplayFolderOnly");
+      if ((value & 2) != 0) sbuf.append("|olFolderDisplayNoNavigation");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{E6C8FA08-BD9F-11D0-985E-00C04FC29993}")
-public class LoadPictureConstants {
+public class LoadPictureConstants implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class LoadPictureConstants {
     case 2: return VgaColor;
     case 4: return Color;
     default: return new LoadPictureConstants(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "Default";
+    case 1: return "Monochrome";
+    case 2: return "VgaColor";
+    case 4: return "Color";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|Default");
+      if ((value & 1) != 0) sbuf.append("|Monochrome");
+      if ((value & 2) != 0) sbuf.append("|VgaColor");
+      if ((value & 4) != 0) sbuf.append("|Color");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSortBy {
+public class MsoSortBy implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoSortBy {
     case 4: return msoSortByLastModified;
     case 5: return msoSortByNone;
     default: return new MsoSortBy(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoSortByFileName";
+    case 2: return "msoSortBySize";
+    case 3: return "msoSortByFileType";
+    case 4: return "msoSortByLastModified";
+    case 5: return "msoSortByNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoSortByFileName");
+      if ((value & 2) != 0) sbuf.append("|msoSortBySize");
+      if ((value & 3) != 0) sbuf.append("|msoSortByFileType");
+      if ((value & 4) != 0) sbuf.append("|msoSortByLastModified");
+      if ((value & 5) != 0) sbuf.append("|msoSortByNone");
+      return sbuf.toString();
+      }
     }
   }
 }

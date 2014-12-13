@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{6A7167F1-2432-11CF-956F-00AA004B9DFA}")
-public class fmEnterFieldBehavior {
+public class fmEnterFieldBehavior implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmEnterFieldBehavior {
     case 0: return fmEnterFieldBehaviorSelectAll;
     case 1: return fmEnterFieldBehaviorRecallSelection;
     default: return new fmEnterFieldBehavior(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmEnterFieldBehaviorSelectAll";
+    case 1: return "fmEnterFieldBehaviorRecallSelection";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmEnterFieldBehaviorSelectAll");
+      if ((value & 1) != 0) sbuf.append("|fmEnterFieldBehaviorRecallSelection");
+      return sbuf.toString();
+      }
     }
   }
 }

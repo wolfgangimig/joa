@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{0DCB2F52-1065-4FD4-BC45-1C11E6D1B279}")
-public class OlMouseButton {
+public class OlMouseButton implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlMouseButton {
     case 2: return olMouseButtonRight;
     case 4: return olMouseButtonMiddle;
     default: return new OlMouseButton(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olMouseButtonLeft";
+    case 2: return "olMouseButtonRight";
+    case 4: return "olMouseButtonMiddle";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olMouseButtonLeft");
+      if ((value & 2) != 0) sbuf.append("|olMouseButtonRight");
+      if ((value & 4) != 0) sbuf.append("|olMouseButtonMiddle");
+      return sbuf.toString();
+      }
     }
   }
 }

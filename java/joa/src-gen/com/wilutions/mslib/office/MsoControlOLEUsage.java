@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoControlOLEUsage {
+public class MsoControlOLEUsage implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoControlOLEUsage {
     case 2: return msoControlOLEUsageClient;
     case 3: return msoControlOLEUsageBoth;
     default: return new MsoControlOLEUsage(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoControlOLEUsageNeither";
+    case 1: return "msoControlOLEUsageServer";
+    case 2: return "msoControlOLEUsageClient";
+    case 3: return "msoControlOLEUsageBoth";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoControlOLEUsageNeither");
+      if ((value & 1) != 0) sbuf.append("|msoControlOLEUsageServer");
+      if ((value & 2) != 0) sbuf.append("|msoControlOLEUsageClient");
+      if ((value & 3) != 0) sbuf.append("|msoControlOLEUsageBoth");
+      return sbuf.toString();
+      }
     }
   }
 }

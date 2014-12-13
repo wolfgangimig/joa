@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C63BD250-BCAA-11CE-B64D-00AA004CD6D8}")
-public class fmMode {
+public class fmMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmMode {
     case -1: return fmModeOn;
     case 0: return fmModeOff;
     default: return new fmMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "fmModeInherit";
+    case -1: return "fmModeOn";
+    case 0: return "fmModeOff";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|fmModeInherit");
+      if ((value & -1) != 0) sbuf.append("|fmModeOn");
+      if ((value & 0) != 0) sbuf.append("|fmModeOff");
+      return sbuf.toString();
+      }
     }
   }
 }

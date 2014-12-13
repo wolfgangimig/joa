@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{0739EEEF-D856-414C-9494-F2F791FD1F22}")
-public class MsoContactCardStyle {
+public class MsoContactCardStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoContactCardStyle {
     case 0: return msoContactCardHover;
     case 1: return msoContactCardFull;
     default: return new MsoContactCardStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoContactCardHover";
+    case 1: return "msoContactCardFull";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoContactCardHover");
+      if ((value & 1) != 0) sbuf.append("|msoContactCardFull");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlChartType {
+public class XlChartType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -262,6 +262,174 @@ public class XlChartType {
     case 116: return xlOtherCombinations;
     case -2: return xlSuggestedChart;
     default: return new XlChartType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 108: return "xlPyramidColStacked100";
+    case 15: return "xlBubble";
+    case 59: return "xlBarStacked100";
+    case 51: return "xlColumnClustered";
+    case 52: return "xlColumnStacked";
+    case 53: return "xlColumnStacked100";
+    case 54: return "xl3DColumnClustered";
+    case 55: return "xl3DColumnStacked";
+    case 56: return "xl3DColumnStacked100";
+    case 57: return "xlBarClustered";
+    case 109: return "xlPyramidBarClustered";
+    case 58: return "xlBarStacked";
+    case 60: return "xl3DBarClustered";
+    case 4: return "xlLine";
+    case 61: return "xl3DBarStacked";
+    case 62: return "xl3DBarStacked100";
+    case 63: return "xlLineStacked";
+    case 64: return "xlLineStacked100";
+    case 65: return "xlLineMarkers";
+    case 111: return "xlPyramidBarStacked100";
+    case 88: return "xlStockHLC";
+    case 66: return "xlLineMarkersStacked";
+    case 67: return "xlLineMarkersStacked100";
+    case 110: return "xlPyramidBarStacked";
+    case 89: return "xlStockOHLC";
+    case 86: return "xlSurfaceTopViewWireframe";
+    case -4101: return "xl3DLine";
+    case 68: return "xlPieOfPie";
+    case -4100: return "xl3DColumn";
+    case 87: return "xlBubble3DEffect";
+    case 69: return "xlPieExploded";
+    case 92: return "xlCylinderColClustered";
+    case 70: return "xl3DPieExploded";
+    case 93: return "xlCylinderColStacked";
+    case 71: return "xlBarOfPie";
+    case 90: return "xlStockVHLC";
+    case 72: return "xlXYScatterSmooth";
+    case 91: return "xlStockVOHLC";
+    case 73: return "xlXYScatterSmoothNoMarkers";
+    case 96: return "xlCylinderBarStacked";
+    case 74: return "xlXYScatterLines";
+    case 97: return "xlCylinderBarStacked100";
+    case 75: return "xlXYScatterLinesNoMarkers";
+    case 94: return "xlCylinderColStacked100";
+    case 76: return "xlAreaStacked";
+    case 95: return "xlCylinderBarClustered";
+    case 77: return "xlAreaStacked100";
+    case 78: return "xl3DAreaStacked";
+    case 79: return "xl3DAreaStacked100";
+    case 80: return "xlDoughnutExploded";
+    case 81: return "xlRadarMarkers";
+    case 82: return "xlRadarFilled";
+    case 83: return "xlSurface";
+    case 84: return "xlSurfaceWireframe";
+    case 85: return "xlSurfaceTopView";
+    case 98: return "xlCylinderCol";
+    case 99: return "xlConeColClustered";
+    case 100: return "xlConeColStacked";
+    case 101: return "xlConeColStacked100";
+    case 102: return "xlConeBarClustered";
+    case 103: return "xlConeBarStacked";
+    case 104: return "xlConeBarStacked100";
+    case 105: return "xlConeCol";
+    case 106: return "xlPyramidColClustered";
+    case 107: return "xlPyramidColStacked";
+    case 112: return "xlPyramidCol";
+    case -4102: return "xl3DPie";
+    case 5: return "xlPie";
+    case -4169: return "xlXYScatter";
+    case -4098: return "xl3DArea";
+    case 1: return "xlArea";
+    case -4120: return "xlDoughnut";
+    case -4151: return "xlRadar";
+    case -4152: return "xlCombo";
+    case 113: return "xlComboColumnClusteredLine";
+    case 114: return "xlComboColumnClusteredLineSecondaryAxis";
+    case 115: return "xlComboAreaStackedColumnClustered";
+    case 116: return "xlOtherCombinations";
+    case -2: return "xlSuggestedChart";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 108) != 0) sbuf.append("|xlPyramidColStacked100");
+      if ((value & 15) != 0) sbuf.append("|xlBubble");
+      if ((value & 59) != 0) sbuf.append("|xlBarStacked100");
+      if ((value & 51) != 0) sbuf.append("|xlColumnClustered");
+      if ((value & 52) != 0) sbuf.append("|xlColumnStacked");
+      if ((value & 53) != 0) sbuf.append("|xlColumnStacked100");
+      if ((value & 54) != 0) sbuf.append("|xl3DColumnClustered");
+      if ((value & 55) != 0) sbuf.append("|xl3DColumnStacked");
+      if ((value & 56) != 0) sbuf.append("|xl3DColumnStacked100");
+      if ((value & 57) != 0) sbuf.append("|xlBarClustered");
+      if ((value & 109) != 0) sbuf.append("|xlPyramidBarClustered");
+      if ((value & 58) != 0) sbuf.append("|xlBarStacked");
+      if ((value & 60) != 0) sbuf.append("|xl3DBarClustered");
+      if ((value & 4) != 0) sbuf.append("|xlLine");
+      if ((value & 61) != 0) sbuf.append("|xl3DBarStacked");
+      if ((value & 62) != 0) sbuf.append("|xl3DBarStacked100");
+      if ((value & 63) != 0) sbuf.append("|xlLineStacked");
+      if ((value & 64) != 0) sbuf.append("|xlLineStacked100");
+      if ((value & 65) != 0) sbuf.append("|xlLineMarkers");
+      if ((value & 111) != 0) sbuf.append("|xlPyramidBarStacked100");
+      if ((value & 88) != 0) sbuf.append("|xlStockHLC");
+      if ((value & 66) != 0) sbuf.append("|xlLineMarkersStacked");
+      if ((value & 67) != 0) sbuf.append("|xlLineMarkersStacked100");
+      if ((value & 110) != 0) sbuf.append("|xlPyramidBarStacked");
+      if ((value & 89) != 0) sbuf.append("|xlStockOHLC");
+      if ((value & 86) != 0) sbuf.append("|xlSurfaceTopViewWireframe");
+      if ((value & -4101) != 0) sbuf.append("|xl3DLine");
+      if ((value & 68) != 0) sbuf.append("|xlPieOfPie");
+      if ((value & -4100) != 0) sbuf.append("|xl3DColumn");
+      if ((value & 87) != 0) sbuf.append("|xlBubble3DEffect");
+      if ((value & 69) != 0) sbuf.append("|xlPieExploded");
+      if ((value & 92) != 0) sbuf.append("|xlCylinderColClustered");
+      if ((value & 70) != 0) sbuf.append("|xl3DPieExploded");
+      if ((value & 93) != 0) sbuf.append("|xlCylinderColStacked");
+      if ((value & 71) != 0) sbuf.append("|xlBarOfPie");
+      if ((value & 90) != 0) sbuf.append("|xlStockVHLC");
+      if ((value & 72) != 0) sbuf.append("|xlXYScatterSmooth");
+      if ((value & 91) != 0) sbuf.append("|xlStockVOHLC");
+      if ((value & 73) != 0) sbuf.append("|xlXYScatterSmoothNoMarkers");
+      if ((value & 96) != 0) sbuf.append("|xlCylinderBarStacked");
+      if ((value & 74) != 0) sbuf.append("|xlXYScatterLines");
+      if ((value & 97) != 0) sbuf.append("|xlCylinderBarStacked100");
+      if ((value & 75) != 0) sbuf.append("|xlXYScatterLinesNoMarkers");
+      if ((value & 94) != 0) sbuf.append("|xlCylinderColStacked100");
+      if ((value & 76) != 0) sbuf.append("|xlAreaStacked");
+      if ((value & 95) != 0) sbuf.append("|xlCylinderBarClustered");
+      if ((value & 77) != 0) sbuf.append("|xlAreaStacked100");
+      if ((value & 78) != 0) sbuf.append("|xl3DAreaStacked");
+      if ((value & 79) != 0) sbuf.append("|xl3DAreaStacked100");
+      if ((value & 80) != 0) sbuf.append("|xlDoughnutExploded");
+      if ((value & 81) != 0) sbuf.append("|xlRadarMarkers");
+      if ((value & 82) != 0) sbuf.append("|xlRadarFilled");
+      if ((value & 83) != 0) sbuf.append("|xlSurface");
+      if ((value & 84) != 0) sbuf.append("|xlSurfaceWireframe");
+      if ((value & 85) != 0) sbuf.append("|xlSurfaceTopView");
+      if ((value & 98) != 0) sbuf.append("|xlCylinderCol");
+      if ((value & 99) != 0) sbuf.append("|xlConeColClustered");
+      if ((value & 100) != 0) sbuf.append("|xlConeColStacked");
+      if ((value & 101) != 0) sbuf.append("|xlConeColStacked100");
+      if ((value & 102) != 0) sbuf.append("|xlConeBarClustered");
+      if ((value & 103) != 0) sbuf.append("|xlConeBarStacked");
+      if ((value & 104) != 0) sbuf.append("|xlConeBarStacked100");
+      if ((value & 105) != 0) sbuf.append("|xlConeCol");
+      if ((value & 106) != 0) sbuf.append("|xlPyramidColClustered");
+      if ((value & 107) != 0) sbuf.append("|xlPyramidColStacked");
+      if ((value & 112) != 0) sbuf.append("|xlPyramidCol");
+      if ((value & -4102) != 0) sbuf.append("|xl3DPie");
+      if ((value & 5) != 0) sbuf.append("|xlPie");
+      if ((value & -4169) != 0) sbuf.append("|xlXYScatter");
+      if ((value & -4098) != 0) sbuf.append("|xl3DArea");
+      if ((value & 1) != 0) sbuf.append("|xlArea");
+      if ((value & -4120) != 0) sbuf.append("|xlDoughnut");
+      if ((value & -4151) != 0) sbuf.append("|xlRadar");
+      if ((value & -4152) != 0) sbuf.append("|xlCombo");
+      if ((value & 113) != 0) sbuf.append("|xlComboColumnClusteredLine");
+      if ((value & 114) != 0) sbuf.append("|xlComboColumnClusteredLineSecondaryAxis");
+      if ((value & 115) != 0) sbuf.append("|xlComboAreaStackedColumnClustered");
+      if ((value & 116) != 0) sbuf.append("|xlOtherCombinations");
+      if ((value & -2) != 0) sbuf.append("|xlSuggestedChart");
+      return sbuf.toString();
+      }
     }
   }
 }

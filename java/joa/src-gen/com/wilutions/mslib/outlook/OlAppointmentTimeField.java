@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{BA5537F4-8941-4E26-871E-0D53D647B9FC}")
-public class OlAppointmentTimeField {
+public class OlAppointmentTimeField implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlAppointmentTimeField {
     case 2: return olAppointmentTimeFieldStart;
     case 3: return olAppointmentTimeFieldEnd;
     default: return new OlAppointmentTimeField(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olAppointmentTimeFieldNone";
+    case 2: return "olAppointmentTimeFieldStart";
+    case 3: return "olAppointmentTimeFieldEnd";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olAppointmentTimeFieldNone");
+      if ((value & 2) != 0) sbuf.append("|olAppointmentTimeFieldStart");
+      if ((value & 3) != 0) sbuf.append("|olAppointmentTimeFieldEnd");
+      return sbuf.toString();
+      }
     }
   }
 }

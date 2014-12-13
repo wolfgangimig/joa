@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class SignatureLineImage {
+public class SignatureLineImage implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class SignatureLineImage {
     case 3: return siglnimgSignedInvalid;
     case 4: return siglnimgSigned;
     default: return new SignatureLineImage(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "siglnimgSoftwareRequired";
+    case 1: return "siglnimgUnsigned";
+    case 2: return "siglnimgSignedValid";
+    case 3: return "siglnimgSignedInvalid";
+    case 4: return "siglnimgSigned";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|siglnimgSoftwareRequired");
+      if ((value & 1) != 0) sbuf.append("|siglnimgUnsigned");
+      if ((value & 2) != 0) sbuf.append("|siglnimgSignedValid");
+      if ((value & 3) != 0) sbuf.append("|siglnimgSignedInvalid");
+      if ((value & 4) != 0) sbuf.append("|siglnimgSigned");
+      return sbuf.toString();
+      }
     }
   }
 }

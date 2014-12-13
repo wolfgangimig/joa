@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTargetBrowser {
+public class MsoTargetBrowser implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoTargetBrowser {
     case 3: return msoTargetBrowserIE5;
     case 4: return msoTargetBrowserIE6;
     default: return new MsoTargetBrowser(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoTargetBrowserV3";
+    case 1: return "msoTargetBrowserV4";
+    case 2: return "msoTargetBrowserIE4";
+    case 3: return "msoTargetBrowserIE5";
+    case 4: return "msoTargetBrowserIE6";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoTargetBrowserV3");
+      if ((value & 1) != 0) sbuf.append("|msoTargetBrowserV4");
+      if ((value & 2) != 0) sbuf.append("|msoTargetBrowserIE4");
+      if ((value & 3) != 0) sbuf.append("|msoTargetBrowserIE5");
+      if ((value & 4) != 0) sbuf.append("|msoTargetBrowserIE6");
+      return sbuf.toString();
+      }
     }
   }
 }

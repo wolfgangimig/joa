@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTriState {
+public class MsoTriState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoTriState {
     case -3: return msoTriStateToggle;
     case -2: return msoTriStateMixed;
     default: return new MsoTriState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -1: return "msoTrue";
+    case 0: return "msoFalse";
+    case 1: return "msoCTrue";
+    case -3: return "msoTriStateToggle";
+    case -2: return "msoTriStateMixed";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -1) != 0) sbuf.append("|msoTrue");
+      if ((value & 0) != 0) sbuf.append("|msoFalse");
+      if ((value & 1) != 0) sbuf.append("|msoCTrue");
+      if ((value & -3) != 0) sbuf.append("|msoTriStateToggle");
+      if ((value & -2) != 0) sbuf.append("|msoTriStateMixed");
+      return sbuf.toString();
+      }
     }
   }
 }

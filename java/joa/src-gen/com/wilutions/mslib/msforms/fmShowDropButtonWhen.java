@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C5D98C41-4EB2-11CE-8EA0-00AA004BA6AE}")
-public class fmShowDropButtonWhen {
+public class fmShowDropButtonWhen implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmShowDropButtonWhen {
     case 1: return fmShowDropButtonWhenFocus;
     case 2: return fmShowDropButtonWhenAlways;
     default: return new fmShowDropButtonWhen(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmShowDropButtonWhenNever";
+    case 1: return "fmShowDropButtonWhenFocus";
+    case 2: return "fmShowDropButtonWhenAlways";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmShowDropButtonWhenNever");
+      if ((value & 1) != 0) sbuf.append("|fmShowDropButtonWhenFocus");
+      if ((value & 2) != 0) sbuf.append("|fmShowDropButtonWhenAlways");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoCalloutAngleType {
+public class MsoCalloutAngleType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoCalloutAngleType {
     case 4: return msoCalloutAngle60;
     case 5: return msoCalloutAngle90;
     default: return new MsoCalloutAngleType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoCalloutAngle30";
+    case -2: return "msoCalloutAngleMixed";
+    case 1: return "msoCalloutAngleAutomatic";
+    case 3: return "msoCalloutAngle45";
+    case 4: return "msoCalloutAngle60";
+    case 5: return "msoCalloutAngle90";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoCalloutAngle30");
+      if ((value & -2) != 0) sbuf.append("|msoCalloutAngleMixed");
+      if ((value & 1) != 0) sbuf.append("|msoCalloutAngleAutomatic");
+      if ((value & 3) != 0) sbuf.append("|msoCalloutAngle45");
+      if ((value & 4) != 0) sbuf.append("|msoCalloutAngle60");
+      if ((value & 5) != 0) sbuf.append("|msoCalloutAngle90");
+      return sbuf.toString();
+      }
     }
   }
 }

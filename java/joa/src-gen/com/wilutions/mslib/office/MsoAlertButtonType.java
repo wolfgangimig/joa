@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAlertButtonType {
+public class MsoAlertButtonType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoAlertButtonType {
     case 5: return msoAlertButtonRetryCancel;
     case 6: return msoAlertButtonYesAllNoCancel;
     default: return new MsoAlertButtonType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoAlertButtonOK";
+    case 1: return "msoAlertButtonOKCancel";
+    case 2: return "msoAlertButtonAbortRetryIgnore";
+    case 3: return "msoAlertButtonYesNoCancel";
+    case 4: return "msoAlertButtonYesNo";
+    case 5: return "msoAlertButtonRetryCancel";
+    case 6: return "msoAlertButtonYesAllNoCancel";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoAlertButtonOK");
+      if ((value & 1) != 0) sbuf.append("|msoAlertButtonOKCancel");
+      if ((value & 2) != 0) sbuf.append("|msoAlertButtonAbortRetryIgnore");
+      if ((value & 3) != 0) sbuf.append("|msoAlertButtonYesNoCancel");
+      if ((value & 4) != 0) sbuf.append("|msoAlertButtonYesNo");
+      if ((value & 5) != 0) sbuf.append("|msoAlertButtonRetryCancel");
+      if ((value & 6) != 0) sbuf.append("|msoAlertButtonYesAllNoCancel");
+      return sbuf.toString();
+      }
     }
   }
 }

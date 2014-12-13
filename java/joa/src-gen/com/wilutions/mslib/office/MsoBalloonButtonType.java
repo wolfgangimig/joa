@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBalloonButtonType {
+public class MsoBalloonButtonType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -73,6 +73,48 @@ public class MsoBalloonButtonType {
     case -1: return msoBalloonButtonOK;
     case 0: return msoBalloonButtonNull;
     default: return new MsoBalloonButtonType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -6: return "msoBalloonButtonNext";
+    case -15: return "msoBalloonButtonYesToAll";
+    case -7: return "msoBalloonButtonRetry";
+    case -14: return "msoBalloonButtonOptions";
+    case -8: return "msoBalloonButtonAbort";
+    case -13: return "msoBalloonButtonTips";
+    case -9: return "msoBalloonButtonIgnore";
+    case -1: return "msoBalloonButtonOK";
+    case -12: return "msoBalloonButtonClose";
+    case -11: return "msoBalloonButtonSnooze";
+    case -10: return "msoBalloonButtonSearch";
+    case -5: return "msoBalloonButtonBack";
+    case -4: return "msoBalloonButtonNo";
+    case -3: return "msoBalloonButtonYes";
+    case -2: return "msoBalloonButtonCancel";
+    case 0: return "msoBalloonButtonNull";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -6) != 0) sbuf.append("|msoBalloonButtonNext");
+      if ((value & -15) != 0) sbuf.append("|msoBalloonButtonYesToAll");
+      if ((value & -7) != 0) sbuf.append("|msoBalloonButtonRetry");
+      if ((value & -14) != 0) sbuf.append("|msoBalloonButtonOptions");
+      if ((value & -8) != 0) sbuf.append("|msoBalloonButtonAbort");
+      if ((value & -13) != 0) sbuf.append("|msoBalloonButtonTips");
+      if ((value & -9) != 0) sbuf.append("|msoBalloonButtonIgnore");
+      if ((value & -1) != 0) sbuf.append("|msoBalloonButtonOK");
+      if ((value & -12) != 0) sbuf.append("|msoBalloonButtonClose");
+      if ((value & -11) != 0) sbuf.append("|msoBalloonButtonSnooze");
+      if ((value & -10) != 0) sbuf.append("|msoBalloonButtonSearch");
+      if ((value & -5) != 0) sbuf.append("|msoBalloonButtonBack");
+      if ((value & -4) != 0) sbuf.append("|msoBalloonButtonNo");
+      if ((value & -3) != 0) sbuf.append("|msoBalloonButtonYes");
+      if ((value & -2) != 0) sbuf.append("|msoBalloonButtonCancel");
+      if ((value & 0) != 0) sbuf.append("|msoBalloonButtonNull");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetGradientType {
+public class MsoPresetGradientType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -100,6 +100,66 @@ public class MsoPresetGradientType {
     case 23: return msoGradientSilver;
     case 24: return msoGradientSapphire;
     default: return new MsoPresetGradientType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoPresetGradientMixed";
+    case 2: return "msoGradientLateSunset";
+    case 1: return "msoGradientEarlySunset";
+    case 3: return "msoGradientNightfall";
+    case 4: return "msoGradientDaybreak";
+    case 5: return "msoGradientHorizon";
+    case 6: return "msoGradientDesert";
+    case 7: return "msoGradientOcean";
+    case 18: return "msoGradientGold";
+    case 8: return "msoGradientCalmWater";
+    case 20: return "msoGradientBrass";
+    case 9: return "msoGradientFire";
+    case 10: return "msoGradientFog";
+    case 11: return "msoGradientMoss";
+    case 12: return "msoGradientPeacock";
+    case 13: return "msoGradientWheat";
+    case 14: return "msoGradientParchment";
+    case 15: return "msoGradientMahogany";
+    case 16: return "msoGradientRainbow";
+    case 17: return "msoGradientRainbowII";
+    case 19: return "msoGradientGoldII";
+    case 21: return "msoGradientChrome";
+    case 22: return "msoGradientChromeII";
+    case 23: return "msoGradientSilver";
+    case 24: return "msoGradientSapphire";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoPresetGradientMixed");
+      if ((value & 2) != 0) sbuf.append("|msoGradientLateSunset");
+      if ((value & 1) != 0) sbuf.append("|msoGradientEarlySunset");
+      if ((value & 3) != 0) sbuf.append("|msoGradientNightfall");
+      if ((value & 4) != 0) sbuf.append("|msoGradientDaybreak");
+      if ((value & 5) != 0) sbuf.append("|msoGradientHorizon");
+      if ((value & 6) != 0) sbuf.append("|msoGradientDesert");
+      if ((value & 7) != 0) sbuf.append("|msoGradientOcean");
+      if ((value & 18) != 0) sbuf.append("|msoGradientGold");
+      if ((value & 8) != 0) sbuf.append("|msoGradientCalmWater");
+      if ((value & 20) != 0) sbuf.append("|msoGradientBrass");
+      if ((value & 9) != 0) sbuf.append("|msoGradientFire");
+      if ((value & 10) != 0) sbuf.append("|msoGradientFog");
+      if ((value & 11) != 0) sbuf.append("|msoGradientMoss");
+      if ((value & 12) != 0) sbuf.append("|msoGradientPeacock");
+      if ((value & 13) != 0) sbuf.append("|msoGradientWheat");
+      if ((value & 14) != 0) sbuf.append("|msoGradientParchment");
+      if ((value & 15) != 0) sbuf.append("|msoGradientMahogany");
+      if ((value & 16) != 0) sbuf.append("|msoGradientRainbow");
+      if ((value & 17) != 0) sbuf.append("|msoGradientRainbowII");
+      if ((value & 19) != 0) sbuf.append("|msoGradientGoldII");
+      if ((value & 21) != 0) sbuf.append("|msoGradientChrome");
+      if ((value & 22) != 0) sbuf.append("|msoGradientChromeII");
+      if ((value & 23) != 0) sbuf.append("|msoGradientSilver");
+      if ((value & 24) != 0) sbuf.append("|msoGradientSapphire");
+      return sbuf.toString();
+      }
     }
   }
 }

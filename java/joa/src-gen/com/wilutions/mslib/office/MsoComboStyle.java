@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoComboStyle {
+public class MsoComboStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoComboStyle {
     case 0: return msoComboNormal;
     case 1: return msoComboLabel;
     default: return new MsoComboStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoComboNormal";
+    case 1: return "msoComboLabel";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoComboNormal");
+      if ((value & 1) != 0) sbuf.append("|msoComboLabel");
+      return sbuf.toString();
+      }
     }
   }
 }

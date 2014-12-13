@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlMultiLine {
+public class OlMultiLine implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlMultiLine {
     case 1: return olAlwaysSingleLine;
     case 2: return olAlwaysMultiLine;
     default: return new OlMultiLine(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olWidthMultiLine";
+    case 1: return "olAlwaysSingleLine";
+    case 2: return "olAlwaysMultiLine";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olWidthMultiLine");
+      if ((value & 1) != 0) sbuf.append("|olAlwaysSingleLine");
+      if ((value & 2) != 0) sbuf.append("|olAlwaysMultiLine");
+      return sbuf.toString();
+      }
     }
   }
 }

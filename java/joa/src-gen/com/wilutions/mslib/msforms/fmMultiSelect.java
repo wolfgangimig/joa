@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{F00164C0-B17B-11CE-A95D-00AA006CB389}")
-public class fmMultiSelect {
+public class fmMultiSelect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmMultiSelect {
     case 1: return fmMultiSelectMulti;
     case 2: return fmMultiSelectExtended;
     default: return new fmMultiSelect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmMultiSelectSingle";
+    case 1: return "fmMultiSelectMulti";
+    case 2: return "fmMultiSelectExtended";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmMultiSelectSingle");
+      if ((value & 1) != 0) sbuf.append("|fmMultiSelectMulti");
+      if ((value & 2) != 0) sbuf.append("|fmMultiSelectExtended");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoClipboardFormat {
+public class MsoClipboardFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoClipboardFormat {
     case 3: return msoClipboardFormatRTF;
     case 4: return msoClipboardFormatPlainText;
     default: return new MsoClipboardFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoClipboardFormatHTML";
+    case -2: return "msoClipboardFormatMixed";
+    case 1: return "msoClipboardFormatNative";
+    case 3: return "msoClipboardFormatRTF";
+    case 4: return "msoClipboardFormatPlainText";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoClipboardFormatHTML");
+      if ((value & -2) != 0) sbuf.append("|msoClipboardFormatMixed");
+      if ((value & 1) != 0) sbuf.append("|msoClipboardFormatNative");
+      if ((value & 3) != 0) sbuf.append("|msoClipboardFormatRTF");
+      if ((value & 4) != 0) sbuf.append("|msoClipboardFormatPlainText");
+      return sbuf.toString();
+      }
     }
   }
 }

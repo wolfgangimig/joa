@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSaveAsType {
+public class OlSaveAsType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -58,6 +58,38 @@ public class OlSaveAsType {
     case 9: return olMSGUnicode;
     case 10: return olMHTML;
     default: return new OlSaveAsType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "olICal";
+    case 10: return "olMHTML";
+    case 0: return "olTXT";
+    case 1: return "olRTF";
+    case 2: return "olTemplate";
+    case 3: return "olMSG";
+    case 4: return "olDoc";
+    case 5: return "olHTML";
+    case 6: return "olVCard";
+    case 7: return "olVCal";
+    case 9: return "olMSGUnicode";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|olICal");
+      if ((value & 10) != 0) sbuf.append("|olMHTML");
+      if ((value & 0) != 0) sbuf.append("|olTXT");
+      if ((value & 1) != 0) sbuf.append("|olRTF");
+      if ((value & 2) != 0) sbuf.append("|olTemplate");
+      if ((value & 3) != 0) sbuf.append("|olMSG");
+      if ((value & 4) != 0) sbuf.append("|olDoc");
+      if ((value & 5) != 0) sbuf.append("|olHTML");
+      if ((value & 6) != 0) sbuf.append("|olVCard");
+      if ((value & 7) != 0) sbuf.append("|olVCal");
+      if ((value & 9) != 0) sbuf.append("|olMSGUnicode");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRecipientSelectors {
+public class OlRecipientSelectors implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlRecipientSelectors {
     case 2: return olShowToCc;
     case 3: return olShowToCcBcc;
     default: return new OlRecipientSelectors(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olShowNone";
+    case 1: return "olShowTo";
+    case 2: return "olShowToCc";
+    case 3: return "olShowToCcBcc";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olShowNone");
+      if ((value & 1) != 0) sbuf.append("|olShowTo");
+      if ((value & 2) != 0) sbuf.append("|olShowToCc");
+      if ((value & 3) != 0) sbuf.append("|olShowToCcBcc");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFileType {
+public class MsoFileType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -94,6 +94,62 @@ public class MsoFileType {
     case 22: return msoFileTypeDesignerFiles;
     case 23: return msoFileTypeWebPages;
     default: return new MsoFileType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 20: return "msoFileTypeDocumentImagingFiles";
+    case 9: return "msoFileTypeOutlookItems";
+    case 1: return "msoFileTypeAllFiles";
+    case 2: return "msoFileTypeOfficeFiles";
+    case 3: return "msoFileTypeWordDocuments";
+    case 4: return "msoFileTypeExcelWorkbooks";
+    case 5: return "msoFileTypePowerPointPresentations";
+    case 6: return "msoFileTypeBinders";
+    case 7: return "msoFileTypeDatabases";
+    case 18: return "msoFileTypePublisherFiles";
+    case 8: return "msoFileTypeTemplates";
+    case 10: return "msoFileTypeMailItem";
+    case 11: return "msoFileTypeCalendarItem";
+    case 12: return "msoFileTypeContactItem";
+    case 13: return "msoFileTypeNoteItem";
+    case 14: return "msoFileTypeJournalItem";
+    case 15: return "msoFileTypeTaskItem";
+    case 16: return "msoFileTypePhotoDrawFiles";
+    case 17: return "msoFileTypeDataConnectionFiles";
+    case 19: return "msoFileTypeProjectFiles";
+    case 21: return "msoFileTypeVisioFiles";
+    case 22: return "msoFileTypeDesignerFiles";
+    case 23: return "msoFileTypeWebPages";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 20) != 0) sbuf.append("|msoFileTypeDocumentImagingFiles");
+      if ((value & 9) != 0) sbuf.append("|msoFileTypeOutlookItems");
+      if ((value & 1) != 0) sbuf.append("|msoFileTypeAllFiles");
+      if ((value & 2) != 0) sbuf.append("|msoFileTypeOfficeFiles");
+      if ((value & 3) != 0) sbuf.append("|msoFileTypeWordDocuments");
+      if ((value & 4) != 0) sbuf.append("|msoFileTypeExcelWorkbooks");
+      if ((value & 5) != 0) sbuf.append("|msoFileTypePowerPointPresentations");
+      if ((value & 6) != 0) sbuf.append("|msoFileTypeBinders");
+      if ((value & 7) != 0) sbuf.append("|msoFileTypeDatabases");
+      if ((value & 18) != 0) sbuf.append("|msoFileTypePublisherFiles");
+      if ((value & 8) != 0) sbuf.append("|msoFileTypeTemplates");
+      if ((value & 10) != 0) sbuf.append("|msoFileTypeMailItem");
+      if ((value & 11) != 0) sbuf.append("|msoFileTypeCalendarItem");
+      if ((value & 12) != 0) sbuf.append("|msoFileTypeContactItem");
+      if ((value & 13) != 0) sbuf.append("|msoFileTypeNoteItem");
+      if ((value & 14) != 0) sbuf.append("|msoFileTypeJournalItem");
+      if ((value & 15) != 0) sbuf.append("|msoFileTypeTaskItem");
+      if ((value & 16) != 0) sbuf.append("|msoFileTypePhotoDrawFiles");
+      if ((value & 17) != 0) sbuf.append("|msoFileTypeDataConnectionFiles");
+      if ((value & 19) != 0) sbuf.append("|msoFileTypeProjectFiles");
+      if ((value & 21) != 0) sbuf.append("|msoFileTypeVisioFiles");
+      if ((value & 22) != 0) sbuf.append("|msoFileTypeDesignerFiles");
+      if ((value & 23) != 0) sbuf.append("|msoFileTypeWebPages");
+      return sbuf.toString();
+      }
     }
   }
 }

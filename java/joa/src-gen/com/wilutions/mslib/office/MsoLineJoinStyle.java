@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoLineJoinStyle {
+public class MsoLineJoinStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoLineJoinStyle {
     case 2: return msoLineJoinBevel;
     case 3: return msoLineJoinMiter;
     default: return new MsoLineJoinStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoLineJoinBevel";
+    case -2: return "msoLineJoinMixed";
+    case 1: return "msoLineJoinRound";
+    case 3: return "msoLineJoinMiter";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoLineJoinBevel");
+      if ((value & -2) != 0) sbuf.append("|msoLineJoinMixed");
+      if ((value & 1) != 0) sbuf.append("|msoLineJoinRound");
+      if ((value & 3) != 0) sbuf.append("|msoLineJoinMiter");
+      return sbuf.toString();
+      }
     }
   }
 }

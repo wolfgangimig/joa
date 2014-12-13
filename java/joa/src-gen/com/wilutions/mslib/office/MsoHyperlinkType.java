@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoHyperlinkType {
+public class MsoHyperlinkType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoHyperlinkType {
     case 1: return msoHyperlinkShape;
     case 2: return msoHyperlinkInlineShape;
     default: return new MsoHyperlinkType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoHyperlinkRange";
+    case 1: return "msoHyperlinkShape";
+    case 2: return "msoHyperlinkInlineShape";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoHyperlinkRange");
+      if ((value & 1) != 0) sbuf.append("|msoHyperlinkShape");
+      if ((value & 2) != 0) sbuf.append("|msoHyperlinkInlineShape");
+      return sbuf.toString();
+      }
     }
   }
 }

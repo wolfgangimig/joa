@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoCalloutDropType {
+public class MsoCalloutDropType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoCalloutDropType {
     case 3: return msoCalloutDropCenter;
     case 4: return msoCalloutDropBottom;
     default: return new MsoCalloutDropType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoCalloutDropTop";
+    case -2: return "msoCalloutDropMixed";
+    case 1: return "msoCalloutDropCustom";
+    case 3: return "msoCalloutDropCenter";
+    case 4: return "msoCalloutDropBottom";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoCalloutDropTop");
+      if ((value & -2) != 0) sbuf.append("|msoCalloutDropMixed");
+      if ((value & 1) != 0) sbuf.append("|msoCalloutDropCustom");
+      if ((value & 3) != 0) sbuf.append("|msoCalloutDropCenter");
+      if ((value & 4) != 0) sbuf.append("|msoCalloutDropBottom");
+      return sbuf.toString();
+      }
     }
   }
 }

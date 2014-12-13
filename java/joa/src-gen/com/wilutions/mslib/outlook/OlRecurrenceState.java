@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRecurrenceState {
+public class OlRecurrenceState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlRecurrenceState {
     case 2: return olApptOccurrence;
     case 3: return olApptException;
     default: return new OlRecurrenceState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olApptNotRecurring";
+    case 1: return "olApptMaster";
+    case 2: return "olApptOccurrence";
+    case 3: return "olApptException";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olApptNotRecurring");
+      if ((value & 1) != 0) sbuf.append("|olApptMaster");
+      if ((value & 2) != 0) sbuf.append("|olApptOccurrence");
+      if ((value & 3) != 0) sbuf.append("|olApptException");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoLightRigType {
+public class MsoLightRigType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -109,6 +109,72 @@ public class MsoLightRigType {
     case 26: return msoLightRigGlow;
     case 27: return msoLightRigBrightRoom;
     default: return new MsoLightRigType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoLightRigMixed";
+    case 2: return "msoLightRigLegacyFlat2";
+    case 1: return "msoLightRigLegacyFlat1";
+    case 3: return "msoLightRigLegacyFlat3";
+    case 4: return "msoLightRigLegacyFlat4";
+    case 5: return "msoLightRigLegacyNormal1";
+    case 6: return "msoLightRigLegacyNormal2";
+    case 7: return "msoLightRigLegacyNormal3";
+    case 18: return "msoLightRigContrasting";
+    case 8: return "msoLightRigLegacyNormal4";
+    case 20: return "msoLightRigSunrise";
+    case 9: return "msoLightRigLegacyHarsh1";
+    case 10: return "msoLightRigLegacyHarsh2";
+    case 11: return "msoLightRigLegacyHarsh3";
+    case 12: return "msoLightRigLegacyHarsh4";
+    case 13: return "msoLightRigThreePoint";
+    case 14: return "msoLightRigBalanced";
+    case 15: return "msoLightRigSoft";
+    case 16: return "msoLightRigHarsh";
+    case 17: return "msoLightRigFlood";
+    case 19: return "msoLightRigMorning";
+    case 21: return "msoLightRigSunset";
+    case 22: return "msoLightRigChilly";
+    case 23: return "msoLightRigFreezing";
+    case 24: return "msoLightRigFlat";
+    case 25: return "msoLightRigTwoPoint";
+    case 26: return "msoLightRigGlow";
+    case 27: return "msoLightRigBrightRoom";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoLightRigMixed");
+      if ((value & 2) != 0) sbuf.append("|msoLightRigLegacyFlat2");
+      if ((value & 1) != 0) sbuf.append("|msoLightRigLegacyFlat1");
+      if ((value & 3) != 0) sbuf.append("|msoLightRigLegacyFlat3");
+      if ((value & 4) != 0) sbuf.append("|msoLightRigLegacyFlat4");
+      if ((value & 5) != 0) sbuf.append("|msoLightRigLegacyNormal1");
+      if ((value & 6) != 0) sbuf.append("|msoLightRigLegacyNormal2");
+      if ((value & 7) != 0) sbuf.append("|msoLightRigLegacyNormal3");
+      if ((value & 18) != 0) sbuf.append("|msoLightRigContrasting");
+      if ((value & 8) != 0) sbuf.append("|msoLightRigLegacyNormal4");
+      if ((value & 20) != 0) sbuf.append("|msoLightRigSunrise");
+      if ((value & 9) != 0) sbuf.append("|msoLightRigLegacyHarsh1");
+      if ((value & 10) != 0) sbuf.append("|msoLightRigLegacyHarsh2");
+      if ((value & 11) != 0) sbuf.append("|msoLightRigLegacyHarsh3");
+      if ((value & 12) != 0) sbuf.append("|msoLightRigLegacyHarsh4");
+      if ((value & 13) != 0) sbuf.append("|msoLightRigThreePoint");
+      if ((value & 14) != 0) sbuf.append("|msoLightRigBalanced");
+      if ((value & 15) != 0) sbuf.append("|msoLightRigSoft");
+      if ((value & 16) != 0) sbuf.append("|msoLightRigHarsh");
+      if ((value & 17) != 0) sbuf.append("|msoLightRigFlood");
+      if ((value & 19) != 0) sbuf.append("|msoLightRigMorning");
+      if ((value & 21) != 0) sbuf.append("|msoLightRigSunset");
+      if ((value & 22) != 0) sbuf.append("|msoLightRigChilly");
+      if ((value & 23) != 0) sbuf.append("|msoLightRigFreezing");
+      if ((value & 24) != 0) sbuf.append("|msoLightRigFlat");
+      if ((value & 25) != 0) sbuf.append("|msoLightRigTwoPoint");
+      if ((value & 26) != 0) sbuf.append("|msoLightRigGlow");
+      if ((value & 27) != 0) sbuf.append("|msoLightRigBrightRoom");
+      return sbuf.toString();
+      }
     }
   }
 }

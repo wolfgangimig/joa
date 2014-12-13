@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{10BB4720-F797-11CE-B9EC-00AA006B1A69}")
-public class fmDropEffect {
+public class fmDropEffect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmDropEffect {
     case 2: return fmDropEffectMove;
     case 3: return fmDropEffectCopyOrMove;
     default: return new fmDropEffect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmDropEffectNone";
+    case 1: return "fmDropEffectCopy";
+    case 2: return "fmDropEffectMove";
+    case 3: return "fmDropEffectCopyOrMove";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmDropEffectNone");
+      if ((value & 1) != 0) sbuf.append("|fmDropEffectCopy");
+      if ((value & 2) != 0) sbuf.append("|fmDropEffectMove");
+      if ((value & 3) != 0) sbuf.append("|fmDropEffectCopyOrMove");
+      return sbuf.toString();
+      }
     }
   }
 }

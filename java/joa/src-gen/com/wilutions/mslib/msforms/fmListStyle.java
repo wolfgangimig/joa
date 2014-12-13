@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{F00164C1-B17B-11CE-A95D-00AA006CB389}")
-public class fmListStyle {
+public class fmListStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmListStyle {
     case 0: return fmListStylePlain;
     case 1: return fmListStyleOption;
     default: return new fmListStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmListStylePlain";
+    case 1: return "fmListStyleOption";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmListStylePlain");
+      if ((value & 1) != 0) sbuf.append("|fmListStyleOption");
+      return sbuf.toString();
+      }
     }
   }
 }

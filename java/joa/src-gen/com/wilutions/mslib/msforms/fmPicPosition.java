@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{9011F7A0-C130-11CD-9BE1-00006B82871A}")
-public class fmPicPosition {
+public class fmPicPosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -52,6 +52,34 @@ public class fmPicPosition {
     case 7: return fmPicPositionBottomCenter;
     case 8: return fmPicPositionBottomRight;
     default: return new fmPicPosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "fmPicPositionBottomRight";
+    case 0: return "fmPicPositionCenter";
+    case 1: return "fmPicPositionTopLeft";
+    case 2: return "fmPicPositionTopCenter";
+    case 3: return "fmPicPositionTopRight";
+    case 4: return "fmPicPositionCenterLeft";
+    case 5: return "fmPicPositionCenterRight";
+    case 6: return "fmPicPositionBottomLeft";
+    case 7: return "fmPicPositionBottomCenter";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|fmPicPositionBottomRight");
+      if ((value & 0) != 0) sbuf.append("|fmPicPositionCenter");
+      if ((value & 1) != 0) sbuf.append("|fmPicPositionTopLeft");
+      if ((value & 2) != 0) sbuf.append("|fmPicPositionTopCenter");
+      if ((value & 3) != 0) sbuf.append("|fmPicPositionTopRight");
+      if ((value & 4) != 0) sbuf.append("|fmPicPositionCenterLeft");
+      if ((value & 5) != 0) sbuf.append("|fmPicPositionCenterRight");
+      if ((value & 6) != 0) sbuf.append("|fmPicPositionBottomLeft");
+      if ((value & 7) != 0) sbuf.append("|fmPicPositionBottomCenter");
+      return sbuf.toString();
+      }
     }
   }
 }

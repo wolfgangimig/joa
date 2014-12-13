@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlOutlookBarViewType {
+public class OlOutlookBarViewType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlOutlookBarViewType {
     case 0: return olLargeIcon;
     case 1: return olSmallIcon;
     default: return new OlOutlookBarViewType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olLargeIcon";
+    case 1: return "olSmallIcon";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olLargeIcon");
+      if ((value & 1) != 0) sbuf.append("|olSmallIcon");
+      return sbuf.toString();
+      }
     }
   }
 }

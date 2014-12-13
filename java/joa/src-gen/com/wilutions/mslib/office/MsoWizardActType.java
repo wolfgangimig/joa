@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoWizardActType {
+public class MsoWizardActType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoWizardActType {
     case 2: return msoWizardActSuspend;
     case 3: return msoWizardActResume;
     default: return new MsoWizardActType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoWizardActInactive";
+    case 1: return "msoWizardActActive";
+    case 2: return "msoWizardActSuspend";
+    case 3: return "msoWizardActResume";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoWizardActInactive");
+      if ((value & 1) != 0) sbuf.append("|msoWizardActActive");
+      if ((value & 2) != 0) sbuf.append("|msoWizardActSuspend");
+      if ((value & 3) != 0) sbuf.append("|msoWizardActResume");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{89FF0BFE-5E70-4183-88C8-5EF4B213451F}")
-public class XlAxisCrosses {
+public class XlAxisCrosses implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class XlAxisCrosses {
     case 2: return xlAxisCrossesMaximum;
     case 4: return xlAxisCrossesMinimum;
     default: return new XlAxisCrosses(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4105: return "xlAxisCrossesAutomatic";
+    case -4114: return "xlAxisCrossesCustom";
+    case 2: return "xlAxisCrossesMaximum";
+    case 4: return "xlAxisCrossesMinimum";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4105) != 0) sbuf.append("|xlAxisCrossesAutomatic");
+      if ((value & -4114) != 0) sbuf.append("|xlAxisCrossesCustom");
+      if ((value & 2) != 0) sbuf.append("|xlAxisCrossesMaximum");
+      if ((value & 4) != 0) sbuf.append("|xlAxisCrossesMinimum");
+      return sbuf.toString();
+      }
     }
   }
 }

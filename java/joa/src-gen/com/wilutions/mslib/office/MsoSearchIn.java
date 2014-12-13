@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSearchIn {
+public class MsoSearchIn implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoSearchIn {
     case 2: return msoSearchInMyNetworkPlaces;
     case 3: return msoSearchInCustom;
     default: return new MsoSearchIn(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoSearchInMyComputer";
+    case 1: return "msoSearchInOutlook";
+    case 2: return "msoSearchInMyNetworkPlaces";
+    case 3: return "msoSearchInCustom";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoSearchInMyComputer");
+      if ((value & 1) != 0) sbuf.append("|msoSearchInOutlook");
+      if ((value & 2) != 0) sbuf.append("|msoSearchInMyNetworkPlaces");
+      if ((value & 3) != 0) sbuf.append("|msoSearchInCustom");
+      return sbuf.toString();
+      }
     }
   }
 }

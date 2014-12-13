@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetLightingSoftness {
+public class MsoPresetLightingSoftness implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoPresetLightingSoftness {
     case 2: return msoLightingNormal;
     case 3: return msoLightingBright;
     default: return new MsoPresetLightingSoftness(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoLightingNormal";
+    case -2: return "msoPresetLightingSoftnessMixed";
+    case 1: return "msoLightingDim";
+    case 3: return "msoLightingBright";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoLightingNormal");
+      if ((value & -2) != 0) sbuf.append("|msoPresetLightingSoftnessMixed");
+      if ((value & 1) != 0) sbuf.append("|msoLightingDim");
+      if ((value & 3) != 0) sbuf.append("|msoLightingBright");
+      return sbuf.toString();
+      }
     }
   }
 }

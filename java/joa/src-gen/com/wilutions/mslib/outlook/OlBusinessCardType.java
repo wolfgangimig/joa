@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlBusinessCardType {
+public class OlBusinessCardType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlBusinessCardType {
     case 0: return olBusinessCardTypeOutlook;
     case 1: return olBusinessCardTypeInterConnect;
     default: return new OlBusinessCardType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olBusinessCardTypeOutlook";
+    case 1: return "olBusinessCardTypeInterConnect";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olBusinessCardTypeOutlook");
+      if ((value & 1) != 0) sbuf.append("|olBusinessCardTypeInterConnect");
+      return sbuf.toString();
+      }
     }
   }
 }

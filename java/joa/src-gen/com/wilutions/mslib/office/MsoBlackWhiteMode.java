@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBlackWhiteMode {
+public class MsoBlackWhiteMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -58,6 +58,38 @@ public class MsoBlackWhiteMode {
     case 9: return msoBlackWhiteWhite;
     case 10: return msoBlackWhiteDontShow;
     default: return new MsoBlackWhiteMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoBlackWhiteMixed";
+    case 2: return "msoBlackWhiteGrayScale";
+    case 1: return "msoBlackWhiteAutomatic";
+    case 3: return "msoBlackWhiteLightGrayScale";
+    case 4: return "msoBlackWhiteInverseGrayScale";
+    case 5: return "msoBlackWhiteGrayOutline";
+    case 6: return "msoBlackWhiteBlackTextAndLine";
+    case 7: return "msoBlackWhiteHighContrast";
+    case 8: return "msoBlackWhiteBlack";
+    case 9: return "msoBlackWhiteWhite";
+    case 10: return "msoBlackWhiteDontShow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoBlackWhiteMixed");
+      if ((value & 2) != 0) sbuf.append("|msoBlackWhiteGrayScale");
+      if ((value & 1) != 0) sbuf.append("|msoBlackWhiteAutomatic");
+      if ((value & 3) != 0) sbuf.append("|msoBlackWhiteLightGrayScale");
+      if ((value & 4) != 0) sbuf.append("|msoBlackWhiteInverseGrayScale");
+      if ((value & 5) != 0) sbuf.append("|msoBlackWhiteGrayOutline");
+      if ((value & 6) != 0) sbuf.append("|msoBlackWhiteBlackTextAndLine");
+      if ((value & 7) != 0) sbuf.append("|msoBlackWhiteHighContrast");
+      if ((value & 8) != 0) sbuf.append("|msoBlackWhiteBlack");
+      if ((value & 9) != 0) sbuf.append("|msoBlackWhiteWhite");
+      if ((value & 10) != 0) sbuf.append("|msoBlackWhiteDontShow");
+      return sbuf.toString();
+      }
     }
   }
 }

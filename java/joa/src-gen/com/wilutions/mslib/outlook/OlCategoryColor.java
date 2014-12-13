@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlCategoryColor {
+public class OlCategoryColor implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -103,6 +103,68 @@ public class OlCategoryColor {
     case 24: return olCategoryColorDarkPurple;
     case 25: return olCategoryColorDarkMaroon;
     default: return new OlCategoryColor(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 18: return "olCategoryColorDarkPeach";
+    case 8: return "olCategoryColorBlue";
+    case 10: return "olCategoryColorMaroon";
+    case 0: return "olCategoryColorNone";
+    case 1: return "olCategoryColorRed";
+    case 2: return "olCategoryColorOrange";
+    case 3: return "olCategoryColorPeach";
+    case 4: return "olCategoryColorYellow";
+    case 5: return "olCategoryColorGreen";
+    case 6: return "olCategoryColorTeal";
+    case 7: return "olCategoryColorOlive";
+    case 20: return "olCategoryColorDarkGreen";
+    case 9: return "olCategoryColorPurple";
+    case 11: return "olCategoryColorSteel";
+    case 12: return "olCategoryColorDarkSteel";
+    case 13: return "olCategoryColorGray";
+    case 14: return "olCategoryColorDarkGray";
+    case 15: return "olCategoryColorBlack";
+    case 16: return "olCategoryColorDarkRed";
+    case 17: return "olCategoryColorDarkOrange";
+    case 19: return "olCategoryColorDarkYellow";
+    case 21: return "olCategoryColorDarkTeal";
+    case 22: return "olCategoryColorDarkOlive";
+    case 23: return "olCategoryColorDarkBlue";
+    case 24: return "olCategoryColorDarkPurple";
+    case 25: return "olCategoryColorDarkMaroon";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 18) != 0) sbuf.append("|olCategoryColorDarkPeach");
+      if ((value & 8) != 0) sbuf.append("|olCategoryColorBlue");
+      if ((value & 10) != 0) sbuf.append("|olCategoryColorMaroon");
+      if ((value & 0) != 0) sbuf.append("|olCategoryColorNone");
+      if ((value & 1) != 0) sbuf.append("|olCategoryColorRed");
+      if ((value & 2) != 0) sbuf.append("|olCategoryColorOrange");
+      if ((value & 3) != 0) sbuf.append("|olCategoryColorPeach");
+      if ((value & 4) != 0) sbuf.append("|olCategoryColorYellow");
+      if ((value & 5) != 0) sbuf.append("|olCategoryColorGreen");
+      if ((value & 6) != 0) sbuf.append("|olCategoryColorTeal");
+      if ((value & 7) != 0) sbuf.append("|olCategoryColorOlive");
+      if ((value & 20) != 0) sbuf.append("|olCategoryColorDarkGreen");
+      if ((value & 9) != 0) sbuf.append("|olCategoryColorPurple");
+      if ((value & 11) != 0) sbuf.append("|olCategoryColorSteel");
+      if ((value & 12) != 0) sbuf.append("|olCategoryColorDarkSteel");
+      if ((value & 13) != 0) sbuf.append("|olCategoryColorGray");
+      if ((value & 14) != 0) sbuf.append("|olCategoryColorDarkGray");
+      if ((value & 15) != 0) sbuf.append("|olCategoryColorBlack");
+      if ((value & 16) != 0) sbuf.append("|olCategoryColorDarkRed");
+      if ((value & 17) != 0) sbuf.append("|olCategoryColorDarkOrange");
+      if ((value & 19) != 0) sbuf.append("|olCategoryColorDarkYellow");
+      if ((value & 21) != 0) sbuf.append("|olCategoryColorDarkTeal");
+      if ((value & 22) != 0) sbuf.append("|olCategoryColorDarkOlive");
+      if ((value & 23) != 0) sbuf.append("|olCategoryColorDarkBlue");
+      if ((value & 24) != 0) sbuf.append("|olCategoryColorDarkPurple");
+      if ((value & 25) != 0) sbuf.append("|olCategoryColorDarkMaroon");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{382F8459-84AD-4CEB-8705-A8F8E2DC15E1}")
-public class OlComboBoxStyle {
+public class OlComboBoxStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlComboBoxStyle {
     case 0: return olComboBoxStyleCombo;
     case 2: return olComboBoxStyleList;
     default: return new OlComboBoxStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olComboBoxStyleCombo";
+    case 2: return "olComboBoxStyleList";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olComboBoxStyleCombo");
+      if ((value & 2) != 0) sbuf.append("|olComboBoxStyleList");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFileFindSortBy {
+public class MsoFileFindSortBy implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoFileFindSortBy {
     case 6: return msoFileFindSortbySize;
     case 7: return msoFileFindSortbyTitle;
     default: return new MsoFileFindSortBy(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoFileFindSortbyAuthor";
+    case 2: return "msoFileFindSortbyDateCreated";
+    case 3: return "msoFileFindSortbyLastSavedBy";
+    case 4: return "msoFileFindSortbyDateSaved";
+    case 5: return "msoFileFindSortbyFileName";
+    case 6: return "msoFileFindSortbySize";
+    case 7: return "msoFileFindSortbyTitle";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoFileFindSortbyAuthor");
+      if ((value & 2) != 0) sbuf.append("|msoFileFindSortbyDateCreated");
+      if ((value & 3) != 0) sbuf.append("|msoFileFindSortbyLastSavedBy");
+      if ((value & 4) != 0) sbuf.append("|msoFileFindSortbyDateSaved");
+      if ((value & 5) != 0) sbuf.append("|msoFileFindSortbyFileName");
+      if ((value & 6) != 0) sbuf.append("|msoFileFindSortbySize");
+      if ((value & 7) != 0) sbuf.append("|msoFileFindSortbyTitle");
+      return sbuf.toString();
+      }
     }
   }
 }

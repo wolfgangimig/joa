@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlDataLabelsType {
+public class XlDataLabelsType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class XlDataLabelsType {
     case 5: return xlDataLabelsShowLabelAndPercent;
     case 6: return xlDataLabelsShowBubbleSizes;
     default: return new XlDataLabelsType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "xlDataLabelsShowValue";
+    case -4142: return "xlDataLabelsShowNone";
+    case 3: return "xlDataLabelsShowPercent";
+    case 4: return "xlDataLabelsShowLabel";
+    case 5: return "xlDataLabelsShowLabelAndPercent";
+    case 6: return "xlDataLabelsShowBubbleSizes";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|xlDataLabelsShowValue");
+      if ((value & -4142) != 0) sbuf.append("|xlDataLabelsShowNone");
+      if ((value & 3) != 0) sbuf.append("|xlDataLabelsShowPercent");
+      if ((value & 4) != 0) sbuf.append("|xlDataLabelsShowLabel");
+      if ((value & 5) != 0) sbuf.append("|xlDataLabelsShowLabelAndPercent");
+      if ((value & 6) != 0) sbuf.append("|xlDataLabelsShowBubbleSizes");
+      return sbuf.toString();
+      }
     }
   }
 }

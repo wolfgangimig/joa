@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlViewSaveOption {
+public class OlViewSaveOption implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlViewSaveOption {
     case 1: return olViewSaveOptionThisFolderOnlyMe;
     case 2: return olViewSaveOptionAllFoldersOfType;
     default: return new OlViewSaveOption(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olViewSaveOptionThisFolderEveryone";
+    case 1: return "olViewSaveOptionThisFolderOnlyMe";
+    case 2: return "olViewSaveOptionAllFoldersOfType";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olViewSaveOptionThisFolderEveryone");
+      if ((value & 1) != 0) sbuf.append("|olViewSaveOptionThisFolderOnlyMe");
+      if ((value & 2) != 0) sbuf.append("|olViewSaveOptionAllFoldersOfType");
+      return sbuf.toString();
+      }
     }
   }
 }

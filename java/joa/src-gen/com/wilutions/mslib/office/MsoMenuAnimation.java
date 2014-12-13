@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoMenuAnimation {
+public class MsoMenuAnimation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoMenuAnimation {
     case 2: return msoMenuAnimationUnfold;
     case 3: return msoMenuAnimationSlide;
     default: return new MsoMenuAnimation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoMenuAnimationNone";
+    case 1: return "msoMenuAnimationRandom";
+    case 2: return "msoMenuAnimationUnfold";
+    case 3: return "msoMenuAnimationSlide";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoMenuAnimationNone");
+      if ((value & 1) != 0) sbuf.append("|msoMenuAnimationRandom");
+      if ((value & 2) != 0) sbuf.append("|msoMenuAnimationUnfold");
+      if ((value & 3) != 0) sbuf.append("|msoMenuAnimationSlide");
+      return sbuf.toString();
+      }
     }
   }
 }

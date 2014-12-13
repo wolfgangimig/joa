@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTextureAlignment {
+public class MsoTextureAlignment implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -55,6 +55,36 @@ public class MsoTextureAlignment {
     case 7: return msoTextureBottom;
     case 8: return msoTextureBottomRight;
     default: return new MsoTextureAlignment(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoTextureAlignmentMixed";
+    case 2: return "msoTextureTopRight";
+    case 0: return "msoTextureTopLeft";
+    case 1: return "msoTextureTop";
+    case 3: return "msoTextureLeft";
+    case 4: return "msoTextureCenter";
+    case 5: return "msoTextureRight";
+    case 6: return "msoTextureBottomLeft";
+    case 7: return "msoTextureBottom";
+    case 8: return "msoTextureBottomRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoTextureAlignmentMixed");
+      if ((value & 2) != 0) sbuf.append("|msoTextureTopRight");
+      if ((value & 0) != 0) sbuf.append("|msoTextureTopLeft");
+      if ((value & 1) != 0) sbuf.append("|msoTextureTop");
+      if ((value & 3) != 0) sbuf.append("|msoTextureLeft");
+      if ((value & 4) != 0) sbuf.append("|msoTextureCenter");
+      if ((value & 5) != 0) sbuf.append("|msoTextureRight");
+      if ((value & 6) != 0) sbuf.append("|msoTextureBottomLeft");
+      if ((value & 7) != 0) sbuf.append("|msoTextureBottom");
+      if ((value & 8) != 0) sbuf.append("|msoTextureBottomRight");
+      return sbuf.toString();
+      }
     }
   }
 }

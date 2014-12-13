@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoZOrderCmd {
+public class MsoZOrderCmd implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoZOrderCmd {
     case 4: return msoBringInFrontOfText;
     case 5: return msoSendBehindText;
     default: return new MsoZOrderCmd(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoBringToFront";
+    case 1: return "msoSendToBack";
+    case 2: return "msoBringForward";
+    case 3: return "msoSendBackward";
+    case 4: return "msoBringInFrontOfText";
+    case 5: return "msoSendBehindText";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoBringToFront");
+      if ((value & 1) != 0) sbuf.append("|msoSendToBack");
+      if ((value & 2) != 0) sbuf.append("|msoBringForward");
+      if ((value & 3) != 0) sbuf.append("|msoSendBackward");
+      if ((value & 4) != 0) sbuf.append("|msoBringInFrontOfText");
+      if ((value & 5) != 0) sbuf.append("|msoSendBehindText");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSpecialFolders {
+public class OlSpecialFolders implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlSpecialFolders {
     case 0: return olSpecialFolderAllTasks;
     case 1: return olSpecialFolderReminders;
     default: return new OlSpecialFolders(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olSpecialFolderAllTasks";
+    case 1: return "olSpecialFolderReminders";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olSpecialFolderAllTasks");
+      if ((value & 1) != 0) sbuf.append("|olSpecialFolderReminders");
+      return sbuf.toString();
+      }
     }
   }
 }

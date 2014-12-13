@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{0EE49F40-E956-11CE-8141-00AA00611080}")
-public class fmTransitionEffect {
+public class fmTransitionEffect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -64,6 +64,42 @@ public class fmTransitionEffect {
     case 11: return fmTransitionEffectPushDown;
     case 12: return fmTransitionEffectPushLeft;
     default: return new fmTransitionEffect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "fmTransitionEffectCoverLeftUp";
+    case 10: return "fmTransitionEffectPushRight";
+    case 0: return "fmTransitionEffectNone";
+    case 1: return "fmTransitionEffectCoverUp";
+    case 2: return "fmTransitionEffectCoverRightUp";
+    case 3: return "fmTransitionEffectCoverRight";
+    case 4: return "fmTransitionEffectCoverRightDown";
+    case 5: return "fmTransitionEffectCoverDown";
+    case 6: return "fmTransitionEffectCoverLeftDown";
+    case 7: return "fmTransitionEffectCoverLeft";
+    case 9: return "fmTransitionEffectPushUp";
+    case 11: return "fmTransitionEffectPushDown";
+    case 12: return "fmTransitionEffectPushLeft";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|fmTransitionEffectCoverLeftUp");
+      if ((value & 10) != 0) sbuf.append("|fmTransitionEffectPushRight");
+      if ((value & 0) != 0) sbuf.append("|fmTransitionEffectNone");
+      if ((value & 1) != 0) sbuf.append("|fmTransitionEffectCoverUp");
+      if ((value & 2) != 0) sbuf.append("|fmTransitionEffectCoverRightUp");
+      if ((value & 3) != 0) sbuf.append("|fmTransitionEffectCoverRight");
+      if ((value & 4) != 0) sbuf.append("|fmTransitionEffectCoverRightDown");
+      if ((value & 5) != 0) sbuf.append("|fmTransitionEffectCoverDown");
+      if ((value & 6) != 0) sbuf.append("|fmTransitionEffectCoverLeftDown");
+      if ((value & 7) != 0) sbuf.append("|fmTransitionEffectCoverLeft");
+      if ((value & 9) != 0) sbuf.append("|fmTransitionEffectPushUp");
+      if ((value & 11) != 0) sbuf.append("|fmTransitionEffectPushDown");
+      if ((value & 12) != 0) sbuf.append("|fmTransitionEffectPushLeft");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{A4069F25-4221-11CE-8EA0-00AA004BA6AE}")
-public class fmDisplayStyle {
+public class fmDisplayStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class fmDisplayStyle {
     case 6: return fmDisplayStyleToggle;
     case 7: return fmDisplayStyleDropList;
     default: return new fmDisplayStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "fmDisplayStyleText";
+    case 2: return "fmDisplayStyleList";
+    case 3: return "fmDisplayStyleCombo";
+    case 4: return "fmDisplayStyleCheckBox";
+    case 5: return "fmDisplayStyleOptionButton";
+    case 6: return "fmDisplayStyleToggle";
+    case 7: return "fmDisplayStyleDropList";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|fmDisplayStyleText");
+      if ((value & 2) != 0) sbuf.append("|fmDisplayStyleList");
+      if ((value & 3) != 0) sbuf.append("|fmDisplayStyleCombo");
+      if ((value & 4) != 0) sbuf.append("|fmDisplayStyleCheckBox");
+      if ((value & 5) != 0) sbuf.append("|fmDisplayStyleOptionButton");
+      if ((value & 6) != 0) sbuf.append("|fmDisplayStyleToggle");
+      if ((value & 7) != 0) sbuf.append("|fmDisplayStyleDropList");
+      return sbuf.toString();
+      }
     }
   }
 }

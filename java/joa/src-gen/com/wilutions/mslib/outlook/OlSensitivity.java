@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSensitivity {
+public class OlSensitivity implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlSensitivity {
     case 2: return olPrivate;
     case 3: return olConfidential;
     default: return new OlSensitivity(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olNormal";
+    case 1: return "olPersonal";
+    case 2: return "olPrivate";
+    case 3: return "olConfidential";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olNormal");
+      if ((value & 1) != 0) sbuf.append("|olPersonal");
+      if ((value & 2) != 0) sbuf.append("|olPrivate");
+      if ((value & 3) != 0) sbuf.append("|olConfidential");
+      return sbuf.toString();
+      }
     }
   }
 }

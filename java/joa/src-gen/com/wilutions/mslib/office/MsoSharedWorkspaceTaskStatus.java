@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSharedWorkspaceTaskStatus {
+public class MsoSharedWorkspaceTaskStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoSharedWorkspaceTaskStatus {
     case 4: return msoSharedWorkspaceTaskStatusDeferred;
     case 5: return msoSharedWorkspaceTaskStatusWaiting;
     default: return new MsoSharedWorkspaceTaskStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoSharedWorkspaceTaskStatusNotStarted";
+    case 2: return "msoSharedWorkspaceTaskStatusInProgress";
+    case 3: return "msoSharedWorkspaceTaskStatusCompleted";
+    case 4: return "msoSharedWorkspaceTaskStatusDeferred";
+    case 5: return "msoSharedWorkspaceTaskStatusWaiting";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoSharedWorkspaceTaskStatusNotStarted");
+      if ((value & 2) != 0) sbuf.append("|msoSharedWorkspaceTaskStatusInProgress");
+      if ((value & 3) != 0) sbuf.append("|msoSharedWorkspaceTaskStatusCompleted");
+      if ((value & 4) != 0) sbuf.append("|msoSharedWorkspaceTaskStatusDeferred");
+      if ((value & 5) != 0) sbuf.append("|msoSharedWorkspaceTaskStatusWaiting");
+      return sbuf.toString();
+      }
     }
   }
 }

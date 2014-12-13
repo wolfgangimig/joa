@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFileDialogView {
+public class MsoFileDialogView implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -52,6 +52,34 @@ public class MsoFileDialogView {
     case 8: return msoFileDialogViewWebView;
     case 9: return msoFileDialogViewTiles;
     default: return new MsoFileDialogView(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "msoFileDialogViewTiles";
+    case 1: return "msoFileDialogViewList";
+    case 2: return "msoFileDialogViewDetails";
+    case 3: return "msoFileDialogViewProperties";
+    case 4: return "msoFileDialogViewPreview";
+    case 5: return "msoFileDialogViewThumbnail";
+    case 6: return "msoFileDialogViewLargeIcons";
+    case 7: return "msoFileDialogViewSmallIcons";
+    case 8: return "msoFileDialogViewWebView";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|msoFileDialogViewTiles");
+      if ((value & 1) != 0) sbuf.append("|msoFileDialogViewList");
+      if ((value & 2) != 0) sbuf.append("|msoFileDialogViewDetails");
+      if ((value & 3) != 0) sbuf.append("|msoFileDialogViewProperties");
+      if ((value & 4) != 0) sbuf.append("|msoFileDialogViewPreview");
+      if ((value & 5) != 0) sbuf.append("|msoFileDialogViewThumbnail");
+      if ((value & 6) != 0) sbuf.append("|msoFileDialogViewLargeIcons");
+      if ((value & 7) != 0) sbuf.append("|msoFileDialogViewSmallIcons");
+      if ((value & 8) != 0) sbuf.append("|msoFileDialogViewWebView");
+      return sbuf.toString();
+      }
     }
   }
 }

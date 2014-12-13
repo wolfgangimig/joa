@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{53327010-E90B-11CE-9E0B-00AA006002F3}")
-public class fmPictureSizeMode {
+public class fmPictureSizeMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmPictureSizeMode {
     case 1: return fmPictureSizeModeStretch;
     case 3: return fmPictureSizeModeZoom;
     default: return new fmPictureSizeMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmPictureSizeModeClip";
+    case 1: return "fmPictureSizeModeStretch";
+    case 3: return "fmPictureSizeModeZoom";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmPictureSizeModeClip");
+      if ((value & 1) != 0) sbuf.append("|fmPictureSizeModeStretch");
+      if ((value & 3) != 0) sbuf.append("|fmPictureSizeModeZoom");
+      return sbuf.toString();
+      }
     }
   }
 }

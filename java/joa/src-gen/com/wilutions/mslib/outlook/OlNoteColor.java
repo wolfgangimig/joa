@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlNoteColor {
+public class OlNoteColor implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlNoteColor {
     case 3: return olYellow;
     case 4: return olWhite;
     default: return new OlNoteColor(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olBlue";
+    case 1: return "olGreen";
+    case 2: return "olPink";
+    case 3: return "olYellow";
+    case 4: return "olWhite";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olBlue");
+      if ((value & 1) != 0) sbuf.append("|olGreen");
+      if ((value & 2) != 0) sbuf.append("|olPink");
+      if ((value & 3) != 0) sbuf.append("|olYellow");
+      if ((value & 4) != 0) sbuf.append("|olWhite");
+      return sbuf.toString();
+      }
     }
   }
 }

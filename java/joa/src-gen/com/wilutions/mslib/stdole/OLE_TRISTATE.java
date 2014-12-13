@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{6650430A-BE0F-101A-8BBB-00AA00300CAB}")
-public class OLE_TRISTATE {
+public class OLE_TRISTATE implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OLE_TRISTATE {
     case 1: return Checked;
     case 2: return Gray;
     default: return new OLE_TRISTATE(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "Unchecked";
+    case 1: return "Checked";
+    case 2: return "Gray";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|Unchecked");
+      if ((value & 1) != 0) sbuf.append("|Checked");
+      if ((value & 2) != 0) sbuf.append("|Gray");
+      return sbuf.toString();
+      }
     }
   }
 }

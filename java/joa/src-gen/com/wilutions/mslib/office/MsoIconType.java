@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoIconType {
+public class MsoIconType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoIconType {
     case 6: return msoIconAlertQuery;
     case 7: return msoIconAlertCritical;
     default: return new MsoIconType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoIconNone";
+    case 2: return "msoIconAlert";
+    case 3: return "msoIconTip";
+    case 4: return "msoIconAlertInfo";
+    case 5: return "msoIconAlertWarning";
+    case 6: return "msoIconAlertQuery";
+    case 7: return "msoIconAlertCritical";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoIconNone");
+      if ((value & 2) != 0) sbuf.append("|msoIconAlert");
+      if ((value & 3) != 0) sbuf.append("|msoIconTip");
+      if ((value & 4) != 0) sbuf.append("|msoIconAlertInfo");
+      if ((value & 5) != 0) sbuf.append("|msoIconAlertWarning");
+      if ((value & 6) != 0) sbuf.append("|msoIconAlertQuery");
+      if ((value & 7) != 0) sbuf.append("|msoIconAlertCritical");
+      return sbuf.toString();
+      }
     }
   }
 }

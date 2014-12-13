@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoWarpFormat {
+public class MsoWarpFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -139,6 +139,92 @@ public class MsoWarpFormat {
     case 35: return msoWarpFormat36;
     case 36: return msoWarpFormat37;
     default: return new MsoWarpFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoWarpFormatMixed";
+    case 2: return "msoWarpFormat3";
+    case 10: return "msoWarpFormat11";
+    case 0: return "msoWarpFormat1";
+    case 28: return "msoWarpFormat29";
+    case 1: return "msoWarpFormat2";
+    case 3: return "msoWarpFormat4";
+    case 4: return "msoWarpFormat5";
+    case 5: return "msoWarpFormat6";
+    case 6: return "msoWarpFormat7";
+    case 7: return "msoWarpFormat8";
+    case 18: return "msoWarpFormat19";
+    case 8: return "msoWarpFormat9";
+    case 20: return "msoWarpFormat21";
+    case 9: return "msoWarpFormat10";
+    case 11: return "msoWarpFormat12";
+    case 12: return "msoWarpFormat13";
+    case 13: return "msoWarpFormat14";
+    case 14: return "msoWarpFormat15";
+    case 15: return "msoWarpFormat16";
+    case 16: return "msoWarpFormat17";
+    case 17: return "msoWarpFormat18";
+    case 19: return "msoWarpFormat20";
+    case 21: return "msoWarpFormat22";
+    case 22: return "msoWarpFormat23";
+    case 23: return "msoWarpFormat24";
+    case 24: return "msoWarpFormat25";
+    case 25: return "msoWarpFormat26";
+    case 26: return "msoWarpFormat27";
+    case 27: return "msoWarpFormat28";
+    case 29: return "msoWarpFormat30";
+    case 30: return "msoWarpFormat31";
+    case 31: return "msoWarpFormat32";
+    case 32: return "msoWarpFormat33";
+    case 33: return "msoWarpFormat34";
+    case 34: return "msoWarpFormat35";
+    case 35: return "msoWarpFormat36";
+    case 36: return "msoWarpFormat37";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoWarpFormatMixed");
+      if ((value & 2) != 0) sbuf.append("|msoWarpFormat3");
+      if ((value & 10) != 0) sbuf.append("|msoWarpFormat11");
+      if ((value & 0) != 0) sbuf.append("|msoWarpFormat1");
+      if ((value & 28) != 0) sbuf.append("|msoWarpFormat29");
+      if ((value & 1) != 0) sbuf.append("|msoWarpFormat2");
+      if ((value & 3) != 0) sbuf.append("|msoWarpFormat4");
+      if ((value & 4) != 0) sbuf.append("|msoWarpFormat5");
+      if ((value & 5) != 0) sbuf.append("|msoWarpFormat6");
+      if ((value & 6) != 0) sbuf.append("|msoWarpFormat7");
+      if ((value & 7) != 0) sbuf.append("|msoWarpFormat8");
+      if ((value & 18) != 0) sbuf.append("|msoWarpFormat19");
+      if ((value & 8) != 0) sbuf.append("|msoWarpFormat9");
+      if ((value & 20) != 0) sbuf.append("|msoWarpFormat21");
+      if ((value & 9) != 0) sbuf.append("|msoWarpFormat10");
+      if ((value & 11) != 0) sbuf.append("|msoWarpFormat12");
+      if ((value & 12) != 0) sbuf.append("|msoWarpFormat13");
+      if ((value & 13) != 0) sbuf.append("|msoWarpFormat14");
+      if ((value & 14) != 0) sbuf.append("|msoWarpFormat15");
+      if ((value & 15) != 0) sbuf.append("|msoWarpFormat16");
+      if ((value & 16) != 0) sbuf.append("|msoWarpFormat17");
+      if ((value & 17) != 0) sbuf.append("|msoWarpFormat18");
+      if ((value & 19) != 0) sbuf.append("|msoWarpFormat20");
+      if ((value & 21) != 0) sbuf.append("|msoWarpFormat22");
+      if ((value & 22) != 0) sbuf.append("|msoWarpFormat23");
+      if ((value & 23) != 0) sbuf.append("|msoWarpFormat24");
+      if ((value & 24) != 0) sbuf.append("|msoWarpFormat25");
+      if ((value & 25) != 0) sbuf.append("|msoWarpFormat26");
+      if ((value & 26) != 0) sbuf.append("|msoWarpFormat27");
+      if ((value & 27) != 0) sbuf.append("|msoWarpFormat28");
+      if ((value & 29) != 0) sbuf.append("|msoWarpFormat30");
+      if ((value & 30) != 0) sbuf.append("|msoWarpFormat31");
+      if ((value & 31) != 0) sbuf.append("|msoWarpFormat32");
+      if ((value & 32) != 0) sbuf.append("|msoWarpFormat33");
+      if ((value & 33) != 0) sbuf.append("|msoWarpFormat34");
+      if ((value & 34) != 0) sbuf.append("|msoWarpFormat35");
+      if ((value & 35) != 0) sbuf.append("|msoWarpFormat36");
+      if ((value & 36) != 0) sbuf.append("|msoWarpFormat37");
+      return sbuf.toString();
+      }
     }
   }
 }

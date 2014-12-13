@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAlignCmd {
+public class MsoAlignCmd implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoAlignCmd {
     case 4: return msoAlignMiddles;
     case 5: return msoAlignBottoms;
     default: return new MsoAlignCmd(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoAlignLefts";
+    case 1: return "msoAlignCenters";
+    case 2: return "msoAlignRights";
+    case 3: return "msoAlignTops";
+    case 4: return "msoAlignMiddles";
+    case 5: return "msoAlignBottoms";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoAlignLefts");
+      if ((value & 1) != 0) sbuf.append("|msoAlignCenters");
+      if ((value & 2) != 0) sbuf.append("|msoAlignRights");
+      if ((value & 3) != 0) sbuf.append("|msoAlignTops");
+      if ((value & 4) != 0) sbuf.append("|msoAlignMiddles");
+      if ((value & 5) != 0) sbuf.append("|msoAlignBottoms");
+      return sbuf.toString();
+      }
     }
   }
 }

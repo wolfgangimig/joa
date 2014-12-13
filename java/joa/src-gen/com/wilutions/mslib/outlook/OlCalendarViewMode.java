@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlCalendarViewMode {
+public class OlCalendarViewMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlCalendarViewMode {
     case 3: return olCalendarViewMultiDay;
     case 4: return olCalendarView5DayWeek;
     default: return new OlCalendarViewMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olCalendarViewDay";
+    case 1: return "olCalendarViewWeek";
+    case 2: return "olCalendarViewMonth";
+    case 3: return "olCalendarViewMultiDay";
+    case 4: return "olCalendarView5DayWeek";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olCalendarViewDay");
+      if ((value & 1) != 0) sbuf.append("|olCalendarViewWeek");
+      if ((value & 2) != 0) sbuf.append("|olCalendarViewMonth");
+      if ((value & 3) != 0) sbuf.append("|olCalendarViewMultiDay");
+      if ((value & 4) != 0) sbuf.append("|olCalendarView5DayWeek");
+      return sbuf.toString();
+      }
     }
   }
 }

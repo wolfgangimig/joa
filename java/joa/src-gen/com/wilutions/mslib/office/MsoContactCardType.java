@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{310803CD-C69D-4371-98C9-40CE4E9BFD5A}")
-public class MsoContactCardType {
+public class MsoContactCardType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoContactCardType {
     case 3: return msoContactCardTypeEnterpriseGroup;
     case 4: return msoContactCardTypePersonalDistributionList;
     default: return new MsoContactCardType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoContactCardTypeEnterpriseContact";
+    case 1: return "msoContactCardTypePersonalContact";
+    case 2: return "msoContactCardTypeUnknownContact";
+    case 3: return "msoContactCardTypeEnterpriseGroup";
+    case 4: return "msoContactCardTypePersonalDistributionList";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoContactCardTypeEnterpriseContact");
+      if ((value & 1) != 0) sbuf.append("|msoContactCardTypePersonalContact");
+      if ((value & 2) != 0) sbuf.append("|msoContactCardTypeUnknownContact");
+      if ((value & 3) != 0) sbuf.append("|msoContactCardTypeEnterpriseGroup");
+      if ((value & 4) != 0) sbuf.append("|msoContactCardTypePersonalDistributionList");
+      return sbuf.toString();
+      }
     }
   }
 }

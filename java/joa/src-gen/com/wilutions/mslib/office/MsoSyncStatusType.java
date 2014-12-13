@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSyncStatusType {
+public class MsoSyncStatusType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,30 @@ public class MsoSyncStatusType {
     case 5: return msoSyncStatusSuspended;
     case 6: return msoSyncStatusError;
     default: return new MsoSyncStatusType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoSyncStatusNoSharedWorkspace";
+    case 1: return "msoSyncStatusLatest";
+    case 2: return "msoSyncStatusNewerAvailable";
+    case 3: return "msoSyncStatusLocalChanges";
+    case 4: return "msoSyncStatusConflict";
+    case 5: return "msoSyncStatusSuspended";
+    case 6: return "msoSyncStatusError";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoSyncStatusNoSharedWorkspace");
+      if ((value & 1) != 0) sbuf.append("|msoSyncStatusLatest");
+      if ((value & 2) != 0) sbuf.append("|msoSyncStatusNewerAvailable");
+      if ((value & 3) != 0) sbuf.append("|msoSyncStatusLocalChanges");
+      if ((value & 4) != 0) sbuf.append("|msoSyncStatusConflict");
+      if ((value & 5) != 0) sbuf.append("|msoSyncStatusSuspended");
+      if ((value & 6) != 0) sbuf.append("|msoSyncStatusError");
+      return sbuf.toString();
+      }
     }
   }
 }

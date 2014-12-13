@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFilterConjunction {
+public class MsoFilterConjunction implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoFilterConjunction {
     case 0: return msoFilterConjunctionAnd;
     case 1: return msoFilterConjunctionOr;
     default: return new MsoFilterConjunction(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoFilterConjunctionAnd";
+    case 1: return "msoFilterConjunctionOr";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoFilterConjunctionAnd");
+      if ((value & 1) != 0) sbuf.append("|msoFilterConjunctionOr");
+      return sbuf.toString();
+      }
     }
   }
 }

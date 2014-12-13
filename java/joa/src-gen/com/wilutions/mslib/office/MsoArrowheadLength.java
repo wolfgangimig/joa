@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoArrowheadLength {
+public class MsoArrowheadLength implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoArrowheadLength {
     case 2: return msoArrowheadLengthMedium;
     case 3: return msoArrowheadLong;
     default: return new MsoArrowheadLength(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoArrowheadLengthMedium";
+    case -2: return "msoArrowheadLengthMixed";
+    case 1: return "msoArrowheadShort";
+    case 3: return "msoArrowheadLong";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoArrowheadLengthMedium");
+      if ((value & -2) != 0) sbuf.append("|msoArrowheadLengthMixed");
+      if ((value & 1) != 0) sbuf.append("|msoArrowheadShort");
+      if ((value & 3) != 0) sbuf.append("|msoArrowheadLong");
+      return sbuf.toString();
+      }
     }
   }
 }

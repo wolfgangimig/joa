@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoLanguageIDHidden {
+public class MsoLanguageIDHidden implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoLanguageIDHidden {
     case 5124: return msoLanguageIDChineseMacao;
     case 11273: return msoLanguageIDEnglishTrinidad;
     default: return new MsoLanguageIDHidden(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 3076: return "msoLanguageIDChineseHongKong";
+    case 5124: return "msoLanguageIDChineseMacao";
+    case 11273: return "msoLanguageIDEnglishTrinidad";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 3076) != 0) sbuf.append("|msoLanguageIDChineseHongKong");
+      if ((value & 5124) != 0) sbuf.append("|msoLanguageIDChineseMacao");
+      if ((value & 11273) != 0) sbuf.append("|msoLanguageIDEnglishTrinidad");
+      return sbuf.toString();
+      }
     }
   }
 }

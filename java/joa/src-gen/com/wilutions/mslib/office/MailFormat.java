@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MailFormat {
+public class MailFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MailFormat {
     case 2: return mfHTML;
     case 3: return mfRTF;
     default: return new MailFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "mfPlainText";
+    case 2: return "mfHTML";
+    case 3: return "mfRTF";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|mfPlainText");
+      if ((value & 2) != 0) sbuf.append("|mfHTML");
+      if ((value & 3) != 0) sbuf.append("|mfRTF");
+      return sbuf.toString();
+      }
     }
   }
 }

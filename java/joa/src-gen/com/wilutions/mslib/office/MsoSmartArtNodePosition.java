@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSmartArtNodePosition {
+public class MsoSmartArtNodePosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoSmartArtNodePosition {
     case 4: return msoSmartArtNodeAbove;
     case 5: return msoSmartArtNodeBelow;
     default: return new MsoSmartArtNodePosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoSmartArtNodeDefault";
+    case 2: return "msoSmartArtNodeAfter";
+    case 3: return "msoSmartArtNodeBefore";
+    case 4: return "msoSmartArtNodeAbove";
+    case 5: return "msoSmartArtNodeBelow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoSmartArtNodeDefault");
+      if ((value & 2) != 0) sbuf.append("|msoSmartArtNodeAfter");
+      if ((value & 3) != 0) sbuf.append("|msoSmartArtNodeBefore");
+      if ((value & 4) != 0) sbuf.append("|msoSmartArtNodeAbove");
+      if ((value & 5) != 0) sbuf.append("|msoSmartArtNodeBelow");
+      return sbuf.toString();
+      }
     }
   }
 }

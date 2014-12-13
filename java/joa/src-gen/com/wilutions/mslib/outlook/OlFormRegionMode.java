@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormRegionMode {
+public class OlFormRegionMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlFormRegionMode {
     case 1: return olFormRegionCompose;
     case 2: return olFormRegionPreview;
     default: return new OlFormRegionMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olFormRegionRead";
+    case 1: return "olFormRegionCompose";
+    case 2: return "olFormRegionPreview";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olFormRegionRead");
+      if ((value & 1) != 0) sbuf.append("|olFormRegionCompose");
+      if ((value & 2) != 0) sbuf.append("|olFormRegionPreview");
+      return sbuf.toString();
+      }
     }
   }
 }

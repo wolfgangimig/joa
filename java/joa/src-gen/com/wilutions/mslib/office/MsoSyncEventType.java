@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSyncEventType {
+public class MsoSyncEventType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class MsoSyncEventType {
     case 6: return msoSyncEventDownloadNoChange;
     case 7: return msoSyncEventOffline;
     default: return new MsoSyncEventType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoSyncEventDownloadInitiated";
+    case 1: return "msoSyncEventDownloadSucceeded";
+    case 2: return "msoSyncEventDownloadFailed";
+    case 3: return "msoSyncEventUploadInitiated";
+    case 4: return "msoSyncEventUploadSucceeded";
+    case 5: return "msoSyncEventUploadFailed";
+    case 6: return "msoSyncEventDownloadNoChange";
+    case 7: return "msoSyncEventOffline";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoSyncEventDownloadInitiated");
+      if ((value & 1) != 0) sbuf.append("|msoSyncEventDownloadSucceeded");
+      if ((value & 2) != 0) sbuf.append("|msoSyncEventDownloadFailed");
+      if ((value & 3) != 0) sbuf.append("|msoSyncEventUploadInitiated");
+      if ((value & 4) != 0) sbuf.append("|msoSyncEventUploadSucceeded");
+      if ((value & 5) != 0) sbuf.append("|msoSyncEventUploadFailed");
+      if ((value & 6) != 0) sbuf.append("|msoSyncEventDownloadNoChange");
+      if ((value & 7) != 0) sbuf.append("|msoSyncEventOffline");
+      return sbuf.toString();
+      }
     }
   }
 }

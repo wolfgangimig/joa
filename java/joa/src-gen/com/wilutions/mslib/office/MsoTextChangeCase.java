@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTextChangeCase {
+public class MsoTextChangeCase implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoTextChangeCase {
     case 4: return msoCaseTitle;
     case 5: return msoCaseToggle;
     default: return new MsoTextChangeCase(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoCaseSentence";
+    case 2: return "msoCaseLower";
+    case 3: return "msoCaseUpper";
+    case 4: return "msoCaseTitle";
+    case 5: return "msoCaseToggle";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoCaseSentence");
+      if ((value & 2) != 0) sbuf.append("|msoCaseLower");
+      if ((value & 3) != 0) sbuf.append("|msoCaseUpper");
+      if ((value & 4) != 0) sbuf.append("|msoCaseTitle");
+      if ((value & 5) != 0) sbuf.append("|msoCaseToggle");
+      return sbuf.toString();
+      }
     }
   }
 }

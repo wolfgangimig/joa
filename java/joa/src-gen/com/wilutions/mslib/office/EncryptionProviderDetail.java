@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class EncryptionProviderDetail {
+public class EncryptionProviderDetail implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class EncryptionProviderDetail {
     case 3: return encprovdetCipherBlockSize;
     case 4: return encprovdetCipherMode;
     default: return new EncryptionProviderDetail(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "encprovdetUrl";
+    case 1: return "encprovdetAlgorithm";
+    case 2: return "encprovdetBlockCipher";
+    case 3: return "encprovdetCipherBlockSize";
+    case 4: return "encprovdetCipherMode";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|encprovdetUrl");
+      if ((value & 1) != 0) sbuf.append("|encprovdetAlgorithm");
+      if ((value & 2) != 0) sbuf.append("|encprovdetBlockCipher");
+      if ((value & 3) != 0) sbuf.append("|encprovdetCipherBlockSize");
+      if ((value & 4) != 0) sbuf.append("|encprovdetCipherMode");
+      return sbuf.toString();
+      }
     }
   }
 }

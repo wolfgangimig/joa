@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFileNewSection {
+public class MsoFileNewSection implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoFileNewSection {
     case 3: return msoNewfromTemplate;
     case 4: return msoBottomSection;
     default: return new MsoFileNewSection(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoOpenDocument";
+    case 1: return "msoNew";
+    case 2: return "msoNewfromExistingFile";
+    case 3: return "msoNewfromTemplate";
+    case 4: return "msoBottomSection";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoOpenDocument");
+      if ((value & 1) != 0) sbuf.append("|msoNew");
+      if ((value & 2) != 0) sbuf.append("|msoNewfromExistingFile");
+      if ((value & 3) != 0) sbuf.append("|msoNewfromTemplate");
+      if ((value & 4) != 0) sbuf.append("|msoBottomSection");
+      return sbuf.toString();
+      }
     }
   }
 }

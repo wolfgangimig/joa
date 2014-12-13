@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlResponseStatus {
+public class OlResponseStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class OlResponseStatus {
     case 4: return olResponseDeclined;
     case 5: return olResponseNotResponded;
     default: return new OlResponseStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olResponseNone";
+    case 1: return "olResponseOrganized";
+    case 2: return "olResponseTentative";
+    case 3: return "olResponseAccepted";
+    case 4: return "olResponseDeclined";
+    case 5: return "olResponseNotResponded";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olResponseNone");
+      if ((value & 1) != 0) sbuf.append("|olResponseOrganized");
+      if ((value & 2) != 0) sbuf.append("|olResponseTentative");
+      if ((value & 3) != 0) sbuf.append("|olResponseAccepted");
+      if ((value & 4) != 0) sbuf.append("|olResponseDeclined");
+      if ((value & 5) != 0) sbuf.append("|olResponseNotResponded");
+      return sbuf.toString();
+      }
     }
   }
 }

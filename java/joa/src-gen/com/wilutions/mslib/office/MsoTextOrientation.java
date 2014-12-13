@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTextOrientation {
+public class MsoTextOrientation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoTextOrientation {
     case 5: return msoTextOrientationVertical;
     case 6: return msoTextOrientationHorizontalRotatedFarEast;
     default: return new MsoTextOrientation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoTextOrientationUpward";
+    case -2: return "msoTextOrientationMixed";
+    case 1: return "msoTextOrientationHorizontal";
+    case 3: return "msoTextOrientationDownward";
+    case 4: return "msoTextOrientationVerticalFarEast";
+    case 5: return "msoTextOrientationVertical";
+    case 6: return "msoTextOrientationHorizontalRotatedFarEast";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoTextOrientationUpward");
+      if ((value & -2) != 0) sbuf.append("|msoTextOrientationMixed");
+      if ((value & 1) != 0) sbuf.append("|msoTextOrientationHorizontal");
+      if ((value & 3) != 0) sbuf.append("|msoTextOrientationDownward");
+      if ((value & 4) != 0) sbuf.append("|msoTextOrientationVerticalFarEast");
+      if ((value & 5) != 0) sbuf.append("|msoTextOrientationVertical");
+      if ((value & 6) != 0) sbuf.append("|msoTextOrientationHorizontalRotatedFarEast");
+      return sbuf.toString();
+      }
     }
   }
 }

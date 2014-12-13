@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBarRow {
+public class MsoBarRow implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoBarRow {
     case 0: return msoBarRowFirst;
     case -1: return msoBarRowLast;
     default: return new MsoBarRow(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoBarRowFirst";
+    case -1: return "msoBarRowLast";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoBarRowFirst");
+      if ((value & -1) != 0) sbuf.append("|msoBarRowLast");
+      return sbuf.toString();
+      }
     }
   }
 }

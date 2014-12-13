@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoButtonStyleHidden {
+public class MsoButtonStyleHidden implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoButtonStyleHidden {
     case 4: return msoButtonWrapText;
     case 8: return msoButtonTextBelow;
     default: return new MsoButtonStyleHidden(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 4: return "msoButtonWrapText";
+    case 8: return "msoButtonTextBelow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 4) != 0) sbuf.append("|msoButtonWrapText");
+      if ((value & 8) != 0) sbuf.append("|msoButtonTextBelow");
+      return sbuf.toString();
+      }
     }
   }
 }

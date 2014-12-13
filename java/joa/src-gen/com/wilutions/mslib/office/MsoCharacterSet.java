@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoCharacterSet {
+public class MsoCharacterSet implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -61,6 +61,40 @@ public class MsoCharacterSet {
     case 11: return msoCharacterSetTraditionalChinese;
     case 12: return msoCharacterSetVietnamese;
     default: return new MsoCharacterSet(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "msoCharacterSetSimplifiedChinese";
+    case 1: return "msoCharacterSetArabic";
+    case 2: return "msoCharacterSetCyrillic";
+    case 3: return "msoCharacterSetEnglishWesternEuropeanOtherLatinScript";
+    case 4: return "msoCharacterSetGreek";
+    case 5: return "msoCharacterSetHebrew";
+    case 6: return "msoCharacterSetJapanese";
+    case 7: return "msoCharacterSetKorean";
+    case 8: return "msoCharacterSetMultilingualUnicode";
+    case 10: return "msoCharacterSetThai";
+    case 11: return "msoCharacterSetTraditionalChinese";
+    case 12: return "msoCharacterSetVietnamese";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|msoCharacterSetSimplifiedChinese");
+      if ((value & 1) != 0) sbuf.append("|msoCharacterSetArabic");
+      if ((value & 2) != 0) sbuf.append("|msoCharacterSetCyrillic");
+      if ((value & 3) != 0) sbuf.append("|msoCharacterSetEnglishWesternEuropeanOtherLatinScript");
+      if ((value & 4) != 0) sbuf.append("|msoCharacterSetGreek");
+      if ((value & 5) != 0) sbuf.append("|msoCharacterSetHebrew");
+      if ((value & 6) != 0) sbuf.append("|msoCharacterSetJapanese");
+      if ((value & 7) != 0) sbuf.append("|msoCharacterSetKorean");
+      if ((value & 8) != 0) sbuf.append("|msoCharacterSetMultilingualUnicode");
+      if ((value & 10) != 0) sbuf.append("|msoCharacterSetThai");
+      if ((value & 11) != 0) sbuf.append("|msoCharacterSetTraditionalChinese");
+      if ((value & 12) != 0) sbuf.append("|msoCharacterSetVietnamese");
+      return sbuf.toString();
+      }
     }
   }
 }

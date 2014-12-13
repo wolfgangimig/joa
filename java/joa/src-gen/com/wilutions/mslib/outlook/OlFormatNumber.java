@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatNumber {
+public class OlFormatNumber implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -52,6 +52,34 @@ public class OlFormatNumber {
     case 8: return olFormatNumberComputer3;
     case 9: return olFormatNumberRaw;
     default: return new OlFormatNumber(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 9: return "olFormatNumberRaw";
+    case 1: return "olFormatNumberAllDigits";
+    case 2: return "olFormatNumberTruncated";
+    case 3: return "olFormatNumber1Decimal";
+    case 4: return "olFormatNumber2Decimal";
+    case 5: return "olFormatNumberScientific";
+    case 6: return "olFormatNumberComputer1";
+    case 7: return "olFormatNumberComputer2";
+    case 8: return "olFormatNumberComputer3";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 9) != 0) sbuf.append("|olFormatNumberRaw");
+      if ((value & 1) != 0) sbuf.append("|olFormatNumberAllDigits");
+      if ((value & 2) != 0) sbuf.append("|olFormatNumberTruncated");
+      if ((value & 3) != 0) sbuf.append("|olFormatNumber1Decimal");
+      if ((value & 4) != 0) sbuf.append("|olFormatNumber2Decimal");
+      if ((value & 5) != 0) sbuf.append("|olFormatNumberScientific");
+      if ((value & 6) != 0) sbuf.append("|olFormatNumberComputer1");
+      if ((value & 7) != 0) sbuf.append("|olFormatNumberComputer2");
+      if ((value & 8) != 0) sbuf.append("|olFormatNumberComputer3");
+      return sbuf.toString();
+      }
     }
   }
 }

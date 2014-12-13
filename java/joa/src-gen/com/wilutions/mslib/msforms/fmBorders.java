@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{E1FC1640-70DF-101B-BC16-00AA003E3B29}")
-public class fmBorders {
+public class fmBorders implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmBorders {
     case 2: return fmBordersLeft;
     case 3: return fmBordersTop;
     default: return new fmBorders(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmBordersNone";
+    case 1: return "fmBordersBox";
+    case 2: return "fmBordersLeft";
+    case 3: return "fmBordersTop";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmBordersNone");
+      if ((value & 1) != 0) sbuf.append("|fmBordersBox");
+      if ((value & 2) != 0) sbuf.append("|fmBordersLeft");
+      if ((value & 3) != 0) sbuf.append("|fmBordersTop");
+      return sbuf.toString();
+      }
     }
   }
 }

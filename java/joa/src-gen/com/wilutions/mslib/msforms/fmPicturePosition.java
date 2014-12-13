@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{317A54C2-C7B1-11CE-9AFD-00AA00600AB8}")
-public class fmPicturePosition {
+public class fmPicturePosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -64,6 +64,42 @@ public class fmPicturePosition {
     case 11: return fmPicturePositionBelowRight;
     case 12: return fmPicturePositionCenter;
     default: return new fmPicturePosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "fmPicturePositionAboveRight";
+    case 10: return "fmPicturePositionBelowCenter";
+    case 0: return "fmPicturePositionLeftTop";
+    case 1: return "fmPicturePositionLeftCenter";
+    case 2: return "fmPicturePositionLeftBottom";
+    case 3: return "fmPicturePositionRightTop";
+    case 4: return "fmPicturePositionRightCenter";
+    case 5: return "fmPicturePositionRightBottom";
+    case 6: return "fmPicturePositionAboveLeft";
+    case 7: return "fmPicturePositionAboveCenter";
+    case 9: return "fmPicturePositionBelowLeft";
+    case 11: return "fmPicturePositionBelowRight";
+    case 12: return "fmPicturePositionCenter";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|fmPicturePositionAboveRight");
+      if ((value & 10) != 0) sbuf.append("|fmPicturePositionBelowCenter");
+      if ((value & 0) != 0) sbuf.append("|fmPicturePositionLeftTop");
+      if ((value & 1) != 0) sbuf.append("|fmPicturePositionLeftCenter");
+      if ((value & 2) != 0) sbuf.append("|fmPicturePositionLeftBottom");
+      if ((value & 3) != 0) sbuf.append("|fmPicturePositionRightTop");
+      if ((value & 4) != 0) sbuf.append("|fmPicturePositionRightCenter");
+      if ((value & 5) != 0) sbuf.append("|fmPicturePositionRightBottom");
+      if ((value & 6) != 0) sbuf.append("|fmPicturePositionAboveLeft");
+      if ((value & 7) != 0) sbuf.append("|fmPicturePositionAboveCenter");
+      if ((value & 9) != 0) sbuf.append("|fmPicturePositionBelowLeft");
+      if ((value & 11) != 0) sbuf.append("|fmPicturePositionBelowRight");
+      if ((value & 12) != 0) sbuf.append("|fmPicturePositionCenter");
+      return sbuf.toString();
+      }
     }
   }
 }

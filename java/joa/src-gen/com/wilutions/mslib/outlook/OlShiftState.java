@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{B791AC59-1E79-4007-A6A1-4A4FE62F8D03}")
-public class OlShiftState {
+public class OlShiftState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlShiftState {
     case 2: return olShiftStateCtrlMask;
     case 4: return olShiftStateAltMask;
     default: return new OlShiftState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olShiftStateShiftMask";
+    case 2: return "olShiftStateCtrlMask";
+    case 4: return "olShiftStateAltMask";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olShiftStateShiftMask");
+      if ((value & 2) != 0) sbuf.append("|olShiftStateCtrlMask");
+      if ((value & 4) != 0) sbuf.append("|olShiftStateAltMask");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetTextEffect {
+public class MsoPresetTextEffect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -178,6 +178,118 @@ public class MsoPresetTextEffect {
     case 48: return msoTextEffect49;
     case 49: return msoTextEffect50;
     default: return new MsoPresetTextEffect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoTextEffectMixed";
+    case 2: return "msoTextEffect3";
+    case 10: return "msoTextEffect11";
+    case 0: return "msoTextEffect1";
+    case 28: return "msoTextEffect29";
+    case 1: return "msoTextEffect2";
+    case 3: return "msoTextEffect4";
+    case 4: return "msoTextEffect5";
+    case 5: return "msoTextEffect6";
+    case 6: return "msoTextEffect7";
+    case 7: return "msoTextEffect8";
+    case 18: return "msoTextEffect19";
+    case 8: return "msoTextEffect9";
+    case 20: return "msoTextEffect21";
+    case 9: return "msoTextEffect10";
+    case 11: return "msoTextEffect12";
+    case 12: return "msoTextEffect13";
+    case 13: return "msoTextEffect14";
+    case 14: return "msoTextEffect15";
+    case 15: return "msoTextEffect16";
+    case 16: return "msoTextEffect17";
+    case 17: return "msoTextEffect18";
+    case 19: return "msoTextEffect20";
+    case 21: return "msoTextEffect22";
+    case 22: return "msoTextEffect23";
+    case 23: return "msoTextEffect24";
+    case 24: return "msoTextEffect25";
+    case 25: return "msoTextEffect26";
+    case 26: return "msoTextEffect27";
+    case 27: return "msoTextEffect28";
+    case 29: return "msoTextEffect30";
+    case 41: return "msoTextEffect42";
+    case 30: return "msoTextEffect31";
+    case 40: return "msoTextEffect41";
+    case 31: return "msoTextEffect32";
+    case 43: return "msoTextEffect44";
+    case 32: return "msoTextEffect33";
+    case 42: return "msoTextEffect43";
+    case 33: return "msoTextEffect34";
+    case 45: return "msoTextEffect46";
+    case 34: return "msoTextEffect35";
+    case 44: return "msoTextEffect45";
+    case 35: return "msoTextEffect36";
+    case 47: return "msoTextEffect48";
+    case 36: return "msoTextEffect37";
+    case 46: return "msoTextEffect47";
+    case 37: return "msoTextEffect38";
+    case 49: return "msoTextEffect50";
+    case 38: return "msoTextEffect39";
+    case 48: return "msoTextEffect49";
+    case 39: return "msoTextEffect40";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoTextEffectMixed");
+      if ((value & 2) != 0) sbuf.append("|msoTextEffect3");
+      if ((value & 10) != 0) sbuf.append("|msoTextEffect11");
+      if ((value & 0) != 0) sbuf.append("|msoTextEffect1");
+      if ((value & 28) != 0) sbuf.append("|msoTextEffect29");
+      if ((value & 1) != 0) sbuf.append("|msoTextEffect2");
+      if ((value & 3) != 0) sbuf.append("|msoTextEffect4");
+      if ((value & 4) != 0) sbuf.append("|msoTextEffect5");
+      if ((value & 5) != 0) sbuf.append("|msoTextEffect6");
+      if ((value & 6) != 0) sbuf.append("|msoTextEffect7");
+      if ((value & 7) != 0) sbuf.append("|msoTextEffect8");
+      if ((value & 18) != 0) sbuf.append("|msoTextEffect19");
+      if ((value & 8) != 0) sbuf.append("|msoTextEffect9");
+      if ((value & 20) != 0) sbuf.append("|msoTextEffect21");
+      if ((value & 9) != 0) sbuf.append("|msoTextEffect10");
+      if ((value & 11) != 0) sbuf.append("|msoTextEffect12");
+      if ((value & 12) != 0) sbuf.append("|msoTextEffect13");
+      if ((value & 13) != 0) sbuf.append("|msoTextEffect14");
+      if ((value & 14) != 0) sbuf.append("|msoTextEffect15");
+      if ((value & 15) != 0) sbuf.append("|msoTextEffect16");
+      if ((value & 16) != 0) sbuf.append("|msoTextEffect17");
+      if ((value & 17) != 0) sbuf.append("|msoTextEffect18");
+      if ((value & 19) != 0) sbuf.append("|msoTextEffect20");
+      if ((value & 21) != 0) sbuf.append("|msoTextEffect22");
+      if ((value & 22) != 0) sbuf.append("|msoTextEffect23");
+      if ((value & 23) != 0) sbuf.append("|msoTextEffect24");
+      if ((value & 24) != 0) sbuf.append("|msoTextEffect25");
+      if ((value & 25) != 0) sbuf.append("|msoTextEffect26");
+      if ((value & 26) != 0) sbuf.append("|msoTextEffect27");
+      if ((value & 27) != 0) sbuf.append("|msoTextEffect28");
+      if ((value & 29) != 0) sbuf.append("|msoTextEffect30");
+      if ((value & 41) != 0) sbuf.append("|msoTextEffect42");
+      if ((value & 30) != 0) sbuf.append("|msoTextEffect31");
+      if ((value & 40) != 0) sbuf.append("|msoTextEffect41");
+      if ((value & 31) != 0) sbuf.append("|msoTextEffect32");
+      if ((value & 43) != 0) sbuf.append("|msoTextEffect44");
+      if ((value & 32) != 0) sbuf.append("|msoTextEffect33");
+      if ((value & 42) != 0) sbuf.append("|msoTextEffect43");
+      if ((value & 33) != 0) sbuf.append("|msoTextEffect34");
+      if ((value & 45) != 0) sbuf.append("|msoTextEffect46");
+      if ((value & 34) != 0) sbuf.append("|msoTextEffect35");
+      if ((value & 44) != 0) sbuf.append("|msoTextEffect45");
+      if ((value & 35) != 0) sbuf.append("|msoTextEffect36");
+      if ((value & 47) != 0) sbuf.append("|msoTextEffect48");
+      if ((value & 36) != 0) sbuf.append("|msoTextEffect37");
+      if ((value & 46) != 0) sbuf.append("|msoTextEffect47");
+      if ((value & 37) != 0) sbuf.append("|msoTextEffect38");
+      if ((value & 49) != 0) sbuf.append("|msoTextEffect50");
+      if ((value & 38) != 0) sbuf.append("|msoTextEffect39");
+      if ((value & 48) != 0) sbuf.append("|msoTextEffect49");
+      if ((value & 39) != 0) sbuf.append("|msoTextEffect40");
+      return sbuf.toString();
+      }
     }
   }
 }

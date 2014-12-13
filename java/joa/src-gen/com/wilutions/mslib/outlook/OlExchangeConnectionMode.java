@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlExchangeConnectionMode {
+public class OlExchangeConnectionMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -52,6 +52,34 @@ public class OlExchangeConnectionMode {
     case 700: return olCachedConnectedFull;
     case 800: return olOnline;
     default: return new OlExchangeConnectionMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 400: return "olCachedDisconnected";
+    case 0: return "olNoExchange";
+    case 100: return "olOffline";
+    case 200: return "olCachedOffline";
+    case 300: return "olDisconnected";
+    case 500: return "olCachedConnectedHeaders";
+    case 600: return "olCachedConnectedDrizzle";
+    case 700: return "olCachedConnectedFull";
+    case 800: return "olOnline";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 400) != 0) sbuf.append("|olCachedDisconnected");
+      if ((value & 0) != 0) sbuf.append("|olNoExchange");
+      if ((value & 100) != 0) sbuf.append("|olOffline");
+      if ((value & 200) != 0) sbuf.append("|olCachedOffline");
+      if ((value & 300) != 0) sbuf.append("|olDisconnected");
+      if ((value & 500) != 0) sbuf.append("|olCachedConnectedHeaders");
+      if ((value & 600) != 0) sbuf.append("|olCachedConnectedDrizzle");
+      if ((value & 700) != 0) sbuf.append("|olCachedConnectedFull");
+      if ((value & 800) != 0) sbuf.append("|olOnline");
+      return sbuf.toString();
+      }
     }
   }
 }

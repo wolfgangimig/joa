@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{CD474E84-A35F-101A-BEB9-00006B827DA8}")
-public class fmAlignment {
+public class fmAlignment implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmAlignment {
     case 0: return fmAlignmentLeft;
     case 1: return fmAlignmentRight;
     default: return new fmAlignment(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmAlignmentLeft";
+    case 1: return "fmAlignmentRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmAlignmentLeft");
+      if ((value & 1) != 0) sbuf.append("|fmAlignmentRight");
+      return sbuf.toString();
+      }
     }
   }
 }

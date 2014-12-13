@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{AA3E840F-7079-4AA4-91A9-6F3546DA6A95}")
-public class OlBackStyle {
+public class OlBackStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlBackStyle {
     case 0: return olBackStyleTransparent;
     case 1: return olBackStyleOpaque;
     default: return new OlBackStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olBackStyleTransparent";
+    case 1: return "olBackStyleOpaque";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olBackStyleTransparent");
+      if ((value & 1) != 0) sbuf.append("|olBackStyleOpaque");
+      return sbuf.toString();
+      }
     }
   }
 }

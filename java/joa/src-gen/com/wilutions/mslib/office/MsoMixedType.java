@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoMixedType {
+public class MsoMixedType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoMixedType {
     case 32768: return msoIntegerMixed;
     case -2147483648: return msoSingleMixed;
     default: return new MsoMixedType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 32768: return "msoIntegerMixed";
+    case -2147483648: return "msoSingleMixed";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 32768) != 0) sbuf.append("|msoIntegerMixed");
+      if ((value & -2147483648) != 0) sbuf.append("|msoSingleMixed");
+      return sbuf.toString();
+      }
     }
   }
 }

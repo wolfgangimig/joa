@@ -1,5 +1,6 @@
 package com.wilutions.joa.example1;
 
+import java.io.File;
 import java.util.Date;
 
 import javafx.application.Platform;
@@ -13,6 +14,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
@@ -95,7 +99,7 @@ public class MyFormRegion extends FormRegionFX {
 		scene.setFill(Color.BLUE);
 
 		submit.setOnAction(new EventHandler<ActionEvent>() {
-			
+
 			public void handle(ActionEvent event) {
 				// Stage dialog = new Stage();
 				// dialog.initStyle(StageStyle.UTILITY);
@@ -119,6 +123,37 @@ public class MyFormRegion extends FormRegionFX {
 					}
 				});
 
+			}
+		});
+
+		scene.setOnDragOver(new EventHandler<DragEvent>() {
+			@Override
+			public void handle(DragEvent event) {
+				Dragboard db = event.getDragboard();
+				if (db.hasFiles()) {
+					event.acceptTransferModes(TransferMode.COPY);
+				} else {
+					event.consume();
+				}
+			}
+		});
+
+		// Dropping over surface
+		scene.setOnDragDropped(new EventHandler<DragEvent>() {
+			@Override
+			public void handle(DragEvent event) {
+				Dragboard db = event.getDragboard();
+				boolean success = false;
+				if (db.hasFiles()) {
+					success = true;
+					String filePath = null;
+					for (File file : db.getFiles()) {
+						filePath = file.getAbsolutePath();
+						System.out.println(filePath);
+					}
+				}
+				event.setDropCompleted(success);
+				event.consume();
 			}
 		});
 

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{23D8FDAA-ABF3-4735-99B8-F234EA2BE64C}")
-public class XlAxisType {
+public class XlAxisType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlAxisType {
     case 3: return xlSeriesAxis;
     case 2: return xlValue;
     default: return new XlAxisType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "xlCategory";
+    case 3: return "xlSeriesAxis";
+    case 2: return "xlValue";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|xlCategory");
+      if ((value & 3) != 0) sbuf.append("|xlSeriesAxis");
+      if ((value & 2) != 0) sbuf.append("|xlValue");
+      return sbuf.toString();
+      }
     }
   }
 }

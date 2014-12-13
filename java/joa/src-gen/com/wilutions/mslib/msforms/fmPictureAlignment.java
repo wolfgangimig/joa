@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{3574BBE0-F520-11CE-83F6-00AA00479846}")
-public class fmPictureAlignment {
+public class fmPictureAlignment implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class fmPictureAlignment {
     case 3: return fmPictureAlignmentBottomLeft;
     case 4: return fmPictureAlignmentBottomRight;
     default: return new fmPictureAlignment(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmPictureAlignmentTopLeft";
+    case 1: return "fmPictureAlignmentTopRight";
+    case 2: return "fmPictureAlignmentCenter";
+    case 3: return "fmPictureAlignmentBottomLeft";
+    case 4: return "fmPictureAlignmentBottomRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmPictureAlignmentTopLeft");
+      if ((value & 1) != 0) sbuf.append("|fmPictureAlignmentTopRight");
+      if ((value & 2) != 0) sbuf.append("|fmPictureAlignmentCenter");
+      if ((value & 3) != 0) sbuf.append("|fmPictureAlignmentBottomLeft");
+      if ((value & 4) != 0) sbuf.append("|fmPictureAlignmentBottomRight");
+      return sbuf.toString();
+      }
     }
   }
 }

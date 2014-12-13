@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoChartFieldType {
+public class MsoChartFieldType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoChartFieldType {
     case 6: return msoChartFieldFormula;
     case 7: return msoChartFieldRange;
     default: return new MsoChartFieldType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoChartFieldBubbleSize";
+    case 2: return "msoChartFieldCategoryName";
+    case 3: return "msoChartFieldPercentage";
+    case 4: return "msoChartFieldSeriesName";
+    case 5: return "msoChartFieldValue";
+    case 6: return "msoChartFieldFormula";
+    case 7: return "msoChartFieldRange";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoChartFieldBubbleSize");
+      if ((value & 2) != 0) sbuf.append("|msoChartFieldCategoryName");
+      if ((value & 3) != 0) sbuf.append("|msoChartFieldPercentage");
+      if ((value & 4) != 0) sbuf.append("|msoChartFieldSeriesName");
+      if ((value & 5) != 0) sbuf.append("|msoChartFieldValue");
+      if ((value & 6) != 0) sbuf.append("|msoChartFieldFormula");
+      if ((value & 7) != 0) sbuf.append("|msoChartFieldRange");
+      return sbuf.toString();
+      }
     }
   }
 }

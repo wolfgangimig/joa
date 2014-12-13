@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{317A54C1-C7B1-11CE-9AFD-00AA00600AB8}")
-public class fmSnapPoint {
+public class fmSnapPoint implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -52,6 +52,34 @@ public class fmSnapPoint {
     case 7: return fmSnapPointBottomCenter;
     case 8: return fmSnapPointBottomRight;
     default: return new fmSnapPoint(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "fmSnapPointBottomRight";
+    case 0: return "fmSnapPointTopLeft";
+    case 1: return "fmSnapPointTopCenter";
+    case 2: return "fmSnapPointTopRight";
+    case 3: return "fmSnapPointCenterLeft";
+    case 4: return "fmSnapPointCenter";
+    case 5: return "fmSnapPointCenterRight";
+    case 6: return "fmSnapPointBottomLeft";
+    case 7: return "fmSnapPointBottomCenter";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|fmSnapPointBottomRight");
+      if ((value & 0) != 0) sbuf.append("|fmSnapPointTopLeft");
+      if ((value & 1) != 0) sbuf.append("|fmSnapPointTopCenter");
+      if ((value & 2) != 0) sbuf.append("|fmSnapPointTopRight");
+      if ((value & 3) != 0) sbuf.append("|fmSnapPointCenterLeft");
+      if ((value & 4) != 0) sbuf.append("|fmSnapPointCenter");
+      if ((value & 5) != 0) sbuf.append("|fmSnapPointCenterRight");
+      if ((value & 6) != 0) sbuf.append("|fmSnapPointBottomLeft");
+      if ((value & 7) != 0) sbuf.append("|fmSnapPointBottomCenter");
+      return sbuf.toString();
+      }
     }
   }
 }

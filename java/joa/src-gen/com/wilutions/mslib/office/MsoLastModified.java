@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoLastModified {
+public class MsoLastModified implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoLastModified {
     case 6: return msoLastModifiedThisMonth;
     case 7: return msoLastModifiedAnyTime;
     default: return new MsoLastModified(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoLastModifiedYesterday";
+    case 2: return "msoLastModifiedToday";
+    case 3: return "msoLastModifiedLastWeek";
+    case 4: return "msoLastModifiedThisWeek";
+    case 5: return "msoLastModifiedLastMonth";
+    case 6: return "msoLastModifiedThisMonth";
+    case 7: return "msoLastModifiedAnyTime";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoLastModifiedYesterday");
+      if ((value & 2) != 0) sbuf.append("|msoLastModifiedToday");
+      if ((value & 3) != 0) sbuf.append("|msoLastModifiedLastWeek");
+      if ((value & 4) != 0) sbuf.append("|msoLastModifiedThisWeek");
+      if ((value & 5) != 0) sbuf.append("|msoLastModifiedLastMonth");
+      if ((value & 6) != 0) sbuf.append("|msoLastModifiedThisMonth");
+      if ((value & 7) != 0) sbuf.append("|msoLastModifiedAnyTime");
+      return sbuf.toString();
+      }
     }
   }
 }

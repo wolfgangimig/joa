@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class CertificateVerificationResults {
+public class CertificateVerificationResults implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class CertificateVerificationResults {
     case 6: return certverresRevoked;
     case 7: return certverresUntrusted;
     default: return new CertificateVerificationResults(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "certverresError";
+    case 1: return "certverresVerifying";
+    case 2: return "certverresUnverified";
+    case 3: return "certverresValid";
+    case 4: return "certverresInvalid";
+    case 5: return "certverresExpired";
+    case 6: return "certverresRevoked";
+    case 7: return "certverresUntrusted";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|certverresError");
+      if ((value & 1) != 0) sbuf.append("|certverresVerifying");
+      if ((value & 2) != 0) sbuf.append("|certverresUnverified");
+      if ((value & 3) != 0) sbuf.append("|certverresValid");
+      if ((value & 4) != 0) sbuf.append("|certverresInvalid");
+      if ((value & 5) != 0) sbuf.append("|certverresExpired");
+      if ((value & 6) != 0) sbuf.append("|certverresRevoked");
+      if ((value & 7) != 0) sbuf.append("|certverresUntrusted");
+      return sbuf.toString();
+      }
     }
   }
 }

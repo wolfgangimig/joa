@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetTexture {
+public class MsoPresetTexture implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -100,6 +100,66 @@ public class MsoPresetTexture {
     case 23: return msoTextureOak;
     case 24: return msoTextureMediumWood;
     default: return new MsoPresetTexture(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoPresetTextureMixed";
+    case 2: return "msoTextureCanvas";
+    case 1: return "msoTexturePapyrus";
+    case 3: return "msoTextureDenim";
+    case 4: return "msoTextureWovenMat";
+    case 5: return "msoTextureWaterDroplets";
+    case 6: return "msoTexturePaperBag";
+    case 7: return "msoTextureFishFossil";
+    case 18: return "msoTexturePinkTissuePaper";
+    case 8: return "msoTextureSand";
+    case 20: return "msoTextureBouquet";
+    case 9: return "msoTextureGreenMarble";
+    case 10: return "msoTextureWhiteMarble";
+    case 11: return "msoTextureBrownMarble";
+    case 12: return "msoTextureGranite";
+    case 13: return "msoTextureNewsprint";
+    case 14: return "msoTextureRecycledPaper";
+    case 15: return "msoTextureParchment";
+    case 16: return "msoTextureStationery";
+    case 17: return "msoTextureBlueTissuePaper";
+    case 19: return "msoTexturePurpleMesh";
+    case 21: return "msoTextureCork";
+    case 22: return "msoTextureWalnut";
+    case 23: return "msoTextureOak";
+    case 24: return "msoTextureMediumWood";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoPresetTextureMixed");
+      if ((value & 2) != 0) sbuf.append("|msoTextureCanvas");
+      if ((value & 1) != 0) sbuf.append("|msoTexturePapyrus");
+      if ((value & 3) != 0) sbuf.append("|msoTextureDenim");
+      if ((value & 4) != 0) sbuf.append("|msoTextureWovenMat");
+      if ((value & 5) != 0) sbuf.append("|msoTextureWaterDroplets");
+      if ((value & 6) != 0) sbuf.append("|msoTexturePaperBag");
+      if ((value & 7) != 0) sbuf.append("|msoTextureFishFossil");
+      if ((value & 18) != 0) sbuf.append("|msoTexturePinkTissuePaper");
+      if ((value & 8) != 0) sbuf.append("|msoTextureSand");
+      if ((value & 20) != 0) sbuf.append("|msoTextureBouquet");
+      if ((value & 9) != 0) sbuf.append("|msoTextureGreenMarble");
+      if ((value & 10) != 0) sbuf.append("|msoTextureWhiteMarble");
+      if ((value & 11) != 0) sbuf.append("|msoTextureBrownMarble");
+      if ((value & 12) != 0) sbuf.append("|msoTextureGranite");
+      if ((value & 13) != 0) sbuf.append("|msoTextureNewsprint");
+      if ((value & 14) != 0) sbuf.append("|msoTextureRecycledPaper");
+      if ((value & 15) != 0) sbuf.append("|msoTextureParchment");
+      if ((value & 16) != 0) sbuf.append("|msoTextureStationery");
+      if ((value & 17) != 0) sbuf.append("|msoTextureBlueTissuePaper");
+      if ((value & 19) != 0) sbuf.append("|msoTexturePurpleMesh");
+      if ((value & 21) != 0) sbuf.append("|msoTextureCork");
+      if ((value & 22) != 0) sbuf.append("|msoTextureWalnut");
+      if ((value & 23) != 0) sbuf.append("|msoTextureOak");
+      if ((value & 24) != 0) sbuf.append("|msoTextureMediumWood");
+      return sbuf.toString();
+      }
     }
   }
 }

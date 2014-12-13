@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class CertificateDetail {
+public class CertificateDetail implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class CertificateDetail {
     case 3: return certdetExpirationDate;
     case 4: return certdetThumbprint;
     default: return new CertificateDetail(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "certdetAvailable";
+    case 1: return "certdetSubject";
+    case 2: return "certdetIssuer";
+    case 3: return "certdetExpirationDate";
+    case 4: return "certdetThumbprint";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|certdetAvailable");
+      if ((value & 1) != 0) sbuf.append("|certdetSubject");
+      if ((value & 2) != 0) sbuf.append("|certdetIssuer");
+      if ((value & 3) != 0) sbuf.append("|certdetExpirationDate");
+      if ((value & 4) != 0) sbuf.append("|certdetThumbprint");
+      return sbuf.toString();
+      }
     }
   }
 }

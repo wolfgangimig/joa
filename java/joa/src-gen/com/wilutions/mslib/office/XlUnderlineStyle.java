@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{9B1665EA-5EA9-4D9B-9B61-D6D1E7C087E2}")
-public class XlUnderlineStyle {
+public class XlUnderlineStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class XlUnderlineStyle {
     case 2: return xlUnderlineStyleSingle;
     case 4: return xlUnderlineStyleSingleAccounting;
     default: return new XlUnderlineStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "xlUnderlineStyleSingle";
+    case -4142: return "xlUnderlineStyleNone";
+    case -4119: return "xlUnderlineStyleDouble";
+    case 5: return "xlUnderlineStyleDoubleAccounting";
+    case 4: return "xlUnderlineStyleSingleAccounting";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|xlUnderlineStyleSingle");
+      if ((value & -4142) != 0) sbuf.append("|xlUnderlineStyleNone");
+      if ((value & -4119) != 0) sbuf.append("|xlUnderlineStyleDouble");
+      if ((value & 5) != 0) sbuf.append("|xlUnderlineStyleDoubleAccounting");
+      if ((value & 4) != 0) sbuf.append("|xlUnderlineStyleSingleAccounting");
+      return sbuf.toString();
+      }
     }
   }
 }

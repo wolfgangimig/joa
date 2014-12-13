@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBroadcastCapabilities {
+public class MsoBroadcastCapabilities implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoBroadcastCapabilities {
     case 2: return BroadcastCapSupportsMeetingNotes;
     case 4: return BroadcastCapSupportsUpdateDoc;
     default: return new MsoBroadcastCapabilities(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "BroadcastCapFileSizeLimited";
+    case 2: return "BroadcastCapSupportsMeetingNotes";
+    case 4: return "BroadcastCapSupportsUpdateDoc";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|BroadcastCapFileSizeLimited");
+      if ((value & 2) != 0) sbuf.append("|BroadcastCapSupportsMeetingNotes");
+      if ((value & 4) != 0) sbuf.append("|BroadcastCapSupportsUpdateDoc");
+      return sbuf.toString();
+      }
     }
   }
 }

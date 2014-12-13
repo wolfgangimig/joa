@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRemoteStatus {
+public class OlRemoteStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlRemoteStatus {
     case 3: return olMarkedForCopy;
     case 4: return olMarkedForDelete;
     default: return new OlRemoteStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olRemoteStatusNone";
+    case 1: return "olUnMarked";
+    case 2: return "olMarkedForDownload";
+    case 3: return "olMarkedForCopy";
+    case 4: return "olMarkedForDelete";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olRemoteStatusNone");
+      if ((value & 1) != 0) sbuf.append("|olUnMarked");
+      if ((value & 2) != 0) sbuf.append("|olMarkedForDownload");
+      if ((value & 3) != 0) sbuf.append("|olMarkedForCopy");
+      if ((value & 4) != 0) sbuf.append("|olMarkedForDelete");
+      return sbuf.toString();
+      }
     }
   }
 }

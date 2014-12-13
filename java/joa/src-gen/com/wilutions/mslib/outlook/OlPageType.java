@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{35D15973-23ED-4504-866B-C0B5C937A058}")
-public class OlPageType {
+public class OlPageType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlPageType {
     case 0: return olPageTypePlanner;
     case 1: return olPageTypeTracker;
     default: return new OlPageType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olPageTypePlanner";
+    case 1: return "olPageTypeTracker";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olPageTypePlanner");
+      if ((value & 1) != 0) sbuf.append("|olPageTypeTracker");
+      return sbuf.toString();
+      }
     }
   }
 }

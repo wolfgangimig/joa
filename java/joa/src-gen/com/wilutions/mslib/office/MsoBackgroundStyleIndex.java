@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBackgroundStyleIndex {
+public class MsoBackgroundStyleIndex implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -67,6 +67,44 @@ public class MsoBackgroundStyleIndex {
     case 11: return msoBackgroundStylePreset11;
     case 12: return msoBackgroundStylePreset12;
     default: return new MsoBackgroundStyleIndex(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoBackgroundStyleMixed";
+    case 2: return "msoBackgroundStylePreset2";
+    case 10: return "msoBackgroundStylePreset10";
+    case 0: return "msoBackgroundStyleNotAPreset";
+    case 1: return "msoBackgroundStylePreset1";
+    case 3: return "msoBackgroundStylePreset3";
+    case 4: return "msoBackgroundStylePreset4";
+    case 5: return "msoBackgroundStylePreset5";
+    case 6: return "msoBackgroundStylePreset6";
+    case 7: return "msoBackgroundStylePreset7";
+    case 8: return "msoBackgroundStylePreset8";
+    case 9: return "msoBackgroundStylePreset9";
+    case 11: return "msoBackgroundStylePreset11";
+    case 12: return "msoBackgroundStylePreset12";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoBackgroundStyleMixed");
+      if ((value & 2) != 0) sbuf.append("|msoBackgroundStylePreset2");
+      if ((value & 10) != 0) sbuf.append("|msoBackgroundStylePreset10");
+      if ((value & 0) != 0) sbuf.append("|msoBackgroundStyleNotAPreset");
+      if ((value & 1) != 0) sbuf.append("|msoBackgroundStylePreset1");
+      if ((value & 3) != 0) sbuf.append("|msoBackgroundStylePreset3");
+      if ((value & 4) != 0) sbuf.append("|msoBackgroundStylePreset4");
+      if ((value & 5) != 0) sbuf.append("|msoBackgroundStylePreset5");
+      if ((value & 6) != 0) sbuf.append("|msoBackgroundStylePreset6");
+      if ((value & 7) != 0) sbuf.append("|msoBackgroundStylePreset7");
+      if ((value & 8) != 0) sbuf.append("|msoBackgroundStylePreset8");
+      if ((value & 9) != 0) sbuf.append("|msoBackgroundStylePreset9");
+      if ((value & 11) != 0) sbuf.append("|msoBackgroundStylePreset11");
+      if ((value & 12) != 0) sbuf.append("|msoBackgroundStylePreset12");
+      return sbuf.toString();
+      }
     }
   }
 }

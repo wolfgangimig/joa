@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class XlReadingOrder {
+public class XlReadingOrder implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlReadingOrder {
     case -5003: return xlLTR;
     case -5004: return xlRTL;
     default: return new XlReadingOrder(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -5002: return "xlContext";
+    case -5003: return "xlLTR";
+    case -5004: return "xlRTL";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -5002) != 0) sbuf.append("|xlContext");
+      if ((value & -5003) != 0) sbuf.append("|xlLTR");
+      if ((value & -5004) != 0) sbuf.append("|xlRTL");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlRuleConditionType {
+public class OlRuleConditionType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -121,6 +121,80 @@ public class OlRuleConditionType {
     case 30: return olConditionFromRssFeed;
     case 31: return olConditionFromAnyRssFeed;
     default: return new OlRuleConditionType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 18: return "olConditionCategory";
+    case 8: return "olConditionFlaggedForAction";
+    case 10: return "olConditionToOrCc";
+    case 0: return "olConditionUnknown";
+    case 28: return "olConditionOtherMachine";
+    case 1: return "olConditionFrom";
+    case 2: return "olConditionSubject";
+    case 3: return "olConditionAccount";
+    case 4: return "olConditionOnlyToMe";
+    case 5: return "olConditionTo";
+    case 6: return "olConditionImportance";
+    case 7: return "olConditionSensitivity";
+    case 20: return "olConditionHasAttachment";
+    case 9: return "olConditionCc";
+    case 11: return "olConditionNotTo";
+    case 12: return "olConditionSentTo";
+    case 13: return "olConditionBody";
+    case 14: return "olConditionBodyOrSubject";
+    case 15: return "olConditionMessageHeader";
+    case 16: return "olConditionRecipientAddress";
+    case 17: return "olConditionSenderAddress";
+    case 19: return "olConditionOOF";
+    case 21: return "olConditionSizeRange";
+    case 22: return "olConditionDateRange";
+    case 23: return "olConditionFormName";
+    case 24: return "olConditionProperty";
+    case 25: return "olConditionSenderInAddressBook";
+    case 26: return "olConditionMeetingInviteOrUpdate";
+    case 27: return "olConditionLocalMachineOnly";
+    case 29: return "olConditionAnyCategory";
+    case 30: return "olConditionFromRssFeed";
+    case 31: return "olConditionFromAnyRssFeed";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 18) != 0) sbuf.append("|olConditionCategory");
+      if ((value & 8) != 0) sbuf.append("|olConditionFlaggedForAction");
+      if ((value & 10) != 0) sbuf.append("|olConditionToOrCc");
+      if ((value & 0) != 0) sbuf.append("|olConditionUnknown");
+      if ((value & 28) != 0) sbuf.append("|olConditionOtherMachine");
+      if ((value & 1) != 0) sbuf.append("|olConditionFrom");
+      if ((value & 2) != 0) sbuf.append("|olConditionSubject");
+      if ((value & 3) != 0) sbuf.append("|olConditionAccount");
+      if ((value & 4) != 0) sbuf.append("|olConditionOnlyToMe");
+      if ((value & 5) != 0) sbuf.append("|olConditionTo");
+      if ((value & 6) != 0) sbuf.append("|olConditionImportance");
+      if ((value & 7) != 0) sbuf.append("|olConditionSensitivity");
+      if ((value & 20) != 0) sbuf.append("|olConditionHasAttachment");
+      if ((value & 9) != 0) sbuf.append("|olConditionCc");
+      if ((value & 11) != 0) sbuf.append("|olConditionNotTo");
+      if ((value & 12) != 0) sbuf.append("|olConditionSentTo");
+      if ((value & 13) != 0) sbuf.append("|olConditionBody");
+      if ((value & 14) != 0) sbuf.append("|olConditionBodyOrSubject");
+      if ((value & 15) != 0) sbuf.append("|olConditionMessageHeader");
+      if ((value & 16) != 0) sbuf.append("|olConditionRecipientAddress");
+      if ((value & 17) != 0) sbuf.append("|olConditionSenderAddress");
+      if ((value & 19) != 0) sbuf.append("|olConditionOOF");
+      if ((value & 21) != 0) sbuf.append("|olConditionSizeRange");
+      if ((value & 22) != 0) sbuf.append("|olConditionDateRange");
+      if ((value & 23) != 0) sbuf.append("|olConditionFormName");
+      if ((value & 24) != 0) sbuf.append("|olConditionProperty");
+      if ((value & 25) != 0) sbuf.append("|olConditionSenderInAddressBook");
+      if ((value & 26) != 0) sbuf.append("|olConditionMeetingInviteOrUpdate");
+      if ((value & 27) != 0) sbuf.append("|olConditionLocalMachineOnly");
+      if ((value & 29) != 0) sbuf.append("|olConditionAnyCategory");
+      if ((value & 30) != 0) sbuf.append("|olConditionFromRssFeed");
+      if ((value & 31) != 0) sbuf.append("|olConditionFromAnyRssFeed");
+      return sbuf.toString();
+      }
     }
   }
 }

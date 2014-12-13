@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoExtraInfoMethod {
+public class MsoExtraInfoMethod implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoExtraInfoMethod {
     case 0: return msoMethodGet;
     case 1: return msoMethodPost;
     default: return new MsoExtraInfoMethod(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoMethodGet";
+    case 1: return "msoMethodPost";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoMethodGet");
+      if ((value & 1) != 0) sbuf.append("|msoMethodPost");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{03FADFE8-2527-46C3-9CCD-DBBBCD05156B}")
-public class OlTextAlign {
+public class OlTextAlign implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlTextAlign {
     case 2: return olTextAlignCenter;
     case 3: return olTextAlignRight;
     default: return new OlTextAlign(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olTextAlignLeft";
+    case 2: return "olTextAlignCenter";
+    case 3: return "olTextAlignRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olTextAlignLeft");
+      if ((value & 2) != 0) sbuf.append("|olTextAlignCenter");
+      if ((value & 3) != 0) sbuf.append("|olTextAlignRight");
+      return sbuf.toString();
+      }
     }
   }
 }

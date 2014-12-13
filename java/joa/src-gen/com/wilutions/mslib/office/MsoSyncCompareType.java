@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSyncCompareType {
+public class MsoSyncCompareType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class MsoSyncCompareType {
     case 0: return msoSyncCompareAndMerge;
     case 1: return msoSyncCompareSideBySide;
     default: return new MsoSyncCompareType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoSyncCompareAndMerge";
+    case 1: return "msoSyncCompareSideBySide";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoSyncCompareAndMerge");
+      if ((value & 1) != 0) sbuf.append("|msoSyncCompareSideBySide");
+      return sbuf.toString();
+      }
     }
   }
 }

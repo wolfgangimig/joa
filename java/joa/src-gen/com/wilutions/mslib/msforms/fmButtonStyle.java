@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{FDE774C0-9AA8-11CD-84DB-00006B82871A}")
-public class fmButtonStyle {
+public class fmButtonStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmButtonStyle {
     case 0: return fmButtonStylePushButton;
     case 1: return fmButtonStyleToggleButton;
     default: return new fmButtonStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmButtonStylePushButton";
+    case 1: return "fmButtonStyleToggleButton";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmButtonStylePushButton");
+      if ((value & 1) != 0) sbuf.append("|fmButtonStyleToggleButton");
+      return sbuf.toString();
+      }
     }
   }
 }

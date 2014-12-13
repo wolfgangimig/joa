@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFilterComparison {
+public class MsoFilterComparison implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -55,6 +55,36 @@ public class MsoFilterComparison {
     case 8: return msoFilterComparisonContains;
     case 9: return msoFilterComparisonNotContains;
     default: return new MsoFilterComparison(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "msoFilterComparisonContains";
+    case 0: return "msoFilterComparisonEqual";
+    case 1: return "msoFilterComparisonNotEqual";
+    case 2: return "msoFilterComparisonLessThan";
+    case 3: return "msoFilterComparisonGreaterThan";
+    case 4: return "msoFilterComparisonLessThanEqual";
+    case 5: return "msoFilterComparisonGreaterThanEqual";
+    case 6: return "msoFilterComparisonIsBlank";
+    case 7: return "msoFilterComparisonIsNotBlank";
+    case 9: return "msoFilterComparisonNotContains";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|msoFilterComparisonContains");
+      if ((value & 0) != 0) sbuf.append("|msoFilterComparisonEqual");
+      if ((value & 1) != 0) sbuf.append("|msoFilterComparisonNotEqual");
+      if ((value & 2) != 0) sbuf.append("|msoFilterComparisonLessThan");
+      if ((value & 3) != 0) sbuf.append("|msoFilterComparisonGreaterThan");
+      if ((value & 4) != 0) sbuf.append("|msoFilterComparisonLessThanEqual");
+      if ((value & 5) != 0) sbuf.append("|msoFilterComparisonGreaterThanEqual");
+      if ((value & 6) != 0) sbuf.append("|msoFilterComparisonIsBlank");
+      if ((value & 7) != 0) sbuf.append("|msoFilterComparisonIsNotBlank");
+      if ((value & 9) != 0) sbuf.append("|msoFilterComparisonNotContains");
+      return sbuf.toString();
+      }
     }
   }
 }

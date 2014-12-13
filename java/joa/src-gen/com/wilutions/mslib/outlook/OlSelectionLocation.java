@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSelectionLocation {
+public class OlSelectionLocation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlSelectionLocation {
     case 3: return olDailyTaskList;
     case 4: return olAttachmentWell;
     default: return new OlSelectionLocation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olViewList";
+    case 1: return "olToDoBarTaskList";
+    case 2: return "olToDoBarAppointmentList";
+    case 3: return "olDailyTaskList";
+    case 4: return "olAttachmentWell";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olViewList");
+      if ((value & 1) != 0) sbuf.append("|olToDoBarTaskList");
+      if ((value & 2) != 0) sbuf.append("|olToDoBarAppointmentList");
+      if ((value & 3) != 0) sbuf.append("|olDailyTaskList");
+      if ((value & 4) != 0) sbuf.append("|olAttachmentWell");
+      return sbuf.toString();
+      }
     }
   }
 }

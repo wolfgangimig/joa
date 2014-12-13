@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetCamera {
+public class MsoPresetCamera implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -214,6 +214,142 @@ public class MsoPresetCamera {
     case 61: return msoCameraPerspectiveRelaxed;
     case 62: return msoCameraPerspectiveRelaxedModerately;
     default: return new MsoPresetCamera(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoPresetCameraMixed";
+    case 2: return "msoCameraLegacyObliqueTop";
+    case 28: return "msoCameraIsometricOffAxis1Left";
+    case 1: return "msoCameraLegacyObliqueTopLeft";
+    case 3: return "msoCameraLegacyObliqueTopRight";
+    case 61: return "msoCameraPerspectiveRelaxed";
+    case 4: return "msoCameraLegacyObliqueLeft";
+    case 5: return "msoCameraLegacyObliqueFront";
+    case 6: return "msoCameraLegacyObliqueRight";
+    case 7: return "msoCameraLegacyObliqueBottomLeft";
+    case 54: return "msoCameraPerspectiveAboveRightFacing";
+    case 18: return "msoCameraLegacyPerspectiveBottomRight";
+    case 8: return "msoCameraLegacyObliqueBottom";
+    case 20: return "msoCameraIsometricTopUp";
+    case 9: return "msoCameraLegacyObliqueBottomRight";
+    case 10: return "msoCameraLegacyPerspectiveTopLeft";
+    case 11: return "msoCameraLegacyPerspectiveTop";
+    case 12: return "msoCameraLegacyPerspectiveTopRight";
+    case 13: return "msoCameraLegacyPerspectiveLeft";
+    case 58: return "msoCameraPerspectiveHeroicRightFacing";
+    case 14: return "msoCameraLegacyPerspectiveFront";
+    case 59: return "msoCameraPerspectiveHeroicExtremeLeftFacing";
+    case 15: return "msoCameraLegacyPerspectiveRight";
+    case 16: return "msoCameraLegacyPerspectiveBottomLeft";
+    case 17: return "msoCameraLegacyPerspectiveBottom";
+    case 55: return "msoCameraPerspectiveContrastingLeftFacing";
+    case 19: return "msoCameraOrthographicFront";
+    case 21: return "msoCameraIsometricTopDown";
+    case 22: return "msoCameraIsometricBottomUp";
+    case 23: return "msoCameraIsometricBottomDown";
+    case 24: return "msoCameraIsometricLeftUp";
+    case 25: return "msoCameraIsometricLeftDown";
+    case 26: return "msoCameraIsometricRightUp";
+    case 27: return "msoCameraIsometricRightDown";
+    case 29: return "msoCameraIsometricOffAxis1Right";
+    case 41: return "msoCameraObliqueTop";
+    case 30: return "msoCameraIsometricOffAxis1Top";
+    case 40: return "msoCameraObliqueTopLeft";
+    case 31: return "msoCameraIsometricOffAxis2Left";
+    case 43: return "msoCameraObliqueLeft";
+    case 32: return "msoCameraIsometricOffAxis2Right";
+    case 42: return "msoCameraObliqueTopRight";
+    case 33: return "msoCameraIsometricOffAxis2Top";
+    case 45: return "msoCameraObliqueBottomLeft";
+    case 34: return "msoCameraIsometricOffAxis3Left";
+    case 44: return "msoCameraObliqueRight";
+    case 35: return "msoCameraIsometricOffAxis3Right";
+    case 47: return "msoCameraObliqueBottomRight";
+    case 36: return "msoCameraIsometricOffAxis3Bottom";
+    case 46: return "msoCameraObliqueBottom";
+    case 37: return "msoCameraIsometricOffAxis4Left";
+    case 49: return "msoCameraPerspectiveLeft";
+    case 38: return "msoCameraIsometricOffAxis4Right";
+    case 48: return "msoCameraPerspectiveFront";
+    case 39: return "msoCameraIsometricOffAxis4Bottom";
+    case 50: return "msoCameraPerspectiveRight";
+    case 51: return "msoCameraPerspectiveAbove";
+    case 52: return "msoCameraPerspectiveBelow";
+    case 53: return "msoCameraPerspectiveAboveLeftFacing";
+    case 56: return "msoCameraPerspectiveContrastingRightFacing";
+    case 57: return "msoCameraPerspectiveHeroicLeftFacing";
+    case 60: return "msoCameraPerspectiveHeroicExtremeRightFacing";
+    case 62: return "msoCameraPerspectiveRelaxedModerately";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoPresetCameraMixed");
+      if ((value & 2) != 0) sbuf.append("|msoCameraLegacyObliqueTop");
+      if ((value & 28) != 0) sbuf.append("|msoCameraIsometricOffAxis1Left");
+      if ((value & 1) != 0) sbuf.append("|msoCameraLegacyObliqueTopLeft");
+      if ((value & 3) != 0) sbuf.append("|msoCameraLegacyObliqueTopRight");
+      if ((value & 61) != 0) sbuf.append("|msoCameraPerspectiveRelaxed");
+      if ((value & 4) != 0) sbuf.append("|msoCameraLegacyObliqueLeft");
+      if ((value & 5) != 0) sbuf.append("|msoCameraLegacyObliqueFront");
+      if ((value & 6) != 0) sbuf.append("|msoCameraLegacyObliqueRight");
+      if ((value & 7) != 0) sbuf.append("|msoCameraLegacyObliqueBottomLeft");
+      if ((value & 54) != 0) sbuf.append("|msoCameraPerspectiveAboveRightFacing");
+      if ((value & 18) != 0) sbuf.append("|msoCameraLegacyPerspectiveBottomRight");
+      if ((value & 8) != 0) sbuf.append("|msoCameraLegacyObliqueBottom");
+      if ((value & 20) != 0) sbuf.append("|msoCameraIsometricTopUp");
+      if ((value & 9) != 0) sbuf.append("|msoCameraLegacyObliqueBottomRight");
+      if ((value & 10) != 0) sbuf.append("|msoCameraLegacyPerspectiveTopLeft");
+      if ((value & 11) != 0) sbuf.append("|msoCameraLegacyPerspectiveTop");
+      if ((value & 12) != 0) sbuf.append("|msoCameraLegacyPerspectiveTopRight");
+      if ((value & 13) != 0) sbuf.append("|msoCameraLegacyPerspectiveLeft");
+      if ((value & 58) != 0) sbuf.append("|msoCameraPerspectiveHeroicRightFacing");
+      if ((value & 14) != 0) sbuf.append("|msoCameraLegacyPerspectiveFront");
+      if ((value & 59) != 0) sbuf.append("|msoCameraPerspectiveHeroicExtremeLeftFacing");
+      if ((value & 15) != 0) sbuf.append("|msoCameraLegacyPerspectiveRight");
+      if ((value & 16) != 0) sbuf.append("|msoCameraLegacyPerspectiveBottomLeft");
+      if ((value & 17) != 0) sbuf.append("|msoCameraLegacyPerspectiveBottom");
+      if ((value & 55) != 0) sbuf.append("|msoCameraPerspectiveContrastingLeftFacing");
+      if ((value & 19) != 0) sbuf.append("|msoCameraOrthographicFront");
+      if ((value & 21) != 0) sbuf.append("|msoCameraIsometricTopDown");
+      if ((value & 22) != 0) sbuf.append("|msoCameraIsometricBottomUp");
+      if ((value & 23) != 0) sbuf.append("|msoCameraIsometricBottomDown");
+      if ((value & 24) != 0) sbuf.append("|msoCameraIsometricLeftUp");
+      if ((value & 25) != 0) sbuf.append("|msoCameraIsometricLeftDown");
+      if ((value & 26) != 0) sbuf.append("|msoCameraIsometricRightUp");
+      if ((value & 27) != 0) sbuf.append("|msoCameraIsometricRightDown");
+      if ((value & 29) != 0) sbuf.append("|msoCameraIsometricOffAxis1Right");
+      if ((value & 41) != 0) sbuf.append("|msoCameraObliqueTop");
+      if ((value & 30) != 0) sbuf.append("|msoCameraIsometricOffAxis1Top");
+      if ((value & 40) != 0) sbuf.append("|msoCameraObliqueTopLeft");
+      if ((value & 31) != 0) sbuf.append("|msoCameraIsometricOffAxis2Left");
+      if ((value & 43) != 0) sbuf.append("|msoCameraObliqueLeft");
+      if ((value & 32) != 0) sbuf.append("|msoCameraIsometricOffAxis2Right");
+      if ((value & 42) != 0) sbuf.append("|msoCameraObliqueTopRight");
+      if ((value & 33) != 0) sbuf.append("|msoCameraIsometricOffAxis2Top");
+      if ((value & 45) != 0) sbuf.append("|msoCameraObliqueBottomLeft");
+      if ((value & 34) != 0) sbuf.append("|msoCameraIsometricOffAxis3Left");
+      if ((value & 44) != 0) sbuf.append("|msoCameraObliqueRight");
+      if ((value & 35) != 0) sbuf.append("|msoCameraIsometricOffAxis3Right");
+      if ((value & 47) != 0) sbuf.append("|msoCameraObliqueBottomRight");
+      if ((value & 36) != 0) sbuf.append("|msoCameraIsometricOffAxis3Bottom");
+      if ((value & 46) != 0) sbuf.append("|msoCameraObliqueBottom");
+      if ((value & 37) != 0) sbuf.append("|msoCameraIsometricOffAxis4Left");
+      if ((value & 49) != 0) sbuf.append("|msoCameraPerspectiveLeft");
+      if ((value & 38) != 0) sbuf.append("|msoCameraIsometricOffAxis4Right");
+      if ((value & 48) != 0) sbuf.append("|msoCameraPerspectiveFront");
+      if ((value & 39) != 0) sbuf.append("|msoCameraIsometricOffAxis4Bottom");
+      if ((value & 50) != 0) sbuf.append("|msoCameraPerspectiveRight");
+      if ((value & 51) != 0) sbuf.append("|msoCameraPerspectiveAbove");
+      if ((value & 52) != 0) sbuf.append("|msoCameraPerspectiveBelow");
+      if ((value & 53) != 0) sbuf.append("|msoCameraPerspectiveAboveLeftFacing");
+      if ((value & 56) != 0) sbuf.append("|msoCameraPerspectiveContrastingRightFacing");
+      if ((value & 57) != 0) sbuf.append("|msoCameraPerspectiveHeroicLeftFacing");
+      if ((value & 60) != 0) sbuf.append("|msoCameraPerspectiveHeroicExtremeRightFacing");
+      if ((value & 62) != 0) sbuf.append("|msoCameraPerspectiveRelaxedModerately");
+      return sbuf.toString();
+      }
     }
   }
 }

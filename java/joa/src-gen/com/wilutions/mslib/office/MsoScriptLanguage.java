@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoScriptLanguage {
+public class MsoScriptLanguage implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoScriptLanguage {
     case 3: return msoScriptLanguageASP;
     case 4: return msoScriptLanguageOther;
     default: return new MsoScriptLanguage(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoScriptLanguageJava";
+    case 2: return "msoScriptLanguageVisualBasic";
+    case 3: return "msoScriptLanguageASP";
+    case 4: return "msoScriptLanguageOther";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoScriptLanguageJava");
+      if ((value & 2) != 0) sbuf.append("|msoScriptLanguageVisualBasic");
+      if ((value & 3) != 0) sbuf.append("|msoScriptLanguageASP");
+      if ((value & 4) != 0) sbuf.append("|msoScriptLanguageOther");
+      return sbuf.toString();
+      }
     }
   }
 }

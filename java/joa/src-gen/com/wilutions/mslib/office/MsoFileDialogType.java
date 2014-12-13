@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFileDialogType {
+public class MsoFileDialogType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoFileDialogType {
     case 3: return msoFileDialogFilePicker;
     case 4: return msoFileDialogFolderPicker;
     default: return new MsoFileDialogType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoFileDialogOpen";
+    case 2: return "msoFileDialogSaveAs";
+    case 3: return "msoFileDialogFilePicker";
+    case 4: return "msoFileDialogFolderPicker";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoFileDialogOpen");
+      if ((value & 2) != 0) sbuf.append("|msoFileDialogSaveAs");
+      if ((value & 3) != 0) sbuf.append("|msoFileDialogFilePicker");
+      if ((value & 4) != 0) sbuf.append("|msoFileDialogFolderPicker");
+      return sbuf.toString();
+      }
     }
   }
 }

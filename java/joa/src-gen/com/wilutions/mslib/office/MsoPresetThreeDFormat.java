@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPresetThreeDFormat {
+public class MsoPresetThreeDFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -88,6 +88,58 @@ public class MsoPresetThreeDFormat {
     case 19: return msoThreeD19;
     case 20: return msoThreeD20;
     default: return new MsoPresetThreeDFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoPresetThreeDFormatMixed";
+    case 2: return "msoThreeD2";
+    case 1: return "msoThreeD1";
+    case 3: return "msoThreeD3";
+    case 4: return "msoThreeD4";
+    case 5: return "msoThreeD5";
+    case 6: return "msoThreeD6";
+    case 7: return "msoThreeD7";
+    case 18: return "msoThreeD18";
+    case 8: return "msoThreeD8";
+    case 20: return "msoThreeD20";
+    case 9: return "msoThreeD9";
+    case 10: return "msoThreeD10";
+    case 11: return "msoThreeD11";
+    case 12: return "msoThreeD12";
+    case 13: return "msoThreeD13";
+    case 14: return "msoThreeD14";
+    case 15: return "msoThreeD15";
+    case 16: return "msoThreeD16";
+    case 17: return "msoThreeD17";
+    case 19: return "msoThreeD19";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoPresetThreeDFormatMixed");
+      if ((value & 2) != 0) sbuf.append("|msoThreeD2");
+      if ((value & 1) != 0) sbuf.append("|msoThreeD1");
+      if ((value & 3) != 0) sbuf.append("|msoThreeD3");
+      if ((value & 4) != 0) sbuf.append("|msoThreeD4");
+      if ((value & 5) != 0) sbuf.append("|msoThreeD5");
+      if ((value & 6) != 0) sbuf.append("|msoThreeD6");
+      if ((value & 7) != 0) sbuf.append("|msoThreeD7");
+      if ((value & 18) != 0) sbuf.append("|msoThreeD18");
+      if ((value & 8) != 0) sbuf.append("|msoThreeD8");
+      if ((value & 20) != 0) sbuf.append("|msoThreeD20");
+      if ((value & 9) != 0) sbuf.append("|msoThreeD9");
+      if ((value & 10) != 0) sbuf.append("|msoThreeD10");
+      if ((value & 11) != 0) sbuf.append("|msoThreeD11");
+      if ((value & 12) != 0) sbuf.append("|msoThreeD12");
+      if ((value & 13) != 0) sbuf.append("|msoThreeD13");
+      if ((value & 14) != 0) sbuf.append("|msoThreeD14");
+      if ((value & 15) != 0) sbuf.append("|msoThreeD15");
+      if ((value & 16) != 0) sbuf.append("|msoThreeD16");
+      if ((value & 17) != 0) sbuf.append("|msoThreeD17");
+      if ((value & 19) != 0) sbuf.append("|msoThreeD19");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{C3689F20-C231-11CE-A30C-00AA004A3D3C}")
-public class fmRepeatDirection {
+public class fmRepeatDirection implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmRepeatDirection {
     case 0: return _fmRepeatDirectionHorizontal;
     case 1: return _fmRepeatDirectionVertical;
     default: return new fmRepeatDirection(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "_fmRepeatDirectionHorizontal";
+    case 1: return "_fmRepeatDirectionVertical";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|_fmRepeatDirectionHorizontal");
+      if ((value & 1) != 0) sbuf.append("|_fmRepeatDirectionVertical");
+      return sbuf.toString();
+      }
     }
   }
 }

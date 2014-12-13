@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlTaskRecipientType {
+public class OlTaskRecipientType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlTaskRecipientType {
     case 2: return olUpdate;
     case 3: return olFinalStatus;
     default: return new OlTaskRecipientType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "olUpdate";
+    case 3: return "olFinalStatus";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|olUpdate");
+      if ((value & 3) != 0) sbuf.append("|olFinalStatus");
+      return sbuf.toString();
+      }
     }
   }
 }

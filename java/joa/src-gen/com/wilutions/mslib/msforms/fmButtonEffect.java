@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{317A54C0-C7B1-11CE-9AFD-00AA00600AB8}")
-public class fmButtonEffect {
+public class fmButtonEffect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmButtonEffect {
     case 0: return fmButtonEffectFlat;
     case 2: return fmButtonEffectSunken;
     default: return new fmButtonEffect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmButtonEffectFlat";
+    case 2: return "fmButtonEffectSunken";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmButtonEffectFlat");
+      if ((value & 2) != 0) sbuf.append("|fmButtonEffectSunken");
+      return sbuf.toString();
+      }
     }
   }
 }

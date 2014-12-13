@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class SignatureType {
+public class SignatureType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class SignatureType {
     case 2: return sigtypeSignatureLine;
     case 3: return sigtypeMax;
     default: return new SignatureType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "sigtypeUnknown";
+    case 1: return "sigtypeNonVisible";
+    case 2: return "sigtypeSignatureLine";
+    case 3: return "sigtypeMax";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|sigtypeUnknown");
+      if ((value & 1) != 0) sbuf.append("|sigtypeNonVisible");
+      if ((value & 2) != 0) sbuf.append("|sigtypeSignatureLine");
+      if ((value & 3) != 0) sbuf.append("|sigtypeMax");
+      return sbuf.toString();
+      }
     }
   }
 }

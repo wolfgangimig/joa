@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBlogImageType {
+public class MsoBlogImageType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoBlogImageType {
     case 2: return msoblogImageTypeGIF;
     case 3: return msoblogImageTypePNG;
     default: return new MsoBlogImageType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoblogImageTypeJPEG";
+    case 2: return "msoblogImageTypeGIF";
+    case 3: return "msoblogImageTypePNG";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoblogImageTypeJPEG");
+      if ((value & 2) != 0) sbuf.append("|msoblogImageTypeGIF");
+      if ((value & 3) != 0) sbuf.append("|msoblogImageTypePNG");
+      return sbuf.toString();
+      }
     }
   }
 }

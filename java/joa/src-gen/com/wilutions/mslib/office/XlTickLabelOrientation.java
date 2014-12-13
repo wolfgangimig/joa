@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{3A6700B4-6BC6-4848-AAA4-D360573F448C}")
-public class XlTickLabelOrientation {
+public class XlTickLabelOrientation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class XlTickLabelOrientation {
     case -4171: return xlTickLabelOrientationUpward;
     case -4166: return xlTickLabelOrientationVertical;
     default: return new XlTickLabelOrientation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4170: return "xlTickLabelOrientationDownward";
+    case -4105: return "xlTickLabelOrientationAutomatic";
+    case -4128: return "xlTickLabelOrientationHorizontal";
+    case -4171: return "xlTickLabelOrientationUpward";
+    case -4166: return "xlTickLabelOrientationVertical";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4170) != 0) sbuf.append("|xlTickLabelOrientationDownward");
+      if ((value & -4105) != 0) sbuf.append("|xlTickLabelOrientationAutomatic");
+      if ((value & -4128) != 0) sbuf.append("|xlTickLabelOrientationHorizontal");
+      if ((value & -4171) != 0) sbuf.append("|xlTickLabelOrientationUpward");
+      if ((value & -4166) != 0) sbuf.append("|xlTickLabelOrientationVertical");
+      return sbuf.toString();
+      }
     }
   }
 }

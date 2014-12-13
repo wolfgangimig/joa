@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAlertCancelType {
+public class MsoAlertCancelType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -43,6 +43,28 @@ public class MsoAlertCancelType {
     case 3: return msoAlertCancelFourth;
     case 4: return msoAlertCancelFifth;
     default: return new MsoAlertCancelType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -1: return "msoAlertCancelDefault";
+    case 0: return "msoAlertCancelFirst";
+    case 1: return "msoAlertCancelSecond";
+    case 2: return "msoAlertCancelThird";
+    case 3: return "msoAlertCancelFourth";
+    case 4: return "msoAlertCancelFifth";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -1) != 0) sbuf.append("|msoAlertCancelDefault");
+      if ((value & 0) != 0) sbuf.append("|msoAlertCancelFirst");
+      if ((value & 1) != 0) sbuf.append("|msoAlertCancelSecond");
+      if ((value & 2) != 0) sbuf.append("|msoAlertCancelThird");
+      if ((value & 3) != 0) sbuf.append("|msoAlertCancelFourth");
+      if ((value & 4) != 0) sbuf.append("|msoAlertCancelFifth");
+      return sbuf.toString();
+      }
     }
   }
 }

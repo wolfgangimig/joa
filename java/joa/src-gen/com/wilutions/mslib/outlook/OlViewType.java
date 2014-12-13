@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlViewType {
+public class OlViewType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class OlViewType {
     case 6: return olDailyTaskListView;
     case 7: return olPeopleView;
     default: return new OlViewType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTableView";
+    case 1: return "olCardView";
+    case 2: return "olCalendarView";
+    case 3: return "olIconView";
+    case 4: return "olTimelineView";
+    case 5: return "olBusinessCardView";
+    case 6: return "olDailyTaskListView";
+    case 7: return "olPeopleView";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTableView");
+      if ((value & 1) != 0) sbuf.append("|olCardView");
+      if ((value & 2) != 0) sbuf.append("|olCalendarView");
+      if ((value & 3) != 0) sbuf.append("|olIconView");
+      if ((value & 4) != 0) sbuf.append("|olTimelineView");
+      if ((value & 5) != 0) sbuf.append("|olBusinessCardView");
+      if ((value & 6) != 0) sbuf.append("|olDailyTaskListView");
+      if ((value & 7) != 0) sbuf.append("|olPeopleView");
+      return sbuf.toString();
+      }
     }
   }
 }

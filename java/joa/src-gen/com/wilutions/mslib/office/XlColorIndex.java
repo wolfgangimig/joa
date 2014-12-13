@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{F6BA0ED9-B530-466E-83D5-325653CC1068}")
-public class XlColorIndex {
+public class XlColorIndex implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class XlColorIndex {
     case -4105: return xlColorIndexAutomatic;
     case -4142: return xlColorIndexNone;
     default: return new XlColorIndex(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4105: return "xlColorIndexAutomatic";
+    case -4142: return "xlColorIndexNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4105) != 0) sbuf.append("|xlColorIndexAutomatic");
+      if ((value & -4142) != 0) sbuf.append("|xlColorIndexNone");
+      return sbuf.toString();
+      }
     }
   }
 }

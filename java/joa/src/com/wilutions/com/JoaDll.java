@@ -25,7 +25,7 @@ import java.util.Properties;
 public class JoaDll {
 	
 	static {
-		boolean isDebug = false;
+		boolean isDebug = true;
 		String fileName = "joa" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		

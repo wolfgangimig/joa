@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormRegistry {
+public class OlFormRegistry implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlFormRegistry {
     case 3: return olFolderRegistry;
     case 4: return olOrganizationRegistry;
     default: return new OlFormRegistry(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olDefaultRegistry";
+    case 2: return "olPersonalRegistry";
+    case 3: return "olFolderRegistry";
+    case 4: return "olOrganizationRegistry";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olDefaultRegistry");
+      if ((value & 2) != 0) sbuf.append("|olPersonalRegistry");
+      if ((value & 3) != 0) sbuf.append("|olFolderRegistry");
+      if ((value & 4) != 0) sbuf.append("|olOrganizationRegistry");
+      return sbuf.toString();
+      }
     }
   }
 }

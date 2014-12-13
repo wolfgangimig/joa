@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{14710A1D-071F-4BFF-B1C2-4BEF5E8B2CEA}")
-public class XlTimeUnit {
+public class XlTimeUnit implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlTimeUnit {
     case 1: return xlMonths;
     case 2: return xlYears;
     default: return new XlTimeUnit(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "xlDays";
+    case 1: return "xlMonths";
+    case 2: return "xlYears";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|xlDays");
+      if ((value & 1) != 0) sbuf.append("|xlMonths");
+      if ((value & 2) != 0) sbuf.append("|xlYears");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{593104F8-16BA-101B-989C-00006B82871A}")
-public class fmMousePointer {
+public class fmMousePointer implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -70,6 +70,46 @@ public class fmMousePointer {
     case 15: return fmMousePointerSizeAll;
     case 99: return fmMousePointerCustom;
     default: return new fmMousePointer(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmMousePointerDefault";
+    case 10: return "fmMousePointerUpArrow";
+    case 8: return "fmMousePointerSizeNWSE";
+    case 9: return "fmMousePointerSizeWE";
+    case 99: return "fmMousePointerCustom";
+    case 1: return "fmMousePointerArrow";
+    case 2: return "fmMousePointerCross";
+    case 3: return "fmMousePointerIBeam";
+    case 6: return "fmMousePointerSizeNESW";
+    case 7: return "fmMousePointerSizeNS";
+    case 11: return "fmMousePointerHourGlass";
+    case 12: return "fmMousePointerNoDrop";
+    case 13: return "fmMousePointerAppStarting";
+    case 14: return "fmMousePointerHelp";
+    case 15: return "fmMousePointerSizeAll";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmMousePointerDefault");
+      if ((value & 10) != 0) sbuf.append("|fmMousePointerUpArrow");
+      if ((value & 8) != 0) sbuf.append("|fmMousePointerSizeNWSE");
+      if ((value & 9) != 0) sbuf.append("|fmMousePointerSizeWE");
+      if ((value & 99) != 0) sbuf.append("|fmMousePointerCustom");
+      if ((value & 1) != 0) sbuf.append("|fmMousePointerArrow");
+      if ((value & 2) != 0) sbuf.append("|fmMousePointerCross");
+      if ((value & 3) != 0) sbuf.append("|fmMousePointerIBeam");
+      if ((value & 6) != 0) sbuf.append("|fmMousePointerSizeNESW");
+      if ((value & 7) != 0) sbuf.append("|fmMousePointerSizeNS");
+      if ((value & 11) != 0) sbuf.append("|fmMousePointerHourGlass");
+      if ((value & 12) != 0) sbuf.append("|fmMousePointerNoDrop");
+      if ((value & 13) != 0) sbuf.append("|fmMousePointerAppStarting");
+      if ((value & 14) != 0) sbuf.append("|fmMousePointerHelp");
+      if ((value & 15) != 0) sbuf.append("|fmMousePointerSizeAll");
+      return sbuf.toString();
+      }
     }
   }
 }

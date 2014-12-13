@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{02DFD4F0-EA2B-11CE-8043-00AA006009FA}")
-public class fmLayoutEffect {
+public class fmLayoutEffect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmLayoutEffect {
     case 1: return fmLayoutEffectInitiate;
     case 2: return _fmLayoutEffectRespond;
     default: return new fmLayoutEffect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmLayoutEffectNone";
+    case 1: return "fmLayoutEffectInitiate";
+    case 2: return "_fmLayoutEffectRespond";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmLayoutEffectNone");
+      if ((value & 1) != 0) sbuf.append("|fmLayoutEffectInitiate");
+      if ((value & 2) != 0) sbuf.append("|_fmLayoutEffectRespond");
+      return sbuf.toString();
+      }
     }
   }
 }

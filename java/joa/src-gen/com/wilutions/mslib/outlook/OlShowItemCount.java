@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlShowItemCount {
+public class OlShowItemCount implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlShowItemCount {
     case 1: return olShowUnreadItemCount;
     case 2: return olShowTotalItemCount;
     default: return new OlShowItemCount(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olNoItemCount";
+    case 1: return "olShowUnreadItemCount";
+    case 2: return "olShowTotalItemCount";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olNoItemCount");
+      if ((value & 1) != 0) sbuf.append("|olShowUnreadItemCount");
+      if ((value & 2) != 0) sbuf.append("|olShowTotalItemCount");
+      return sbuf.toString();
+      }
     }
   }
 }

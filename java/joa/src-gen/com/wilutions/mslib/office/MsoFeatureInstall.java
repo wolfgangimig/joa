@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFeatureInstall {
+public class MsoFeatureInstall implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoFeatureInstall {
     case 1: return msoFeatureInstallOnDemand;
     case 2: return msoFeatureInstallOnDemandWithUI;
     default: return new MsoFeatureInstall(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoFeatureInstallNone";
+    case 1: return "msoFeatureInstallOnDemand";
+    case 2: return "msoFeatureInstallOnDemandWithUI";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoFeatureInstallNone");
+      if ((value & 1) != 0) sbuf.append("|msoFeatureInstallOnDemand");
+      if ((value & 2) != 0) sbuf.append("|msoFeatureInstallOnDemandWithUI");
+      return sbuf.toString();
+      }
     }
   }
 }

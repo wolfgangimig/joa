@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{EBC7FDE3-6899-11CE-80C0-00AA00611080}")
-public class fmTabStyle {
+public class fmTabStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmTabStyle {
     case 1: return fmTabStyleButtons;
     case 2: return fmTabStyleNone;
     default: return new fmTabStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmTabStyleTabs";
+    case 1: return "fmTabStyleButtons";
+    case 2: return "fmTabStyleNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmTabStyleTabs");
+      if ((value & 1) != 0) sbuf.append("|fmTabStyleButtons");
+      if ((value & 2) != 0) sbuf.append("|fmTabStyleNone");
+      return sbuf.toString();
+      }
     }
   }
 }

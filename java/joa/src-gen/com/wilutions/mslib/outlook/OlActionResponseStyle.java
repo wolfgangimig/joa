@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlActionResponseStyle {
+public class OlActionResponseStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlActionResponseStyle {
     case 1: return olSend;
     case 2: return olPrompt;
     default: return new OlActionResponseStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olOpen";
+    case 1: return "olSend";
+    case 2: return "olPrompt";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olOpen");
+      if ((value & 1) != 0) sbuf.append("|olSend");
+      if ((value & 2) != 0) sbuf.append("|olPrompt");
+      return sbuf.toString();
+      }
     }
   }
 }

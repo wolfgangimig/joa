@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBulletType {
+public class MsoBulletType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoBulletType {
     case 2: return msoBulletNumbered;
     case 3: return msoBulletPicture;
     default: return new MsoBulletType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoBulletNumbered";
+    case -2: return "msoBulletMixed";
+    case 0: return "msoBulletNone";
+    case 1: return "msoBulletUnnumbered";
+    case 3: return "msoBulletPicture";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoBulletNumbered");
+      if ((value & -2) != 0) sbuf.append("|msoBulletMixed");
+      if ((value & 0) != 0) sbuf.append("|msoBulletNone");
+      if ((value & 1) != 0) sbuf.append("|msoBulletUnnumbered");
+      if ((value & 3) != 0) sbuf.append("|msoBulletPicture");
+      return sbuf.toString();
+      }
     }
   }
 }

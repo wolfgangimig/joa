@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoShadowStyle {
+public class MsoShadowStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoShadowStyle {
     case 1: return msoShadowStyleInnerShadow;
     case 2: return msoShadowStyleOuterShadow;
     default: return new MsoShadowStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoShadowStyleOuterShadow";
+    case -2: return "msoShadowStyleMixed";
+    case 1: return "msoShadowStyleInnerShadow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoShadowStyleOuterShadow");
+      if ((value & -2) != 0) sbuf.append("|msoShadowStyleMixed");
+      if ((value & 1) != 0) sbuf.append("|msoShadowStyleInnerShadow");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAutoSize {
+public class MsoAutoSize implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoAutoSize {
     case 1: return msoAutoSizeShapeToFitText;
     case 2: return msoAutoSizeTextToFitShape;
     default: return new MsoAutoSize(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoAutoSizeTextToFitShape";
+    case -2: return "msoAutoSizeMixed";
+    case 0: return "msoAutoSizeNone";
+    case 1: return "msoAutoSizeShapeToFitText";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoAutoSizeTextToFitShape");
+      if ((value & -2) != 0) sbuf.append("|msoAutoSizeMixed");
+      if ((value & 0) != 0) sbuf.append("|msoAutoSizeNone");
+      if ((value & 1) != 0) sbuf.append("|msoAutoSizeShapeToFitText");
+      return sbuf.toString();
+      }
     }
   }
 }

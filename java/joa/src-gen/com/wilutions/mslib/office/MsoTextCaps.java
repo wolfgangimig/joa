@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTextCaps {
+public class MsoTextCaps implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class MsoTextCaps {
     case 1: return msoSmallCaps;
     case 2: return msoAllCaps;
     default: return new MsoTextCaps(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoAllCaps";
+    case -2: return "msoCapsMixed";
+    case 0: return "msoNoCaps";
+    case 1: return "msoSmallCaps";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoAllCaps");
+      if ((value & -2) != 0) sbuf.append("|msoCapsMixed");
+      if ((value & 0) != 0) sbuf.append("|msoNoCaps");
+      if ((value & 1) != 0) sbuf.append("|msoSmallCaps");
+      return sbuf.toString();
+      }
     }
   }
 }

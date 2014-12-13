@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoFileFindView {
+public class MsoFileFindView implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoFileFindView {
     case 2: return msoViewPreview;
     case 3: return msoViewSummaryInfo;
     default: return new MsoFileFindView(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "msoViewFileInfo";
+    case 2: return "msoViewPreview";
+    case 3: return "msoViewSummaryInfo";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|msoViewFileInfo");
+      if ((value & 2) != 0) sbuf.append("|msoViewPreview");
+      if ((value & 3) != 0) sbuf.append("|msoViewSummaryInfo");
+      return sbuf.toString();
+      }
     }
   }
 }

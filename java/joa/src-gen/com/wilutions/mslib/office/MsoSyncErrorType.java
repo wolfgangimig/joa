@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSyncErrorType {
+public class MsoSyncErrorType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -76,6 +76,50 @@ public class MsoSyncErrorType {
     case 15: return msoSyncErrorNoNetwork;
     case 16: return msoSyncErrorUnknown;
     default: return new MsoSyncErrorType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "msoSyncErrorVirusDownload";
+    case 10: return "msoSyncErrorUnknownDownload";
+    case 0: return "msoSyncErrorNone";
+    case 1: return "msoSyncErrorUnauthorizedUser";
+    case 2: return "msoSyncErrorCouldNotConnect";
+    case 3: return "msoSyncErrorOutOfSpace";
+    case 4: return "msoSyncErrorFileNotFound";
+    case 5: return "msoSyncErrorFileTooLarge";
+    case 6: return "msoSyncErrorFileInUse";
+    case 7: return "msoSyncErrorVirusUpload";
+    case 9: return "msoSyncErrorUnknownUpload";
+    case 11: return "msoSyncErrorCouldNotOpen";
+    case 12: return "msoSyncErrorCouldNotUpdate";
+    case 13: return "msoSyncErrorCouldNotCompare";
+    case 14: return "msoSyncErrorCouldNotResolve";
+    case 15: return "msoSyncErrorNoNetwork";
+    case 16: return "msoSyncErrorUnknown";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|msoSyncErrorVirusDownload");
+      if ((value & 10) != 0) sbuf.append("|msoSyncErrorUnknownDownload");
+      if ((value & 0) != 0) sbuf.append("|msoSyncErrorNone");
+      if ((value & 1) != 0) sbuf.append("|msoSyncErrorUnauthorizedUser");
+      if ((value & 2) != 0) sbuf.append("|msoSyncErrorCouldNotConnect");
+      if ((value & 3) != 0) sbuf.append("|msoSyncErrorOutOfSpace");
+      if ((value & 4) != 0) sbuf.append("|msoSyncErrorFileNotFound");
+      if ((value & 5) != 0) sbuf.append("|msoSyncErrorFileTooLarge");
+      if ((value & 6) != 0) sbuf.append("|msoSyncErrorFileInUse");
+      if ((value & 7) != 0) sbuf.append("|msoSyncErrorVirusUpload");
+      if ((value & 9) != 0) sbuf.append("|msoSyncErrorUnknownUpload");
+      if ((value & 11) != 0) sbuf.append("|msoSyncErrorCouldNotOpen");
+      if ((value & 12) != 0) sbuf.append("|msoSyncErrorCouldNotUpdate");
+      if ((value & 13) != 0) sbuf.append("|msoSyncErrorCouldNotCompare");
+      if ((value & 14) != 0) sbuf.append("|msoSyncErrorCouldNotResolve");
+      if ((value & 15) != 0) sbuf.append("|msoSyncErrorNoNetwork");
+      if ((value & 16) != 0) sbuf.append("|msoSyncErrorUnknown");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoNumberedBulletStyle {
+public class MsoNumberedBulletStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -151,6 +151,100 @@ public class MsoNumberedBulletStyle {
     case 39: return msoBulletHindiNumParenRight;
     case 40: return msoBulletHindiAlpha1Period;
     default: return new MsoNumberedBulletStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoBulletStyleMixed";
+    case 2: return "msoBulletArabicParenRight";
+    case 10: return "msoBulletAlphaUCParenBoth";
+    case 0: return "msoBulletAlphaLCPeriod";
+    case 28: return "msoBulletArabicDBPlain";
+    case 1: return "msoBulletAlphaUCPeriod";
+    case 3: return "msoBulletArabicPeriod";
+    case 4: return "msoBulletRomanLCParenBoth";
+    case 5: return "msoBulletRomanLCParenRight";
+    case 6: return "msoBulletRomanLCPeriod";
+    case 7: return "msoBulletRomanUCPeriod";
+    case 18: return "msoBulletCircleNumDBPlain";
+    case 8: return "msoBulletAlphaLCParenBoth";
+    case 20: return "msoBulletCircleNumWDBlackPlain";
+    case 9: return "msoBulletAlphaLCParenRight";
+    case 11: return "msoBulletAlphaUCParenRight";
+    case 12: return "msoBulletArabicParenBoth";
+    case 13: return "msoBulletArabicPlain";
+    case 14: return "msoBulletRomanUCParenBoth";
+    case 15: return "msoBulletRomanUCParenRight";
+    case 16: return "msoBulletSimpChinPlain";
+    case 17: return "msoBulletSimpChinPeriod";
+    case 19: return "msoBulletCircleNumWDWhitePlain";
+    case 21: return "msoBulletTradChinPlain";
+    case 22: return "msoBulletTradChinPeriod";
+    case 23: return "msoBulletArabicAlphaDash";
+    case 24: return "msoBulletArabicAbjadDash";
+    case 25: return "msoBulletHebrewAlphaDash";
+    case 26: return "msoBulletKanjiKoreanPlain";
+    case 27: return "msoBulletKanjiKoreanPeriod";
+    case 29: return "msoBulletArabicDBPeriod";
+    case 30: return "msoBulletThaiAlphaPeriod";
+    case 40: return "msoBulletHindiAlpha1Period";
+    case 31: return "msoBulletThaiAlphaParenRight";
+    case 32: return "msoBulletThaiAlphaParenBoth";
+    case 33: return "msoBulletThaiNumPeriod";
+    case 34: return "msoBulletThaiNumParenRight";
+    case 35: return "msoBulletThaiNumParenBoth";
+    case 36: return "msoBulletHindiAlphaPeriod";
+    case 37: return "msoBulletHindiNumPeriod";
+    case 38: return "msoBulletKanjiSimpChinDBPeriod";
+    case 39: return "msoBulletHindiNumParenRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoBulletStyleMixed");
+      if ((value & 2) != 0) sbuf.append("|msoBulletArabicParenRight");
+      if ((value & 10) != 0) sbuf.append("|msoBulletAlphaUCParenBoth");
+      if ((value & 0) != 0) sbuf.append("|msoBulletAlphaLCPeriod");
+      if ((value & 28) != 0) sbuf.append("|msoBulletArabicDBPlain");
+      if ((value & 1) != 0) sbuf.append("|msoBulletAlphaUCPeriod");
+      if ((value & 3) != 0) sbuf.append("|msoBulletArabicPeriod");
+      if ((value & 4) != 0) sbuf.append("|msoBulletRomanLCParenBoth");
+      if ((value & 5) != 0) sbuf.append("|msoBulletRomanLCParenRight");
+      if ((value & 6) != 0) sbuf.append("|msoBulletRomanLCPeriod");
+      if ((value & 7) != 0) sbuf.append("|msoBulletRomanUCPeriod");
+      if ((value & 18) != 0) sbuf.append("|msoBulletCircleNumDBPlain");
+      if ((value & 8) != 0) sbuf.append("|msoBulletAlphaLCParenBoth");
+      if ((value & 20) != 0) sbuf.append("|msoBulletCircleNumWDBlackPlain");
+      if ((value & 9) != 0) sbuf.append("|msoBulletAlphaLCParenRight");
+      if ((value & 11) != 0) sbuf.append("|msoBulletAlphaUCParenRight");
+      if ((value & 12) != 0) sbuf.append("|msoBulletArabicParenBoth");
+      if ((value & 13) != 0) sbuf.append("|msoBulletArabicPlain");
+      if ((value & 14) != 0) sbuf.append("|msoBulletRomanUCParenBoth");
+      if ((value & 15) != 0) sbuf.append("|msoBulletRomanUCParenRight");
+      if ((value & 16) != 0) sbuf.append("|msoBulletSimpChinPlain");
+      if ((value & 17) != 0) sbuf.append("|msoBulletSimpChinPeriod");
+      if ((value & 19) != 0) sbuf.append("|msoBulletCircleNumWDWhitePlain");
+      if ((value & 21) != 0) sbuf.append("|msoBulletTradChinPlain");
+      if ((value & 22) != 0) sbuf.append("|msoBulletTradChinPeriod");
+      if ((value & 23) != 0) sbuf.append("|msoBulletArabicAlphaDash");
+      if ((value & 24) != 0) sbuf.append("|msoBulletArabicAbjadDash");
+      if ((value & 25) != 0) sbuf.append("|msoBulletHebrewAlphaDash");
+      if ((value & 26) != 0) sbuf.append("|msoBulletKanjiKoreanPlain");
+      if ((value & 27) != 0) sbuf.append("|msoBulletKanjiKoreanPeriod");
+      if ((value & 29) != 0) sbuf.append("|msoBulletArabicDBPeriod");
+      if ((value & 30) != 0) sbuf.append("|msoBulletThaiAlphaPeriod");
+      if ((value & 40) != 0) sbuf.append("|msoBulletHindiAlpha1Period");
+      if ((value & 31) != 0) sbuf.append("|msoBulletThaiAlphaParenRight");
+      if ((value & 32) != 0) sbuf.append("|msoBulletThaiAlphaParenBoth");
+      if ((value & 33) != 0) sbuf.append("|msoBulletThaiNumPeriod");
+      if ((value & 34) != 0) sbuf.append("|msoBulletThaiNumParenRight");
+      if ((value & 35) != 0) sbuf.append("|msoBulletThaiNumParenBoth");
+      if ((value & 36) != 0) sbuf.append("|msoBulletHindiAlphaPeriod");
+      if ((value & 37) != 0) sbuf.append("|msoBulletHindiNumPeriod");
+      if ((value & 38) != 0) sbuf.append("|msoBulletKanjiSimpChinDBPeriod");
+      if ((value & 39) != 0) sbuf.append("|msoBulletHindiNumParenRight");
+      return sbuf.toString();
+      }
     }
   }
 }

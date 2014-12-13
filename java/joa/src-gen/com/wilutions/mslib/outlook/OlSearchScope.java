@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlSearchScope {
+public class OlSearchScope implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlSearchScope {
     case 3: return olSearchScopeSubfolders;
     case 4: return olSearchScopeCurrentStore;
     default: return new OlSearchScope(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olSearchScopeCurrentFolder";
+    case 1: return "olSearchScopeAllFolders";
+    case 2: return "olSearchScopeAllOutlookItems";
+    case 3: return "olSearchScopeSubfolders";
+    case 4: return "olSearchScopeCurrentStore";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olSearchScopeCurrentFolder");
+      if ((value & 1) != 0) sbuf.append("|olSearchScopeAllFolders");
+      if ((value & 2) != 0) sbuf.append("|olSearchScopeAllOutlookItems");
+      if ((value & 3) != 0) sbuf.append("|olSearchScopeSubfolders");
+      if ((value & 4) != 0) sbuf.append("|olSearchScopeCurrentStore");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlExchangeStoreType {
+public class OlExchangeStoreType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlExchangeStoreType {
     case 3: return olNotExchange;
     case 4: return olAdditionalExchangeMailbox;
     default: return new OlExchangeStoreType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olPrimaryExchangeMailbox";
+    case 1: return "olExchangeMailbox";
+    case 2: return "olExchangePublicFolder";
+    case 3: return "olNotExchange";
+    case 4: return "olAdditionalExchangeMailbox";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olPrimaryExchangeMailbox");
+      if ((value & 1) != 0) sbuf.append("|olExchangeMailbox");
+      if ((value & 2) != 0) sbuf.append("|olExchangePublicFolder");
+      if ((value & 3) != 0) sbuf.append("|olNotExchange");
+      if ((value & 4) != 0) sbuf.append("|olAdditionalExchangeMailbox");
+      return sbuf.toString();
+      }
     }
   }
 }

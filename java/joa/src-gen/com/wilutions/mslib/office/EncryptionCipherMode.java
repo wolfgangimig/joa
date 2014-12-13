@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class EncryptionCipherMode {
+public class EncryptionCipherMode implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class EncryptionCipherMode {
     case 0: return cipherModeECB;
     case 1: return cipherModeCBC;
     default: return new EncryptionCipherMode(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "cipherModeECB";
+    case 1: return "cipherModeCBC";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|cipherModeECB");
+      if ((value & 1) != 0) sbuf.append("|cipherModeCBC");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{3DBDD630-DD73-11CE-8CD1-00AA0044BB60}")
-public class fmCycle {
+public class fmCycle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class fmCycle {
     case 0: return fmCycleAllForms;
     case 2: return fmCycleCurrentForm;
     default: return new fmCycle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmCycleAllForms";
+    case 2: return "fmCycleCurrentForm";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmCycleAllForms");
+      if ((value & 2) != 0) sbuf.append("|fmCycleCurrentForm");
+      return sbuf.toString();
+      }
     }
   }
 }

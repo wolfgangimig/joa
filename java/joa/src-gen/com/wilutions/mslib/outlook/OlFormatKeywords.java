@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatKeywords {
+public class OlFormatKeywords implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -28,6 +28,18 @@ public class OlFormatKeywords {
     switch(value) {
     case 1: return olFormatKeywordsText;
     default: return new OlFormatKeywords(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olFormatKeywordsText";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olFormatKeywordsText");
+      return sbuf.toString();
+      }
     }
   }
 }

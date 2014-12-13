@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{EA33F29D-6159-4E76-8A14-BCEAA808FA91}")
-public class OlVerticalLayout {
+public class OlVerticalLayout implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlVerticalLayout {
     case 2: return olVerticalLayoutAlignBottom;
     case 3: return olVerticalLayoutGrow;
     default: return new OlVerticalLayout(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olVerticalLayoutAlignTop";
+    case 1: return "olVerticalLayoutAlignMiddle";
+    case 2: return "olVerticalLayoutAlignBottom";
+    case 3: return "olVerticalLayoutGrow";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olVerticalLayoutAlignTop");
+      if ((value & 1) != 0) sbuf.append("|olVerticalLayoutAlignMiddle");
+      if ((value & 2) != 0) sbuf.append("|olVerticalLayoutAlignBottom");
+      if ((value & 3) != 0) sbuf.append("|olVerticalLayoutGrow");
+      return sbuf.toString();
+      }
     }
   }
 }

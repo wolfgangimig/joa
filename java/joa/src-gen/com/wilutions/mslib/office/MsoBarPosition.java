@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBarPosition {
+public class MsoBarPosition implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoBarPosition {
     case 5: return msoBarPopup;
     case 6: return msoBarMenuBar;
     default: return new MsoBarPosition(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoBarLeft";
+    case 1: return "msoBarTop";
+    case 2: return "msoBarRight";
+    case 3: return "msoBarBottom";
+    case 4: return "msoBarFloating";
+    case 5: return "msoBarPopup";
+    case 6: return "msoBarMenuBar";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoBarLeft");
+      if ((value & 1) != 0) sbuf.append("|msoBarTop");
+      if ((value & 2) != 0) sbuf.append("|msoBarRight");
+      if ((value & 3) != 0) sbuf.append("|msoBarBottom");
+      if ((value & 4) != 0) sbuf.append("|msoBarFloating");
+      if ((value & 5) != 0) sbuf.append("|msoBarPopup");
+      if ((value & 6) != 0) sbuf.append("|msoBarMenuBar");
+      return sbuf.toString();
+      }
     }
   }
 }

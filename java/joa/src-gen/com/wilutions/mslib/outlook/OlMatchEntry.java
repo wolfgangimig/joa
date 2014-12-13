@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{73628D00-B812-419F-8212-3D62079E22DB}")
-public class OlMatchEntry {
+public class OlMatchEntry implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlMatchEntry {
     case 1: return olMatchEntryComplete;
     case 2: return olMatchEntryNone;
     default: return new OlMatchEntry(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olMatchEntryFirstLetter";
+    case 1: return "olMatchEntryComplete";
+    case 2: return "olMatchEntryNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olMatchEntryFirstLetter");
+      if ((value & 1) != 0) sbuf.append("|olMatchEntryComplete");
+      if ((value & 2) != 0) sbuf.append("|olMatchEntryNone");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBalloonErrorType {
+public class MsoBalloonErrorType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -61,6 +61,40 @@ public class MsoBalloonErrorType {
     case 10: return msoBalloonErrorCharNotTopmostForModal;
     case 11: return msoBalloonErrorTooManyControls;
     default: return new MsoBalloonErrorType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "msoBalloonErrorBadCharacter";
+    case 10: return "msoBalloonErrorCharNotTopmostForModal";
+    case 0: return "msoBalloonErrorNone";
+    case 1: return "msoBalloonErrorOther";
+    case 2: return "msoBalloonErrorTooBig";
+    case 3: return "msoBalloonErrorOutOfMemory";
+    case 4: return "msoBalloonErrorBadPictureRef";
+    case 5: return "msoBalloonErrorBadReference";
+    case 6: return "msoBalloonErrorButtonlessModal";
+    case 7: return "msoBalloonErrorButtonModeless";
+    case 9: return "msoBalloonErrorCOMFailure";
+    case 11: return "msoBalloonErrorTooManyControls";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|msoBalloonErrorBadCharacter");
+      if ((value & 10) != 0) sbuf.append("|msoBalloonErrorCharNotTopmostForModal");
+      if ((value & 0) != 0) sbuf.append("|msoBalloonErrorNone");
+      if ((value & 1) != 0) sbuf.append("|msoBalloonErrorOther");
+      if ((value & 2) != 0) sbuf.append("|msoBalloonErrorTooBig");
+      if ((value & 3) != 0) sbuf.append("|msoBalloonErrorOutOfMemory");
+      if ((value & 4) != 0) sbuf.append("|msoBalloonErrorBadPictureRef");
+      if ((value & 5) != 0) sbuf.append("|msoBalloonErrorBadReference");
+      if ((value & 6) != 0) sbuf.append("|msoBalloonErrorButtonlessModal");
+      if ((value & 7) != 0) sbuf.append("|msoBalloonErrorButtonModeless");
+      if ((value & 9) != 0) sbuf.append("|msoBalloonErrorCOMFailure");
+      if ((value & 11) != 0) sbuf.append("|msoBalloonErrorTooManyControls");
+      return sbuf.toString();
+      }
     }
   }
 }

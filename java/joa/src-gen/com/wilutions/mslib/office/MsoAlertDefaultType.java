@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoAlertDefaultType {
+public class MsoAlertDefaultType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class MsoAlertDefaultType {
     case 3: return msoAlertDefaultFourth;
     case 4: return msoAlertDefaultFifth;
     default: return new MsoAlertDefaultType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "msoAlertDefaultFirst";
+    case 1: return "msoAlertDefaultSecond";
+    case 2: return "msoAlertDefaultThird";
+    case 3: return "msoAlertDefaultFourth";
+    case 4: return "msoAlertDefaultFifth";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|msoAlertDefaultFirst");
+      if ((value & 1) != 0) sbuf.append("|msoAlertDefaultSecond");
+      if ((value & 2) != 0) sbuf.append("|msoAlertDefaultThird");
+      if ((value & 3) != 0) sbuf.append("|msoAlertDefaultFourth");
+      if ((value & 4) != 0) sbuf.append("|msoAlertDefaultFifth");
+      return sbuf.toString();
+      }
     }
   }
 }

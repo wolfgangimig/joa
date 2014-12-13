@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlTableContents {
+public class OlTableContents implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlTableContents {
     case 0: return olUserItems;
     case 1: return olHiddenItems;
     default: return new OlTableContents(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olUserItems";
+    case 1: return "olHiddenItems";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olUserItems");
+      if ((value & 1) != 0) sbuf.append("|olHiddenItems");
+      return sbuf.toString();
+      }
     }
   }
 }

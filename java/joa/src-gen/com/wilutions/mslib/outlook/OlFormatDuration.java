@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatDuration {
+public class OlFormatDuration implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlFormatDuration {
     case 3: return olFormatDurationShortBusiness;
     case 4: return olFormatDurationLongBusiness;
     default: return new OlFormatDuration(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olFormatDurationShort";
+    case 2: return "olFormatDurationLong";
+    case 3: return "olFormatDurationShortBusiness";
+    case 4: return "olFormatDurationLongBusiness";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olFormatDurationShort");
+      if ((value & 2) != 0) sbuf.append("|olFormatDurationLong");
+      if ((value & 3) != 0) sbuf.append("|olFormatDurationShortBusiness");
+      if ((value & 4) != 0) sbuf.append("|olFormatDurationLongBusiness");
+      return sbuf.toString();
+      }
     }
   }
 }

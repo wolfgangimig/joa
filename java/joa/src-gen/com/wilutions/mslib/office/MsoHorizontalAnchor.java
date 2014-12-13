@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoHorizontalAnchor {
+public class MsoHorizontalAnchor implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoHorizontalAnchor {
     case 1: return msoAnchorNone;
     case 2: return msoAnchorCenter;
     default: return new MsoHorizontalAnchor(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoAnchorCenter";
+    case -2: return "msoHorizontalAnchorMixed";
+    case 1: return "msoAnchorNone";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoAnchorCenter");
+      if ((value & -2) != 0) sbuf.append("|msoHorizontalAnchorMixed");
+      if ((value & 1) != 0) sbuf.append("|msoAnchorNone");
+      return sbuf.toString();
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{76D9466C-84C2-4355-81FE-CB1B9CB03C19}")
-public class XlSeriesNameLevel {
+public class XlSeriesNameLevel implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class XlSeriesNameLevel {
     case -2: return xlSeriesNameLevelCustom;
     case -1: return xlSeriesNameLevelAll;
     default: return new XlSeriesNameLevel(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -3: return "xlSeriesNameLevelNone";
+    case -2: return "xlSeriesNameLevelCustom";
+    case -1: return "xlSeriesNameLevelAll";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -3) != 0) sbuf.append("|xlSeriesNameLevelNone");
+      if ((value & -2) != 0) sbuf.append("|xlSeriesNameLevelCustom");
+      if ((value & -1) != 0) sbuf.append("|xlSeriesNameLevelAll");
+      return sbuf.toString();
+      }
     }
   }
 }

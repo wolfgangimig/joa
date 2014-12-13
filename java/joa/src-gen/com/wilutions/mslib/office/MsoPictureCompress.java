@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPictureCompress {
+public class MsoPictureCompress implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoPictureCompress {
     case 0: return msoPictureCompressFalse;
     case 1: return msoPictureCompressTrue;
     default: return new MsoPictureCompress(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -1: return "msoPictureCompressDocDefault";
+    case 0: return "msoPictureCompressFalse";
+    case 1: return "msoPictureCompressTrue";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -1) != 0) sbuf.append("|msoPictureCompressDocDefault");
+      if ((value & 0) != 0) sbuf.append("|msoPictureCompressFalse");
+      if ((value & 1) != 0) sbuf.append("|msoPictureCompressTrue");
+      return sbuf.toString();
+      }
     }
   }
 }

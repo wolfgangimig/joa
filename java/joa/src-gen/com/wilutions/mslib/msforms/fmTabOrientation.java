@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{EBC7FDE1-6899-11CE-80C0-00AA00611080}")
-public class fmTabOrientation {
+public class fmTabOrientation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class fmTabOrientation {
     case 2: return fmTabOrientationLeft;
     case 3: return fmTabOrientationRight;
     default: return new fmTabOrientation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmTabOrientationTop";
+    case 1: return "fmTabOrientationBottom";
+    case 2: return "fmTabOrientationLeft";
+    case 3: return "fmTabOrientationRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmTabOrientationTop");
+      if ((value & 1) != 0) sbuf.append("|fmTabOrientationBottom");
+      if ((value & 2) != 0) sbuf.append("|fmTabOrientationLeft");
+      if ((value & 3) != 0) sbuf.append("|fmTabOrientationRight");
+      return sbuf.toString();
+      }
     }
   }
 }

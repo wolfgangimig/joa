@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoPermission {
+public class MsoPermission implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -55,6 +55,34 @@ public class MsoPermission {
     case 64: return msoPermissionFullControl;
     case 127: return msoPermissionAllCommon;
     default: return new MsoPermission(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 64: return "msoPermissionFullControl";
+    case 1: return "msoPermissionView";
+    case 16: return "msoPermissionPrint";
+    case 2: return "msoPermissionEdit";
+    case 127: return "msoPermissionAllCommon";
+    case 32: return "msoPermissionObjModel";
+    case 4: return "msoPermissionSave";
+    case 8: return "msoPermissionExtract";
+    case 15: return "msoPermissionChange";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 64) != 0) sbuf.append("|msoPermissionFullControl");
+      if ((value & 1) != 0) sbuf.append("|msoPermissionView");
+      if ((value & 16) != 0) sbuf.append("|msoPermissionPrint");
+      if ((value & 2) != 0) sbuf.append("|msoPermissionEdit");
+      if ((value & 127) != 0) sbuf.append("|msoPermissionAllCommon");
+      if ((value & 32) != 0) sbuf.append("|msoPermissionObjModel");
+      if ((value & 4) != 0) sbuf.append("|msoPermissionSave");
+      if ((value & 8) != 0) sbuf.append("|msoPermissionExtract");
+      if ((value & 15) != 0) sbuf.append("|msoPermissionChange");
+      return sbuf.toString();
+      }
     }
   }
 }

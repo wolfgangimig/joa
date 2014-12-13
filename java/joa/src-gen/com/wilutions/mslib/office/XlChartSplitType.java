@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{732091CB-0A8D-44BC-B977-418CCB37B552}")
-public class XlChartSplitType {
+public class XlChartSplitType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class XlChartSplitType {
     case 4: return xlSplitByCustomSplit;
     case 2: return xlSplitByValue;
     default: return new XlChartSplitType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "xlSplitByPosition";
+    case 3: return "xlSplitByPercentValue";
+    case 4: return "xlSplitByCustomSplit";
+    case 2: return "xlSplitByValue";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|xlSplitByPosition");
+      if ((value & 3) != 0) sbuf.append("|xlSplitByPercentValue");
+      if ((value & 4) != 0) sbuf.append("|xlSplitByCustomSplit");
+      if ((value & 2) != 0) sbuf.append("|xlSplitByValue");
+      return sbuf.toString();
+      }
     }
   }
 }

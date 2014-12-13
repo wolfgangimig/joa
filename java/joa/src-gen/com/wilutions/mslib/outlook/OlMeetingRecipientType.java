@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlMeetingRecipientType {
+public class OlMeetingRecipientType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlMeetingRecipientType {
     case 2: return olOptional;
     case 3: return olResource;
     default: return new OlMeetingRecipientType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olOrganizer";
+    case 1: return "olRequired";
+    case 2: return "olOptional";
+    case 3: return "olResource";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olOrganizer");
+      if ((value & 1) != 0) sbuf.append("|olRequired");
+      if ((value & 2) != 0) sbuf.append("|olOptional");
+      if ((value & 3) != 0) sbuf.append("|olResource");
+      return sbuf.toString();
+      }
     }
   }
 }

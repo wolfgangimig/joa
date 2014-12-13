@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlTaskStatus {
+public class OlTaskStatus implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class OlTaskStatus {
     case 3: return olTaskWaiting;
     case 4: return olTaskDeferred;
     default: return new OlTaskStatus(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olTaskNotStarted";
+    case 1: return "olTaskInProgress";
+    case 2: return "olTaskComplete";
+    case 3: return "olTaskWaiting";
+    case 4: return "olTaskDeferred";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olTaskNotStarted");
+      if ((value & 1) != 0) sbuf.append("|olTaskInProgress");
+      if ((value & 2) != 0) sbuf.append("|olTaskComplete");
+      if ((value & 3) != 0) sbuf.append("|olTaskWaiting");
+      if ((value & 4) != 0) sbuf.append("|olTaskDeferred");
+      return sbuf.toString();
+      }
     }
   }
 }

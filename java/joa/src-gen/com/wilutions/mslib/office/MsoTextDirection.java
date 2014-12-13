@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoTextDirection {
+public class MsoTextDirection implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class MsoTextDirection {
     case 1: return msoTextDirectionLeftToRight;
     case 2: return msoTextDirectionRightToLeft;
     default: return new MsoTextDirection(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoTextDirectionRightToLeft";
+    case -2: return "msoTextDirectionMixed";
+    case 1: return "msoTextDirectionLeftToRight";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoTextDirectionRightToLeft");
+      if ((value & -2) != 0) sbuf.append("|msoTextDirectionMixed");
+      if ((value & 1) != 0) sbuf.append("|msoTextDirectionLeftToRight");
+      return sbuf.toString();
+      }
     }
   }
 }

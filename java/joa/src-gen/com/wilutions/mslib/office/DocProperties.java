@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class DocProperties {
+public class DocProperties implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class DocProperties {
     case 4: return offPropertyTypeString;
     case 5: return offPropertyTypeFloat;
     default: return new DocProperties(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "offPropertyTypeNumber";
+    case 2: return "offPropertyTypeBoolean";
+    case 3: return "offPropertyTypeDate";
+    case 4: return "offPropertyTypeString";
+    case 5: return "offPropertyTypeFloat";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|offPropertyTypeNumber");
+      if ((value & 2) != 0) sbuf.append("|offPropertyTypeBoolean");
+      if ((value & 3) != 0) sbuf.append("|offPropertyTypeDate");
+      if ((value & 4) != 0) sbuf.append("|offPropertyTypeString");
+      if ((value & 5) != 0) sbuf.append("|offPropertyTypeFloat");
+      return sbuf.toString();
+      }
     }
   }
 }

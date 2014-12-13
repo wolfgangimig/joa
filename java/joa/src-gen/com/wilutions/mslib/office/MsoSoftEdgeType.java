@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoSoftEdgeType {
+public class MsoSoftEdgeType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -49,6 +49,32 @@ public class MsoSoftEdgeType {
     case 5: return msoSoftEdgeType5;
     case 6: return msoSoftEdgeType6;
     default: return new MsoSoftEdgeType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoSoftEdgeType2";
+    case -2: return "msoSoftEdgeTypeMixed";
+    case 0: return "msoSoftEdgeTypeNone";
+    case 1: return "msoSoftEdgeType1";
+    case 3: return "msoSoftEdgeType3";
+    case 4: return "msoSoftEdgeType4";
+    case 5: return "msoSoftEdgeType5";
+    case 6: return "msoSoftEdgeType6";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoSoftEdgeType2");
+      if ((value & -2) != 0) sbuf.append("|msoSoftEdgeTypeMixed");
+      if ((value & 0) != 0) sbuf.append("|msoSoftEdgeTypeNone");
+      if ((value & 1) != 0) sbuf.append("|msoSoftEdgeType1");
+      if ((value & 3) != 0) sbuf.append("|msoSoftEdgeType3");
+      if ((value & 4) != 0) sbuf.append("|msoSoftEdgeType4");
+      if ((value & 5) != 0) sbuf.append("|msoSoftEdgeType5");
+      if ((value & 6) != 0) sbuf.append("|msoSoftEdgeType6");
+      return sbuf.toString();
+      }
     }
   }
 }

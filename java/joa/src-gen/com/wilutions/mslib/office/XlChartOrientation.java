@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{94E08815-49E8-45BB-9BC2-8972405756CF}")
-public class XlChartOrientation {
+public class XlChartOrientation implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class XlChartOrientation {
     case -4171: return xlUpward;
     case -4166: return xlVertical;
     default: return new XlChartOrientation(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -4170: return "xlDownward";
+    case -4128: return "xlHorizontal";
+    case -4171: return "xlUpward";
+    case -4166: return "xlVertical";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -4170) != 0) sbuf.append("|xlDownward");
+      if ((value & -4128) != 0) sbuf.append("|xlHorizontal");
+      if ((value & -4171) != 0) sbuf.append("|xlUpward");
+      if ((value & -4166) != 0) sbuf.append("|xlVertical");
+      return sbuf.toString();
+      }
     }
   }
 }

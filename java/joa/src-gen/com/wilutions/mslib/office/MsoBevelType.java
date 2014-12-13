@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoBevelType {
+public class MsoBevelType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -67,6 +67,44 @@ public class MsoBevelType {
     case 12: return msoBevelHardEdge;
     case 13: return msoBevelArtDeco;
     default: return new MsoBevelType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case -2: return "msoBevelTypeMixed";
+    case 2: return "msoBevelRelaxedInset";
+    case 1: return "msoBevelNone";
+    case 3: return "msoBevelCircle";
+    case 4: return "msoBevelSlope";
+    case 5: return "msoBevelCross";
+    case 6: return "msoBevelAngle";
+    case 7: return "msoBevelSoftRound";
+    case 8: return "msoBevelConvex";
+    case 9: return "msoBevelCoolSlant";
+    case 10: return "msoBevelDivot";
+    case 11: return "msoBevelRiblet";
+    case 12: return "msoBevelHardEdge";
+    case 13: return "msoBevelArtDeco";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & -2) != 0) sbuf.append("|msoBevelTypeMixed");
+      if ((value & 2) != 0) sbuf.append("|msoBevelRelaxedInset");
+      if ((value & 1) != 0) sbuf.append("|msoBevelNone");
+      if ((value & 3) != 0) sbuf.append("|msoBevelCircle");
+      if ((value & 4) != 0) sbuf.append("|msoBevelSlope");
+      if ((value & 5) != 0) sbuf.append("|msoBevelCross");
+      if ((value & 6) != 0) sbuf.append("|msoBevelAngle");
+      if ((value & 7) != 0) sbuf.append("|msoBevelSoftRound");
+      if ((value & 8) != 0) sbuf.append("|msoBevelConvex");
+      if ((value & 9) != 0) sbuf.append("|msoBevelCoolSlant");
+      if ((value & 10) != 0) sbuf.append("|msoBevelDivot");
+      if ((value & 11) != 0) sbuf.append("|msoBevelRiblet");
+      if ((value & 12) != 0) sbuf.append("|msoBevelHardEdge");
+      if ((value & 13) != 0) sbuf.append("|msoBevelArtDeco");
+      return sbuf.toString();
+      }
     }
   }
 }

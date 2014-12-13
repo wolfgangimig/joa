@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlImportance {
+public class OlImportance implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class OlImportance {
     case 1: return olImportanceNormal;
     case 2: return olImportanceHigh;
     default: return new OlImportance(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olImportanceLow";
+    case 1: return "olImportanceNormal";
+    case 2: return "olImportanceHigh";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olImportanceLow");
+      if ((value & 1) != 0) sbuf.append("|olImportanceNormal");
+      if ((value & 2) != 0) sbuf.append("|olImportanceHigh");
+      return sbuf.toString();
+      }
     }
   }
 }

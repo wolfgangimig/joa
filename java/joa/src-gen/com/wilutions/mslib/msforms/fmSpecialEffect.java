@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{A7946240-EA45-11CE-8043-00AA006009FA}")
-public class fmSpecialEffect {
+public class fmSpecialEffect implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -40,6 +40,26 @@ public class fmSpecialEffect {
     case 3: return fmSpecialEffectEtched;
     case 6: return fmSpecialEffectBump;
     default: return new fmSpecialEffect(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmSpecialEffectFlat";
+    case 1: return "fmSpecialEffectRaised";
+    case 2: return "fmSpecialEffectSunken";
+    case 3: return "fmSpecialEffectEtched";
+    case 6: return "fmSpecialEffectBump";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmSpecialEffectFlat");
+      if ((value & 1) != 0) sbuf.append("|fmSpecialEffectRaised");
+      if ((value & 2) != 0) sbuf.append("|fmSpecialEffectSunken");
+      if ((value & 3) != 0) sbuf.append("|fmSpecialEffectEtched");
+      if ((value & 6) != 0) sbuf.append("|fmSpecialEffectBump");
+      return sbuf.toString();
+      }
     }
   }
 }

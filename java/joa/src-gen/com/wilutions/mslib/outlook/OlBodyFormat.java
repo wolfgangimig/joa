@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlBodyFormat {
+public class OlBodyFormat implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlBodyFormat {
     case 2: return olFormatHTML;
     case 3: return olFormatRichText;
     default: return new OlBodyFormat(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olFormatUnspecified";
+    case 1: return "olFormatPlain";
+    case 2: return "olFormatHTML";
+    case 3: return "olFormatRichText";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olFormatUnspecified");
+      if ((value & 1) != 0) sbuf.append("|olFormatPlain");
+      if ((value & 2) != 0) sbuf.append("|olFormatHTML");
+      if ((value & 3) != 0) sbuf.append("|olFormatRichText");
+      return sbuf.toString();
+      }
     }
   }
 }

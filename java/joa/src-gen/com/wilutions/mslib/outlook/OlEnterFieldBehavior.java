@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{7E29FD73-540B-4F03-A890-53C6B0AE7DD1}")
-public class OlEnterFieldBehavior {
+public class OlEnterFieldBehavior implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlEnterFieldBehavior {
     case 0: return olEnterFieldBehaviorSelectAll;
     case 1: return olEnterFieldBehaviorRecallSelection;
     default: return new OlEnterFieldBehavior(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olEnterFieldBehaviorSelectAll";
+    case 1: return "olEnterFieldBehaviorRecallSelection";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olEnterFieldBehaviorSelectAll");
+      if ((value & 1) != 0) sbuf.append("|olEnterFieldBehaviorRecallSelection");
+      return sbuf.toString();
+      }
     }
   }
 }

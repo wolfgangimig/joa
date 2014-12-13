@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{E0ABC3C0-D199-11CE-8CCE-00AA0044BB60}")
-public class fmScrollAction {
+public class fmScrollAction implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -58,6 +58,38 @@ public class fmScrollAction {
     case 9: return fmScrollActionControlRequest;
     case 10: return fmScrollActionFocusRequest;
     default: return new fmScrollAction(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 8: return "fmScrollActionPropertyChange";
+    case 10: return "fmScrollActionFocusRequest";
+    case 0: return "fmScrollActionNoChange";
+    case 1: return "fmScrollActionLineUp";
+    case 2: return "fmScrollActionLineDown";
+    case 3: return "fmScrollActionPageUp";
+    case 4: return "fmScrollActionPageDown";
+    case 5: return "fmScrollActionBegin";
+    case 6: return "fmScrollActionEnd";
+    case 7: return "_fmScrollActionAbsoluteChange";
+    case 9: return "fmScrollActionControlRequest";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|fmScrollActionPropertyChange");
+      if ((value & 10) != 0) sbuf.append("|fmScrollActionFocusRequest");
+      if ((value & 0) != 0) sbuf.append("|fmScrollActionNoChange");
+      if ((value & 1) != 0) sbuf.append("|fmScrollActionLineUp");
+      if ((value & 2) != 0) sbuf.append("|fmScrollActionLineDown");
+      if ((value & 3) != 0) sbuf.append("|fmScrollActionPageUp");
+      if ((value & 4) != 0) sbuf.append("|fmScrollActionPageDown");
+      if ((value & 5) != 0) sbuf.append("|fmScrollActionBegin");
+      if ((value & 6) != 0) sbuf.append("|fmScrollActionEnd");
+      if ((value & 7) != 0) sbuf.append("|_fmScrollActionAbsoluteChange");
+      if ((value & 9) != 0) sbuf.append("|fmScrollActionControlRequest");
+      return sbuf.toString();
+      }
     }
   }
 }

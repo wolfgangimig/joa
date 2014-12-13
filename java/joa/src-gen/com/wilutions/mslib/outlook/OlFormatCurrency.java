@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlFormatCurrency {
+public class OlFormatCurrency implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlFormatCurrency {
     case 1: return olFormatCurrencyDecimal;
     case 2: return olFormatCurrencyNonDecimal;
     default: return new OlFormatCurrency(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olFormatCurrencyDecimal";
+    case 2: return "olFormatCurrencyNonDecimal";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olFormatCurrencyDecimal");
+      if ((value & 2) != 0) sbuf.append("|olFormatCurrencyNonDecimal");
+      return sbuf.toString();
+      }
     }
   }
 }

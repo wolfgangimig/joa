@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlAttachmentType {
+public class OlAttachmentType implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -37,6 +37,24 @@ public class OlAttachmentType {
     case 5: return olEmbeddeditem;
     case 6: return olOLE;
     default: return new OlAttachmentType(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 1: return "olByValue";
+    case 4: return "olByReference";
+    case 5: return "olEmbeddeditem";
+    case 6: return "olOLE";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 1) != 0) sbuf.append("|olByValue");
+      if ((value & 4) != 0) sbuf.append("|olByReference");
+      if ((value & 5) != 0) sbuf.append("|olEmbeddeditem");
+      if ((value & 6) != 0) sbuf.append("|olOLE");
+      return sbuf.toString();
+      }
     }
   }
 }

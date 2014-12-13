@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class OlAttachmentBlockLevel {
+public class OlAttachmentBlockLevel implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -31,6 +31,20 @@ public class OlAttachmentBlockLevel {
     case 0: return olAttachmentBlockLevelNone;
     case 1: return olAttachmentBlockLevelOpen;
     default: return new OlAttachmentBlockLevel(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "olAttachmentBlockLevelNone";
+    case 1: return "olAttachmentBlockLevelOpen";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|olAttachmentBlockLevelNone");
+      if ((value & 1) != 0) sbuf.append("|olAttachmentBlockLevelOpen");
+      return sbuf.toString();
+      }
     }
   }
 }

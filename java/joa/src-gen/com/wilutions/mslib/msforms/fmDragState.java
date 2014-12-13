@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{82074C80-EA51-11CE-8043-00AA006009FA}")
-public class fmDragState {
+public class fmDragState implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -34,6 +34,22 @@ public class fmDragState {
     case 1: return fmDragStateLeave;
     case 2: return fmDragStateOver;
     default: return new fmDragState(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 0: return "fmDragStateEnter";
+    case 1: return "fmDragStateLeave";
+    case 2: return "fmDragStateOver";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 0) != 0) sbuf.append("|fmDragStateEnter");
+      if ((value & 1) != 0) sbuf.append("|fmDragStateLeave");
+      if ((value & 2) != 0) sbuf.append("|fmDragStateOver");
+      return sbuf.toString();
+      }
     }
   }
 }

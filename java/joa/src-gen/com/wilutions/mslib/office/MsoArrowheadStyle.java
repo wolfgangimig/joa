@@ -8,7 +8,7 @@ import com.wilutions.com.*;
  */
 @SuppressWarnings("all")
 @CoInterface(guid="{00000000-0000-0000-0000-000000000000}")
-public class MsoArrowheadStyle {
+public class MsoArrowheadStyle implements ComEnum {
   static boolean __typelib__loaded = __TypeLib.load();
 
   // Typed constants
@@ -46,6 +46,30 @@ public class MsoArrowheadStyle {
     case 5: return msoArrowheadDiamond;
     case 6: return msoArrowheadOval;
     default: return new MsoArrowheadStyle(value);
+    }
+  }
+
+  public String toString() {
+    switch(value) {
+    case 2: return "msoArrowheadTriangle";
+    case -2: return "msoArrowheadStyleMixed";
+    case 1: return "msoArrowheadNone";
+    case 3: return "msoArrowheadOpen";
+    case 4: return "msoArrowheadStealth";
+    case 5: return "msoArrowheadDiamond";
+    case 6: return "msoArrowheadOval";
+    default: {
+      StringBuilder sbuf = new StringBuilder();
+      sbuf.append("[").append(value).append("=");
+      if ((value & 2) != 0) sbuf.append("|msoArrowheadTriangle");
+      if ((value & -2) != 0) sbuf.append("|msoArrowheadStyleMixed");
+      if ((value & 1) != 0) sbuf.append("|msoArrowheadNone");
+      if ((value & 3) != 0) sbuf.append("|msoArrowheadOpen");
+      if ((value & 4) != 0) sbuf.append("|msoArrowheadStealth");
+      if ((value & 5) != 0) sbuf.append("|msoArrowheadDiamond");
+      if ((value & 6) != 0) sbuf.append("|msoArrowheadOval");
+      return sbuf.toString();
+      }
     }
   }
 }
