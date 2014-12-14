@@ -16,7 +16,6 @@ import java.io.InputStream;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
-import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.IDispatch;
 import com.wilutions.com.WindowHandle;
@@ -30,11 +29,7 @@ public abstract class OutlookFormRegion extends DispatchImpl implements WindowHa
 	protected FormRegion formRegion;
 	protected UserForm userForm;
 
-	// protected float initialWidth;
-	// protected float initialHeight;
-
 	protected OutlookFormRegion() {
-		Dispatch.addEventToBeCalledInBackground(FormRegionEvents.class, "");
 	}
 
 	public String toString() {
@@ -95,19 +90,10 @@ public abstract class OutlookFormRegion extends DispatchImpl implements WindowHa
 		}
 	}
 
-	/**
-	 * Called after the form region window is shown.
-	 */
-	public void onShow() throws ComException {
-	}
-
 	public void onExpanded(Boolean Expand) throws ComException {
 	}
 
 	public void onClose() throws ComException {
-	}
-
-	public void onLayout() throws ComException {
 	}
 
 }

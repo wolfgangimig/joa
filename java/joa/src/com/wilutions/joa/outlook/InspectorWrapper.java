@@ -19,11 +19,15 @@ import com.wilutions.mslib.outlook._Inspector;
 
 public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10 {
 
-	_Inspector inspector;
+	protected final _Inspector inspector;
 
-	public InspectorWrapper(_Inspector _i) throws ComException {
-		inspector = _i;
+	public InspectorWrapper(_Inspector inspector) throws ComException {
+		this.inspector = inspector;
 		Dispatch.withEvents(inspector, this);
+	}
+	
+	public _Inspector getInspector() {
+		return inspector;
 	}
 
 	@Override
@@ -62,7 +66,6 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 
 	@Override
 	public void onPageChange(String ActivePageName) throws ComException {
-		System.out.println("page changed " + ActivePageName);
 	}
 
 	@Override
