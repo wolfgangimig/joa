@@ -11,21 +11,15 @@
 package com.wilutions.joa.example.cnaddin;
 
 import com.wilutions.com.ComException;
-import com.wilutions.com.Dispatch;
-import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
-import com.wilutions.mslib.outlook.Inspector;
-import com.wilutions.mslib.outlook.InspectorEvents;
 import com.wilutions.mslib.outlook._Inspector;
 
-public class InspectorWrapper extends DispatchImpl implements InspectorEvents {
+public class InspectorWrapper extends com.wilutions.joa.outlook.InspectorWrapper {
 
-	Inspector inspector;
 	NoteTaskPane taskPane;
 
 	public InspectorWrapper(_Inspector _i) throws ComException {
-		this.inspector = Dispatch.as(_i, Inspector.class);
-		Dispatch.withEvents(inspector, this);
+		super(_i);
 		
 		taskPane = new NoteTaskPane(this.inspector);
 
@@ -57,10 +51,7 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents {
 			taskPane.close();
 			Globals.getThisAddin().getTaskPanes().remove(taskPane);
 		}
-		if (inspector != null) {
-			inspector.releaseComObject();
-			Globals.getThisAddin().getInspectorWrappers().remove(inspector);
-		}
+		super.onClose();
 		JoaDll.dumpComReferenceMap("InspectorWrapper.onClose");
 	}
 

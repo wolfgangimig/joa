@@ -11,7 +11,6 @@
 package com.wilutions.joa.example.cnaddin;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import com.wilutions.com.BackgTask;
@@ -27,6 +26,7 @@ import com.wilutions.joa.LoadBehavior;
 import com.wilutions.joa.OfficeApplication;
 import com.wilutions.joa.TaskPane;
 import com.wilutions.joa.fx.MessageBox;
+import com.wilutions.joa.outlook.InspectorWrappers;
 import com.wilutions.joa.outlook.OutlookAddin;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
@@ -47,7 +47,7 @@ import com.wilutions.mslib.outlook._Inspectors;
 public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 
 	private final ArrayList<TaskPane> taskPanes = new ArrayList<TaskPane>();
-	private final HashMap<_Inspector, InspectorWrapper> inspectorWrappers = new HashMap<_Inspector, InspectorWrapper>();
+	private final InspectorWrappers<InspectorWrapper> inspectorWrappers = new InspectorWrappers<InspectorWrapper>();
 	private final Registry registry = new Registry(getClass());
 	private volatile _Inspectors inspectors;
 	private volatile IRibbonUI ribbon;
@@ -167,7 +167,7 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 					// Display the task pane only for received or sent mails.
 					// Do not display the task pane for new mails to be composed.
 					if (id != null && id.length() != 0) {
-						inspectorWrappers.put(inspector, new InspectorWrapper(inspector));
+						inspectorWrappers.add(new InspectorWrapper(inspector));
 					}
 				}
 			} catch (Throwable e) {
@@ -176,7 +176,7 @@ public class CreateNoteAddin extends OutlookAddin implements InspectorsEvents {
 		});
 	}
 
-	public HashMap<_Inspector, InspectorWrapper> getInspectorWrappers() {
+	public InspectorWrappers<InspectorWrapper> getInspectorWrappers() {
 		return inspectorWrappers;
 	}
 

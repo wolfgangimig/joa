@@ -1,9 +1,7 @@
 package com.wilutions.joa.example1;
 
 import java.io.File;
-import java.util.Date;
 
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -26,7 +24,6 @@ import com.wilutions.com.Dispatch;
 import com.wilutions.joa.fx.FormRegionFX;
 import com.wilutions.joa.outlook.DeclFormRegion;
 import com.wilutions.joa.outlook.MessageClass;
-import com.wilutions.mslib.outlook.MailItem;
 import com.wilutions.mslib.outlook.OlItemType;
 
 @DeclFormRegion(addinClass = MyOutlookAddin.class, messageClasses = { MessageClass.Note })
@@ -35,24 +32,6 @@ public class MyFormRegion extends FormRegionFX {
 	TextField name;
 	TextField lastName;
 	TextArea comment;
-
-	@Override
-	public void onShow() throws ComException {
-		BackgTask.run(() -> {
-			try {
-				MailItem mailItem = formRegion.getItem().as(MailItem.class);
-				final String to = mailItem.getTo();
-				final String subject = mailItem.getSubject();
-				final Date date = mailItem.getReceivedTime();
-				Platform.runLater(() -> {
-					name.setText(date.toString());
-					lastName.setText(to);
-					comment.setText(subject);
-				});
-			} catch (ComException ignored) {
-			}
-		});
-	}
 
 	public Scene createScene() {
 
