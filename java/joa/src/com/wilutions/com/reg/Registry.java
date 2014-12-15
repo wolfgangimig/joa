@@ -12,11 +12,13 @@ package com.wilutions.com.reg;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.List;
 import java.util.Map;
 
 import com.wilutions.com.CoClass;
+import com.wilutions.com.ComEnum;
 import com.wilutions.com.ComException;
 import com.wilutions.com.DispatchImpl;
 
@@ -279,6 +281,17 @@ public class Registry {
 					break;
 				}
 			}
+		} else if (ComEnum.class.isAssignableFrom(fieldType)) {
+			String enumValueStr = (String)RegUtil.getRegistryValue(key, fieldName, "");
+			if (!enumValueStr.isEmpty()) {
+				try {
+					int enumValue = Integer.parseInt(enumValueStr);
+					Method m = fieldType.getDeclaredMethod("valueOf", int.class);
+					ret = m.invoke(null, enumValue);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 		} else if (List.class.isAssignableFrom(fieldType)) {
 			ret = getFieldValueList(key, fieldName, fieldType);
 		} else if (Map.class.isAssignableFrom(fieldType)) {
@@ -310,6 +323,14 @@ public class Registry {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
 			} else if (fieldType.isEnum()) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
+			} else if (ComEnum.class.isAssignableFrom(fieldType)) {
+				try {
+					Field f = fieldType.getDeclaredField("value");
+					String enumValueStr = Integer.toString((int)f.get(value));
+					RegUtil.setRegistryValue(key, fieldName, enumValueStr);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			} else if (List.class.isAssignableFrom(fieldType)) {
 				setFieldValueList(key, fieldName, value);
 			} else if (Map.class.isAssignableFrom(fieldType)) {
