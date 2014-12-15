@@ -52,6 +52,21 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	private boolean reg_visible;
 	
 	/**
+	 * Persistent width.
+	 * Ignored for top or bottom docking positions.
+	 */
+	@DeclRegistryValue
+	private int reg_width;
+	
+	/**
+	 * Persistent height.
+	 * Ignored for left or right docking positions.
+	 */
+	@DeclRegistryValue
+	private int reg_height;
+
+	
+	/**
 	 * Constructor.
 	 */
 	public TaskPane() {
@@ -69,6 +84,8 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 			try {
 				reg_dockPosition = customTaskPane.getDockPosition();
 				reg_visible = customTaskPane.getVisible();
+				reg_width = customTaskPane.getWidth();
+				reg_height = customTaskPane.getHeight();
 			} catch (ComException e) {
 				e.printStackTrace();
 			}
@@ -106,6 +123,21 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 
 		// Show the task pane at the last dock position.
 		customTaskPane.setDockPosition(reg_dockPosition);
+		
+		// Width/Height
+		switch (reg_dockPosition.value) {
+		case MsoCTPDockPosition._msoCTPDockPositionLeft:
+		case MsoCTPDockPosition._msoCTPDockPositionRight:
+			if (reg_width != 0) customTaskPane.setWidth(reg_width);
+			break;
+		case MsoCTPDockPosition._msoCTPDockPositionTop:
+		case MsoCTPDockPosition._msoCTPDockPositionBottom:
+			if (reg_height != 0) customTaskPane.setHeight(reg_height);
+			break;
+		default:
+			if (reg_width != 0) customTaskPane.setWidth(reg_width);
+			if (reg_height != 0) customTaskPane.setHeight(reg_height);			
+		}
 		
 		// Show the task pane
 		if (reg_visible) {

@@ -8,43 +8,43 @@
       MIT License, http://opensource.org/licenses/MIT
 
  */
-package com.wilutions.joa.outlook;
+package com.wilutions.joa.outlook.ex;
 
 import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.InspectorEvents_10;
-import com.wilutions.mslib.outlook._Inspector;
 
 public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10 {
 
-	protected final _Inspector inspector;
+	protected final Inspector inspector;
 
-	public InspectorWrapper(_Inspector inspector) throws ComException {
+	public InspectorWrapper(Inspector inspector) throws ComException {
 		this.inspector = inspector;
 		Dispatch.withEvents(inspector, this);
 	}
 	
-	public _Inspector getInspector() {
+	public Inspector getInspector() {
 		return inspector;
 	}
-
+	
 	@Override
 	public void onActivate() throws ComException {
-		System.out.println("InspectorWrapper.onActivate " + this);
 	}
 
 	@Override
 	public void onDeactivate() throws ComException {
-		System.out.println("InspectorWrapper.onDeactivate " + this);
 	}
 
 	@Override
 	public void onClose() throws ComException {
-		System.out.println("InspectorWrapper.onClose " + this);
 		if (inspector != null) {
+			inspector.releaseEvents(this);
 			inspector.releaseComObject();
+			InspectorWrappers.remove(this);
+			System.out.println("release inspector");
 		}
 	}
 

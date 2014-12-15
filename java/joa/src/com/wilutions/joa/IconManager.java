@@ -7,6 +7,7 @@ import java.util.Map;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.JoaDll;
+import com.wilutions.mslib.office.IRibbonControl;
 
 /**
  * Loads icons from the JAR and creates IPictureDisp objects.
@@ -87,6 +88,19 @@ public class IconManager {
 			map.put(key, pic);
 		}
 		return pic;
+	}
+
+	/**
+	 * Returns an IPictureDisp object for the ribbon control. The icon file name
+	 * is found in the "tag" element of the control.
+	 * 
+	 * @param ribbonControl
+	 *            Ribbon control
+	 * @return IPictureDisp object.
+	 */
+	public Dispatch getIconByTag(IRibbonControl ribbonControl) {
+		String fileName = ribbonControl.getTag();
+		return get(fileName);
 	}
 
 	/**
