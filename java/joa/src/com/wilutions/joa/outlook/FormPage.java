@@ -26,11 +26,16 @@ import com.wilutions.mslib.outlook._Inspector;
  * This class is used to create a form page in an inspector window.
  * 
  * Objects are one-off forms that use the JoaBridgeCtrl ActiveX. Since ActiveXes
- * are disabled by default on one-off forms, a particular registry value has to be
- * set that allows ActiveX controls to be executed. If the registry value is not
- * set, a message box appears when opening the form page (for an existing item):
- * "To help prevent malicious code from running, one or more objects in this form 
- * were not loaded. For more information, contact your administrator."
+ * are disabled by default on one-off forms, a particular registry value has to
+ * be set that allows ActiveX controls to be executed. If the registry value is
+ * not set, a message box appears when opening the form page (for an existing
+ * item): "To help prevent malicious code from running, one or more objects in
+ * this form were not loaded. For more information, contact your administrator."
+ * 
+ * Form pages are similar to form regions of type "separate". When adding a
+ * new form page to the inspector window, the item gets modified. This is a
+ * disadvantage compared to form regions and that is why form regions should be
+ * preferred over form pages.
  * 
  * @see http://www.outlookcode.com/article.aspx?id=67
  */
