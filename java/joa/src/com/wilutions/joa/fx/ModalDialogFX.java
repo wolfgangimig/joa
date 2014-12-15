@@ -10,6 +10,7 @@ import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowHandle;
 import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
@@ -367,7 +368,12 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 				
 				// Create a JavaFX frame inside the native dialog
 				embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, scene, (succ, ex) -> {
-					if (ex != null) {
+					if (ex == null) {
+						// Ensure the JavaFX frame is in the foreground.
+						long hwndChild = embeddedFrame.getWindowHandle();
+						JoaDll.nativeActivateSceneInDialog(hwndChild);
+					}
+					else if (asyncResult != null) {
 						asyncResult.setAsyncResult(null, ex);
 					}
 				});
