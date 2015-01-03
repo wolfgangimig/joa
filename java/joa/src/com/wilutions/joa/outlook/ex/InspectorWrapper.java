@@ -14,22 +14,41 @@ import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.IDispatch;
 import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.InspectorEvents_10;
 
 public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10 {
 
 	protected final Inspector inspector;
+	protected final IDispatch currentItem;
 
-	public InspectorWrapper(Inspector inspector) throws ComException {
+	/**
+	 * Constructor. Initializes a new object. Attaches the inspector events to
+	 * this.
+	 * 
+	 * @param inspector
+	 *            Inspector object.
+	 * @param currentItem
+	 *            The inspector's current item. Sometimes the getCurrentItem
+	 *            Method does not return the item after the inspector has been
+	 *            opened. For this reason, it is passed explicitly here.
+	 * @throws ComException
+	 */
+	public InspectorWrapper(Inspector inspector, IDispatch currentItem) throws ComException {
 		this.inspector = inspector;
+		this.currentItem = currentItem;
 		Dispatch.withEvents(inspector, this);
 	}
-	
+
 	public Inspector getInspector() {
 		return inspector;
 	}
 	
+	public <T> T getCurrentItemAs(Class<T> clazz) {
+		return currentItem.as(clazz);
+	}
+
 	@Override
 	public void onActivate() throws ComException {
 	}

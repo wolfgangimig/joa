@@ -60,14 +60,14 @@ import com.wilutions.mslib.office.IRibbonUI;
 import com.wilutions.mslib.office.MsoCTPDockPositionRestrict;
 import com.wilutions.mslib.office._CustomTaskPane;
 import com.wilutions.mslib.outlook.Categories;
+import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.MailItem;
 import com.wilutions.mslib.outlook.NoteItem;
 import com.wilutions.mslib.outlook.OlItemType;
-import com.wilutions.mslib.outlook._Inspector;
 
 public class NoteTaskPane extends TaskPaneFX {
 
-	private _Inspector inspector;
+	private Inspector inspector;
 	private GridPane noteGrid;
 	private TextArea noteText;
 	private CheckBox ckDisplay;
@@ -93,7 +93,7 @@ public class NoteTaskPane extends TaskPaneFX {
 
 	private NoteState noteState = NoteState.New;
 
-	public NoteTaskPane(_Inspector inspector) {
+	public NoteTaskPane(Inspector inspector) {
 		this.inspector = inspector;
 		this.categoryListDelimiter = (String) RegUtil.getRegistryValue("HKCU\\Control Panel\\International", "sList",
 				",");
