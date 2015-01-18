@@ -11,8 +11,12 @@
 package com.wilutions.com.reg;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.net.URLDecoder;
 import java.util.Arrays;
 
@@ -68,20 +72,85 @@ public class RegUtil {
 			}
 
 		} else {
+			
+			// The returned path should not be longer than 256 (MAX_PATH) characters. 
+			// Otherwise Outlook ignores the Addin. Although a VBS script is able to 
+			// create the Addin.
 
 			path.append("\"");
 			path.append(javaHome);
 			if (!javaHome.endsWith("\\")) {
 				path.append("\\");
 			}
-			path.append("bin\\javaw.exe\" ");
+			path.append("bin\\java.exe\" ");
 
 			String cp = System.getProperty("java.class.path");
 			path.append("-classpath \"").append(cp);
 			path.append("\" ").append(mainClass.getName());
+			
+			// If the command line is too long, create a BAT file in the 
+			// current directory that includes the command line.
+			if (path.length() > 256) {
+				File file = new File(mainClass.getName() + ".bat");
+				System.out.println("Create BAT to start addin application: " + file);
+				
+				final String CRLF = "\r\n";
+				path.setLength(0);
+				
+				path.append("pushd \"").append(file.getAbsoluteFile().getParent()).append("\"");
+				path.append(CRLF);
+				
+				String[] arrayClassPath = System.getProperty("java.class.path").split(";");
+				for (int i = 0; i < arrayClassPath.length; i++) {
+					path.append("set CP=");
+					if (i != 0) {
+						path.append("%CP%;");
+					}
+					path.append(arrayClassPath[i]);
+					path.append(CRLF);
+				}
+				
+				path.append("\"");
+				path.append(javaHome);
+				if (!javaHome.endsWith("\\")) {
+					path.append("\\");
+				}
+				path.append("bin\\java.exe\" ");
+				
+				path.append("-classpath \"%CP%\" ");
+				
+				path.append(mainClass.getName());
+				path.append(CRLF);
+				
+				writeAllText(file, path.toString());
+				
+				path.setLength(0);
+				path.append("\"");
+				path.append(file.getAbsolutePath());
+				path.append("\"");
+			}
 		}
 
 		return path.toString();
+	}
+
+	protected static void writeAllText(File file, String text) {
+		Writer wr = null;
+		try {
+			wr = new OutputStreamWriter(new FileOutputStream(file));
+			wr.write(text);
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			if (wr != null) {
+				try {
+					wr.close();
+				} catch (IOException e) {
+				}
+			}
+		}
 	}
 
 	/**

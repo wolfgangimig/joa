@@ -1,7 +1,12 @@
 JOA Version History
 
+0.5.0
 
-- #3 Registry class did not read/write java.util.List correctly
+- GH#2 Addin was ignored by Outlook, if application's command line 
+  (LocalServer32 entry) was too long. Now, create a BAT file to start the 
+  application if the command line is longer than 250 characters.
+
+- GH#3 Registry class did not read/write java.util.List correctly
 
 - Do not focus the Java frame window after creation anymore. If the Java frame is 
   e.g. shown in a FormRegion of a new appointment form, the focus should start as
