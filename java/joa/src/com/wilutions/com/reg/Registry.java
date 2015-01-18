@@ -185,7 +185,9 @@ public class Registry {
 			Class<?> elementType = Class.forName(elementTypeName);
 			for (int i = 0; i < length; i++) {
 				Object elementValue = getFieldValue(listKey, Integer.toString(i), elementType);
-				fieldValue.add(elementValue);
+				if (elementValue != null) {
+					fieldValue.add(elementValue);
+				}
 			}
 		}
 		return fieldValue;
@@ -222,8 +224,12 @@ public class Registry {
 			for (int i = 0; i < length; i++) {
 				String elementKey = mapKey + "\\" + i;
 				Object keyValue = getFieldValue(elementKey, "key", keyType);
-				Object valueValue = getFieldValue(elementKey, "value", valueType);
-				fieldValue.put(keyValue, valueValue);
+				if (keyValue != null) {
+					Object valueValue = getFieldValue(elementKey, "value", valueType);
+					if (valueValue != null) {
+						fieldValue.put(keyValue, valueValue);
+					}
+				}
 			}
 		}
 		return fieldValue;
