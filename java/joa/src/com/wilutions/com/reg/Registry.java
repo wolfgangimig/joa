@@ -14,6 +14,8 @@ import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -175,14 +177,15 @@ public class Registry {
 	private static Object getFieldValueList(String key, String fieldName, Class<?> listType)
 			throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		String listKey = key + "\\" + fieldName;
-		int length = Integer.valueOf((String) RegUtil.getRegistryValue(listKey, "length", "0"));
-		Object fieldValue = listType.newInstance();
-		if (length != 0) {
+		Integer length = (Integer)RegUtil.getRegistryValue(listKey, "length", 0);
+		@SuppressWarnings("unchecked")
+		List<Object> fieldValue = listType.equals(List.class) ? new ArrayList<Object>() : (List<Object>)listType.newInstance();
+		if (length != null && length != 0) {
 			String elementTypeName = (String) RegUtil.getRegistryValue(listKey, "elementClass", "");
 			Class<?> elementType = Class.forName(elementTypeName);
 			for (int i = 0; i < length; i++) {
 				Object elementValue = getFieldValue(listKey, Integer.toString(i), elementType);
-				Array.set(fieldValue, i, elementValue);
+				fieldValue.add(elementValue);
 			}
 		}
 		return fieldValue;
@@ -209,9 +212,9 @@ public class Registry {
 	private static Object getFieldValueMap(String key, String fieldName, Class<?> mapType)
 			throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		String mapKey = key + "\\" + fieldName;
-		int length = Integer.valueOf((String) RegUtil.getRegistryValue(mapKey, "length", "0"));
-		Map fieldValue = (Map) mapType.newInstance();
-		if (length != 0) {
+		Integer length = (Integer)RegUtil.getRegistryValue(mapKey, "length", 0);
+		Map fieldValue = mapType.equals(Map.class) ? new HashMap<Object,Object>() : (Map) mapType.newInstance();
+		if (length != null && length != 0) {
 			String keyTypeName = (String) RegUtil.getRegistryValue(mapKey, "keyClass", "");
 			String valueTypeName = (String) RegUtil.getRegistryValue(mapKey, "valueClass", "");
 			Class<?> keyType = Class.forName(keyTypeName);

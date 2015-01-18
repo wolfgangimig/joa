@@ -1,5 +1,8 @@
 JOA Version History
 
+
+- #3 Registry class did not read/write java.util.List correctly
+
 - Do not focus the Java frame window after creation anymore. If the Java frame is 
   e.g. shown in a FormRegion of a new appointment form, the focus should start as
   usually in the subject line and not in the FormRegion.
