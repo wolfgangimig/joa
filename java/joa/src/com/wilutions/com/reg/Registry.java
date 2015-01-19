@@ -7,7 +7,7 @@
       
       MIT License, http://opensource.org/licenses/MIT
 
-*/
+ */
 package com.wilutions.com.reg;
 
 import java.lang.reflect.Array;
@@ -15,6 +15,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,43 +29,53 @@ import com.wilutions.com.DispatchImpl;
  * This class helps to store and load the state of UI controls.
  */
 public class Registry {
-	
+
 	private final String regKey;
 	private static final int OPT_ONLY_ANNOTATED_FIELDS = 1;
 	private static final int OPT_ALL_FIELDS = 0;
-	
+
 	/**
-	 * Initialize the registry destination path. 
-	 * @param manufacturerName Manufacturer name
-	 * @param appName Application name
+	 * Initialize the registry destination path.
+	 * 
+	 * @param manufacturerName
+	 *            Manufacturer name
+	 * @param appName
+	 *            Application name
 	 */
 	public Registry(String manufacturerName, String appName) {
 		this.regKey = "HKCU\\Software\\" + manufacturerName + "\\" + appName;
 	}
-	
+
 	/**
-	 * Initialize the registry destination path.
-	 * The path is computed as HKEY_CURRENT_USER\Software\{program ID of coclass} 
-	 * @param coclass COM class annotated with {@link CoClass}
+	 * Initialize the registry destination path. The path is computed as
+	 * HKEY_CURRENT_USER\Software\{program ID of coclass}
+	 * 
+	 * @param coclass
+	 *            COM class annotated with {@link CoClass}
 	 */
 	public Registry(Class<? extends DispatchImpl> coclass) {
 		CoClass co = coclass.getAnnotation(CoClass.class);
 		this.regKey = "HKCU\\Software\\" + co.progId();
 	}
-	
+
 	/**
 	 * Store all fields annotated by {@link DeclRegistryValue}.
-	 * @param obj Store fields of this object.
+	 * 
+	 * @param obj
+	 *            Store fields of this object.
 	 */
 	public void writeFields(Object obj) {
-		if (obj == null) throw new IllegalArgumentException("obj must not be null");
+		if (obj == null)
+			throw new IllegalArgumentException("obj must not be null");
 		String subKey = regKey + "\\" + obj.getClass().getName();
 		writeObject(subKey, obj, OPT_ONLY_ANNOTATED_FIELDS);
 	}
-	
+
 	/**
 	 * Read all fields annotated by {@link DeclRegistryValue}.
-	 * @param obj Read annotated fields of this object.
+	 * 
+	 * @param obj
+	 *            Read annotated fields of this object.
 	 */
 	public void readFields(Object obj) {
 		String subKey = regKey + "\\" + obj.getClass().getName();
@@ -72,52 +83,58 @@ public class Registry {
 	}
 
 	/**
-	 * Read an object or primitive value at the given sub-key.
-	 * This function reads all fields - not only annotated fields.
-	 * @param subKey Sub-key
+	 * Read an object or primitive value at the given sub-key. This function
+	 * reads all fields - not only annotated fields.
+	 * 
+	 * @param subKey
+	 *            Sub-key
 	 * @return Object or primitive value
 	 */
 	public Object read(String subKey) {
 		return readObject(regKey + "\\" + subKey);
 	}
-	
+
 	/**
-	 * Write object or primitive value at the given sub-key.
-	 * This function writes all fields - not only annotated fields.
-	 * @param subKey Sub-key
-	 * @param obj Object to be written.
+	 * Write object or primitive value at the given sub-key. This function
+	 * writes all fields - not only annotated fields.
+	 * 
+	 * @param subKey
+	 *            Sub-key
+	 * @param obj
+	 *            Object to be written.
 	 */
 	public void write(String subKey, Object obj) {
 		writeObject(regKey + "\\" + subKey, obj, OPT_ALL_FIELDS);
 	}
-	
+
 	private static void readFields(String key, Object obj, int opts) {
 		Class<?> clazz = obj.getClass();
 		while (clazz != null && clazz != Object.class) {
 			for (Field field : clazz.getDeclaredFields()) {
 				String fieldName = field.getName();
 				int mods = field.getModifiers();
-	
+
 				if (Modifier.isStatic(mods))
 					continue;
 				if (Modifier.isFinal(mods))
 					continue;
 				if (Modifier.isTransient(mods))
 					continue;
-				
+
 				if ((opts & OPT_ONLY_ANNOTATED_FIELDS) != 0) {
 					DeclRegistryValue regValueAnno = field.getAnnotation(DeclRegistryValue.class);
-					if (regValueAnno == null) continue;
+					if (regValueAnno == null)
+						continue;
 					String s = regValueAnno.value();
 					if (s != null && s.length() != 0) {
 						fieldName = s;
 					}
 				}
-	
+
 				if (!Modifier.isPublic(mods)) {
 					field.setAccessible(true);
 				}
-	
+
 				try {
 					Object fieldValue = getFieldValue(key, fieldName, field.getType());
 					if (fieldValue != null) {
@@ -126,7 +143,7 @@ public class Registry {
 				} catch (Throwable ignored) {
 				}
 			}
-			
+
 			clazz = clazz.getSuperclass();
 		}
 	}
@@ -140,6 +157,15 @@ public class Registry {
 
 		try {
 			Class<?> clazz = Class.forName(className);
+			
+			// Value written as object?
+			if (clazz.isArray() || (clazz == String.class) || (clazz == Integer.class) || (clazz == Long.class)
+					|| (clazz == Double.class) || (clazz == Float.class) || (clazz == Boolean.class)
+					|| (clazz.isEnum()) || (ComEnum.class.isAssignableFrom(clazz))
+					|| (List.class.isAssignableFrom(clazz)) || (Map.class.isAssignableFrom(clazz))) {
+				return getFieldValue(key, "value", clazz);
+			}
+			
 			ret = clazz.newInstance();
 			readFields(key, ret, OPT_ALL_FIELDS);
 
@@ -170,16 +196,17 @@ public class Registry {
 			Object elementValue = Array.get(arrayValue, i);
 			if (elementValue == null)
 				continue;
-			setFieldValue(arrayKey, Integer.toString(i), elementValue);
+			setFieldValue(arrayKey, Integer.toString(i), elementValue, elementValue.getClass());
 		}
 	}
 
 	private static Object getFieldValueList(String key, String fieldName, Class<?> listType)
 			throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		String listKey = key + "\\" + fieldName;
-		Integer length = (Integer)RegUtil.getRegistryValue(listKey, "length", 0);
+		Integer length = (Integer) RegUtil.getRegistryValue(listKey, "length", 0);
 		@SuppressWarnings("unchecked")
-		List<Object> fieldValue = listType.equals(List.class) ? new ArrayList<Object>() : (List<Object>)listType.newInstance();
+		List<Object> fieldValue = listType.equals(List.class) ? new ArrayList<Object>() : (List<Object>) listType
+				.newInstance();
 		if (length != null && length != 0) {
 			String elementTypeName = (String) RegUtil.getRegistryValue(listKey, "elementClass", "");
 			Class<?> elementType = Class.forName(elementTypeName);
@@ -206,7 +233,7 @@ public class Registry {
 				RegUtil.setRegistryValue(listKey, "elementClass", elementValue.getClass().getName());
 				classWritten = true;
 			}
-			setFieldValue(listKey, Integer.toString(i++), elementValue);
+			setFieldValue(listKey, Integer.toString(i++), elementValue, elementValue.getClass());
 		}
 	}
 
@@ -214,8 +241,8 @@ public class Registry {
 	private static Object getFieldValueMap(String key, String fieldName, Class<?> mapType)
 			throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		String mapKey = key + "\\" + fieldName;
-		Integer length = (Integer)RegUtil.getRegistryValue(mapKey, "length", 0);
-		Map fieldValue = mapType.equals(Map.class) ? new HashMap<Object,Object>() : (Map) mapType.newInstance();
+		Integer length = (Integer) RegUtil.getRegistryValue(mapKey, "length", 0);
+		Map fieldValue = mapType.equals(Map.class) ? new HashMap<Object, Object>() : (Map) mapType.newInstance();
 		if (length != null && length != 0) {
 			String keyTypeName = (String) RegUtil.getRegistryValue(mapKey, "keyClass", "");
 			String valueTypeName = (String) RegUtil.getRegistryValue(mapKey, "valueClass", "");
@@ -254,8 +281,8 @@ public class Registry {
 			if (!valueClassWritten && valueValue != null) {
 				RegUtil.setRegistryValue(mapKey, "valueClass", valueValue.getClass().getName());
 			}
-			setFieldValue(elementKey, "key", keyValue);
-			setFieldValue(elementKey, "value", valueValue);
+			setFieldValue(elementKey, "key", keyValue, keyValue.getClass());
+			setFieldValue(elementKey, "value", valueValue, valueValue.getClass());
 		}
 	}
 
@@ -283,7 +310,7 @@ public class Registry {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, Boolean.FALSE.toString());
 			ret = Boolean.valueOf((String) regValue);
 		} else if (fieldType.isEnum()) {
-			String enumValueStr = (String)RegUtil.getRegistryValue(key, fieldName, "");
+			String enumValueStr = (String) RegUtil.getRegistryValue(key, fieldName, "");
 			for (Object e : fieldType.getEnumConstants()) {
 				if (e.toString().equals(enumValueStr)) {
 					ret = e;
@@ -291,7 +318,7 @@ public class Registry {
 				}
 			}
 		} else if (ComEnum.class.isAssignableFrom(fieldType)) {
-			String enumValueStr = (String)RegUtil.getRegistryValue(key, fieldName, "");
+			String enumValueStr = (String) RegUtil.getRegistryValue(key, fieldName, "");
 			if (!enumValueStr.isEmpty()) {
 				try {
 					int enumValue = Integer.parseInt(enumValueStr);
@@ -311,31 +338,31 @@ public class Registry {
 		return ret;
 	}
 
-	private static void setFieldValue(String key, String fieldName, Object value) throws ComException {
+	private static void setFieldValue(String key, String fieldName, Object value, Class<?> fieldType)
+			throws ComException {
 		if (value == null) {
 			RegUtil.deleteRegistryValue(key, fieldName);
 		} else {
-			Class<?> fieldType = value.getClass();
 			if (fieldType.isArray()) {
 				setFieldValueArray(key, fieldName, value);
 			} else if (fieldType == String.class) {
 				RegUtil.setRegistryValue(key, fieldName, (String) value);
-			} else if (fieldType == Integer.class) {
+			} else if (fieldType == Integer.class || fieldType == int.class) {
 				RegUtil.setRegistryValue(key, fieldName, (Integer) value);
-			} else if (fieldType == Long.class) {
+			} else if (fieldType == Long.class || fieldType == long.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType == Double.class) {
+			} else if (fieldType == Double.class || fieldType == double.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType == Float.class) {
+			} else if (fieldType == Float.class || fieldType == float.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType == Boolean.class) {
+			} else if (fieldType == Boolean.class || fieldType == boolean.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
 			} else if (fieldType.isEnum()) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
 			} else if (ComEnum.class.isAssignableFrom(fieldType)) {
 				try {
 					Field f = fieldType.getDeclaredField("value");
-					String enumValueStr = Integer.toString((int)f.get(value));
+					String enumValueStr = Integer.toString((int) f.get(value));
 					RegUtil.setRegistryValue(key, fieldName, enumValueStr);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -351,50 +378,104 @@ public class Registry {
 	}
 
 	private static void writeObject(String key, Object obj, int opts) {
-		String className = obj != null ? obj.getClass().getName() : "";
+		Class<?> clazz = obj != null ? obj.getClass() : null;
+		String className = clazz != null ? clazz.getName() : "";
+
 		try {
 			RegUtil.purgeRegistryKey(key);
 			RegUtil.setRegistryValue(key, "", className);
 			if (className == null || className.length() == 0)
 				return;
 
-			Class<?> clazz = obj.getClass();
+			if (clazz.isArray() || (clazz == String.class) || (clazz == Integer.class) || (clazz == Long.class)
+					|| (clazz == Double.class) || (clazz == Float.class) || (clazz == Boolean.class)
+					|| (clazz.isEnum()) || (ComEnum.class.isAssignableFrom(clazz))
+					|| (List.class.isAssignableFrom(clazz)) || (Map.class.isAssignableFrom(clazz))) {
+				setFieldValue(key, "value", obj, clazz);
+				return;
+			}
+
 			while (clazz != null && clazz != Object.class) {
 				for (Field field : clazz.getDeclaredFields()) {
 					String fieldName = field.getName();
 					int mods = field.getModifiers();
-					
+
 					if (Modifier.isStatic(mods))
 						continue;
 					if (Modifier.isFinal(mods))
 						continue;
 					if (Modifier.isTransient(mods))
 						continue;
-					
+
 					if ((opts & OPT_ONLY_ANNOTATED_FIELDS) != 0) {
 						DeclRegistryValue regValueAnno = field.getAnnotation(DeclRegistryValue.class);
-						if (regValueAnno == null) continue;
+						if (regValueAnno == null)
+							continue;
 						String s = regValueAnno.value();
 						if (s != null && s.length() != 0) {
 							fieldName = s;
 						}
 					}
-	
+
 					if (!Modifier.isPublic(mods)) {
 						field.setAccessible(true);
 					}
-	
+
 					try {
 						Object fieldValue = field.get(obj);
-						setFieldValue(key, fieldName, fieldValue);
+						Class<?> fieldClass = field.getType();
+						setFieldValue(key, fieldName, fieldValue, fieldClass);
 					} catch (Throwable e) {
 						e.printStackTrace();
 					}
 				}
-				
+
 				clazz = clazz.getSuperclass();
-			}	
+			}
 		} catch (Throwable e) {
 		}
+	}
+
+	private static class Property {
+		@DeclRegistryValue
+		String id;
+		@DeclRegistryValue
+		int type = 3;
+		@DeclRegistryValue
+		Object value;
+
+		Property(String id, Object value) {
+			this.id = id;
+			this.value = value;
+		};
+
+		Property() {
+		}
+		
+		public String toString() {
+			return "[" + id + "," + value + "," + type + "]";
+		}
+	}
+
+	private static class Globals {
+		@DeclRegistryValue
+		List<Property> properties;
+		public String toString() { return "[" + properties.toString() + "]"; }
+	}
+
+	public static void main(String[] args) {
+		Registry registry = new Registry("WILUTIONS", "TEST-REGISTRY");
+
+		Globals globals = new Globals();
+		globals.properties = Arrays.asList(new Property("abc", "def"));
+		
+		System.out.println("globals=" + globals);
+
+		registry.writeFields(globals);
+		
+		Globals rglobals = new Globals();
+		registry.readFields(rglobals);
+
+		System.out.println("rglobals=" + rglobals);
 	}
 }
