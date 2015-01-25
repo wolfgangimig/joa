@@ -35,6 +35,10 @@ public class EmbeddedFrameFX implements WindowHandle {
 			window.dispose();
 		}
 	}
+	
+//	public Window getFXWindow() {
+//		return window.getWindow();
+//	}
 
 	/**
 	 * Create an embedded window and show the supplied content.

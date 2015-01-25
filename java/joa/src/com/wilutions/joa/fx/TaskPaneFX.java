@@ -19,6 +19,10 @@ public abstract class TaskPaneFX extends TaskPane implements FrameContentFactory
 	public long getWindowHandle() {
 		return embeddedFrame.getWindowHandle();
 	}
+	
+//	public Window getFXWindow() {
+//		return embeddedFrame.getFXWindow();
+//	}
 
 	@Override
 	public void close() {
