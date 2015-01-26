@@ -26,6 +26,11 @@
 		https://github.com/zonski/javafx-maven-plugin/issues/74
 	-->
 
+	<!-- 
+		Project directory.
+	-->
+	<property name="project.dir" value=".." />
+
 	<!--
 		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 		The following properties have to be adapted.
@@ -66,23 +71,17 @@
 	-->
 	<property name="install.all-users" value="false" />
 
+	<!-- 
+		lib.dir contains the JARs and DLLs from:
+		https://github.com/wolfgangimig/joa/tree/master/java/lib 
+	-->
+	<property name="lib.dir" value="${project.dir}/../../lib" />
 
 	<!--
 		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 		The following properties do not need to be modified 
 		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 	-->
-
-	<!-- 
-		Project directory.
-	-->
-	<property name="project.dir" value=".." />
-
-	<!-- 
-		lib.dir contains the JARs and DLLs from:
-		https://github.com/wolfgangimig/joa/tree/master/java/lib 
-	-->
-	<property name="lib.dir" value="${project.dir}/../../lib" />
 
 	<!-- 
 		Directory for 32/64 bit DLL 
