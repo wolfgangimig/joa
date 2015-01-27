@@ -62,7 +62,7 @@
 		Dependencies. A semicolon separated list of all JARs this project depends on.
 		This JARs have to be also listed in the task <fx:resources>.
 	-->
-	<property name="application.classpath" value="joa-without-dlls.jar" />
+	<property name="application.classpath" value="joa.jar" />
 	
 	<!--
 		Set this property "true", if the Add-in should be installed
@@ -82,11 +82,6 @@
 		The following properties do not need to be modified 
 		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 	-->
-
-	<!-- 
-		Directory for 32/64 bit DLL 
-	-->
-	<property name="dll.dir" value="${lib.dir}/${sun.arch.data.model}" />
 
 	<!-- 
 		Target directory, the MSI will be placed in ./dist/32/bundles/ 
@@ -129,7 +124,17 @@
 	<target name="build">
 
 		<echo message="jdk=${jdk.home}" />
-		<echo message="native=${dll.dir}" />
+		<echo message="Creating a ${sun.arch.data.model}bit installer" />
+		
+		<!-- 
+			Check property ${lib.dir}: joa.jar must exist.
+		 -->
+		<fail message="Missing: ${lib.dir}/joa.jar">
+		    <condition><not>
+		        <available file="${lib.dir}/joa.jar" />
+		    </not></condition>
+		</fail>
+
 		<mkdir dir="${dist.dir}" />
 		<delete dir="${dist.dir}" verbose="true" />
 
@@ -150,8 +155,10 @@
 				<attribute name="Class-Path" value="${application.classpath}" />
 			</manifest>
 
-			<!-- Define what files to include -->
+			<!-- Define which class files to include -->
 			<fileset dir="${project.dir}/bin" />
+			<!-- other projects: fileset dir="${project.dir}/../other-project/bin" / -->
+				
 		</fx:jar>
 
 		<fx:deploy verbose="true" width="${javafx.run.width}" height="${javafx.run.height}" nativeBundles="msi" outdir="${dist.dir}" outfile="${application.name}">
@@ -163,10 +170,9 @@
 				<!--
 					Add dependencies from ${application.classpath} 
 				-->
-				<fx:fileset dir="${lib.dir}" includes="joa-without-dlls.jar" />
+				<fx:fileset dir="${lib.dir}" includes="joa.jar" />
 				
 				<fx:fileset dir="${dist.dir}" includes="*.jar" />
-				<fx:fileset dir="${dll.dir}" includes="*.dll" type="data" />
 			</fx:resources>
 
 			<!-- install per user -->
