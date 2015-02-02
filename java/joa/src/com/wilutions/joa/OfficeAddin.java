@@ -77,7 +77,8 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 		applicationObject = app.as(applicationClass);
 		applicationObject.withEvents(this);
 
-		// Put this object into the COMAddIn wrapper supplied by the Office application.
+		// Put this object into the COMAddIn wrapper supplied by the Office
+		// application.
 		// This is required to support folder views in Outlook.
 		COMAddInImpl coAddin = addin.as(COMAddInImpl.class);
 		coAddin.setObject(this);
@@ -198,30 +199,56 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	}
 
 	private void updateJoaUtil() {
+		
+		final long timeout = 10 * 1000;
+		final long t1 = System.currentTimeMillis();
+		
 		synchronized (OfficeAddin.class) {
+			
+			while (true) {
 
-			if (joaUtil != null)
-				return;
-
-			CoAppType app = getApplication();
-			if (app == null)
-				return;
-			Object disp = getApplication()._get("COMAddIns");
-			if (disp == null)
-				return;
-
-			COMAddIns addins = Dispatch.as(disp, COMAddIns.class);
-			if (addins == null)
-				return;
-
-			COMAddIn addin = addins.Item("JoaUtilAddin.Class");
-			if (addin != null) {
-				if (!addin.getConnect()) {
-					addin.setConnect(Boolean.TRUE);
+				if (joaUtil != null) {
+					break;
 				}
-				IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
-				joaUtil = x;
-				OfficeAddin.class.notifyAll();
+
+				CoAppType app = getApplication();
+				if (app == null) {
+					break;
+				}
+				Object disp = app._get("COMAddIns");
+				if (disp == null) {
+					break;
+				}
+				COMAddIns addins = Dispatch.as(disp, COMAddIns.class);
+				if (addins == null) {
+					break;
+				}
+
+				COMAddIn addin = addins.Item("JoaUtilAddin.Class");
+				if (addin != null) {
+					if (!addin.getConnect()) {
+						addin.setConnect(Boolean.TRUE);
+					}
+					IJoaUtilAddin x = Dispatch.as(addin.getObject(), IJoaUtilAddin.class);
+					joaUtil = x;
+					OfficeAddin.class.notifyAll();
+					
+					/// -- break while(true)
+					break;
+				}
+				else {
+					try {
+						OfficeAddin.class.wait(500);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+						break;
+					}
+				}
+				
+				long t2 = System.currentTimeMillis();
+				if (t1 + timeout >= t2) {
+					break;
+				}
 			}
 		}
 	}
