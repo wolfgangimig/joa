@@ -179,15 +179,32 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	 * @throws ComException
 	 */
 	public void setVisible(final boolean v) throws ComException {
+		setVisible(v, null);
+	}
+
+	/**
+	 * Show or hide the task pane.
+	 * @param v 
+	 * @param asyncResult
+	 * @throws ComException
+	 */
+	public void setVisible(final boolean v, AsyncResult<Boolean> asyncResult) throws ComException {
 		// Call taskPane.setVisible in background thread.
 		// Otherwise Outlook/Java might hang in setVisible().
 		if (customTaskPane != null) {
 			BackgTask.run(() -> {
+				Throwable ex = null;
 				try {
 					customTaskPane.setVisible(Boolean.valueOf(v));
 					reg_visible = v;
 				} catch (ComException e) {
 					e.printStackTrace();
+					ex = e;
+				}
+				finally {
+					if (asyncResult != null) {
+						asyncResult.setAsyncResult(ex == null, ex);
+					}
 				}
 			});
 		}
