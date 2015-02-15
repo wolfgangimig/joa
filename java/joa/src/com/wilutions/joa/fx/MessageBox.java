@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
 import com.wilutions.com.AsyncResult;
@@ -57,8 +58,8 @@ public class MessageBox {
 		private List<ButtonDefinition> _buttonDefinitions = new ArrayList<ButtonDefinition>();
 
 		public Builder owner(Object v) {
-			assert (v instanceof Dispatch) || (v instanceof WindowHandle);
-			if (v instanceof WindowHandle) {
+			assert (v instanceof Dispatch) || (v instanceof WindowHandle) || (v instanceof Window);
+			if (v instanceof WindowHandle || v instanceof Window) {
 				_owner = v;
 			}
 			else {

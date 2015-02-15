@@ -5,6 +5,9 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.ComException;
@@ -38,6 +41,14 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	 * Native window handle of the {@link #joaDlg}
 	 */
 	private long hwndParent;
+	
+	/**
+	 * JavaFX stage.
+	 * If the owner is a JavaFX window, the dialog is created 
+	 * entirely with JavaFX functionality.
+	 * Either {@link #joaDlg} or {@link #fxDlg} is set.
+	 */
+	private Stage fxDlg;
 
 	/**
 	 * Callback expression received from function
@@ -109,7 +120,8 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	 * Show the dialog box.
 	 * 
 	 * @param _owner
-	 *            Owner object, explorer or inspector window, or an implementation of WindowHandle.
+	 *            Owner object, explorer or inspector window, or an
+	 *            implementation of WindowHandle.
 	 * @param asyncResult
 	 *            Callback expression which is called, when the dialog is
 	 *            closed.
@@ -149,6 +161,9 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 			} catch (Throwable ex1) {
 				ex = ex1;
 			}
+		}
+		if (fxDlg != null) {
+			fxDlg.close();
 		}
 		if (asyncResult != null) {
 			asyncResult.setAsyncResult(result, ex);
@@ -294,9 +309,23 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	public <E extends Event> void addEventHandler(EventType<E> eventType, EventHandler<? super E> eventHandler) {
 		embeddedFrame.addEventHandler(eventType, eventHandler);
 	}
-	
+
 	private Integer toWin(double x) {
 		return Double.valueOf(x).intValue();
+	}
+
+	private void internalShowFxDialogAsync(Window fxOwner, AsyncResult<T> asyncResult) {
+		try {
+			this.asyncResult = asyncResult;
+			fxDlg = new Stage();
+			fxDlg.initOwner(fxOwner);
+			fxDlg.initModality(Modality.WINDOW_MODAL);
+			Scene scene = createScene();
+			fxDlg.setScene(scene);
+			fxDlg.showAndWait();
+		} catch (Throwable e) {
+			asyncResult.setAsyncResult(getResult(), e);
+		}
 	}
 
 	private void internalShowAsync(Object _owner, AsyncResult<T> asyncResult) {
@@ -305,27 +334,35 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		// A COM object has to implement IOleWindow.
 		Dispatch dispOwner = null;
 		long hwndOwner = 0;
+		Window fxOwner = null;
 		if (_owner instanceof WindowHandle) {
-			hwndOwner = ((WindowHandle)_owner).getWindowHandle();
+			hwndOwner = ((WindowHandle) _owner).getWindowHandle();
 		} else if (_owner instanceof Dispatch) {
 			dispOwner = (Dispatch) _owner;
+		} else if (_owner instanceof Window) {
+			fxOwner = (Window) _owner;
 		}
-		assert hwndOwner != 0 || dispOwner != null;
+		assert hwndOwner != 0 || dispOwner != null || fxOwner != null;
+		
+		if (fxOwner != null) {
+			internalShowFxDialogAsync(fxOwner, asyncResult);
+			return;
+		}
 
 		DialogEventHandler dialogHandler = null;
 		try {
-			
+
 			// Create the scene. Has to be implemented by subclass.
 			Scene scene = createScene();
 
-			// If width and height is not set, make the dialog 
+			// If width and height is not set, make the dialog
 			// as large as the scene.
 			maybeSetWidthAndHightFromSceneExtent(scene);
 
 			// Create the native dialog object.
-			// This is the task of the JOA Util Add-in. Because 
-			// the dialog has to be created in the UI thread 
-			// inside Outlook. 
+			// This is the task of the JOA Util Add-in. Because
+			// the dialog has to be created in the UI thread
+			// inside Outlook.
 			joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
 
 			joaDlg.setWidth(toWin(width));
@@ -365,21 +402,20 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 
 			// Native dialog initialized?
 			if (state == State.HasParentHwnd) {
-				
+
 				// Create a JavaFX frame inside the native dialog
 				embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, scene, (succ, ex) -> {
 					if (ex == null) {
 						// Ensure the JavaFX frame is in the foreground.
 						long hwndChild = embeddedFrame.getWindowHandle();
 						JoaDll.nativeActivateSceneInDialog(hwndChild);
-					}
-					else if (asyncResult != null) {
+					} else if (asyncResult != null) {
 						asyncResult.setAsyncResult(null, ex);
 					}
 				});
 
 				this.asyncResult = asyncResult;
-				
+
 			} else {
 				asyncResult.setAsyncResult(null, new IllegalStateException(
 						"Excpected response from Office application."));
@@ -443,7 +479,7 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		}
 
 	}
-	
+
 	@Override
 	public long getWindowHandle() {
 		return joaDlg.getHWND();
