@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
@@ -174,6 +175,8 @@ public class MessageBox {
 
 			Label textBox = new Label(text);
 			textBox.setWrapText(true);
+			textBox.setMaxWidth(Screen.getPrimary().getVisualBounds().getWidth()/3);
+			textBox.setMaxHeight(Screen.getPrimary().getVisualBounds().getHeight()/2);
 			vbox.getChildren().add(textBox);
 
 			HBox hbox = new HBox();

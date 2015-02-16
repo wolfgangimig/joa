@@ -449,9 +449,6 @@ public class Registry {
 			this.value = value;
 		};
 
-		Property() {
-		}
-		
 		public String toString() {
 			return "[" + id + "," + value + "," + type + "]";
 		}
