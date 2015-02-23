@@ -342,7 +342,13 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		} else if (_owner instanceof Window) {
 			fxOwner = (Window) _owner;
 		}
-		assert hwndOwner != 0 || dispOwner != null || fxOwner != null;
+		
+		if (hwndOwner == 0 && dispOwner == null && fxOwner != null) {
+			if (asyncResult != null) {
+				asyncResult.setAsyncResult(null, new IllegalStateException("Owner must not be null."));
+			}
+			return;
+		}
 		
 		if (fxOwner != null) {
 			internalShowFxDialogAsync(fxOwner, asyncResult);
