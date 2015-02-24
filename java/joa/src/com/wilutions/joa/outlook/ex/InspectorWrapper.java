@@ -10,18 +10,23 @@
  */
 package com.wilutions.joa.outlook.ex;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.IDispatch;
+import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.InspectorEvents_10;
 
-public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10 {
+public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10, Wrapper {
 
 	protected final Inspector inspector;
 	protected final IDispatch currentItem;
+	protected Map<String, IRibbonControl> ribbonControls = new HashMap<String, IRibbonControl>();
 
 	/**
 	 * Constructor. Initializes a new object. Attaches the inspector events to
@@ -89,6 +94,11 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 
 	@Override
 	public void onAttachmentSelectionChange() throws ComException {
+	}
+
+	@Override
+	public void addRibbonControl(IRibbonControl control) {
+		ribbonControls.put(control.getId(), control);
 	}
 
 }
