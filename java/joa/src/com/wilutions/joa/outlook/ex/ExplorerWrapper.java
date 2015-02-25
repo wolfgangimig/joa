@@ -38,6 +38,11 @@ public class ExplorerWrapper extends DispatchImpl implements ExplorerEvents_10, 
 	}
 
 	@Override
+	public IDispatch getWrappedObject() {
+		return getExplorer();
+	}
+	
+	@Override
 	public void onActivate() throws ComException {
 		
 	}

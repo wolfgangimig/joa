@@ -50,6 +50,11 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 		return inspector;
 	}
 	
+	@Override
+	public IDispatch getWrappedObject() {
+		return getInspector();
+	}
+	
 	public <T> T getCurrentItemAs(Class<T> clazz) {
 		return currentItem.as(clazz);
 	}
