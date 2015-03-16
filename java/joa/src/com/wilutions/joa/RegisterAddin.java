@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
@@ -24,9 +26,13 @@ import com.wilutions.com.reg.RegUtil;
  * Helper class to register a Microsoft Office Addin with the Windows registry.
  */
 public class RegisterAddin {
+	
+	private static Logger log = Logger.getLogger("RegisterAddin");
 
 	public static void register(boolean perUserNotMachine, Class<?> addinClass) throws ComException {
+		if (log.isLoggable(Level.FINE)) log.fine("register(" + addinClass.getName() + " " + (perUserNotMachine ? "/user" : "/all")); 
 		System.out.println("register " + addinClass.getName() + " " + (perUserNotMachine ? "/user" : "/all") );
+		
 		CoClass coClassAnnotation = addinClass.getAnnotation(CoClass.class);
 		if (coClassAnnotation == null)
 			throw new ComException("Failed to unregister Addin, missing annotation " + CoClass.class);
@@ -46,6 +52,8 @@ public class RegisterAddin {
 		registerBridgeCtrl(progId, perUserNotMachine, true);
 
 		registerJoaUtilAddin(officeApplication, progId, perUserNotMachine);
+		
+		if (log.isLoggable(Level.FINE)) log.fine(")register");
 	}
 	
 	private static void registerBridgeCtrl(String referencedByProgId, boolean perUserNotMachine, boolean registerNotUnregister) {

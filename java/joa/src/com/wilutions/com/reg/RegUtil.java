@@ -19,6 +19,8 @@ import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import java.net.URLDecoder;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
@@ -29,6 +31,21 @@ import com.wilutions.com.JoaDll;
  *
  */
 public class RegUtil {
+	
+	private static Logger log = Logger.getLogger("RegUtil");
+	
+	/**
+	 * Returns application path of self contained application.
+	 * If running as a JavaFX packaged application, this function returns the path
+	 * instdir/app.
+	 * @return application path or null (if not running as a packaged application).
+	 */
+	public static File getAppPathIfSelfContained() {
+		String launcherPath = System.getProperty("java.launcher.path");
+		if (launcherPath == null || launcherPath.isEmpty()) return null;
+		File dir = new File(launcherPath);
+		return new File(dir, "app");
+	}
 
 	/**
 	 * Get the path to javaw.exe and append the classpath and the application
@@ -39,40 +56,39 @@ public class RegUtil {
 	 * @return File system path
 	 */
 	public static String getExecPath(Class<?> mainClass) {
-
+		if (log.isLoggable(Level.FINE)) log.fine("getExecPath("); 
 		String javaHome = System.getProperty("java.home");
 		StringBuilder path = new StringBuilder();
 
 		System.out.println("javaHome=" + javaHome);
+		if (log.isLoggable(Level.FINE)) log.fine("javaHome=" + javaHome); 
 
 		// Self-contained Java application?
-		boolean isSelfContainedApp = javaHome.endsWith("runtime\\jre");
-		System.out.println("isSelfContainedApp=" + isSelfContainedApp);
+		String launcherPath = System.getProperty("java.launcher.path");
+		File selfInstDir = launcherPath != null ? new File(launcherPath) : null;
+		if (log.isLoggable(Level.FINE)) log.fine("selfInstDir=" + selfInstDir); 
 
-		if (isSelfContainedApp) {
+		if (selfInstDir != null) {
 
-			// Application is an EXE file found at "${java.home}/../../"
-			File appDir = new File(javaHome).getParentFile().getParentFile();
-			System.out.println("find exe in dir=" + appDir);
-			File[] filesInAppDir = appDir.listFiles(new FilenameFilter() {
+			// Application is an EXE file in selfAppPath
+			File[] filesInAppDir = selfInstDir.listFiles(new FilenameFilter() {
 				@Override
 				public boolean accept(File dir, String name) {
 					return name.toLowerCase().endsWith(".exe");
 				}
 			});
-			System.out.println("found=" + Arrays.toString(filesInAppDir));
+			if (log.isLoggable(Level.FINE)) log.fine("found exe=" + Arrays.toString(filesInAppDir)); 
 			if (filesInAppDir.length != 0) {
 				File appFile = filesInAppDir[0];
 				path.append("\"");
 				path.append(appFile.getAbsolutePath());
 				path.append("\" ");
-				System.out.println("exe=" + path);
 			} else {
-				throw new IllegalStateException("Failed to register application, EXE not found in " + appDir);
+				throw new IllegalStateException("Failed to register application, EXE not found in " + selfInstDir);
 			}
 
 		} else {
-
+			
 			// The returned path should not be longer than 256 (MAX_PATH)
 			// characters. Otherwise Outlook ignores the Addin. Although a VBS script is
 			// able to create the Addin.
@@ -81,6 +97,8 @@ public class RegUtil {
 
 			final File file = new File(mainClass.getName() + ".bat");
 			final String CRLF = "\r\n";
+			
+			if (log.isLoggable(Level.FINE)) log.fine("register " + file); 
 
 			path.append("pushd \"").append(file.getAbsoluteFile().getParent()).append("\"");
 			path.append(CRLF);
@@ -115,6 +133,7 @@ public class RegUtil {
 			path.append("\"");
 		}
 
+		if (log.isLoggable(Level.FINE)) log.fine(")getExecPath=" + path); 
 		return path.toString();
 	}
 

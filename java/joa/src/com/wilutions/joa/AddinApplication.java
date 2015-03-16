@@ -11,6 +11,9 @@
 package com.wilutions.joa;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -31,6 +34,8 @@ import com.wilutions.com.reg.RegUtil;
  * 
  */
 public class AddinApplication extends javafx.application.Application {
+	
+	private static Logger log = Logger.getLogger(AddinApplication.class.getName());
 
 	public static void main(String[] args) {
 		main(AddinApplication.class, AddinApplication.class, args);
@@ -38,9 +43,12 @@ public class AddinApplication extends javafx.application.Application {
 
 	public static void main(Class<? extends AddinApplication> mainClass, Class<? extends Application> fxappClass,
 			String[] args) {
+		
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "main(mainClass=" + mainClass + ", fxappClass=" + fxappClass + ", args=" + Arrays.toString(args));
 
 		try {
 			if (invokeParseCommandLine(mainClass, args)) {
+				if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Platform.exit();");
 				Platform.exit();
 			} else {
 				try {
@@ -49,21 +57,29 @@ public class AddinApplication extends javafx.application.Application {
 					// The module class is found via reflection. Its name has to
 					// be
 					// com.wilutions.com.module.Module
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "DispatchImpl.initCOM...");
 					DispatchImpl.initCOM(ComModule.getInstance());
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "DispatchImpl.initCOM OK");
 
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "launch...");
 					Application.launch(fxappClass, args);
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "launch OK");
 
 				} finally {
+					
 					// Kill thread pool
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "BackgTask.done()");
 					BackgTask.done();
 
 					// JoaDll.dumpComReferenceMap("before exit");
 
 					// Shutdown COM library: release class factories,
 					// top thread pools, etc.
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "DispatchImpl.doneCOM()");
 					DispatchImpl.doneCOM();
 
 					// Close log file
+					if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "JoaDll.nativeDoneLogger()");
 					JoaDll.nativeDoneLogger();
 				}
 
@@ -71,13 +87,16 @@ public class AddinApplication extends javafx.application.Application {
 
 		} catch (Throwable e) {
 			e.printStackTrace();
+			log.log(Level.SEVERE, "main failed", e);
 		}
 		finally {
 			// This call ensures that the application is terminated
 			// even if there are Swing windows visible.
+			if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "System.exit(0);");
 			System.exit(0);
 		}
 
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")main");
 	}
 
 	private static boolean invokeParseCommandLine(Class<? extends AddinApplication> addinMain, String[] args) throws ComException, InstantiationException, IllegalAccessException, IOException {
@@ -85,7 +104,7 @@ public class AddinApplication extends javafx.application.Application {
 	}
 
 	public boolean parseCommandLine(String[] args) throws ComException, IOException {
-
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "parseCommandLine(" + Arrays.toString(args));
 		Command command = Command.Run;
 		boolean userNotMachine = false;
 		String logFile = "";
@@ -97,6 +116,7 @@ public class AddinApplication extends javafx.application.Application {
 
 			String arg_i = args[argIdx];
 			String arg_i1 = (argIdx + 1 < args.length) ? args[argIdx + 1] : "";
+			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "arg_i=" + arg_i + ", arg_i1=" + arg_i1);
 
 			if (arg_i == null) {
 			} else if (arg_i.equals("/Version")) {
@@ -126,6 +146,8 @@ public class AddinApplication extends javafx.application.Application {
 			if (logLevel != null && logLevel.length() == 0) {
 				logLevel = "INFO";
 			}
+			
+			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "DispatchImpl.initLogger(" + logFile + ", " + logLevel + ", " + logAppend);
 			DispatchImpl.initLogger(logFile, logLevel, logAppend);
 		}
 
@@ -149,18 +171,22 @@ public class AddinApplication extends javafx.application.Application {
 		default:
 		}
 
-		return command != Command.Run;
+		boolean ret = command != Command.Run;
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")parseCommandLine=" + ret);
+		return ret;
 	}
 
 	protected void unregister(boolean userNotMachine) {
 		String regfor = userNotMachine ? "user" : "machine";
 		System.out.println("Unregister for " + regfor);
+		if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Unregister for " + regfor);
 		ComModule.getInstance().unregister(userNotMachine);
 	}
 
 	protected void register(boolean userNotMachine, String execPath) {
 		String regfor = userNotMachine ? "user" : "machine";
 		System.out.println("Register for " + regfor + " at path=" + execPath);
+		if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Register for " + regfor + " at path=" + execPath);
 		ComModule.getInstance().register(userNotMachine, execPath);
 	}
 
