@@ -10,6 +10,9 @@
  */
 package com.wilutions.joa.outlook.ex;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.IDispatch;
@@ -129,12 +132,14 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 	@Override
 	public void onNewExplorer(_Explorer expl) throws ComException {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "getMyExplorerWrapper(");
 		Explorer explorer = expl.as(Explorer.class);
 		ExplorerWrapper explorerWrapper = createExplorerWrapper(explorer);
 		if (explorerWrapper == null) {
 			explorerWrapper = new ExplorerWrapper(explorer);
 		}
 		ExplorerWrappers.add(explorerWrapper);
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")getMyExplorerWrapper");
 	}
 
 	protected ExplorerWrapper createExplorerWrapper(Explorer explorer) {
@@ -144,4 +149,6 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public ExplorerWrapper getExplorerWrapper(Explorer explorer) {
 		return ExplorerWrappers.get(explorer);
 	}
+	
+	private Logger log = Logger.getLogger("OutlookAddinEx");
 }
