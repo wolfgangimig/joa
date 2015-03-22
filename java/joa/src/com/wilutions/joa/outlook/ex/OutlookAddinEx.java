@@ -133,12 +133,14 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	@Override
 	public void onNewExplorer(_Explorer expl) throws ComException {
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "getMyExplorerWrapper(");
-		Explorer explorer = expl.as(Explorer.class);
-		ExplorerWrapper explorerWrapper = createExplorerWrapper(explorer);
-		if (explorerWrapper == null) {
-			explorerWrapper = new ExplorerWrapper(explorer);
+		if (expl != null) {
+			Explorer explorer = expl.as(Explorer.class);
+			ExplorerWrapper explorerWrapper = createExplorerWrapper(explorer);
+			if (explorerWrapper == null) {
+				explorerWrapper = new ExplorerWrapper(explorer);
+			}
+			ExplorerWrappers.add(explorerWrapper);
 		}
-		ExplorerWrappers.add(explorerWrapper);
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")getMyExplorerWrapper");
 	}
 
