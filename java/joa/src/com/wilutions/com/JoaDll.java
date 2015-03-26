@@ -206,4 +206,6 @@ public class JoaDll {
 	public static native void nativeActivateSceneInDialog(long hwnd);
 	
 	public static native String nativeGetModuleFileName();
+	
+	public static native void nativeCreateShortcut(String linkName, String targetName, String description);
 }

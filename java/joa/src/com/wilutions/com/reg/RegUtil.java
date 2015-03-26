@@ -82,7 +82,7 @@ public class RegUtil {
 				File appFile = filesInAppDir[0];
 				path.append("\"");
 				path.append(appFile.getAbsolutePath());
-				path.append("\" ");
+				path.append("\"");
 			} else {
 				throw new IllegalStateException("Failed to register application, EXE not found in " + selfInstDir);
 			}
