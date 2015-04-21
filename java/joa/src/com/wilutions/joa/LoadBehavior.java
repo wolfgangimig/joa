@@ -30,9 +30,17 @@ public enum LoadBehavior {
 	 * Outlook loads the Adding during startup. This is shown in the splash screen.
 	 * The method {@link IDTExtensibiltiy2#onConnection(com.wilutions.com.Dispatch, int, com.wilutions.com.Dispatch, com.wilutions.com.ByRef)}
 	 * is called with {@link ext_ConnectMode#ext_cm_Startup}.
-	 * If the Addin loads slowely, Outlook might decide to set the load state to {@link #DoNotLoad}.
+	 * If the Addin loads slowly, Outlook might decide to set the load state to {@link #DoNotLoad}.
 	 */
 	LoadOnStart(3),
+	
+	/**
+	 * The Addin is loaded on startup by the JOA Util Addin.
+	 * With this option, the Addin is loaded in the onStartupComplete of the JAO Util Addin. 
+	 * Outlook does not track the load time under this mode and it does not disable the Addin,
+	 * if it requires a long time to load. 
+	 */
+	LoadByJoaUtil(4),
 	
 	/**
 	 * The Addin is loaded on demand.
