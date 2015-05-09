@@ -17,7 +17,7 @@ public class IMsoAxisTitleImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(1610743810)  public com.wilutions.mslib.office.IMsoCharacters getCharacters(final Object Start, final Object Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
-    final Object obj = this._dispatchCall(1610743810,"Characters", DISPATCH_PROPERTYGET,null,Start,Length);
+    final Object obj = this._dispatchCall(1610743810,"Characters", DISPATCH_PROPERTYGET,null,Variant.param(Start),Variant.param(Length));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.IMsoCharactersImpl.class);
   }

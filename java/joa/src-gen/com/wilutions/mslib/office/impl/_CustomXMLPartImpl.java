@@ -42,7 +42,7 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
     return disp.as(com.wilutions.mslib.office.CustomXMLSchemaCollection.class);
   }
   @DeclDISPID(1610809348)  public void setSchemaCollection(final com.wilutions.mslib.office.CustomXMLSchemaCollection value) throws ComException {
-    this._dispatchCall(1610809348,"SchemaCollection", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(1610809348,"SchemaCollection", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(1610809350)  public com.wilutions.mslib.office.CustomXMLPrefixMappings getNamespaceManager() throws ComException {
     final Object obj = this._dispatchCall(1610809350,"NamespaceManager", DISPATCH_PROPERTYGET,null);
@@ -59,7 +59,7 @@ public class _CustomXMLPartImpl extends Dispatch implements com.wilutions.mslib.
     assert(NamespaceURI != null);
     assert(NodeType != null);
     assert(NodeValue != null);
-    this._dispatchCall(1610809352,"AddNode", DISPATCH_METHOD,null,(Parent!=null?Parent:Dispatch.NULL),Name,NamespaceURI,(NextSibling!=null?NextSibling:Dispatch.NULL),NodeType.value,NodeValue);
+    this._dispatchCall(1610809352,"AddNode", DISPATCH_METHOD,null,Dispatch.param(Parent),Name,NamespaceURI,Dispatch.param(NextSibling),NodeType.value,NodeValue);
   }
   @DeclDISPID(1610809353)  public void Delete() throws ComException {
     this._dispatchCall(1610809353,"Delete", DISPATCH_METHOD,null);

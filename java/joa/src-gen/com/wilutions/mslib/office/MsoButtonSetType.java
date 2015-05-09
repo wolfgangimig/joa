@@ -76,7 +76,6 @@ public class MsoButtonSetType implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "msoButtonSetBackNextClose";
-    case 10: return "msoButtonSetAbortRetryIgnore";
     case 0: return "msoButtonSetNone";
     case 1: return "msoButtonSetOK";
     case 2: return "msoButtonSetCancel";
@@ -86,6 +85,7 @@ public class MsoButtonSetType implements ComEnum {
     case 6: return "msoButtonSetBackClose";
     case 7: return "msoButtonSetNextClose";
     case 9: return "msoButtonSetRetryCancel";
+    case 10: return "msoButtonSetAbortRetryIgnore";
     case 11: return "msoButtonSetSearchClose";
     case 12: return "msoButtonSetBackNextSnooze";
     case 13: return "msoButtonSetTipsOptionsClose";
@@ -94,7 +94,6 @@ public class MsoButtonSetType implements ComEnum {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|msoButtonSetBackNextClose");
-      if ((value & 10) != 0) sbuf.append("|msoButtonSetAbortRetryIgnore");
       if ((value & 0) != 0) sbuf.append("|msoButtonSetNone");
       if ((value & 1) != 0) sbuf.append("|msoButtonSetOK");
       if ((value & 2) != 0) sbuf.append("|msoButtonSetCancel");
@@ -104,6 +103,7 @@ public class MsoButtonSetType implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|msoButtonSetBackClose");
       if ((value & 7) != 0) sbuf.append("|msoButtonSetNextClose");
       if ((value & 9) != 0) sbuf.append("|msoButtonSetRetryCancel");
+      if ((value & 10) != 0) sbuf.append("|msoButtonSetAbortRetryIgnore");
       if ((value & 11) != 0) sbuf.append("|msoButtonSetSearchClose");
       if ((value & 12) != 0) sbuf.append("|msoButtonSetBackNextSnooze");
       if ((value & 13) != 0) sbuf.append("|msoButtonSetTipsOptionsClose");

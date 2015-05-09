@@ -114,17 +114,15 @@ public class MsoLightRigType implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoLightRigLegacyNormal3";
     case -2: return "msoLightRigMixed";
-    case 2: return "msoLightRigLegacyFlat2";
     case 1: return "msoLightRigLegacyFlat1";
+    case 2: return "msoLightRigLegacyFlat2";
     case 3: return "msoLightRigLegacyFlat3";
     case 4: return "msoLightRigLegacyFlat4";
     case 5: return "msoLightRigLegacyNormal1";
     case 6: return "msoLightRigLegacyNormal2";
-    case 7: return "msoLightRigLegacyNormal3";
-    case 18: return "msoLightRigContrasting";
     case 8: return "msoLightRigLegacyNormal4";
-    case 20: return "msoLightRigSunrise";
     case 9: return "msoLightRigLegacyHarsh1";
     case 10: return "msoLightRigLegacyHarsh2";
     case 11: return "msoLightRigLegacyHarsh3";
@@ -134,8 +132,10 @@ public class MsoLightRigType implements ComEnum {
     case 15: return "msoLightRigSoft";
     case 16: return "msoLightRigHarsh";
     case 17: return "msoLightRigFlood";
-    case 19: return "msoLightRigMorning";
     case 21: return "msoLightRigSunset";
+    case 18: return "msoLightRigContrasting";
+    case 20: return "msoLightRigSunrise";
+    case 19: return "msoLightRigMorning";
     case 22: return "msoLightRigChilly";
     case 23: return "msoLightRigFreezing";
     case 24: return "msoLightRigFlat";
@@ -145,17 +145,15 @@ public class MsoLightRigType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoLightRigLegacyNormal3");
       if ((value & -2) != 0) sbuf.append("|msoLightRigMixed");
-      if ((value & 2) != 0) sbuf.append("|msoLightRigLegacyFlat2");
       if ((value & 1) != 0) sbuf.append("|msoLightRigLegacyFlat1");
+      if ((value & 2) != 0) sbuf.append("|msoLightRigLegacyFlat2");
       if ((value & 3) != 0) sbuf.append("|msoLightRigLegacyFlat3");
       if ((value & 4) != 0) sbuf.append("|msoLightRigLegacyFlat4");
       if ((value & 5) != 0) sbuf.append("|msoLightRigLegacyNormal1");
       if ((value & 6) != 0) sbuf.append("|msoLightRigLegacyNormal2");
-      if ((value & 7) != 0) sbuf.append("|msoLightRigLegacyNormal3");
-      if ((value & 18) != 0) sbuf.append("|msoLightRigContrasting");
       if ((value & 8) != 0) sbuf.append("|msoLightRigLegacyNormal4");
-      if ((value & 20) != 0) sbuf.append("|msoLightRigSunrise");
       if ((value & 9) != 0) sbuf.append("|msoLightRigLegacyHarsh1");
       if ((value & 10) != 0) sbuf.append("|msoLightRigLegacyHarsh2");
       if ((value & 11) != 0) sbuf.append("|msoLightRigLegacyHarsh3");
@@ -165,8 +163,10 @@ public class MsoLightRigType implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|msoLightRigSoft");
       if ((value & 16) != 0) sbuf.append("|msoLightRigHarsh");
       if ((value & 17) != 0) sbuf.append("|msoLightRigFlood");
-      if ((value & 19) != 0) sbuf.append("|msoLightRigMorning");
       if ((value & 21) != 0) sbuf.append("|msoLightRigSunset");
+      if ((value & 18) != 0) sbuf.append("|msoLightRigContrasting");
+      if ((value & 20) != 0) sbuf.append("|msoLightRigSunrise");
+      if ((value & 19) != 0) sbuf.append("|msoLightRigMorning");
       if ((value & 22) != 0) sbuf.append("|msoLightRigChilly");
       if ((value & 23) != 0) sbuf.append("|msoLightRigFreezing");
       if ((value & 24) != 0) sbuf.append("|msoLightRigFlat");

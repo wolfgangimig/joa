@@ -42,17 +42,17 @@ public class MsoTextStrike implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoDoubleStrike";
     case -2: return "msoStrikeMixed";
     case 0: return "msoNoStrike";
     case 1: return "msoSingleStrike";
+    case 2: return "msoDoubleStrike";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoDoubleStrike");
       if ((value & -2) != 0) sbuf.append("|msoStrikeMixed");
       if ((value & 0) != 0) sbuf.append("|msoNoStrike");
       if ((value & 1) != 0) sbuf.append("|msoSingleStrike");
+      if ((value & 2) != 0) sbuf.append("|msoDoubleStrike");
       return sbuf.toString();
       }
     }

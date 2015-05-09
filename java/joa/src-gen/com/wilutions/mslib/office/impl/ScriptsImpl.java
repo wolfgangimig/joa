@@ -42,7 +42,7 @@ public class ScriptsImpl extends Dispatch implements com.wilutions.mslib.office.
     assert(Id != null);
     assert(Extended != null);
     assert(ScriptText != null);
-    final Object obj = this._dispatchCall(1610809348,"Add", DISPATCH_METHOD,null,(Anchor!=null?Anchor:Dispatch.NULL),Location.value,Language.value,Id,Extended,ScriptText);
+    final Object obj = this._dispatchCall(1610809348,"Add", DISPATCH_METHOD,null,Dispatch.param(Anchor),Location.value,Language.value,Id,Extended,ScriptText);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ScriptImpl.class);
   }

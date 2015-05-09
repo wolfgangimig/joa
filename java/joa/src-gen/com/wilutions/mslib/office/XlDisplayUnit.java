@@ -63,31 +63,31 @@ public class XlDisplayUnit implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case -4142: return "xlDisplayUnitNone";
     case -2: return "xlHundreds";
     case -10: return "xlMillionMillions";
     case -3: return "xlThousands";
     case -4: return "xlTenThousands";
     case -5: return "xlHundredThousands";
     case -6: return "xlMillions";
-    case -4114: return "xlDisplayUnitCustom";
     case -7: return "xlTenMillions";
     case -8: return "xlHundredMillions";
     case -9: return "xlThousandMillions";
+    case -4114: return "xlDisplayUnitCustom";
+    case -4142: return "xlDisplayUnitNone";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & -4142) != 0) sbuf.append("|xlDisplayUnitNone");
       if ((value & -2) != 0) sbuf.append("|xlHundreds");
       if ((value & -10) != 0) sbuf.append("|xlMillionMillions");
       if ((value & -3) != 0) sbuf.append("|xlThousands");
       if ((value & -4) != 0) sbuf.append("|xlTenThousands");
       if ((value & -5) != 0) sbuf.append("|xlHundredThousands");
       if ((value & -6) != 0) sbuf.append("|xlMillions");
-      if ((value & -4114) != 0) sbuf.append("|xlDisplayUnitCustom");
       if ((value & -7) != 0) sbuf.append("|xlTenMillions");
       if ((value & -8) != 0) sbuf.append("|xlHundredMillions");
       if ((value & -9) != 0) sbuf.append("|xlThousandMillions");
+      if ((value & -4114) != 0) sbuf.append("|xlDisplayUnitCustom");
+      if ((value & -4142) != 0) sbuf.append("|xlDisplayUnitNone");
       return sbuf.toString();
       }
     }

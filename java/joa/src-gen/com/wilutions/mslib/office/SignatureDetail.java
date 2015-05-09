@@ -96,9 +96,7 @@ public class SignatureDetail implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 18: return "sigdetDelSuggSignerLine2";
     case 8: return "sigdetColorDepth";
-    case 10: return "sigdetDocPreviewImg";
     case 0: return "sigdetLocalSigningTime";
     case 1: return "sigdetApplicationName";
     case 2: return "sigdetApplicationVersion";
@@ -107,8 +105,8 @@ public class SignatureDetail implements ComEnum {
     case 5: return "sigdetNumberOfMonitors";
     case 6: return "sigdetHorizResolution";
     case 7: return "sigdetVertResolution";
-    case 20: return "sigdetDelSuggSignerEmail";
     case 9: return "sigdetSignedData";
+    case 10: return "sigdetDocPreviewImg";
     case 11: return "sigdetIPFormHash";
     case 12: return "sigdetIPCurrentView";
     case 13: return "sigdetSignatureType";
@@ -116,14 +114,14 @@ public class SignatureDetail implements ComEnum {
     case 15: return "sigdetShouldShowViewWarning";
     case 16: return "sigdetDelSuggSigner";
     case 17: return "sigdetDelSuggSignerSet";
-    case 19: return "sigdetDelSuggSignerLine2Set";
     case 21: return "sigdetDelSuggSignerEmailSet";
+    case 18: return "sigdetDelSuggSignerLine2";
+    case 20: return "sigdetDelSuggSignerEmail";
+    case 19: return "sigdetDelSuggSignerLine2Set";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 18) != 0) sbuf.append("|sigdetDelSuggSignerLine2");
       if ((value & 8) != 0) sbuf.append("|sigdetColorDepth");
-      if ((value & 10) != 0) sbuf.append("|sigdetDocPreviewImg");
       if ((value & 0) != 0) sbuf.append("|sigdetLocalSigningTime");
       if ((value & 1) != 0) sbuf.append("|sigdetApplicationName");
       if ((value & 2) != 0) sbuf.append("|sigdetApplicationVersion");
@@ -132,8 +130,8 @@ public class SignatureDetail implements ComEnum {
       if ((value & 5) != 0) sbuf.append("|sigdetNumberOfMonitors");
       if ((value & 6) != 0) sbuf.append("|sigdetHorizResolution");
       if ((value & 7) != 0) sbuf.append("|sigdetVertResolution");
-      if ((value & 20) != 0) sbuf.append("|sigdetDelSuggSignerEmail");
       if ((value & 9) != 0) sbuf.append("|sigdetSignedData");
+      if ((value & 10) != 0) sbuf.append("|sigdetDocPreviewImg");
       if ((value & 11) != 0) sbuf.append("|sigdetIPFormHash");
       if ((value & 12) != 0) sbuf.append("|sigdetIPCurrentView");
       if ((value & 13) != 0) sbuf.append("|sigdetSignatureType");
@@ -141,8 +139,10 @@ public class SignatureDetail implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|sigdetShouldShowViewWarning");
       if ((value & 16) != 0) sbuf.append("|sigdetDelSuggSigner");
       if ((value & 17) != 0) sbuf.append("|sigdetDelSuggSignerSet");
-      if ((value & 19) != 0) sbuf.append("|sigdetDelSuggSignerLine2Set");
       if ((value & 21) != 0) sbuf.append("|sigdetDelSuggSignerEmailSet");
+      if ((value & 18) != 0) sbuf.append("|sigdetDelSuggSignerLine2");
+      if ((value & 20) != 0) sbuf.append("|sigdetDelSuggSignerEmail");
+      if ((value & 19) != 0) sbuf.append("|sigdetDelSuggSignerLine2Set");
       return sbuf.toString();
       }
     }

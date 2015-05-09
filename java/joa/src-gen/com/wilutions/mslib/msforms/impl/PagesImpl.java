@@ -30,7 +30,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.msforms.P
     assert(bstrName != null);
     assert(bstrCaption != null);
     assert(lIndex != null);
-    final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,bstrName,bstrCaption,lIndex);
+    final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,Variant.param(bstrName),Variant.param(bstrCaption),Variant.param(lIndex));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Page.class);

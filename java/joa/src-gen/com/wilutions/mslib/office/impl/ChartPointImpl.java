@@ -210,7 +210,7 @@ public class ChartPointImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(ShowPercentage != null);
     assert(ShowBubbleSize != null);
     assert(Separator != null);
-    final Object obj = this._dispatchCall(1922,"ApplyDataLabels", DISPATCH_METHOD,null,Type.value,IMsoLegendKey,AutoText,HasLeaderLines,ShowSeriesName,ShowCategoryName,ShowValue,ShowPercentage,ShowBubbleSize,Separator);
+    final Object obj = this._dispatchCall(1922,"ApplyDataLabels", DISPATCH_METHOD,null,Type.value,Variant.param(IMsoLegendKey),Variant.param(AutoText),Variant.param(HasLeaderLines),Variant.param(ShowSeriesName),Variant.param(ShowCategoryName),Variant.param(ShowValue),Variant.param(ShowPercentage),Variant.param(ShowBubbleSize),Variant.param(Separator));
     if (obj == null) return null;
     return (Object)obj;
   }

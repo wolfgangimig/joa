@@ -6,7 +6,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{C09B9A3F-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _CommandBarComboBoxEventsImpl extends Dispatch implements com.wilutions.mslib.office._CommandBarComboBoxEvents {
   @DeclDISPID(1)  public void onChange(final com.wilutions.mslib.office.CommandBarComboBox Ctrl) throws ComException {
-    this._dispatchCall(1,"Change", DISPATCH_METHOD,null,(Ctrl!=null?Ctrl:Dispatch.NULL));
+    this._dispatchCall(1,"Change", DISPATCH_METHOD,null,Dispatch.param(Ctrl));
   }
   public _CommandBarComboBoxEventsImpl(String progId) throws ComException {
     super(progId, "{000C0354-0000-0000-C000-000000000046}");

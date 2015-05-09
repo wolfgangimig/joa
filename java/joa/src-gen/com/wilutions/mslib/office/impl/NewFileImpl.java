@@ -20,7 +20,7 @@ public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.
     assert(Section != null);
     assert(DisplayName != null);
     assert(Action != null);
-    final Object obj = this._dispatchCall(1,"Add", DISPATCH_METHOD,null,FileName,Section,DisplayName,Action);
+    final Object obj = this._dispatchCall(1,"Add", DISPATCH_METHOD,null,FileName,Variant.param(Section),Variant.param(DisplayName),Variant.param(Action));
     if (obj == null) return null;
     return (Boolean)obj;
   }
@@ -29,7 +29,7 @@ public class NewFileImpl extends Dispatch implements com.wilutions.mslib.office.
     assert(Section != null);
     assert(DisplayName != null);
     assert(Action != null);
-    final Object obj = this._dispatchCall(2,"Remove", DISPATCH_METHOD,null,FileName,Section,DisplayName,Action);
+    final Object obj = this._dispatchCall(2,"Remove", DISPATCH_METHOD,null,FileName,Variant.param(Section),Variant.param(DisplayName),Variant.param(Action));
     if (obj == null) return null;
     return (Boolean)obj;
   }

@@ -48,21 +48,21 @@ public class MsoAlertCancelType implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 4: return "msoAlertCancelFifth";
     case -1: return "msoAlertCancelDefault";
     case 0: return "msoAlertCancelFirst";
     case 1: return "msoAlertCancelSecond";
     case 2: return "msoAlertCancelThird";
     case 3: return "msoAlertCancelFourth";
-    case 4: return "msoAlertCancelFifth";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 4) != 0) sbuf.append("|msoAlertCancelFifth");
       if ((value & -1) != 0) sbuf.append("|msoAlertCancelDefault");
       if ((value & 0) != 0) sbuf.append("|msoAlertCancelFirst");
       if ((value & 1) != 0) sbuf.append("|msoAlertCancelSecond");
       if ((value & 2) != 0) sbuf.append("|msoAlertCancelThird");
       if ((value & 3) != 0) sbuf.append("|msoAlertCancelFourth");
-      if ((value & 4) != 0) sbuf.append("|msoAlertCancelFifth");
       return sbuf.toString();
       }
     }

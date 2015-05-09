@@ -36,7 +36,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtLayoutImpl.class);
   }
   @DeclDISPID(4)  public void setLayout(final com.wilutions.mslib.office.SmartArtLayout value) throws ComException {
-    this._dispatchCall(4,"Layout", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(4,"Layout", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(5)  public com.wilutions.mslib.office.SmartArtQuickStyle getQuickStyle() throws ComException {
     final Object obj = this._dispatchCall(5,"QuickStyle", DISPATCH_PROPERTYGET,null);
@@ -44,7 +44,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtQuickStyleImpl.class);
   }
   @DeclDISPID(5)  public void setQuickStyle(final com.wilutions.mslib.office.SmartArtQuickStyle value) throws ComException {
-    this._dispatchCall(5,"QuickStyle", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(5,"QuickStyle", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(6)  public com.wilutions.mslib.office.SmartArtColor getColor() throws ComException {
     final Object obj = this._dispatchCall(6,"Color", DISPATCH_PROPERTYGET,null);
@@ -52,7 +52,7 @@ public class SmartArtImpl extends Dispatch implements com.wilutions.mslib.office
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtColorImpl.class);
   }
   @DeclDISPID(6)  public void setColor(final com.wilutions.mslib.office.SmartArtColor value) throws ComException {
-    this._dispatchCall(6,"Color", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(6,"Color", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(7)  public com.wilutions.mslib.office.MsoTriState getReverse() throws ComException {
     final Object obj = this._dispatchCall(7,"Reverse", DISPATCH_PROPERTYGET,null);

@@ -82,7 +82,6 @@ public class MsoSyncErrorType implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "msoSyncErrorVirusDownload";
-    case 10: return "msoSyncErrorUnknownDownload";
     case 0: return "msoSyncErrorNone";
     case 1: return "msoSyncErrorUnauthorizedUser";
     case 2: return "msoSyncErrorCouldNotConnect";
@@ -92,6 +91,7 @@ public class MsoSyncErrorType implements ComEnum {
     case 6: return "msoSyncErrorFileInUse";
     case 7: return "msoSyncErrorVirusUpload";
     case 9: return "msoSyncErrorUnknownUpload";
+    case 10: return "msoSyncErrorUnknownDownload";
     case 11: return "msoSyncErrorCouldNotOpen";
     case 12: return "msoSyncErrorCouldNotUpdate";
     case 13: return "msoSyncErrorCouldNotCompare";
@@ -102,7 +102,6 @@ public class MsoSyncErrorType implements ComEnum {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|msoSyncErrorVirusDownload");
-      if ((value & 10) != 0) sbuf.append("|msoSyncErrorUnknownDownload");
       if ((value & 0) != 0) sbuf.append("|msoSyncErrorNone");
       if ((value & 1) != 0) sbuf.append("|msoSyncErrorUnauthorizedUser");
       if ((value & 2) != 0) sbuf.append("|msoSyncErrorCouldNotConnect");
@@ -112,6 +111,7 @@ public class MsoSyncErrorType implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|msoSyncErrorFileInUse");
       if ((value & 7) != 0) sbuf.append("|msoSyncErrorVirusUpload");
       if ((value & 9) != 0) sbuf.append("|msoSyncErrorUnknownUpload");
+      if ((value & 10) != 0) sbuf.append("|msoSyncErrorUnknownDownload");
       if ((value & 11) != 0) sbuf.append("|msoSyncErrorCouldNotOpen");
       if ((value & 12) != 0) sbuf.append("|msoSyncErrorCouldNotUpdate");
       if ((value & 13) != 0) sbuf.append("|msoSyncErrorCouldNotCompare");

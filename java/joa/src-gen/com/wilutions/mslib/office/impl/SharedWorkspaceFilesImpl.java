@@ -36,7 +36,7 @@ public class SharedWorkspaceFilesImpl extends Dispatch implements com.wilutions.
     assert(ParentFolder != null);
     assert(OverwriteIfFileAlreadyExists != null);
     assert(KeepInSync != null);
-    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,FileName,ParentFolder,OverwriteIfFileAlreadyExists,KeepInSync);
+    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,FileName,Variant.param(ParentFolder),Variant.param(OverwriteIfFileAlreadyExists),Variant.param(KeepInSync));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceFileImpl.class);
   }

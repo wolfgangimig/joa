@@ -22,7 +22,7 @@ public class SharedWorkspaceFolderImpl extends Dispatch implements com.wilutions
   }
   @DeclDISPID(1)  public void Delete(final Object DeleteEventIfFolderContainsFiles) throws ComException {
     assert(DeleteEventIfFolderContainsFiles != null);
-    this._dispatchCall(1,"Delete", DISPATCH_METHOD,null,DeleteEventIfFolderContainsFiles);
+    this._dispatchCall(1,"Delete", DISPATCH_METHOD,null,Variant.param(DeleteEventIfFolderContainsFiles));
   }
   @DeclDISPID(2)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(2,"Parent", DISPATCH_PROPERTYGET,null);

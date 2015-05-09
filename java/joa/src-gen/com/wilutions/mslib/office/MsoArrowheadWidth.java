@@ -42,16 +42,16 @@ public class MsoArrowheadWidth implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoArrowheadWidthMedium";
     case -2: return "msoArrowheadWidthMixed";
     case 1: return "msoArrowheadNarrow";
+    case 2: return "msoArrowheadWidthMedium";
     case 3: return "msoArrowheadWide";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoArrowheadWidthMedium");
       if ((value & -2) != 0) sbuf.append("|msoArrowheadWidthMixed");
       if ((value & 1) != 0) sbuf.append("|msoArrowheadNarrow");
+      if ((value & 2) != 0) sbuf.append("|msoArrowheadWidthMedium");
       if ((value & 3) != 0) sbuf.append("|msoArrowheadWide");
       return sbuf.toString();
       }

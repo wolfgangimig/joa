@@ -51,9 +51,9 @@ public class MsoArrowheadStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoArrowheadTriangle";
     case -2: return "msoArrowheadStyleMixed";
     case 1: return "msoArrowheadNone";
+    case 2: return "msoArrowheadTriangle";
     case 3: return "msoArrowheadOpen";
     case 4: return "msoArrowheadStealth";
     case 5: return "msoArrowheadDiamond";
@@ -61,9 +61,9 @@ public class MsoArrowheadStyle implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoArrowheadTriangle");
       if ((value & -2) != 0) sbuf.append("|msoArrowheadStyleMixed");
       if ((value & 1) != 0) sbuf.append("|msoArrowheadNone");
+      if ((value & 2) != 0) sbuf.append("|msoArrowheadTriangle");
       if ((value & 3) != 0) sbuf.append("|msoArrowheadOpen");
       if ((value & 4) != 0) sbuf.append("|msoArrowheadStealth");
       if ((value & 5) != 0) sbuf.append("|msoArrowheadDiamond");

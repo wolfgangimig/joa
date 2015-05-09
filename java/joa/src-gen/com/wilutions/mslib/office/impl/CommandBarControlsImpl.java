@@ -21,7 +21,7 @@ public class CommandBarControlsImpl extends Dispatch implements com.wilutions.ms
     assert(Parameter != null);
     assert(Before != null);
     assert(Temporary != null);
-    final Object obj = this._dispatchCall(1610809344,"Add", DISPATCH_METHOD,null,Type,Id,Parameter,Before,Temporary);
+    final Object obj = this._dispatchCall(1610809344,"Add", DISPATCH_METHOD,null,Variant.param(Type),Variant.param(Id),Variant.param(Parameter),Variant.param(Before),Variant.param(Temporary));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }

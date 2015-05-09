@@ -51,9 +51,9 @@ public class MsoTextOrientation implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoTextOrientationUpward";
     case -2: return "msoTextOrientationMixed";
     case 1: return "msoTextOrientationHorizontal";
+    case 2: return "msoTextOrientationUpward";
     case 3: return "msoTextOrientationDownward";
     case 4: return "msoTextOrientationVerticalFarEast";
     case 5: return "msoTextOrientationVertical";
@@ -61,9 +61,9 @@ public class MsoTextOrientation implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoTextOrientationUpward");
       if ((value & -2) != 0) sbuf.append("|msoTextOrientationMixed");
       if ((value & 1) != 0) sbuf.append("|msoTextOrientationHorizontal");
+      if ((value & 2) != 0) sbuf.append("|msoTextOrientationUpward");
       if ((value & 3) != 0) sbuf.append("|msoTextOrientationDownward");
       if ((value & 4) != 0) sbuf.append("|msoTextOrientationVerticalFarEast");
       if ((value & 5) != 0) sbuf.append("|msoTextOrientationVertical");

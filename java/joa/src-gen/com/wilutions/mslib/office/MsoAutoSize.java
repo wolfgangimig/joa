@@ -42,17 +42,17 @@ public class MsoAutoSize implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoAutoSizeTextToFitShape";
     case -2: return "msoAutoSizeMixed";
     case 0: return "msoAutoSizeNone";
     case 1: return "msoAutoSizeShapeToFitText";
+    case 2: return "msoAutoSizeTextToFitShape";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoAutoSizeTextToFitShape");
       if ((value & -2) != 0) sbuf.append("|msoAutoSizeMixed");
       if ((value & 0) != 0) sbuf.append("|msoAutoSizeNone");
       if ((value & 1) != 0) sbuf.append("|msoAutoSizeShapeToFitText");
+      if ((value & 2) != 0) sbuf.append("|msoAutoSizeTextToFitShape");
       return sbuf.toString();
       }
     }

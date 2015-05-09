@@ -208,10 +208,10 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
   }
   @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
-    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
+    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Variant.param(Modal));
   }
   @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
-    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
+    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,Dispatch.param(DestFldr));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -224,7 +224,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
   @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
-    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
+    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Variant.param(Type));
   }
   @DeclDISPID(33301)  public Boolean getAllDayEvent() throws ComException {
     final Object obj = this._dispatchCall(33301,"AllDayEvent", DISPATCH_PROPERTYGET,null);
@@ -422,7 +422,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
     assert(Response != null);
     assert(fNoUI != null);
     assert(fAdditionalTextDialog != null);
-    final Object obj = this._dispatchCall(62722,"Respond", DISPATCH_METHOD,null,Response.value,fNoUI,fAdditionalTextDialog);
+    final Object obj = this._dispatchCall(62722,"Respond", DISPATCH_METHOD,null,Response.value,Variant.param(fNoUI),Variant.param(fAdditionalTextDialog));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.MeetingItem.class);
@@ -494,7 +494,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
   @DeclDISPID(64209)  public void setSendUsingAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
-    this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(64509)  public String getGlobalAppointmentID() throws ComException {
     final Object obj = this._dispatchCall(64509,"GlobalAppointmentID", DISPATCH_PROPERTYGET,null);
@@ -552,7 +552,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._TimeZoneImpl.class);
   }
   @DeclDISPID(64551)  public void setStartTimeZone(final com.wilutions.mslib.outlook._TimeZone value) throws ComException {
-    this._dispatchCall(64551,"StartTimeZone", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64551,"StartTimeZone", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(64552)  public com.wilutions.mslib.outlook._TimeZone getEndTimeZone() throws ComException {
     final Object obj = this._dispatchCall(64552,"EndTimeZone", DISPATCH_PROPERTYGET,null);
@@ -560,7 +560,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._TimeZoneImpl.class);
   }
   @DeclDISPID(64552)  public void setEndTimeZone(final com.wilutions.mslib.outlook._TimeZone value) throws ComException {
-    this._dispatchCall(64552,"EndTimeZone", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64552,"EndTimeZone", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(64596)  public com.wilutions.mslib.outlook._Conversation GetConversation() throws ComException {
     final Object obj = this._dispatchCall(64596,"GetConversation", DISPATCH_METHOD,null);
@@ -574,7 +574,7 @@ public class _AppointmentItemImpl extends Dispatch implements com.wilutions.msli
   }
   @DeclDISPID(64274)  public com.wilutions.mslib.outlook._AppointmentItem CopyTo(final com.wilutions.mslib.outlook.MAPIFolder DestinationFolder, final com.wilutions.mslib.outlook.OlAppointmentCopyOptions CopyOptions) throws ComException {
     assert(CopyOptions != null);
-    final Object obj = this._dispatchCall(64274,"CopyTo", DISPATCH_METHOD,null,(DestinationFolder!=null?DestinationFolder:Dispatch.NULL),CopyOptions.value);
+    final Object obj = this._dispatchCall(64274,"CopyTo", DISPATCH_METHOD,null,Dispatch.param(DestinationFolder),CopyOptions.value);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._AppointmentItemImpl.class);
   }

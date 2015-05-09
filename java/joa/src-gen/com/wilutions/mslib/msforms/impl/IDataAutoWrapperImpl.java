@@ -16,14 +16,14 @@ public class IDataAutoWrapperImpl extends Dispatch implements com.wilutions.msli
   }
   @DeclDISPID(1610743810)  public String GetText(final Object Format) throws ComException {
     assert(Format != null);
-    final Object obj = this._dispatchCall(1610743810,"GetText", DISPATCH_METHOD,null,Format);
+    final Object obj = this._dispatchCall(1610743810,"GetText", DISPATCH_METHOD,null,Variant.param(Format));
     if (obj == null) return null;
     return (String)obj;
   }
   @DeclDISPID(1610743811)  public void SetText(final String Text, final Object Format) throws ComException {
     assert(Text != null);
     assert(Format != null);
-    this._dispatchCall(1610743811,"SetText", DISPATCH_METHOD,null,Text,Format);
+    this._dispatchCall(1610743811,"SetText", DISPATCH_METHOD,null,Text,Variant.param(Format));
   }
   @DeclDISPID(1610743812)  public void PutInClipboard() throws ComException {
     this._dispatchCall(1610743812,"PutInClipboard", DISPATCH_METHOD,null);
@@ -33,7 +33,7 @@ public class IDataAutoWrapperImpl extends Dispatch implements com.wilutions.msli
   }
   @DeclDISPID(1610743814)  public com.wilutions.mslib.msforms.fmDropEffect StartDrag(final Object OKEffect) throws ComException {
     assert(OKEffect != null);
-    final Object obj = this._dispatchCall(1610743814,"StartDrag", DISPATCH_METHOD,null,OKEffect);
+    final Object obj = this._dispatchCall(1610743814,"StartDrag", DISPATCH_METHOD,null,Variant.param(OKEffect));
     if (obj == null) return null;
     return com.wilutions.mslib.msforms.fmDropEffect.valueOf((Integer)obj);
   }

@@ -54,25 +54,25 @@ public class MsoBarProtection implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 64: return "msoBarNoHorizontalDock";
     case 8: return "msoBarNoChangeVisible";
     case 0: return "msoBarNoProtection";
-    case 64: return "msoBarNoHorizontalDock";
     case 1: return "msoBarNoCustomize";
-    case 16: return "msoBarNoChangeDock";
     case 2: return "msoBarNoResize";
-    case 32: return "msoBarNoVerticalDock";
     case 4: return "msoBarNoMove";
+    case 16: return "msoBarNoChangeDock";
+    case 32: return "msoBarNoVerticalDock";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 64) != 0) sbuf.append("|msoBarNoHorizontalDock");
       if ((value & 8) != 0) sbuf.append("|msoBarNoChangeVisible");
       if ((value & 0) != 0) sbuf.append("|msoBarNoProtection");
-      if ((value & 64) != 0) sbuf.append("|msoBarNoHorizontalDock");
       if ((value & 1) != 0) sbuf.append("|msoBarNoCustomize");
-      if ((value & 16) != 0) sbuf.append("|msoBarNoChangeDock");
       if ((value & 2) != 0) sbuf.append("|msoBarNoResize");
-      if ((value & 32) != 0) sbuf.append("|msoBarNoVerticalDock");
       if ((value & 4) != 0) sbuf.append("|msoBarNoMove");
+      if ((value & 16) != 0) sbuf.append("|msoBarNoChangeDock");
+      if ((value & 32) != 0) sbuf.append("|msoBarNoVerticalDock");
       return sbuf.toString();
       }
     }

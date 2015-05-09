@@ -126,18 +126,21 @@ public class XlChartItem implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 18: return "xlUpBars";
     case 8: return "xlTrendline";
-    case 10: return "xlXErrorBars";
     case 0: return "xlDataLabel";
     case 2: return "xlChartArea";
     case 3: return "xlSeries";
     case 4: return "xlChartTitle";
+    case 32: return "xlPivotChartDropZone";
     case 5: return "xlWalls";
+    case 31: return "xlPivotChartFieldButton";
     case 6: return "xlCorners";
+    case 30: return "xlDisplayUnitLabel";
     case 7: return "xlDataTable";
-    case 20: return "xlDownBars";
     case 9: return "xlErrorBars";
+    case 29: return "xlLeaderLines";
+    case 10: return "xlXErrorBars";
+    case 28: return "xlNothing";
     case 11: return "xlYErrorBars";
     case 12: return "xlLegendEntry";
     case 13: return "xlLegendKey";
@@ -145,34 +148,34 @@ public class XlChartItem implements ComEnum {
     case 15: return "xlMajorGridlines";
     case 16: return "xlMinorGridlines";
     case 17: return "xlAxisTitle";
-    case 19: return "xlPlotArea";
     case 21: return "xlAxis";
+    case 18: return "xlUpBars";
+    case 20: return "xlDownBars";
+    case 19: return "xlPlotArea";
     case 22: return "xlSeriesLines";
     case 23: return "xlFloor";
     case 24: return "xlLegend";
     case 25: return "xlHiLoLines";
     case 26: return "xlDropLines";
     case 27: return "xlRadarAxisLabels";
-    case 28: return "xlNothing";
-    case 29: return "xlLeaderLines";
-    case 30: return "xlDisplayUnitLabel";
-    case 31: return "xlPivotChartFieldButton";
-    case 32: return "xlPivotChartDropZone";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 18) != 0) sbuf.append("|xlUpBars");
       if ((value & 8) != 0) sbuf.append("|xlTrendline");
-      if ((value & 10) != 0) sbuf.append("|xlXErrorBars");
       if ((value & 0) != 0) sbuf.append("|xlDataLabel");
       if ((value & 2) != 0) sbuf.append("|xlChartArea");
       if ((value & 3) != 0) sbuf.append("|xlSeries");
       if ((value & 4) != 0) sbuf.append("|xlChartTitle");
+      if ((value & 32) != 0) sbuf.append("|xlPivotChartDropZone");
       if ((value & 5) != 0) sbuf.append("|xlWalls");
+      if ((value & 31) != 0) sbuf.append("|xlPivotChartFieldButton");
       if ((value & 6) != 0) sbuf.append("|xlCorners");
+      if ((value & 30) != 0) sbuf.append("|xlDisplayUnitLabel");
       if ((value & 7) != 0) sbuf.append("|xlDataTable");
-      if ((value & 20) != 0) sbuf.append("|xlDownBars");
       if ((value & 9) != 0) sbuf.append("|xlErrorBars");
+      if ((value & 29) != 0) sbuf.append("|xlLeaderLines");
+      if ((value & 10) != 0) sbuf.append("|xlXErrorBars");
+      if ((value & 28) != 0) sbuf.append("|xlNothing");
       if ((value & 11) != 0) sbuf.append("|xlYErrorBars");
       if ((value & 12) != 0) sbuf.append("|xlLegendEntry");
       if ((value & 13) != 0) sbuf.append("|xlLegendKey");
@@ -180,19 +183,16 @@ public class XlChartItem implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|xlMajorGridlines");
       if ((value & 16) != 0) sbuf.append("|xlMinorGridlines");
       if ((value & 17) != 0) sbuf.append("|xlAxisTitle");
-      if ((value & 19) != 0) sbuf.append("|xlPlotArea");
       if ((value & 21) != 0) sbuf.append("|xlAxis");
+      if ((value & 18) != 0) sbuf.append("|xlUpBars");
+      if ((value & 20) != 0) sbuf.append("|xlDownBars");
+      if ((value & 19) != 0) sbuf.append("|xlPlotArea");
       if ((value & 22) != 0) sbuf.append("|xlSeriesLines");
       if ((value & 23) != 0) sbuf.append("|xlFloor");
       if ((value & 24) != 0) sbuf.append("|xlLegend");
       if ((value & 25) != 0) sbuf.append("|xlHiLoLines");
       if ((value & 26) != 0) sbuf.append("|xlDropLines");
       if ((value & 27) != 0) sbuf.append("|xlRadarAxisLabels");
-      if ((value & 28) != 0) sbuf.append("|xlNothing");
-      if ((value & 29) != 0) sbuf.append("|xlLeaderLines");
-      if ((value & 30) != 0) sbuf.append("|xlDisplayUnitLabel");
-      if ((value & 31) != 0) sbuf.append("|xlPivotChartFieldButton");
-      if ((value & 32) != 0) sbuf.append("|xlPivotChartDropZone");
       return sbuf.toString();
       }
     }

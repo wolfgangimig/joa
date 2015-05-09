@@ -39,15 +39,15 @@ public class MsoShadowStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoShadowStyleOuterShadow";
     case -2: return "msoShadowStyleMixed";
     case 1: return "msoShadowStyleInnerShadow";
+    case 2: return "msoShadowStyleOuterShadow";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoShadowStyleOuterShadow");
       if ((value & -2) != 0) sbuf.append("|msoShadowStyleMixed");
       if ((value & 1) != 0) sbuf.append("|msoShadowStyleInnerShadow");
+      if ((value & 2) != 0) sbuf.append("|msoShadowStyleOuterShadow");
       return sbuf.toString();
       }
     }

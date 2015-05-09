@@ -67,7 +67,6 @@ public class MsoBalloonErrorType implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "msoBalloonErrorBadCharacter";
-    case 10: return "msoBalloonErrorCharNotTopmostForModal";
     case 0: return "msoBalloonErrorNone";
     case 1: return "msoBalloonErrorOther";
     case 2: return "msoBalloonErrorTooBig";
@@ -77,12 +76,12 @@ public class MsoBalloonErrorType implements ComEnum {
     case 6: return "msoBalloonErrorButtonlessModal";
     case 7: return "msoBalloonErrorButtonModeless";
     case 9: return "msoBalloonErrorCOMFailure";
+    case 10: return "msoBalloonErrorCharNotTopmostForModal";
     case 11: return "msoBalloonErrorTooManyControls";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|msoBalloonErrorBadCharacter");
-      if ((value & 10) != 0) sbuf.append("|msoBalloonErrorCharNotTopmostForModal");
       if ((value & 0) != 0) sbuf.append("|msoBalloonErrorNone");
       if ((value & 1) != 0) sbuf.append("|msoBalloonErrorOther");
       if ((value & 2) != 0) sbuf.append("|msoBalloonErrorTooBig");
@@ -92,6 +91,7 @@ public class MsoBalloonErrorType implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|msoBalloonErrorButtonlessModal");
       if ((value & 7) != 0) sbuf.append("|msoBalloonErrorButtonModeless");
       if ((value & 9) != 0) sbuf.append("|msoBalloonErrorCOMFailure");
+      if ((value & 10) != 0) sbuf.append("|msoBalloonErrorCharNotTopmostForModal");
       if ((value & 11) != 0) sbuf.append("|msoBalloonErrorTooManyControls");
       return sbuf.toString();
       }

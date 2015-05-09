@@ -72,7 +72,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
-    this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(-521)  public com.wilutions.mslib.outlook.OlMousePointer getMousePointer() throws ComException {
     final Object obj = this._dispatchCall(-521,"MousePointer", DISPATCH_PROPERTYGET,null);
@@ -173,7 +173,7 @@ public class _OlkListBoxImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(-553)  public void AddItem(final String ItemText, final Object Index) throws ComException {
     assert(ItemText != null);
     assert(Index != null);
-    this._dispatchCall(-553,"AddItem", DISPATCH_METHOD,null,ItemText,Index);
+    this._dispatchCall(-553,"AddItem", DISPATCH_METHOD,null,ItemText,Variant.param(Index));
   }
   @DeclDISPID(-555)  public void RemoveItem(final Integer Index) throws ComException {
     assert(Index != null);

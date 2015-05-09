@@ -72,14 +72,14 @@ public class MsoBevelType implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoBevelSoftRound";
     case -2: return "msoBevelTypeMixed";
-    case 2: return "msoBevelRelaxedInset";
     case 1: return "msoBevelNone";
+    case 2: return "msoBevelRelaxedInset";
     case 3: return "msoBevelCircle";
     case 4: return "msoBevelSlope";
     case 5: return "msoBevelCross";
     case 6: return "msoBevelAngle";
-    case 7: return "msoBevelSoftRound";
     case 8: return "msoBevelConvex";
     case 9: return "msoBevelCoolSlant";
     case 10: return "msoBevelDivot";
@@ -89,14 +89,14 @@ public class MsoBevelType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoBevelSoftRound");
       if ((value & -2) != 0) sbuf.append("|msoBevelTypeMixed");
-      if ((value & 2) != 0) sbuf.append("|msoBevelRelaxedInset");
       if ((value & 1) != 0) sbuf.append("|msoBevelNone");
+      if ((value & 2) != 0) sbuf.append("|msoBevelRelaxedInset");
       if ((value & 3) != 0) sbuf.append("|msoBevelCircle");
       if ((value & 4) != 0) sbuf.append("|msoBevelSlope");
       if ((value & 5) != 0) sbuf.append("|msoBevelCross");
       if ((value & 6) != 0) sbuf.append("|msoBevelAngle");
-      if ((value & 7) != 0) sbuf.append("|msoBevelSoftRound");
       if ((value & 8) != 0) sbuf.append("|msoBevelConvex");
       if ((value & 9) != 0) sbuf.append("|msoBevelCoolSlant");
       if ((value & 10) != 0) sbuf.append("|msoBevelDivot");

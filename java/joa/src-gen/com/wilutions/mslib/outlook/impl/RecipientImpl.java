@@ -36,7 +36,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
   @DeclDISPID(121)  public void setAddressEntry(final com.wilutions.mslib.outlook.AddressEntry value) throws ComException {
-    this._dispatchCall(121,"AddressEntry", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(121,"AddressEntry", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(106)  public String getAutoResponse() throws ComException {
     final Object obj = this._dispatchCall(106,"AutoResponse", DISPATCH_PROPERTYGET,null);
@@ -111,7 +111,7 @@ public class RecipientImpl extends Dispatch implements com.wilutions.mslib.outlo
     assert(Start != null);
     assert(MinPerChar != null);
     assert(CompleteFormat != null);
-    final Object obj = this._dispatchCall(111,"FreeBusy", DISPATCH_METHOD,null,Start,MinPerChar,CompleteFormat);
+    final Object obj = this._dispatchCall(111,"FreeBusy", DISPATCH_METHOD,null,Start,MinPerChar,Variant.param(CompleteFormat));
     if (obj == null) return null;
     return (String)obj;
   }

@@ -30,7 +30,7 @@ public class MultiPage2 extends Dispatch implements IMultiPage {
     return new OLE_COLOR(als);
   }
   @DeclDISPID(-512)  public void setFont(final Font value) throws ComException {
-    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(-512)  public Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);

@@ -64,7 +64,6 @@ public class OlSaveAsType implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "olICal";
-    case 10: return "olMHTML";
     case 0: return "olTXT";
     case 1: return "olRTF";
     case 2: return "olTemplate";
@@ -74,11 +73,11 @@ public class OlSaveAsType implements ComEnum {
     case 6: return "olVCard";
     case 7: return "olVCal";
     case 9: return "olMSGUnicode";
+    case 10: return "olMHTML";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|olICal");
-      if ((value & 10) != 0) sbuf.append("|olMHTML");
       if ((value & 0) != 0) sbuf.append("|olTXT");
       if ((value & 1) != 0) sbuf.append("|olRTF");
       if ((value & 2) != 0) sbuf.append("|olTemplate");
@@ -88,6 +87,7 @@ public class OlSaveAsType implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|olVCard");
       if ((value & 7) != 0) sbuf.append("|olVCal");
       if ((value & 9) != 0) sbuf.append("|olMSGUnicode");
+      if ((value & 10) != 0) sbuf.append("|olMHTML");
       return sbuf.toString();
       }
     }

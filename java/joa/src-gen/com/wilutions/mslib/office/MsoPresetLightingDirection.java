@@ -60,27 +60,27 @@ public class MsoPresetLightingDirection implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoLightingBottomLeft";
     case -2: return "msoPresetLightingDirectionMixed";
-    case 2: return "msoLightingTop";
     case 1: return "msoLightingTopLeft";
+    case 2: return "msoLightingTop";
     case 3: return "msoLightingTopRight";
     case 4: return "msoLightingLeft";
     case 5: return "msoLightingNone";
     case 6: return "msoLightingRight";
-    case 7: return "msoLightingBottomLeft";
     case 8: return "msoLightingBottom";
     case 9: return "msoLightingBottomRight";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoLightingBottomLeft");
       if ((value & -2) != 0) sbuf.append("|msoPresetLightingDirectionMixed");
-      if ((value & 2) != 0) sbuf.append("|msoLightingTop");
       if ((value & 1) != 0) sbuf.append("|msoLightingTopLeft");
+      if ((value & 2) != 0) sbuf.append("|msoLightingTop");
       if ((value & 3) != 0) sbuf.append("|msoLightingTopRight");
       if ((value & 4) != 0) sbuf.append("|msoLightingLeft");
       if ((value & 5) != 0) sbuf.append("|msoLightingNone");
       if ((value & 6) != 0) sbuf.append("|msoLightingRight");
-      if ((value & 7) != 0) sbuf.append("|msoLightingBottomLeft");
       if ((value & 8) != 0) sbuf.append("|msoLightingBottom");
       if ((value & 9) != 0) sbuf.append("|msoLightingBottomRight");
       return sbuf.toString();

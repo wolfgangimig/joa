@@ -13,7 +13,7 @@ public class ExplorerEvents_10Impl extends Dispatch implements com.wilutions.msl
   }
   @DeclDISPID(61443)  public void onBeforeFolderSwitch(final IDispatch NewFolder, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61443,"BeforeFolderSwitch", DISPATCH_METHOD,null,(NewFolder!=null?NewFolder:Dispatch.NULL),Cancel);
+    this._dispatchCall(61443,"BeforeFolderSwitch", DISPATCH_METHOD,null,Dispatch.param(NewFolder),Cancel);
   }
   @DeclDISPID(61444)  public void onViewSwitch() throws ComException {
     this._dispatchCall(61444,"ViewSwitch", DISPATCH_METHOD,null);
@@ -59,7 +59,7 @@ public class ExplorerEvents_10Impl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(64016)  public void onBeforeItemPaste(final Object ClipboardContent, final com.wilutions.mslib.outlook.MAPIFolder Target, final ByRef<Boolean> Cancel) throws ComException {
     assert(ClipboardContent != null);
     assert(Cancel != null);
-    this._dispatchCall(64016,"BeforeItemPaste", DISPATCH_METHOD,null,ClipboardContent,(Target!=null?Target:Dispatch.NULL),Cancel);
+    this._dispatchCall(64016,"BeforeItemPaste", DISPATCH_METHOD,null,ClipboardContent,Dispatch.param(Target),Cancel);
   }
   @DeclDISPID(64633)  public void onAttachmentSelectionChange() throws ComException {
     this._dispatchCall(64633,"AttachmentSelectionChange", DISPATCH_METHOD,null);

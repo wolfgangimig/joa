@@ -42,7 +42,7 @@ public class TabsImpl extends Dispatch implements com.wilutions.mslib.msforms.Ta
     assert(bstrName != null);
     assert(bstrCaption != null);
     assert(lIndex != null);
-    final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,bstrName,bstrCaption,lIndex);
+    final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,Variant.param(bstrName),Variant.param(bstrCaption),Variant.param(lIndex));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.msforms.impl.TabImpl.class);
   }

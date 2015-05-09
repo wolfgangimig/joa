@@ -45,7 +45,7 @@ public class PickerDialogImpl extends Dispatch implements com.wilutions.mslib.of
   }
   @DeclDISPID(5)  public com.wilutions.mslib.office.PickerResults Show(final Boolean IsMultiSelect, final com.wilutions.mslib.office.PickerResults ExistingResults) throws ComException {
     assert(IsMultiSelect != null);
-    final Object obj = this._dispatchCall(5,"Show", DISPATCH_METHOD,null,IsMultiSelect,(ExistingResults!=null?ExistingResults:Dispatch.NULL));
+    final Object obj = this._dispatchCall(5,"Show", DISPATCH_METHOD,null,IsMultiSelect,Dispatch.param(ExistingResults));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerResultsImpl.class);
   }

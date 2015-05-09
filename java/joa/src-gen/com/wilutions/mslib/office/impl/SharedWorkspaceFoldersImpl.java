@@ -34,7 +34,7 @@ public class SharedWorkspaceFoldersImpl extends Dispatch implements com.wilution
   @DeclDISPID(2)  public com.wilutions.mslib.office.SharedWorkspaceFolder Add(final String FolderName, final Object ParentFolder) throws ComException {
     assert(FolderName != null);
     assert(ParentFolder != null);
-    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,FolderName,ParentFolder);
+    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,FolderName,Variant.param(ParentFolder));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceFolderImpl.class);
   }

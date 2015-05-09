@@ -40,7 +40,7 @@ public class SignatureInfoImpl extends Dispatch implements com.wilutions.mslib.o
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(4)  public void setSignatureImage(final com.wilutions.mslib.stdole.IPictureDisp value) throws ComException {
-    this._dispatchCall(4,"SignatureImage", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(4,"SignatureImage", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(5)  public String getSignatureComment() throws ComException {
     final Object obj = this._dispatchCall(5,"SignatureComment", DISPATCH_PROPERTYGET,null);

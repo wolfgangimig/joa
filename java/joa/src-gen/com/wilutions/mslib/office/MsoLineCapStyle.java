@@ -42,16 +42,16 @@ public class MsoLineCapStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoLineCapRound";
     case -2: return "msoLineCapMixed";
     case 1: return "msoLineCapSquare";
+    case 2: return "msoLineCapRound";
     case 3: return "msoLineCapFlat";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoLineCapRound");
       if ((value & -2) != 0) sbuf.append("|msoLineCapMixed");
       if ((value & 1) != 0) sbuf.append("|msoLineCapSquare");
+      if ((value & 2) != 0) sbuf.append("|msoLineCapRound");
       if ((value & 3) != 0) sbuf.append("|msoLineCapFlat");
       return sbuf.toString();
       }

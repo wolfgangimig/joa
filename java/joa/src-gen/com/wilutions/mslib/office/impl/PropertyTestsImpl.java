@@ -32,7 +32,7 @@ public class PropertyTestsImpl extends Dispatch implements com.wilutions.mslib.o
     assert(Value != null);
     assert(SecondValue != null);
     assert(Connector != null);
-    this._dispatchCall(5,"Add", DISPATCH_METHOD,null,Name,Condition.value,Value,SecondValue,Connector.value);
+    this._dispatchCall(5,"Add", DISPATCH_METHOD,null,Name,Condition.value,Variant.param(Value),Variant.param(SecondValue),Connector.value);
   }
   @DeclDISPID(6)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);

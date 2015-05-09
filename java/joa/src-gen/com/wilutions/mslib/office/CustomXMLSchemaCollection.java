@@ -51,7 +51,7 @@ public class CustomXMLSchemaCollection extends Dispatch implements _CustomXMLSch
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CustomXMLSchemaImpl.class);
   }
   @DeclDISPID(1610809349)  public void AddCollection(final CustomXMLSchemaCollection SchemaCollection) throws ComException {
-    this._dispatchCall(1610809349,"AddCollection", DISPATCH_METHOD,null,(SchemaCollection!=null?SchemaCollection:Dispatch.NULL));
+    this._dispatchCall(1610809349,"AddCollection", DISPATCH_METHOD,null,Dispatch.param(SchemaCollection));
   }
   @DeclDISPID(1610809350)  public Boolean Validate() throws ComException {
     final Object obj = this._dispatchCall(1610809350,"Validate", DISPATCH_METHOD,null);

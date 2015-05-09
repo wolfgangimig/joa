@@ -63,7 +63,7 @@ public class AutoFormatRule extends Dispatch implements _AutoFormatRule {
     return disp.as(ViewFont.class);
   }
   @DeclDISPID(64023)  public void setFont(final ViewFont value) throws ComException {
-    this._dispatchCall(64023,"Font", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64023,"Font", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(64062)  public Boolean getStandard() throws ComException {
     final Object obj = this._dispatchCall(64062,"Standard", DISPATCH_PROPERTYGET,null);

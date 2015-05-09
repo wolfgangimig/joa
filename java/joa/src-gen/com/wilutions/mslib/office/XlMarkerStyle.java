@@ -66,30 +66,30 @@ public class XlMarkerStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 1: return "xlMarkerStyleSquare";
     case -4105: return "xlMarkerStyleAutomatic";
-    case 9: return "xlMarkerStylePlus";
     case 8: return "xlMarkerStyleCircle";
-    case -4115: return "xlMarkerStyleDash";
     case 2: return "xlMarkerStyleDiamond";
-    case -4142: return "xlMarkerStyleNone";
+    case -4115: return "xlMarkerStyleDash";
     case -4118: return "xlMarkerStyleDot";
+    case -4142: return "xlMarkerStyleNone";
     case -4147: return "xlMarkerStylePicture";
+    case 1: return "xlMarkerStyleSquare";
+    case 9: return "xlMarkerStylePlus";
     case 5: return "xlMarkerStyleStar";
     case 3: return "xlMarkerStyleTriangle";
     case -4168: return "xlMarkerStyleX";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 1) != 0) sbuf.append("|xlMarkerStyleSquare");
       if ((value & -4105) != 0) sbuf.append("|xlMarkerStyleAutomatic");
-      if ((value & 9) != 0) sbuf.append("|xlMarkerStylePlus");
       if ((value & 8) != 0) sbuf.append("|xlMarkerStyleCircle");
-      if ((value & -4115) != 0) sbuf.append("|xlMarkerStyleDash");
       if ((value & 2) != 0) sbuf.append("|xlMarkerStyleDiamond");
-      if ((value & -4142) != 0) sbuf.append("|xlMarkerStyleNone");
+      if ((value & -4115) != 0) sbuf.append("|xlMarkerStyleDash");
       if ((value & -4118) != 0) sbuf.append("|xlMarkerStyleDot");
+      if ((value & -4142) != 0) sbuf.append("|xlMarkerStyleNone");
       if ((value & -4147) != 0) sbuf.append("|xlMarkerStylePicture");
+      if ((value & 1) != 0) sbuf.append("|xlMarkerStyleSquare");
+      if ((value & 9) != 0) sbuf.append("|xlMarkerStylePlus");
       if ((value & 5) != 0) sbuf.append("|xlMarkerStyleStar");
       if ((value & 3) != 0) sbuf.append("|xlMarkerStyleTriangle");
       if ((value & -4168) != 0) sbuf.append("|xlMarkerStyleX");

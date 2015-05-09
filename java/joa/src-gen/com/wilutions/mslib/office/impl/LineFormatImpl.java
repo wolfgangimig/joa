@@ -26,7 +26,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(100)  public void setBackColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
-    this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.MsoArrowheadLength getBeginArrowheadLength() throws ComException {
     final Object obj = this._dispatchCall(101,"BeginArrowheadLength", DISPATCH_PROPERTYGET,null);
@@ -97,7 +97,7 @@ public class LineFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(108)  public void setForeColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
-    this._dispatchCall(108,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(108,"ForeColor", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(109)  public com.wilutions.mslib.office.MsoPatternType getPattern() throws ComException {
     final Object obj = this._dispatchCall(109,"Pattern", DISPATCH_PROPERTYGET,null);

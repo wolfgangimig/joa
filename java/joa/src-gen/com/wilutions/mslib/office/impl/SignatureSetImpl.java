@@ -38,7 +38,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
   }
   @DeclDISPID(1610809350)  public com.wilutions.mslib.office.Signature AddNonVisibleSignature(final Object varSigProv) throws ComException {
     assert(varSigProv != null);
-    final Object obj = this._dispatchCall(1610809350,"AddNonVisibleSignature", DISPATCH_METHOD,null,varSigProv);
+    final Object obj = this._dispatchCall(1610809350,"AddNonVisibleSignature", DISPATCH_METHOD,null,Variant.param(varSigProv));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SignatureImpl.class);
   }
@@ -49,7 +49,7 @@ public class SignatureSetImpl extends Dispatch implements com.wilutions.mslib.of
   }
   @DeclDISPID(1610809352)  public com.wilutions.mslib.office.Signature AddSignatureLine(final Object varSigProv) throws ComException {
     assert(varSigProv != null);
-    final Object obj = this._dispatchCall(1610809352,"AddSignatureLine", DISPATCH_METHOD,null,varSigProv);
+    final Object obj = this._dispatchCall(1610809352,"AddSignatureLine", DISPATCH_METHOD,null,Variant.param(varSigProv));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SignatureImpl.class);
   }

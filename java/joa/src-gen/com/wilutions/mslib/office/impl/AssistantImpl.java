@@ -56,7 +56,7 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(Left != null);
     assert(Bottom != null);
     assert(Right != null);
-    final Object obj = this._dispatchCall(1610809351,"StartWizard", DISPATCH_METHOD,null,On,Callback,PrivateX,Animation,CustomTeaser,Top,Left,Bottom,Right);
+    final Object obj = this._dispatchCall(1610809351,"StartWizard", DISPATCH_METHOD,null,On,Callback,PrivateX,Variant.param(Animation),Variant.param(CustomTeaser),Variant.param(Top),Variant.param(Left),Variant.param(Bottom),Variant.param(Right));
     if (obj == null) return null;
     return (Integer)obj;
   }
@@ -64,13 +64,13 @@ public class AssistantImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(WizardID != null);
     assert(varfSuccess != null);
     assert(Animation != null);
-    this._dispatchCall(1610809352,"EndWizard", DISPATCH_METHOD,null,WizardID,varfSuccess,Animation);
+    this._dispatchCall(1610809352,"EndWizard", DISPATCH_METHOD,null,WizardID,varfSuccess,Variant.param(Animation));
   }
   @DeclDISPID(1610809353)  public void ActivateWizard(final Integer WizardID, final com.wilutions.mslib.office.MsoWizardActType act, final Object Animation) throws ComException {
     assert(WizardID != null);
     assert(act != null);
     assert(Animation != null);
-    this._dispatchCall(1610809353,"ActivateWizard", DISPATCH_METHOD,null,WizardID,act.value,Animation);
+    this._dispatchCall(1610809353,"ActivateWizard", DISPATCH_METHOD,null,WizardID,act.value,Variant.param(Animation));
   }
   @DeclDISPID(1610809354)  public void ResetTips() throws ComException {
     this._dispatchCall(1610809354,"ResetTips", DISPATCH_METHOD,null);

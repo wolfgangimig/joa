@@ -46,7 +46,7 @@ public class _AccountRuleConditionImpl extends Dispatch implements com.wilutions
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
   @DeclDISPID(64209)  public void setAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
-    this._dispatchCall(64209,"Account", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64209,"Account", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   public _AccountRuleConditionImpl(String progId) throws ComException {
     super(progId, "{000630DB-0000-0000-C000-000000000046}");

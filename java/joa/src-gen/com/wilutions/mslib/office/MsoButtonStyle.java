@@ -54,8 +54,8 @@ public class MsoButtonStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 0: return "msoButtonAutomatic";
     case 11: return "msoButtonIconAndCaptionBelow";
+    case 0: return "msoButtonAutomatic";
     case 1: return "msoButtonIcon";
     case 2: return "msoButtonCaption";
     case 3: return "msoButtonIconAndCaption";
@@ -65,8 +65,8 @@ public class MsoButtonStyle implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 0) != 0) sbuf.append("|msoButtonAutomatic");
       if ((value & 11) != 0) sbuf.append("|msoButtonIconAndCaptionBelow");
+      if ((value & 0) != 0) sbuf.append("|msoButtonAutomatic");
       if ((value & 1) != 0) sbuf.append("|msoButtonIcon");
       if ((value & 2) != 0) sbuf.append("|msoButtonCaption");
       if ((value & 3) != 0) sbuf.append("|msoButtonIconAndCaption");

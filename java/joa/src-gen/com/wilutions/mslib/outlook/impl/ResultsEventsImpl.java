@@ -6,10 +6,10 @@ import com.wilutions.com.*;
 @CoClass(guid="{C091A966-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ResultsEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.ResultsEvents {
   @DeclDISPID(61441)  public void onItemAdd(final IDispatch Item) throws ComException {
-    this._dispatchCall(61441,"ItemAdd", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    this._dispatchCall(61441,"ItemAdd", DISPATCH_METHOD,null,Dispatch.param(Item));
   }
   @DeclDISPID(61442)  public void onItemChange(final IDispatch Item) throws ComException {
-    this._dispatchCall(61442,"ItemChange", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    this._dispatchCall(61442,"ItemChange", DISPATCH_METHOD,null,Dispatch.param(Item));
   }
   @DeclDISPID(61443)  public void onItemRemove() throws ComException {
     this._dispatchCall(61443,"ItemRemove", DISPATCH_METHOD,null);

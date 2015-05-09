@@ -44,15 +44,15 @@ public class XlErrorBarInclude implements ComEnum {
     switch(value) {
     case 1: return "xlErrorBarIncludeBoth";
     case 3: return "xlErrorBarIncludeMinusValues";
-    case 2: return "xlErrorBarIncludePlusValues";
     case -4142: return "xlErrorBarIncludeNone";
+    case 2: return "xlErrorBarIncludePlusValues";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 1) != 0) sbuf.append("|xlErrorBarIncludeBoth");
       if ((value & 3) != 0) sbuf.append("|xlErrorBarIncludeMinusValues");
-      if ((value & 2) != 0) sbuf.append("|xlErrorBarIncludePlusValues");
       if ((value & -4142) != 0) sbuf.append("|xlErrorBarIncludeNone");
+      if ((value & 2) != 0) sbuf.append("|xlErrorBarIncludePlusValues");
       return sbuf.toString();
       }
     }

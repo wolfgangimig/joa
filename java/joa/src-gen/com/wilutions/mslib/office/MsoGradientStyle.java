@@ -54,25 +54,25 @@ public class MsoGradientStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoGradientVertical";
+    case 7: return "msoGradientFromCenter";
     case -2: return "msoGradientMixed";
     case 1: return "msoGradientHorizontal";
+    case 2: return "msoGradientVertical";
     case 3: return "msoGradientDiagonalUp";
     case 4: return "msoGradientDiagonalDown";
     case 5: return "msoGradientFromCorner";
     case 6: return "msoGradientFromTitle";
-    case 7: return "msoGradientFromCenter";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoGradientVertical");
+      if ((value & 7) != 0) sbuf.append("|msoGradientFromCenter");
       if ((value & -2) != 0) sbuf.append("|msoGradientMixed");
       if ((value & 1) != 0) sbuf.append("|msoGradientHorizontal");
+      if ((value & 2) != 0) sbuf.append("|msoGradientVertical");
       if ((value & 3) != 0) sbuf.append("|msoGradientDiagonalUp");
       if ((value & 4) != 0) sbuf.append("|msoGradientDiagonalDown");
       if ((value & 5) != 0) sbuf.append("|msoGradientFromCorner");
       if ((value & 6) != 0) sbuf.append("|msoGradientFromTitle");
-      if ((value & 7) != 0) sbuf.append("|msoGradientFromCenter");
       return sbuf.toString();
       }
     }

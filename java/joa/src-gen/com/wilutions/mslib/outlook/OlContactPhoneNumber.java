@@ -87,9 +87,7 @@ public class OlContactPhoneNumber implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 18: return "olContactPhoneTTYTTD";
     case 8: return "olContactPhoneHome2";
-    case 10: return "olContactPhoneISDN";
     case 0: return "olContactPhoneAssistant";
     case 1: return "olContactPhoneBusiness";
     case 2: return "olContactPhoneBusiness2";
@@ -99,6 +97,7 @@ public class OlContactPhoneNumber implements ComEnum {
     case 6: return "olContactPhoneCompany";
     case 7: return "olContactPhoneHome";
     case 9: return "olContactPhoneHomeFax";
+    case 10: return "olContactPhoneISDN";
     case 11: return "olContactPhoneMobile";
     case 12: return "olContactPhoneOther";
     case 13: return "olContactPhoneOtherFax";
@@ -106,12 +105,11 @@ public class OlContactPhoneNumber implements ComEnum {
     case 15: return "olContactPhonePrimary";
     case 16: return "olContactPhoneRadio";
     case 17: return "olContactPhoneTelex";
+    case 18: return "olContactPhoneTTYTTD";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 18) != 0) sbuf.append("|olContactPhoneTTYTTD");
       if ((value & 8) != 0) sbuf.append("|olContactPhoneHome2");
-      if ((value & 10) != 0) sbuf.append("|olContactPhoneISDN");
       if ((value & 0) != 0) sbuf.append("|olContactPhoneAssistant");
       if ((value & 1) != 0) sbuf.append("|olContactPhoneBusiness");
       if ((value & 2) != 0) sbuf.append("|olContactPhoneBusiness2");
@@ -121,6 +119,7 @@ public class OlContactPhoneNumber implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|olContactPhoneCompany");
       if ((value & 7) != 0) sbuf.append("|olContactPhoneHome");
       if ((value & 9) != 0) sbuf.append("|olContactPhoneHomeFax");
+      if ((value & 10) != 0) sbuf.append("|olContactPhoneISDN");
       if ((value & 11) != 0) sbuf.append("|olContactPhoneMobile");
       if ((value & 12) != 0) sbuf.append("|olContactPhoneOther");
       if ((value & 13) != 0) sbuf.append("|olContactPhoneOtherFax");
@@ -128,6 +127,7 @@ public class OlContactPhoneNumber implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|olContactPhonePrimary");
       if ((value & 16) != 0) sbuf.append("|olContactPhoneRadio");
       if ((value & 17) != 0) sbuf.append("|olContactPhoneTelex");
+      if ((value & 18) != 0) sbuf.append("|olContactPhoneTTYTTD");
       return sbuf.toString();
       }
     }

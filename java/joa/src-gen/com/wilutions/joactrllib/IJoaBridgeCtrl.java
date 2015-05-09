@@ -10,4 +10,6 @@ import com.wilutions.com.*;
 public interface IJoaBridgeCtrl extends IDispatch {
   static boolean __typelib__loaded = __TypeLib.load();
   @DeclDISPID(-515)  public LONG_PTR getHWND() throws ComException;
+  @DeclDISPID(1111)  public Boolean getFitToParent() throws ComException;
+  @DeclDISPID(1111)  public void setFitToParent(final Boolean value) throws ComException;
 }

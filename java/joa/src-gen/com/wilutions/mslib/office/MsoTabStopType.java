@@ -45,17 +45,17 @@ public class MsoTabStopType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoTabStopCenter";
     case -2: return "msoTabStopMixed";
     case 1: return "msoTabStopLeft";
+    case 2: return "msoTabStopCenter";
     case 3: return "msoTabStopRight";
     case 4: return "msoTabStopDecimal";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoTabStopCenter");
       if ((value & -2) != 0) sbuf.append("|msoTabStopMixed");
       if ((value & 1) != 0) sbuf.append("|msoTabStopLeft");
+      if ((value & 2) != 0) sbuf.append("|msoTabStopCenter");
       if ((value & 3) != 0) sbuf.append("|msoTabStopRight");
       if ((value & 4) != 0) sbuf.append("|msoTabStopDecimal");
       return sbuf.toString();

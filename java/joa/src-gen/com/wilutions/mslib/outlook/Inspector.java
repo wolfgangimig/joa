@@ -50,7 +50,7 @@ public class Inspector extends Dispatch implements _Inspector {
   }
   @DeclDISPID(8452)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
-    this._dispatchCall(8452,"Display", DISPATCH_METHOD,null,Modal);
+    this._dispatchCall(8452,"Display", DISPATCH_METHOD,null,Variant.param(Modal));
   }
   @DeclDISPID(8456)  public void HideFormPage(final String PageName) throws ComException {
     assert(PageName != null);
@@ -129,7 +129,7 @@ public class Inspector extends Dispatch implements _Inspector {
   }
   @DeclDISPID(64201)  public void SetControlItemProperty(final IDispatch Control, final String PropertyName) throws ComException {
     assert(PropertyName != null);
-    this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,(Control!=null?Control:Dispatch.NULL),PropertyName);
+    this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,Dispatch.param(Control),PropertyName);
   }
   @DeclDISPID(64493)  public IDispatch NewFormRegion() throws ComException {
     final Object obj = this._dispatchCall(64493,"NewFormRegion", DISPATCH_METHOD,null);
@@ -144,7 +144,7 @@ public class Inspector extends Dispatch implements _Inspector {
   }
   @DeclDISPID(64512)  public void SaveFormRegion(final IDispatch Page, final String FileName) throws ComException {
     assert(FileName != null);
-    this._dispatchCall(64512,"SaveFormRegion", DISPATCH_METHOD,null,(Page!=null?Page:Dispatch.NULL),FileName);
+    this._dispatchCall(64512,"SaveFormRegion", DISPATCH_METHOD,null,Dispatch.param(Page),FileName);
   }
   @DeclDISPID(64632)  public _AttachmentSelection getAttachmentSelection() throws ComException {
     final Object obj = this._dispatchCall(64632,"AttachmentSelection", DISPATCH_PROPERTYGET,null);

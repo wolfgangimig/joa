@@ -51,9 +51,9 @@ public class MsoTextEffectAlignment implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoTextEffectAlignmentCentered";
     case -2: return "msoTextEffectAlignmentMixed";
     case 1: return "msoTextEffectAlignmentLeft";
+    case 2: return "msoTextEffectAlignmentCentered";
     case 3: return "msoTextEffectAlignmentRight";
     case 4: return "msoTextEffectAlignmentLetterJustify";
     case 5: return "msoTextEffectAlignmentWordJustify";
@@ -61,9 +61,9 @@ public class MsoTextEffectAlignment implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoTextEffectAlignmentCentered");
       if ((value & -2) != 0) sbuf.append("|msoTextEffectAlignmentMixed");
       if ((value & 1) != 0) sbuf.append("|msoTextEffectAlignmentLeft");
+      if ((value & 2) != 0) sbuf.append("|msoTextEffectAlignmentCentered");
       if ((value & 3) != 0) sbuf.append("|msoTextEffectAlignmentRight");
       if ((value & 4) != 0) sbuf.append("|msoTextEffectAlignmentLetterJustify");
       if ((value & 5) != 0) sbuf.append("|msoTextEffectAlignmentWordJustify");

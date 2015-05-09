@@ -42,17 +42,17 @@ public class MsoTextCaps implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoAllCaps";
     case -2: return "msoCapsMixed";
     case 0: return "msoNoCaps";
     case 1: return "msoSmallCaps";
+    case 2: return "msoAllCaps";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoAllCaps");
       if ((value & -2) != 0) sbuf.append("|msoCapsMixed");
       if ((value & 0) != 0) sbuf.append("|msoNoCaps");
       if ((value & 1) != 0) sbuf.append("|msoSmallCaps");
+      if ((value & 2) != 0) sbuf.append("|msoAllCaps");
       return sbuf.toString();
       }
     }

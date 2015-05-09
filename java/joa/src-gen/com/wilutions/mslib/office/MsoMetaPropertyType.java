@@ -99,9 +99,7 @@ public class MsoMetaPropertyType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 18: return "msoMetaPropertyTypeUser";
     case 8: return "msoMetaPropertyTypeGuid";
-    case 10: return "msoMetaPropertyTypeLookup";
     case 0: return "msoMetaPropertyTypeUnknown";
     case 1: return "msoMetaPropertyTypeBoolean";
     case 2: return "msoMetaPropertyTypeChoice";
@@ -110,8 +108,8 @@ public class MsoMetaPropertyType implements ComEnum {
     case 5: return "msoMetaPropertyTypeCurrency";
     case 6: return "msoMetaPropertyTypeDateTime";
     case 7: return "msoMetaPropertyTypeFillInChoice";
-    case 20: return "msoMetaPropertyTypeBusinessData";
     case 9: return "msoMetaPropertyTypeInteger";
+    case 10: return "msoMetaPropertyTypeLookup";
     case 11: return "msoMetaPropertyTypeMultiChoiceLookup";
     case 12: return "msoMetaPropertyTypeMultiChoice";
     case 13: return "msoMetaPropertyTypeMultiChoiceFillIn";
@@ -119,15 +117,15 @@ public class MsoMetaPropertyType implements ComEnum {
     case 15: return "msoMetaPropertyTypeNumber";
     case 16: return "msoMetaPropertyTypeText";
     case 17: return "msoMetaPropertyTypeUrl";
-    case 19: return "msoMetaPropertyTypeUserMulti";
     case 21: return "msoMetaPropertyTypeBusinessDataSecondary";
+    case 18: return "msoMetaPropertyTypeUser";
+    case 20: return "msoMetaPropertyTypeBusinessData";
+    case 19: return "msoMetaPropertyTypeUserMulti";
     case 22: return "msoMetaPropertyTypeMax";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 18) != 0) sbuf.append("|msoMetaPropertyTypeUser");
       if ((value & 8) != 0) sbuf.append("|msoMetaPropertyTypeGuid");
-      if ((value & 10) != 0) sbuf.append("|msoMetaPropertyTypeLookup");
       if ((value & 0) != 0) sbuf.append("|msoMetaPropertyTypeUnknown");
       if ((value & 1) != 0) sbuf.append("|msoMetaPropertyTypeBoolean");
       if ((value & 2) != 0) sbuf.append("|msoMetaPropertyTypeChoice");
@@ -136,8 +134,8 @@ public class MsoMetaPropertyType implements ComEnum {
       if ((value & 5) != 0) sbuf.append("|msoMetaPropertyTypeCurrency");
       if ((value & 6) != 0) sbuf.append("|msoMetaPropertyTypeDateTime");
       if ((value & 7) != 0) sbuf.append("|msoMetaPropertyTypeFillInChoice");
-      if ((value & 20) != 0) sbuf.append("|msoMetaPropertyTypeBusinessData");
       if ((value & 9) != 0) sbuf.append("|msoMetaPropertyTypeInteger");
+      if ((value & 10) != 0) sbuf.append("|msoMetaPropertyTypeLookup");
       if ((value & 11) != 0) sbuf.append("|msoMetaPropertyTypeMultiChoiceLookup");
       if ((value & 12) != 0) sbuf.append("|msoMetaPropertyTypeMultiChoice");
       if ((value & 13) != 0) sbuf.append("|msoMetaPropertyTypeMultiChoiceFillIn");
@@ -145,8 +143,10 @@ public class MsoMetaPropertyType implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|msoMetaPropertyTypeNumber");
       if ((value & 16) != 0) sbuf.append("|msoMetaPropertyTypeText");
       if ((value & 17) != 0) sbuf.append("|msoMetaPropertyTypeUrl");
-      if ((value & 19) != 0) sbuf.append("|msoMetaPropertyTypeUserMulti");
       if ((value & 21) != 0) sbuf.append("|msoMetaPropertyTypeBusinessDataSecondary");
+      if ((value & 18) != 0) sbuf.append("|msoMetaPropertyTypeUser");
+      if ((value & 20) != 0) sbuf.append("|msoMetaPropertyTypeBusinessData");
+      if ((value & 19) != 0) sbuf.append("|msoMetaPropertyTypeUserMulti");
       if ((value & 22) != 0) sbuf.append("|msoMetaPropertyTypeMax");
       return sbuf.toString();
       }

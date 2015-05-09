@@ -10,12 +10,12 @@ public class _FormRegionStartupImpl extends Dispatch implements com.wilutions.ms
     assert(LCID != null);
     assert(FormRegionMode != null);
     assert(FormRegionSize != null);
-    final Object obj = this._dispatchCall(64310,"GetFormRegionStorage", DISPATCH_METHOD,null,FormRegionName,(Item!=null?Item:Dispatch.NULL),LCID,FormRegionMode.value,FormRegionSize.value);
+    final Object obj = this._dispatchCall(64310,"GetFormRegionStorage", DISPATCH_METHOD,null,FormRegionName,Dispatch.param(Item),LCID,FormRegionMode.value,FormRegionSize.value);
     if (obj == null) return null;
     return (Object)obj;
   }
   @DeclDISPID(64317)  public void BeforeFormRegionShow(final com.wilutions.mslib.outlook.FormRegion FormRegion) throws ComException {
-    this._dispatchCall(64317,"BeforeFormRegionShow", DISPATCH_METHOD,null,(FormRegion!=null?FormRegion:Dispatch.NULL));
+    this._dispatchCall(64317,"BeforeFormRegionShow", DISPATCH_METHOD,null,Dispatch.param(FormRegion));
   }
   @DeclDISPID(64563)  public Object GetFormRegionManifest(final String FormRegionName, final Integer LCID) throws ComException {
     assert(FormRegionName != null);

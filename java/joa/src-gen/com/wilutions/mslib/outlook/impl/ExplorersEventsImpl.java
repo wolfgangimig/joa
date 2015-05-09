@@ -6,7 +6,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{C091A913-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class ExplorersEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.ExplorersEvents {
   @DeclDISPID(61441)  public void onNewExplorer(final com.wilutions.mslib.outlook._Explorer Explorer) throws ComException {
-    this._dispatchCall(61441,"NewExplorer", DISPATCH_METHOD,null,(Explorer!=null?Explorer:Dispatch.NULL));
+    this._dispatchCall(61441,"NewExplorer", DISPATCH_METHOD,null,Dispatch.param(Explorer));
   }
   public ExplorersEventsImpl(String progId) throws ComException {
     super(progId, "{00063078-0000-0000-C000-000000000046}");

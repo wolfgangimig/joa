@@ -78,7 +78,7 @@ public class ILicWizExternalImpl extends Dispatch implements com.wilutions.mslib
     return (Integer)obj;
   }
   @DeclDISPID(16)  public void SortSelectOptions(final IDispatch pdispSelect) throws ComException {
-    this._dispatchCall(16,"SortSelectOptions", DISPATCH_METHOD,null,(pdispSelect!=null?pdispSelect:Dispatch.NULL));
+    this._dispatchCall(16,"SortSelectOptions", DISPATCH_METHOD,null,Dispatch.param(pdispSelect));
   }
   @DeclDISPID(17)  public void InternetDisconnect() throws ComException {
     this._dispatchCall(17,"InternetDisconnect", DISPATCH_METHOD,null);

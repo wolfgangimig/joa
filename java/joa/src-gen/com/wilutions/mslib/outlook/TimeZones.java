@@ -42,7 +42,7 @@ public class TimeZones extends Dispatch implements _TimeZones {
   }
   @DeclDISPID(64550)  public java.util.Date ConvertTime(final java.util.Date SourceDateTime, final _TimeZone SourceTimeZone, final _TimeZone DestinationTimeZone) throws ComException {
     assert(SourceDateTime != null);
-    final Object obj = this._dispatchCall(64550,"ConvertTime", DISPATCH_METHOD,null,SourceDateTime,(SourceTimeZone!=null?SourceTimeZone:Dispatch.NULL),(DestinationTimeZone!=null?DestinationTimeZone:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64550,"ConvertTime", DISPATCH_METHOD,null,SourceDateTime,Dispatch.param(SourceTimeZone),Dispatch.param(DestinationTimeZone));
     if (obj == null) return null;
     return (java.util.Date)obj;
   }

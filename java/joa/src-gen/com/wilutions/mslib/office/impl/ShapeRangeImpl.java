@@ -103,7 +103,7 @@ public class ShapeRangeImpl extends Dispatch implements com.wilutions.mslib.offi
   }
   @DeclDISPID(25)  public void Select(final Object Replace) throws ComException {
     assert(Replace != null);
-    this._dispatchCall(25,"Select", DISPATCH_METHOD,null,Replace);
+    this._dispatchCall(25,"Select", DISPATCH_METHOD,null,Variant.param(Replace));
   }
   @DeclDISPID(26)  public void SetShapesDefaultProperties() throws ComException {
     this._dispatchCall(26,"SetShapesDefaultProperties", DISPATCH_METHOD,null);
@@ -396,7 +396,7 @@ public class ShapeRangeImpl extends Dispatch implements com.wilutions.mslib.offi
   }
   @DeclDISPID(156)  public void MergeShapes(final com.wilutions.mslib.office.MsoMergeCmd MergeCmd, final com.wilutions.mslib.office.Shape PrimaryShape) throws ComException {
     assert(MergeCmd != null);
-    this._dispatchCall(156,"MergeShapes", DISPATCH_METHOD,null,MergeCmd.value,(PrimaryShape!=null?PrimaryShape:Dispatch.NULL));
+    this._dispatchCall(156,"MergeShapes", DISPATCH_METHOD,null,MergeCmd.value,Dispatch.param(PrimaryShape));
   }
   public ShapeRangeImpl(String progId) throws ComException {
     super(progId, "{000C031D-0000-0000-C000-000000000046}");

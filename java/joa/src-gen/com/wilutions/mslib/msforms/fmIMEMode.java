@@ -70,7 +70,6 @@ public class fmIMEMode implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "fmIMEModeAlpha";
-    case 10: return "fmIMEModeHangul";
     case 0: return "fmIMEModeNoControl";
     case 1: return "fmIMEModeOn";
     case 2: return "fmIMEModeOff";
@@ -80,13 +79,13 @@ public class fmIMEMode implements ComEnum {
     case 6: return "fmIMEModeKatakanaHalf";
     case 7: return "fmIMEModeAlphaFull";
     case 9: return "fmIMEModeHangulFull";
+    case 10: return "fmIMEModeHangul";
     case 11: return "fmIMEModeHanziFull";
     case 12: return "fmIMEModeHanzi";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|fmIMEModeAlpha");
-      if ((value & 10) != 0) sbuf.append("|fmIMEModeHangul");
       if ((value & 0) != 0) sbuf.append("|fmIMEModeNoControl");
       if ((value & 1) != 0) sbuf.append("|fmIMEModeOn");
       if ((value & 2) != 0) sbuf.append("|fmIMEModeOff");
@@ -96,6 +95,7 @@ public class fmIMEMode implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|fmIMEModeKatakanaHalf");
       if ((value & 7) != 0) sbuf.append("|fmIMEModeAlphaFull");
       if ((value & 9) != 0) sbuf.append("|fmIMEModeHangulFull");
+      if ((value & 10) != 0) sbuf.append("|fmIMEModeHangul");
       if ((value & 11) != 0) sbuf.append("|fmIMEModeHanziFull");
       if ((value & 12) != 0) sbuf.append("|fmIMEModeHanzi");
       return sbuf.toString();

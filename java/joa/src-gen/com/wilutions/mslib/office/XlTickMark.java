@@ -43,15 +43,15 @@ public class XlTickMark implements ComEnum {
   public String toString() {
     switch(value) {
     case 4: return "xlTickMarkCross";
-    case -4142: return "xlTickMarkNone";
     case 2: return "xlTickMarkInside";
+    case -4142: return "xlTickMarkNone";
     case 3: return "xlTickMarkOutside";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 4) != 0) sbuf.append("|xlTickMarkCross");
-      if ((value & -4142) != 0) sbuf.append("|xlTickMarkNone");
       if ((value & 2) != 0) sbuf.append("|xlTickMarkInside");
+      if ((value & -4142) != 0) sbuf.append("|xlTickMarkNone");
       if ((value & 3) != 0) sbuf.append("|xlTickMarkOutside");
       return sbuf.toString();
       }

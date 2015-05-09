@@ -33,7 +33,7 @@ public class SharedWorkspaceTasksImpl extends Dispatch implements com.wilutions.
     assert(Assignee != null);
     assert(Description != null);
     assert(DueDate != null);
-    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Title,Status,Priority,Assignee,Description,DueDate);
+    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Title,Variant.param(Status),Variant.param(Priority),Variant.param(Assignee),Variant.param(Description),Variant.param(DueDate));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceTaskImpl.class);
   }

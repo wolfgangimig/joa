@@ -16,7 +16,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     assert(SeriesLabels != null);
     assert(CategoryLabels != null);
     assert(Replace != null);
-    final Object obj = this._dispatchCall(181,"Add", DISPATCH_METHOD,null,Source,Rowcol.value,SeriesLabels,CategoryLabels,Replace);
+    final Object obj = this._dispatchCall(181,"Add", DISPATCH_METHOD,null,Source,Rowcol.value,Variant.param(SeriesLabels),Variant.param(CategoryLabels),Variant.param(Replace));
     if (obj == null) return null;
     return (com.wilutions.mslib.office.IMsoSeries)obj;
   }
@@ -29,7 +29,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     assert(Source != null);
     assert(Rowcol != null);
     assert(CategoryLabels != null);
-    final Object obj = this._dispatchCall(227,"Extend", DISPATCH_METHOD,null,Source,Rowcol,CategoryLabels);
+    final Object obj = this._dispatchCall(227,"Extend", DISPATCH_METHOD,null,Source,Variant.param(Rowcol),Variant.param(CategoryLabels));
     if (obj == null) return null;
     return (Object)obj;
   }
@@ -50,7 +50,7 @@ public class SeriesCollectionImpl extends Dispatch implements com.wilutions.msli
     assert(CategoryLabels != null);
     assert(Replace != null);
     assert(NewSeries != null);
-    final Object obj = this._dispatchCall(211,"Paste", DISPATCH_METHOD,null,Rowcol.value,SeriesLabels,CategoryLabels,Replace,NewSeries);
+    final Object obj = this._dispatchCall(211,"Paste", DISPATCH_METHOD,null,Rowcol.value,Variant.param(SeriesLabels),Variant.param(CategoryLabels),Variant.param(Replace),Variant.param(NewSeries));
     if (obj == null) return null;
     return (Object)obj;
   }

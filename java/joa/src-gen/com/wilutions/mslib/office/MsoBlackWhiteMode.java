@@ -63,28 +63,28 @@ public class MsoBlackWhiteMode implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoBlackWhiteHighContrast";
     case -2: return "msoBlackWhiteMixed";
-    case 2: return "msoBlackWhiteGrayScale";
     case 1: return "msoBlackWhiteAutomatic";
+    case 2: return "msoBlackWhiteGrayScale";
     case 3: return "msoBlackWhiteLightGrayScale";
     case 4: return "msoBlackWhiteInverseGrayScale";
     case 5: return "msoBlackWhiteGrayOutline";
     case 6: return "msoBlackWhiteBlackTextAndLine";
-    case 7: return "msoBlackWhiteHighContrast";
     case 8: return "msoBlackWhiteBlack";
     case 9: return "msoBlackWhiteWhite";
     case 10: return "msoBlackWhiteDontShow";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoBlackWhiteHighContrast");
       if ((value & -2) != 0) sbuf.append("|msoBlackWhiteMixed");
-      if ((value & 2) != 0) sbuf.append("|msoBlackWhiteGrayScale");
       if ((value & 1) != 0) sbuf.append("|msoBlackWhiteAutomatic");
+      if ((value & 2) != 0) sbuf.append("|msoBlackWhiteGrayScale");
       if ((value & 3) != 0) sbuf.append("|msoBlackWhiteLightGrayScale");
       if ((value & 4) != 0) sbuf.append("|msoBlackWhiteInverseGrayScale");
       if ((value & 5) != 0) sbuf.append("|msoBlackWhiteGrayOutline");
       if ((value & 6) != 0) sbuf.append("|msoBlackWhiteBlackTextAndLine");
-      if ((value & 7) != 0) sbuf.append("|msoBlackWhiteHighContrast");
       if ((value & 8) != 0) sbuf.append("|msoBlackWhiteBlack");
       if ((value & 9) != 0) sbuf.append("|msoBlackWhiteWhite");
       if ((value & 10) != 0) sbuf.append("|msoBlackWhiteDontShow");

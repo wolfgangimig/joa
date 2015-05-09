@@ -39,7 +39,7 @@ public class PermissionImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(UserId != null);
     assert(Permission != null);
     assert(ExpirationDate != null);
-    final Object obj = this._dispatchCall(3,"Add", DISPATCH_METHOD,null,UserId,Permission,ExpirationDate);
+    final Object obj = this._dispatchCall(3,"Add", DISPATCH_METHOD,null,UserId,Variant.param(Permission),Variant.param(ExpirationDate));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.UserPermissionImpl.class);
   }

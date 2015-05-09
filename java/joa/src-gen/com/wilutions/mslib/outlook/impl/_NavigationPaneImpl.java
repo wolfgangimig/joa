@@ -41,7 +41,7 @@ public class _NavigationPaneImpl extends Dispatch implements com.wilutions.mslib
     return disp.as(com.wilutions.mslib.outlook.NavigationModule.class);
   }
   @DeclDISPID(64437)  public void setCurrentModule(final com.wilutions.mslib.outlook.NavigationModule value) throws ComException {
-    this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(64438)  public Integer getDisplayedModuleCount() throws ComException {
     final Object obj = this._dispatchCall(64438,"DisplayedModuleCount", DISPATCH_PROPERTYGET,null);

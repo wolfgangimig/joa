@@ -45,7 +45,7 @@ public class UserDefinedProperties extends Dispatch implements _UserDefinedPrope
     assert(Type != null);
     assert(DisplayFormat != null);
     assert(Formula != null);
-    final Object obj = this._dispatchCall(102,"Add", DISPATCH_METHOD,null,Name,Type.value,DisplayFormat,Formula);
+    final Object obj = this._dispatchCall(102,"Add", DISPATCH_METHOD,null,Name,Type.value,Variant.param(DisplayFormat),Variant.param(Formula));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(UserDefinedProperty.class);

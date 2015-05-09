@@ -35,7 +35,7 @@ public class CustomXMLValidationErrorsImpl extends Dispatch implements com.wilut
     assert(ErrorName != null);
     assert(ErrorText != null);
     assert(ClearedOnUpdate != null);
-    this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,(Node!=null?Node:Dispatch.NULL),ErrorName,ErrorText,ClearedOnUpdate);
+    this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,Dispatch.param(Node),ErrorName,ErrorText,ClearedOnUpdate);
   }
   @DeclDISPID(-4)  public Object get_NewEnum() throws ComException {
     final Object obj = this._dispatchCall(-4,"_NewEnum", DISPATCH_PROPERTYGET,null);

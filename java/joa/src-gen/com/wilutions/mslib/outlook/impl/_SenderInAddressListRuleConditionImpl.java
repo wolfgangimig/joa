@@ -45,7 +45,7 @@ public class _SenderInAddressListRuleConditionImpl extends Dispatch implements c
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
   @DeclDISPID(64327)  public void setAddressList(final com.wilutions.mslib.outlook.AddressList value) throws ComException {
-    this._dispatchCall(64327,"AddressList", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64327,"AddressList", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   public _SenderInAddressListRuleConditionImpl(String progId) throws ComException {
     super(progId, "{000630DF-0000-0000-C000-000000000046}");

@@ -7,7 +7,7 @@ import com.wilutions.com.*;
 public class OutlookBarPaneEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.OutlookBarPaneEvents {
   @DeclDISPID(61441)  public void onBeforeNavigate(final com.wilutions.mslib.outlook.OutlookBarShortcut Shortcut, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61441,"BeforeNavigate", DISPATCH_METHOD,null,(Shortcut!=null?Shortcut:Dispatch.NULL),Cancel);
+    this._dispatchCall(61441,"BeforeNavigate", DISPATCH_METHOD,null,Dispatch.param(Shortcut),Cancel);
   }
   public OutlookBarPaneEventsImpl(String progId) throws ComException {
     super(progId, "{0006307A-0000-0000-C000-000000000046}");

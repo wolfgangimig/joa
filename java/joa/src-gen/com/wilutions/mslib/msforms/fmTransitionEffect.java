@@ -70,7 +70,6 @@ public class fmTransitionEffect implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "fmTransitionEffectCoverLeftUp";
-    case 10: return "fmTransitionEffectPushRight";
     case 0: return "fmTransitionEffectNone";
     case 1: return "fmTransitionEffectCoverUp";
     case 2: return "fmTransitionEffectCoverRightUp";
@@ -80,13 +79,13 @@ public class fmTransitionEffect implements ComEnum {
     case 6: return "fmTransitionEffectCoverLeftDown";
     case 7: return "fmTransitionEffectCoverLeft";
     case 9: return "fmTransitionEffectPushUp";
+    case 10: return "fmTransitionEffectPushRight";
     case 11: return "fmTransitionEffectPushDown";
     case 12: return "fmTransitionEffectPushLeft";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|fmTransitionEffectCoverLeftUp");
-      if ((value & 10) != 0) sbuf.append("|fmTransitionEffectPushRight");
       if ((value & 0) != 0) sbuf.append("|fmTransitionEffectNone");
       if ((value & 1) != 0) sbuf.append("|fmTransitionEffectCoverUp");
       if ((value & 2) != 0) sbuf.append("|fmTransitionEffectCoverRightUp");
@@ -96,6 +95,7 @@ public class fmTransitionEffect implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|fmTransitionEffectCoverLeftDown");
       if ((value & 7) != 0) sbuf.append("|fmTransitionEffectCoverLeft");
       if ((value & 9) != 0) sbuf.append("|fmTransitionEffectPushUp");
+      if ((value & 10) != 0) sbuf.append("|fmTransitionEffectPushRight");
       if ((value & 11) != 0) sbuf.append("|fmTransitionEffectPushDown");
       if ((value & 12) != 0) sbuf.append("|fmTransitionEffectPushLeft");
       return sbuf.toString();

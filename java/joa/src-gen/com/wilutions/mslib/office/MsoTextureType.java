@@ -39,15 +39,15 @@ public class MsoTextureType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoTextureUserDefined";
     case -2: return "msoTextureTypeMixed";
     case 1: return "msoTexturePreset";
+    case 2: return "msoTextureUserDefined";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoTextureUserDefined");
       if ((value & -2) != 0) sbuf.append("|msoTextureTypeMixed");
       if ((value & 1) != 0) sbuf.append("|msoTexturePreset");
+      if ((value & 2) != 0) sbuf.append("|msoTextureUserDefined");
       return sbuf.toString();
       }
     }

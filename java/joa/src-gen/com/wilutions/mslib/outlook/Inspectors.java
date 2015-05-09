@@ -42,7 +42,7 @@ public class Inspectors extends Dispatch implements _Inspectors {
     return disp.as(Inspector.class);
   }
   @DeclDISPID(95)  public _Inspector Add(final IDispatch Item) throws ComException {
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Dispatch.param(Item));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._InspectorImpl.class);
   }

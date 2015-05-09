@@ -41,7 +41,7 @@ public class AttachmentsImpl extends Dispatch implements com.wilutions.mslib.out
     assert(Type != null);
     assert(Position != null);
     assert(DisplayName != null);
-    final Object obj = this._dispatchCall(101,"Add", DISPATCH_METHOD,null,Source,Type,Position,DisplayName);
+    final Object obj = this._dispatchCall(101,"Add", DISPATCH_METHOD,null,Source,Variant.param(Type),Variant.param(Position),Variant.param(DisplayName));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AttachmentImpl.class);
   }

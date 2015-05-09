@@ -65,7 +65,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(100)  public void setBackColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
-    this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(100,"BackColor", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.ColorFormat getForeColor() throws ComException {
     final Object obj = this._dispatchCall(101,"ForeColor", DISPATCH_PROPERTYGET,null);
@@ -73,7 +73,7 @@ public class FillFormatImpl extends Dispatch implements com.wilutions.mslib.offi
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(101)  public void setForeColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
-    this._dispatchCall(101,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(101,"ForeColor", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(102)  public com.wilutions.mslib.office.MsoGradientColorType getGradientColorType() throws ComException {
     final Object obj = this._dispatchCall(102,"GradientColorType", DISPATCH_PROPERTYGET,null);

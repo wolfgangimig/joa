@@ -122,7 +122,7 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
   }
   @DeclDISPID(1610743833)  public IDispatch SeriesCollection(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(1610743833,"SeriesCollection", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(1610743833,"SeriesCollection", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -225,13 +225,13 @@ public class IMsoChartGroupImpl extends Dispatch implements com.wilutions.mslib.
   }
   @DeclDISPID(151)  public IDispatch CategoryCollection(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(151,"CategoryCollection", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(151,"CategoryCollection", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
   @DeclDISPID(152)  public IDispatch FullCategoryCollection(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(152,"FullCategoryCollection", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(152,"FullCategoryCollection", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }

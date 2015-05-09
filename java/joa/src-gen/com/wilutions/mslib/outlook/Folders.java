@@ -43,7 +43,7 @@ public class Folders extends Dispatch implements _Folders {
   @DeclDISPID(95)  public MAPIFolder Add(final String Name, final Object Type) throws ComException {
     assert(Name != null);
     assert(Type != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Type);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Variant.param(Type));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }

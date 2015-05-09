@@ -44,7 +44,7 @@ public class Categories extends Dispatch implements _Categories {
     assert(Name != null);
     assert(Color != null);
     assert(ShortcutKey != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Color,ShortcutKey);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Variant.param(Color),Variant.param(ShortcutKey));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(Category.class);

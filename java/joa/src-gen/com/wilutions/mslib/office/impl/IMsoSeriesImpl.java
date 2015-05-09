@@ -36,7 +36,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
   }
   @DeclDISPID(157)  public IDispatch DataLabels(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(157,"DataLabels", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(157,"DataLabels", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -51,7 +51,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(Type != null);
     assert(Amount != null);
     assert(MinusValues != null);
-    final Object obj = this._dispatchCall(152,"ErrorBar", DISPATCH_METHOD,null,Direction.value,Include.value,Type.value,Amount,MinusValues);
+    final Object obj = this._dispatchCall(152,"ErrorBar", DISPATCH_METHOD,null,Direction.value,Include.value,Type.value,Variant.param(Amount),Variant.param(MinusValues));
     if (obj == null) return null;
     return (Object)obj;
   }
@@ -239,7 +239,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
   }
   @DeclDISPID(70)  public IDispatch Points(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(70,"Points", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(70,"Points", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -259,7 +259,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
   }
   @DeclDISPID(154)  public IDispatch Trendlines(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(154,"Trendlines", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(154,"Trendlines", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -391,7 +391,7 @@ public class IMsoSeriesImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(ShowPercentage != null);
     assert(ShowBubbleSize != null);
     assert(Separator != null);
-    final Object obj = this._dispatchCall(1922,"ApplyDataLabels", DISPATCH_METHOD,null,Type.value,IMsoLegendKey,AutoText,HasLeaderLines,ShowSeriesName,ShowCategoryName,ShowValue,ShowPercentage,ShowBubbleSize,Separator);
+    final Object obj = this._dispatchCall(1922,"ApplyDataLabels", DISPATCH_METHOD,null,Type.value,Variant.param(IMsoLegendKey),Variant.param(AutoText),Variant.param(HasLeaderLines),Variant.param(ShowSeriesName),Variant.param(ShowCategoryName),Variant.param(ShowValue),Variant.param(ShowPercentage),Variant.param(ShowBubbleSize),Variant.param(Separator));
     if (obj == null) return null;
     return (Object)obj;
   }

@@ -63,29 +63,29 @@ public class MsoReflectionType implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoReflectionType7";
     case -2: return "msoReflectionTypeMixed";
-    case 2: return "msoReflectionType2";
     case 0: return "msoReflectionTypeNone";
     case 1: return "msoReflectionType1";
+    case 2: return "msoReflectionType2";
     case 3: return "msoReflectionType3";
     case 4: return "msoReflectionType4";
     case 5: return "msoReflectionType5";
     case 6: return "msoReflectionType6";
-    case 7: return "msoReflectionType7";
     case 8: return "msoReflectionType8";
     case 9: return "msoReflectionType9";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoReflectionType7");
       if ((value & -2) != 0) sbuf.append("|msoReflectionTypeMixed");
-      if ((value & 2) != 0) sbuf.append("|msoReflectionType2");
       if ((value & 0) != 0) sbuf.append("|msoReflectionTypeNone");
       if ((value & 1) != 0) sbuf.append("|msoReflectionType1");
+      if ((value & 2) != 0) sbuf.append("|msoReflectionType2");
       if ((value & 3) != 0) sbuf.append("|msoReflectionType3");
       if ((value & 4) != 0) sbuf.append("|msoReflectionType4");
       if ((value & 5) != 0) sbuf.append("|msoReflectionType5");
       if ((value & 6) != 0) sbuf.append("|msoReflectionType6");
-      if ((value & 7) != 0) sbuf.append("|msoReflectionType7");
       if ((value & 8) != 0) sbuf.append("|msoReflectionType8");
       if ((value & 9) != 0) sbuf.append("|msoReflectionType9");
       return sbuf.toString();

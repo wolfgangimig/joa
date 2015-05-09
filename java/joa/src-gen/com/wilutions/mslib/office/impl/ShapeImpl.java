@@ -67,7 +67,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
   }
   @DeclDISPID(21)  public void Select(final Object Replace) throws ComException {
     assert(Replace != null);
-    this._dispatchCall(21,"Select", DISPATCH_METHOD,null,Replace);
+    this._dispatchCall(21,"Select", DISPATCH_METHOD,null,Variant.param(Replace));
   }
   @DeclDISPID(22)  public void SetShapesDefaultProperties() throws ComException {
     this._dispatchCall(22,"SetShapesDefaultProperties", DISPATCH_METHOD,null);
@@ -355,7 +355,7 @@ public class ShapeImpl extends Dispatch implements com.wilutions.mslib.office.Sh
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SmartArtImpl.class);
   }
   @DeclDISPID(157)  public void ConvertTextToSmartArt(final com.wilutions.mslib.office.SmartArtLayout Layout) throws ComException {
-    this._dispatchCall(157,"ConvertTextToSmartArt", DISPATCH_METHOD,null,(Layout!=null?Layout:Dispatch.NULL));
+    this._dispatchCall(157,"ConvertTextToSmartArt", DISPATCH_METHOD,null,Dispatch.param(Layout));
   }
   @DeclDISPID(158)  public String getTitle() throws ComException {
     final Object obj = this._dispatchCall(158,"Title", DISPATCH_PROPERTYGET,null);

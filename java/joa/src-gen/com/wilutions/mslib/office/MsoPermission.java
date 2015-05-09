@@ -60,27 +60,27 @@ public class MsoPermission implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 64: return "msoPermissionFullControl";
     case 1: return "msoPermissionView";
-    case 16: return "msoPermissionPrint";
     case 2: return "msoPermissionEdit";
-    case 127: return "msoPermissionAllCommon";
-    case 32: return "msoPermissionObjModel";
-    case 4: return "msoPermissionSave";
-    case 8: return "msoPermissionExtract";
     case 15: return "msoPermissionChange";
+    case 4: return "msoPermissionSave";
+    case 127: return "msoPermissionAllCommon";
+    case 8: return "msoPermissionExtract";
+    case 64: return "msoPermissionFullControl";
+    case 16: return "msoPermissionPrint";
+    case 32: return "msoPermissionObjModel";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 64) != 0) sbuf.append("|msoPermissionFullControl");
       if ((value & 1) != 0) sbuf.append("|msoPermissionView");
-      if ((value & 16) != 0) sbuf.append("|msoPermissionPrint");
       if ((value & 2) != 0) sbuf.append("|msoPermissionEdit");
-      if ((value & 127) != 0) sbuf.append("|msoPermissionAllCommon");
-      if ((value & 32) != 0) sbuf.append("|msoPermissionObjModel");
-      if ((value & 4) != 0) sbuf.append("|msoPermissionSave");
-      if ((value & 8) != 0) sbuf.append("|msoPermissionExtract");
       if ((value & 15) != 0) sbuf.append("|msoPermissionChange");
+      if ((value & 4) != 0) sbuf.append("|msoPermissionSave");
+      if ((value & 127) != 0) sbuf.append("|msoPermissionAllCommon");
+      if ((value & 8) != 0) sbuf.append("|msoPermissionExtract");
+      if ((value & 64) != 0) sbuf.append("|msoPermissionFullControl");
+      if ((value & 16) != 0) sbuf.append("|msoPermissionPrint");
+      if ((value & 32) != 0) sbuf.append("|msoPermissionObjModel");
       return sbuf.toString();
       }
     }

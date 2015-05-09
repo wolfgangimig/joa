@@ -6,10 +6,10 @@ import com.wilutions.com.*;
 @CoClass(guid="{C091A99F-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class NavigationGroupsEvents_12Impl extends Dispatch implements com.wilutions.mslib.outlook.NavigationGroupsEvents_12 {
   @DeclDISPID(64458)  public void onSelectedChange(final com.wilutions.mslib.outlook.NavigationFolder NavigationFolder) throws ComException {
-    this._dispatchCall(64458,"SelectedChange", DISPATCH_METHOD,null,(NavigationFolder!=null?NavigationFolder:Dispatch.NULL));
+    this._dispatchCall(64458,"SelectedChange", DISPATCH_METHOD,null,Dispatch.param(NavigationFolder));
   }
   @DeclDISPID(64459)  public void onNavigationFolderAdd(final com.wilutions.mslib.outlook.NavigationFolder NavigationFolder) throws ComException {
-    this._dispatchCall(64459,"NavigationFolderAdd", DISPATCH_METHOD,null,(NavigationFolder!=null?NavigationFolder:Dispatch.NULL));
+    this._dispatchCall(64459,"NavigationFolderAdd", DISPATCH_METHOD,null,Dispatch.param(NavigationFolder));
   }
   @DeclDISPID(64460)  public void onNavigationFolderRemove() throws ComException {
     this._dispatchCall(64460,"NavigationFolderRemove", DISPATCH_METHOD,null);

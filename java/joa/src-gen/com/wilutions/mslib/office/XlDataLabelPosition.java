@@ -63,29 +63,29 @@ public class XlDataLabelPosition implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 4: return "xlLabelPositionInsideBase";
     case -4131: return "xlLabelPositionLeft";
-    case -4108: return "xlLabelPositionCenter";
     case 0: return "xlLabelPositionAbove";
-    case 1: return "xlLabelPositionBelow";
-    case 5: return "xlLabelPositionBestFit";
+    case -4108: return "xlLabelPositionCenter";
     case -4152: return "xlLabelPositionRight";
+    case 1: return "xlLabelPositionBelow";
     case 2: return "xlLabelPositionOutsideEnd";
     case 3: return "xlLabelPositionInsideEnd";
+    case 4: return "xlLabelPositionInsideBase";
+    case 5: return "xlLabelPositionBestFit";
     case 6: return "xlLabelPositionMixed";
     case 7: return "xlLabelPositionCustom";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 4) != 0) sbuf.append("|xlLabelPositionInsideBase");
       if ((value & -4131) != 0) sbuf.append("|xlLabelPositionLeft");
-      if ((value & -4108) != 0) sbuf.append("|xlLabelPositionCenter");
       if ((value & 0) != 0) sbuf.append("|xlLabelPositionAbove");
-      if ((value & 1) != 0) sbuf.append("|xlLabelPositionBelow");
-      if ((value & 5) != 0) sbuf.append("|xlLabelPositionBestFit");
+      if ((value & -4108) != 0) sbuf.append("|xlLabelPositionCenter");
       if ((value & -4152) != 0) sbuf.append("|xlLabelPositionRight");
+      if ((value & 1) != 0) sbuf.append("|xlLabelPositionBelow");
       if ((value & 2) != 0) sbuf.append("|xlLabelPositionOutsideEnd");
       if ((value & 3) != 0) sbuf.append("|xlLabelPositionInsideEnd");
+      if ((value & 4) != 0) sbuf.append("|xlLabelPositionInsideBase");
+      if ((value & 5) != 0) sbuf.append("|xlLabelPositionBestFit");
       if ((value & 6) != 0) sbuf.append("|xlLabelPositionMixed");
       if ((value & 7) != 0) sbuf.append("|xlLabelPositionCustom");
       return sbuf.toString();

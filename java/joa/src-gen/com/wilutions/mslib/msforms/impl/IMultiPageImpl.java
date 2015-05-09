@@ -26,7 +26,7 @@ public class IMultiPageImpl extends Dispatch implements com.wilutions.mslib.msfo
     return new com.wilutions.mslib.msforms.OLE_COLOR(als);
   }
   @DeclDISPID(-512)  public void setFont(final com.wilutions.mslib.msforms.Font value) throws ComException {
-    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);

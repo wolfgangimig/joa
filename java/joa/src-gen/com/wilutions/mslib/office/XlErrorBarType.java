@@ -47,16 +47,16 @@ public class XlErrorBarType implements ComEnum {
     switch(value) {
     case -4114: return "xlErrorBarTypeCustom";
     case 1: return "xlErrorBarTypeFixedValue";
-    case -4155: return "xlErrorBarTypeStDev";
     case 2: return "xlErrorBarTypePercent";
+    case -4155: return "xlErrorBarTypeStDev";
     case 4: return "xlErrorBarTypeStError";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & -4114) != 0) sbuf.append("|xlErrorBarTypeCustom");
       if ((value & 1) != 0) sbuf.append("|xlErrorBarTypeFixedValue");
-      if ((value & -4155) != 0) sbuf.append("|xlErrorBarTypeStDev");
       if ((value & 2) != 0) sbuf.append("|xlErrorBarTypePercent");
+      if ((value & -4155) != 0) sbuf.append("|xlErrorBarTypeStDev");
       if ((value & 4) != 0) sbuf.append("|xlErrorBarTypeStError");
       return sbuf.toString();
       }

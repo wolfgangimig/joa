@@ -63,10 +63,10 @@ public class OlAddressEntryUserType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 0: return "olExchangeUserAddressEntry";
-    case 10: return "olOutlookContactAddressEntry";
     case 20: return "olLdapAddressEntry";
     case 11: return "olOutlookDistributionListAddressEntry";
+    case 0: return "olExchangeUserAddressEntry";
+    case 10: return "olOutlookContactAddressEntry";
     case 1: return "olExchangeDistributionListAddressEntry";
     case 2: return "olExchangePublicFolderAddressEntry";
     case 3: return "olExchangeAgentAddressEntry";
@@ -77,10 +77,10 @@ public class OlAddressEntryUserType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 0) != 0) sbuf.append("|olExchangeUserAddressEntry");
-      if ((value & 10) != 0) sbuf.append("|olOutlookContactAddressEntry");
       if ((value & 20) != 0) sbuf.append("|olLdapAddressEntry");
       if ((value & 11) != 0) sbuf.append("|olOutlookDistributionListAddressEntry");
+      if ((value & 0) != 0) sbuf.append("|olExchangeUserAddressEntry");
+      if ((value & 10) != 0) sbuf.append("|olOutlookContactAddressEntry");
       if ((value & 1) != 0) sbuf.append("|olExchangeDistributionListAddressEntry");
       if ((value & 2) != 0) sbuf.append("|olExchangePublicFolderAddressEntry");
       if ((value & 3) != 0) sbuf.append("|olExchangeAgentAddressEntry");

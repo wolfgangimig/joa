@@ -6,7 +6,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{C091A998-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class NavigationPaneEvents_12Impl extends Dispatch implements com.wilutions.mslib.outlook.NavigationPaneEvents_12 {
   @DeclDISPID(64457)  public void onModuleSwitch(final com.wilutions.mslib.outlook.NavigationModule CurrentModule) throws ComException {
-    this._dispatchCall(64457,"ModuleSwitch", DISPATCH_METHOD,null,(CurrentModule!=null?CurrentModule:Dispatch.NULL));
+    this._dispatchCall(64457,"ModuleSwitch", DISPATCH_METHOD,null,Dispatch.param(CurrentModule));
   }
   public NavigationPaneEvents_12Impl(String progId) throws ComException {
     super(progId, "{000630F3-0000-0000-C000-000000000046}");

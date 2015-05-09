@@ -77,7 +77,7 @@ public class ControlsImpl extends Dispatch implements com.wilutions.mslib.msform
     assert(bstrProgID != null);
     assert(Name != null);
     assert(Visible != null);
-    final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,bstrProgID,Name,Visible);
+    final Object obj = this._dispatchCall(66,"Add", DISPATCH_METHOD,null,bstrProgID,Variant.param(Name),Variant.param(Visible));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.msforms.Control.class);

@@ -48,18 +48,18 @@ public class MsoOrgChartLayoutType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoOrgChartLayoutBothHanging";
     case -2: return "msoOrgChartLayoutMixed";
     case 1: return "msoOrgChartLayoutStandard";
+    case 2: return "msoOrgChartLayoutBothHanging";
     case 3: return "msoOrgChartLayoutLeftHanging";
     case 4: return "msoOrgChartLayoutRightHanging";
     case 5: return "msoOrgChartLayoutDefault";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoOrgChartLayoutBothHanging");
       if ((value & -2) != 0) sbuf.append("|msoOrgChartLayoutMixed");
       if ((value & 1) != 0) sbuf.append("|msoOrgChartLayoutStandard");
+      if ((value & 2) != 0) sbuf.append("|msoOrgChartLayoutBothHanging");
       if ((value & 3) != 0) sbuf.append("|msoOrgChartLayoutLeftHanging");
       if ((value & 4) != 0) sbuf.append("|msoOrgChartLayoutRightHanging");
       if ((value & 5) != 0) sbuf.append("|msoOrgChartLayoutDefault");

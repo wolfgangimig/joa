@@ -76,7 +76,7 @@ public class PickerResultImpl extends Dispatch implements com.wilutions.mslib.of
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerFieldsImpl.class);
   }
   @DeclDISPID(8)  public void setFields(final com.wilutions.mslib.office.PickerFields value) throws ComException {
-    this._dispatchCall(8,"Fields", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(8,"Fields", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   public PickerResultImpl(String progId) throws ComException {
     super(progId, "{000C03E4-0000-0000-C000-000000000046}");

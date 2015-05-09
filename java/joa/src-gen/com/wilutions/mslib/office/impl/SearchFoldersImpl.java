@@ -27,7 +27,7 @@ public class SearchFoldersImpl extends Dispatch implements com.wilutions.mslib.o
     return (Integer)obj;
   }
   @DeclDISPID(3)  public void Add(final com.wilutions.mslib.office.ScopeFolder ScopeFolder) throws ComException {
-    this._dispatchCall(3,"Add", DISPATCH_METHOD,null,(ScopeFolder!=null?ScopeFolder:Dispatch.NULL));
+    this._dispatchCall(3,"Add", DISPATCH_METHOD,null,Dispatch.param(ScopeFolder));
   }
   @DeclDISPID(4)  public void Remove(final Integer Index) throws ComException {
     assert(Index != null);

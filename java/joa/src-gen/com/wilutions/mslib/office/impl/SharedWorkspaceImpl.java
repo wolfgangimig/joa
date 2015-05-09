@@ -55,7 +55,7 @@ public class SharedWorkspaceImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(7)  public void CreateNew(final Object URL, final Object Name) throws ComException {
     assert(URL != null);
     assert(Name != null);
-    this._dispatchCall(7,"CreateNew", DISPATCH_METHOD,null,URL,Name);
+    this._dispatchCall(7,"CreateNew", DISPATCH_METHOD,null,Variant.param(URL),Variant.param(Name));
   }
   @DeclDISPID(8)  public void Delete() throws ComException {
     this._dispatchCall(8,"Delete", DISPATCH_METHOD,null);

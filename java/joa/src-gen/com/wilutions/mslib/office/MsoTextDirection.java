@@ -39,15 +39,15 @@ public class MsoTextDirection implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoTextDirectionRightToLeft";
     case -2: return "msoTextDirectionMixed";
     case 1: return "msoTextDirectionLeftToRight";
+    case 2: return "msoTextDirectionRightToLeft";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoTextDirectionRightToLeft");
       if ((value & -2) != 0) sbuf.append("|msoTextDirectionMixed");
       if ((value & 1) != 0) sbuf.append("|msoTextDirectionLeftToRight");
+      if ((value & 2) != 0) sbuf.append("|msoTextDirectionRightToLeft");
       return sbuf.toString();
       }
     }

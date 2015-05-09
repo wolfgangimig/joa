@@ -54,7 +54,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
   @DeclDISPID(267)  public IDispatch CreateItemFromTemplate(final String TemplatePath, final Object InFolder) throws ComException {
     assert(TemplatePath != null);
     assert(InFolder != null);
-    final Object obj = this._dispatchCall(267,"CreateItemFromTemplate", DISPATCH_METHOD,null,TemplatePath,InFolder);
+    final Object obj = this._dispatchCall(267,"CreateItemFromTemplate", DISPATCH_METHOD,null,TemplatePath,Variant.param(InFolder));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -115,7 +115,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
     assert(Filter != null);
     assert(SearchSubFolders != null);
     assert(Tag != null);
-    final Object obj = this._dispatchCall(64101,"AdvancedSearch", DISPATCH_METHOD,null,Scope,Filter,SearchSubFolders,Tag);
+    final Object obj = this._dispatchCall(64101,"AdvancedSearch", DISPATCH_METHOD,null,Scope,Variant.param(Filter),Variant.param(SearchSubFolders),Variant.param(Tag));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.SearchImpl.class);
   }
@@ -142,7 +142,7 @@ public class _ApplicationImpl extends Dispatch implements com.wilutions.mslib.ou
   }
   @DeclDISPID(64470)  public IDispatch GetObjectReference(final IDispatch Item, final com.wilutions.mslib.outlook.OlReferenceType ReferenceType) throws ComException {
     assert(ReferenceType != null);
-    final Object obj = this._dispatchCall(64470,"GetObjectReference", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL),ReferenceType.value);
+    final Object obj = this._dispatchCall(64470,"GetObjectReference", DISPATCH_METHOD,null,Dispatch.param(Item),ReferenceType.value);
     if (obj == null) return null;
     return (IDispatch)obj;
   }

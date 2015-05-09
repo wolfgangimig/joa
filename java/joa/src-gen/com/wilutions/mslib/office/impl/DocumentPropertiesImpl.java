@@ -29,7 +29,7 @@ public class DocumentPropertiesImpl extends Dispatch implements com.wilutions.ms
     assert(Value != null);
     assert(LinkSource != null);
     assert(lcid != null);
-    final Object obj = this._dispatchCall(5,"Add", DISPATCH_METHOD,null,Name,LinkToContent,Type,Value,LinkSource,lcid);
+    final Object obj = this._dispatchCall(5,"Add", DISPATCH_METHOD,null,Name,LinkToContent,Variant.param(Type),Variant.param(Value),Variant.param(LinkSource),lcid);
     if (obj == null) return null;
     return (com.wilutions.mslib.office.DocumentProperty)obj;
   }

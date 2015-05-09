@@ -173,7 +173,7 @@ public class FormDescriptionImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(107)  public void PublishForm(final com.wilutions.mslib.outlook.OlFormRegistry Registry, final Object Folder) throws ComException {
     assert(Registry != null);
     assert(Folder != null);
-    this._dispatchCall(107,"PublishForm", DISPATCH_METHOD,null,Registry.value,Folder);
+    this._dispatchCall(107,"PublishForm", DISPATCH_METHOD,null,Registry.value,Variant.param(Folder));
   }
   public FormDescriptionImpl(String progId) throws ComException {
     super(progId, "{00063046-0000-0000-C000-000000000046}");

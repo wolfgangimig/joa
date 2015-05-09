@@ -108,9 +108,7 @@ public class OlCategoryColor implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 18: return "olCategoryColorDarkPeach";
     case 8: return "olCategoryColorBlue";
-    case 10: return "olCategoryColorMaroon";
     case 0: return "olCategoryColorNone";
     case 1: return "olCategoryColorRed";
     case 2: return "olCategoryColorOrange";
@@ -119,8 +117,8 @@ public class OlCategoryColor implements ComEnum {
     case 5: return "olCategoryColorGreen";
     case 6: return "olCategoryColorTeal";
     case 7: return "olCategoryColorOlive";
-    case 20: return "olCategoryColorDarkGreen";
     case 9: return "olCategoryColorPurple";
+    case 10: return "olCategoryColorMaroon";
     case 11: return "olCategoryColorSteel";
     case 12: return "olCategoryColorDarkSteel";
     case 13: return "olCategoryColorGray";
@@ -128,8 +126,10 @@ public class OlCategoryColor implements ComEnum {
     case 15: return "olCategoryColorBlack";
     case 16: return "olCategoryColorDarkRed";
     case 17: return "olCategoryColorDarkOrange";
-    case 19: return "olCategoryColorDarkYellow";
     case 21: return "olCategoryColorDarkTeal";
+    case 18: return "olCategoryColorDarkPeach";
+    case 20: return "olCategoryColorDarkGreen";
+    case 19: return "olCategoryColorDarkYellow";
     case 22: return "olCategoryColorDarkOlive";
     case 23: return "olCategoryColorDarkBlue";
     case 24: return "olCategoryColorDarkPurple";
@@ -137,9 +137,7 @@ public class OlCategoryColor implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 18) != 0) sbuf.append("|olCategoryColorDarkPeach");
       if ((value & 8) != 0) sbuf.append("|olCategoryColorBlue");
-      if ((value & 10) != 0) sbuf.append("|olCategoryColorMaroon");
       if ((value & 0) != 0) sbuf.append("|olCategoryColorNone");
       if ((value & 1) != 0) sbuf.append("|olCategoryColorRed");
       if ((value & 2) != 0) sbuf.append("|olCategoryColorOrange");
@@ -148,8 +146,8 @@ public class OlCategoryColor implements ComEnum {
       if ((value & 5) != 0) sbuf.append("|olCategoryColorGreen");
       if ((value & 6) != 0) sbuf.append("|olCategoryColorTeal");
       if ((value & 7) != 0) sbuf.append("|olCategoryColorOlive");
-      if ((value & 20) != 0) sbuf.append("|olCategoryColorDarkGreen");
       if ((value & 9) != 0) sbuf.append("|olCategoryColorPurple");
+      if ((value & 10) != 0) sbuf.append("|olCategoryColorMaroon");
       if ((value & 11) != 0) sbuf.append("|olCategoryColorSteel");
       if ((value & 12) != 0) sbuf.append("|olCategoryColorDarkSteel");
       if ((value & 13) != 0) sbuf.append("|olCategoryColorGray");
@@ -157,8 +155,10 @@ public class OlCategoryColor implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|olCategoryColorBlack");
       if ((value & 16) != 0) sbuf.append("|olCategoryColorDarkRed");
       if ((value & 17) != 0) sbuf.append("|olCategoryColorDarkOrange");
-      if ((value & 19) != 0) sbuf.append("|olCategoryColorDarkYellow");
       if ((value & 21) != 0) sbuf.append("|olCategoryColorDarkTeal");
+      if ((value & 18) != 0) sbuf.append("|olCategoryColorDarkPeach");
+      if ((value & 20) != 0) sbuf.append("|olCategoryColorDarkGreen");
+      if ((value & 19) != 0) sbuf.append("|olCategoryColorDarkYellow");
       if ((value & 22) != 0) sbuf.append("|olCategoryColorDarkOlive");
       if ((value & 23) != 0) sbuf.append("|olCategoryColorDarkBlue");
       if ((value & 24) != 0) sbuf.append("|olCategoryColorDarkPurple");

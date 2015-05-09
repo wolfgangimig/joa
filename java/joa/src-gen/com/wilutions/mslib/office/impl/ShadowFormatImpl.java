@@ -34,7 +34,7 @@ public class ShadowFormatImpl extends Dispatch implements com.wilutions.mslib.of
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ColorFormatImpl.class);
   }
   @DeclDISPID(100)  public void setForeColor(final com.wilutions.mslib.office.ColorFormat value) throws ComException {
-    this._dispatchCall(100,"ForeColor", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(100,"ForeColor", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(101)  public com.wilutions.mslib.office.MsoTriState getObscured() throws ComException {
     final Object obj = this._dispatchCall(101,"Obscured", DISPATCH_PROPERTYGET,null);

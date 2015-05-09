@@ -38,7 +38,7 @@ public class PagesImpl extends Dispatch implements com.wilutions.mslib.outlook.P
   }
   @DeclDISPID(300)  public IDispatch Add(final Object Name) throws ComException {
     assert(Name != null);
-    final Object obj = this._dispatchCall(300,"Add", DISPATCH_METHOD,null,Name);
+    final Object obj = this._dispatchCall(300,"Add", DISPATCH_METHOD,null,Variant.param(Name));
     if (obj == null) return null;
     return (IDispatch)obj;
   }

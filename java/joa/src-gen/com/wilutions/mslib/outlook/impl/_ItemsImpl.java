@@ -47,7 +47,7 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
   }
   @DeclDISPID(95)  public IDispatch Add(final Object Type) throws ComException {
     assert(Type != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Type);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Variant.param(Type));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -102,7 +102,7 @@ public class _ItemsImpl extends Dispatch implements com.wilutions.mslib.outlook.
   @DeclDISPID(97)  public void Sort(final String Property, final Object Descending) throws ComException {
     assert(Property != null);
     assert(Descending != null);
-    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);
+    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Variant.param(Descending));
   }
   public _ItemsImpl(String progId) throws ComException {
     super(progId, "{00063041-0000-0000-C000-000000000046}");

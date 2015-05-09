@@ -208,10 +208,10 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
   }
   @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
-    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
+    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Variant.param(Modal));
   }
   @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
-    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
+    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,Dispatch.param(DestFldr));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -224,7 +224,7 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
   @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
-    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
+    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Variant.param(Type));
   }
   @DeclDISPID(64495)  public void Allow() throws ComException {
     this._dispatchCall(64495,"Allow", DISPATCH_METHOD,null);
@@ -301,7 +301,7 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
   @DeclDISPID(64209)  public void setSendUsingAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
-    this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(2)  public Boolean getAlternateRecipientAllowed() throws ComException {
     final Object obj = this._dispatchCall(2,"AlternateRecipientAllowed", DISPATCH_PROPERTYGET,null);
@@ -511,7 +511,7 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(62465)  public void setSaveSentMessageFolder(final com.wilutions.mslib.outlook.MAPIFolder value) throws ComException {
-    this._dispatchCall(62465,"SaveSentMessageFolder", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(62465,"SaveSentMessageFolder", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(3098)  public String getSenderName() throws ComException {
     final Object obj = this._dispatchCall(3098,"SenderName", DISPATCH_PROPERTYGET,null);
@@ -621,7 +621,7 @@ public class _SharingItemImpl extends Dispatch implements com.wilutions.mslib.ou
     return (Boolean)obj;
   }
   @DeclDISPID(64406)  public void AddBusinessCard(final com.wilutions.mslib.outlook.ContactItem contact) throws ComException {
-    this._dispatchCall(64406,"AddBusinessCard", DISPATCH_METHOD,null,(contact!=null?contact:Dispatch.NULL));
+    this._dispatchCall(64406,"AddBusinessCard", DISPATCH_METHOD,null,Dispatch.param(contact));
   }
   @DeclDISPID(64543)  public String getTaskSubject() throws ComException {
     final Object obj = this._dispatchCall(64543,"TaskSubject", DISPATCH_PROPERTYGET,null);

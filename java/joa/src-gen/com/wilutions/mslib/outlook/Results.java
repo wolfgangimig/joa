@@ -70,7 +70,7 @@ public class Results extends Dispatch implements _Results {
   @DeclDISPID(97)  public void Sort(final String Property, final Object Descending) throws ComException {
     assert(Property != null);
     assert(Descending != null);
-    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);
+    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Variant.param(Descending));
   }
   @DeclDISPID(64143)  public OlItemType getDefaultItemType() throws ComException {
     final Object obj = this._dispatchCall(64143,"DefaultItemType", DISPATCH_PROPERTYGET,null);

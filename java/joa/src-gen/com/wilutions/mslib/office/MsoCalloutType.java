@@ -45,17 +45,17 @@ public class MsoCalloutType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoCalloutTwo";
     case -2: return "msoCalloutMixed";
     case 1: return "msoCalloutOne";
+    case 2: return "msoCalloutTwo";
     case 3: return "msoCalloutThree";
     case 4: return "msoCalloutFour";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoCalloutTwo");
       if ((value & -2) != 0) sbuf.append("|msoCalloutMixed");
       if ((value & 1) != 0) sbuf.append("|msoCalloutOne");
+      if ((value & 2) != 0) sbuf.append("|msoCalloutTwo");
       if ((value & 3) != 0) sbuf.append("|msoCalloutThree");
       if ((value & 4) != 0) sbuf.append("|msoCalloutFour");
       return sbuf.toString();

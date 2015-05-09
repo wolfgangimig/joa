@@ -31,7 +31,7 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(8449)  public void setCurrentFolder(final com.wilutions.mslib.outlook.MAPIFolder value) throws ComException {
-    this._dispatchCall(8449,"CurrentFolder", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(8449,"CurrentFolder", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(8451)  public void Close() throws ComException {
     this._dispatchCall(8451,"Close", DISPATCH_METHOD,null);
@@ -141,15 +141,15 @@ public class _ExplorerImpl extends Dispatch implements com.wilutions.mslib.outlo
     this._dispatchCall(64101,"Search", DISPATCH_METHOD,null,Query,SearchScope.value);
   }
   @DeclDISPID(64565)  public Boolean IsItemSelectableInView(final IDispatch Item) throws ComException {
-    final Object obj = this._dispatchCall(64565,"IsItemSelectableInView", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64565,"IsItemSelectableInView", DISPATCH_METHOD,null,Dispatch.param(Item));
     if (obj == null) return null;
     return (Boolean)obj;
   }
   @DeclDISPID(64566)  public void AddToSelection(final IDispatch Item) throws ComException {
-    this._dispatchCall(64566,"AddToSelection", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    this._dispatchCall(64566,"AddToSelection", DISPATCH_METHOD,null,Dispatch.param(Item));
   }
   @DeclDISPID(64567)  public void RemoveFromSelection(final IDispatch Item) throws ComException {
-    this._dispatchCall(64567,"RemoveFromSelection", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    this._dispatchCall(64567,"RemoveFromSelection", DISPATCH_METHOD,null,Dispatch.param(Item));
   }
   @DeclDISPID(64568)  public void SelectAllItems() throws ComException {
     this._dispatchCall(64568,"SelectAllItems", DISPATCH_METHOD,null);

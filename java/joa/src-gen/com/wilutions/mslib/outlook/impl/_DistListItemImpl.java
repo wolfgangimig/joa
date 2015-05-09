@@ -208,10 +208,10 @@ public class _DistListItemImpl extends Dispatch implements com.wilutions.mslib.o
   }
   @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
-    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
+    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Variant.param(Modal));
   }
   @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
-    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
+    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,Dispatch.param(DestFldr));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -224,7 +224,7 @@ public class _DistListItemImpl extends Dispatch implements com.wilutions.mslib.o
   @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
-    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
+    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Variant.param(Type));
   }
   @DeclDISPID(32851)  public String getDLName() throws ComException {
     final Object obj = this._dispatchCall(32851,"DLName", DISPATCH_PROPERTYGET,null);
@@ -241,10 +241,10 @@ public class _DistListItemImpl extends Dispatch implements com.wilutions.mslib.o
     return (Integer)obj;
   }
   @DeclDISPID(63744)  public void AddMembers(final com.wilutions.mslib.outlook.Recipients Recipients) throws ComException {
-    this._dispatchCall(63744,"AddMembers", DISPATCH_METHOD,null,(Recipients!=null?Recipients:Dispatch.NULL));
+    this._dispatchCall(63744,"AddMembers", DISPATCH_METHOD,null,Dispatch.param(Recipients));
   }
   @DeclDISPID(63745)  public void RemoveMembers(final com.wilutions.mslib.outlook.Recipients Recipients) throws ComException {
-    this._dispatchCall(63745,"RemoveMembers", DISPATCH_METHOD,null,(Recipients!=null?Recipients:Dispatch.NULL));
+    this._dispatchCall(63745,"RemoveMembers", DISPATCH_METHOD,null,Dispatch.param(Recipients));
   }
   @DeclDISPID(63749)  public com.wilutions.mslib.outlook.Recipient GetMember(final Integer Index) throws ComException {
     assert(Index != null);
@@ -261,10 +261,10 @@ public class _DistListItemImpl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(64011,"ShowCategoriesDialog", DISPATCH_METHOD,null);
   }
   @DeclDISPID(64140)  public void AddMember(final com.wilutions.mslib.outlook.Recipient Recipient) throws ComException {
-    this._dispatchCall(64140,"AddMember", DISPATCH_METHOD,null,(Recipient!=null?Recipient:Dispatch.NULL));
+    this._dispatchCall(64140,"AddMember", DISPATCH_METHOD,null,Dispatch.param(Recipient));
   }
   @DeclDISPID(64141)  public void RemoveMember(final com.wilutions.mslib.outlook.Recipient Recipient) throws ComException {
-    this._dispatchCall(64141,"RemoveMember", DISPATCH_METHOD,null,(Recipient!=null?Recipient:Dispatch.NULL));
+    this._dispatchCall(64141,"RemoveMember", DISPATCH_METHOD,null,Dispatch.param(Recipient));
   }
   @DeclDISPID(64009)  public com.wilutions.mslib.outlook.ItemProperties getItemProperties() throws ComException {
     final Object obj = this._dispatchCall(64009,"ItemProperties", DISPATCH_PROPERTYGET,null);

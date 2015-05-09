@@ -44,7 +44,7 @@ public class _NavigationGroupsImpl extends Dispatch implements com.wilutions.msl
     return disp.as(com.wilutions.mslib.outlook.NavigationGroup.class);
   }
   @DeclDISPID(64446)  public void Delete(final com.wilutions.mslib.outlook.NavigationGroup Group) throws ComException {
-    this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,(Group!=null?Group:Dispatch.NULL));
+    this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,Dispatch.param(Group));
   }
   @DeclDISPID(64447)  public com.wilutions.mslib.outlook.NavigationGroup GetDefaultNavigationGroup(final com.wilutions.mslib.outlook.OlGroupType DefaultFolderGroup) throws ComException {
     assert(DefaultFolderGroup != null);

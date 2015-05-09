@@ -36,7 +36,7 @@ public class SharedWorkspaceMembersImpl extends Dispatch implements com.wilution
     assert(DomainName != null);
     assert(DisplayName != null);
     assert(Role != null);
-    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Email,DomainName,DisplayName,Role);
+    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Email,DomainName,DisplayName,Variant.param(Role));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.SharedWorkspaceMemberImpl.class);
   }

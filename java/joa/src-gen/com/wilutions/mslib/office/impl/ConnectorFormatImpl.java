@@ -22,14 +22,14 @@ public class ConnectorFormatImpl extends Dispatch implements com.wilutions.mslib
   }
   @DeclDISPID(10)  public void BeginConnect(final com.wilutions.mslib.office.Shape ConnectedShape, final Integer ConnectionSite) throws ComException {
     assert(ConnectionSite != null);
-    this._dispatchCall(10,"BeginConnect", DISPATCH_METHOD,null,(ConnectedShape!=null?ConnectedShape:Dispatch.NULL),ConnectionSite);
+    this._dispatchCall(10,"BeginConnect", DISPATCH_METHOD,null,Dispatch.param(ConnectedShape),ConnectionSite);
   }
   @DeclDISPID(11)  public void BeginDisconnect() throws ComException {
     this._dispatchCall(11,"BeginDisconnect", DISPATCH_METHOD,null);
   }
   @DeclDISPID(12)  public void EndConnect(final com.wilutions.mslib.office.Shape ConnectedShape, final Integer ConnectionSite) throws ComException {
     assert(ConnectionSite != null);
-    this._dispatchCall(12,"EndConnect", DISPATCH_METHOD,null,(ConnectedShape!=null?ConnectedShape:Dispatch.NULL),ConnectionSite);
+    this._dispatchCall(12,"EndConnect", DISPATCH_METHOD,null,Dispatch.param(ConnectedShape),ConnectionSite);
   }
   @DeclDISPID(13)  public void EndDisconnect() throws ComException {
     this._dispatchCall(13,"EndDisconnect", DISPATCH_METHOD,null);

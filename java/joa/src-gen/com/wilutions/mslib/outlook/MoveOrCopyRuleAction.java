@@ -49,7 +49,7 @@ public class MoveOrCopyRuleAction extends Dispatch implements _MoveOrCopyRuleAct
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
   @DeclDISPID(64273)  public void setFolder(final MAPIFolder value) throws ComException {
-    this._dispatchCall(64273,"Folder", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64273,"Folder", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   public MoveOrCopyRuleAction() throws ComException {
     super("{000610D0-0000-0000-C000-000000000046}", "{000630D0-0000-0000-C000-000000000046}");

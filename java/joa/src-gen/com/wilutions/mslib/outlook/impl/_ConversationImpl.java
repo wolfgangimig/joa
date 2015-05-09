@@ -32,13 +32,13 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
     return disp.as(com.wilutions.mslib.outlook.Table.class);
   }
   @DeclDISPID(64592)  public com.wilutions.mslib.outlook.SimpleItems GetChildren(final IDispatch Item) throws ComException {
-    final Object obj = this._dispatchCall(64592,"GetChildren", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64592,"GetChildren", DISPATCH_METHOD,null,Dispatch.param(Item));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.outlook.SimpleItems.class);
   }
   @DeclDISPID(64594)  public IDispatch GetParent(final IDispatch Item) throws ComException {
-    final Object obj = this._dispatchCall(64594,"GetParent", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64594,"GetParent", DISPATCH_METHOD,null,Dispatch.param(Item));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -49,17 +49,17 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
     return disp.as(com.wilutions.mslib.outlook.SimpleItems.class);
   }
   @DeclDISPID(64602)  public String GetAlwaysAssignCategories(final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    final Object obj = this._dispatchCall(64602,"GetAlwaysAssignCategories", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64602,"GetAlwaysAssignCategories", DISPATCH_METHOD,null,Dispatch.param(Store));
     if (obj == null) return null;
     return (String)obj;
   }
   @DeclDISPID(64603)  public com.wilutions.mslib.outlook.OlAlwaysDeleteConversation GetAlwaysDelete(final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    final Object obj = this._dispatchCall(64603,"GetAlwaysDelete", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64603,"GetAlwaysDelete", DISPATCH_METHOD,null,Dispatch.param(Store));
     if (obj == null) return null;
     return com.wilutions.mslib.outlook.OlAlwaysDeleteConversation.valueOf((Integer)obj);
   }
   @DeclDISPID(64604)  public com.wilutions.mslib.outlook.MAPIFolder GetAlwaysMoveToFolder(final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    final Object obj = this._dispatchCall(64604,"GetAlwaysMoveToFolder", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64604,"GetAlwaysMoveToFolder", DISPATCH_METHOD,null,Dispatch.param(Store));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
@@ -71,23 +71,23 @@ public class _ConversationImpl extends Dispatch implements com.wilutions.mslib.o
   }
   @DeclDISPID(64607)  public void SetAlwaysAssignCategories(final String Categories, final com.wilutions.mslib.outlook._Store Store) throws ComException {
     assert(Categories != null);
-    this._dispatchCall(64607,"SetAlwaysAssignCategories", DISPATCH_METHOD,null,Categories,(Store!=null?Store:Dispatch.NULL));
+    this._dispatchCall(64607,"SetAlwaysAssignCategories", DISPATCH_METHOD,null,Categories,Dispatch.param(Store));
   }
   @DeclDISPID(64608)  public void SetAlwaysDelete(final com.wilutions.mslib.outlook.OlAlwaysDeleteConversation AlwaysDelete, final com.wilutions.mslib.outlook._Store Store) throws ComException {
     assert(AlwaysDelete != null);
-    this._dispatchCall(64608,"SetAlwaysDelete", DISPATCH_METHOD,null,AlwaysDelete.value,(Store!=null?Store:Dispatch.NULL));
+    this._dispatchCall(64608,"SetAlwaysDelete", DISPATCH_METHOD,null,AlwaysDelete.value,Dispatch.param(Store));
   }
   @DeclDISPID(64609)  public void SetAlwaysMoveToFolder(final com.wilutions.mslib.outlook.MAPIFolder MoveToFolder, final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    this._dispatchCall(64609,"SetAlwaysMoveToFolder", DISPATCH_METHOD,null,(MoveToFolder!=null?MoveToFolder:Dispatch.NULL),(Store!=null?Store:Dispatch.NULL));
+    this._dispatchCall(64609,"SetAlwaysMoveToFolder", DISPATCH_METHOD,null,Dispatch.param(MoveToFolder),Dispatch.param(Store));
   }
   @DeclDISPID(64610)  public void ClearAlwaysAssignCategories(final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    this._dispatchCall(64610,"ClearAlwaysAssignCategories", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
+    this._dispatchCall(64610,"ClearAlwaysAssignCategories", DISPATCH_METHOD,null,Dispatch.param(Store));
   }
   @DeclDISPID(64611)  public void StopAlwaysDelete(final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    this._dispatchCall(64611,"StopAlwaysDelete", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
+    this._dispatchCall(64611,"StopAlwaysDelete", DISPATCH_METHOD,null,Dispatch.param(Store));
   }
   @DeclDISPID(64612)  public void StopAlwaysMoveToFolder(final com.wilutions.mslib.outlook._Store Store) throws ComException {
-    this._dispatchCall(64612,"StopAlwaysMoveToFolder", DISPATCH_METHOD,null,(Store!=null?Store:Dispatch.NULL));
+    this._dispatchCall(64612,"StopAlwaysMoveToFolder", DISPATCH_METHOD,null,Dispatch.param(Store));
   }
   @DeclDISPID(64629)  public String getConversationID() throws ComException {
     final Object obj = this._dispatchCall(64629,"ConversationID", DISPATCH_PROPERTYGET,null);

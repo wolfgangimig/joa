@@ -45,17 +45,17 @@ public class MsoPictureColorType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoPictureGrayscale";
     case -2: return "msoPictureMixed";
     case 1: return "msoPictureAutomatic";
+    case 2: return "msoPictureGrayscale";
     case 3: return "msoPictureBlackAndWhite";
     case 4: return "msoPictureWatermark";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoPictureGrayscale");
       if ((value & -2) != 0) sbuf.append("|msoPictureMixed");
       if ((value & 1) != 0) sbuf.append("|msoPictureAutomatic");
+      if ((value & 2) != 0) sbuf.append("|msoPictureGrayscale");
       if ((value & 3) != 0) sbuf.append("|msoPictureBlackAndWhite");
       if ((value & 4) != 0) sbuf.append("|msoPictureWatermark");
       return sbuf.toString();

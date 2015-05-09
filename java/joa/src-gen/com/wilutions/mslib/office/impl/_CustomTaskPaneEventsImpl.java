@@ -6,10 +6,10 @@ import com.wilutions.com.*;
 @CoClass(guid="{C09B9A57-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class _CustomTaskPaneEventsImpl extends Dispatch implements com.wilutions.mslib.office._CustomTaskPaneEvents {
   @DeclDISPID(1)  public void onVisibleStateChange(final com.wilutions.mslib.office._CustomTaskPane CustomTaskPaneInst) throws ComException {
-    this._dispatchCall(1,"VisibleStateChange", DISPATCH_METHOD,null,(CustomTaskPaneInst!=null?CustomTaskPaneInst:Dispatch.NULL));
+    this._dispatchCall(1,"VisibleStateChange", DISPATCH_METHOD,null,Dispatch.param(CustomTaskPaneInst));
   }
   @DeclDISPID(2)  public void onDockPositionStateChange(final com.wilutions.mslib.office._CustomTaskPane CustomTaskPaneInst) throws ComException {
-    this._dispatchCall(2,"DockPositionStateChange", DISPATCH_METHOD,null,(CustomTaskPaneInst!=null?CustomTaskPaneInst:Dispatch.NULL));
+    this._dispatchCall(2,"DockPositionStateChange", DISPATCH_METHOD,null,Dispatch.param(CustomTaskPaneInst));
   }
   public _CustomTaskPaneEventsImpl(String progId) throws ComException {
     super(progId, "{000C033C-0000-0000-C000-000000000046}");

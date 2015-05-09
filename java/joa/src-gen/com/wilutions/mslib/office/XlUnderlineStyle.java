@@ -45,18 +45,18 @@ public class XlUnderlineStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "xlUnderlineStyleSingle";
     case -4142: return "xlUnderlineStyleNone";
     case -4119: return "xlUnderlineStyleDouble";
     case 5: return "xlUnderlineStyleDoubleAccounting";
+    case 2: return "xlUnderlineStyleSingle";
     case 4: return "xlUnderlineStyleSingleAccounting";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|xlUnderlineStyleSingle");
       if ((value & -4142) != 0) sbuf.append("|xlUnderlineStyleNone");
       if ((value & -4119) != 0) sbuf.append("|xlUnderlineStyleDouble");
       if ((value & 5) != 0) sbuf.append("|xlUnderlineStyleDoubleAccounting");
+      if ((value & 2) != 0) sbuf.append("|xlUnderlineStyleSingle");
       if ((value & 4) != 0) sbuf.append("|xlUnderlineStyleSingleAccounting");
       return sbuf.toString();
       }

@@ -40,7 +40,7 @@ public class _OutlookBarShortcutsImpl extends Dispatch implements com.wilutions.
     assert(Target != null);
     assert(Name != null);
     assert(Index != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Target,Name,Index);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Target,Name,Variant.param(Index));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.OutlookBarShortcutImpl.class);
   }

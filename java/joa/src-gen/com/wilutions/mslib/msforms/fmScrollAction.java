@@ -64,7 +64,6 @@ public class fmScrollAction implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "fmScrollActionPropertyChange";
-    case 10: return "fmScrollActionFocusRequest";
     case 0: return "fmScrollActionNoChange";
     case 1: return "fmScrollActionLineUp";
     case 2: return "fmScrollActionLineDown";
@@ -74,11 +73,11 @@ public class fmScrollAction implements ComEnum {
     case 6: return "fmScrollActionEnd";
     case 7: return "_fmScrollActionAbsoluteChange";
     case 9: return "fmScrollActionControlRequest";
+    case 10: return "fmScrollActionFocusRequest";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|fmScrollActionPropertyChange");
-      if ((value & 10) != 0) sbuf.append("|fmScrollActionFocusRequest");
       if ((value & 0) != 0) sbuf.append("|fmScrollActionNoChange");
       if ((value & 1) != 0) sbuf.append("|fmScrollActionLineUp");
       if ((value & 2) != 0) sbuf.append("|fmScrollActionLineDown");
@@ -88,6 +87,7 @@ public class fmScrollAction implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|fmScrollActionEnd");
       if ((value & 7) != 0) sbuf.append("|_fmScrollActionAbsoluteChange");
       if ((value & 9) != 0) sbuf.append("|fmScrollActionControlRequest");
+      if ((value & 10) != 0) sbuf.append("|fmScrollActionFocusRequest");
       return sbuf.toString();
       }
     }

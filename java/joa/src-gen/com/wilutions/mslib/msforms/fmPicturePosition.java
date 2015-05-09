@@ -70,7 +70,6 @@ public class fmPicturePosition implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "fmPicturePositionAboveRight";
-    case 10: return "fmPicturePositionBelowCenter";
     case 0: return "fmPicturePositionLeftTop";
     case 1: return "fmPicturePositionLeftCenter";
     case 2: return "fmPicturePositionLeftBottom";
@@ -80,13 +79,13 @@ public class fmPicturePosition implements ComEnum {
     case 6: return "fmPicturePositionAboveLeft";
     case 7: return "fmPicturePositionAboveCenter";
     case 9: return "fmPicturePositionBelowLeft";
+    case 10: return "fmPicturePositionBelowCenter";
     case 11: return "fmPicturePositionBelowRight";
     case 12: return "fmPicturePositionCenter";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|fmPicturePositionAboveRight");
-      if ((value & 10) != 0) sbuf.append("|fmPicturePositionBelowCenter");
       if ((value & 0) != 0) sbuf.append("|fmPicturePositionLeftTop");
       if ((value & 1) != 0) sbuf.append("|fmPicturePositionLeftCenter");
       if ((value & 2) != 0) sbuf.append("|fmPicturePositionLeftBottom");
@@ -96,6 +95,7 @@ public class fmPicturePosition implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|fmPicturePositionAboveLeft");
       if ((value & 7) != 0) sbuf.append("|fmPicturePositionAboveCenter");
       if ((value & 9) != 0) sbuf.append("|fmPicturePositionBelowLeft");
+      if ((value & 10) != 0) sbuf.append("|fmPicturePositionBelowCenter");
       if ((value & 11) != 0) sbuf.append("|fmPicturePositionBelowRight");
       if ((value & 12) != 0) sbuf.append("|fmPicturePositionCenter");
       return sbuf.toString();

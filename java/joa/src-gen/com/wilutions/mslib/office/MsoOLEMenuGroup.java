@@ -51,23 +51,23 @@ public class MsoOLEMenuGroup implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 5: return "msoOLEMenuGroupHelp";
+    case 4: return "msoOLEMenuGroupWindow";
     case -1: return "msoOLEMenuGroupNone";
     case 0: return "msoOLEMenuGroupFile";
     case 1: return "msoOLEMenuGroupEdit";
     case 2: return "msoOLEMenuGroupContainer";
     case 3: return "msoOLEMenuGroupObject";
-    case 4: return "msoOLEMenuGroupWindow";
+    case 5: return "msoOLEMenuGroupHelp";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 5) != 0) sbuf.append("|msoOLEMenuGroupHelp");
+      if ((value & 4) != 0) sbuf.append("|msoOLEMenuGroupWindow");
       if ((value & -1) != 0) sbuf.append("|msoOLEMenuGroupNone");
       if ((value & 0) != 0) sbuf.append("|msoOLEMenuGroupFile");
       if ((value & 1) != 0) sbuf.append("|msoOLEMenuGroupEdit");
       if ((value & 2) != 0) sbuf.append("|msoOLEMenuGroupContainer");
       if ((value & 3) != 0) sbuf.append("|msoOLEMenuGroupObject");
-      if ((value & 4) != 0) sbuf.append("|msoOLEMenuGroupWindow");
+      if ((value & 5) != 0) sbuf.append("|msoOLEMenuGroupHelp");
       return sbuf.toString();
       }
     }

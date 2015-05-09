@@ -114,9 +114,7 @@ public class MsoPictureEffectType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 18: return "msoEffectPaintStrokes";
     case 8: return "msoEffectCutout";
-    case 10: return "msoEffectGlass";
     case 0: return "msoEffectNone";
     case 1: return "msoEffectBackgroundRemoval";
     case 2: return "msoEffectBlur";
@@ -125,8 +123,8 @@ public class MsoPictureEffectType implements ComEnum {
     case 5: return "msoEffectCrisscrossEtching";
     case 6: return "msoEffectChalkSketch";
     case 7: return "msoEffectColorTemperature";
-    case 20: return "msoEffectPencilGrayscale";
     case 9: return "msoEffectFilmGrain";
+    case 10: return "msoEffectGlass";
     case 11: return "msoEffectGlowDiffused";
     case 12: return "msoEffectGlowEdges";
     case 13: return "msoEffectLightScreen";
@@ -134,8 +132,10 @@ public class MsoPictureEffectType implements ComEnum {
     case 15: return "msoEffectMarker";
     case 16: return "msoEffectMosiaicBubbles";
     case 17: return "msoEffectPaintBrush";
-    case 19: return "msoEffectPastelsSmooth";
     case 21: return "msoEffectPencilSketch";
+    case 18: return "msoEffectPaintStrokes";
+    case 20: return "msoEffectPencilGrayscale";
+    case 19: return "msoEffectPastelsSmooth";
     case 22: return "msoEffectPhotocopy";
     case 23: return "msoEffectPlasticWrap";
     case 24: return "msoEffectSaturation";
@@ -145,9 +145,7 @@ public class MsoPictureEffectType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 18) != 0) sbuf.append("|msoEffectPaintStrokes");
       if ((value & 8) != 0) sbuf.append("|msoEffectCutout");
-      if ((value & 10) != 0) sbuf.append("|msoEffectGlass");
       if ((value & 0) != 0) sbuf.append("|msoEffectNone");
       if ((value & 1) != 0) sbuf.append("|msoEffectBackgroundRemoval");
       if ((value & 2) != 0) sbuf.append("|msoEffectBlur");
@@ -156,8 +154,8 @@ public class MsoPictureEffectType implements ComEnum {
       if ((value & 5) != 0) sbuf.append("|msoEffectCrisscrossEtching");
       if ((value & 6) != 0) sbuf.append("|msoEffectChalkSketch");
       if ((value & 7) != 0) sbuf.append("|msoEffectColorTemperature");
-      if ((value & 20) != 0) sbuf.append("|msoEffectPencilGrayscale");
       if ((value & 9) != 0) sbuf.append("|msoEffectFilmGrain");
+      if ((value & 10) != 0) sbuf.append("|msoEffectGlass");
       if ((value & 11) != 0) sbuf.append("|msoEffectGlowDiffused");
       if ((value & 12) != 0) sbuf.append("|msoEffectGlowEdges");
       if ((value & 13) != 0) sbuf.append("|msoEffectLightScreen");
@@ -165,8 +163,10 @@ public class MsoPictureEffectType implements ComEnum {
       if ((value & 15) != 0) sbuf.append("|msoEffectMarker");
       if ((value & 16) != 0) sbuf.append("|msoEffectMosiaicBubbles");
       if ((value & 17) != 0) sbuf.append("|msoEffectPaintBrush");
-      if ((value & 19) != 0) sbuf.append("|msoEffectPastelsSmooth");
       if ((value & 21) != 0) sbuf.append("|msoEffectPencilSketch");
+      if ((value & 18) != 0) sbuf.append("|msoEffectPaintStrokes");
+      if ((value & 20) != 0) sbuf.append("|msoEffectPencilGrayscale");
+      if ((value & 19) != 0) sbuf.append("|msoEffectPastelsSmooth");
       if ((value & 22) != 0) sbuf.append("|msoEffectPhotocopy");
       if ((value & 23) != 0) sbuf.append("|msoEffectPlasticWrap");
       if ((value & 24) != 0) sbuf.append("|msoEffectSaturation");

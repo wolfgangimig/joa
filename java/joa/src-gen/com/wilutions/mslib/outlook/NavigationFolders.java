@@ -41,13 +41,13 @@ public class NavigationFolders extends Dispatch implements _NavigationFolders {
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._NavigationFolderImpl.class);
   }
   @DeclDISPID(64450)  public NavigationFolder Add(final MAPIFolder Folder) throws ComException {
-    final Object obj = this._dispatchCall(64450,"Add", DISPATCH_METHOD,null,(Folder!=null?Folder:Dispatch.NULL));
+    final Object obj = this._dispatchCall(64450,"Add", DISPATCH_METHOD,null,Dispatch.param(Folder));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(NavigationFolder.class);
   }
   @DeclDISPID(64451)  public void Remove(final NavigationFolder RemovableFolder) throws ComException {
-    this._dispatchCall(64451,"Remove", DISPATCH_METHOD,null,(RemovableFolder!=null?RemovableFolder:Dispatch.NULL));
+    this._dispatchCall(64451,"Remove", DISPATCH_METHOD,null,Dispatch.param(RemovableFolder));
   }
   public NavigationFolders() throws ComException {
     super("{000610F1-0000-0000-C000-000000000046}", "{000630F1-0000-0000-C000-000000000046}");

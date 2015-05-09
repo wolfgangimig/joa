@@ -27,24 +27,24 @@ public class DiagramNodeImpl extends Dispatch implements com.wilutions.mslib.off
   }
   @DeclDISPID(12)  public void MoveNode(final com.wilutions.mslib.office.DiagramNode TargetNode, final com.wilutions.mslib.office.MsoRelativeNodePosition Pos) throws ComException {
     assert(Pos != null);
-    this._dispatchCall(12,"MoveNode", DISPATCH_METHOD,null,(TargetNode!=null?TargetNode:Dispatch.NULL),Pos.value);
+    this._dispatchCall(12,"MoveNode", DISPATCH_METHOD,null,Dispatch.param(TargetNode),Pos.value);
   }
   @DeclDISPID(13)  public void ReplaceNode(final com.wilutions.mslib.office.DiagramNode TargetNode) throws ComException {
-    this._dispatchCall(13,"ReplaceNode", DISPATCH_METHOD,null,(TargetNode!=null?TargetNode:Dispatch.NULL));
+    this._dispatchCall(13,"ReplaceNode", DISPATCH_METHOD,null,Dispatch.param(TargetNode));
   }
   @DeclDISPID(14)  public void SwapNode(final com.wilutions.mslib.office.DiagramNode TargetNode, final Boolean SwapChildren) throws ComException {
     assert(SwapChildren != null);
-    this._dispatchCall(14,"SwapNode", DISPATCH_METHOD,null,(TargetNode!=null?TargetNode:Dispatch.NULL),SwapChildren);
+    this._dispatchCall(14,"SwapNode", DISPATCH_METHOD,null,Dispatch.param(TargetNode),SwapChildren);
   }
   @DeclDISPID(15)  public com.wilutions.mslib.office.DiagramNode CloneNode(final Boolean CopyChildren, final com.wilutions.mslib.office.DiagramNode TargetNode, final com.wilutions.mslib.office.MsoRelativeNodePosition Pos) throws ComException {
     assert(CopyChildren != null);
     assert(Pos != null);
-    final Object obj = this._dispatchCall(15,"CloneNode", DISPATCH_METHOD,null,CopyChildren,(TargetNode!=null?TargetNode:Dispatch.NULL),Pos.value);
+    final Object obj = this._dispatchCall(15,"CloneNode", DISPATCH_METHOD,null,CopyChildren,Dispatch.param(TargetNode),Pos.value);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.DiagramNodeImpl.class);
   }
   @DeclDISPID(16)  public void TransferChildren(final com.wilutions.mslib.office.DiagramNode ReceivingNode) throws ComException {
-    this._dispatchCall(16,"TransferChildren", DISPATCH_METHOD,null,(ReceivingNode!=null?ReceivingNode:Dispatch.NULL));
+    this._dispatchCall(16,"TransferChildren", DISPATCH_METHOD,null,Dispatch.param(ReceivingNode));
   }
   @DeclDISPID(17)  public com.wilutions.mslib.office.DiagramNode NextNode() throws ComException {
     final Object obj = this._dispatchCall(17,"NextNode", DISPATCH_METHOD,null);

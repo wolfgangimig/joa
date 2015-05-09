@@ -67,7 +67,7 @@ public class _RuleImpl extends Dispatch implements com.wilutions.mslib.outlook._
     assert(Folder != null);
     assert(IncludeSubfolders != null);
     assert(RuleExecuteOption != null);
-    this._dispatchCall(64270,"Execute", DISPATCH_METHOD,null,ShowProgress,Folder,IncludeSubfolders,RuleExecuteOption);
+    this._dispatchCall(64270,"Execute", DISPATCH_METHOD,null,Variant.param(ShowProgress),Variant.param(Folder),Variant.param(IncludeSubfolders),Variant.param(RuleExecuteOption));
   }
   @DeclDISPID(64272)  public com.wilutions.mslib.outlook.RuleActions getActions() throws ComException {
     final Object obj = this._dispatchCall(64272,"Actions", DISPATCH_PROPERTYGET,null);

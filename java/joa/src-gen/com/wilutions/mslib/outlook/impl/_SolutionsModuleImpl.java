@@ -55,7 +55,7 @@ public class _SolutionsModuleImpl extends Dispatch implements com.wilutions.msli
   }
   @DeclDISPID(64574)  public void AddSolution(final com.wilutions.mslib.outlook.MAPIFolder Solution, final com.wilutions.mslib.outlook.OlSolutionScope Scope) throws ComException {
     assert(Scope != null);
-    this._dispatchCall(64574,"AddSolution", DISPATCH_METHOD,null,(Solution!=null?Solution:Dispatch.NULL),Scope.value);
+    this._dispatchCall(64574,"AddSolution", DISPATCH_METHOD,null,Dispatch.param(Solution),Scope.value);
   }
   public _SolutionsModuleImpl(String progId) throws ComException {
     super(progId, "{000630FF-0000-0000-C000-000000000046}");

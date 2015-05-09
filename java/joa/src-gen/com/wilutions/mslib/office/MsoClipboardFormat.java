@@ -45,17 +45,17 @@ public class MsoClipboardFormat implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoClipboardFormatHTML";
     case -2: return "msoClipboardFormatMixed";
     case 1: return "msoClipboardFormatNative";
+    case 2: return "msoClipboardFormatHTML";
     case 3: return "msoClipboardFormatRTF";
     case 4: return "msoClipboardFormatPlainText";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoClipboardFormatHTML");
       if ((value & -2) != 0) sbuf.append("|msoClipboardFormatMixed");
       if ((value & 1) != 0) sbuf.append("|msoClipboardFormatNative");
+      if ((value & 2) != 0) sbuf.append("|msoClipboardFormatHTML");
       if ((value & 3) != 0) sbuf.append("|msoClipboardFormatRTF");
       if ((value & 4) != 0) sbuf.append("|msoClipboardFormatPlainText");
       return sbuf.toString();

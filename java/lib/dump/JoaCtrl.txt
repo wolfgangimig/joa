@@ -1,0 +1,1488 @@
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:140              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:141              Library JoaCtrlLib, 
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:2272               LIBATTR: {0F9377B3-9F5B-4551-8709-8E422D5F7A8A}
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:2274                 lcid=0
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:2275                 syskind=SYS_WIN32
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:2276                 wMajorVerNum=1
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:2277                 wMinorVerNum=0
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:2278                 wLibFlags=LIBFLAG_FHASDISKIMAGE|
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:151              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,591 5412  INFO  JGenerator:152              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:283              _IJoaBridgeCtrlEvents
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_DISPATCH, {19E66BF2-50B4-4DA6-8B09-B83A560B98AF}
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2118                 cFuncs=0
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2120                 cImplTypes=1
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2121                 cbSizeVft=28
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FDISPATCHABLE|
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,606 5412  INFO  JGenerator:283              JoaBridgeCtrl
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_COCLASS, {246D42EA-0513-447B-B7E6-86FE0400B3EA}
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2118                 cFuncs=0
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2120                 cImplTypes=2
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2121                 cbSizeVft=0
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FCANCREATE|TYPEFLAG_FCONTROL|
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,622 5412  INFO  JGenerator:1081               IJoaBridgeCtrl::HWND
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2193                 FUNCDESC: memid=-515 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2196                   oVft=28
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=FUNCFLAG_FBINDABLE|FUNCFLAG_FREQUESTEDIT|
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_USERDEFINED] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:1081               IJoaBridgeCtrl::FitToParent
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1111 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2196                   oVft=32
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,638 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,653 5412  INFO  JGenerator:1081               IJoaBridgeCtrl::FitToParent
+2015-05-07 20:18:36,654 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1111 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,655 5412  INFO  JGenerator:2196                   oVft=36
+2015-05-07 20:18:36,655 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,656 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,657 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,658 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,658 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,659 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:283              IJoaBridgeCtrl
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_DISPATCH, {8B43F7ED-C4B5-4DBA-B174-E8D61C449B08}
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2118                 cFuncs=10
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2120                 cImplTypes=1
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2121                 cbSizeVft=28
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FDUAL|TYPEFLAG_FNONEXTENSIBLE|TYPEFLAG_FDISPATCHABLE|
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,660 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:1081               IJoaBridgeCtrl::HWND
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2193                 FUNCDESC: memid=-515 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2196                   oVft=28
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=FUNCFLAG_FBINDABLE|FUNCFLAG_FREQUESTEDIT|
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_USERDEFINED] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:1081               IJoaBridgeCtrl::FitToParent
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1111 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2196                   oVft=32
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,676 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:1081               IJoaBridgeCtrl::FitToParent
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1111 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2196                   oVft=36
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:283              LONG_PTR
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_ALIAS, {00000000-0000-0000-0000-000000000000}
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,691 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2118                 cFuncs=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2120                 cImplTypes=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2121                 cbSizeVft=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2123                 wTypeFlags=
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2127                 tdescAlias=[TYPEDESC: vt=VT_I4]
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:283              JoaUtilAddin
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_COCLASS, {7B57EC55-0A9C-4AB0-A2CC-AF81C680CFAC}
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,707 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2118                 cFuncs=0
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2120                 cImplTypes=1
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2121                 cbSizeVft=0
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FCANCREATE|
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:1081               IJoaUtilAddin::CreateBridgeDialog
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2196                   oVft=28
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_PTR] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,723 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:283              IJoaUtilAddin
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_DISPATCH, {403444E9-2793-4450-AB21-0C1DB4754F3F}
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2118                 cFuncs=8
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2120                 cImplTypes=1
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2121                 cbSizeVft=28
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FDUAL|TYPEFLAG_FNONEXTENSIBLE|TYPEFLAG_FDISPATCHABLE|
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,738 5412  INFO  JGenerator:1081               IJoaUtilAddin::CreateBridgeDialog
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2196                   oVft=28
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_PTR] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:282              
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:283              IJoaBridgeDialog
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_DISPATCH, {092F3085-8620-4218-A38D-7F223DA710D9}
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2118                 cFuncs=40
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:36,754 5412  INFO  JGenerator:2120                 cImplTypes=1
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2121                 cbSizeVft=28
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FDUAL|TYPEFLAG_FNONEXTENSIBLE|TYPEFLAG_FDISPATCHABLE|
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:1081               IJoaBridgeDialog::ShowModal
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2193                 FUNCDESC: memid=11 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2196                   oVft=28
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2212                     owner
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_VARIANT] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,769 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Close
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2193                 FUNCDESC: memid=10 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2196                   oVft=32
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:1081               IJoaBridgeDialog::HWND
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2196                   oVft=36
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:1081               IJoaBridgeDialog::HWND
+2015-05-07 20:18:36,785 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2196                   oVft=40
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Title
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2193                 FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2196                   oVft=44
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BSTR] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,801 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Title
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2193                 FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2196                   oVft=48
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BSTR] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:1081               IJoaBridgeDialog::X
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2193                 FUNCDESC: memid=12 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2196                   oVft=52
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,816 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:1081               IJoaBridgeDialog::X
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2193                 FUNCDESC: memid=12 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2196                   oVft=56
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Y
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2193                 FUNCDESC: memid=13 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2196                   oVft=60
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,832 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Y
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2193                 FUNCDESC: memid=13 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2196                   oVft=64
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Width
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2193                 FUNCDESC: memid=14 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2196                   oVft=68
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,847 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Width
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2193                 FUNCDESC: memid=14 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2196                   oVft=72
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Height
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2193                 FUNCDESC: memid=15 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2196                   oVft=76
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,863 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Height
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2193                 FUNCDESC: memid=15 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2196                   oVft=80
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinimizeBox
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2193                 FUNCDESC: memid=16 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2196                   oVft=84
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,879 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinimizeBox
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2193                 FUNCDESC: memid=16 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2196                   oVft=88
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaximizeBox
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2193                 FUNCDESC: memid=17 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2196                   oVft=92
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,894 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaximizeBox
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2193                 FUNCDESC: memid=17 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2196                   oVft=96
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:1081               IJoaBridgeDialog::CenterOnOwner
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2193                 FUNCDESC: memid=18 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2196                   oVft=100
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,910 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:1081               IJoaBridgeDialog::CenterOnOwner
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2193                 FUNCDESC: memid=18 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2196                   oVft=104
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Resizable
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2193                 FUNCDESC: memid=19 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2196                   oVft=108
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,925 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Resizable
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2193                 FUNCDESC: memid=19 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2196                   oVft=112
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinHeight
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2193                 FUNCDESC: memid=20 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2196                   oVft=116
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,941 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinHeight
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2193                 FUNCDESC: memid=20 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2196                   oVft=120
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxHeight
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2193                 FUNCDESC: memid=21 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2196                   oVft=124
+2015-05-07 20:18:36,957 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxHeight
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2193                 FUNCDESC: memid=21 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2196                   oVft=128
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinWidth
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2193                 FUNCDESC: memid=22 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2196                   oVft=132
+2015-05-07 20:18:36,972 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinWidth
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2193                 FUNCDESC: memid=22 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2196                   oVft=136
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxWidth
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2193                 FUNCDESC: memid=23 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:36,988 5412  INFO  JGenerator:2196                   oVft=140
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxWidth
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2193                 FUNCDESC: memid=23 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2196                   oVft=144
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:1081               IJoaBridgeDialog::SetFocusOnFirstChildWindow
+2015-05-07 20:18:37,003 5412  INFO  JGenerator:2193                 FUNCDESC: memid=24 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2196                   oVft=148
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:1081               IJoaBridgeDialog::ShowModal2
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2193                 FUNCDESC: memid=25 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2196                   oVft=152
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2212                     hwndOwner
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,019 5412  INFO  JGenerator:1081               IJoaBridgeDialog::ShowModal3
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2193                 FUNCDESC: memid=26 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2196                   oVft=156
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2212                     dispOwner
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_DISPATCH] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:282              
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:283              _IJoaBridgeDialogEvents
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_DISPATCH, {21510D80-0112-4214-B91A-2D332BC41874}
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2118                 cFuncs=3
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:37,035 5412  INFO  JGenerator:2120                 cImplTypes=1
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2121                 cbSizeVft=28
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FDISPATCHABLE|
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:1081               _IJoaBridgeDialogEvents::Show
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2196                   oVft=0
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2212                     HWND
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:1081               _IJoaBridgeDialogEvents::Closed
+2015-05-07 20:18:37,050 5412  INFO  JGenerator:2193                 FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2196                   oVft=0
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:1081               _IJoaBridgeDialogEvents::SystemMenuClose
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2193                 FUNCDESC: memid=3 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2196                   oVft=0
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:282              
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:283              JoaBridgeDialog
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:284              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:37,066 5412  INFO  JGenerator:2111               TYPEATTR: TKIND_COCLASS, {5995DE21-CBAA-4E8B-8EC3-FB779A1D6390}
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2113                 lcid=0
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2114                 memidConstructor=-1
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2115                 memidDestructor=-1
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2116                 lpstrSchema=NULL
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2117                 cbSizeInstance=4
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2118                 cFuncs=0
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2119                 cVars=0
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2120                 cImplTypes=2
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2121                 cbSizeVft=0
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2122                 cbAlignment=4
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2123                 wTypeFlags=TYPEFLAG_FCANCREATE|
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2124                 wMajorVerNum=0
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2125                 wMinorVerNum=0
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2129                 idldescType=IDLFLAG_NONE
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:1081               IJoaBridgeDialog::ShowModal
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2193                 FUNCDESC: memid=11 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2196                   oVft=28
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,081 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2212                     owner
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_VARIANT] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Close
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2193                 FUNCDESC: memid=10 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2196                   oVft=32
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:1081               IJoaBridgeDialog::HWND
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2196                   oVft=36
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,097 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:1081               IJoaBridgeDialog::HWND
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2193                 FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2196                   oVft=40
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Title
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2193                 FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2196                   oVft=44
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,113 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BSTR] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Title
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2193                 FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2196                   oVft=48
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,128 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BSTR] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:1081               IJoaBridgeDialog::X
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2193                 FUNCDESC: memid=12 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2196                   oVft=52
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:1081               IJoaBridgeDialog::X
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2193                 FUNCDESC: memid=12 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2196                   oVft=56
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,144 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Y
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2193                 FUNCDESC: memid=13 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2196                   oVft=60
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Y
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2193                 FUNCDESC: memid=13 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2196                   oVft=64
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,159 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Width
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2193                 FUNCDESC: memid=14 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2196                   oVft=68
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Width
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2193                 FUNCDESC: memid=14 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2196                   oVft=72
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,175 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Height
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2193                 FUNCDESC: memid=15 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2196                   oVft=76
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Height
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2193                 FUNCDESC: memid=15 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2196                   oVft=80
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,191 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinimizeBox
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2193                 FUNCDESC: memid=16 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2196                   oVft=84
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinimizeBox
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2193                 FUNCDESC: memid=16 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2196                   oVft=88
+2015-05-07 20:18:37,206 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaximizeBox
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2193                 FUNCDESC: memid=17 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2196                   oVft=92
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaximizeBox
+2015-05-07 20:18:37,222 5412  INFO  JGenerator:2193                 FUNCDESC: memid=17 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2196                   oVft=96
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:1081               IJoaBridgeDialog::CenterOnOwner
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2193                 FUNCDESC: memid=18 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2196                   oVft=100
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,237 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:1081               IJoaBridgeDialog::CenterOnOwner
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2193                 FUNCDESC: memid=18 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2196                   oVft=104
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Resizable
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2193                 FUNCDESC: memid=19 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2196                   oVft=108
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,253 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:1081               IJoaBridgeDialog::Resizable
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2193                 FUNCDESC: memid=19 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2196                   oVft=112
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinHeight
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2193                 FUNCDESC: memid=20 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2196                   oVft=116
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,269 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinHeight
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2193                 FUNCDESC: memid=20 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2196                   oVft=120
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxHeight
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2193                 FUNCDESC: memid=21 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2196                   oVft=124
+2015-05-07 20:18:37,284 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxHeight
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2193                 FUNCDESC: memid=21 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2196                   oVft=128
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinWidth
+2015-05-07 20:18:37,300 5412  INFO  JGenerator:2193                 FUNCDESC: memid=22 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2196                   oVft=132
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MinWidth
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2193                 FUNCDESC: memid=22 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2196                   oVft=136
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,315 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxWidth
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2193                 FUNCDESC: memid=23 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2196                   oVft=140
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:1081               IJoaBridgeDialog::MaxWidth
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2193                 FUNCDESC: memid=23 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2196                   oVft=144
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2215                     fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,331 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:1081               IJoaBridgeDialog::SetFocusOnFirstChildWindow
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2193                 FUNCDESC: memid=24 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2196                   oVft=148
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2206                   cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:1081               IJoaBridgeDialog::ShowModal2
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2193                 FUNCDESC: memid=25 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2196                   oVft=152
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,347 5412  INFO  JGenerator:2212                     hwndOwner
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:1080               
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:1081               IJoaBridgeDialog::ShowModal3
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2193                 FUNCDESC: memid=26 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2196                   oVft=156
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2197                   fdesc.wFuncFlags=
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2200                   elemdescFunc
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2206                   cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2207                   lprgelemdescParam
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2212                     dispOwner
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2249                       ELEMDESC: tdesc=[TYPEDESC: vt=VT_DISPATCH] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:2224                   cScodes=0
+2015-05-07 20:18:37,362 5412  INFO  JGenerator:167              ----------------------------------------------------------------------------------------------------
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:1081             IJoaBridgeCtrl::HWND
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2193               FUNCDESC: memid=-515 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2196                 oVft=28
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=FUNCFLAG_FBINDABLE|FUNCFLAG_FREQUESTEDIT|
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_USERDEFINED] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:1081             IJoaBridgeCtrl::FitToParent
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2193               FUNCDESC: memid=1111 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2196                 oVft=32
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,378 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:1081             IJoaBridgeCtrl::FitToParent
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2193               FUNCDESC: memid=1111 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2196                 oVft=36
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:1081             IJoaUtilAddin::CreateBridgeDialog
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2193               FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,393 5412  INFO  JGenerator:2196                 oVft=28
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_PTR] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:1081             IJoaBridgeDialog::ShowModal
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2193               FUNCDESC: memid=11 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2196                 oVft=28
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2212                   owner
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_VARIANT] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,409 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Close
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2193               FUNCDESC: memid=10 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2196                 oVft=32
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:1081             IJoaBridgeDialog::HWND
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2193               FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2196                 oVft=36
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:1081             IJoaBridgeDialog::HWND
+2015-05-07 20:18:37,425 5412  INFO  JGenerator:2193               FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2196                 oVft=40
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Title
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2193               FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2196                 oVft=44
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_BSTR] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,440 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Title
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2193               FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2196                 oVft=48
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BSTR] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:1081             IJoaBridgeDialog::X
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2193               FUNCDESC: memid=12 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2196                 oVft=52
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:1081             IJoaBridgeDialog::X
+2015-05-07 20:18:37,456 5412  INFO  JGenerator:2193               FUNCDESC: memid=12 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2196                 oVft=56
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Y
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2193               FUNCDESC: memid=13 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2196                 oVft=60
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,471 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Y
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2193               FUNCDESC: memid=13 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2196                 oVft=64
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Width
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2193               FUNCDESC: memid=14 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2196                 oVft=68
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,487 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Width
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2193               FUNCDESC: memid=14 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2196                 oVft=72
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Height
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2193               FUNCDESC: memid=15 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2196                 oVft=76
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,503 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Height
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2193               FUNCDESC: memid=15 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2196                 oVft=80
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MinimizeBox
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2193               FUNCDESC: memid=16 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2196                 oVft=84
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,518 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MinimizeBox
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2193               FUNCDESC: memid=16 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2196                 oVft=88
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MaximizeBox
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2193               FUNCDESC: memid=17 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2196                 oVft=92
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,534 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MaximizeBox
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2193               FUNCDESC: memid=17 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2196                 oVft=96
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:1081             IJoaBridgeDialog::CenterOnOwner
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2193               FUNCDESC: memid=18 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2196                 oVft=100
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,549 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:1081             IJoaBridgeDialog::CenterOnOwner
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2193               FUNCDESC: memid=18 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2196                 oVft=104
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Resizable
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2193               FUNCDESC: memid=19 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2196                 oVft=108
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,565 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:1081             IJoaBridgeDialog::Resizable
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2193               FUNCDESC: memid=19 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2196                 oVft=112
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_BOOL] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MinHeight
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2193               FUNCDESC: memid=20 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2196                 oVft=116
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,581 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MinHeight
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2193               FUNCDESC: memid=20 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2196                 oVft=120
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MaxHeight
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2193               FUNCDESC: memid=21 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2196                 oVft=124
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,596 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MaxHeight
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2193               FUNCDESC: memid=21 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2196                 oVft=128
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MinWidth
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2193               FUNCDESC: memid=22 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2196                 oVft=132
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,612 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MinWidth
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2193               FUNCDESC: memid=22 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2196                 oVft=136
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MaxWidth
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2193               FUNCDESC: memid=23 FUNC_DISPATCH INVOKE_PROPERTYGET CC_STDCALL
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2196                 oVft=140
+2015-05-07 20:18:37,627 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:1081             IJoaBridgeDialog::MaxWidth
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2193               FUNCDESC: memid=23 FUNC_DISPATCH INVOKE_PROPERTYPUT CC_STDCALL
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2196                 oVft=144
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2215                   fdesc.lprgelemdescParam[0] 
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I4] paramdesc=[PARAMDESC: wParamFlags=PARAMFLAG_FIN|]
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:1081             IJoaBridgeDialog::SetFocusOnFirstChildWindow
+2015-05-07 20:18:37,643 5412  INFO  JGenerator:2193               FUNCDESC: memid=24 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2196                 oVft=148
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:1081             IJoaBridgeDialog::ShowModal2
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2193               FUNCDESC: memid=25 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2196                 oVft=152
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2212                   hwndOwner
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:1081             IJoaBridgeDialog::ShowModal3
+2015-05-07 20:18:37,659 5412  INFO  JGenerator:2193               FUNCDESC: memid=26 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2196                 oVft=156
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_VOID] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2212                   dispOwner
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_DISPATCH] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:1081             _IJoaBridgeDialogEvents::Show
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2193               FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2196                 oVft=0
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,674 5412  INFO  JGenerator:2212                   HWND
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:1081             _IJoaBridgeDialogEvents::Closed
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2193               FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2196                 oVft=0
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:1081             _IJoaBridgeDialogEvents::SystemMenuClose
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2193               FUNCDESC: memid=3 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2196                 oVft=0
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,690 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:1081             _IJoaBridgeDialogEvents::Show
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2193               FUNCDESC: memid=1 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2196                 oVft=0
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2206                 cParams=1 cParamsOpt=0
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2212                   HWND
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2249                     ELEMDESC: tdesc=[TYPEDESC: vt=VT_I8] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:1081             _IJoaBridgeDialogEvents::Closed
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2193               FUNCDESC: memid=2 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2196                 oVft=0
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,705 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2224                 cScodes=0
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:1080             
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:1081             _IJoaBridgeDialogEvents::SystemMenuClose
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2193               FUNCDESC: memid=3 FUNC_DISPATCH INVOKE_FUNC CC_STDCALL
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2196                 oVft=0
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2197                 fdesc.wFuncFlags=
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2200                 elemdescFunc
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2249                   ELEMDESC: tdesc=[TYPEDESC: vt=VT_HRESULT] paramdesc=[PARAMDESC: wParamFlags=]
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2206                 cParams=0 cParamsOpt=0
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2207                 lprgelemdescParam
+2015-05-07 20:18:37,721 5412  INFO  JGenerator:2224                 cScodes=0

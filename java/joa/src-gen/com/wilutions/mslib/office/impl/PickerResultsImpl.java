@@ -33,7 +33,7 @@ public class PickerResultsImpl extends Dispatch implements com.wilutions.mslib.o
     assert(SIPId != null);
     assert(ItemData != null);
     assert(SubItems != null);
-    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Id,DisplayName,Type,SIPId,ItemData,SubItems);
+    final Object obj = this._dispatchCall(2,"Add", DISPATCH_METHOD,null,Id,DisplayName,Type,SIPId,Variant.param(ItemData),Variant.param(SubItems));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.PickerResultImpl.class);
   }

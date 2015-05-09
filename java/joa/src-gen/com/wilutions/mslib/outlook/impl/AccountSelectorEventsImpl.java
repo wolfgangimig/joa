@@ -6,7 +6,7 @@ import com.wilutions.com.*;
 @CoClass(guid="{C091A86F-A463-DB41-5DAE-69E7A5F7FCBC}")
 public class AccountSelectorEventsImpl extends Dispatch implements com.wilutions.mslib.outlook.AccountSelectorEvents {
   @DeclDISPID(64627)  public void onSelectedAccountChange(final com.wilutions.mslib.outlook.Account SelectedAccount) throws ComException {
-    this._dispatchCall(64627,"SelectedAccountChange", DISPATCH_METHOD,null,(SelectedAccount!=null?SelectedAccount:Dispatch.NULL));
+    this._dispatchCall(64627,"SelectedAccountChange", DISPATCH_METHOD,null,Dispatch.param(SelectedAccount));
   }
   public AccountSelectorEventsImpl(String progId) throws ComException {
     super(progId, "{00063104-0000-0000-C000-000000000046}");

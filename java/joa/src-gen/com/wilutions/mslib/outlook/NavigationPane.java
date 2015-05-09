@@ -45,7 +45,7 @@ public class NavigationPane extends Dispatch implements _NavigationPane {
     return disp.as(NavigationModule.class);
   }
   @DeclDISPID(64437)  public void setCurrentModule(final NavigationModule value) throws ComException {
-    this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64437,"CurrentModule", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(64438)  public Integer getDisplayedModuleCount() throws ComException {
     final Object obj = this._dispatchCall(64438,"DisplayedModuleCount", DISPATCH_PROPERTYGET,null);

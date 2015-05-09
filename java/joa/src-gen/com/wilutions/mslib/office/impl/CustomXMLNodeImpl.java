@@ -133,25 +133,25 @@ public class CustomXMLNodeImpl extends Dispatch implements com.wilutions.mslib.o
     assert(NamespaceURI != null);
     assert(NodeType != null);
     assert(NodeValue != null);
-    this._dispatchCall(1610809367,"InsertNodeBefore", DISPATCH_METHOD,null,Name,NamespaceURI,NodeType.value,NodeValue,(NextSibling!=null?NextSibling:Dispatch.NULL));
+    this._dispatchCall(1610809367,"InsertNodeBefore", DISPATCH_METHOD,null,Name,NamespaceURI,NodeType.value,NodeValue,Dispatch.param(NextSibling));
   }
   @DeclDISPID(1610809368)  public void InsertSubtreeBefore(final String XML, final com.wilutions.mslib.office.CustomXMLNode NextSibling) throws ComException {
     assert(XML != null);
-    this._dispatchCall(1610809368,"InsertSubtreeBefore", DISPATCH_METHOD,null,XML,(NextSibling!=null?NextSibling:Dispatch.NULL));
+    this._dispatchCall(1610809368,"InsertSubtreeBefore", DISPATCH_METHOD,null,XML,Dispatch.param(NextSibling));
   }
   @DeclDISPID(1610809369)  public void RemoveChild(final com.wilutions.mslib.office.CustomXMLNode Child) throws ComException {
-    this._dispatchCall(1610809369,"RemoveChild", DISPATCH_METHOD,null,(Child!=null?Child:Dispatch.NULL));
+    this._dispatchCall(1610809369,"RemoveChild", DISPATCH_METHOD,null,Dispatch.param(Child));
   }
   @DeclDISPID(1610809370)  public void ReplaceChildNode(final com.wilutions.mslib.office.CustomXMLNode OldNode, final String Name, final String NamespaceURI, final com.wilutions.mslib.office.MsoCustomXMLNodeType NodeType, final String NodeValue) throws ComException {
     assert(Name != null);
     assert(NamespaceURI != null);
     assert(NodeType != null);
     assert(NodeValue != null);
-    this._dispatchCall(1610809370,"ReplaceChildNode", DISPATCH_METHOD,null,(OldNode!=null?OldNode:Dispatch.NULL),Name,NamespaceURI,NodeType.value,NodeValue);
+    this._dispatchCall(1610809370,"ReplaceChildNode", DISPATCH_METHOD,null,Dispatch.param(OldNode),Name,NamespaceURI,NodeType.value,NodeValue);
   }
   @DeclDISPID(1610809371)  public void ReplaceChildSubtree(final String XML, final com.wilutions.mslib.office.CustomXMLNode OldNode) throws ComException {
     assert(XML != null);
-    this._dispatchCall(1610809371,"ReplaceChildSubtree", DISPATCH_METHOD,null,XML,(OldNode!=null?OldNode:Dispatch.NULL));
+    this._dispatchCall(1610809371,"ReplaceChildSubtree", DISPATCH_METHOD,null,XML,Dispatch.param(OldNode));
   }
   @DeclDISPID(1610809372)  public com.wilutions.mslib.office.CustomXMLNodes SelectNodes(final String XPath) throws ComException {
     assert(XPath != null);

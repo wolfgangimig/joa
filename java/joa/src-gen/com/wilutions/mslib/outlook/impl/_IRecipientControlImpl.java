@@ -47,7 +47,7 @@ public class _IRecipientControlImpl extends Dispatch implements com.wilutions.ms
     return (IDispatch)obj;
   }
   @DeclDISPID(-512)  public void setFont(final IDispatch Font) throws ComException {
-    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUT,(Font!=null?Font:Dispatch.NULL));
+    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUT,Dispatch.param(Font));
   }
   @DeclDISPID(12)  public Integer getSpecialEffect() throws ComException {
     final Object obj = this._dispatchCall(12,"SpecialEffect", DISPATCH_PROPERTYGET,null);

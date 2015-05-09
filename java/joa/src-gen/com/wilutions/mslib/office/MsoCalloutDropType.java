@@ -45,17 +45,17 @@ public class MsoCalloutDropType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoCalloutDropTop";
     case -2: return "msoCalloutDropMixed";
     case 1: return "msoCalloutDropCustom";
+    case 2: return "msoCalloutDropTop";
     case 3: return "msoCalloutDropCenter";
     case 4: return "msoCalloutDropBottom";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoCalloutDropTop");
       if ((value & -2) != 0) sbuf.append("|msoCalloutDropMixed");
       if ((value & 1) != 0) sbuf.append("|msoCalloutDropCustom");
+      if ((value & 2) != 0) sbuf.append("|msoCalloutDropTop");
       if ((value & 3) != 0) sbuf.append("|msoCalloutDropCenter");
       if ((value & 4) != 0) sbuf.append("|msoCalloutDropBottom");
       return sbuf.toString();

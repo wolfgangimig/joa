@@ -8,36 +8,36 @@ public class SignatureProviderImpl extends Dispatch implements com.wilutions.msl
   @DeclDISPID(1610743808)  public com.wilutions.mslib.stdole.IPictureDisp GenerateSignatureLineImage(final com.wilutions.mslib.office.SignatureLineImage siglnimg, final com.wilutions.mslib.office.SignatureSetup psigsetup, final com.wilutions.mslib.office.SignatureInfo psiginfo, final Object XmlDsigStream) throws ComException {
     assert(siglnimg != null);
     assert(XmlDsigStream != null);
-    final Object obj = this._dispatchCall(1610743808,"GenerateSignatureLineImage", DISPATCH_METHOD,null,siglnimg.value,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL),XmlDsigStream);
+    final Object obj = this._dispatchCall(1610743808,"GenerateSignatureLineImage", DISPATCH_METHOD,null,siglnimg.value,Dispatch.param(psigsetup),Dispatch.param(psiginfo),XmlDsigStream);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.IPictureDispImpl.class);
   }
   @DeclDISPID(1610743809)  public void ShowSignatureSetup(final Object ParentWindow, final com.wilutions.mslib.office.SignatureSetup psigsetup) throws ComException {
     assert(ParentWindow != null);
-    this._dispatchCall(1610743809,"ShowSignatureSetup", DISPATCH_METHOD,null,ParentWindow,(psigsetup!=null?psigsetup:Dispatch.NULL));
+    this._dispatchCall(1610743809,"ShowSignatureSetup", DISPATCH_METHOD,null,ParentWindow,Dispatch.param(psigsetup));
   }
   @DeclDISPID(1610743810)  public void ShowSigningCeremony(final Object ParentWindow, final com.wilutions.mslib.office.SignatureSetup psigsetup, final com.wilutions.mslib.office.SignatureInfo psiginfo) throws ComException {
     assert(ParentWindow != null);
-    this._dispatchCall(1610743810,"ShowSigningCeremony", DISPATCH_METHOD,null,ParentWindow,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL));
+    this._dispatchCall(1610743810,"ShowSigningCeremony", DISPATCH_METHOD,null,ParentWindow,Dispatch.param(psigsetup),Dispatch.param(psiginfo));
   }
   @DeclDISPID(1610743811)  public void SignXmlDsig(final Object QueryContinue, final com.wilutions.mslib.office.SignatureSetup psigsetup, final com.wilutions.mslib.office.SignatureInfo psiginfo, final Object XmlDsigStream) throws ComException {
     assert(QueryContinue != null);
     assert(XmlDsigStream != null);
-    this._dispatchCall(1610743811,"SignXmlDsig", DISPATCH_METHOD,null,QueryContinue,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL),XmlDsigStream);
+    this._dispatchCall(1610743811,"SignXmlDsig", DISPATCH_METHOD,null,QueryContinue,Dispatch.param(psigsetup),Dispatch.param(psiginfo),XmlDsigStream);
   }
   @DeclDISPID(1610743812)  public void NotifySignatureAdded(final Object ParentWindow, final com.wilutions.mslib.office.SignatureSetup psigsetup, final com.wilutions.mslib.office.SignatureInfo psiginfo) throws ComException {
     assert(ParentWindow != null);
-    this._dispatchCall(1610743812,"NotifySignatureAdded", DISPATCH_METHOD,null,ParentWindow,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL));
+    this._dispatchCall(1610743812,"NotifySignatureAdded", DISPATCH_METHOD,null,ParentWindow,Dispatch.param(psigsetup),Dispatch.param(psiginfo));
   }
   @DeclDISPID(1610743813)  public void VerifyXmlDsig(final Object QueryContinue, final com.wilutions.mslib.office.SignatureSetup psigsetup, final com.wilutions.mslib.office.SignatureInfo psiginfo, final Object XmlDsigStream, final ByRef<com.wilutions.mslib.office.ContentVerificationResults> pcontverres, final ByRef<com.wilutions.mslib.office.CertificateVerificationResults> pcertverres) throws ComException {
     assert(QueryContinue != null);
     assert(XmlDsigStream != null);
-    this._dispatchCall(1610743813,"VerifyXmlDsig", DISPATCH_METHOD,null,QueryContinue,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL),XmlDsigStream,(pcontverres!=null?pcontverres:Dispatch.NULL),(pcertverres!=null?pcertverres:Dispatch.NULL));
+    this._dispatchCall(1610743813,"VerifyXmlDsig", DISPATCH_METHOD,null,QueryContinue,Dispatch.param(psigsetup),Dispatch.param(psiginfo),XmlDsigStream,Dispatch.param(pcontverres),Dispatch.param(pcertverres));
   }
   @DeclDISPID(1610743814)  public void ShowSignatureDetails(final Object ParentWindow, final com.wilutions.mslib.office.SignatureSetup psigsetup, final com.wilutions.mslib.office.SignatureInfo psiginfo, final Object XmlDsigStream, final ByRef<com.wilutions.mslib.office.ContentVerificationResults> pcontverres, final ByRef<com.wilutions.mslib.office.CertificateVerificationResults> pcertverres) throws ComException {
     assert(ParentWindow != null);
     assert(XmlDsigStream != null);
-    this._dispatchCall(1610743814,"ShowSignatureDetails", DISPATCH_METHOD,null,ParentWindow,(psigsetup!=null?psigsetup:Dispatch.NULL),(psiginfo!=null?psiginfo:Dispatch.NULL),XmlDsigStream,(pcontverres!=null?pcontverres:Dispatch.NULL),(pcertverres!=null?pcertverres:Dispatch.NULL));
+    this._dispatchCall(1610743814,"ShowSignatureDetails", DISPATCH_METHOD,null,ParentWindow,Dispatch.param(psigsetup),Dispatch.param(psiginfo),XmlDsigStream,Dispatch.param(pcontverres),Dispatch.param(pcertverres));
   }
   @DeclDISPID(1610743815)  public Object GetProviderDetail(final com.wilutions.mslib.office.SignatureProviderDetail sigprovdet) throws ComException {
     assert(sigprovdet != null);

@@ -67,7 +67,6 @@ public class OlCategoryShortcutKey implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "olCategoryShortcutKeyCtrlF9";
-    case 10: return "olCategoryShortcutKeyCtrlF11";
     case 0: return "olCategoryShortcutKeyNone";
     case 1: return "olCategoryShortcutKeyCtrlF2";
     case 2: return "olCategoryShortcutKeyCtrlF3";
@@ -77,12 +76,12 @@ public class OlCategoryShortcutKey implements ComEnum {
     case 6: return "olCategoryShortcutKeyCtrlF7";
     case 7: return "olCategoryShortcutKeyCtrlF8";
     case 9: return "olCategoryShortcutKeyCtrlF10";
+    case 10: return "olCategoryShortcutKeyCtrlF11";
     case 11: return "olCategoryShortcutKeyCtrlF12";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF9");
-      if ((value & 10) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF11");
       if ((value & 0) != 0) sbuf.append("|olCategoryShortcutKeyNone");
       if ((value & 1) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF2");
       if ((value & 2) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF3");
@@ -92,6 +91,7 @@ public class OlCategoryShortcutKey implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF7");
       if ((value & 7) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF8");
       if ((value & 9) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF10");
+      if ((value & 10) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF11");
       if ((value & 11) != 0) sbuf.append("|olCategoryShortcutKeyCtrlF12");
       return sbuf.toString();
       }

@@ -9,7 +9,7 @@ public class ICTPFactoryImpl extends Dispatch implements com.wilutions.mslib.off
     assert(CTPAxID != null);
     assert(CTPTitle != null);
     assert(CTPParentWindow != null);
-    final Object obj = this._dispatchCall(1,"CreateCTP", DISPATCH_METHOD,null,CTPAxID,CTPTitle,CTPParentWindow);
+    final Object obj = this._dispatchCall(1,"CreateCTP", DISPATCH_METHOD,null,CTPAxID,CTPTitle,Variant.param(CTPParentWindow));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl._CustomTaskPaneImpl.class);
   }

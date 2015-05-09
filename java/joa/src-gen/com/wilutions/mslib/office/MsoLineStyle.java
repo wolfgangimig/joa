@@ -48,18 +48,18 @@ public class MsoLineStyle implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoLineThinThin";
     case -2: return "msoLineStyleMixed";
     case 1: return "msoLineSingle";
+    case 2: return "msoLineThinThin";
     case 3: return "msoLineThinThick";
     case 4: return "msoLineThickThin";
     case 5: return "msoLineThickBetweenThin";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoLineThinThin");
       if ((value & -2) != 0) sbuf.append("|msoLineStyleMixed");
       if ((value & 1) != 0) sbuf.append("|msoLineSingle");
+      if ((value & 2) != 0) sbuf.append("|msoLineThinThin");
       if ((value & 3) != 0) sbuf.append("|msoLineThinThick");
       if ((value & 4) != 0) sbuf.append("|msoLineThickThin");
       if ((value & 5) != 0) sbuf.append("|msoLineThickBetweenThin");

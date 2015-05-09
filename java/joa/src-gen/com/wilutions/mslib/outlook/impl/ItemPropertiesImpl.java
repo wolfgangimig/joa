@@ -41,7 +41,7 @@ public class ItemPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     assert(Type != null);
     assert(AddToFolderFields != null);
     assert(DisplayFormat != null);
-    final Object obj = this._dispatchCall(102,"Add", DISPATCH_METHOD,null,Name,Type.value,AddToFolderFields,DisplayFormat);
+    final Object obj = this._dispatchCall(102,"Add", DISPATCH_METHOD,null,Name,Type.value,Variant.param(AddToFolderFields),Variant.param(DisplayFormat));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.ItemPropertyImpl.class);
   }

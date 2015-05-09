@@ -51,9 +51,9 @@ public class MsoDiagramType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoDiagramCycle";
     case -2: return "msoDiagramMixed";
     case 1: return "msoDiagramOrgChart";
+    case 2: return "msoDiagramCycle";
     case 3: return "msoDiagramRadial";
     case 4: return "msoDiagramPyramid";
     case 5: return "msoDiagramVenn";
@@ -61,9 +61,9 @@ public class MsoDiagramType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoDiagramCycle");
       if ((value & -2) != 0) sbuf.append("|msoDiagramMixed");
       if ((value & 1) != 0) sbuf.append("|msoDiagramOrgChart");
+      if ((value & 2) != 0) sbuf.append("|msoDiagramCycle");
       if ((value & 3) != 0) sbuf.append("|msoDiagramRadial");
       if ((value & 4) != 0) sbuf.append("|msoDiagramPyramid");
       if ((value & 5) != 0) sbuf.append("|msoDiagramVenn");

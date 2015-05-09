@@ -33,7 +33,7 @@ public class SignatureImpl extends Dispatch implements com.wilutions.mslib.offic
     assert(varDelSuggSigner != null);
     assert(varDelSuggSignerLine2 != null);
     assert(varDelSuggSignerEmail != null);
-    this._dispatchCall(1610809356,"Sign", DISPATCH_METHOD,null,varSigImg,varDelSuggSigner,varDelSuggSignerLine2,varDelSuggSignerEmail);
+    this._dispatchCall(1610809356,"Sign", DISPATCH_METHOD,null,Variant.param(varSigImg),Variant.param(varDelSuggSigner),Variant.param(varDelSuggSignerLine2),Variant.param(varDelSuggSignerEmail));
   }
   @DeclDISPID(1610809357)  public com.wilutions.mslib.office.SignatureInfo getDetails() throws ComException {
     final Object obj = this._dispatchCall(1610809357,"Details", DISPATCH_PROPERTYGET,null);

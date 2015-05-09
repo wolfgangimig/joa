@@ -37,7 +37,7 @@ public class IMsoLegendImpl extends Dispatch implements com.wilutions.mslib.offi
   }
   @DeclDISPID(173)  public IDispatch LegendEntries(final Object Index) throws ComException {
     assert(Index != null);
-    final Object obj = this._dispatchCall(173,"LegendEntries", DISPATCH_METHOD,null,Index);
+    final Object obj = this._dispatchCall(173,"LegendEntries", DISPATCH_METHOD,null,Variant.param(Index));
     if (obj == null) return null;
     return (IDispatch)obj;
   }

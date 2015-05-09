@@ -72,7 +72,7 @@ public class Table extends Dispatch implements _Table {
   @DeclDISPID(97)  public void Sort(final String SortProperty, final Object Descending) throws ComException {
     assert(SortProperty != null);
     assert(Descending != null);
-    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,SortProperty,Descending);
+    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,SortProperty,Variant.param(Descending));
   }
   @DeclDISPID(64403)  public Columns getColumns() throws ComException {
     final Object obj = this._dispatchCall(64403,"Columns", DISPATCH_PROPERTYGET,null);

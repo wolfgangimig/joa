@@ -45,18 +45,18 @@ public class MsoBulletType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoBulletNumbered";
     case -2: return "msoBulletMixed";
     case 0: return "msoBulletNone";
     case 1: return "msoBulletUnnumbered";
+    case 2: return "msoBulletNumbered";
     case 3: return "msoBulletPicture";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoBulletNumbered");
       if ((value & -2) != 0) sbuf.append("|msoBulletMixed");
       if ((value & 0) != 0) sbuf.append("|msoBulletNone");
       if ((value & 1) != 0) sbuf.append("|msoBulletUnnumbered");
+      if ((value & 2) != 0) sbuf.append("|msoBulletNumbered");
       if ((value & 3) != 0) sbuf.append("|msoBulletPicture");
       return sbuf.toString();
       }

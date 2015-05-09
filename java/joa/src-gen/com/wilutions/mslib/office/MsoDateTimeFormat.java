@@ -75,14 +75,14 @@ public class MsoDateTimeFormat implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoDateTimeMMyy";
     case -2: return "msoDateTimeFormatMixed";
-    case 2: return "msoDateTimeddddMMMMddyyyy";
     case 1: return "msoDateTimeMdyy";
+    case 2: return "msoDateTimeddddMMMMddyyyy";
     case 3: return "msoDateTimedMMMMyyyy";
     case 4: return "msoDateTimeMMMMdyyyy";
     case 5: return "msoDateTimedMMMyy";
     case 6: return "msoDateTimeMMMMyy";
-    case 7: return "msoDateTimeMMyy";
     case 8: return "msoDateTimeMMddyyHmm";
     case 9: return "msoDateTimeMMddyyhmmAMPM";
     case 10: return "msoDateTimeHmm";
@@ -93,14 +93,14 @@ public class MsoDateTimeFormat implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoDateTimeMMyy");
       if ((value & -2) != 0) sbuf.append("|msoDateTimeFormatMixed");
-      if ((value & 2) != 0) sbuf.append("|msoDateTimeddddMMMMddyyyy");
       if ((value & 1) != 0) sbuf.append("|msoDateTimeMdyy");
+      if ((value & 2) != 0) sbuf.append("|msoDateTimeddddMMMMddyyyy");
       if ((value & 3) != 0) sbuf.append("|msoDateTimedMMMMyyyy");
       if ((value & 4) != 0) sbuf.append("|msoDateTimeMMMMdyyyy");
       if ((value & 5) != 0) sbuf.append("|msoDateTimedMMMyy");
       if ((value & 6) != 0) sbuf.append("|msoDateTimeMMMMyy");
-      if ((value & 7) != 0) sbuf.append("|msoDateTimeMMyy");
       if ((value & 8) != 0) sbuf.append("|msoDateTimeMMddyyHmm");
       if ((value & 9) != 0) sbuf.append("|msoDateTimeMMddyyhmmAMPM");
       if ((value & 10) != 0) sbuf.append("|msoDateTimeHmm");

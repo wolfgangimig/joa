@@ -59,7 +59,7 @@ public class SolutionsModule extends Dispatch implements _SolutionsModule {
   }
   @DeclDISPID(64574)  public void AddSolution(final MAPIFolder Solution, final OlSolutionScope Scope) throws ComException {
     assert(Scope != null);
-    this._dispatchCall(64574,"AddSolution", DISPATCH_METHOD,null,(Solution!=null?Solution:Dispatch.NULL),Scope.value);
+    this._dispatchCall(64574,"AddSolution", DISPATCH_METHOD,null,Dispatch.param(Solution),Scope.value);
   }
   public SolutionsModule() throws ComException {
     super("{000610FF-0000-0000-C000-000000000046}", "{000630FF-0000-0000-C000-000000000046}");

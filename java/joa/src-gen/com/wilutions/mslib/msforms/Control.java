@@ -242,11 +242,11 @@ public class Control extends Dispatch implements IControl {
     assert(Width != null);
     assert(Height != null);
     assert(Layout != null);
-    this._dispatchCall(-2147385088,"Move", DISPATCH_METHOD,null,Left,Top,Width,Height,Layout);
+    this._dispatchCall(-2147385088,"Move", DISPATCH_METHOD,null,Variant.param(Left),Variant.param(Top),Variant.param(Width),Variant.param(Height),Variant.param(Layout));
   }
   @DeclDISPID(-2147385083)  public void ZOrder(final Object zPosition) throws ComException {
     assert(zPosition != null);
-    this._dispatchCall(-2147385083,"ZOrder", DISPATCH_METHOD,null,zPosition);
+    this._dispatchCall(-2147385083,"ZOrder", DISPATCH_METHOD,null,Variant.param(zPosition));
   }
   @DeclDISPID(-2147385085)  public void SetFocus() throws ComException {
     this._dispatchCall(-2147385085,"SetFocus", DISPATCH_METHOD,null);

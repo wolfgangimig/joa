@@ -88,7 +88,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.msforms.I
     this._dispatchCall(1610678289,"Clone", DISPATCH_METHOD,null,lplpfont);
   }
   @DeclDISPID(1610678290)  public void IsEqual(final com.wilutions.mslib.msforms.IFont lpFontOther) throws ComException {
-    this._dispatchCall(1610678290,"IsEqual", DISPATCH_METHOD,null,(lpFontOther!=null?lpFontOther:Dispatch.NULL));
+    this._dispatchCall(1610678290,"IsEqual", DISPATCH_METHOD,null,Dispatch.param(lpFontOther));
   }
   @DeclDISPID(1610678291)  public void SetRatio(final Integer cyLogical, final Integer cyHimetric) throws ComException {
     assert(cyLogical != null);

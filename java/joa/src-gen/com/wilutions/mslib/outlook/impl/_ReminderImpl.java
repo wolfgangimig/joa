@@ -30,7 +30,7 @@ public class _ReminderImpl extends Dispatch implements com.wilutions.mslib.outlo
   }
   @DeclDISPID(64155)  public void Snooze(final Object SnoozeTime) throws ComException {
     assert(SnoozeTime != null);
-    this._dispatchCall(64155,"Snooze", DISPATCH_METHOD,null,SnoozeTime);
+    this._dispatchCall(64155,"Snooze", DISPATCH_METHOD,null,Variant.param(SnoozeTime));
   }
   @DeclDISPID(0)  public String getCaption() throws ComException {
     final Object obj = this._dispatchCall(0,"Caption", DISPATCH_PROPERTYGET,null);

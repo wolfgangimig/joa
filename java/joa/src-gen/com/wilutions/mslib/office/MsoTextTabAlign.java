@@ -45,18 +45,18 @@ public class MsoTextTabAlign implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoTabAlignRight";
     case -2: return "msoTabAlignMixed";
     case 0: return "msoTabAlignLeft";
     case 1: return "msoTabAlignCenter";
+    case 2: return "msoTabAlignRight";
     case 3: return "msoTabAlignDecimal";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoTabAlignRight");
       if ((value & -2) != 0) sbuf.append("|msoTabAlignMixed");
       if ((value & 0) != 0) sbuf.append("|msoTabAlignLeft");
       if ((value & 1) != 0) sbuf.append("|msoTabAlignCenter");
+      if ((value & 2) != 0) sbuf.append("|msoTabAlignRight");
       if ((value & 3) != 0) sbuf.append("|msoTabAlignDecimal");
       return sbuf.toString();
       }

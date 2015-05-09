@@ -45,7 +45,7 @@ public class _SelectNamesDialogImpl extends Dispatch implements com.wilutions.ms
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.RecipientsImpl.class);
   }
   @DeclDISPID(63508)  public void setRecipients(final com.wilutions.mslib.outlook.Recipients value) throws ComException {
-    this._dispatchCall(63508,"Recipients", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(63508,"Recipients", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(64227)  public String getBccLabel() throws ComException {
     final Object obj = this._dispatchCall(64227,"BccLabel", DISPATCH_PROPERTYGET,null);
@@ -116,7 +116,7 @@ public class _SelectNamesDialogImpl extends Dispatch implements com.wilutions.ms
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressListImpl.class);
   }
   @DeclDISPID(64234)  public void setInitialAddressList(final com.wilutions.mslib.outlook.AddressList value) throws ComException {
-    this._dispatchCall(64234,"InitialAddressList", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64234,"InitialAddressList", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(64235)  public void SetDefaultDisplayMode(final com.wilutions.mslib.outlook.OlDefaultSelectNamesDisplayMode defaultMode) throws ComException {
     assert(defaultMode != null);

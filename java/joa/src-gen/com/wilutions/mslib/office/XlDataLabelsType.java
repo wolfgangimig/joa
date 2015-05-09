@@ -48,21 +48,21 @@ public class XlDataLabelsType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "xlDataLabelsShowValue";
+    case 6: return "xlDataLabelsShowBubbleSizes";
     case -4142: return "xlDataLabelsShowNone";
+    case 2: return "xlDataLabelsShowValue";
     case 3: return "xlDataLabelsShowPercent";
     case 4: return "xlDataLabelsShowLabel";
     case 5: return "xlDataLabelsShowLabelAndPercent";
-    case 6: return "xlDataLabelsShowBubbleSizes";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|xlDataLabelsShowValue");
+      if ((value & 6) != 0) sbuf.append("|xlDataLabelsShowBubbleSizes");
       if ((value & -4142) != 0) sbuf.append("|xlDataLabelsShowNone");
+      if ((value & 2) != 0) sbuf.append("|xlDataLabelsShowValue");
       if ((value & 3) != 0) sbuf.append("|xlDataLabelsShowPercent");
       if ((value & 4) != 0) sbuf.append("|xlDataLabelsShowLabel");
       if ((value & 5) != 0) sbuf.append("|xlDataLabelsShowLabelAndPercent");
-      if ((value & 6) != 0) sbuf.append("|xlDataLabelsShowBubbleSizes");
       return sbuf.toString();
       }
     }

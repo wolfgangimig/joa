@@ -78,14 +78,14 @@ public class MsoPresetMaterial implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoMaterialMetal2";
     case -2: return "msoPresetMaterialMixed";
-    case 2: return "msoMaterialPlastic";
     case 1: return "msoMaterialMatte";
+    case 2: return "msoMaterialPlastic";
     case 3: return "msoMaterialMetal";
     case 4: return "msoMaterialWireFrame";
     case 5: return "msoMaterialMatte2";
     case 6: return "msoMaterialPlastic2";
-    case 7: return "msoMaterialMetal2";
     case 8: return "msoMaterialWarmMatte";
     case 9: return "msoMaterialTranslucentPowder";
     case 10: return "msoMaterialPowder";
@@ -97,14 +97,14 @@ public class MsoPresetMaterial implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoMaterialMetal2");
       if ((value & -2) != 0) sbuf.append("|msoPresetMaterialMixed");
-      if ((value & 2) != 0) sbuf.append("|msoMaterialPlastic");
       if ((value & 1) != 0) sbuf.append("|msoMaterialMatte");
+      if ((value & 2) != 0) sbuf.append("|msoMaterialPlastic");
       if ((value & 3) != 0) sbuf.append("|msoMaterialMetal");
       if ((value & 4) != 0) sbuf.append("|msoMaterialWireFrame");
       if ((value & 5) != 0) sbuf.append("|msoMaterialMatte2");
       if ((value & 6) != 0) sbuf.append("|msoMaterialPlastic2");
-      if ((value & 7) != 0) sbuf.append("|msoMaterialMetal2");
       if ((value & 8) != 0) sbuf.append("|msoMaterialWarmMatte");
       if ((value & 9) != 0) sbuf.append("|msoMaterialTranslucentPowder");
       if ((value & 10) != 0) sbuf.append("|msoMaterialPowder");

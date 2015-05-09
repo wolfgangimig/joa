@@ -60,27 +60,27 @@ public class MsoPresetExtrusionDirection implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoExtrusionTopRight";
     case -2: return "msoPresetExtrusionDirectionMixed";
-    case 2: return "msoExtrusionBottom";
     case 1: return "msoExtrusionBottomRight";
+    case 2: return "msoExtrusionBottom";
     case 3: return "msoExtrusionBottomLeft";
     case 4: return "msoExtrusionRight";
     case 5: return "msoExtrusionNone";
     case 6: return "msoExtrusionLeft";
-    case 7: return "msoExtrusionTopRight";
     case 8: return "msoExtrusionTop";
     case 9: return "msoExtrusionTopLeft";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoExtrusionTopRight");
       if ((value & -2) != 0) sbuf.append("|msoPresetExtrusionDirectionMixed");
-      if ((value & 2) != 0) sbuf.append("|msoExtrusionBottom");
       if ((value & 1) != 0) sbuf.append("|msoExtrusionBottomRight");
+      if ((value & 2) != 0) sbuf.append("|msoExtrusionBottom");
       if ((value & 3) != 0) sbuf.append("|msoExtrusionBottomLeft");
       if ((value & 4) != 0) sbuf.append("|msoExtrusionRight");
       if ((value & 5) != 0) sbuf.append("|msoExtrusionNone");
       if ((value & 6) != 0) sbuf.append("|msoExtrusionLeft");
-      if ((value & 7) != 0) sbuf.append("|msoExtrusionTopRight");
       if ((value & 8) != 0) sbuf.append("|msoExtrusionTop");
       if ((value & 9) != 0) sbuf.append("|msoExtrusionTopLeft");
       return sbuf.toString();

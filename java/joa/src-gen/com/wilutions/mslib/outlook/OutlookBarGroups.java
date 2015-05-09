@@ -43,7 +43,7 @@ public class OutlookBarGroups extends Dispatch implements _OutlookBarGroups {
   @DeclDISPID(95)  public OutlookBarGroup Add(final String Name, final Object Index) throws ComException {
     assert(Name != null);
     assert(Index != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Index);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Variant.param(Index));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.OutlookBarGroupImpl.class);
   }

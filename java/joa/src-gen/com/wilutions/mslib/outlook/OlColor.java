@@ -82,7 +82,6 @@ public class OlColor implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "olColorGray";
-    case 10: return "olColorRed";
     case 0: return "olAutoColor";
     case 1: return "olColorBlack";
     case 2: return "olColorMaroon";
@@ -92,6 +91,7 @@ public class OlColor implements ComEnum {
     case 6: return "olColorPurple";
     case 7: return "olColorTeal";
     case 9: return "olColorSilver";
+    case 10: return "olColorRed";
     case 11: return "olColorLime";
     case 12: return "olColorYellow";
     case 13: return "olColorBlue";
@@ -102,7 +102,6 @@ public class OlColor implements ComEnum {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|olColorGray");
-      if ((value & 10) != 0) sbuf.append("|olColorRed");
       if ((value & 0) != 0) sbuf.append("|olAutoColor");
       if ((value & 1) != 0) sbuf.append("|olColorBlack");
       if ((value & 2) != 0) sbuf.append("|olColorMaroon");
@@ -112,6 +111,7 @@ public class OlColor implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|olColorPurple");
       if ((value & 7) != 0) sbuf.append("|olColorTeal");
       if ((value & 9) != 0) sbuf.append("|olColorSilver");
+      if ((value & 10) != 0) sbuf.append("|olColorRed");
       if ((value & 11) != 0) sbuf.append("|olColorLime");
       if ((value & 12) != 0) sbuf.append("|olColorYellow");
       if ((value & 13) != 0) sbuf.append("|olColorBlue");

@@ -7,15 +7,15 @@ import com.wilutions.com.*;
 public class ICustomXMLPartEventsImpl extends Dispatch implements com.wilutions.mslib.office.ICustomXMLPartEvents {
   @DeclDISPID(1)  public void onNodeAfterInsert(final com.wilutions.mslib.office.CustomXMLNode NewNode, final Boolean InUndoRedo) throws ComException {
     assert(InUndoRedo != null);
-    this._dispatchCall(1,"NodeAfterInsert", DISPATCH_METHOD,null,(NewNode!=null?NewNode:Dispatch.NULL),InUndoRedo);
+    this._dispatchCall(1,"NodeAfterInsert", DISPATCH_METHOD,null,Dispatch.param(NewNode),InUndoRedo);
   }
   @DeclDISPID(2)  public void onNodeAfterDelete(final com.wilutions.mslib.office.CustomXMLNode OldNode, final com.wilutions.mslib.office.CustomXMLNode OldParentNode, final com.wilutions.mslib.office.CustomXMLNode OldNextSibling, final Boolean InUndoRedo) throws ComException {
     assert(InUndoRedo != null);
-    this._dispatchCall(2,"NodeAfterDelete", DISPATCH_METHOD,null,(OldNode!=null?OldNode:Dispatch.NULL),(OldParentNode!=null?OldParentNode:Dispatch.NULL),(OldNextSibling!=null?OldNextSibling:Dispatch.NULL),InUndoRedo);
+    this._dispatchCall(2,"NodeAfterDelete", DISPATCH_METHOD,null,Dispatch.param(OldNode),Dispatch.param(OldParentNode),Dispatch.param(OldNextSibling),InUndoRedo);
   }
   @DeclDISPID(3)  public void onNodeAfterReplace(final com.wilutions.mslib.office.CustomXMLNode OldNode, final com.wilutions.mslib.office.CustomXMLNode NewNode, final Boolean InUndoRedo) throws ComException {
     assert(InUndoRedo != null);
-    this._dispatchCall(3,"NodeAfterReplace", DISPATCH_METHOD,null,(OldNode!=null?OldNode:Dispatch.NULL),(NewNode!=null?NewNode:Dispatch.NULL),InUndoRedo);
+    this._dispatchCall(3,"NodeAfterReplace", DISPATCH_METHOD,null,Dispatch.param(OldNode),Dispatch.param(NewNode),InUndoRedo);
   }
   public ICustomXMLPartEventsImpl(String progId) throws ComException {
     super(progId, "{000CDB06-0000-0000-C000-000000000046}");

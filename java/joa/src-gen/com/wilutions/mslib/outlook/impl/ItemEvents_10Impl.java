@@ -11,7 +11,7 @@ public class ItemEvents_10Impl extends Dispatch implements com.wilutions.mslib.o
   }
   @DeclDISPID(61446)  public void onCustomAction(final IDispatch Action, final IDispatch Response, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61446,"CustomAction", DISPATCH_METHOD,null,(Action!=null?Action:Dispatch.NULL),(Response!=null?Response:Dispatch.NULL),Cancel);
+    this._dispatchCall(61446,"CustomAction", DISPATCH_METHOD,null,Dispatch.param(Action),Dispatch.param(Response),Cancel);
   }
   @DeclDISPID(61448)  public void onCustomPropertyChange(final String Name) throws ComException {
     assert(Name != null);
@@ -19,7 +19,7 @@ public class ItemEvents_10Impl extends Dispatch implements com.wilutions.mslib.o
   }
   @DeclDISPID(62568)  public void onForward(final IDispatch Forward, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(62568,"Forward", DISPATCH_METHOD,null,(Forward!=null?Forward:Dispatch.NULL),Cancel);
+    this._dispatchCall(62568,"Forward", DISPATCH_METHOD,null,Dispatch.param(Forward),Cancel);
   }
   @DeclDISPID(61444)  public void onClose(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
@@ -34,11 +34,11 @@ public class ItemEvents_10Impl extends Dispatch implements com.wilutions.mslib.o
   }
   @DeclDISPID(62566)  public void onReply(final IDispatch Response, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(62566,"Reply", DISPATCH_METHOD,null,(Response!=null?Response:Dispatch.NULL),Cancel);
+    this._dispatchCall(62566,"Reply", DISPATCH_METHOD,null,Dispatch.param(Response),Cancel);
   }
   @DeclDISPID(62567)  public void onReplyAll(final IDispatch Response, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(62567,"ReplyAll", DISPATCH_METHOD,null,(Response!=null?Response:Dispatch.NULL),Cancel);
+    this._dispatchCall(62567,"ReplyAll", DISPATCH_METHOD,null,Dispatch.param(Response),Cancel);
   }
   @DeclDISPID(61445)  public void onSend(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
@@ -53,37 +53,37 @@ public class ItemEvents_10Impl extends Dispatch implements com.wilutions.mslib.o
     this._dispatchCall(61450,"BeforeCheckNames", DISPATCH_METHOD,null,Cancel);
   }
   @DeclDISPID(61451)  public void onAttachmentAdd(final com.wilutions.mslib.outlook.Attachment Attachment) throws ComException {
-    this._dispatchCall(61451,"AttachmentAdd", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL));
+    this._dispatchCall(61451,"AttachmentAdd", DISPATCH_METHOD,null,Dispatch.param(Attachment));
   }
   @DeclDISPID(61452)  public void onAttachmentRead(final com.wilutions.mslib.outlook.Attachment Attachment) throws ComException {
-    this._dispatchCall(61452,"AttachmentRead", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL));
+    this._dispatchCall(61452,"AttachmentRead", DISPATCH_METHOD,null,Dispatch.param(Attachment));
   }
   @DeclDISPID(61453)  public void onBeforeAttachmentSave(final com.wilutions.mslib.outlook.Attachment Attachment, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61453,"BeforeAttachmentSave", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL),Cancel);
+    this._dispatchCall(61453,"BeforeAttachmentSave", DISPATCH_METHOD,null,Dispatch.param(Attachment),Cancel);
   }
   @DeclDISPID(64117)  public void onBeforeDelete(final IDispatch Item, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(64117,"BeforeDelete", DISPATCH_METHOD,null,(Item!=null?Item:Dispatch.NULL),Cancel);
+    this._dispatchCall(64117,"BeforeDelete", DISPATCH_METHOD,null,Dispatch.param(Item),Cancel);
   }
   @DeclDISPID(64430)  public void onAttachmentRemove(final com.wilutions.mslib.outlook.Attachment Attachment) throws ComException {
-    this._dispatchCall(64430,"AttachmentRemove", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL));
+    this._dispatchCall(64430,"AttachmentRemove", DISPATCH_METHOD,null,Dispatch.param(Attachment));
   }
   @DeclDISPID(64432)  public void onBeforeAttachmentAdd(final com.wilutions.mslib.outlook.Attachment Attachment, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(64432,"BeforeAttachmentAdd", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL),Cancel);
+    this._dispatchCall(64432,"BeforeAttachmentAdd", DISPATCH_METHOD,null,Dispatch.param(Attachment),Cancel);
   }
   @DeclDISPID(64431)  public void onBeforeAttachmentPreview(final com.wilutions.mslib.outlook.Attachment Attachment, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(64431,"BeforeAttachmentPreview", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL),Cancel);
+    this._dispatchCall(64431,"BeforeAttachmentPreview", DISPATCH_METHOD,null,Dispatch.param(Attachment),Cancel);
   }
   @DeclDISPID(64427)  public void onBeforeAttachmentRead(final com.wilutions.mslib.outlook.Attachment Attachment, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(64427,"BeforeAttachmentRead", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL),Cancel);
+    this._dispatchCall(64427,"BeforeAttachmentRead", DISPATCH_METHOD,null,Dispatch.param(Attachment),Cancel);
   }
   @DeclDISPID(64434)  public void onBeforeAttachmentWriteToTempFile(final com.wilutions.mslib.outlook.Attachment Attachment, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(64434,"BeforeAttachmentWriteToTempFile", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL),Cancel);
+    this._dispatchCall(64434,"BeforeAttachmentWriteToTempFile", DISPATCH_METHOD,null,Dispatch.param(Attachment),Cancel);
   }
   @DeclDISPID(64429)  public void onUnload() throws ComException {
     this._dispatchCall(64429,"Unload", DISPATCH_METHOD,null);

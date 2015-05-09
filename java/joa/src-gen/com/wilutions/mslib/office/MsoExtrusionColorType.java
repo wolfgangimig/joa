@@ -39,15 +39,15 @@ public class MsoExtrusionColorType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoExtrusionColorCustom";
     case -2: return "msoExtrusionColorTypeMixed";
     case 1: return "msoExtrusionColorAutomatic";
+    case 2: return "msoExtrusionColorCustom";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoExtrusionColorCustom");
       if ((value & -2) != 0) sbuf.append("|msoExtrusionColorTypeMixed");
       if ((value & 1) != 0) sbuf.append("|msoExtrusionColorAutomatic");
+      if ((value & 2) != 0) sbuf.append("|msoExtrusionColorCustom");
       return sbuf.toString();
       }
     }

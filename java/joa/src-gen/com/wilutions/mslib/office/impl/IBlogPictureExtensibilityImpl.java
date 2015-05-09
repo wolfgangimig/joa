@@ -14,7 +14,7 @@ public class IBlogPictureExtensibilityImpl extends Dispatch implements com.wilut
     assert(Account != null);
     assert(BlogProvider != null);
     assert(ParentWindow != null);
-    this._dispatchCall(2,"CreatePictureAccount", DISPATCH_METHOD,null,Account,BlogProvider,ParentWindow,(Document!=null?Document:Dispatch.NULL));
+    this._dispatchCall(2,"CreatePictureAccount", DISPATCH_METHOD,null,Account,BlogProvider,ParentWindow,Dispatch.param(Document));
   }
   @DeclDISPID(3)  public void PublishPicture(final String Account, final Integer ParentWindow, final IDispatch Document, final Object Image, final ByRef<String> PictureURI, final Integer ImageType) throws ComException {
     assert(Account != null);
@@ -22,7 +22,7 @@ public class IBlogPictureExtensibilityImpl extends Dispatch implements com.wilut
     assert(Image != null);
     assert(PictureURI != null);
     assert(ImageType != null);
-    this._dispatchCall(3,"PublishPicture", DISPATCH_METHOD,null,Account,ParentWindow,(Document!=null?Document:Dispatch.NULL),Image,PictureURI,ImageType);
+    this._dispatchCall(3,"PublishPicture", DISPATCH_METHOD,null,Account,ParentWindow,Dispatch.param(Document),Image,PictureURI,ImageType);
   }
   public IBlogPictureExtensibilityImpl(String progId) throws ComException {
     super(progId, "{000C03C5-0000-0000-C000-000000000046}");

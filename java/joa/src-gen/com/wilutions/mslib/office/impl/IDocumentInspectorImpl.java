@@ -14,13 +14,13 @@ public class IDocumentInspectorImpl extends Dispatch implements com.wilutions.ms
     assert(Status != null);
     assert(Result != null);
     assert(Action != null);
-    this._dispatchCall(1610678273,"Inspect", DISPATCH_METHOD,null,(Doc!=null?Doc:Dispatch.NULL),Status,Result,Action);
+    this._dispatchCall(1610678273,"Inspect", DISPATCH_METHOD,null,Dispatch.param(Doc),Status,Result,Action);
   }
   @DeclDISPID(1610678274)  public void Fix(final IDispatch Doc, final Integer hwnd, final ByRef<com.wilutions.mslib.office.MsoDocInspectorStatus> Status, final ByRef<String> Result) throws ComException {
     assert(hwnd != null);
     assert(Status != null);
     assert(Result != null);
-    this._dispatchCall(1610678274,"Fix", DISPATCH_METHOD,null,(Doc!=null?Doc:Dispatch.NULL),hwnd,Status,Result);
+    this._dispatchCall(1610678274,"Fix", DISPATCH_METHOD,null,Dispatch.param(Doc),hwnd,Status,Result);
   }
   public IDocumentInspectorImpl(String progId) throws ComException {
     super(progId, "{000CD706-0000-0000-C000-000000000046}");

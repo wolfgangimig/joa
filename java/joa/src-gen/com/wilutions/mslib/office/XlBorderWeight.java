@@ -42,15 +42,15 @@ public class XlBorderWeight implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 1: return "xlHairline";
     case -4138: return "xlMedium";
+    case 1: return "xlHairline";
     case 4: return "xlThick";
     case 2: return "xlThin";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 1) != 0) sbuf.append("|xlHairline");
       if ((value & -4138) != 0) sbuf.append("|xlMedium");
+      if ((value & 1) != 0) sbuf.append("|xlHairline");
       if ((value & 4) != 0) sbuf.append("|xlThick");
       if ((value & 2) != 0) sbuf.append("|xlThin");
       return sbuf.toString();

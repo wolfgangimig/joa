@@ -79,7 +79,7 @@ public class _FormRegionImpl extends Dispatch implements com.wilutions.mslib.out
   }
   @DeclDISPID(64201)  public void SetControlItemProperty(final IDispatch Control, final String PropertyName) throws ComException {
     assert(PropertyName != null);
-    this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,(Control!=null?Control:Dispatch.NULL),PropertyName);
+    this._dispatchCall(64201,"SetControlItemProperty", DISPATCH_METHOD,null,Dispatch.param(Control),PropertyName);
   }
   @DeclDISPID(64518)  public Boolean getSuppressControlReplacement() throws ComException {
     final Object obj = this._dispatchCall(64518,"SuppressControlReplacement", DISPATCH_PROPERTYGET,null);

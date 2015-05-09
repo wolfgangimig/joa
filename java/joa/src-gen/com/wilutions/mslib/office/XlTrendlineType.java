@@ -49,19 +49,19 @@ public class XlTrendlineType implements ComEnum {
   public String toString() {
     switch(value) {
     case 5: return "xlExponential";
-    case -4132: return "xlLinear";
-    case 6: return "xlMovingAvg";
-    case -4133: return "xlLogarithmic";
     case 3: return "xlPolynomial";
+    case -4132: return "xlLinear";
+    case -4133: return "xlLogarithmic";
+    case 6: return "xlMovingAvg";
     case 4: return "xlPower";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 5) != 0) sbuf.append("|xlExponential");
-      if ((value & -4132) != 0) sbuf.append("|xlLinear");
-      if ((value & 6) != 0) sbuf.append("|xlMovingAvg");
-      if ((value & -4133) != 0) sbuf.append("|xlLogarithmic");
       if ((value & 3) != 0) sbuf.append("|xlPolynomial");
+      if ((value & -4132) != 0) sbuf.append("|xlLinear");
+      if ((value & -4133) != 0) sbuf.append("|xlLogarithmic");
+      if ((value & 6) != 0) sbuf.append("|xlMovingAvg");
       if ((value & 4) != 0) sbuf.append("|xlPower");
       return sbuf.toString();
       }

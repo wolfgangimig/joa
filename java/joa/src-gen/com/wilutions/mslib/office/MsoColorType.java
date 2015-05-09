@@ -48,18 +48,18 @@ public class MsoColorType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoColorTypeScheme";
     case -2: return "msoColorTypeMixed";
     case 1: return "msoColorTypeRGB";
+    case 2: return "msoColorTypeScheme";
     case 3: return "msoColorTypeCMYK";
     case 4: return "msoColorTypeCMS";
     case 5: return "msoColorTypeInk";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoColorTypeScheme");
       if ((value & -2) != 0) sbuf.append("|msoColorTypeMixed");
       if ((value & 1) != 0) sbuf.append("|msoColorTypeRGB");
+      if ((value & 2) != 0) sbuf.append("|msoColorTypeScheme");
       if ((value & 3) != 0) sbuf.append("|msoColorTypeCMYK");
       if ((value & 4) != 0) sbuf.append("|msoColorTypeCMS");
       if ((value & 5) != 0) sbuf.append("|msoColorTypeInk");

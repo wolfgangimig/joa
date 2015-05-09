@@ -40,7 +40,7 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
     assert(Type != null);
     assert(Name != null);
     assert(Address != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Type,Name,Address);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Type,Variant.param(Name),Variant.param(Address));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.AddressEntryImpl.class);
   }
@@ -67,7 +67,7 @@ public class AddressEntriesImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(97)  public void Sort(final Object Property, final Object Order) throws ComException {
     assert(Property != null);
     assert(Order != null);
-    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Order);
+    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Variant.param(Property),Variant.param(Order));
   }
   public AddressEntriesImpl(String progId) throws ComException {
     super(progId, "{0006304A-0000-0000-C000-000000000046}");

@@ -88,7 +88,7 @@ public class IFontImpl extends Dispatch implements com.wilutions.mslib.stdole.IF
     this._dispatchCall(1610678289,"Clone", DISPATCH_METHOD,null,ppfont);
   }
   @DeclDISPID(1610678290)  public void IsEqual(final com.wilutions.mslib.stdole.IFont pfontOther) throws ComException {
-    this._dispatchCall(1610678290,"IsEqual", DISPATCH_METHOD,null,(pfontOther!=null?pfontOther:Dispatch.NULL));
+    this._dispatchCall(1610678290,"IsEqual", DISPATCH_METHOD,null,Dispatch.param(pfontOther));
   }
   @DeclDISPID(1610678291)  public void SetRatio(final Integer cyLogical, final Integer cyHimetric) throws ComException {
     assert(cyLogical != null);

@@ -13,7 +13,7 @@ public class ExplorerEventsImpl extends Dispatch implements com.wilutions.mslib.
   }
   @DeclDISPID(61443)  public void onBeforeFolderSwitch(final IDispatch NewFolder, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61443,"BeforeFolderSwitch", DISPATCH_METHOD,null,(NewFolder!=null?NewFolder:Dispatch.NULL),Cancel);
+    this._dispatchCall(61443,"BeforeFolderSwitch", DISPATCH_METHOD,null,Dispatch.param(NewFolder),Cancel);
   }
   @DeclDISPID(61444)  public void onViewSwitch() throws ComException {
     this._dispatchCall(61444,"ViewSwitch", DISPATCH_METHOD,null);

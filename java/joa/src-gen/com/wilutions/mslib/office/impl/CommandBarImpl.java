@@ -52,7 +52,7 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
     assert(Tag != null);
     assert(Visible != null);
     assert(Recursive != null);
-    final Object obj = this._dispatchCall(1610874887,"FindControl", DISPATCH_METHOD,null,Type,Id,Tag,Visible,Recursive);
+    final Object obj = this._dispatchCall(1610874887,"FindControl", DISPATCH_METHOD,null,Variant.param(Type),Variant.param(Id),Variant.param(Tag),Variant.param(Visible),Variant.param(Recursive));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
@@ -135,7 +135,7 @@ public class CommandBarImpl extends Dispatch implements com.wilutions.mslib.offi
   @DeclDISPID(1610874906)  public void ShowPopup(final Object x, final Object y) throws ComException {
     assert(x != null);
     assert(y != null);
-    this._dispatchCall(1610874906,"ShowPopup", DISPATCH_METHOD,null,x,y);
+    this._dispatchCall(1610874906,"ShowPopup", DISPATCH_METHOD,null,Variant.param(x),Variant.param(y));
   }
   @DeclDISPID(1610874907)  public Integer getTop() throws ComException {
     final Object obj = this._dispatchCall(1610874907,"Top", DISPATCH_PROPERTYGET,null);

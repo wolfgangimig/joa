@@ -51,23 +51,23 @@ public class OlDaysOfWeek implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 64: return "olSaturday";
     case 1: return "olSunday";
-    case 16: return "olThursday";
     case 2: return "olMonday";
-    case 32: return "olFriday";
     case 4: return "olTuesday";
+    case 64: return "olSaturday";
     case 8: return "olWednesday";
+    case 16: return "olThursday";
+    case 32: return "olFriday";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 64) != 0) sbuf.append("|olSaturday");
       if ((value & 1) != 0) sbuf.append("|olSunday");
-      if ((value & 16) != 0) sbuf.append("|olThursday");
       if ((value & 2) != 0) sbuf.append("|olMonday");
-      if ((value & 32) != 0) sbuf.append("|olFriday");
       if ((value & 4) != 0) sbuf.append("|olTuesday");
+      if ((value & 64) != 0) sbuf.append("|olSaturday");
       if ((value & 8) != 0) sbuf.append("|olWednesday");
+      if ((value & 16) != 0) sbuf.append("|olThursday");
+      if ((value & 32) != 0) sbuf.append("|olFriday");
       return sbuf.toString();
       }
     }

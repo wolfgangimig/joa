@@ -41,14 +41,14 @@ public class UserPropertiesImpl extends Dispatch implements com.wilutions.mslib.
     assert(Type != null);
     assert(AddToFolderFields != null);
     assert(DisplayFormat != null);
-    final Object obj = this._dispatchCall(102,"Add", DISPATCH_METHOD,null,Name,Type.value,AddToFolderFields,DisplayFormat);
+    final Object obj = this._dispatchCall(102,"Add", DISPATCH_METHOD,null,Name,Type.value,Variant.param(AddToFolderFields),Variant.param(DisplayFormat));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertyImpl.class);
   }
   @DeclDISPID(103)  public com.wilutions.mslib.outlook.UserProperty Find(final String Name, final Object Custom) throws ComException {
     assert(Name != null);
     assert(Custom != null);
-    final Object obj = this._dispatchCall(103,"Find", DISPATCH_METHOD,null,Name,Custom);
+    final Object obj = this._dispatchCall(103,"Find", DISPATCH_METHOD,null,Name,Variant.param(Custom));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.UserPropertyImpl.class);
   }

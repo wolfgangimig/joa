@@ -48,19 +48,19 @@ public class MsoTextFontAlign implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoFontAlignCenter";
     case -2: return "msoFontAlignMixed";
     case 0: return "msoFontAlignAuto";
     case 1: return "msoFontAlignTop";
+    case 2: return "msoFontAlignCenter";
     case 3: return "msoFontAlignBaseline";
     case 4: return "msoFontAlignBottom";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoFontAlignCenter");
       if ((value & -2) != 0) sbuf.append("|msoFontAlignMixed");
       if ((value & 0) != 0) sbuf.append("|msoFontAlignAuto");
       if ((value & 1) != 0) sbuf.append("|msoFontAlignTop");
+      if ((value & 2) != 0) sbuf.append("|msoFontAlignCenter");
       if ((value & 3) != 0) sbuf.append("|msoFontAlignBaseline");
       if ((value & 4) != 0) sbuf.append("|msoFontAlignBottom");
       return sbuf.toString();

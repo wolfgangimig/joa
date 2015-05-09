@@ -51,9 +51,9 @@ public class MsoFillType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoFillPatterned";
     case -2: return "msoFillMixed";
     case 1: return "msoFillSolid";
+    case 2: return "msoFillPatterned";
     case 3: return "msoFillGradient";
     case 4: return "msoFillTextured";
     case 5: return "msoFillBackground";
@@ -61,9 +61,9 @@ public class MsoFillType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoFillPatterned");
       if ((value & -2) != 0) sbuf.append("|msoFillMixed");
       if ((value & 1) != 0) sbuf.append("|msoFillSolid");
+      if ((value & 2) != 0) sbuf.append("|msoFillPatterned");
       if ((value & 3) != 0) sbuf.append("|msoFillGradient");
       if ((value & 4) != 0) sbuf.append("|msoFillTextured");
       if ((value & 5) != 0) sbuf.append("|msoFillBackground");

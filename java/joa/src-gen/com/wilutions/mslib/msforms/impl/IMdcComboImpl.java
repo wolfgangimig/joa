@@ -144,7 +144,7 @@ public class IMdcComboImpl extends Dispatch implements com.wilutions.mslib.msfor
     return (Boolean)obj;
   }
   @DeclDISPID(-512)  public void setFont(final com.wilutions.mslib.msforms.Font value) throws ComException {
-    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(-512,"Font", DISPATCH_PROPERTYPUTREF,Dispatch.param(value));
   }
   @DeclDISPID(-512)  public com.wilutions.mslib.msforms.Font getFont() throws ComException {
     final Object obj = this._dispatchCall(-512,"Font", DISPATCH_PROPERTYGET,null);
@@ -258,7 +258,7 @@ public class IMdcComboImpl extends Dispatch implements com.wilutions.mslib.msfor
     return (Integer)obj;
   }
   @DeclDISPID(-522)  public void setMouseIcon(final com.wilutions.mslib.stdole.Picture value) throws ComException {
-    this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(-522)  public com.wilutions.mslib.stdole.Picture getMouseIcon() throws ComException {
     final Object obj = this._dispatchCall(-522,"MouseIcon", DISPATCH_PROPERTYGET,null);

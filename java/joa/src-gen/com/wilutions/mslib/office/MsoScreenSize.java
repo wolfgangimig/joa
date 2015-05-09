@@ -64,7 +64,6 @@ public class MsoScreenSize implements ComEnum {
   public String toString() {
     switch(value) {
     case 8: return "msoScreenSize1600x1200";
-    case 10: return "msoScreenSize1920x1200";
     case 0: return "msoScreenSize544x376";
     case 1: return "msoScreenSize640x480";
     case 2: return "msoScreenSize720x512";
@@ -74,11 +73,11 @@ public class MsoScreenSize implements ComEnum {
     case 6: return "msoScreenSize1152x900";
     case 7: return "msoScreenSize1280x1024";
     case 9: return "msoScreenSize1800x1440";
+    case 10: return "msoScreenSize1920x1200";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & 8) != 0) sbuf.append("|msoScreenSize1600x1200");
-      if ((value & 10) != 0) sbuf.append("|msoScreenSize1920x1200");
       if ((value & 0) != 0) sbuf.append("|msoScreenSize544x376");
       if ((value & 1) != 0) sbuf.append("|msoScreenSize640x480");
       if ((value & 2) != 0) sbuf.append("|msoScreenSize720x512");
@@ -88,6 +87,7 @@ public class MsoScreenSize implements ComEnum {
       if ((value & 6) != 0) sbuf.append("|msoScreenSize1152x900");
       if ((value & 7) != 0) sbuf.append("|msoScreenSize1280x1024");
       if ((value & 9) != 0) sbuf.append("|msoScreenSize1800x1440");
+      if ((value & 10) != 0) sbuf.append("|msoScreenSize1920x1200");
       return sbuf.toString();
       }
     }

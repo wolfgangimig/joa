@@ -66,7 +66,7 @@ public class _ResultsImpl extends Dispatch implements com.wilutions.mslib.outloo
   @DeclDISPID(97)  public void Sort(final String Property, final Object Descending) throws ComException {
     assert(Property != null);
     assert(Descending != null);
-    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Descending);
+    this._dispatchCall(97,"Sort", DISPATCH_METHOD,null,Property,Variant.param(Descending));
   }
   @DeclDISPID(64143)  public com.wilutions.mslib.outlook.OlItemType getDefaultItemType() throws ComException {
     final Object obj = this._dispatchCall(64143,"DefaultItemType", DISPATCH_PROPERTYGET,null);

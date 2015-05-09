@@ -75,11 +75,10 @@ public class OlMousePointer implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 8: return "olMousePointerSizeNWSE";
     case 0: return "olMousePointerDefault";
     case 10: return "olMousePointerUpArrow";
-    case 8: return "olMousePointerSizeNWSE";
     case 9: return "olMousePointerSizeWE";
-    case 99: return "olMousePointerCustom";
     case 1: return "olMousePointerArrow";
     case 2: return "olMousePointerCross";
     case 3: return "olMousePointerIBeam";
@@ -90,14 +89,14 @@ public class OlMousePointer implements ComEnum {
     case 13: return "olMousePointerAppStarting";
     case 14: return "olMousePointerHelp";
     case 15: return "olMousePointerSizeAll";
+    case 99: return "olMousePointerCustom";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 8) != 0) sbuf.append("|olMousePointerSizeNWSE");
       if ((value & 0) != 0) sbuf.append("|olMousePointerDefault");
       if ((value & 10) != 0) sbuf.append("|olMousePointerUpArrow");
-      if ((value & 8) != 0) sbuf.append("|olMousePointerSizeNWSE");
       if ((value & 9) != 0) sbuf.append("|olMousePointerSizeWE");
-      if ((value & 99) != 0) sbuf.append("|olMousePointerCustom");
       if ((value & 1) != 0) sbuf.append("|olMousePointerArrow");
       if ((value & 2) != 0) sbuf.append("|olMousePointerCross");
       if ((value & 3) != 0) sbuf.append("|olMousePointerIBeam");
@@ -108,6 +107,7 @@ public class OlMousePointer implements ComEnum {
       if ((value & 13) != 0) sbuf.append("|olMousePointerAppStarting");
       if ((value & 14) != 0) sbuf.append("|olMousePointerHelp");
       if ((value & 15) != 0) sbuf.append("|olMousePointerSizeAll");
+      if ((value & 99) != 0) sbuf.append("|olMousePointerCustom");
       return sbuf.toString();
       }
     }

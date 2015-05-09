@@ -39,7 +39,7 @@ public class _FoldersImpl extends Dispatch implements com.wilutions.mslib.outloo
   @DeclDISPID(95)  public com.wilutions.mslib.outlook.MAPIFolder Add(final String Name, final Object Type) throws ComException {
     assert(Name != null);
     assert(Type != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Type);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,Name,Variant.param(Type));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }

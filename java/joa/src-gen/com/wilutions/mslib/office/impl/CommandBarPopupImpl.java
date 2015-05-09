@@ -41,13 +41,13 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(1610874886)  public com.wilutions.mslib.office.CommandBarControl Copy(final Object Bar, final Object Before) throws ComException {
     assert(Bar != null);
     assert(Before != null);
-    final Object obj = this._dispatchCall(1610874886,"Copy", DISPATCH_METHOD,null,Bar,Before);
+    final Object obj = this._dispatchCall(1610874886,"Copy", DISPATCH_METHOD,null,Variant.param(Bar),Variant.param(Before));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
   @DeclDISPID(1610874887)  public void Delete(final Object Temporary) throws ComException {
     assert(Temporary != null);
-    this._dispatchCall(1610874887,"Delete", DISPATCH_METHOD,null,Temporary);
+    this._dispatchCall(1610874887,"Delete", DISPATCH_METHOD,null,Variant.param(Temporary));
   }
   @DeclDISPID(1610874888)  public String getDescriptionText() throws ComException {
     final Object obj = this._dispatchCall(1610874888,"DescriptionText", DISPATCH_PROPERTYGET,null);
@@ -110,7 +110,7 @@ public class CommandBarPopupImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(1610874902)  public com.wilutions.mslib.office.CommandBarControl Move(final Object Bar, final Object Before) throws ComException {
     assert(Bar != null);
     assert(Before != null);
-    final Object obj = this._dispatchCall(1610874902,"Move", DISPATCH_METHOD,null,Bar,Before);
+    final Object obj = this._dispatchCall(1610874902,"Move", DISPATCH_METHOD,null,Variant.param(Bar),Variant.param(Before));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }

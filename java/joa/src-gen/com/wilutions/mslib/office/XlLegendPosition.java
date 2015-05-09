@@ -50,19 +50,19 @@ public class XlLegendPosition implements ComEnum {
     switch(value) {
     case -4161: return "xlLegendPositionCustom";
     case -4107: return "xlLegendPositionBottom";
-    case -4160: return "xlLegendPositionTop";
     case 2: return "xlLegendPositionCorner";
     case -4131: return "xlLegendPositionLeft";
     case -4152: return "xlLegendPositionRight";
+    case -4160: return "xlLegendPositionTop";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
       if ((value & -4161) != 0) sbuf.append("|xlLegendPositionCustom");
       if ((value & -4107) != 0) sbuf.append("|xlLegendPositionBottom");
-      if ((value & -4160) != 0) sbuf.append("|xlLegendPositionTop");
       if ((value & 2) != 0) sbuf.append("|xlLegendPositionCorner");
       if ((value & -4131) != 0) sbuf.append("|xlLegendPositionLeft");
       if ((value & -4152) != 0) sbuf.append("|xlLegendPositionRight");
+      if ((value & -4160) != 0) sbuf.append("|xlLegendPositionTop");
       return sbuf.toString();
       }
     }

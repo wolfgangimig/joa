@@ -87,18 +87,18 @@ public class MsoTextUnderlineType implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoUnderlineDashLine";
     case -2: return "msoUnderlineMixed";
-    case 2: return "msoUnderlineSingleLine";
-    case 10: return "msoUnderlineDashLongHeavyLine";
     case 0: return "msoNoUnderline";
     case 1: return "msoUnderlineWords";
+    case 2: return "msoUnderlineSingleLine";
     case 3: return "msoUnderlineDoubleLine";
     case 4: return "msoUnderlineHeavyLine";
     case 5: return "msoUnderlineDottedLine";
     case 6: return "msoUnderlineDottedHeavyLine";
-    case 7: return "msoUnderlineDashLine";
     case 8: return "msoUnderlineDashHeavyLine";
     case 9: return "msoUnderlineDashLongLine";
+    case 10: return "msoUnderlineDashLongHeavyLine";
     case 11: return "msoUnderlineDotDashLine";
     case 12: return "msoUnderlineDotDashHeavyLine";
     case 13: return "msoUnderlineDotDotDashLine";
@@ -109,18 +109,18 @@ public class MsoTextUnderlineType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoUnderlineDashLine");
       if ((value & -2) != 0) sbuf.append("|msoUnderlineMixed");
-      if ((value & 2) != 0) sbuf.append("|msoUnderlineSingleLine");
-      if ((value & 10) != 0) sbuf.append("|msoUnderlineDashLongHeavyLine");
       if ((value & 0) != 0) sbuf.append("|msoNoUnderline");
       if ((value & 1) != 0) sbuf.append("|msoUnderlineWords");
+      if ((value & 2) != 0) sbuf.append("|msoUnderlineSingleLine");
       if ((value & 3) != 0) sbuf.append("|msoUnderlineDoubleLine");
       if ((value & 4) != 0) sbuf.append("|msoUnderlineHeavyLine");
       if ((value & 5) != 0) sbuf.append("|msoUnderlineDottedLine");
       if ((value & 6) != 0) sbuf.append("|msoUnderlineDottedHeavyLine");
-      if ((value & 7) != 0) sbuf.append("|msoUnderlineDashLine");
       if ((value & 8) != 0) sbuf.append("|msoUnderlineDashHeavyLine");
       if ((value & 9) != 0) sbuf.append("|msoUnderlineDashLongLine");
+      if ((value & 10) != 0) sbuf.append("|msoUnderlineDashLongHeavyLine");
       if ((value & 11) != 0) sbuf.append("|msoUnderlineDotDashLine");
       if ((value & 12) != 0) sbuf.append("|msoUnderlineDotDashHeavyLine");
       if ((value & 13) != 0) sbuf.append("|msoUnderlineDotDotDashLine");

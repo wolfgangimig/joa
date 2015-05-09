@@ -50,7 +50,7 @@ public class Rules extends Dispatch implements _Rules {
   }
   @DeclDISPID(61512)  public void Save(final Object ShowProgress) throws ComException {
     assert(ShowProgress != null);
-    this._dispatchCall(61512,"Save", DISPATCH_METHOD,null,ShowProgress);
+    this._dispatchCall(61512,"Save", DISPATCH_METHOD,null,Variant.param(ShowProgress));
   }
   @DeclDISPID(82)  public void Remove(final Object Index) throws ComException {
     assert(Index != null);

@@ -11,7 +11,7 @@ public class ItemEventsImpl extends Dispatch implements com.wilutions.mslib.outl
   }
   @DeclDISPID(61446)  public void onCustomAction(final IDispatch Action, final IDispatch Response, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61446,"CustomAction", DISPATCH_METHOD,null,(Action!=null?Action:Dispatch.NULL),(Response!=null?Response:Dispatch.NULL),Cancel);
+    this._dispatchCall(61446,"CustomAction", DISPATCH_METHOD,null,Dispatch.param(Action),Dispatch.param(Response),Cancel);
   }
   @DeclDISPID(61448)  public void onCustomPropertyChange(final String Name) throws ComException {
     assert(Name != null);
@@ -19,7 +19,7 @@ public class ItemEventsImpl extends Dispatch implements com.wilutions.mslib.outl
   }
   @DeclDISPID(62568)  public void onForward(final IDispatch Forward, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(62568,"Forward", DISPATCH_METHOD,null,(Forward!=null?Forward:Dispatch.NULL),Cancel);
+    this._dispatchCall(62568,"Forward", DISPATCH_METHOD,null,Dispatch.param(Forward),Cancel);
   }
   @DeclDISPID(61444)  public void onClose(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
@@ -34,11 +34,11 @@ public class ItemEventsImpl extends Dispatch implements com.wilutions.mslib.outl
   }
   @DeclDISPID(62566)  public void onReply(final IDispatch Response, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(62566,"Reply", DISPATCH_METHOD,null,(Response!=null?Response:Dispatch.NULL),Cancel);
+    this._dispatchCall(62566,"Reply", DISPATCH_METHOD,null,Dispatch.param(Response),Cancel);
   }
   @DeclDISPID(62567)  public void onReplyAll(final IDispatch Response, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(62567,"ReplyAll", DISPATCH_METHOD,null,(Response!=null?Response:Dispatch.NULL),Cancel);
+    this._dispatchCall(62567,"ReplyAll", DISPATCH_METHOD,null,Dispatch.param(Response),Cancel);
   }
   @DeclDISPID(61445)  public void onSend(final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
@@ -53,14 +53,14 @@ public class ItemEventsImpl extends Dispatch implements com.wilutions.mslib.outl
     this._dispatchCall(61450,"BeforeCheckNames", DISPATCH_METHOD,null,Cancel);
   }
   @DeclDISPID(61451)  public void onAttachmentAdd(final com.wilutions.mslib.outlook.Attachment Attachment) throws ComException {
-    this._dispatchCall(61451,"AttachmentAdd", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL));
+    this._dispatchCall(61451,"AttachmentAdd", DISPATCH_METHOD,null,Dispatch.param(Attachment));
   }
   @DeclDISPID(61452)  public void onAttachmentRead(final com.wilutions.mslib.outlook.Attachment Attachment) throws ComException {
-    this._dispatchCall(61452,"AttachmentRead", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL));
+    this._dispatchCall(61452,"AttachmentRead", DISPATCH_METHOD,null,Dispatch.param(Attachment));
   }
   @DeclDISPID(61453)  public void onBeforeAttachmentSave(final com.wilutions.mslib.outlook.Attachment Attachment, final ByRef<Boolean> Cancel) throws ComException {
     assert(Cancel != null);
-    this._dispatchCall(61453,"BeforeAttachmentSave", DISPATCH_METHOD,null,(Attachment!=null?Attachment:Dispatch.NULL),Cancel);
+    this._dispatchCall(61453,"BeforeAttachmentSave", DISPATCH_METHOD,null,Dispatch.param(Attachment),Cancel);
   }
   public ItemEventsImpl(String progId) throws ComException {
     super(progId, "{0006303A-0000-0000-C000-000000000046}");

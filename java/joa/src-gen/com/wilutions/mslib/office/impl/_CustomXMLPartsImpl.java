@@ -35,7 +35,7 @@ public class _CustomXMLPartsImpl extends Dispatch implements com.wilutions.mslib
   @DeclDISPID(1610809347)  public com.wilutions.mslib.office.CustomXMLPart Add(final String XML, final Object SchemaCollection) throws ComException {
     assert(XML != null);
     assert(SchemaCollection != null);
-    final Object obj = this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,XML,SchemaCollection);
+    final Object obj = this._dispatchCall(1610809347,"Add", DISPATCH_METHOD,null,XML,Variant.param(SchemaCollection));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(com.wilutions.mslib.office.CustomXMLPart.class);

@@ -48,7 +48,7 @@ public class NavigationGroups extends Dispatch implements _NavigationGroups {
     return disp.as(NavigationGroup.class);
   }
   @DeclDISPID(64446)  public void Delete(final NavigationGroup Group) throws ComException {
-    this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,(Group!=null?Group:Dispatch.NULL));
+    this._dispatchCall(64446,"Delete", DISPATCH_METHOD,null,Dispatch.param(Group));
   }
   @DeclDISPID(64447)  public NavigationGroup GetDefaultNavigationGroup(final OlGroupType DefaultFolderGroup) throws ComException {
     assert(DefaultFolderGroup != null);

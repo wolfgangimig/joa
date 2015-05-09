@@ -39,14 +39,14 @@ public class OlOfficeDocItemsType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 10: return "olPowerPointShowItem";
     case 8: return "olExcelWorkSheetItem";
+    case 10: return "olPowerPointShowItem";
     case 9: return "olWordDocumentItem";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 10) != 0) sbuf.append("|olPowerPointShowItem");
       if ((value & 8) != 0) sbuf.append("|olExcelWorkSheetItem");
+      if ((value & 10) != 0) sbuf.append("|olPowerPointShowItem");
       if ((value & 9) != 0) sbuf.append("|olWordDocumentItem");
       return sbuf.toString();
       }

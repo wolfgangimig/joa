@@ -208,10 +208,10 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   }
   @DeclDISPID(61606)  public void Display(final Object Modal) throws ComException {
     assert(Modal != null);
-    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Modal);
+    this._dispatchCall(61606,"Display", DISPATCH_METHOD,null,Variant.param(Modal));
   }
   @DeclDISPID(61492)  public IDispatch Move(final com.wilutions.mslib.outlook.MAPIFolder DestFldr) throws ComException {
-    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,(DestFldr!=null?DestFldr:Dispatch.NULL));
+    final Object obj = this._dispatchCall(61492,"Move", DISPATCH_METHOD,null,Dispatch.param(DestFldr));
     if (obj == null) return null;
     return (IDispatch)obj;
   }
@@ -224,7 +224,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
   @DeclDISPID(61521)  public void SaveAs(final String Path, final Object Type) throws ComException {
     assert(Path != null);
     assert(Type != null);
-    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Type);
+    this._dispatchCall(61521,"SaveAs", DISPATCH_METHOD,null,Path,Variant.param(Type));
   }
   @DeclDISPID(62468)  public String getHTMLBody() throws ComException {
     final Object obj = this._dispatchCall(62468,"HTMLBody", DISPATCH_PROPERTYGET,null);
@@ -322,7 +322,7 @@ public class _MobileItemImpl extends Dispatch implements com.wilutions.mslib.out
     return disp.as(com.wilutions.mslib.outlook.Account.class);
   }
   @DeclDISPID(64209)  public void setSendUsingAccount(final com.wilutions.mslib.outlook.Account value) throws ComException {
-    this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(64209,"SendUsingAccount", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(62466)  public Boolean getSent() throws ComException {
     final Object obj = this._dispatchCall(62466,"Sent", DISPATCH_PROPERTYGET,null);

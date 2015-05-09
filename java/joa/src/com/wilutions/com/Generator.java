@@ -31,7 +31,6 @@ public class Generator {
 				"{0D452EE1-E08F-101A-852E-02608C4D0BB4}"
 				
 		);
-		
 
 		generateJavaClasses("com.wilutions", 
 				"{0F9377B3-9F5B-4551-8709-8E422D5F7A8A}" // JoaCtrl
@@ -41,6 +40,7 @@ public class Generator {
 	private static void generateJavaClasses(String pack, String... typeLibIds) {
 		DispatchImpl.initLogger("d:\\temp\\log\\joagen.log", "ERROR", false);
 		String outDir = "d:\\git\\joa\\java\\joa\\src-gen";
+//		String outDir = "d:\\temp\\src-gen";
 		System.out.println("Generator started for " + pack +  "...");
 		JoaDll.nativeGenerateJavaClassesForTypeLibs(outDir, pack, typeLibIds,
 				JoaDll.GENERATOR_INCLUDE_REFERENCED_TYPELIBS);

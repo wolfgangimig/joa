@@ -49,7 +49,7 @@ public class COMAddInImpl extends Dispatch implements com.wilutions.mslib.office
     return (IDispatch)obj;
   }
   @DeclDISPID(7)  public void setObject(final IDispatch value) throws ComException {
-    this._dispatchCall(7,"Object", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(7,"Object", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(8)  public IDispatch getParent() throws ComException {
     final Object obj = this._dispatchCall(8,"Parent", DISPATCH_PROPERTYGET,null);

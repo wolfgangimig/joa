@@ -329,4 +329,13 @@ public class Dispatch implements IDispatch {
 			JoaDll.nativeAddEventCallInBackground(iid, memberName);
 		}
 	}
+	
+	/**
+	 * Used internally in generated code.
+	 * @param obj An IDispatch or an user defined type (enum).
+	 * @return If obj is not null, obj is returned. Otherwise Dispatch.NULL.
+	 */
+	public static Object param(Object obj) {
+		return obj != null ? obj : Dispatch.NULL;
+	}
 }

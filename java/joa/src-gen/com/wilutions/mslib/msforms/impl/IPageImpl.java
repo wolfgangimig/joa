@@ -122,7 +122,7 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
     return com.wilutions.mslib.msforms.fmPictureAlignment.valueOf((Integer)obj);
   }
   @DeclDISPID(-523)  public void setPicture(final com.wilutions.mslib.stdole.Picture value) throws ComException {
-    this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,(value!=null?value:Dispatch.NULL));
+    this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYPUT,Dispatch.param(value));
   }
   @DeclDISPID(-523)  public com.wilutions.mslib.stdole.Picture getPicture() throws ComException {
     final Object obj = this._dispatchCall(-523,"Picture", DISPATCH_PROPERTYGET,null);
@@ -312,7 +312,7 @@ public class IPageImpl extends Dispatch implements com.wilutions.mslib.msforms.I
   @DeclDISPID(517)  public void Scroll(final Object xAction, final Object yAction) throws ComException {
     assert(xAction != null);
     assert(yAction != null);
-    this._dispatchCall(517,"Scroll", DISPATCH_METHOD,null,xAction,yAction);
+    this._dispatchCall(517,"Scroll", DISPATCH_METHOD,null,Variant.param(xAction),Variant.param(yAction));
   }
   @DeclDISPID(518)  public void SetDefaultTabOrder() throws ComException {
     this._dispatchCall(518,"SetDefaultTabOrder", DISPATCH_METHOD,null);

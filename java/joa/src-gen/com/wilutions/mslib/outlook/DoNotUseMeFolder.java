@@ -83,7 +83,7 @@ public class DoNotUseMeFolder extends Dispatch implements MAPIFolder {
     return (Integer)obj;
   }
   @DeclDISPID(61490)  public MAPIFolder CopyTo(final MAPIFolder DestinationFolder) throws ComException {
-    final Object obj = this._dispatchCall(61490,"CopyTo", DISPATCH_METHOD,null,(DestinationFolder!=null?DestinationFolder:Dispatch.NULL));
+    final Object obj = this._dispatchCall(61490,"CopyTo", DISPATCH_METHOD,null,Dispatch.param(DestinationFolder));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl.MAPIFolderImpl.class);
   }
@@ -95,12 +95,12 @@ public class DoNotUseMeFolder extends Dispatch implements MAPIFolder {
   }
   @DeclDISPID(12545)  public _Explorer GetExplorer(final Object DisplayMode) throws ComException {
     assert(DisplayMode != null);
-    final Object obj = this._dispatchCall(12545,"GetExplorer", DISPATCH_METHOD,null,DisplayMode);
+    final Object obj = this._dispatchCall(12545,"GetExplorer", DISPATCH_METHOD,null,Variant.param(DisplayMode));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.outlook.impl._ExplorerImpl.class);
   }
   @DeclDISPID(61492)  public void MoveTo(final MAPIFolder DestinationFolder) throws ComException {
-    this._dispatchCall(61492,"MoveTo", DISPATCH_METHOD,null,(DestinationFolder!=null?DestinationFolder:Dispatch.NULL));
+    this._dispatchCall(61492,"MoveTo", DISPATCH_METHOD,null,Dispatch.param(DestinationFolder));
   }
   @DeclDISPID(12562)  public Boolean getWebViewOn() throws ComException {
     final Object obj = this._dispatchCall(12562,"WebViewOn", DISPATCH_PROPERTYGET,null);
@@ -204,7 +204,7 @@ public class DoNotUseMeFolder extends Dispatch implements MAPIFolder {
   @DeclDISPID(64285)  public Table GetTable(final Object Filter, final Object TableContents) throws ComException {
     assert(Filter != null);
     assert(TableContents != null);
-    final Object obj = this._dispatchCall(64285,"GetTable", DISPATCH_METHOD,null,Filter,TableContents);
+    final Object obj = this._dispatchCall(64285,"GetTable", DISPATCH_METHOD,null,Variant.param(Filter),Variant.param(TableContents));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(Table.class);
@@ -233,7 +233,7 @@ public class DoNotUseMeFolder extends Dispatch implements MAPIFolder {
     return Dispatch.as(obj, com.wilutions.mslib.stdole.impl.PictureImpl.class);
   }
   @DeclDISPID(64573)  public void SetCustomIcon(final com.wilutions.mslib.stdole.Picture Picture) throws ComException {
-    this._dispatchCall(64573,"SetCustomIcon", DISPATCH_METHOD,null,(Picture!=null?Picture:Dispatch.NULL));
+    this._dispatchCall(64573,"SetCustomIcon", DISPATCH_METHOD,null,Dispatch.param(Picture));
   }
   public DoNotUseMeFolder() throws ComException {
     super("{000610F8-0000-0000-C000-000000000046}", "{00063006-0000-0000-C000-000000000046}");

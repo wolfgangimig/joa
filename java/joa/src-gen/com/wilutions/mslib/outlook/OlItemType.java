@@ -60,8 +60,8 @@ public class OlItemType implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 0: return "olMailItem";
     case 11: return "olMobileItemSMS";
+    case 0: return "olMailItem";
     case 1: return "olAppointmentItem";
     case 2: return "olContactItem";
     case 3: return "olTaskItem";
@@ -73,8 +73,8 @@ public class OlItemType implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 0) != 0) sbuf.append("|olMailItem");
       if ((value & 11) != 0) sbuf.append("|olMobileItemSMS");
+      if ((value & 0) != 0) sbuf.append("|olMailItem");
       if ((value & 1) != 0) sbuf.append("|olAppointmentItem");
       if ((value & 2) != 0) sbuf.append("|olContactItem");
       if ((value & 3) != 0) sbuf.append("|olTaskItem");

@@ -67,20 +67,20 @@ public class _ExchangeDistributionListImpl extends Dispatch implements com.wilut
   }
   @DeclDISPID(769)  public void Details(final Object HWnd) throws ComException {
     assert(HWnd != null);
-    this._dispatchCall(769,"Details", DISPATCH_METHOD,null,HWnd);
+    this._dispatchCall(769,"Details", DISPATCH_METHOD,null,Variant.param(HWnd));
   }
   @DeclDISPID(774)  public String GetFreeBusy(final java.util.Date Start, final Integer MinPerChar, final Object CompleteFormat) throws ComException {
     assert(Start != null);
     assert(MinPerChar != null);
     assert(CompleteFormat != null);
-    final Object obj = this._dispatchCall(774,"GetFreeBusy", DISPATCH_METHOD,null,Start,MinPerChar,CompleteFormat);
+    final Object obj = this._dispatchCall(774,"GetFreeBusy", DISPATCH_METHOD,null,Start,MinPerChar,Variant.param(CompleteFormat));
     if (obj == null) return null;
     return (String)obj;
   }
   @DeclDISPID(768)  public void Update(final Object MakePermanent, final Object Refresh) throws ComException {
     assert(MakePermanent != null);
     assert(Refresh != null);
-    this._dispatchCall(768,"Update", DISPATCH_METHOD,null,MakePermanent,Refresh);
+    this._dispatchCall(768,"Update", DISPATCH_METHOD,null,Variant.param(MakePermanent),Variant.param(Refresh));
   }
   @DeclDISPID(64240)  public com.wilutions.mslib.outlook._ContactItem GetContact() throws ComException {
     final Object obj = this._dispatchCall(64240,"GetContact", DISPATCH_METHOD,null);

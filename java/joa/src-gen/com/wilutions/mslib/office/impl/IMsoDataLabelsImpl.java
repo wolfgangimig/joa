@@ -43,7 +43,7 @@ public class IMsoDataLabelsImpl extends Dispatch implements com.wilutions.mslib.
   @DeclDISPID(1610743815)  public com.wilutions.mslib.office.IMsoCharacters getCharacters(final Object Start, final Object Length) throws ComException {
     assert(Start != null);
     assert(Length != null);
-    final Object obj = this._dispatchCall(1610743815,"Characters", DISPATCH_PROPERTYGET,null,Start,Length);
+    final Object obj = this._dispatchCall(1610743815,"Characters", DISPATCH_PROPERTYGET,null,Variant.param(Start),Variant.param(Length));
     if (obj == null) return null;
     return (com.wilutions.mslib.office.IMsoCharacters)obj;
   }

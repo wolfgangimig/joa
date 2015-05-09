@@ -84,18 +84,18 @@ public class MsoThemeColorIndex implements ComEnum {
 
   public String toString() {
     switch(value) {
+    case 7: return "msoThemeColorAccent3";
     case -2: return "msoThemeColorMixed";
-    case 2: return "msoThemeColorLight1";
-    case 10: return "msoThemeColorAccent6";
     case 0: return "msoNotThemeColor";
     case 1: return "msoThemeColorDark1";
+    case 2: return "msoThemeColorLight1";
     case 3: return "msoThemeColorDark2";
     case 4: return "msoThemeColorLight2";
     case 5: return "msoThemeColorAccent1";
     case 6: return "msoThemeColorAccent2";
-    case 7: return "msoThemeColorAccent3";
     case 8: return "msoThemeColorAccent4";
     case 9: return "msoThemeColorAccent5";
+    case 10: return "msoThemeColorAccent6";
     case 11: return "msoThemeColorHyperlink";
     case 12: return "msoThemeColorFollowedHyperlink";
     case 13: return "msoThemeColorText1";
@@ -105,18 +105,18 @@ public class MsoThemeColorIndex implements ComEnum {
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
+      if ((value & 7) != 0) sbuf.append("|msoThemeColorAccent3");
       if ((value & -2) != 0) sbuf.append("|msoThemeColorMixed");
-      if ((value & 2) != 0) sbuf.append("|msoThemeColorLight1");
-      if ((value & 10) != 0) sbuf.append("|msoThemeColorAccent6");
       if ((value & 0) != 0) sbuf.append("|msoNotThemeColor");
       if ((value & 1) != 0) sbuf.append("|msoThemeColorDark1");
+      if ((value & 2) != 0) sbuf.append("|msoThemeColorLight1");
       if ((value & 3) != 0) sbuf.append("|msoThemeColorDark2");
       if ((value & 4) != 0) sbuf.append("|msoThemeColorLight2");
       if ((value & 5) != 0) sbuf.append("|msoThemeColorAccent1");
       if ((value & 6) != 0) sbuf.append("|msoThemeColorAccent2");
-      if ((value & 7) != 0) sbuf.append("|msoThemeColorAccent3");
       if ((value & 8) != 0) sbuf.append("|msoThemeColorAccent4");
       if ((value & 9) != 0) sbuf.append("|msoThemeColorAccent5");
+      if ((value & 10) != 0) sbuf.append("|msoThemeColorAccent6");
       if ((value & 11) != 0) sbuf.append("|msoThemeColorHyperlink");
       if ((value & 12) != 0) sbuf.append("|msoThemeColorFollowedHyperlink");
       if ((value & 13) != 0) sbuf.append("|msoThemeColorText1");

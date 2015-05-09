@@ -39,15 +39,15 @@ public class MsoHorizontalAnchor implements ComEnum {
 
   public String toString() {
     switch(value) {
-    case 2: return "msoAnchorCenter";
     case -2: return "msoHorizontalAnchorMixed";
     case 1: return "msoAnchorNone";
+    case 2: return "msoAnchorCenter";
     default: {
       StringBuilder sbuf = new StringBuilder();
       sbuf.append("[").append(value).append("=");
-      if ((value & 2) != 0) sbuf.append("|msoAnchorCenter");
       if ((value & -2) != 0) sbuf.append("|msoHorizontalAnchorMixed");
       if ((value & 1) != 0) sbuf.append("|msoAnchorNone");
+      if ((value & 2) != 0) sbuf.append("|msoAnchorCenter");
       return sbuf.toString();
       }
     }

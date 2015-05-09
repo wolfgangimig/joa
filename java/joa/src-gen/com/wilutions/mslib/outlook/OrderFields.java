@@ -43,7 +43,7 @@ public class OrderFields extends Dispatch implements _OrderFields {
   @DeclDISPID(95)  public OrderField Add(final String PropertyName, final Object IsDescending) throws ComException {
     assert(PropertyName != null);
     assert(IsDescending != null);
-    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,PropertyName,IsDescending);
+    final Object obj = this._dispatchCall(95,"Add", DISPATCH_METHOD,null,PropertyName,Variant.param(IsDescending));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(OrderField.class);
@@ -59,7 +59,7 @@ public class OrderFields extends Dispatch implements _OrderFields {
     assert(PropertyName != null);
     assert(Index != null);
     assert(IsDescending != null);
-    final Object obj = this._dispatchCall(64342,"Insert", DISPATCH_METHOD,null,PropertyName,Index,IsDescending);
+    final Object obj = this._dispatchCall(64342,"Insert", DISPATCH_METHOD,null,PropertyName,Index,Variant.param(IsDescending));
     if (obj == null) return null;
     final Dispatch disp = (Dispatch)obj;
     return disp.as(OrderField.class);

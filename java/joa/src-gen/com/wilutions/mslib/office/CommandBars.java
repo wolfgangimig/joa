@@ -34,7 +34,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Position != null);
     assert(MenuBar != null);
     assert(Temporary != null);
-    final Object obj = this._dispatchCall(1610809346,"Add", DISPATCH_METHOD,null,Name,Position,MenuBar,Temporary);
+    final Object obj = this._dispatchCall(1610809346,"Add", DISPATCH_METHOD,null,Variant.param(Name),Variant.param(Position),Variant.param(MenuBar),Variant.param(Temporary));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarImpl.class);
   }
@@ -66,7 +66,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Id != null);
     assert(Tag != null);
     assert(Visible != null);
-    final Object obj = this._dispatchCall(1610809352,"FindControl", DISPATCH_METHOD,null,Type,Id,Tag,Visible);
+    final Object obj = this._dispatchCall(1610809352,"FindControl", DISPATCH_METHOD,null,Variant.param(Type),Variant.param(Id),Variant.param(Tag),Variant.param(Visible));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlImpl.class);
   }
@@ -121,7 +121,7 @@ public class CommandBars extends Dispatch implements _CommandBars {
     assert(Id != null);
     assert(Tag != null);
     assert(Visible != null);
-    final Object obj = this._dispatchCall(1610809365,"FindControls", DISPATCH_METHOD,null,Type,Id,Tag,Visible);
+    final Object obj = this._dispatchCall(1610809365,"FindControls", DISPATCH_METHOD,null,Variant.param(Type),Variant.param(Id),Variant.param(Tag),Variant.param(Visible));
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.CommandBarControlsImpl.class);
   }

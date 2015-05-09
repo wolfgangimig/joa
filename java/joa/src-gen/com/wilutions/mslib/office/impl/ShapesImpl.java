@@ -164,7 +164,7 @@ public class ShapesImpl extends Dispatch implements com.wilutions.mslib.office.S
     assert(Top != null);
     assert(Width != null);
     assert(Height != null);
-    final Object obj = this._dispatchCall(28,"AddSmartArt", DISPATCH_METHOD,null,(Layout!=null?Layout:Dispatch.NULL),Left,Top,Width,Height);
+    final Object obj = this._dispatchCall(28,"AddSmartArt", DISPATCH_METHOD,null,Dispatch.param(Layout),Left,Top,Width,Height);
     if (obj == null) return null;
     return Dispatch.as(obj, com.wilutions.mslib.office.impl.ShapeImpl.class);
   }
