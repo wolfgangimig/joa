@@ -1,5 +1,12 @@
 JOA Version History
 
+0.7.0 2015-05-15
+
+- New LoadBehavior.LoadByJoaUtil. Addins registered under this load behavior are
+  loaded by the JOA Util Addin and not by Outlook. In this case, Outlook does not
+  track the startup time of the Addin and does not disable it, if the load time
+  is long. 
+
 0.5.0
 
 - GH#2 Addin was ignored by Outlook, if application's command line 

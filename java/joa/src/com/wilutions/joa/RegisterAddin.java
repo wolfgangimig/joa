@@ -44,7 +44,7 @@ public class RegisterAddin {
 		String officeApplication = addinAnnotation.application().toString();
 		String name = addinAnnotation.friendlyName();
 		String desc = addinAnnotation.description();
-		int loadBehavior = addinAnnotation.loadBehavior().value;
+		LoadBehavior loadBehavior = addinAnnotation.loadBehavior();
 
 		registerAddin(officeApplication, progId, name, desc, loadBehavior, perUserNotMachine);
 
@@ -105,23 +105,33 @@ public class RegisterAddin {
 	}
 
 	private static void registerAddin(String officeApplication, String progId, String name, String desc,
-			int loadBehavior, boolean perUserNotMachine) {
+			LoadBehavior loadBehavior, boolean perUserNotMachine) {
 		System.out.println("registerAddin app=" + officeApplication + ", progId=" + progId);
 		
 		String key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
 		RegUtil.setRegistryValue(key, "FriendlyName", name);
 		RegUtil.setRegistryValue(key, "Description", desc);
-		RegUtil.setRegistryValue(key, "LoadBehavior", loadBehavior);
-
+		setLoadBehavior(key, loadBehavior);
+		
 		if (RegUtil.is64() && !perUserNotMachine) {
 			key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, true) + "\\" + progId;
 			RegUtil.setRegistryValue(key, "FriendlyName", name);
 			RegUtil.setRegistryValue(key, "Description", desc);
-			RegUtil.setRegistryValue(key, "LoadBehavior", loadBehavior);
+			setLoadBehavior(key, loadBehavior);
 		}
 
 		if (perUserNotMachine) {
 			JoaDll.activateDisabledAddin(progId);
+		}
+	}
+	
+	private static void setLoadBehavior(String key, LoadBehavior loadBehavior) {
+		if (loadBehavior == LoadBehavior.LoadByJoaUtil) {
+			RegUtil.setRegistryValue(key, "LoadBehavior", LoadBehavior.DoNotLoad.value);
+			RegUtil.setRegistryValue(key, "LoadBehaviorJOA", LoadBehavior.LoadOnStart.value);
+		}
+		else {
+			RegUtil.setRegistryValue(key, "LoadBehavior", loadBehavior.value);
 		}
 	}
 
@@ -141,7 +151,7 @@ public class RegisterAddin {
 		String progId = JoaUtilAddin_progId;
 		String name = JoaUtilAddin_name;
 		String desc = JoaUtilAddin_desc;
-		int loadBehavior = JoaUtilAddin_loadBehavior;
+		LoadBehavior loadBehavior = JoaUtilAddin_loadBehavior;
 
 		registerAddin(officeApplication, progId, name, desc, loadBehavior, perUserNotMachine);
 
@@ -212,7 +222,7 @@ public class RegisterAddin {
 	private static final String JoaUtilAddin_progId = "JoaUtilAddin.Class";
 	private static final String JoaUtilAddin_name = "JOA Util Add-in";
 	private static final String JoaUtilAddin_desc = "This Add-in supports other Add-ins developed with JOA.";
-	private static final int JoaUtilAddin_loadBehavior = LoadBehavior.LoadOnStart.value;
+	private static final LoadBehavior JoaUtilAddin_loadBehavior = LoadBehavior.LoadOnStart;
 	public static final String JoaUtilAddin_clsid = "{7B57EC55-0A9C-4AB0-A2CC-AF81C680CFAC}";
 
 }

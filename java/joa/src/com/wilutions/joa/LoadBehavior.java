@@ -40,7 +40,7 @@ public enum LoadBehavior {
 	 * Outlook does not track the load time under this mode and it does not disable the Addin,
 	 * if it requires a long time to load. 
 	 */
-	LoadByJoaUtil(4),
+	LoadByJoaUtil(1024),
 	
 	/**
 	 * The Addin is loaded on demand.
