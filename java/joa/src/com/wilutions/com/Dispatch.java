@@ -10,6 +10,9 @@
  */
 package com.wilutions.com;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Objects received from COM are of this class. This class provides functions to
  * invoke properties and methods via the IDispatch interface.
@@ -257,11 +260,13 @@ public class Dispatch implements IDispatch {
 	 * @throws ComException
 	 */
 	public static void withEvents(IDispatch disp, DispatchImpl handler) throws ComException {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "withEvents(");
 		assert (disp != null);
 		assert (disp instanceof Dispatch);
 		assert (!((Dispatch) disp).isNull());
 		assert (handler != null);
 		JoaDll.dispatchWithEvents((Dispatch) disp, handler);
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")withEvents");
 	}
 
 	/**
@@ -338,4 +343,6 @@ public class Dispatch implements IDispatch {
 	public static Object param(Object obj) {
 		return obj != null ? obj : Dispatch.NULL;
 	}
+	
+	private final static Logger log = Logger.getLogger("Dispatch");
 }

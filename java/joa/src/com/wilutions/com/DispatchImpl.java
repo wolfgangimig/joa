@@ -11,6 +11,8 @@
 package com.wilutions.com;
 
 import java.util.function.Consumer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This class is the base class for IDispatch implementations in Java. The
@@ -30,7 +32,9 @@ public class DispatchImpl implements IDispatch {
 	private final ConnectionPointContainer connectionPointContainer = new ConnectionPointContainer();
 
 	public DispatchImpl() {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "DispatchImpl(");
 		JoaDll.nativeInit(this);
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")DispatchImpl");
 	}
 
 	public ConnectionPointContainer getConnectionPointContainer() {
@@ -63,5 +67,6 @@ public class DispatchImpl implements IDispatch {
 	public String toString() {
 		return "[DispatchImpl " + Long.toHexString(nptr) + "]";
 	}
-
+	
+	private final static Logger log = Logger.getLogger("DispatchImpl");
 }

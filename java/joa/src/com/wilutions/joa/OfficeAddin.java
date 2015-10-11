@@ -178,22 +178,8 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 	 * @return JoaUtilAddin object.
 	 */
 	public static IJoaUtilAddin getJoaUtil() throws ComException {
-		final long timeout = 10 * 1000;
-		long t1 = System.currentTimeMillis();
-		synchronized (OfficeAddin.class) {
-			while (joaUtil == null) {
-				long t2 = System.currentTimeMillis();
-				if (t2 - t1 > timeout) {
-					break;
-				}
-				try {
-					OfficeAddin.class.wait(1000);
-				} catch (InterruptedException e) {
-				}
-			}
-			if (joaUtil == null) {
-				throw new ComException("Cannot find JoaUtilAddin.");
-			}
+		if (joaUtil == null) {
+			throw new ComException("JoaUtil not loaded.");
 		}
 		return joaUtil;
 	}

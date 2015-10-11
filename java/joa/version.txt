@@ -1,5 +1,13 @@
 JOA Version History
 
+0.9.0 2015-10-11
+
+- Enhanced load time. Do not wait for JoaUtil to be loaded.
+
+- NPE in native DLL when Registry keys for Addin registration were missed.
+
+- More log statements on level FINE
+
 0.7.0 2015-05-15
 
 - New LoadBehavior.LoadByJoaUtil. Addins registered under this load behavior are

@@ -79,7 +79,7 @@ public class BackgTask {
 						try {
 							super.run();
 						}
-						catch (ComException e) {
+						catch (Throwable e) {
 							e.printStackTrace();
 						}
 					}

@@ -2,6 +2,8 @@ package com.wilutions.joa.outlook.ex;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.wilutions.com.ByRef;
 import com.wilutions.com.ComException;
@@ -26,11 +28,14 @@ public class ExplorerWrapper extends DispatchImpl implements ExplorerEvents_10, 
 	 * situations where the Java object is collected but the internal native IDispatch
 	 * pointer is still in use. 
 	 */
-	protected Map<String, IRibbonControl> ribbonControls = new HashMap<String, IRibbonControl>();
+	protected Map<String, IRibbonControl> ribbonControls;
 
 	public ExplorerWrapper(Explorer explorer) {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "ExplorerWrapper(");
 		this.explorer = explorer;
+		this.ribbonControls = new HashMap<String, IRibbonControl>();
 		Dispatch.withEvents(explorer, this);
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")ExplorerWrapper");
 	}
 
 	public Explorer getExplorer() {
@@ -148,4 +153,5 @@ public class ExplorerWrapper extends DispatchImpl implements ExplorerEvents_10, 
 		ribbonControls.put(control.getId(), control);
 	}
 
+	private final static Logger log = Logger.getLogger("ExplorerWrapper");
 }
