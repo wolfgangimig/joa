@@ -14,8 +14,6 @@
             </manifest>
             <fileset dir="${project.dir}/bin"/>
             <fileset dir="${project.dir}/../joa/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="D:/git/joa/java/lib/commons-logging-1.1.1.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="D:/git/joa/java/lib/log4j-1.2.15.jar"/>
         </jar>
     </target>
 </project>

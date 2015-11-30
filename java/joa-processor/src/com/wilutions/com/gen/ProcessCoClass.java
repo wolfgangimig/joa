@@ -34,7 +34,7 @@ import com.wilutions.joa.outlook.OutlookFormRegion;
 @SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class ProcessCoClass extends AbstractProcessor {
 
-	//private static Log log = LogFactory.getLog(ProcessCoClass.class);
+	// private static Log log = LogFactory.getLog(ProcessCoClass.class);
 	private ProcessingEnvironment processingEnv;
 
 	public ProcessCoClass() {
@@ -45,18 +45,15 @@ public class ProcessCoClass extends AbstractProcessor {
 		super.init(processingEnv);
 		this.processingEnv = processingEnv;
 	}
-	
-	@Override
-	public boolean process(Set<? extends TypeElement> annotations,
-			RoundEnvironment roundEnv) {
 
+	@Override
+	public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
 
 		try {
-			JavaFileObject sourceFile = processingEnv.getFiler()
-					.createSourceFile(ComModule.MODULE_CLASSNAME,
-							new Element[0]);
-			//log.info("sourceFile=" + sourceFile.toUri());
-			
+			JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile(ComModule.MODULE_CLASSNAME,
+					new Element[0]);
+			// log.info("sourceFile=" + sourceFile.toUri());
+
 			String modulePackage = ComModule.MODULE_CLASSNAME;
 			int p = modulePackage.lastIndexOf('.');
 			modulePackage = modulePackage.substring(0, p >= 0 ? p : 0);
@@ -68,24 +65,24 @@ public class ProcessCoClass extends AbstractProcessor {
 			sourceWriter.println("import com.wilutions.com.*;");
 			sourceWriter.println("import com.wilutions.joa.*;");
 			sourceWriter.println("import com.wilutions.joa.outlook.*;");
-			
+
 			sourceWriter.println("@SuppressWarnings(\"all\")");
 			sourceWriter.println("public class Module extends ComModule {");
-			
+
 			sourceWriter.println();
 			generateCoClasses(sourceWriter, roundEnv);
 			generateAddins(sourceWriter, roundEnv);
 			generateFormRegions(sourceWriter, roundEnv);
-			
+
 			sourceWriter.println();
 
 			printSingleton(sourceWriter);
-			
+
 			sourceWriter.println("}");
 			sourceWriter.close();
 
 		} catch (Throwable e) {
-			//log.error("exception", e);
+			// log.error("exception", e);
 		}
 		return true;
 	}
@@ -96,29 +93,33 @@ public class ProcessCoClass extends AbstractProcessor {
 		sourceWriter.println("  public static Module getInstance() { return module; }");
 	}
 
-	private void generateCoClasses(PrintWriter sourceWriter,
-			RoundEnvironment roundEnv) {
+	private void generateCoClasses(PrintWriter sourceWriter, RoundEnvironment roundEnv) {
 
 		try {
 
-			//sourceWriter.println("// getTypeElement(Dispatch)=" + processingEnv.getElementUtils().getTypeElement(DispatchImpl.class.getName()));
-			
-			TypeMirror tmDispImpl = processingEnv.getElementUtils().getTypeElement(DispatchImpl.class.getName()).asType();
-			//sourceWriter.println("// get TypeMirror for DispatchImpl=" + tmDispImpl);
+			// sourceWriter.println("// getTypeElement(Dispatch)=" +
+			// processingEnv.getElementUtils().getTypeElement(DispatchImpl.class.getName()));
+
+			TypeMirror tmDispImpl = processingEnv.getElementUtils().getTypeElement(DispatchImpl.class.getName())
+					.asType();
+			// sourceWriter.println("// get TypeMirror for DispatchImpl=" +
+			// tmDispImpl);
 
 			sourceWriter.println("  // COM classes to be registered ");
 			sourceWriter.println("  private final Class<?>[] coclasses = {");
 
 			for (Element elem : roundEnv.getElementsAnnotatedWith(com.wilutions.com.CoClass.class)) {
-				
-//				com.wilutions.com.CoClass annotation = elem.getAnnotation(com.wilutions.com.CoClass.class);
-//				sourceWriter.println("// found annotation=" + annotation + ", elem=" + elem);
+
+				// com.wilutions.com.CoClass annotation =
+				// elem.getAnnotation(com.wilutions.com.CoClass.class);
+				// sourceWriter.println("// found annotation=" + annotation + ",
+				// elem=" + elem);
 
 				TypeMirror tmElem = elem.asType();
-				//sourceWriter.println("// TypeMirror elem=" + tmElem);
-				
+				// sourceWriter.println("// TypeMirror elem=" + tmElem);
+
 				boolean succ = processingEnv.getTypeUtils().isAssignable(tmElem, tmDispImpl);
-				//sourceWriter.println("// is assignable=" + succ);
+				// sourceWriter.println("// is assignable=" + succ);
 
 				String className = elem.toString();
 				if (succ) {
@@ -127,8 +128,7 @@ public class ProcessCoClass extends AbstractProcessor {
 					sourceWriter.println(".class,");
 				} else {
 					sourceWriter.print("    /** ERROR **/ ");
-					sourceWriter.print(className + " must extend "
-							+ DispatchImpl.class);
+					sourceWriter.print(className + " must extend " + DispatchImpl.class);
 					sourceWriter.println();
 				}
 			}
@@ -145,29 +145,33 @@ public class ProcessCoClass extends AbstractProcessor {
 		sourceWriter.println();
 	}
 
-	private void generateFormRegions(PrintWriter sourceWriter,
-			RoundEnvironment roundEnv) {
+	private void generateFormRegions(PrintWriter sourceWriter, RoundEnvironment roundEnv) {
 
-		//sourceWriter.println("// getTypeElement(Dispatch)=" + processingEnv.getElementUtils().getTypeElement(OutlookFormRegion.class.getName()));
-		
-		TypeMirror tmOutlookFormRegion = processingEnv.getElementUtils().getTypeElement(OutlookFormRegion.class.getName()).asType();
-		//sourceWriter.println("// get TypeMirror for OutlookFormRegion=" + tmOutlookFormRegion);
+		// sourceWriter.println("// getTypeElement(Dispatch)=" +
+		// processingEnv.getElementUtils().getTypeElement(OutlookFormRegion.class.getName()));
+
+		TypeMirror tmOutlookFormRegion = processingEnv.getElementUtils()
+				.getTypeElement(OutlookFormRegion.class.getName()).asType();
+		// sourceWriter.println("// get TypeMirror for OutlookFormRegion=" +
+		// tmOutlookFormRegion);
 
 		sourceWriter.println("  // OutlookFormRegion classes to be registered ");
-		
+
 		sourceWriter.println("  private final Class<?>[] formRegions = {");
 
 		for (Element elem : roundEnv.getElementsAnnotatedWith(com.wilutions.joa.outlook.DeclFormRegion.class)) {
-			
-//			com.wilutions.joa.outlook.DeclFormRegion annotation = elem.getAnnotation(com.wilutions.joa.outlook.DeclFormRegion.class);
-//			sourceWriter.println("// found annotation=" + annotation + ", elem=" + elem);
+
+			// com.wilutions.joa.outlook.DeclFormRegion annotation =
+			// elem.getAnnotation(com.wilutions.joa.outlook.DeclFormRegion.class);
+			// sourceWriter.println("// found annotation=" + annotation + ",
+			// elem=" + elem);
 
 			TypeMirror tmElem = elem.asType();
-			//sourceWriter.println("// TypeMirror elem=" + tmElem);
+			// sourceWriter.println("// TypeMirror elem=" + tmElem);
 
 			boolean succ = processingEnv.getTypeUtils().isAssignable(tmElem, tmOutlookFormRegion);
-			//sourceWriter.println("// is assignable=" + succ);
-			
+			// sourceWriter.println("// is assignable=" + succ);
+
 			String className = elem.toString();
 			if (succ) {
 				sourceWriter.print("    ");
@@ -175,8 +179,7 @@ public class ProcessCoClass extends AbstractProcessor {
 				sourceWriter.println(".class,");
 			} else {
 				sourceWriter.print("    /** ERROR **/ ");
-				sourceWriter.print(className + " must extend "
-						+ OutlookFormRegion.class);
+				sourceWriter.print(className + " must extend " + OutlookFormRegion.class);
 				sourceWriter.println();
 			}
 		}
@@ -187,40 +190,16 @@ public class ProcessCoClass extends AbstractProcessor {
 		sourceWriter.println();
 	}
 
-	private void generateAddins(PrintWriter sourceWriter,
-			RoundEnvironment roundEnv) {
+	private void generateAddins(PrintWriter sourceWriter, RoundEnvironment roundEnv) {
 
-		//sourceWriter.println("// getTypeElement(Dispatch)=" + processingEnv.getElementUtils().getTypeElement(OutlookFormRegion.class.getName()));
-		
-		TypeMirror tmOfficeAddin = processingEnv.getElementUtils().getTypeElement(OfficeAddin.class.getName()).asType();
-		//sourceWriter.println("// get TypeMirror for OutlookFormRegion=" + tmOutlookFormRegion);
-
-		sourceWriter.println("  // OfficeAddin classes to be registered ");
-		
+		sourceWriter.println("  // OfficeAddin classes to be registered: ");
 		sourceWriter.println("  private final Class<?>[] addins = {");
-		
-		for (Element elem : roundEnv.getElementsAnnotatedWith(DeclAddin.class)) {
-			
-//			com.wilutions.joa.outlook.DeclFormRegion annotation = elem.getAnnotation(com.wilutions.joa.outlook.DeclFormRegion.class);
-//			sourceWriter.println("// found annotation=" + annotation + ", elem=" + elem);
-			
-			TypeMirror tmElem = elem.asType();
-			//sourceWriter.println("// TypeMirror elem=" + tmElem);
 
-			boolean succ = processingEnv.getTypeUtils().isAssignable(tmElem, tmOfficeAddin);
-			//sourceWriter.println("// is assignable=" + succ);
-			
+		for (Element elem : roundEnv.getElementsAnnotatedWith(DeclAddin.class)) {
 			String className = elem.toString();
-			if (succ) {
-				sourceWriter.print("    ");
-				sourceWriter.print(className);
-				sourceWriter.println(".class,");
-			} else {
-				sourceWriter.print("    /** ERROR **/ ");
-				sourceWriter.print(className + " must extend "
-						+ OutlookFormRegion.class);
-				sourceWriter.println();
-			}
+			sourceWriter.print("    ");
+			sourceWriter.print(className);
+			sourceWriter.println(".class,");
 		}
 
 		sourceWriter.println("  };");
@@ -228,5 +207,5 @@ public class ProcessCoClass extends AbstractProcessor {
 
 		sourceWriter.println();
 	}
-	
+
 }
