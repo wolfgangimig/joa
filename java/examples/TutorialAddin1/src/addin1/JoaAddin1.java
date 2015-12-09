@@ -1,5 +1,24 @@
 package addin1;
 
+import com.wilutions.com.BackgTask;
+import com.wilutions.com.ByRef;
+import com.wilutions.com.CoClass;
+import com.wilutions.com.ComException;
+import com.wilutions.com.Dispatch;
+import com.wilutions.com.IDispatch;
+import com.wilutions.com.Missing;
+import com.wilutions.joa.DeclAddin;
+import com.wilutions.joa.IconManager;
+import com.wilutions.joa.LoadBehavior;
+import com.wilutions.joa.OfficeApplication;
+import com.wilutions.joa.fx.MessageBox;
+import com.wilutions.joa.outlook.OutlookAddin;
+import com.wilutions.mslib.office.IRibbonControl;
+import com.wilutions.mslib.office.IRibbonUI;
+import com.wilutions.mslib.outlook.MailItem;
+import com.wilutions.mslib.outlook.NoteItem;
+import com.wilutions.mslib.outlook.OlItemType;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -9,20 +28,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import com.wilutions.com.BackgTask;
-import com.wilutions.com.CoClass;
-import com.wilutions.com.Dispatch;
-import com.wilutions.joa.DeclAddin;
-import com.wilutions.joa.IconManager;
-import com.wilutions.joa.LoadBehavior;
-import com.wilutions.joa.OfficeApplication;
-import com.wilutions.joa.fx.MessageBox;
-import com.wilutions.joa.outlook.OutlookAddin;
-import com.wilutions.mslib.office.IRibbonControl;
-import com.wilutions.mslib.office.IRibbonUI;
-import com.wilutions.mslib.outlook.NoteItem;
-import com.wilutions.mslib.outlook.OlItemType;
-
 @CoClass(progId = "JoaAddin1.Class", guid = "{d5f0439b-27ea-4848-a230-3fa5496ea5e1}")
 @DeclAddin(application = OfficeApplication.Outlook, loadBehavior = LoadBehavior.LoadOnStart, friendlyName = "JOA Tutorial Add-in", description = "Example for an Outlook Add-in developed in Java")
 public class JoaAddin1 extends OutlookAddin {
@@ -30,12 +35,29 @@ public class JoaAddin1 extends OutlookAddin {
     final ExplorerTaskPane taskPane = new ExplorerTaskPane();
     final IconManager ribbonIcons;
 	private IRibbonUI ribbon;
-
+		
     public JoaAddin1() {
         Globals.setThisAddin(this);
         ribbonIcons = new IconManager(this);
     }
 
+	@Override
+	public void onItemSend(IDispatch item, ByRef<Boolean> cancel) throws ComException {
+		if (item.is(MailItem.class)) {
+			MailItem mailItem = Dispatch.as(item, MailItem.class);
+			System.out.println("sent mail, subject=" + mailItem.getSubject());
+		}
+	}
+
+	@Override
+	public void onNewMailEx(String EntryID) throws ComException {
+		IDispatch item = getApplication().getSession().GetItemFromID(EntryID, Missing.Value);
+		if (item != null && item.is(MailItem.class)) {
+			MailItem mailItem = Dispatch.as(item, MailItem.class);
+			System.out.println("received mail, subject=" + mailItem.getSubject());
+		}
+	}
+	
     public void onSmileButtonClicked1(IRibbonControl ribbonControl) {
     	Object owner = getApplication().ActiveWindow();
     	MessageBox.show(owner, "Message", "You pressed the " + ribbonControl.getId(), (result, ex) -> {
