@@ -1,8 +1,14 @@
 package com.wilutions.joa;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.imageio.ImageIO;
+import javax.swing.filechooser.FileSystemView;
 
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
@@ -64,7 +70,8 @@ public class IconManager {
 				contentType = contentType.substring(p);
 			}
 			pic = createIPictureDisp(image, contentType);
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new NullPointerException(e.toString());
 		}
 		return pic;
@@ -84,7 +91,12 @@ public class IconManager {
 		String key = (forClass.getName() + "/" + fileName);
 		pic = map.get(key);
 		if (pic == null) {
-			pic = get(forClass, fileName);
+			if (fileName.startsWith(".")) {
+				pic = getFileTypeIcon(fileName);
+			}
+			else {
+				pic = get(forClass, fileName);
+			}
 			map.put(key, pic);
 		}
 		return pic;
@@ -116,6 +128,59 @@ public class IconManager {
 	public static Dispatch createIPictureDisp(byte[] image, String contentType) throws ComException {
 		assert image != null && image.length != 0;
 		return (Dispatch) JoaDll.nativeCreateIPictureDisp(image);
+	}
+
+	/**
+	 * Get small icon for given file extension.
+	 * 
+	 * @param ext
+	 *            file extension (with or without leading dot).
+	 * @return IPictureDisp for file icon.
+	 */
+	public synchronized Dispatch getFileTypeIcon(String ext) {
+		Dispatch disp = null;
+
+		ext = getFileExt(ext);
+		File file = null;
+
+		try {
+			file = File.createTempFile("joa", ext);
+			FileSystemView view = FileSystemView.getFileSystemView();
+			javax.swing.Icon jswingIcon = view.getSystemIcon(file);
+
+			BufferedImage bufferedImage = new BufferedImage(jswingIcon.getIconWidth(), jswingIcon.getIconHeight(),
+					BufferedImage.TYPE_INT_ARGB);
+			jswingIcon.paintIcon(null, bufferedImage.getGraphics(), 0, 0);
+
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ImageIO.write(bufferedImage, "png", baos);
+			baos.flush();
+
+			byte[] bytes = baos.toByteArray();
+			disp = createIPictureDisp(bytes, "");
+
+			baos.close();
+		}
+		catch (Exception e) {
+		}
+		finally {
+			if (file != null) {
+				file.delete();
+			}
+		}
+		return disp;
+	}
+
+	private static String getFileExt(String fname) {
+		String ext = ".";
+		int p = fname.lastIndexOf('.');
+		if (p >= 0) {
+			ext = fname.substring(p);
+		}
+		else {
+			ext = "." + fname;
+		}
+		return ext.toLowerCase();
 	}
 
 }
