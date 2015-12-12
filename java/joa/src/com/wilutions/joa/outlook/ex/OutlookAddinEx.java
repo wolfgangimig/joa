@@ -19,6 +19,11 @@ import com.wilutions.com.IDispatch;
 import com.wilutions.com.reg.Registry;
 import com.wilutions.joa.IconManager;
 import com.wilutions.joa.outlook.OutlookAddin;
+import com.wilutions.joa.ribbon.RibbonButton;
+import com.wilutions.joa.ribbon.RibbonComboBox;
+import com.wilutions.joa.ribbon.RibbonControl;
+import com.wilutions.joa.ribbon.RibbonControls;
+import com.wilutions.joa.ribbon.RibbonDynamicMenu;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
 import com.wilutions.mslib.outlook.Explorer;
@@ -31,28 +36,38 @@ import com.wilutions.mslib.outlook._Explorers;
 import com.wilutions.mslib.outlook._Inspector;
 import com.wilutions.mslib.outlook._Inspectors;
 
+import javafx.util.Callback;
+
 public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, ExplorersEvents {
 
 	private final IconManager iconManager;
 	private IRibbonUI ribbon;
 	private final Registry registry;
-	
+	private RibbonControls ribbonControls = new RibbonControls();
+
 	/**
-	 * Inspectors collection.
-	 * Need to hold this in order to permanently receive the onNewInspector event.
-	 * @see https://groups.google.com/forum/#!topic/microsoft.public.office.developer.com.add_ins/3B5OvWkF_dg 
+	 * Inspectors collection. Need to hold this in order to permanently receive
+	 * the onNewInspector event.
+	 * 
+	 * @see https://groups.google.com/forum/#!topic/microsoft.public.office.
+	 *      developer.com.add_ins/3B5OvWkF_dg
 	 */
 	private volatile _Inspectors inspectors;
-	
+
 	/**
-	 * Explorers collection.
-	 * Need to hold this in order to permanently receive the onNewExplore event.
+	 * Explorers collection. Need to hold this in order to permanently receive
+	 * the onNewExplore event.
 	 */
 	private volatile _Explorers explorers;
 
 	public OutlookAddinEx() {
 		iconManager = new IconManager(this);
 		registry = new Registry(getClass());
+		
+		
+		iconManager.getFileTypeIcon(".msg");
+		iconManager.getFileTypeIcon(".mhtml");
+		iconManager.getFileTypeIcon(".rtf");
 	}
 
 	public IRibbonUI getRibbon() {
@@ -61,6 +76,10 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 	public Registry getRegistry() {
 		return registry;
+	}
+
+	public RibbonControls getRibbonControls() {
+		return ribbonControls;
 	}
 
 	public void onLoadRibbon(IRibbonUI ribbon) {
@@ -74,7 +93,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 	@Override
 	public void onStartup() throws ComException {
-		
+
 		try {
 			explorers = getApplication().getExplorers();
 			Dispatch.withEvents(explorers, this);
@@ -87,7 +106,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 		catch (Throwable e) {
 			e.printStackTrace();
 		}
-		
+
 		try {
 			inspectors = getApplication().getInspectors();
 			Dispatch.withEvents(inspectors, this);
@@ -145,12 +164,181 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	}
 
 	protected ExplorerWrapper createExplorerWrapper(Explorer explorer) {
-		return null;
+		return new ExplorerWrapper(explorer);
 	}
-	
+
 	public ExplorerWrapper getExplorerWrapper(Explorer explorer) {
 		return ExplorerWrappers.get(explorer);
 	}
-	
+
+	/**
+	 * Execute passed function for control's context.
+	 * 
+	 * @param control
+	 *            ribbon control (button, etc.)
+	 * @param call
+	 *            function to be called
+	 * @return value returned from call
+	 */
+	protected <T> T forContextWrapper(IRibbonControl control, Callback<Wrapper, T> call) {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "forContextWrapper(");
+
+		T ret = null;
+		Wrapper wrapper = null;
+
+		IDispatch dispContext = control.getContext();
+		if (dispContext != null && !dispContext.equals(Dispatch.NULL)) {
+			if (dispContext.is(Inspector.class)) {
+				Inspector inspector = dispContext.as(Inspector.class);
+				wrapper = (Wrapper) getInspectorWrapper(inspector);
+				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "inspector wrapper=" + wrapper);
+			}
+			else if (dispContext.is(Explorer.class)) {
+				Explorer explorer = dispContext.as(Explorer.class);
+				wrapper = getExplorerWrapper(explorer);
+				if (wrapper == null) {
+					wrapper = createExplorerWrapper(explorer);
+				}
+				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "explorer wrapper=" + wrapper);
+			}
+
+			if (wrapper != null) {
+				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "addRibbonControl");
+				wrapper.addRibbonControl(control);
+				if (call != null) {
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "call");
+					ret = call.call(wrapper);
+				}
+			}
+		}
+
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")forContextWrapper=" + ret);
+		return ret;
+	}
+
+	public void Ribbon_onAction(IRibbonControl control, Boolean pressed) {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "Ribbon_onAction(" + pressed);
+		forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			RibbonControl rctrl = ribbonControls.get(controlId);
+			if (rctrl instanceof RibbonButton) {
+				RibbonButton bn = (RibbonButton) rctrl;
+				if (pressed != null) {
+					bn.setPressed(pressed);
+				}
+				RibbonButton.ActionHandler action = bn.getOnAction();
+				if (action != null) {
+					action.f(control, context, pressed);
+				}
+			}
+			return Boolean.TRUE;
+		});
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")Ribbon_onAction");
+	}
+
+	public boolean Ribbon_getEnabled(IRibbonControl control) {
+		RibbonControl rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.isEnabled() : true;
+	}
+
+	public boolean Ribbon_getVisible(IRibbonControl control) {
+		RibbonControl rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.isVisible() : true;
+	}
+
+	public boolean Ribbon_getPressed(IRibbonControl control) {
+		RibbonButton rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonButton) ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.isPressed() : false;
+	}
+
+	public String Ribbon_getLabel(IRibbonControl control) {
+		RibbonControl rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.getLabel() : control.getId();
+	}
+
+	@SuppressWarnings("rawtypes")
+	public String Ribbon_getText(IRibbonControl control) {
+		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonComboBox) ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.getText() : "";
+	}
+
+	@SuppressWarnings("rawtypes")
+	public int Ribbon_getItemCount(IRibbonControl control) {
+		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonComboBox) ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.getItems().size() : 0;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public String Ribbon_getItemLabel(IRibbonControl control, Integer idx) {
+		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonComboBox) ribbonControls.get(controlId);
+		});
+		String label = rctrl != null ? rctrl.getItemLabel(idx) : control.getId();
+		return label;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public int Ribbon_getSelectedItemIndex(IRibbonControl control) {
+		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonComboBox) ribbonControls.get(controlId);
+		});
+		return rctrl != null ? rctrl.getSelectedIndex() : -1;
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public void Ribbon_onChange(IRibbonControl control, String text) {
+		forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			RibbonComboBox rctrl = (RibbonComboBox) ribbonControls.get(controlId);
+			int indexNow = rctrl.findItemIndex(text);
+			int indexBefore = rctrl.getSelectedIndex();
+			rctrl.setSelectedIndex(indexNow);
+			Object itemBefore = indexBefore >= 0 ? rctrl.getItems().get(indexBefore) : null;
+			Object itemNow = indexNow >= 0 ? rctrl.getItems().get(indexNow) : null;
+			rctrl.getOnChange().f(control, itemBefore, itemNow);
+			return Boolean.TRUE;
+		});
+	}
+
+	public Dispatch Ribbon_getImage(IRibbonControl control) {
+		RibbonButton rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonButton) ribbonControls.get(controlId);
+		});
+		String icon = rctrl != null ? rctrl.getIcon() : null;
+		Dispatch disp = icon != null && !icon.isEmpty() ? iconManager.get(icon) : null;
+		return disp;
+	}
+
+	public String Ribbon_getContent(IRibbonControl control) {
+		RibbonDynamicMenu rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonDynamicMenu) ribbonControls.get(controlId);
+		});
+		String content = rctrl.getContent();
+		System.out.println("content=" + content);
+		return content;
+	}
+
 	private Logger log = Logger.getLogger("OutlookAddinEx");
 }
