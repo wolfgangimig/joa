@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,7 +23,7 @@ import com.wilutions.mslib.office.IRibbonControl;
 public class IconManager {
 
 	private final Map<String, Dispatch> map = new HashMap<String, Dispatch>();
-	private final Class<?> forClass;
+	private final ArrayList<String> resourceDirectories = new ArrayList<String>();
 
 	/**
 	 * Constructor.
@@ -33,7 +34,7 @@ public class IconManager {
 	 */
 	public IconManager(Class<?> forClass) {
 		assert forClass != null;
-		this.forClass = forClass;
+		addPackageAsResourceDirectory(forClass);
 	}
 
 	/**
@@ -44,26 +45,34 @@ public class IconManager {
 	 *            the icons are loaded.
 	 */
 	public IconManager(Object obj) {
-		assert obj != null;
-		this.forClass = obj.getClass();
+		this(obj.getClass());
+	}
+
+	/**
+	 * Add package of passed class to the list of resource directories.
+	 * 
+	 * @param forClass Class object.
+	 */
+	public void addPackageAsResourceDirectory(Class<?> forClass) {
+		String resourceDir = forClass.getPackage().getName().replace('.', '/') + "/";
+		this.resourceDirectories.add(resourceDir);
 	}
 
 	/**
 	 * Returns an IPictureDisp object for the given icon file name.
 	 * 
-	 * @param forClass
-	 *            This class defines the JAR and the package from where the
-	 *            icons are loaded.
+	 * @param resourceDirectory
 	 * @param fileName
 	 *            Icon file name
 	 * @return IPictureDisp object.
 	 */
-	public static Dispatch get(Class<?> forClass, String fileName) {
-		assert forClass != null;
+	private Dispatch internalGet(String resourceDirectory, String fileName) {
 		assert fileName != null && fileName.length() != 0;
 		Dispatch pic = null;
 		try {
-			byte[] image = OfficeAddinUtil.getResourceAsBytes(forClass, fileName);
+			ClassLoader classLoader = this.getClass().getClassLoader();
+			String resourcePath = resourceDirectory + fileName;
+			byte[] image = OfficeAddinUtil.getResourceAsBytes(classLoader, resourcePath);
 			String contentType = fileName;
 			int p = contentType.lastIndexOf('.');
 			if (p >= 0) {
@@ -72,7 +81,8 @@ public class IconManager {
 			pic = createIPictureDisp(image, contentType);
 		}
 		catch (IOException e) {
-			throw new NullPointerException(e.toString());
+			// Assume not found.
+			// Caller should try to find the image in another resourceDirectory.
 		}
 		return pic;
 	}
@@ -88,14 +98,17 @@ public class IconManager {
 		assert fileName != null && fileName.length() != 0;
 
 		Dispatch pic = null;
-		String key = (forClass.getName() + "/" + fileName);
+		String key = fileName;
 		pic = map.get(key);
 		if (pic == null) {
 			if (fileName.startsWith(".")) {
 				pic = getFileTypeIcon(fileName);
 			}
 			else {
-				pic = get(forClass, fileName);
+				for (String resourceDirectory : resourceDirectories) {
+					pic = internalGet(resourceDirectory, fileName);
+					if (pic != null) break;
+				}
 			}
 			map.put(key, pic);
 		}

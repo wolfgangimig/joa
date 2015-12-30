@@ -341,4 +341,8 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	}
 
 	private Logger log = Logger.getLogger("OutlookAddinEx");
+
+	public IconManager getIconManager() {
+		return iconManager;
+	}
 }
