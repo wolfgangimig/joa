@@ -1,26 +1,48 @@
 package com.wilutions.joa.ribbon;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.wilutions.com.Dispatch;
+import com.wilutions.joa.IconManager;
 import com.wilutions.mslib.office.IRibbonControl;
 
 public class RibbonComboBox<T> extends RibbonControl {
-	
+
 	public interface ChangeListener<T> {
 		void f(IRibbonControl control, T oldValue, T newValue);
 	}
-	
+
+	public interface ExtractItemData<T> {
+		String getItemID(T item);
+
+		String getItemLabel(T item);
+
+		Dispatch getItemImage(IconManager iconManager, T item);
+	}
+
 	private List<T> items = new ArrayList<T>();
 	private int selectedIndex;
-	
+	private ExtractItemData<T> extractItemData;
+
 	@RibbonControlAttribute("Ribbon_onChange")
 	private ChangeListener<T> onChange;
-	
+
 	public RibbonComboBox() {
-		super("comboBox");
+		this(null);
 	}
-	
+
+	public RibbonComboBox(ExtractItemData<T> extractItemData) {
+		super("comboBox");
+
+		if (extractItemData == null) {
+			extractItemData = new ExtractItemDefault<T>();
+		}
+
+		this.extractItemData = extractItemData;
+	}
+
 	public String getText() {
 		return getItemLabel(selectedIndex);
 	}
@@ -28,15 +50,34 @@ public class RibbonComboBox<T> extends RibbonControl {
 	public String getItemLabel(int idx) {
 		String ret = "";
 		if (idx < items.size()) {
-			ret = items.get(idx).toString();
+			T item = items.get(idx);
+			ret = extractItemData.getItemLabel(item);
 		}
 		return ret;
 	}
-	
+
+	public String getItemID(int idx) {
+		String ret = "";
+		if (idx < items.size()) {
+			T item = items.get(idx);
+			ret = extractItemData.getItemID(item);
+		}
+		return ret;
+	}
+
+	public Dispatch getItemImage(IconManager iconManager, int idx) {
+		Dispatch ret = null;
+		if (idx < items.size()) {
+			T item = items.get(idx);
+			ret = extractItemData.getItemImage(iconManager, item);
+		}
+		return ret;
+	}
+
 	public void setOnChange(ChangeListener<T> onChange) {
 		this.onChange = onChange;
 	}
-	
+
 	public ChangeListener<T> getOnChange() {
 		return onChange;
 	}
@@ -67,5 +108,57 @@ public class RibbonComboBox<T> extends RibbonControl {
 		}
 		return ret;
 	}
-	
+
+	private static class ExtractItemDefault<T> implements ExtractItemData<T> {
+
+		public String getItemLabel(T item) {
+			String ret = null;
+			Class<?> clazz = item.getClass();
+			try {
+				Field field = clazz.getDeclaredField("label");
+				field.setAccessible(true);
+				Object value = field.get(item);
+				if (value != null) {
+					ret = value.toString();
+				}
+			}
+			catch (Exception e) {
+			}
+			return ret;
+		}
+
+		public Dispatch getItemImage(IconManager iconManager, T item) {
+			Dispatch ret = null;
+			Class<?> clazz = item.getClass();
+			try {
+				Field field = clazz.getDeclaredField("image");
+				field.setAccessible(true);
+				Object value = field.get(item);
+				if (value != null) {
+					ret = iconManager.get(value.toString());
+				}
+			}
+			catch (Exception e) {
+			}
+			return ret;
+		}
+
+		@Override
+		public String getItemID(T item) {
+			String ret = null;
+			Class<?> clazz = item.getClass();
+			try {
+				Field field = clazz.getDeclaredField("id");
+				field.setAccessible(true);
+				Object value = field.get(item);
+				if (value != null) {
+					ret = value.toString();
+				}
+			}
+			catch (Exception e) {
+			}
+			return ret;
+		}
+
+	}
 }

@@ -1,5 +1,5 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
-#Sat Dec 19 11:57:03 CET 2015
+#Tue Dec 22 17:24:57 CET 2015
 build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;
 org.springsource.ide.eclipse.gradle.linkedresources=
-org.springsource.ide.eclipse.gradle.rootprojectloc=../../../jirod/itol-jira
+org.springsource.ide.eclipse.gradle.rootprojectloc=../../../itol/itol-redmine

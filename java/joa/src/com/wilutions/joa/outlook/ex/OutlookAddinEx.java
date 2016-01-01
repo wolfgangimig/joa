@@ -21,8 +21,8 @@ import com.wilutions.joa.IconManager;
 import com.wilutions.joa.outlook.OutlookAddin;
 import com.wilutions.joa.ribbon.RibbonButton;
 import com.wilutions.joa.ribbon.RibbonComboBox;
+import com.wilutions.joa.ribbon.RibbonComboBox.ChangeListener;
 import com.wilutions.joa.ribbon.RibbonControl;
-import com.wilutions.joa.ribbon.RibbonControls;
 import com.wilutions.joa.ribbon.RibbonDynamicMenu;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.office.IRibbonUI;
@@ -43,7 +43,6 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	private final IconManager iconManager;
 	private IRibbonUI ribbon;
 	private final Registry registry;
-	private RibbonControls ribbonControls = new RibbonControls();
 
 	/**
 	 * Inspectors collection. Need to hold this in order to permanently receive
@@ -64,7 +63,6 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 		iconManager = new IconManager(this);
 		registry = new Registry(getClass());
 		
-		
 		iconManager.getFileTypeIcon(".msg");
 		iconManager.getFileTypeIcon(".mhtml");
 		iconManager.getFileTypeIcon(".rtf");
@@ -76,10 +74,6 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 	public Registry getRegistry() {
 		return registry;
-	}
-
-	public RibbonControls getRibbonControls() {
-		return ribbonControls;
 	}
 
 	public void onLoadRibbon(IRibbonUI ribbon) {
@@ -204,7 +198,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 			if (wrapper != null) {
 				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "addRibbonControl");
-				wrapper.addRibbonControl(control);
+				wrapper.addRibbonControlDispatchReference(control);
 				if (call != null) {
 					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "call");
 					ret = call.call(wrapper);
@@ -220,7 +214,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "Ribbon_onAction(" + pressed);
 		forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			RibbonControl rctrl = ribbonControls.get(controlId);
+			RibbonControl rctrl = context.getRibbonControls().get(controlId);
 			if (rctrl instanceof RibbonButton) {
 				RibbonButton bn = (RibbonButton) rctrl;
 				if (pressed != null) {
@@ -239,7 +233,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public boolean Ribbon_getEnabled(IRibbonControl control) {
 		RibbonControl rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return ribbonControls.get(controlId);
+			return context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.isEnabled() : true;
 	}
@@ -247,7 +241,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public boolean Ribbon_getVisible(IRibbonControl control) {
 		RibbonControl rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return ribbonControls.get(controlId);
+			return context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.isVisible() : true;
 	}
@@ -255,7 +249,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public boolean Ribbon_getPressed(IRibbonControl control) {
 		RibbonButton rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonButton) ribbonControls.get(controlId);
+			return (RibbonButton) context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.isPressed() : false;
 	}
@@ -263,7 +257,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public String Ribbon_getLabel(IRibbonControl control) {
 		RibbonControl rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return ribbonControls.get(controlId);
+			return context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.getLabel() : control.getId();
 	}
@@ -272,7 +266,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public String Ribbon_getText(IRibbonControl control) {
 		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonComboBox) ribbonControls.get(controlId);
+			return (RibbonComboBox) context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.getText() : "";
 	}
@@ -281,7 +275,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public int Ribbon_getItemCount(IRibbonControl control) {
 		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonComboBox) ribbonControls.get(controlId);
+			return (RibbonComboBox) context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.getItems().size() : 0;
 	}
@@ -290,17 +284,37 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public String Ribbon_getItemLabel(IRibbonControl control, Integer idx) {
 		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonComboBox) ribbonControls.get(controlId);
+			return (RibbonComboBox) context.getRibbonControls().get(controlId);
 		});
-		String label = rctrl != null ? rctrl.getItemLabel(idx) : control.getId();
-		return label;
+		String ret = rctrl != null ? rctrl.getItemLabel(idx) : Integer.toString(idx);
+		return ret;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public String Ribbon_getItemID(IRibbonControl control, Integer idx) {
+		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonComboBox) context.getRibbonControls().get(controlId);
+		});
+		String ret = rctrl != null ? rctrl.getItemID(idx) : Integer.toString(idx);
+		return ret;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public Dispatch Ribbon_getItemImage(IRibbonControl control, Integer idx) {
+		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
+			String controlId = control.getId();
+			return (RibbonComboBox) context.getRibbonControls().get(controlId);
+		});
+		Dispatch ret = rctrl != null ? rctrl.getItemImage(iconManager, idx) : null;
+		return ret;
 	}
 
 	@SuppressWarnings("rawtypes")
 	public int Ribbon_getSelectedItemIndex(IRibbonControl control) {
 		RibbonComboBox rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonComboBox) ribbonControls.get(controlId);
+			return (RibbonComboBox) context.getRibbonControls().get(controlId);
 		});
 		return rctrl != null ? rctrl.getSelectedIndex() : -1;
 	}
@@ -309,13 +323,22 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public void Ribbon_onChange(IRibbonControl control, String text) {
 		forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			RibbonComboBox rctrl = (RibbonComboBox) ribbonControls.get(controlId);
-			int indexNow = rctrl.findItemIndex(text);
-			int indexBefore = rctrl.getSelectedIndex();
-			rctrl.setSelectedIndex(indexNow);
-			Object itemBefore = indexBefore >= 0 ? rctrl.getItems().get(indexBefore) : null;
-			Object itemNow = indexNow >= 0 ? rctrl.getItems().get(indexNow) : null;
-			rctrl.getOnChange().f(control, itemBefore, itemNow);
+			RibbonComboBox rctrl = (RibbonComboBox) context.getRibbonControls().get(controlId);
+			if (rctrl != null) {
+				int indexNow = rctrl.findItemIndex(text);
+				int indexBefore = rctrl.getSelectedIndex();
+				rctrl.setSelectedIndex(indexNow);
+				Object itemBefore = indexBefore >= 0 ? rctrl.getItems().get(indexBefore) : null;
+				Object itemNow = indexNow >= 0 ? rctrl.getItems().get(indexNow) : null;
+				ChangeListener lsn = rctrl.getOnChange();
+				if (lsn != null) {
+					lsn.f(control, itemBefore, itemNow);
+				}
+			}
+			else {
+				// You missed to add the control to member ribbonControls.
+				// Use this.getRibbonControls().add(...)
+			}
 			return Boolean.TRUE;
 		});
 	}
@@ -323,7 +346,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public Dispatch Ribbon_getImage(IRibbonControl control) {
 		RibbonButton rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonButton) ribbonControls.get(controlId);
+			return (RibbonButton) context.getRibbonControls().get(controlId);
 		});
 		String icon = rctrl != null ? rctrl.getIcon() : null;
 		Dispatch disp = icon != null && !icon.isEmpty() ? iconManager.get(icon) : null;
@@ -333,7 +356,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	public String Ribbon_getContent(IRibbonControl control) {
 		RibbonDynamicMenu rctrl = forContextWrapper(control, (context) -> {
 			String controlId = control.getId();
-			return (RibbonDynamicMenu) ribbonControls.get(controlId);
+			return (RibbonDynamicMenu) context.getRibbonControls().get(controlId);
 		});
 		String content = rctrl.getContent();
 		System.out.println("content=" + content);

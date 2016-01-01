@@ -39,4 +39,8 @@ public class RibbonControls {
 	public RibbonGroup group(String id, String label) {
 		return add(RibbonGroup.class, id, label);
 	}
+	
+	public RibbonLabel label(String id, String label) {
+		return add(RibbonLabel.class, id, label);
+	}
 }

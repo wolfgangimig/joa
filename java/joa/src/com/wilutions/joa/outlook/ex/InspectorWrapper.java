@@ -18,6 +18,7 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.IDispatch;
+import com.wilutions.joa.ribbon.RibbonControls;
 import com.wilutions.mslib.office.IRibbonControl;
 import com.wilutions.mslib.outlook.Inspector;
 import com.wilutions.mslib.outlook.InspectorEvents_10;
@@ -26,7 +27,14 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 
 	protected final Inspector inspector;
 	protected final IDispatch currentItem;
-	protected Map<String, IRibbonControl> ribbonControls = new HashMap<String, IRibbonControl>();
+	protected Map<String, IRibbonControl> ribbonControlsDispatchReferences = new HashMap<String, IRibbonControl>();
+
+	/**
+	 * Ribbon control map.
+	 * This map contains objects from package com.wilutions.joa.ribbon.
+	 * It does not contain COM objects.
+	 */
+	protected RibbonControls ribbonControls = new RibbonControls();
 
 	/**
 	 * Constructor. Initializes a new object. Attaches the inspector events to
@@ -69,6 +77,7 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 
 	@Override
 	public void onClose() throws ComException {
+		ribbonControlsDispatchReferences.clear();
 		if (inspector != null) {
 			inspector.releaseEvents(this);
 			inspector.releaseComObject();
@@ -102,8 +111,12 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 	}
 
 	@Override
-	public void addRibbonControl(IRibbonControl control) {
-		ribbonControls.put(control.getId(), control);
+	public void addRibbonControlDispatchReference(IRibbonControl control) {
+		ribbonControlsDispatchReferences.put(control.getId(), control);
 	}
 
+	@Override
+	public RibbonControls getRibbonControls() {
+		return ribbonControls;
+	}
 }
