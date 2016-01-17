@@ -65,8 +65,7 @@ public class Registry {
 	 *            Store fields of this object.
 	 */
 	public void writeFields(Object obj) {
-		if (obj == null)
-			throw new IllegalArgumentException("obj must not be null");
+		if (obj == null) throw new IllegalArgumentException("obj must not be null");
 		String subKey = regKey + "\\" + obj.getClass().getName();
 		writeObject(subKey, obj, OPT_ONLY_ANNOTATED_FIELDS);
 	}
@@ -104,7 +103,13 @@ public class Registry {
 	 *            Object to be written.
 	 */
 	public void write(String subKey, Object obj) {
-		writeObject(regKey + "\\" + subKey, obj, OPT_ALL_FIELDS);
+		String destKey = regKey + "\\" + subKey;
+		if (obj != null) {
+			writeObject(destKey, obj, OPT_ALL_FIELDS);
+		}
+		else {
+			deleteObject(destKey);
+		}
 	}
 
 	private static void readFields(String key, Object obj, int opts) {
@@ -114,17 +119,13 @@ public class Registry {
 				String fieldName = field.getName();
 				int mods = field.getModifiers();
 
-				if (Modifier.isStatic(mods))
-					continue;
-				if (Modifier.isFinal(mods))
-					continue;
-				if (Modifier.isTransient(mods))
-					continue;
+				if (Modifier.isStatic(mods)) continue;
+				if (Modifier.isFinal(mods)) continue;
+				if (Modifier.isTransient(mods)) continue;
 
 				if ((opts & OPT_ONLY_ANNOTATED_FIELDS) != 0) {
 					DeclRegistryValue regValueAnno = field.getAnnotation(DeclRegistryValue.class);
-					if (regValueAnno == null)
-						continue;
+					if (regValueAnno == null) continue;
 					String s = regValueAnno.value();
 					if (s != null && s.length() != 0) {
 						fieldName = s;
@@ -140,7 +141,8 @@ public class Registry {
 					if (fieldValue != null) {
 						field.set(obj, fieldValue);
 					}
-				} catch (Throwable ignored) {
+				}
+				catch (Throwable ignored) {
 				}
 			}
 
@@ -150,26 +152,26 @@ public class Registry {
 
 	private static Object readObject(String key) {
 		String className = (String) RegUtil.getRegistryValue(key, "", "");
-		if (className == null || className.length() == 0)
-			return null;
+		if (className == null || className.length() == 0) return null;
 
 		Object ret = null;
 
 		try {
 			Class<?> clazz = Class.forName(className);
-			
+
 			// Value written as object?
 			if (clazz.isArray() || (clazz == String.class) || (clazz == Integer.class) || (clazz == Long.class)
-					|| (clazz == Double.class) || (clazz == Float.class) || (clazz == Boolean.class)
-					|| (clazz.isEnum()) || (ComEnum.class.isAssignableFrom(clazz))
-					|| (List.class.isAssignableFrom(clazz)) || (Map.class.isAssignableFrom(clazz))) {
+					|| (clazz == Double.class) || (clazz == Float.class) || (clazz == Boolean.class) || (clazz.isEnum())
+					|| (ComEnum.class.isAssignableFrom(clazz)) || (List.class.isAssignableFrom(clazz))
+					|| (Map.class.isAssignableFrom(clazz))) {
 				return getFieldValue(key, "value", clazz);
 			}
-			
+
 			ret = clazz.newInstance();
 			readFields(key, ret, OPT_ALL_FIELDS);
 
-		} catch (Throwable ignored) {
+		}
+		catch (Throwable ignored) {
 		}
 
 		return ret;
@@ -194,8 +196,7 @@ public class Registry {
 		RegUtil.setRegistryValue(arrayKey, "length", length);
 		for (int i = 0; i < length; i++) {
 			Object elementValue = Array.get(arrayValue, i);
-			if (elementValue == null)
-				continue;
+			if (elementValue == null) continue;
 			setFieldValue(arrayKey, Integer.toString(i), elementValue, elementValue.getClass());
 		}
 	}
@@ -205,8 +206,8 @@ public class Registry {
 		String listKey = key + "\\" + fieldName;
 		Integer length = (Integer) RegUtil.getRegistryValue(listKey, "length", 0);
 		@SuppressWarnings("unchecked")
-		List<Object> fieldValue = listType.equals(List.class) ? new ArrayList<Object>() : (List<Object>) listType
-				.newInstance();
+		List<Object> fieldValue = listType.equals(List.class) ? new ArrayList<Object>()
+				: (List<Object>) listType.newInstance();
 		if (length != null && length != 0) {
 			String elementTypeName = (String) RegUtil.getRegistryValue(listKey, "elementClass", "");
 			Class<?> elementType = Class.forName(elementTypeName);
@@ -292,24 +293,31 @@ public class Registry {
 
 		if (fieldType.isArray()) {
 			ret = getFieldValueArray(key, fieldName, fieldType);
-		} else if (fieldType == String.class) {
+		}
+		else if (fieldType == String.class) {
 			ret = RegUtil.getRegistryValue(key, fieldName, "");
-		} else if (fieldType == Integer.class || fieldType == int.class) {
+		}
+		else if (fieldType == Integer.class || fieldType == int.class) {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, Integer.valueOf(0));
 			ret = (Integer) regValue;
-		} else if (fieldType == Long.class || fieldType == long.class) {
+		}
+		else if (fieldType == Long.class || fieldType == long.class) {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, "0");
 			ret = Long.valueOf((String) regValue);
-		} else if (fieldType == Double.class || fieldType == double.class) {
+		}
+		else if (fieldType == Double.class || fieldType == double.class) {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, "0");
 			ret = Double.valueOf((String) regValue);
-		} else if (fieldType == Float.class || fieldType == float.class) {
+		}
+		else if (fieldType == Float.class || fieldType == float.class) {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, "0.f");
 			ret = Float.valueOf((String) regValue);
-		} else if (fieldType == Boolean.class || fieldType == boolean.class) {
+		}
+		else if (fieldType == Boolean.class || fieldType == boolean.class) {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, Boolean.FALSE.toString());
 			ret = Boolean.valueOf((String) regValue);
-		} else if (fieldType.isEnum()) {
+		}
+		else if (fieldType.isEnum()) {
 			String enumValueStr = (String) RegUtil.getRegistryValue(key, fieldName, "");
 			for (Object e : fieldType.getEnumConstants()) {
 				if (e.toString().equals(enumValueStr)) {
@@ -317,22 +325,27 @@ public class Registry {
 					break;
 				}
 			}
-		} else if (ComEnum.class.isAssignableFrom(fieldType)) {
+		}
+		else if (ComEnum.class.isAssignableFrom(fieldType)) {
 			String enumValueStr = (String) RegUtil.getRegistryValue(key, fieldName, "");
 			if (!enumValueStr.isEmpty()) {
 				try {
 					int enumValue = Integer.parseInt(enumValueStr);
 					Method m = fieldType.getDeclaredMethod("valueOf", int.class);
 					ret = m.invoke(null, enumValue);
-				} catch (Exception e) {
+				}
+				catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
-		} else if (List.class.isAssignableFrom(fieldType)) {
+		}
+		else if (List.class.isAssignableFrom(fieldType)) {
 			ret = getFieldValueList(key, fieldName, fieldType);
-		} else if (Map.class.isAssignableFrom(fieldType)) {
+		}
+		else if (Map.class.isAssignableFrom(fieldType)) {
 			ret = getFieldValueMap(key, fieldName, fieldType);
-		} else {
+		}
+		else {
 			ret = readObject(key + "\\" + fieldName);
 		}
 		return ret;
@@ -342,39 +355,56 @@ public class Registry {
 			throws ComException {
 		if (value == null) {
 			RegUtil.deleteRegistryValue(key, fieldName);
-		} else {
+		}
+		else {
 			if (fieldType.isArray()) {
 				setFieldValueArray(key, fieldName, value);
-			} else if (fieldType == String.class) {
+			}
+			else if (fieldType == String.class) {
 				RegUtil.setRegistryValue(key, fieldName, (String) value);
-			} else if (fieldType == Integer.class || fieldType == int.class) {
+			}
+			else if (fieldType == Integer.class || fieldType == int.class) {
 				RegUtil.setRegistryValue(key, fieldName, (Integer) value);
-			} else if (fieldType == Long.class || fieldType == long.class) {
+			}
+			else if (fieldType == Long.class || fieldType == long.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType == Double.class || fieldType == double.class) {
+			}
+			else if (fieldType == Double.class || fieldType == double.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType == Float.class || fieldType == float.class) {
+			}
+			else if (fieldType == Float.class || fieldType == float.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType == Boolean.class || fieldType == boolean.class) {
+			}
+			else if (fieldType == Boolean.class || fieldType == boolean.class) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (fieldType.isEnum()) {
+			}
+			else if (fieldType.isEnum()) {
 				RegUtil.setRegistryValue(key, fieldName, value.toString());
-			} else if (ComEnum.class.isAssignableFrom(fieldType)) {
+			}
+			else if (ComEnum.class.isAssignableFrom(fieldType)) {
 				try {
 					Field f = fieldType.getDeclaredField("value");
 					String enumValueStr = Integer.toString((int) f.get(value));
 					RegUtil.setRegistryValue(key, fieldName, enumValueStr);
-				} catch (Exception e) {
+				}
+				catch (Exception e) {
 					e.printStackTrace();
 				}
-			} else if (List.class.isAssignableFrom(fieldType)) {
+			}
+			else if (List.class.isAssignableFrom(fieldType)) {
 				setFieldValueList(key, fieldName, value);
-			} else if (Map.class.isAssignableFrom(fieldType)) {
+			}
+			else if (Map.class.isAssignableFrom(fieldType)) {
 				setFieldValueMap(key, fieldName, value);
-			} else {
+			}
+			else {
 				writeObject(key + "\\" + fieldName, value, OPT_ALL_FIELDS);
 			}
 		}
+	}
+
+	private static void deleteObject(String key) {
+		RegUtil.purgeRegistryKey(key);
 	}
 
 	private static void writeObject(String key, Object obj, int opts) {
@@ -382,15 +412,13 @@ public class Registry {
 		String className = clazz != null ? clazz.getName() : "";
 
 		try {
-			RegUtil.purgeRegistryKey(key);
 			RegUtil.setRegistryValue(key, "", className);
-			if (className == null || className.length() == 0)
-				return;
+			if (className == null || className.length() == 0) return;
 
 			if (clazz.isArray() || (clazz == String.class) || (clazz == Integer.class) || (clazz == Long.class)
-					|| (clazz == Double.class) || (clazz == Float.class) || (clazz == Boolean.class)
-					|| (clazz.isEnum()) || (ComEnum.class.isAssignableFrom(clazz))
-					|| (List.class.isAssignableFrom(clazz)) || (Map.class.isAssignableFrom(clazz))) {
+					|| (clazz == Double.class) || (clazz == Float.class) || (clazz == Boolean.class) || (clazz.isEnum())
+					|| (ComEnum.class.isAssignableFrom(clazz)) || (List.class.isAssignableFrom(clazz))
+					|| (Map.class.isAssignableFrom(clazz))) {
 				setFieldValue(key, "value", obj, clazz);
 				return;
 			}
@@ -400,17 +428,13 @@ public class Registry {
 					String fieldName = field.getName();
 					int mods = field.getModifiers();
 
-					if (Modifier.isStatic(mods))
-						continue;
-					if (Modifier.isFinal(mods))
-						continue;
-					if (Modifier.isTransient(mods))
-						continue;
+					if (Modifier.isStatic(mods)) continue;
+					if (Modifier.isFinal(mods)) continue;
+					if (Modifier.isTransient(mods)) continue;
 
 					if ((opts & OPT_ONLY_ANNOTATED_FIELDS) != 0) {
 						DeclRegistryValue regValueAnno = field.getAnnotation(DeclRegistryValue.class);
-						if (regValueAnno == null)
-							continue;
+						if (regValueAnno == null) continue;
 						String s = regValueAnno.value();
 						if (s != null && s.length() != 0) {
 							fieldName = s;
@@ -425,14 +449,16 @@ public class Registry {
 						Object fieldValue = field.get(obj);
 						Class<?> fieldClass = field.getType();
 						setFieldValue(key, fieldName, fieldValue, fieldClass);
-					} catch (Throwable e) {
+					}
+					catch (Throwable e) {
 						e.printStackTrace();
 					}
 				}
 
 				clazz = clazz.getSuperclass();
 			}
-		} catch (Throwable e) {
+		}
+		catch (Throwable e) {
 		}
 	}
 
@@ -457,7 +483,10 @@ public class Registry {
 	private static class Globals {
 		@DeclRegistryValue
 		List<Property> properties;
-		public String toString() { return "[" + properties.toString() + "]"; }
+
+		public String toString() {
+			return "[" + properties.toString() + "]";
+		}
 	}
 
 	public static void main(String[] args) {
@@ -465,11 +494,11 @@ public class Registry {
 
 		Globals globals = new Globals();
 		globals.properties = Arrays.asList(new Property("abc", "def"));
-		
+
 		System.out.println("globals=" + globals);
 
 		registry.writeFields(globals);
-		
+
 		Globals rglobals = new Globals();
 		registry.readFields(rglobals);
 

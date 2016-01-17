@@ -82,7 +82,6 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 			inspector.releaseEvents(this);
 			inspector.releaseComObject();
 			InspectorWrappers.remove(this);
-			System.out.println("release inspector");
 		}
 	}
 

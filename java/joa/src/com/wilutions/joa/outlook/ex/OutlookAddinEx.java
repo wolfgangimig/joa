@@ -127,7 +127,6 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 		Inspector inspector = Dispatch.as(insp, Inspector.class);
 		IDispatch dispItem = inspector.getCurrentItem();
 		OlObjectClass olclass = OlObjectClass.valueOf((Integer) dispItem._get("Class"));
-		System.out.println("new inspector, item=" + dispItem + ", class=" + olclass);
 		InspectorWrapper inspectorWrapper = createInspectorWrapper(inspector, olclass);
 		if (inspectorWrapper == null) {
 			inspectorWrapper = new InspectorWrapper(inspector, dispItem);
