@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-   compile project(":joa")
+   compile project(":joa-decl")
 }
 
 test {

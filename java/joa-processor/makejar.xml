@@ -5,6 +5,7 @@
 	
 	<property name="project.dir" value="." />
 	<property name="lib.dir" value="${project.dir}/../lib" />
+	<property name="joa-decl.dir" value="${project.dir}/../joa-decl" />
 		
     <target name="create_run_jar">
         <jar destfile="${lib.dir}/joa-processor.jar" filesetmanifest="mergewithoutmain">
@@ -13,7 +14,7 @@
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="${project.dir}/bin"/>
-            <fileset dir="${project.dir}/../joa/bin"/>
+			<fileset dir="${joa-decl.dir}/bin" />
         </jar>
     </target>
 </project>

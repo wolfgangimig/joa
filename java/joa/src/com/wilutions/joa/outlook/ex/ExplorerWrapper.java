@@ -101,6 +101,7 @@ public class ExplorerWrapper extends DispatchImpl implements ExplorerEvents_10, 
 			ExplorerWrappers.remove(this);
 			System.out.println("release explorer");
 		}
+		explorer = null;
 	}
 
 	@Override

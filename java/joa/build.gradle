@@ -1,8 +1,11 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 
 sourceCompatibility = 1.8
-version = '1.0'
+
+group = 'com.wilutions.joa'
+version = '0.9.0'
 
 sourceSets {
     main {
@@ -28,10 +31,33 @@ repositories {
 }
 
 dependencies {
+	compile project (":joa-decl")
 }
 
 test {
     systemProperties 'property': 'value'
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
+
+model {
+    tasks.generatePomFileForMavenJavaPublication {
+        destination = file("$buildDir/generated-pom.xml")
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
 }
 
 uploadArchives {

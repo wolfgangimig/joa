@@ -9,6 +9,7 @@
 	<property name="dll.dir" value="${lib.dir}/bin" />
 	<property name="native.dir" value="${project.dir}/native/" />
 	<property name="native.package.dir" value="${native.dir}/com/wilutions/com" />
+	<property name="joa-decl.dir" value="${project.dir}/../joa-decl" />
 
 	<!--
 		Create runnable JAR file that includes the native DLLs. 
@@ -26,7 +27,11 @@
 				<attribute name="Class-Path" value="." />
 			</manifest>
 			<fileset dir="${project.dir}/bin" />
+			<fileset dir="${project.dir}/src" />
+			<fileset dir="${project.dir}/src-gen" />
 			<fileset dir="${native.dir}" />
+			<fileset dir="${joa-decl.dir}/bin" />
+			<fileset dir="${joa-decl.dir}/src" />
 		</jar>
 		
 	</target>
@@ -41,6 +46,7 @@
 				<attribute name="Class-Path" value="." />
 			</manifest>
 			<fileset dir="${project.dir}/bin" />
+			<fileset dir="${joa-decl.dir}/bin" />
 		</jar>
 	</target>
 	
@@ -51,6 +57,7 @@
 		<jar destfile="${dest.dir}/joa-src.jar">
 			<fileset dir="${project.dir}/src" />
 			<fileset dir="${project.dir}/src-gen" />
+			<fileset dir="${joa-decl.dir}/src" />
 		</jar>
 	</target>
 	

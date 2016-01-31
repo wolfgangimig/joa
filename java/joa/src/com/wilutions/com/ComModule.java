@@ -42,18 +42,13 @@ public abstract class ComModule {
 	public abstract Class<?>[] getFormRegions();
 
 	/**
-	 * The Module class name: com.wilutions.com.module.Module
-	 */
-	public final static String MODULE_CLASSNAME = "com.wilutions.com.module.Module";
-
-	/**
 	 * Get the Module object.
 	 * The Module object is found via reflection. 
 	 * @return Module object.
 	 */
 	public static ComModule getInstance() {
 		try {
-			Class<?> moduleClass = Class.forName(ComModule.MODULE_CLASSNAME);
+			Class<?> moduleClass = Class.forName(Constants.MODULE_CLASSNAME);
 			Method getinst = moduleClass.getDeclaredMethod("getInstance");
 			return (ComModule) getinst.invoke(null);
 		} catch (Throwable e) {

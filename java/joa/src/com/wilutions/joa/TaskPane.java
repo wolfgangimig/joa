@@ -94,10 +94,13 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 			// This causes a crash in Outlook in customTaskPane.releaseComObject
 			//customTaskPane.Delete();
 			
+			customTaskPane.releaseEvents(this);
+			
 			// Release the underlying COM object.
 			customTaskPane.releaseComObject();		
 		}
 		
+		customTaskPane = null;
 	}
 	
 	/**

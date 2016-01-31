@@ -1,2 +1,8 @@
+include("joa-decl")
+project(":joa-decl").projectDir = new File("../joa-decl")
 
-includeFlat "joa"
+
+include("joa")
+project(":joa").projectDir = new File("../joa")
+
+

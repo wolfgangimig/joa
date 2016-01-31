@@ -21,14 +21,10 @@ import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
-import javax.lang.model.type.TypeMirror;
 import javax.tools.JavaFileObject;
 
-import com.wilutions.com.ComModule;
-import com.wilutions.com.DispatchImpl;
+import com.wilutions.com.Constants;
 import com.wilutions.joa.DeclAddin;
-import com.wilutions.joa.OfficeAddin;
-import com.wilutions.joa.outlook.OutlookFormRegion;
 
 @SupportedAnnotationTypes({ "com.wilutions.com.CoClass" })
 @SupportedSourceVersion(SourceVersion.RELEASE_7)
@@ -50,11 +46,11 @@ public class ProcessCoClass extends AbstractProcessor {
 	public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
 
 		try {
-			JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile(ComModule.MODULE_CLASSNAME,
+			JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile(Constants.MODULE_CLASSNAME,
 					new Element[0]);
 			// log.info("sourceFile=" + sourceFile.toUri());
 
-			String modulePackage = ComModule.MODULE_CLASSNAME;
+			String modulePackage = Constants.MODULE_CLASSNAME;
 			int p = modulePackage.lastIndexOf('.');
 			modulePackage = modulePackage.substring(0, p >= 0 ? p : 0);
 
@@ -100,8 +96,6 @@ public class ProcessCoClass extends AbstractProcessor {
 			// sourceWriter.println("// getTypeElement(Dispatch)=" +
 			// processingEnv.getElementUtils().getTypeElement(DispatchImpl.class.getName()));
 
-			TypeMirror tmDispImpl = processingEnv.getElementUtils().getTypeElement(DispatchImpl.class.getName())
-					.asType();
 			// sourceWriter.println("// get TypeMirror for DispatchImpl=" +
 			// tmDispImpl);
 
@@ -115,22 +109,13 @@ public class ProcessCoClass extends AbstractProcessor {
 				// sourceWriter.println("// found annotation=" + annotation + ",
 				// elem=" + elem);
 
-				TypeMirror tmElem = elem.asType();
+				//TypeMirror tmElem = elem.asType();
 				// sourceWriter.println("// TypeMirror elem=" + tmElem);
 
-				boolean succ = processingEnv.getTypeUtils().isAssignable(tmElem, tmDispImpl);
-				// sourceWriter.println("// is assignable=" + succ);
-
 				String className = elem.toString();
-				if (succ) {
-					sourceWriter.print("    ");
-					sourceWriter.print(className);
-					sourceWriter.println(".class,");
-				} else {
-					sourceWriter.print("    /** ERROR **/ ");
-					sourceWriter.print(className + " must extend " + DispatchImpl.class);
-					sourceWriter.println();
-				}
+				sourceWriter.print("    ");
+				sourceWriter.print(className);
+				sourceWriter.println(".class,");
 			}
 
 			sourceWriter.println("  };");
@@ -150,8 +135,6 @@ public class ProcessCoClass extends AbstractProcessor {
 		// sourceWriter.println("// getTypeElement(Dispatch)=" +
 		// processingEnv.getElementUtils().getTypeElement(OutlookFormRegion.class.getName()));
 
-		TypeMirror tmOutlookFormRegion = processingEnv.getElementUtils()
-				.getTypeElement(OutlookFormRegion.class.getName()).asType();
 		// sourceWriter.println("// get TypeMirror for OutlookFormRegion=" +
 		// tmOutlookFormRegion);
 
@@ -166,28 +149,20 @@ public class ProcessCoClass extends AbstractProcessor {
 			// sourceWriter.println("// found annotation=" + annotation + ",
 			// elem=" + elem);
 
-			TypeMirror tmElem = elem.asType();
+			//TypeMirror tmElem = elem.asType();
 			// sourceWriter.println("// TypeMirror elem=" + tmElem);
 
-			boolean succ = processingEnv.getTypeUtils().isAssignable(tmElem, tmOutlookFormRegion);
-			// sourceWriter.println("// is assignable=" + succ);
-
 			String className = elem.toString();
-			if (succ) {
-				sourceWriter.print("    ");
-				sourceWriter.print(className);
-				sourceWriter.println(".class,");
-			} else {
-				sourceWriter.print("    /** ERROR **/ ");
-				sourceWriter.print(className + " must extend " + OutlookFormRegion.class);
-				sourceWriter.println();
-			}
+			sourceWriter.print("    ");
+			sourceWriter.print(className);
+			sourceWriter.println(".class,");
 		}
 
 		sourceWriter.println("  };");
 		sourceWriter.println("  public Class<?>[] getFormRegions() { return formRegions; }");
 
 		sourceWriter.println();
+
 	}
 
 	private void generateAddins(PrintWriter sourceWriter, RoundEnvironment roundEnv) {

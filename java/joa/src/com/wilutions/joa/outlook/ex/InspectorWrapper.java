@@ -25,8 +25,8 @@ import com.wilutions.mslib.outlook.InspectorEvents_10;
 
 public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10, Wrapper {
 
-	protected final Inspector inspector;
-	protected final IDispatch currentItem;
+	protected Inspector inspector;
+	protected IDispatch currentItem;
 	protected Map<String, IRibbonControl> ribbonControlsDispatchReferences = new HashMap<String, IRibbonControl>();
 
 	/**
@@ -83,6 +83,9 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 			inspector.releaseComObject();
 			InspectorWrappers.remove(this);
 		}
+		inspector = null;
+		currentItem = null;
+		System.gc();
 	}
 
 	@Override
