@@ -347,7 +347,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 			String controlId = control.getId();
 			return (RibbonButton) context.getRibbonControls().get(controlId);
 		});
-		String icon = rctrl != null ? rctrl.getIcon() : null;
+		String icon = rctrl != null ? rctrl.getImage() : null;
 		Dispatch disp = icon != null && !icon.isEmpty() ? iconManager.get(icon) : null;
 		return disp;
 	}

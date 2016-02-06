@@ -42,7 +42,7 @@ public class RibbonButton extends RibbonControl {
 		this.onAction = onAction;
 	}
 
-	public String getIcon() {
+	public String getImage() {
 		return image;
 	}
 
