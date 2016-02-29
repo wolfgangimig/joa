@@ -49,5 +49,9 @@ public @interface DeclAddin {
 	 */
 	String friendlyName();
 
+	/**
+	 * Load behavior. This element controls when the Addin is loaded.
+	 * @return Load behavior.
+	 */
 	LoadBehavior loadBehavior() default LoadBehavior.LoadOnStartFirstTime;
 }

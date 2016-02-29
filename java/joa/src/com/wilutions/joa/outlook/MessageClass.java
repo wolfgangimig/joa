@@ -12,7 +12,7 @@ package com.wilutions.joa.outlook;
 
 /**
  * Predefined Outlook message classes.
- * @see http://msdn.microsoft.com/en-us/library/bb206787(v=office.12).aspx
+ * @see <a href="http://msdn.microsoft.com/en-us/library/bb206787(v=office.12).aspx">Specifying Form Regions in the Windows Registry</a>
  */
 public class MessageClass {
 	

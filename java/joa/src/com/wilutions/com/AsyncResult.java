@@ -13,7 +13,7 @@ package com.wilutions.com;
 /**
  * Asynchronous result. 
  *
- * @param <T>
+ * @param <T> Result type.
  */
 public interface AsyncResult<T> {
 	public void setAsyncResult(T obj, Throwable ex);

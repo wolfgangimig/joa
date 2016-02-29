@@ -14,9 +14,9 @@ package com.wilutions.joa;
  * Load behavior values.
  * This values control when the host application loads the Addin.
  * During registration, the value is written into the registry:
- * HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\<progid>\LoadBehavior
- * @see http://msdn.microsoft.com/en-us/library/office/aa209964(v=office.11).aspx
- *
+ * HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\&lt;progid&gt;\LoadBehavior
+ * @see  <a href="http://msdn.microsoft.com/en-us/library/office/aa209964(v=office.11).aspx"></a>
+ * @see DeclAddin#loadBehavior()
  */
 public enum LoadBehavior {
 	
@@ -28,8 +28,7 @@ public enum LoadBehavior {
 	/**
 	 * The Addin is loaded on startup.
 	 * Outlook loads the Adding during startup. This is shown in the splash screen.
-	 * The method {@link IDTExtensibiltiy2#onConnection(com.wilutions.com.Dispatch, int, com.wilutions.com.Dispatch, com.wilutions.com.ByRef)}
-	 * is called with {@link ext_ConnectMode#ext_cm_Startup}.
+	 * The method IDTExtensibiltiy2.onConnection is called with ext_ConnectMode.ext_cm_Startup.
 	 * If the Addin loads slowly, Outlook might decide to set the load state to {@link #DoNotLoad}.
 	 */
 	LoadOnStart(3),
@@ -45,8 +44,7 @@ public enum LoadBehavior {
 	/**
 	 * The Addin is loaded on demand.
 	 * Outlook loads the Addin after it has created its main window.
-	 * The method {@link IDTExtensibiltiy2#onConnection(com.wilutions.com.Dispatch, int, com.wilutions.com.Dispatch, com.wilutions.com.ByRef)}
-	 * is called with {@link ext_ConnectMode#ext_cm_AfterStartup}.
+	 * The method IDTExtensibiltiy2.onConnection is called with ext_ConnectMode.ext_cm_AfterStartup.
 	 */
 	LoadOnDemand(8),
 	
@@ -57,7 +55,7 @@ public enum LoadBehavior {
 	 * which includes bit LoadOnDemand. 
 	 * The Addin should add any controls to the user interface of Outlook (e.g. Ribbon tab),
 	 * otherwise it might never be loaded.
-	 * This value is the default for Addins registered with JOA, see {@link DeclAddin#loadBehavior()}.
+	 * This value is the default for Addins registered with JOA.
 	 */
 	LoadOnStartFirstTime(16); 
 	

@@ -16,8 +16,9 @@ import com.wilutions.com.ComException;
 import com.wilutions.com.IDispatch;
 
 /**
- * @see http://msdn.microsoft.com/en-us/library/extensibility.idtextensibility2.aspx
+ * COM interface for extending Microsoft Office application.
  * Hint: onDisconnection and onBeginShutdown are not called by Outlook, see http://stackoverflow.com/questions/4378203/excel-addin-ondisconnection-onbeginshutdown-not-called-on-logoff.
+ * @see <a href="http://msdn.microsoft.com/en-us/library/extensibility.idtextensibility2.aspx">idtextensibility2</a>
  */
 @CoInterface(guid="{B65AD801-ABAF-11D0-BB8B-00A0C90F2744}")
 public interface IDTExtensibiltiy2 extends IDispatch {

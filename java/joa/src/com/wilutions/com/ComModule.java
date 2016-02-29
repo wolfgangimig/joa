@@ -62,7 +62,7 @@ public abstract class ComModule {
 	 * Registration for all users requires administration permissions.
 	 * @param perUserNotMachine If true, registration is made for the current user. 
 	 * @param path File system to the javaw.exe and command line arguments.
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs. Thrown, if a COM related error occurs.
 	 */
 	public void register(boolean perUserNotMachine, String path) throws ComException {
 		for (Class<?> cls : getCoClasses())
@@ -76,7 +76,7 @@ public abstract class ComModule {
 	/**
 	 * Unregister the Module with COM.
 	 * @param perUserNotMachine If true, registration is made for the current user. 
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void unregister(boolean perUserNotMachine) throws ComException {
 		for (Class<?> cls : getCoClasses())

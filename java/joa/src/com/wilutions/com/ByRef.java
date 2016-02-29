@@ -13,7 +13,7 @@ package com.wilutions.com;
 /**
  * Wrapper class for parameters called by reference.
  *
- * @param <T>
+ * @param <T> Type
  */
 public class ByRef<T> {
 	

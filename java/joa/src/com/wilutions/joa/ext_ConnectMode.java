@@ -14,7 +14,7 @@ import com.wilutions.mslib.office.MsoExtraInfoMethod;
 
 /**
  * Connect mode.
- * @see http://msdn.microsoft.com/en-us/library/extensibility.ext_connectmode.aspx
+ * @see <a href="http://msdn.microsoft.com/en-us/library/extensibility.ext_connectmode.aspx">ext_connectmode</a>
  */
 public enum ext_ConnectMode {
 	

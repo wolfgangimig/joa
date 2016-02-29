@@ -14,7 +14,7 @@ import com.wilutions.mslib.office.MsoExtraInfoMethod;
 
 /**
  * Disconnect mode.
- * @see http://msdn.microsoft.com/en-us/library/extensibility.ext_disconnectmode.aspx
+ * @see <a href="http://msdn.microsoft.com/en-us/library/extensibility.ext_disconnectmode.aspx">ext_disconnectmode</a>
  */
 public enum ext_DisconnectMode {
 	

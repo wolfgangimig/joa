@@ -31,18 +31,20 @@ import com.wilutions.com.JoaDll;
  *
  */
 public class RegUtil {
-	
+
 	private static Logger log = Logger.getLogger("RegUtil");
-	
+
 	/**
-	 * Returns application path of self contained application.
-	 * If running as a JavaFX packaged application, this function returns the path
-	 * instdir/app.
-	 * @return application path or null (if not running as a packaged application).
+	 * Returns application path of self contained application. If running as a
+	 * JavaFX packaged application, this function returns the path instdir/app.
+	 * 
+	 * @return application path or null (if not running as a packaged
+	 *         application).
 	 */
 	public static File getAppPathIfSelfContained() {
 		String launcherPath = System.getProperty("java.launcher.path");
-		if (launcherPath == null || launcherPath.isEmpty()) return null;
+		if (launcherPath == null || launcherPath.isEmpty())
+			return null;
 		File dir = new File(launcherPath);
 		return new File(dir, "app");
 	}
@@ -56,17 +58,20 @@ public class RegUtil {
 	 * @return File system path
 	 */
 	public static String getExecPath(Class<?> mainClass) {
-		if (log.isLoggable(Level.FINE)) log.fine("getExecPath("); 
+		if (log.isLoggable(Level.FINE))
+			log.fine("getExecPath(");
 		String javaHome = System.getProperty("java.home");
 		StringBuilder path = new StringBuilder();
 
 		System.out.println("javaHome=" + javaHome);
-		if (log.isLoggable(Level.FINE)) log.fine("javaHome=" + javaHome); 
+		if (log.isLoggable(Level.FINE))
+			log.fine("javaHome=" + javaHome);
 
 		// Self-contained Java application?
 		String launcherPath = System.getProperty("java.launcher.path");
 		File selfInstDir = launcherPath != null ? new File(launcherPath) : null;
-		if (log.isLoggable(Level.FINE)) log.fine("selfInstDir=" + selfInstDir); 
+		if (log.isLoggable(Level.FINE))
+			log.fine("selfInstDir=" + selfInstDir);
 
 		if (selfInstDir != null) {
 
@@ -77,7 +82,8 @@ public class RegUtil {
 					return name.toLowerCase().endsWith(".exe");
 				}
 			});
-			if (log.isLoggable(Level.FINE)) log.fine("found exe=" + Arrays.toString(filesInAppDir)); 
+			if (log.isLoggable(Level.FINE))
+				log.fine("found exe=" + Arrays.toString(filesInAppDir));
 			if (filesInAppDir.length != 0) {
 				File appFile = filesInAppDir[0];
 				path.append("\"");
@@ -88,17 +94,19 @@ public class RegUtil {
 			}
 
 		} else {
-			
+
 			// The returned path should not be longer than 256 (MAX_PATH)
-			// characters. Otherwise Outlook ignores the Addin. Although a VBS script is
+			// characters. Otherwise Outlook ignores the Addin. Although a VBS
+			// script is
 			// able to create the Addin.
 			// To support long command lines, always create a BAT file
 			// that starts the addin application.
 
 			final File file = new File(mainClass.getName() + ".bat");
 			final String CRLF = "\r\n";
-			
-			if (log.isLoggable(Level.FINE)) log.fine("register " + file); 
+
+			if (log.isLoggable(Level.FINE))
+				log.fine("register " + file);
 
 			path.append("pushd \"").append(file.getAbsoluteFile().getParent()).append("\"");
 			path.append(CRLF);
@@ -133,7 +141,8 @@ public class RegUtil {
 			path.append("\"");
 		}
 
-		if (log.isLoggable(Level.FINE)) log.fine(")getExecPath=" + path); 
+		if (log.isLoggable(Level.FINE))
+			log.fine(")getExecPath=" + path);
 		return path.toString();
 	}
 
@@ -185,6 +194,7 @@ public class RegUtil {
 	 *            Registry value name
 	 * @param value
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void setRegistryValue(String key, String name, int value) throws ComException {
 		JoaDll.nativeSetRegistryValue(key, name, value);
@@ -199,6 +209,7 @@ public class RegUtil {
 	 *            Registry value name
 	 * @param value
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void setRegistryValue(String key, String name, String value) throws ComException {
 		JoaDll.nativeSetRegistryValue(key, name, value);
@@ -210,6 +221,7 @@ public class RegUtil {
 	 * @param key
 	 *            Registry key
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void purgeRegistryKey(String key) throws ComException {
 		JoaDll.nativeDeleteRegistryKey(key, true);
@@ -221,6 +233,7 @@ public class RegUtil {
 	 * @param key
 	 *            Registry key
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static boolean deleteRegistryKey(String key) throws ComException {
 		return JoaDll.nativeDeleteRegistryKey(key, false);
@@ -234,6 +247,7 @@ public class RegUtil {
 	 * @param valueName
 	 *            Registry value name
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void deleteRegistryValue(String key, String valueName) throws ComException {
 		JoaDll.nativeDeleteRegistryValue(key, valueName);
@@ -247,6 +261,7 @@ public class RegUtil {
 	 *            HKEY_CLASSES_ROOT
 	 * @return Root key for COM classes.
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static String getClassesRoot(boolean perUserNotMachine) throws ComException {
 		return JoaDll.nativeGetClassesRoot(perUserNotMachine);
@@ -267,6 +282,7 @@ public class RegUtil {
 	 *            Path to invoke the COM server for this class. Usually the
 	 *            return value of {@link #getExecPath(Class)}.
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void registerLocalServer32(boolean perUserNotMachine, String className, String clsid, String progId,
 			String path) throws ComException {
@@ -296,6 +312,7 @@ public class RegUtil {
 	 * @param progId
 	 *            Program ID
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void unregisterLocalServer32(boolean perUserNotMachine, String className, String clsid, String progId)
 			throws ComException {
@@ -320,6 +337,7 @@ public class RegUtil {
 	 *            Java class to be registered. This class must be annotated with
 	 *            {@link CoClass}.
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void registerCoClass(boolean perUserNotMachine, String path, Class<?> coclass) throws ComException {
 		CoClass coClassAnnotation = coclass.getAnnotation(CoClass.class);
@@ -341,6 +359,7 @@ public class RegUtil {
 	 *            Java class to be registered. This class must be annotated with
 	 *            {@link CoClass}.
 	 * @throws ComException
+	 *             Thrown, if a COM related error occurs.
 	 */
 	public static void unregisterCoClass(boolean perUserNotMachine, Class<?> coclass) throws ComException {
 		CoClass coClassAnnotation = coclass.getAnnotation(CoClass.class);
@@ -383,5 +402,35 @@ public class RegUtil {
 	 */
 	public static Object getRegistryValue(String key, String name, Object defaultValue) {
 		return JoaDll.nativeGetRegistryValue(key, name, defaultValue);
+	}
+
+	public static boolean isOutlook64() {
+		boolean ret = System.getProperty("os.arch").contains("64");
+		if (ret) {
+			int supportedVersionMin = 14;
+			int supportedVersionMax = 20;
+			Object bitness = "";
+			boolean found = false;
+			String[] HKLMs = { "HKLM\\SOFTWARE", "HKLM\\SOFTWARE\\WOW6432Node" };
+			for (int version = supportedVersionMax; !found && version >= supportedVersionMin; version--) {
+				for (int i = 0; !found && i < HKLMs.length; i++) {
+					String key = HKLMs[i] + "\\Microsoft\\Office\\" + version + ".0\\Outlook";
+					bitness = getRegistryValue(key, "Bitness", "");
+					found = bitness != null && bitness.toString().length() != 0;
+				}
+			}
+			if (!found) {
+				throw new IllegalStateException("Cannot detect Outlook bitness from HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office\\[.].0\\Outlook\\Bitness");
+			}
+			if (found) {
+				ret = bitness.equals("x64");
+			}
+		}
+		return ret;
+	}
+	
+	public static void main(String[] args) {
+		boolean is64 = isOutlook64();
+		System.out.println(is64);
 	}
 }

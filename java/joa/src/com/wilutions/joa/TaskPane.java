@@ -26,10 +26,10 @@ import com.wilutions.mslib.office._CustomTaskPaneEvents;
  * Base class for task panes.
  * This class wraps a native task pane COM object that is created by 
  * the Microsoft Office application in a call to {@link OfficeAddin#createTaskPaneWindowAsync}.
- * When a TaskPane object is shown in {@link #show}, it is attached to the event interface 
+ * When a TaskPane object is shown in {@link #showAsync(CustomTaskPane, AsyncResult)}, it is attached to the event interface 
  * {@link _CustomTaskPaneEvents} of the COM object.  
  * http://msdn.microsoft.com/en-us/library/microsoft.office.core._customtaskpaneevents_members.aspx
- * @see http://msdn.microsoft.com/en-us/library/aa942864.aspx
+ * @see <a href="http://msdn.microsoft.com/en-us/library/aa942864.aspx">Custom Task Panes</a>
  */
 public abstract class TaskPane extends DispatchImpl implements WindowHandle, _CustomTaskPaneEvents {
 
@@ -115,7 +115,7 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	 * Build a Java window inside the given task pane created by Office.
 	 * @param taskPane COM object created by Office in a call to {@link OfficeAddin#createTaskPaneWindowAsync(TaskPane, String, Object, com.wilutions.com.AsyncResult)}.
 	 * @param asyncResult Callback object to be called after the new task pane is made visible. This parameter can be null. 
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void showAsync(final CustomTaskPane taskPane, AsyncResult<Boolean> asyncResult) throws ComException {
 
@@ -170,7 +170,7 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	/**
 	 * Returns true, if the task pane is visible.
 	 * @return true, if visible.
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public boolean isVisible() throws ComException {
 		return customTaskPane != null && customTaskPane.getVisible();
@@ -179,7 +179,7 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	/**
 	 * Show or hide the task pane.
 	 * @param v 
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void setVisible(final boolean v) throws ComException {
 		setVisible(v, null);
@@ -189,7 +189,7 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	 * Show or hide the task pane.
 	 * @param v 
 	 * @param asyncResult
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void setVisible(final boolean v, AsyncResult<Boolean> asyncResult) throws ComException {
 		// Call taskPane.setVisible in background thread.

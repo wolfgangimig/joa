@@ -46,7 +46,7 @@ public class Dispatch implements IDispatch {
 	 * 
 	 * @param progId
 	 *            Registered program ID.
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public Dispatch(String progId) throws ComException {
 		JoaDll.nativeCoCreateInstance(progId, this, "");
@@ -59,7 +59,7 @@ public class Dispatch implements IDispatch {
 	 *            Registered program ID.
 	 * @param iid
 	 *            COM interface GUID
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public Dispatch(String progId, String iid) throws ComException {
 		JoaDll.nativeCoCreateInstance(progId, this, iid);
@@ -242,9 +242,9 @@ public class Dispatch implements IDispatch {
 	 * Attach an event handler object. This function "advises" the handler's
 	 * interfaces to the matching interfaces of the connection points.
 	 * 
-	 * @param handler
-	 * @throws ComException
-	 * @see {@link releaseEvents}
+	 * @param handler Event handler object
+	 * @throws ComException Thrown, if a COM related error occurs.
+	 * @see #releaseEvents(DispatchImpl)
 	 */
 	public void withEvents(DispatchImpl handler) throws ComException {
 		JoaDll.dispatchWithEvents(this, handler);
@@ -257,7 +257,7 @@ public class Dispatch implements IDispatch {
 	 *            Dispatch object
 	 * @param handler
 	 *            Handler object
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public static void withEvents(IDispatch disp, DispatchImpl handler) throws ComException {
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "withEvents(");
@@ -274,7 +274,7 @@ public class Dispatch implements IDispatch {
 	 * 
 	 * @param handler
 	 *            Handler object
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void releaseEvents(DispatchImpl handler) throws ComException {
 		JoaDll.dispatchReleaseEvents(this, handler);
@@ -287,7 +287,7 @@ public class Dispatch implements IDispatch {
 	 *            Dispatch object
 	 * @param handler
 	 *            Handler object
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public static void releaseEvents(IDispatch disp, DispatchImpl handler) throws ComException {
 		if (disp == null || handler == null)

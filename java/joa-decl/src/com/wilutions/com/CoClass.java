@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
 
 /**
  * This annotation marks classes that implement the COM IDispatch interface.
- * Annotated classes must extend {@link DispatchImpl}.
+ * Annotated classes must extend com.wilutions.com.DispatchImpl
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})

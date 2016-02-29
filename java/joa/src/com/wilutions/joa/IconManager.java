@@ -136,7 +136,7 @@ public class IconManager {
 	 * @param contentType
 	 *            Optional: content type or file extension (starting with dot).
 	 * @return IPictureDisp object.
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public static Dispatch createIPictureDisp(byte[] image, String contentType) throws ComException {
 		assert image != null && image.length != 0;

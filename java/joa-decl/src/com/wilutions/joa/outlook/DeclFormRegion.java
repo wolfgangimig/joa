@@ -31,7 +31,6 @@ public @interface DeclFormRegion {
 	/**
 	 * Message classes for which the form region has to be displayed.
 	 * @return Array of message classes.
-	 * @see MessageClass
 	 */
 	String[] messageClasses();
 	

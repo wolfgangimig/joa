@@ -165,7 +165,7 @@ public abstract class ModalDialogSwing<T> implements WindowHandle, FrameContentF
 	 * 
 	 * @param ret
 	 *            Result object
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void setResult(T ret) {
 		this.result = ret;

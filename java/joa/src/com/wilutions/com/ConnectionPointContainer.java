@@ -33,10 +33,6 @@ public class ConnectionPointContainer {
 		provideConnectionPoint(guid);
 	}
 	
-	/**
-	 * Called from JNI.
-	 * @return
-	 */
 	public synchronized String[] getAllConnectionPointGuids() {
 		String[] arr = new String[connPoints.size()];
 		int i = 0;

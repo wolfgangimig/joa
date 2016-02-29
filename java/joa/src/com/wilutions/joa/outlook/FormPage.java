@@ -37,7 +37,7 @@ import com.wilutions.mslib.outlook._Inspector;
  * disadvantage compared to form regions and that is why form regions should be
  * preferred over form pages.
  * 
- * @see http://www.outlookcode.com/article.aspx?id=67
+ * @see <a href="http://www.outlookcode.com/article.aspx?id=67">Outlook Custom Forms Security Issues</a>
  */
 public abstract class FormPage extends DispatchImpl implements FormEvents, WindowHandle {
 

@@ -16,8 +16,6 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
-import javafx.application.Platform;
-
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ByRef;
@@ -42,12 +40,14 @@ import com.wilutions.mslib.outlook._Explorer;
 import com.wilutions.mslib.outlook._FormRegionStartup;
 import com.wilutions.mslib.outlook.impl._ExplorerImpl;
 
+import javafx.application.Platform;
+
 // https://social.technet.microsoft.com/Forums/en-US/419e76eb-5728-432f-b3b9-04769b32fe1a/is-it-possible-to-develop-microsoft-outlook-plugins-in-java?forum=outlookdev
 
 /**
  * Base class for Microsoft Outlook Addins. This class implements the following
  * event interfaces:
- * <table>
+ * <table summary="">
  * <tr>
  * <td>{@link ApplicationEvents_11}</td>
  * <td>http://msdn.microsoft.com/en-us/library/microsoft.office.interop.outlook.
@@ -58,6 +58,7 @@ import com.wilutions.mslib.outlook.impl._ExplorerImpl;
  * <td>http://msdn.microsoft.com/en-us/library/microsoft.office.interop.outlook.
  * _formregionstartup(v=office.15).aspx</td>
  * </tr>
+ * </table>
  */
 public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlook.Application> implements
 		ApplicationEvents_11, _FormRegionStartup {
@@ -82,10 +83,8 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	 * @param item
 	 *            ContactItem, MailItem, ...
 	 * @return true, if the item is modified (and not jet saved).
-	 * @throws ComException
-	 * @see http
-	 *      ://msdn.microsoft.com/en-us/library/office/gg583879(v=office.14).
-	 *      aspx
+	 * @throws ComException Thrown, if a COM related error occurs.
+	 * @see <a href="http://msdn.microsoft.com/en-us/library/office/gg583879(v=office.14).aspx">Verifying Whether an Outlook Item Has Been Modified but Not Saved</a>
 	 */
 	public static boolean isItemModified(Dispatch item) throws ComException {
 		final int dispidModified = 0xF024;
@@ -209,10 +208,10 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	 * @param viewId
 	 *            Arbitrary string to be passed in
 	 *            {@link FolderView#setId(String)}.
-	 * @throws IOException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public void assignFolderView(MAPIFolder folder, Class<? extends FolderView> viewType, String title, String viewId)
-			throws IOException {
+			throws ComException {
 		String webViewFile = createFolderViewHtml(viewType, title, viewId);
 		folder.setWebViewURL(webViewFile);
 		folder.setWebViewOn(true);
@@ -231,7 +230,7 @@ public abstract class OutlookAddin extends OfficeAddin<com.wilutions.mslib.outlo
 	 *            Arbitrary string to be passed in
 	 *            {@link FolderView#setId(String)}.
 	 * @return Temporary file that defines the folder's view.
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	protected String createFolderViewHtml(Class<? extends FolderView> viewType, String title, String viewId)
 			throws ComException {

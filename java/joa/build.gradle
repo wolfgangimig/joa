@@ -1,11 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 sourceCompatibility = 1.8
 
 group = 'com.wilutions.joa'
 version = '0.9.0'
+archivesBaseName = 'JOA'
+
+
 
 sourceSets {
     main {
@@ -38,8 +43,22 @@ test {
     systemProperties 'property': 'value'
 }
 
-task sourceJar(type: Jar) {
+task sourcesJar(type: Jar) {
+	classifier = 'sources'
     from sourceSets.main.allJava
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
 }
 
 model {
@@ -53,7 +72,7 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
             
-            artifact sourceJar {
+            artifact sourcesJar {
                 classifier "sources"
             }
         }
@@ -62,8 +81,53 @@ publishing {
 
 uploadArchives {
     repositories {
-       flatDir {
-           dirs 'repos'
-       }
+    	mavenDeployer {
+    	
+    		beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+    		
+    		repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+        		authentication(userName: ossrhUsername, password: ossrhPassword)
+      		}
+
+      		snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+        		authentication(userName: ossrhUsername, password: ossrhPassword)
+      		}
+    		
+		    pom.project {
+		        name 'JOA'
+		        packaging 'jar'
+		        
+		        // optionally artifactId can be defined here 
+		        description 'Java Library for Micosoft Office Add-ins'
+		        url 'http://www.wilutions.com/joa/index.html'
+		
+		        scm {
+		          connection 'scm:https://github.com/wolfgangimig/joa'
+		          developerConnection 'scm:https://github.com/wolfgangimig/joa'
+		          url 'https://github.com/wolfgangimig/joa'
+		        }
+		
+		        licenses {
+		          license {
+		            name 'The MIT License (MIT)'
+		            url 'https://raw.githubusercontent.com/wolfgangimig/joa/master/LICENSE.md'
+		          }
+		        }
+		
+		        developers {
+		          developer {
+		            id 'wimix'
+		            name 'Wolfgang Imig'
+		            email 'wolfgang.imig@googlemail.com'
+		          }
+		        }
+		      }
+		      
+		      
+		      
+       		flatDir {
+           		dirs 'repos'
+       		}
+       	}
     }
 }

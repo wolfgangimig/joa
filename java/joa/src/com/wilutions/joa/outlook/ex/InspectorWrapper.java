@@ -46,7 +46,7 @@ public class InspectorWrapper extends DispatchImpl implements InspectorEvents_10
 	 *            The inspector's current item. Sometimes the getCurrentItem
 	 *            Method does not return the item after the inspector has been
 	 *            opened. For this reason, it is passed explicitly here.
-	 * @throws ComException
+	 * @throws ComException Thrown, if a COM related error occurs.
 	 */
 	public InspectorWrapper(Inspector inspector, IDispatch currentItem) throws ComException {
 		this.inspector = inspector;
