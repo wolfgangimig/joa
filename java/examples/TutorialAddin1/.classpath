@@ -8,11 +8,12 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/git/joa/java/lib/joa.jar" sourcepath="D:/git/joa/java/lib/joa-src.jar"/>
 	<classpathentry kind="src" path="src-gen">
 		<attributes>
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/joa"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/joa-decl"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
