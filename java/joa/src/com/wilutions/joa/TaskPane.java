@@ -221,5 +221,20 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 		return customTaskPane != null;
 	}
 	
+
+	public void setDefaultWidth(int v) {
+		reg_width = v;
+	}
+	public int getDefaultWidth() {
+		return reg_width;
+	}
+	
+	public void setDefaultHeight(int v) {
+		reg_height = v;
+	}
+	public int getDefaultHeight() {
+		return reg_height;
+	}
+	
 	
 }

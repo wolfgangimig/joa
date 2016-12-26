@@ -298,24 +298,49 @@ public class Registry {
 			ret = RegUtil.getRegistryValue(key, fieldName, "");
 		}
 		else if (fieldType == Integer.class || fieldType == int.class) {
-			Object regValue = RegUtil.getRegistryValue(key, fieldName, Integer.valueOf(0));
-			ret = (Integer) regValue;
+			Object regValue = RegUtil.getRegistryValue(key, fieldName, null);
+			if (regValue != null) {
+				try {
+					ret = (Integer)regValue;
+				}
+				catch (Exception ignored) {}
+			}
 		}
 		else if (fieldType == Long.class || fieldType == long.class) {
-			Object regValue = RegUtil.getRegistryValue(key, fieldName, "0");
-			ret = Long.valueOf((String) regValue);
+			Object regValue = RegUtil.getRegistryValue(key, fieldName, null);
+			if (regValue != null) {
+				try {
+					ret = Long.valueOf((String) regValue);
+				}
+				catch (Exception ignored) {}
+			}
 		}
 		else if (fieldType == Double.class || fieldType == double.class) {
-			Object regValue = RegUtil.getRegistryValue(key, fieldName, "0");
-			ret = Double.valueOf((String) regValue);
+			Object regValue = RegUtil.getRegistryValue(key, fieldName, null);
+			if (regValue != null) {
+				try {
+					ret = Double.valueOf((String) regValue);
+				}
+				catch (Exception ignored) {}
+			}
 		}
 		else if (fieldType == Float.class || fieldType == float.class) {
-			Object regValue = RegUtil.getRegistryValue(key, fieldName, "0.f");
-			ret = Float.valueOf((String) regValue);
+			Object regValue = RegUtil.getRegistryValue(key, fieldName, null);
+			if (regValue != null) {
+				try {
+					ret = Float.valueOf((String) regValue);
+				}
+				catch (Exception ignored) {}
+			}
 		}
 		else if (fieldType == Boolean.class || fieldType == boolean.class) {
 			Object regValue = RegUtil.getRegistryValue(key, fieldName, Boolean.FALSE.toString());
-			ret = Boolean.valueOf((String) regValue);
+			if (regValue != null) {
+				try {
+					ret = Boolean.valueOf((String) regValue);
+				}
+				catch (Exception ignored) {}
+			}
 		}
 		else if (fieldType.isEnum()) {
 			String enumValueStr = (String) RegUtil.getRegistryValue(key, fieldName, "");
