@@ -3,6 +3,8 @@ package com.wilutions.joa.fx;
 import com.wilutions.com.AsyncResult;
 import com.wilutions.joa.TaskPane;
 
+import javafx.stage.Window;
+
 /**
  * Taks pane base class for JavaFX views.
  *
@@ -20,9 +22,9 @@ public abstract class TaskPaneFX extends TaskPane implements FrameContentFactory
 		return embeddedFrame.getWindowHandle();
 	}
 	
-//	public Window getFXWindow() {
-//		return embeddedFrame.getFXWindow();
-//	}
+	public Window getWindow() {
+		return embeddedFrame.getWindow();
+	}
 
 	@Override
 	public void close() {

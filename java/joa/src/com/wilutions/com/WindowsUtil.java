@@ -12,9 +12,9 @@ package com.wilutions.com;
 
 import java.lang.reflect.Method;
 
-import sun.awt.windows.WComponentPeer;
-
 import com.wilutions.joa.fx.EmbeddedWindow;
+
+import sun.awt.windows.WComponentPeer;
 
 public class WindowsUtil {
 	
@@ -41,11 +41,6 @@ public class WindowsUtil {
 		return window != null && window.getPeer() != null ? ((WComponentPeer) window.getPeer()).getHWnd() : 0;
 	}
 	
-	public static long getWindowHandle(EmbeddedWindow fxFrame) {
-		if (fxFrame == null) return 0;
-		return getWindowHandle((java.awt.Window)fxFrame);
-	}
-	
 	/**
 	 * Replace forbidden characters for file names with underscore.
 	 * @param fname
@@ -57,5 +52,9 @@ public class WindowsUtil {
 			fname = fname.replace(forbiddenChars.charAt(i), '_');
 		}
 		return fname;
+	}
+
+	public static long getWindowHandle(EmbeddedWindow window) {
+		return getWindowHandle(window.getWindow());
 	}
 }

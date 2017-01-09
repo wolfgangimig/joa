@@ -25,7 +25,7 @@ import java.util.Properties;
 public class JoaDll {
 	
 	static {
-		boolean isDebug = true;
+		boolean isDebug = false;
 		String fileName = "joa" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		
@@ -176,9 +176,9 @@ public class JoaDll {
 			int opts);
 
 	public static native void nativeSetParent(Object fxstage, long joaCtrlHandle, long javaWindowHandle,
-			int framePaddingX, int framePaddingY) throws ComException;
+			int framePaddingX, int framePaddingY);
 
-	public static native void nativeGetWindowClientAreaPos(long hwnd, int[] xy);
+	public static native void nativeGetWindowClientAreaPos(long hwnd, double[] xy);
 
 	public static native Object nativeGetRegistryValue(String key, String name, Object defaultValue);
 
@@ -199,13 +199,11 @@ public class JoaDll {
 
 	public static native Object nativeCreateIPictureDisp(byte[] imageBytes);
 	
-	public static native Class<?> nativeLoadEmbeddedWindowClass();
-	
-	public static native void nativeUpdatePrivateClasses(String privateClassesDir);
-	
 	public static native void nativeActivateSceneInDialog(long hwnd);
 	
 	public static native String nativeGetModuleFileName();
 	
 	public static native void nativeCreateShortcut(String linkName, String targetName, String description);
+	
+	public static native long createEmbeddedFrame(long hwndStage);
 }

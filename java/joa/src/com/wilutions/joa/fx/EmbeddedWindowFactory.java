@@ -10,21 +10,12 @@
  */
 package com.wilutions.joa.fx;
 
-import java.lang.reflect.Constructor;
-
 import javafx.application.Platform;
 import javafx.scene.Scene;
-
-import com.wilutions.com.JoaDll;
 
 public class EmbeddedWindowFactory {
 
 	private EmbeddedWindowFactory() {
-		try {
-			embeddedWindowClass = Class.forName("com.wilutions.joa.fx.JFXEmbeddedFrame");
-		} catch (ClassNotFoundException ignored) {
-			embeddedWindowClass = JoaDll.nativeLoadEmbeddedWindowClass();
-		}
 	}
 
 	public static synchronized EmbeddedWindowFactory getInstance() {
@@ -41,8 +32,7 @@ public class EmbeddedWindowFactory {
 		assert Platform.isFxApplicationThread();
 
 		try {
-			Constructor<?> constructor = embeddedWindowClass.getConstructor(long.class, Scene.class);
-			EmbeddedWindow wnd = (EmbeddedWindow) constructor.newInstance(hwndParent, scene);
+			EmbeddedWindow wnd = new JFXEmbeddedFrame(hwndParent, scene);
 			return wnd;
 		} catch (Throwable e) {
 			throw new IllegalStateException(e);
@@ -51,5 +41,4 @@ public class EmbeddedWindowFactory {
 	}
 
 	private static EmbeddedWindowFactory instance;
-	private Class<?> embeddedWindowClass;
 }

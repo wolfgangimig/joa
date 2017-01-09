@@ -108,6 +108,7 @@ public class RegUtil {
 			if (log.isLoggable(Level.FINE))
 				log.fine("register " + file);
 
+			path.append("@echo off").append(CRLF);
 			path.append("pushd \"").append(file.getAbsoluteFile().getParent()).append("\"");
 			path.append(CRLF);
 

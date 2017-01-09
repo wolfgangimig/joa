@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project joa">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}"/>
+    <property name="dir.jarfile" value="D:/"/>
+    <target name="create_run_jar">
+        <jar destfile="D:/testdialog.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.wilutions.joa.fx.TestDialog"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="D:/git/joladin/joa/java/joa/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/Wolfgang/.gradle/caches/modules-2/files-2.1/com.jhlabs/filters/2.0.235/af6a2dfefef70f1ab2d7a8d1f8173f67e276b3f4/filters-2.0.235.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/Wolfgang/.gradle/caches/modules-2/files-2.1/org.swinglabs/jxlayer/3.0.4/9d529d01333befb7946619c0f9e1fe3f0be18bbe/jxlayer-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/Wolfgang/.gradle/caches/modules-2/files-2.1/org.swinglabs/swing-worker/1.1/2392206f318ef3af02f8e8a30b2963c253a70390/swing-worker-1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/Wolfgang/.gradle/caches/modules-2/files-2.1/org.swinglabs/swingx/1.6.1/a4abf05f5f1d3b020ec4099495dcd1452b615e26/swingx-1.6.1.jar"/>
+            <fileset dir="D:/git/joladin/joa/java/joa-decl/bin"/>
+        </jar>
+    </target>
+</project>

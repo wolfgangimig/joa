@@ -37,6 +37,8 @@ repositories {
 
 dependencies {
 	compile project (":joa-decl")
+	compile group: 'org.swinglabs', name: 'jxlayer', version: '3.0.4' 
+	compile group: 'org.swinglabs', name: 'swingx', version: '1.6.1' 
 }
 
 test {

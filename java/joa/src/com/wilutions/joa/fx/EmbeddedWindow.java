@@ -10,8 +10,9 @@
 */
 package com.wilutions.joa.fx;
 
+import javafx.stage.Window;
 
 public interface EmbeddedWindow {
 	public void dispose();
-//	public Window getWindow();
+	public Window getWindow();
 }

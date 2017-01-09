@@ -1,22 +1,23 @@
 package com.wilutions.joa.fx;
 
+import com.wilutions.com.AsyncResult;
+import com.wilutions.com.WindowHandle;
+import com.wilutions.com.WindowsUtil;
+
 import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
+import javafx.stage.Window;
 import javafx.stage.WindowEvent;
-
-import com.wilutions.com.AsyncResult;
-import com.wilutions.com.WindowHandle;
-import com.wilutions.com.WindowsUtil;
 
 public class EmbeddedFrameFX implements WindowHandle {
 
 	/**
 	 * JavaFX view.
 	 */
-	protected volatile EmbeddedWindow window;
+	protected volatile EmbeddedWindow embeddedWindow;
 
 	/**
 	 * Event handlers usually added to a Stage. Currently, only
@@ -31,8 +32,8 @@ public class EmbeddedFrameFX implements WindowHandle {
 	public void close() {
 
 		// Remove the JavaFX view.
-		if (window != null) {
-			window.dispose();
+		if (embeddedWindow != null) {
+			embeddedWindow.dispose();
 		}
 	}
 	
@@ -84,7 +85,11 @@ public class EmbeddedFrameFX implements WindowHandle {
 	 */
 	@Override
 	public long getWindowHandle() {
-		return WindowsUtil.getWindowHandle(window);
+		return WindowsUtil.getWindowHandle(embeddedWindow);
+	}
+
+	public Window getWindow() {
+		return embeddedWindow.getWindow();
 	}
 
 	/**
@@ -107,13 +112,14 @@ public class EmbeddedFrameFX implements WindowHandle {
 	private void internalCreateAndShow(long hwndParent, Scene frameContent, AsyncResult<Boolean> asyncResult) {
 		Throwable ex = null;
 		try {
-			// Create the Java window as a child window of the JoaBridgeCtrl.
-			window = EmbeddedWindowFactory.getInstance().create(hwndParent, frameContent);
+//			// Create the Java window as a child window of the JoaBridgeCtrl.
+			embeddedWindow = EmbeddedWindowFactory.getInstance().create(hwndParent, frameContent);
 
 			if (eventHandlerWindowShown != null) {
 				WindowEvent event = new WindowEvent(null, WindowEvent.WINDOW_SHOWN);
 				eventHandlerWindowShown.handle(event);
 			}
+
 		}
 		catch (Throwable e) {
 			ex = e;
@@ -124,5 +130,6 @@ public class EmbeddedFrameFX implements WindowHandle {
 			}
 		}
 	}
+
 
 }

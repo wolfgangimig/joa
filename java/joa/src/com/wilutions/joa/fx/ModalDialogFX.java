@@ -3,16 +3,8 @@ package com.wilutions.joa.fx;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javafx.application.Platform;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
-import javafx.scene.Scene;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.Window;
-
 import com.wilutions.com.AsyncResult;
+import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
 import com.wilutions.com.Dispatch;
 import com.wilutions.com.DispatchImpl;
@@ -22,13 +14,22 @@ import com.wilutions.joa.OfficeAddin;
 import com.wilutions.joactrllib.IJoaBridgeDialog;
 import com.wilutions.joactrllib._IJoaBridgeDialogEvents;
 
+import javafx.application.Platform;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+
 /**
  * This is the base class for all modal dialogs.
  *
  * @param <T>
  *            Result type of callback expression.
  */
-public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFactory {
+public abstract class ModalDialogFX<T> implements FrameContentFactory {
 
 	private static Logger log = Logger.getLogger(ModalDialogFX.class.getName());
 
@@ -123,9 +124,16 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	/**
 	 * Show the dialog box.
 	 * 
+	 * If _owner is an instance of Explorer or Inspector, this function opens a dialog box modal to the given explorer or inspector window. 
+	 * As a disadvantage, the dialog title is not shown activated when an input element in the form is active.  
+	 * 
+	 * If _owner is an instance of javafx.stage.Window, this function shows a dialog box modal to the given Window. 
+	 * The underlying explorer* or inspector window is not blocked.
+	 * 
 	 * @param _owner
-	 *            Owner object, explorer or inspector window, or an
-	 *            implementation of WindowHandle.
+	 *            Owner object, explorer or inspector window, an
+	 *            implementation of WindowHandle, or a javafx.stage.Window.
+	 *            
 	 * @param asyncResult
 	 *            Callback expression which is called, when the dialog is
 	 *            closed.
@@ -133,13 +141,14 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 	public void showAsync(Object _owner, final AsyncResult<T> asyncResult) {
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "showAsync(");
 		if (Platform.isFxApplicationThread()) {
-			internalShowAsync(_owner, asyncResult);
+			internalShowAsyncInFxThread(_owner, asyncResult);
 		}
 		else {
-			Platform.runLater(() -> internalShowAsync(_owner, asyncResult));
+			Platform.runLater(() -> internalShowAsyncInFxThread(_owner, asyncResult));
 		}
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")showAsync");
 	}
+
 
 	/**
 	 * Close dialog and invoke callback expression.
@@ -180,7 +189,10 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		}
 		if (asyncResult != null) {
 			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "setAsyncResult");
-			asyncResult.setAsyncResult(result, ex);
+			final Throwable fex = ex; 
+			BackgTask.run(() -> {
+				asyncResult.setAsyncResult(result, fex);
+			});
 		}
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")finish");
 	}
@@ -329,13 +341,14 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		return Double.valueOf(x).intValue();
 	}
 
+
 	private void internalShowFxDialogAsync(Window fxOwner, AsyncResult<T> asyncResult) {
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "internalShowFxDialogAsync(" + fxOwner);
 		try {
-			this.asyncResult = asyncResult;
 			fxDlg = new Stage();
 			fxDlg.initOwner(fxOwner);
-			fxDlg.initModality(Modality.WINDOW_MODAL);
+			fxDlg.setTitle(title);
+			fxDlg.initModality(Modality.APPLICATION_MODAL);
 			Scene scene = createScene();
 			fxDlg.setScene(scene);
 			fxDlg.showAndWait();
@@ -347,8 +360,11 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")internalShowFxDialogAsync");
 	}
 
-	private void internalShowAsync(Object _owner, AsyncResult<T> asyncResult) {
-		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "internalShowAsync(" + _owner);
+	private void internalShowAsyncInFxThread(Object _owner, AsyncResult<T> _asyncResult) {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "internalShowAsyncInFxThread(" + _owner);
+		
+		this.asyncResult = _asyncResult != null ? _asyncResult : ((ret, ex) -> {}); 
+		
 		// Is the owner a COM object or another WindowHandle?
 		// A COM object has to implement IOleWindow.
 		Dispatch dispOwner = null;
@@ -360,14 +376,19 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 			dispOwner = (Dispatch) _owner;
 		} else if (_owner instanceof Window) {
 			fxOwner = (Window) _owner;
+		} else if (_owner instanceof ModalDialogFX) {
+			@SuppressWarnings("rawtypes")
+			ModalDialogFX modalDialog = ((ModalDialogFX)_owner);
+			fxOwner = modalDialog.fxDlg;
+			if (fxOwner == null && modalDialog.joaDlg != null) {
+				hwndOwner = modalDialog.joaDlg.getHWND();
+			}
 		}
 		
-		if (hwndOwner == 0 && dispOwner == null && fxOwner != null) {
+		if (hwndOwner == 0 && dispOwner == null && fxOwner == null) {
 			Throwable ex = new IllegalStateException("Owner must not be null.");
 			log.log(Level.SEVERE, "internalShowAsync failed", ex);
-			if (asyncResult != null) {
-				asyncResult.setAsyncResult(null, ex);
-			}
+			asyncResult.setAsyncResult(null, ex);
 			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")internalShowAsync");
 			return;
 		}
@@ -417,63 +438,72 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 			Dispatch.withEvents(joaDlg, dialogHandler);
 
 			// Show native dialog
-			if (dispOwner != null) {
-				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "showModal3");
-				joaDlg.ShowModal3(dispOwner);
-			} else {
-				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "showModal2");
-				joaDlg.ShowModal2(hwndOwner);
-			}
-
-			// Wait until the native dialog fires the onShow
-			// event which is implemented by the DialogEventHandler.
-			// The hander stores the native dialog's window handle in hwndParent
-			// and sets the state as State.HasParentHwnd
-			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "wait until initialized");
-			synchronized (this) {
-				while (state == State.Initialized) {
-					this.wait();
-				}
-			}
-			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "wait OK, state=" + state);
-
-			// Native dialog initialized?
-			if (state == State.HasParentHwnd) {
-
-				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "createAndShowEmbeddedWindowAsync");
-
-				// Create a JavaFX frame inside the native dialog
-				embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, scene, (succ, ex) -> {
-					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "createAndShowEmbeddedWindowAsync result=" + succ + ", ex=" + ex);
-					if (ex == null) {
-						// Ensure the JavaFX frame is in the foreground.
-						long hwndChild = embeddedFrame.getWindowHandle();
-						JoaDll.nativeActivateSceneInDialog(hwndChild);
-					} else if (asyncResult != null) {
-						asyncResult.setAsyncResult(null, ex);
+			{
+				final Dispatch fdispOwner = dispOwner;
+				final long fhwndOwner = hwndOwner;
+				final DialogEventHandler fdialogHandler = dialogHandler;
+				BackgTask.run(() -> {
+					
+					if (fdispOwner != null) {
+						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "showModal3");
+						joaDlg.ShowModal3(fdispOwner);
+					} else {
+						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "showModal2");
+						joaDlg.ShowModal2(fhwndOwner);
 					}
+			
+					// Wait until the native dialog fires the onShow
+					// event which is implemented by the DialogEventHandler.
+					// The hander stores the native dialog's window handle in hwndParent
+					// and sets the state as State.HasParentHwnd
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "wait until initialized");
+					synchronized (this) {
+						while (state == State.Initialized) {
+							try {
+								this.wait();
+							} catch (InterruptedException ex) {
+								break;
+							}
+						}
+					}
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "wait OK, state=" + state);
+		
+					// Native dialog initialized?
+					if (state == State.HasParentHwnd) {
+		
+						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "createAndShowEmbeddedWindowAsync");
+		
+						// Create a JavaFX frame inside the native dialog
+						embeddedFrame.createAndShowEmbeddedWindowAsync(hwndParent, scene, (succ, ex) -> {
+							if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "createAndShowEmbeddedWindowAsync result=" + succ + ", ex=" + ex);
+							if (ex == null) {
+								// Ensure the JavaFX frame is in the foreground.
+								long hwndChild = embeddedFrame.getWindowHandle();
+								JoaDll.nativeActivateSceneInDialog(hwndChild);
+							} else {
+								asyncResult.setAsyncResult(null, ex);
+							}
+						});
+		
+					} else {
+						Throwable ex = new IllegalStateException("Excpected response from Office application.");
+						log.log(Level.SEVERE, "Failed to show dialog", ex);
+						asyncResult.setAsyncResult(null, ex);
+						fdialogHandler.onClosed();
+					}
+					
 				});
-
-				this.asyncResult = asyncResult;
-
-			} else {
-				Throwable ex = new IllegalStateException("Excpected response from Office application.");
-				log.log(Level.SEVERE, "Failed to show dialog", ex);
-				asyncResult.setAsyncResult(null, ex);
-				dialogHandler.onClosed();
 			}
 
 		} catch (Throwable ex) {
 			log.log(Level.SEVERE, "Failed to show dialog", ex);
-			if (asyncResult != null) {
-				asyncResult.setAsyncResult(null, ex);
-			}
+			asyncResult.setAsyncResult(null, ex);
 			if (dialogHandler != null) {
 				dialogHandler.onClosed();
 			}
 		}
 		
-		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")internalShowAsync");
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")internalShowAsyncInFxThread");
 	}
 
 	@SuppressWarnings("deprecation")
@@ -527,8 +557,4 @@ public abstract class ModalDialogFX<T> implements WindowHandle, FrameContentFact
 
 	}
 
-	@Override
-	public long getWindowHandle() {
-		return joaDlg.getHWND();
-	}
 }

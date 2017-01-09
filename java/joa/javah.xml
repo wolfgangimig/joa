@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="build" name="javah">
 
-	<property name="dest" value="../../../joa-private/cpp/JoaCtrl" />
+	<property name="dest" value="d:/git/joa-private/cpp/JoaCtrl" />
 	<property name="project.class.path" value="./bin" />
 
 	<target name="build">
