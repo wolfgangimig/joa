@@ -75,15 +75,6 @@ public class JFXEmbeddedFrame implements EmbeddedWindow {
 		long hwndStage = WindowsUtil.getWindowHandle(stage);
 		JoaDll.nativeSetParent(stage, hwndParent, hwndStage, 0, 0);
 		System.out.println("parent assigned");
-		
-//		stage.setX(1);
-//		stage.setY(1);
-		stage.xProperty().addListener((prop, oldValue, newValue) -> {
-			System.out.println("x=" + newValue);
-		});
-		stage.yProperty().addListener((prop, oldValue, newValue) -> {
-			
-		});
 	}
 
 	@Override
