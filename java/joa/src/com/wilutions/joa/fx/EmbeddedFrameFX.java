@@ -89,7 +89,7 @@ public class EmbeddedFrameFX implements WindowHandle {
 	}
 
 	public Window getWindow() {
-		return embeddedWindow.getWindow();
+		return embeddedWindow != null ? embeddedWindow.getWindow() : null;
 	}
 
 	/**
