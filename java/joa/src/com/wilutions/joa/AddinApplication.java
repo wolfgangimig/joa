@@ -10,15 +10,11 @@
  */
 package com.wilutions.joa;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.CoClass;
@@ -28,6 +24,11 @@ import com.wilutions.com.DispatchImpl;
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.reg.RegUtil;
 
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 /**
  * The JavaFX application class. This class serves as a COM EXE server and as
  * the application class for the JavaFX toolkit.
@@ -36,7 +37,8 @@ import com.wilutions.com.reg.RegUtil;
 public class AddinApplication extends javafx.application.Application {
 	
 	private static Logger log = Logger.getLogger(AddinApplication.class.getName());
-
+	private final static String AUTOSTART_FOLDER = "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup";
+	
 	public static void main(String[] args) {
 		main(AddinApplication.class, AddinApplication.class, args);
 	}
@@ -161,7 +163,9 @@ public class AddinApplication extends javafx.application.Application {
 		}
 			break;
 		case UnregisterServer: {
-			unregister(userNotMachine);
+			Class<?> addinMain = this.getClass();
+			String path = RegUtil.getExecPath(addinMain);
+			unregister(userNotMachine, path);
 		}
 			break;
 		case Run:
@@ -176,7 +180,7 @@ public class AddinApplication extends javafx.application.Application {
 		return ret;
 	}
 
-	protected void unregister(boolean userNotMachine) {
+	protected void unregister(boolean userNotMachine, String exePath) {
 		String regfor = userNotMachine ? "user" : "machine";
 		System.out.println("Unregister for " + regfor);
 		if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Unregister for " + regfor);
@@ -190,12 +194,73 @@ public class AddinApplication extends javafx.application.Application {
 		ComModule.getInstance().register(userNotMachine, execPath);
 	}
 
+	protected String registerAutostart(boolean registerNotUnregister, String exe) {
+		if (exe.startsWith("\"")) exe = exe.substring(1);
+		if (exe.endsWith("\"")) exe = exe.substring(0, exe.length() - 1);
+		String linkName = makeValidPath(AUTOSTART_FOLDER + "\\" + (new File(exe)).getName() + ".lnk");
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "linkName=" + linkName);
+
+		// Im Autostart-Ordner ablegen
+		if (registerNotUnregister) {
+			try {
+				String targetName = exe;
+				String description = "";
+				if (log.isLoggable(Level.INFO))
+					log.log(Level.INFO, "Create shortcut=" + linkName + " to " + targetName);
+
+				JoaDll.nativeCreateShortcut(linkName, targetName, description);
+			}
+			catch (Throwable e) {
+				log.log(Level.SEVERE, "Failed to create shortcut=" + linkName, e);
+			}
+		}
+
+		// Im Autostart-Ordner löschen.
+		else {
+			if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Delete lnk=" + linkName);
+			new File(linkName).delete();
+		}
+
+		// pushd "%APPDATA%\..\Local\Issue Tracker for Microsoft Outlook 32bit"
+		// REG add
+		// "HKCU\Software\Microsoft\Office\Outlook\Addins\ItolAddin.Class" /f /v
+		// "LoadBehavior" /t REG_DWORD /d 3
+		// START "" "Issue Tracker for Microsoft Outlook 32bit.exe"
+		// popd
+
+		return exe.toLowerCase().endsWith("exe") ? linkName : null;
+	}
+
 	public void activateDisabledAddin(Class<?> addinClass) throws ComException {
 		OfficeApplication application = addinClass.getDeclaredAnnotation(DeclAddin.class).application();
 		if (application != null && application == OfficeApplication.Outlook) {
 			String progId = addinClass.getDeclaredAnnotation(CoClass.class).progId();
 			JoaDll.activateDisabledAddin(progId);
 		}
+	}
+
+	/**
+	 * Make valid path.
+	 * 
+	 * @param path
+	 *            File system path that might contain environment variables.
+	 * @return File system path with replaced variables.
+	 */
+	public static String makeValidPath(String path) {
+
+		int p = path.indexOf('%');
+		while (p >= 0) {
+
+			int e = path.indexOf('%', p + 1);
+			String variableName = path.substring(p + 1, e);
+			String variableValue = System.getenv(variableName);
+			if (variableValue == null) variableValue = "";
+			path = path.replace(path.substring(p, e + 1), variableValue);
+
+			p = path.indexOf('%');
+		}
+
+		return path;
 	}
 
 	@Override
