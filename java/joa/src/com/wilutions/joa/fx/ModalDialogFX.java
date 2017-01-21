@@ -399,7 +399,6 @@ public abstract class ModalDialogFX<T> implements FrameContentFactory {
 			return;
 		}
 
-		DialogEventHandler dialogHandler = null;
 		try {
 			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "createScene");
 			
@@ -410,40 +409,39 @@ public abstract class ModalDialogFX<T> implements FrameContentFactory {
 			// as large as the scene.
 			maybeSetWidthAndHightFromSceneExtent(scene);
 
-			// Create the native dialog object.
-			// This is the task of the JOA Util Add-in. Because
-			// the dialog has to be created in the UI thread
-			// inside Outlook.
-			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "create joaDlg...");
-			joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
-			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "create joaDlg OK, " + joaDlg);
-
-			joaDlg.setWidth(toWin(width));
-			joaDlg.setHeight(toWin(height));
-			joaDlg.setX(toWin(x));
-			joaDlg.setY(toWin(y));
-			joaDlg.setTitle(title != null ? title : "");
-			joaDlg.setCenterOnOwner(centerOnOwner);
-			joaDlg.setResizable(resizable);
-			joaDlg.setMinHeight(toWin(minHeight));
-			joaDlg.setMaxHeight(toWin(maxHeight));
-			joaDlg.setMinWidth(toWin(minWidth));
-			joaDlg.setMaxWidth(toWin(maxWidth));
-			joaDlg.setMinimizeBox(minimizeBox);
-			joaDlg.setMaximizeBox(maximizeBox);
-
-			// Assign event handler to native dialog.
-			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "withEvents");
-			dialogHandler = new DialogEventHandler();
-			Dispatch.withEvents(joaDlg, dialogHandler);
-
 			// Show native dialog
 			{
 				final Dispatch fdispOwner = dispOwner;
 				final long fhwndOwner = hwndOwner;
-				final DialogEventHandler fdialogHandler = dialogHandler;
 				BackgTask.run(() -> {
-					
+
+					// Create the native dialog object.
+					// This is the task of the JOA Util Add-in. Because
+					// the dialog has to be created in the UI thread
+					// inside Outlook.
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "create joaDlg...");
+					joaDlg = OfficeAddin.getJoaUtil().CreateBridgeDialog();
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "create joaDlg OK, " + joaDlg);
+
+					joaDlg.setWidth(toWin(width));
+					joaDlg.setHeight(toWin(height));
+					joaDlg.setX(toWin(x));
+					joaDlg.setY(toWin(y));
+					joaDlg.setTitle(title != null ? title : "");
+					joaDlg.setCenterOnOwner(centerOnOwner);
+					joaDlg.setResizable(resizable);
+					joaDlg.setMinHeight(toWin(minHeight));
+					joaDlg.setMaxHeight(toWin(maxHeight));
+					joaDlg.setMinWidth(toWin(minWidth));
+					joaDlg.setMaxWidth(toWin(maxWidth));
+					joaDlg.setMinimizeBox(minimizeBox);
+					joaDlg.setMaximizeBox(maximizeBox);
+
+					// Assign event handler to native dialog.
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "withEvents");
+					DialogEventHandler dialogHandler = new DialogEventHandler();
+					Dispatch.withEvents(joaDlg, dialogHandler);
+
 					if (fdispOwner != null) {
 						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "showModal3");
 						joaDlg.ShowModal3(fdispOwner);
@@ -489,7 +487,7 @@ public abstract class ModalDialogFX<T> implements FrameContentFactory {
 						Throwable ex = new IllegalStateException("Excpected response from Office application.");
 						log.log(Level.SEVERE, "Failed to show dialog", ex);
 						asyncResult.setAsyncResult(null, ex);
-						fdialogHandler.onClosed();
+						dialogHandler.onClosed();
 					}
 					
 				});
@@ -498,9 +496,6 @@ public abstract class ModalDialogFX<T> implements FrameContentFactory {
 		} catch (Throwable ex) {
 			log.log(Level.SEVERE, "Failed to show dialog", ex);
 			asyncResult.setAsyncResult(null, ex);
-			if (dialogHandler != null) {
-				dialogHandler.onClosed();
-			}
 		}
 		
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")internalShowAsyncInFxThread");
