@@ -10,6 +10,7 @@
 */
 package com.wilutions.joa;
 
+import com.google.gson.annotations.Expose;
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;
@@ -38,33 +39,8 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	 */
 	protected CustomTaskPane customTaskPane;
 	
-	/**
-	 * Persistent dock position.
-	 * This member is load and stored in the Windows registry.
-	 */
-	@DeclRegistryValue("dockPosition")
-	MsoCTPDockPosition reg_dockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
-
-	/**
-	 * Persistent visibility.
-	 */
 	@DeclRegistryValue
-	private boolean reg_visible;
-	
-	/**
-	 * Persistent width.
-	 * Ignored for top or bottom docking positions.
-	 */
-	@DeclRegistryValue
-	private int reg_width;
-	
-	/**
-	 * Persistent height.
-	 * Ignored for left or right docking positions.
-	 */
-	@DeclRegistryValue
-	private int reg_height;
-
+	private TaskPanePosition position = new TaskPanePosition();
 	
 	/**
 	 * Constructor.
@@ -82,10 +58,10 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 			
 			// Remind dock position and visibility in persistent members.
 			try {
-				reg_dockPosition = customTaskPane.getDockPosition();
-				reg_visible = customTaskPane.getVisible();
-				reg_width = customTaskPane.getWidth();
-				reg_height = customTaskPane.getHeight();
+				position.setDockPosition(customTaskPane.getDockPosition());
+				position.setVisible(customTaskPane.getVisible());
+				position.setWidth(customTaskPane.getWidth());
+				position.setHeight(customTaskPane.getHeight());
 			} catch (ComException e) {
 				e.printStackTrace();
 			}
@@ -125,25 +101,25 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 		this.customTaskPane.withEvents(this);
 
 		// Show the task pane at the last dock position.
-		customTaskPane.setDockPosition(reg_dockPosition);
+		customTaskPane.setDockPosition(position.getDockPosition());
 		
 		// Width/Height
-		switch (reg_dockPosition.value) {
+		switch (position.getDockPosition().value) {
 		case MsoCTPDockPosition._msoCTPDockPositionLeft:
 		case MsoCTPDockPosition._msoCTPDockPositionRight:
-			if (reg_width != 0) customTaskPane.setWidth(reg_width);
+			if (position.getWidth() != 0) customTaskPane.setWidth(position.getWidth());
 			break;
 		case MsoCTPDockPosition._msoCTPDockPositionTop:
 		case MsoCTPDockPosition._msoCTPDockPositionBottom:
-			if (reg_height != 0) customTaskPane.setHeight(reg_height);
+			if (position.getHeight() != 0) customTaskPane.setHeight(position.getHeight());
 			break;
 		default:
-			if (reg_width != 0) customTaskPane.setWidth(reg_width);
-			if (reg_height != 0) customTaskPane.setHeight(reg_height);			
+			if (position.getWidth() != 0) customTaskPane.setWidth(position.getWidth());
+			if (position.getHeight() != 0) customTaskPane.setHeight(position.getHeight());
 		}
 		
 		// Show the task pane
-		if (reg_visible) {
+		if (position.isVisible()) {
 			setVisible(true);
 		}
 				
@@ -199,7 +175,7 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 				Throwable ex = null;
 				try {
 					customTaskPane.setVisible(Boolean.valueOf(v));
-					reg_visible = v;
+					position.setVisible(v);
 				} catch (ComException e) {
 					e.printStackTrace();
 					ex = e;
@@ -223,17 +199,25 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 	
 
 	public void setDefaultWidth(int v) {
-		reg_width = v;
+		position.setWidth(v);
 	}
 	public int getDefaultWidth() {
-		return reg_width;
+		return position.getWidth();
 	}
 	
 	public void setDefaultHeight(int v) {
-		reg_height = v;
+		position.setHeight(v);
 	}
 	public int getDefaultHeight() {
-		return reg_height;
+		return position.getHeight();
+	}
+
+	public TaskPanePosition getPosition() {
+		return position;
+	}
+
+	public void setPosition(TaskPanePosition position) {
+		this.position = position;
 	}
 	
 	
