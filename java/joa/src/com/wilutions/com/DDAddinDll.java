@@ -3,20 +3,24 @@ package com.wilutions.com;
 import java.io.File;
 import java.io.IOException;
 
-import com.wilutions.com.JoaDll;
-import com.wilutions.com.LoadDll;
-
 public class DDAddinDll extends LoadDll {
 	
 	private final static String ADDIN_NAME = "WI: DnD for Issue Tracker";
 	private final static String ADDIN_DESCRIPTION = "This Add-in supports drag and drop mails from Outlook into web browsers and other appliations.";
 
 	static {
+		boolean isDebug = true;
 		String fileName = "ddaddin" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		
+		// Debugging: load from C++ output directories
+		if (isDebug && loadLib("D:\\git\\outldd\\ddaddin\\Debug\\" + fileNameWithExt, false)) {
+		}
+		else if (isDebug && loadLib("D:\\git\\outldd\\ddaddin\\Debug\\" + fileNameWithExt, false)) {
+		}
+
 		// Packaged application loads joa.dll from current directory
-		if (myloadLib(fileName, false)) {
+		else if (myloadLib(fileName, false)) {
 		}
 		
 		// Java archive joa-with-dlls.jar loads joa.dll from temporary directory
@@ -45,15 +49,45 @@ public class DDAddinDll extends LoadDll {
 		return LoadDll.loadLib(lib, throwEx);
 	}
 	
-	public static void install(String license, boolean installForUser) {
-		nativeInstall(license, ADDIN_NAME, ADDIN_DESCRIPTION, installForUser);
+	public static boolean install(String license, boolean installForUser) {
+		return nativeInstall(license, ADDIN_NAME, ADDIN_DESCRIPTION, installForUser);
 	}
 	
 	public static void uninstall(boolean installForUser) {
 		nativeUninstall("", ADDIN_NAME, ADDIN_DESCRIPTION, installForUser);
 	}
+	
+	public static String getLicenseTimeLimit() {
+		return nativeGetLicenseTimeLimit();
+	}
 
-	private static native void nativeInstall(String license, String addinName, String addinDescription, boolean installForUser);
+	public static String getLicenseKey() {
+		return nativeGetLicenseKey();
+	}
+
+	public static int getLicenseCount() {
+		return nativeGetLicenseCount();
+	}
+	
+	public static void openLogFile(String logFile, String level, boolean append) {
+		nativeOpenLogFile(logFile, level, append);
+	}
+	
+	public static void closeLogFile() {
+		nativeCloseLogFile();
+	}
+	
+	private static native boolean nativeInstall(String license, String addinName, String addinDescription, boolean installForUser);
 	
 	private static native void nativeUninstall(String license, String addinName, String addinDescription, boolean installForUser);
+	
+	private static native String nativeGetLicenseTimeLimit();
+	
+	private static native String nativeGetLicenseKey();
+	
+	private static native int nativeGetLicenseCount();
+
+	private static native void nativeOpenLogFile(String logFile, String level, boolean append);
+	
+	private static native void nativeCloseLogFile();
 }
