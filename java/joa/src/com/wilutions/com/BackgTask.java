@@ -17,12 +17,16 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Background thread pool. Use this thread pool to execute COM functions in
  * Background.
  */
 public class BackgTask {
+	
+	private final static Logger log = Logger.getLogger("BackgTask");
 	
 	public static void run(Runnable runnable) {
 		final long startTime = System.currentTimeMillis();
@@ -45,7 +49,7 @@ public class BackgTask {
 			}
 		}
 		if (lastException != null) {
-			throw lastException;
+			log.log(Level.WARNING, "Failed to add background task", lastException);
 		}
 	}
 
@@ -56,7 +60,7 @@ public class BackgTask {
 	private static BackgTask instance = new BackgTask();
 
 	private ExecutorService tpool;
-	private final static int NB_OF_THREADS = 5;
+	private final static int NB_OF_THREADS = 20;
 	private final static long RETRY_REJECTED_TIMEOUT = 5 * 1000;
 	private final static Random randomTimeout = new Random();
 
