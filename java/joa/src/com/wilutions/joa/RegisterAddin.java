@@ -220,7 +220,7 @@ public class RegisterAddin {
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 	private static final String JoaUtilAddin_progId = "JoaUtilAddin.Class";
-	private static final String JoaUtilAddin_name = "JOA Util Add-in";
+	private static final String JoaUtilAddin_name = "WI: JOA Util Add-in";
 	private static final String JoaUtilAddin_desc = "This Add-in supports other Add-ins developed with JOA.";
 	private static final LoadBehavior JoaUtilAddin_loadBehavior = LoadBehavior.LoadOnStart;
 	public static final String JoaUtilAddin_clsid = "{7B57EC55-0A9C-4AB0-A2CC-AF81C680CFAC}";
