@@ -10,7 +10,6 @@
 */
 package com.wilutions.joa;
 
-import com.google.gson.annotations.Expose;
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.BackgTask;
 import com.wilutions.com.ComException;

@@ -26,6 +26,7 @@ import javafx.stage.StageStyle;
 @Deprecated 
 public class DlgDevelopEmbeddedJavaFXStage extends javafx.application.Application {
 	
+	@SuppressWarnings("unused")
 	private static long hwndParent;
 	
 	public static void main(String[] args) {

@@ -4,8 +4,6 @@
  */
 package com.wilutions.joa.fx;
 
-import java.util.Arrays;
-
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowsUtil;
 
