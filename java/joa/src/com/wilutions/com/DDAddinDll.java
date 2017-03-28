@@ -77,6 +77,12 @@ public class DDAddinDll extends LoadDll {
 		nativeCloseLogFile();
 	}
 	
+	public static void setProductName(String productName) {
+		nativeSetProductName(productName);
+	}
+	
+	private static native void nativeSetProductName(String productName);
+	
 	private static native boolean nativeInstall(String license, String addinName, String addinDescription, boolean installForUser);
 	
 	private static native void nativeUninstall(String license, String addinName, String addinDescription, boolean installForUser);

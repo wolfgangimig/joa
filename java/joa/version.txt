@@ -1,5 +1,12 @@
 JOA Version History
 
+1.0.2.0 
+
+- If used with JOA, read license key from specified sub-key given by 
+  DDAddinDll.setProductName(). 
+
+- Loads DDAddin for D&D of mails and attachments into an Add-in.
+
 0.9.0 2015-12-01
 
 - Annotation processor could cause errors in some environments:
