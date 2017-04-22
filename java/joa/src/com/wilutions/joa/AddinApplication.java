@@ -152,6 +152,10 @@ public class AddinApplication extends javafx.application.Application {
 			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "DispatchImpl.initLogger(" + logFile + ", " + logLevel + ", " + logAppend);
 			DispatchImpl.initLogger(logFile, logLevel, logAppend);
 		}
+		else {
+			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "DispatchImpl.initLogger from registry");
+			DispatchImpl.initLogger(logFile, logLevel, logAppend);
+		}
 
 		switch (command) {
 		case Version:
@@ -215,7 +219,7 @@ public class AddinApplication extends javafx.application.Application {
 			}
 		}
 
-		// Im Autostart-Ordner löschen.
+		// Im Autostart-Ordner lï¿½schen.
 		else {
 			if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Delete lnk=" + linkName);
 			new File(linkName).delete();
