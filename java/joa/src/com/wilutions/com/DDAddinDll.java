@@ -6,7 +6,7 @@ import java.io.IOException;
 public class DDAddinDll extends LoadDll {
 	
 	private final static String ADDIN_NAME = "WI: DnD for Issue Tracker";
-	private final static String ADDIN_DESCRIPTION = "This Add-in supports drag and drop mails from Outlook into web browsers and other appliations.";
+	private final static String ADDIN_DESCRIPTION = "This Add-in allows to drag and drop mails from Outlook into web browsers and other appliations.";
 
 	static {
 		boolean isDebug = true;
@@ -81,6 +81,10 @@ public class DDAddinDll extends LoadDll {
 		nativeSetProductName(productName);
 	}
 	
+	public static boolean validateLicense(String customer, String date, String opts, String installMaxStr, int checksum) {
+		return nativeValidateLicense(customer, date, opts, installMaxStr, checksum);
+	}
+	
 	private static native void nativeSetProductName(String productName);
 	
 	private static native boolean nativeInstall(String license, String addinName, String addinDescription, boolean installForUser);
@@ -96,4 +100,6 @@ public class DDAddinDll extends LoadDll {
 	private static native void nativeOpenLogFile(String logFile, String level, boolean append);
 	
 	private static native void nativeCloseLogFile();
+	
+	private static native boolean nativeValidateLicense(String customer, String date, String opts, String installMaxStr, int checksum);
 }
