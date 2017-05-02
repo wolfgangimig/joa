@@ -1,3 +1,5 @@
+import org.gradle.plugins.ide.eclipse.model.AccessRule
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
@@ -25,6 +27,18 @@ sourceSets {
         resources {
             srcDir 'native'
             srcDir 'res'
+        }
+    }
+}
+
+eclipse {
+    classpath {
+        file {
+            whenMerged {
+                def jre = entries.find { it.path.contains 'org.eclipse.jdt.launching.JRE_CONTAINER' }
+                jre.accessRules.add(new AccessRule('0', 'javafx/**'))
+                jre.accessRules.add(new AccessRule('0', 'sun/awt/windows/**'))
+            }
         }
     }
 }
