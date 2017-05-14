@@ -32,6 +32,18 @@ import com.wilutions.com.JoaDll;
  */
 public class RegUtil {
 
+	// Since Windows 10 Creators Update (installed at 2017-13-05 on my computer),
+	// it is no more possible to start a BAT file as a COM server. Error: 0x800700C1 
+	// "... is not an executable ...".
+	// I tried the following to solve the problem:
+	// - start java.exe directly 
+	//    -> fails because it starts not in the project directory
+	// - start an exe wrapped into a launch4j installer 
+	//    -> requires launch4j, complicated
+	// - start BAT packed into installer package (http://stackoverflow.com/questions/22266511/iexpress-command-line-example-to-create-exe-packages)
+	//    -> have to create the installer packaged as Administrator
+	private final static boolean registerBAT = false;
+	
 	private static Logger log = Logger.getLogger("RegUtil");
 
 	/**
@@ -60,6 +72,7 @@ public class RegUtil {
 	public static String getExecPath(Class<?> mainClass) {
 		if (log.isLoggable(Level.FINE))
 			log.fine("getExecPath(");
+		
 		String javaHome = System.getProperty("java.home");
 		StringBuilder path = new StringBuilder();
 
@@ -93,7 +106,7 @@ public class RegUtil {
 				throw new IllegalStateException("Failed to register application, EXE not found in " + selfInstDir);
 			}
 
-		} else {
+		} else if (registerBAT) {
 
 			// The returned path should not be longer than 256 (MAX_PATH)
 			// characters. Otherwise Outlook ignores the Addin. Although a VBS
@@ -140,6 +153,12 @@ public class RegUtil {
 			path.append("\"");
 			path.append(file.getAbsolutePath());
 			path.append("\"");
+		}
+		else {
+			// Just execute any program.
+			// Outlook will wait until you started your COM server in the debugger.
+			// see https://msdn.microsoft.com/de-de/library/windows/desktop/ms683844(v=vs.85).aspx
+			path.append("cmd.exe");
 		}
 
 		if (log.isLoggable(Level.FINE))
