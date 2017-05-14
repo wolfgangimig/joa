@@ -24,7 +24,7 @@ import java.util.Properties;
 public class JoaDll extends LoadDll {
 	
 	static {
-		boolean isDebug = false;
+		boolean isDebug = true;
 		String fileName = "joa" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		
