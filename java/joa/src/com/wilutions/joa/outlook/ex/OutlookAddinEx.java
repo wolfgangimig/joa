@@ -186,13 +186,24 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 				wrapper = (Wrapper) getInspectorWrapper(inspector);
 				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "inspector wrapper=" + wrapper);
 			}
-			else if (dispContext.is(Explorer.class)) {
-				Explorer explorer = dispContext.as(Explorer.class);
-				wrapper = getExplorerWrapper(explorer);
-				if (wrapper == null) {
-					wrapper = createExplorerWrapper(explorer);
+			else {
+				
+				// ITJ-43: Sometimes the dispContext.ndisp is 0 at this point. 
+				// Workaround, check whether it is 0 and call getContext again if necessary.
+				
+				if (dispContext.equals(Dispatch.NULL)) {
+					log.warning("GC removed ndisp");
+					dispContext = control.getContext();
 				}
-				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "explorer wrapper=" + wrapper);
+				
+				if (dispContext.is(Explorer.class)) {
+					Explorer explorer = dispContext.as(Explorer.class);
+					wrapper = getExplorerWrapper(explorer);
+					if (wrapper == null) {
+						wrapper = createExplorerWrapper(explorer);
+					}
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "explorer wrapper=" + wrapper);
+				}
 			}
 
 			if (wrapper != null) {
