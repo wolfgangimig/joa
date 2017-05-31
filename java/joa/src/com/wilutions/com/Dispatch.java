@@ -170,7 +170,6 @@ public class Dispatch implements IDispatch {
 	 */
 	public synchronized void release() {
 		JoaDll.deleteDispatch(this);
-		assert this.ndisp == 0;
 	}
 
 	public String toString() {
