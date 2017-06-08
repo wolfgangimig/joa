@@ -188,7 +188,8 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 				}
 				else {
 	
-	// solved in joa.dll: JoaDll.deleteDispatch does only set ndisp=0 if reference count is 0. 
+	// solved??? eher nicht ....
+					// in joa.dll: JoaDll.deleteDispatch does only set ndisp=0 if reference count is 0. 
 	//				// ITJ-43: Sometimes the dispContext.ndisp is 0 at this point. 
 	//				// Workaround, check whether it is 0 and call getContext again if necessary.
 	//				
