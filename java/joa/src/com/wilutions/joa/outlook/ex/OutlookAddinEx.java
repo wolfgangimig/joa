@@ -178,45 +178,50 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 		T ret = null;
 		Wrapper wrapper = null;
-
-		IDispatch dispContext = control.getContext();
-		if (dispContext != null && !dispContext.equals(Dispatch.NULL)) {
-			if (dispContext.is(Inspector.class)) {
-				Inspector inspector = dispContext.as(Inspector.class);
-				wrapper = (Wrapper) getInspectorWrapper(inspector);
-				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "inspector wrapper=" + wrapper);
-			}
-			else {
-
-// solved in joa.dll: JoaDll.deleteDispatch does only set ndisp=0 if reference count is 0. 
-//				// ITJ-43: Sometimes the dispContext.ndisp is 0 at this point. 
-//				// Workaround, check whether it is 0 and call getContext again if necessary.
-//				
-//				if (dispContext.equals(Dispatch.NULL)) {
-//					log.warning("GC removed ndisp");
-//					dispContext = control.getContext();
-//				}
-				
-				if (dispContext.is(Explorer.class)) {
-					Explorer explorer = dispContext.as(Explorer.class);
-					wrapper = getExplorerWrapper(explorer);
-					if (wrapper == null) {
-						wrapper = createExplorerWrapper(explorer);
-					}
-					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "explorer wrapper=" + wrapper);
+		try {
+			IDispatch dispContext = control.getContext();
+			if (dispContext != null && !dispContext.equals(Dispatch.NULL)) {
+				if (dispContext.is(Inspector.class)) {
+					Inspector inspector = dispContext.as(Inspector.class);
+					wrapper = (Wrapper) getInspectorWrapper(inspector);
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "inspector wrapper=" + wrapper);
 				}
-			}
-
-			if (wrapper != null) {
-				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "addRibbonControl");
-				wrapper.addRibbonControlDispatchReference(control);
-				if (call != null) {
-					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "call");
-					ret = call.call(wrapper);
+				else {
+	
+	// solved in joa.dll: JoaDll.deleteDispatch does only set ndisp=0 if reference count is 0. 
+	//				// ITJ-43: Sometimes the dispContext.ndisp is 0 at this point. 
+	//				// Workaround, check whether it is 0 and call getContext again if necessary.
+	//				
+	//				if (dispContext.equals(Dispatch.NULL)) {
+	//					log.warning("GC removed ndisp");
+	//					dispContext = control.getContext();
+	//				}
+					
+					if (dispContext.is(Explorer.class)) {
+						Explorer explorer = dispContext.as(Explorer.class);
+						wrapper = getExplorerWrapper(explorer);
+						if (wrapper == null) {
+							wrapper = createExplorerWrapper(explorer);
+						}
+						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "explorer wrapper=" + wrapper);
+					}
+				}
+	
+				if (wrapper != null) {
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "addRibbonControl");
+					wrapper.addRibbonControlDispatchReference(control);
+					if (call != null) {
+						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "call");
+						ret = call.call(wrapper);
+					}
 				}
 			}
 		}
-
+		catch (ComException e) {
+			log.log(Level.WARNING, "forContextWrapper failed", e);
+			e.printStackTrace();
+			throw e;
+		}
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")forContextWrapper=" + ret);
 		return ret;
 	}
