@@ -159,4 +159,6 @@ public class JoaDll extends LoadDll {
 	public static native void nativeCreateShortcut(String linkName, String targetName, String description);
 	
 	public static native long createEmbeddedFrame(long hwndStage);
+	
+	public static native String getOfficeVersion();
 }
