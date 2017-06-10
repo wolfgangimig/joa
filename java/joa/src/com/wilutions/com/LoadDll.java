@@ -4,16 +4,23 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Logger;
 
 public class LoadDll {
+
+	private static Logger log = Logger.getLogger(LoadDll.class.getName());
 
 	public static boolean loadLib(String lib, boolean throwEx) {
 		boolean succ = false;
 		try {
 			if (lib.indexOf(File.separatorChar) >= 0) {
+				log.info("System.load " + lib);
+				System.out.println("System.load " + lib);
 				System.load(lib);
 			}
 			else {
+				log.info("System.loadLibrary " + lib);
+				System.out.println("System.loadLibrary " + lib);
 				System.loadLibrary(lib);
 			}
 			succ = true;
