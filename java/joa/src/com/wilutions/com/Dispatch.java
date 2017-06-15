@@ -10,6 +10,7 @@
  */
 package com.wilutions.com;
 
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -233,7 +234,16 @@ public class Dispatch implements IDispatch {
 
 	public Object _dispatchCall(Integer methodId, String methodName, int method, Object putValue, Object... args)
 			throws ComException {
-		Object ret = JoaDll.dispatchCall(this, methodId, methodName, method, putValue, args);
+		Object ret = null;
+		String logmsg = this +"._dispatchCall(" + methodId + ", " + methodName + ", " + method + ", putValue=" + putValue + ", args=" + (args != null ? Arrays.toString(args) : "null") + ")=";
+		try {
+			ret = JoaDll.dispatchCall(this, methodId, methodName, method, putValue, args);
+			log.info(logmsg + ret);
+		}
+		catch (ComException e) {
+			log.log(Level.WARNING, logmsg + e, e);
+			throw e;
+		}
 		return ret;
 	}
 

@@ -43,6 +43,18 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 	private final IconManager iconManager;
 	private IRibbonUI ribbon;
 	private final Registry registry;
+	
+	/**
+	 * Ribbon control of last call.
+	 * This helps to cache the ExplorerWrapper or InspectorWrapper.
+	 */
+	private IRibbonControl lastControl;
+	
+	/**
+	 * Cached ExplorerWrapper or InspectorWrapper.
+	 * This value is valid until {@link #lastControl} changes in one of the Ribbon_get* functions. 
+	 */
+	private Wrapper lastWrapper;
 
 	/**
 	 * Inspectors collection. Need to hold this in order to permanently receive
@@ -164,22 +176,25 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 		return ExplorerWrappers.get(explorer);
 	}
 
-	/**
-	 * Execute passed function for control's context.
-	 * 
-	 * @param control
-	 *            ribbon control (button, etc.)
-	 * @param call
-	 *            function to be called
-	 * @return value returned from call
-	 */
-	protected <T> T forContextWrapper(IRibbonControl control, Callback<Wrapper, T> call) {
-		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "forContextWrapper(");
-
-		T ret = null;
+	protected Wrapper getExplorerOrInspectorWrapperOfContext(IRibbonControl control) {
 		Wrapper wrapper = null;
+		if (lastControl != null && lastControl.equals(control)) {
+			wrapper = lastWrapper;
+		}
+		if (wrapper == null) {
+			lastControl = control;
+			wrapper = lastWrapper = getExplorerOrInspectorWrapperOfContextFromControl(control);
+		}
+		return wrapper;
+	}
+	
+	protected Wrapper getExplorerOrInspectorWrapperOfContextFromControl(IRibbonControl control) {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "getExporerOrInspectorWrapperOfContext(");
+		Wrapper wrapper = null;
+		
 		try {
 			IDispatch dispContext = control.getContext();
+			System.gc();
 			if (dispContext != null && !dispContext.equals(Dispatch.NULL)) {
 				if (dispContext.is(Inspector.class)) {
 					Inspector inspector = dispContext.as(Inspector.class);
@@ -188,15 +203,11 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 				}
 				else {
 	
-	// solved??? eher nicht ....
-					// in joa.dll: JoaDll.deleteDispatch does only set ndisp=0 if reference count is 0. 
-	//				// ITJ-43: Sometimes the dispContext.ndisp is 0 at this point. 
-	//				// Workaround, check whether it is 0 and call getContext again if necessary.
-	//				
-	//				if (dispContext.equals(Dispatch.NULL)) {
-	//					log.warning("GC removed ndisp");
-	//					dispContext = control.getContext();
-	//				}
+					// ITJ-43: Sometimes the dispContext.ndisp is 0 at this point. 
+					if (dispContext.equals(Dispatch.NULL)) {
+						log.warning("GC removed ndisp");
+						dispContext = control.getContext();
+					}
 					
 					if (dispContext.is(Explorer.class)) {
 						Explorer explorer = dispContext.as(Explorer.class);
@@ -211,10 +222,39 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 				if (wrapper != null) {
 					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "addRibbonControl");
 					wrapper.addRibbonControlDispatchReference(control);
-					if (call != null) {
-						if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "call");
-						ret = call.call(wrapper);
-					}
+				}
+			}
+		}
+		catch (ComException e) {
+			log.log(Level.WARNING, "getExporerOrInspectorWrapperOfContext failed", e);
+			e.printStackTrace();
+			throw e;
+		}
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")getExporerOrInspectorWrapperOfContext=" + wrapper);
+		return wrapper;
+	}
+
+	/**
+	 * Execute passed function for control's context.
+	 * 
+	 * @param control
+	 *            ribbon control (button, etc.)
+	 * @param call
+	 *            function to be called
+	 * @return value returned from call
+	 */
+	protected <T> T forContextWrapper(IRibbonControl control, Callback<Wrapper, T> call) {
+		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "forContextWrapper(");
+
+		T ret = null;
+		try {
+			Wrapper wrapper = getExplorerOrInspectorWrapperOfContext(control);
+			if (wrapper != null) {
+				if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "addRibbonControl");
+				wrapper.addRibbonControlDispatchReference(control);
+				if (call != null) {
+					if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "call");
+					ret = call.call(wrapper);
 				}
 			}
 		}
