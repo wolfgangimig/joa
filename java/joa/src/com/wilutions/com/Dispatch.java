@@ -238,7 +238,9 @@ public class Dispatch implements IDispatch {
 		String logmsg = this +"._dispatchCall(" + methodId + ", " + methodName + ", " + method + ", putValue=" + putValue + ", args=" + (args != null ? Arrays.toString(args) : "null") + ")=";
 		try {
 			ret = JoaDll.dispatchCall(this, methodId, methodName, method, putValue, args);
-			log.info(logmsg + ret);
+			String sret = (ret != null) ? ret.toString() : "null";
+			if (sret.length() > 40) sret = sret.substring(0,  40);
+			log.info(logmsg + sret);
 		}
 		catch (ComException e) {
 			log.log(Level.WARNING, logmsg + e, e);
