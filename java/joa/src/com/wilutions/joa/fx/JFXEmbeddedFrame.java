@@ -32,11 +32,11 @@ public class JFXEmbeddedFrame implements EmbeddedWindow {
 		stage = new Stage(StageStyle.UNDECORATED);
 		stage.setScene(scene);
 		
-		// Die Menü-Einträge und Combobox-Listen werden von JavaFX
+		// Die Menï¿½-Eintrï¿½ge und Combobox-Listen werden von JavaFX
 		// relativ zum scene.getWindow() positioniert. Dies hat in
-		// unserem Fall zunächst die Position (0/0). Wenn das
+		// unserem Fall zunï¿½chst die Position (0/0). Wenn das
 		// Anwendungsfenster (Outlookfenster) verschoben wird,
-		// bleibt die Postion auch unverändert. Die Menü-Einträge
+		// bleibt die Postion auch unverï¿½ndert. Die Menï¿½-Eintrï¿½ge
 		// werden also nach dem Verschieben des Anwendungsfensters
 		// falsch plaziert.
 		// Um dieses Problem zu beheben, registriere ich einen
@@ -72,7 +72,7 @@ public class JFXEmbeddedFrame implements EmbeddedWindow {
 
 		long hwndStage = WindowsUtil.getWindowHandle(stage);
 		JoaDll.nativeSetParent(stage, hwndParent, hwndStage, 0, 0);
-		System.out.println("parent assigned");
+//		System.out.println("parent assigned");
 	}
 
 	@Override
