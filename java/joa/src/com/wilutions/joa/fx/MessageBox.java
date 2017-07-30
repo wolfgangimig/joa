@@ -3,6 +3,8 @@ package com.wilutions.joa.fx;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.wilutions.com.AsyncResult;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -11,12 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
-import javafx.stage.Window;
 import javafx.stage.WindowEvent;
-
-import com.wilutions.com.AsyncResult;
-import com.wilutions.com.Dispatch;
-import com.wilutions.com.WindowHandle;
 
 /**
  * This class provides convenient functions to display message boxes.
@@ -59,13 +56,7 @@ public class MessageBox {
 		private List<ButtonDefinition> _buttonDefinitions = new ArrayList<ButtonDefinition>();
 
 		public Builder owner(Object v) {
-			assert (v instanceof Dispatch) || (v instanceof WindowHandle) || (v instanceof Window);
-			if (v instanceof WindowHandle || v instanceof Window) {
-				_owner = v;
-			}
-			else {
-				_owner = Dispatch.as(v, Dispatch.class);
-			}
+			_owner = v;
 			return this;
 		}
 
