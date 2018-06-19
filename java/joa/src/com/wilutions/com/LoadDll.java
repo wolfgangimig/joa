@@ -19,7 +19,7 @@ public class LoadDll {
 				System.load(lib);
 			}
 			else {
-				log.info("System.loadLibrary " + lib);
+				log.info("System.loadLibrary " + lib + " from current workdir=" + new File(".").getAbsolutePath());
 				System.out.println("System.loadLibrary " + lib);
 				System.loadLibrary(lib);
 			}

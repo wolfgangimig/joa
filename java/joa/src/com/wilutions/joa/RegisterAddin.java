@@ -121,7 +121,33 @@ public class RegisterAddin {
 		}
 
 		if (perUserNotMachine) {
-			JoaDll.activateDisabledAddin(progId);
+			ensureAddinIsActive(progId);
+		}
+	}
+	
+	/**
+	 * Enable Add-in.
+	 * https://blogs.msdn.microsoft.com/emeamsgdev/2017/08/02/outlooks-slow-add-ins-resiliency-logic-and-how-to-always-enable-slow-add-ins/
+	 * @param progId
+	 */
+	private static void ensureAddinIsActive(String progId) {
+		// HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\1x.0\Outlook\Resiliency\DoNotDisableAddinList
+		for (int outlookVersion = OfficeAddin.SUPPORTED_OFFICE_VERSION_MIN; 
+				outlookVersion <= OfficeAddin.SUPPORTED_OFFICE_VERSION_MAX; outlookVersion++) {
+			// Version-Key for Outlook, 2010: 14.0, 2013: 15.0, 2016: 16.0
+			String outlookVersion0 = outlookVersion + ".0";
+			String outlookRecilencyKey = String.format("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Office\\%s\\Outlook\\Resiliency", outlookVersion0);
+			
+			String doNotDisabledAddinsKey = outlookRecilencyKey + "\\DoNotDisableAddinList";
+			RegUtil.setRegistryValue(doNotDisabledAddinsKey, progId, 1);
+			
+			String disabledAddinsKey = outlookRecilencyKey + "\\DisabledItems";
+			RegUtil.deleteRegistryKey(disabledAddinsKey);
+			RegUtil.setRegistryValue(disabledAddinsKey, "", "");
+			
+			String crashingAddinsKey = outlookRecilencyKey + "\\CrashingAddinList";
+			RegUtil.deleteRegistryKey(crashingAddinsKey);
+			RegUtil.setRegistryValue(crashingAddinsKey, "", "");
 		}
 	}
 	

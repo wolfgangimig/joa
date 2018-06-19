@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -42,7 +44,7 @@ public class RegUtil {
 	//    -> requires launch4j, complicated
 	// - start BAT packed into installer package (http://stackoverflow.com/questions/22266511/iexpress-command-line-example-to-create-exe-packages)
 	//    -> have to create the installer packaged as Administrator
-	private final static boolean registerBAT = false;
+	private final static boolean registerBAT = true;
 	
 	private static Logger log = Logger.getLogger("RegUtil");
 
@@ -79,13 +81,14 @@ public class RegUtil {
 		System.out.println("javaHome=" + javaHome);
 		if (log.isLoggable(Level.FINE))
 			log.fine("javaHome=" + javaHome);
+		
+		String localServer32 = System.getProperty("localServer32", "");
 
 		// Self-contained Java application?
 		String launcherPath = System.getProperty("java.launcher.path");
 		File selfInstDir = launcherPath != null ? new File(launcherPath) : null;
-		if (log.isLoggable(Level.FINE))
-			log.fine("selfInstDir=" + selfInstDir);
-
+		if (log.isLoggable(Level.FINE))	log.fine("selfInstDir=" + selfInstDir);
+		
 		if (selfInstDir != null) {
 
 			// Application is an EXE file in selfAppPath
@@ -106,7 +109,32 @@ public class RegUtil {
 				throw new IllegalStateException("Failed to register application, EXE not found in " + selfInstDir);
 			}
 
-		} else if (registerBAT) {
+		} 
+		else if (System.getProperty("launch4j.exefile") != null) {
+			// Unfortunately, the EXE command does not start an instance of 
+			// the JOA application that is recognized by Outlook.
+			
+			// Created with Launch4j
+			String exe = System.getProperty("launch4j.exefile");
+			boolean quote = !exe.startsWith("\"");
+			if (quote) path.append("\"");
+			path.append(exe);
+			if (quote) path.append("\"");
+			
+		}
+		else if (localServer32.startsWith("java")) {
+			URL jarUrl = mainClass.getProtectionDomain().getCodeSource().getLocation();
+			try {
+				String exe = javaHome + "\\bin\\" + localServer32;
+				File jarFile = new File(jarUrl.toURI());
+				path.append("\"").append(exe).append("\" ");
+				path.append("-Xmx500m -Djava.net.useSystemProxies=true ");
+				path.append("-jar ").append("\"").append(jarFile).append("\"");
+			} catch (URISyntaxException e) {
+				throw new IllegalStateException("Main class jar invalid for url=" + jarUrl, e);
+			}
+		}
+		else if (registerBAT) {
 
 			// The returned path should not be longer than 256 (MAX_PATH)
 			// characters. Otherwise Outlook ignores the Addin. Although a VBS
@@ -150,7 +178,7 @@ public class RegUtil {
 			writeAllText(file, path.toString());
 
 			path.setLength(0);
-			path.append("\"");
+			path.append("\"cmd.exe\" /C \"");
 			path.append(file.getAbsolutePath());
 			path.append("\"");
 		}
@@ -306,7 +334,7 @@ public class RegUtil {
 	 */
 	public static void registerLocalServer32(boolean perUserNotMachine, String className, String clsid, String progId,
 			String path) throws ComException {
-
+		
 		String rootKey = getClassesRoot(perUserNotMachine);
 
 		String keyClsid = rootKey + "\\CLSID\\" + clsid;
@@ -315,9 +343,32 @@ public class RegUtil {
 		setRegistryValue(keyClsid, "", className);
 		setRegistryValue(keyClsid, "ProgId", progId);
 		setRegistryValue(keyClsid + "\\LocalServer32", "", path);
+		
+		String exe = getServerExecutable(path);
+		setRegistryValue(keyClsid + "\\ServerExecutable", "", exe);
 
 		setRegistryValue(keyProgId, "", className);
 		setRegistryValue(keyProgId + "\\CLSID", "", clsid);
+	}
+	
+	/**
+	 * Find executable name (e.g. cmd.exe) in path.
+	 * @param path Path used as LocalServer32 registration, e.g. "cmd.exe" /C ".../itol.bat"
+	 * @return Executable name
+	 */
+	private static String getServerExecutable(String path) {
+		String exe = path;
+		if (exe.startsWith("\"")) {
+			int p = exe.indexOf("\"", 1);
+			if (p < 0) p = exe.length();
+			exe = exe.substring(1, p);
+		}
+		else {
+			int p = exe.indexOf(" ");
+			if (p < 0) p = exe.length();
+			exe = exe.substring(0, p);
+		}
+		return "\"" + exe + "\"";
 	}
 
 	/**
@@ -365,7 +416,7 @@ public class RegUtil {
 			throw new ComException("Failed to register coclass, missing annotation " + CoClass.class);
 
 		String progId = coClassAnnotation.progId();
-		String guid = coClassAnnotation.guid();
+		String guid = coClassAnnotation.guid().toUpperCase();
 
 		registerLocalServer32(perUserNotMachine, coclass.getName(), guid, progId, path);
 	}
@@ -387,7 +438,7 @@ public class RegUtil {
 			throw new ComException("Failed to unregister coclass, missing annotation " + CoClass.class);
 
 		String progId = coClassAnnotation.progId();
-		String guid = coClassAnnotation.guid();
+		String guid = coClassAnnotation.guid().toUpperCase();
 
 		unregisterLocalServer32(perUserNotMachine, coclass.getName(), guid, progId);
 	}
