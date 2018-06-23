@@ -198,41 +198,17 @@ public class AddinApplication extends javafx.application.Application {
 		ComModule.getInstance().register(userNotMachine, execPath);
 	}
 
-	protected String registerAutostart(boolean registerNotUnregister, String exe) {
-		if (exe.startsWith("\"")) exe = exe.substring(1);
-		if (exe.endsWith("\"")) exe = exe.substring(0, exe.length() - 1);
-		String linkName = makeValidPath(AUTOSTART_FOLDER + "\\" + (new File(exe)).getName() + ".lnk");
-		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "linkName=" + linkName);
-
-		// Im Autostart-Ordner ablegen
+	protected String registerAutostart(boolean userNotMachine, boolean registerNotUnregister, String path) {
+		String key = (userNotMachine ? "HKCU" : "HKLM") + "\\Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+		
 		if (registerNotUnregister) {
-			try {
-				String targetName = exe;
-				String description = "";
-				if (log.isLoggable(Level.INFO))
-					log.log(Level.INFO, "Create shortcut=" + linkName + " to " + targetName);
-
-				JoaDll.nativeCreateShortcut(linkName, targetName, description);
-			}
-			catch (Throwable e) {
-				log.log(Level.SEVERE, "Failed to create shortcut=" + linkName, e);
-			}
+			RegUtil.setRegistryValue(key, "ITOL", path);
 		}
-
-		// Im Autostart-Ordner l�schen.
 		else {
-			if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Delete lnk=" + linkName);
-			new File(linkName).delete();
+			RegUtil.deleteRegistryValue(key, "ITOL");
 		}
-
-		// pushd "%APPDATA%\..\Local\Issue Tracker for Microsoft Outlook 32bit"
-		// REG add
-		// "HKCU\Software\Microsoft\Office\Outlook\Addins\ItolAddin.Class" /f /v
-		// "LoadBehavior" /t REG_DWORD /d 3
-		// START "" "Issue Tracker for Microsoft Outlook 32bit.exe"
-		// popd
-
-		return exe.toLowerCase().endsWith("exe") ? linkName : null;
+		
+		return path;
 	}
 
 	public void activateDisabledAddin(Class<?> addinClass) throws ComException {

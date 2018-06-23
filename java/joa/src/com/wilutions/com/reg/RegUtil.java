@@ -356,7 +356,7 @@ public class RegUtil {
 	 * @param path Path used as LocalServer32 registration, e.g. "cmd.exe" /C ".../itol.bat"
 	 * @return Executable name
 	 */
-	private static String getServerExecutable(String path) {
+	public static String getServerExecutable(String path) {
 		String exe = path;
 		if (exe.startsWith("\"")) {
 			int p = exe.indexOf("\"", 1);
