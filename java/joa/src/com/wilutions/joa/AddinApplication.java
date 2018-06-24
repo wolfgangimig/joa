@@ -112,6 +112,7 @@ public class AddinApplication extends javafx.application.Application {
 		String logFile = "";
 		String logLevel = "";
 		boolean logAppend = false;
+		String licenseKey = "";
 
 		int argIdx = 0;
 		while (argIdx < args.length) {
@@ -121,18 +122,24 @@ public class AddinApplication extends javafx.application.Application {
 			if (log.isLoggable(Level.FINE)) log.log(Level.FINE, "arg_i=" + arg_i + ", arg_i1=" + arg_i1);
 
 			if (arg_i == null) {
+				
 			} else if (arg_i.equals("/Version")) {
 				command = Command.Version;
+				
 			} else if (arg_i.equals("/RegisterServer")) {
 				command = Command.RegisterServer;
 				userNotMachine = arg_i1.equals("user");
-				if (userNotMachine)
-					argIdx++;
+				if (userNotMachine)	argIdx++;
+				
 			} else if (arg_i.equals("/UnregisterServer")) {
 				command = Command.UnregisterServer;
 				userNotMachine = arg_i1.equals("user");
-				if (userNotMachine)
-					argIdx++;
+				if (userNotMachine)	argIdx++;
+				
+			} else if (arg_i.equals("/License")) {
+				licenseKey = arg_i1;
+				argIdx++;
+				
 			} else if (arg_i.equals("/log")) {
 				logFile = arg_i1;
 			} else if (arg_i.equals("/llevel")) {
@@ -163,7 +170,7 @@ public class AddinApplication extends javafx.application.Application {
 		case RegisterServer: {
 			Class<?> addinMain = this.getClass();
 			String path = RegUtil.getExecPath(addinMain);
-			register(userNotMachine, path);
+			register(userNotMachine, licenseKey, path);
 		}
 			break;
 		case UnregisterServer: {
@@ -191,7 +198,7 @@ public class AddinApplication extends javafx.application.Application {
 		ComModule.getInstance().unregister(userNotMachine);
 	}
 
-	protected void register(boolean userNotMachine, String execPath) {
+	protected void register(boolean userNotMachine, String licenseKey, String execPath) {
 		String regfor = userNotMachine ? "user" : "machine";
 		System.out.println("Register for " + regfor + " at path=" + execPath);
 		if (log.isLoggable(Level.INFO)) log.log(Level.INFO, "Register for " + regfor + " at path=" + execPath);
