@@ -212,11 +212,7 @@ public class AddinApplication extends javafx.application.Application {
 	}
 
 	public void activateDisabledAddin(Class<?> addinClass) throws ComException {
-		OfficeApplication application = addinClass.getDeclaredAnnotation(DeclAddin.class).application();
-		if (application != null && application == OfficeApplication.Outlook) {
-			String progId = addinClass.getDeclaredAnnotation(CoClass.class).progId();
-			JoaDll.activateDisabledAddin(progId);
-		}
+		RegisterAddin.ensureAddinIsActive(addinClass);
 	}
 
 	/**

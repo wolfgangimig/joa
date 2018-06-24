@@ -29,13 +29,51 @@ public class RegisterAddin {
 	
 	private static Logger log = Logger.getLogger("RegisterAddin");
 
+	/**
+	 * Internal number of minimum supported office version.
+	 * Currently 14, which belongs to Office 2010.
+	 */
+	public final static int SUPPORTED_OFFICE_VERSION_MIN = 14;
+
+	/**
+	 * Internal number of maximum supported office version.
+	 * Currently 14, which belongs to Office 2016.
+	 */
+	public final static int SUPPORTED_OFFICE_VERSION_MAX = 16;
+	
+	
+	private final String officeApplication;
+	private final boolean perUserNotMachine;
+	private final String progId;
+	
+	private RegisterAddin(String officeApplication, String progId, boolean perUserNotMachine) {
+		this.officeApplication = officeApplication;
+		this.progId = progId;
+		this.perUserNotMachine = perUserNotMachine;
+	}
+	
+	public static void ensureAddinIsActive(Class<?> addinClass) {
+		CoClass coClassAnnotation = addinClass.getAnnotation(CoClass.class);
+		if (coClassAnnotation == null)
+			throw new ComException("Failed to register Addin, missing annotation " + CoClass.class);
+		DeclAddin addinAnnotation = addinClass.getAnnotation(DeclAddin.class);
+		if (addinAnnotation == null)
+			throw new ComException("Failed to register Addin, missing annotation " + DeclAddin.class);
+
+		String progId = coClassAnnotation.progId();
+		String officeApplication = addinAnnotation.application().toString();
+		
+		RegisterAddin registerAddin = new RegisterAddin(officeApplication, progId, true);
+		registerAddin.ensureAddinIsActive();
+	}
+	
 	public static void register(boolean perUserNotMachine, Class<?> addinClass) throws ComException {
 		if (log.isLoggable(Level.FINE)) log.fine("register(" + addinClass.getName() + " " + (perUserNotMachine ? "/user" : "/all")); 
 		System.out.println("register " + addinClass.getName() + " " + (perUserNotMachine ? "/user" : "/all") );
 		
 		CoClass coClassAnnotation = addinClass.getAnnotation(CoClass.class);
 		if (coClassAnnotation == null)
-			throw new ComException("Failed to unregister Addin, missing annotation " + CoClass.class);
+			throw new ComException("Failed to register Addin, missing annotation " + CoClass.class);
 		DeclAddin addinAnnotation = addinClass.getAnnotation(DeclAddin.class);
 		if (addinAnnotation == null)
 			throw new ComException("Failed to register Addin, missing annotation " + DeclAddin.class);
@@ -46,18 +84,25 @@ public class RegisterAddin {
 		String desc = addinAnnotation.description();
 		LoadBehavior loadBehavior = addinAnnotation.loadBehavior();
 
-		registerAddin(officeApplication, progId, name, desc, loadBehavior, perUserNotMachine);
-
+		RegisterAddin registerAddin = new RegisterAddin(officeApplication, progId, perUserNotMachine);
+		registerAddin.registerAddin(progId, name, desc, loadBehavior);
+		
 		// Register ActiveX JoaBridgeCtrl.Class
-		registerBridgeCtrl(progId, perUserNotMachine, true);
+		registerAddin.registerBridgeCtrl(true);
 
-		registerJoaUtilAddin(officeApplication, progId, perUserNotMachine);
+		registerAddin.registerJoaUtilAddin();
+		
+		// If we registered for user, the doNotDisableAddins key can be set during registration.
+		// Otherwise it will be set the when the application starts for the first time.
+		if (perUserNotMachine) {
+			registerAddin.ensureAddinIsActive();
+		}
 		
 		if (log.isLoggable(Level.FINE)) log.fine(")register");
 	}
 	
-	private static void registerBridgeCtrl(String referencedByProgId, boolean perUserNotMachine, boolean registerNotUnregister) {
-		
+	private void registerBridgeCtrl(boolean registerNotUnregister) {
+		final String referencedByProgId = progId;
 		final File joaDllInstDir = new File(JoaDll.nativeGetModuleFileName()).getParentFile();
 		final String regcmdTemplate = "%s\\%s\\regsvr32 /s /n %s /i:\"%s %s\" \"%s\"";
     	File joa32 = new File(joaDllInstDir, "joa32.dll");
@@ -104,8 +149,7 @@ public class RegisterAddin {
 		}
 	}
 
-	private static void registerAddin(String officeApplication, String progId, String name, String desc,
-			LoadBehavior loadBehavior, boolean perUserNotMachine) {
+	private void registerAddin(String progId, String name, String desc, LoadBehavior loadBehavior) {
 		System.out.println("registerAddin app=" + officeApplication + ", progId=" + progId);
 		
 		String key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
@@ -119,24 +163,22 @@ public class RegisterAddin {
 			RegUtil.setRegistryValue(key, "Description", desc);
 			setLoadBehavior(key, loadBehavior);
 		}
-
-		if (perUserNotMachine) {
-			ensureAddinIsActive(progId);
-		}
 	}
 	
 	/**
 	 * Enable Add-in.
 	 * https://blogs.msdn.microsoft.com/emeamsgdev/2017/08/02/outlooks-slow-add-ins-resiliency-logic-and-how-to-always-enable-slow-add-ins/
 	 * @param progId
+	 * @param progId2 
+	 * @param perUserNotMachine 
 	 */
-	private static void ensureAddinIsActive(String progId) {
+	private void ensureAddinIsActive() {
 		// HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\1x.0\Outlook\Resiliency\DoNotDisableAddinList
-		for (int outlookVersion = OfficeAddin.SUPPORTED_OFFICE_VERSION_MIN; 
-				outlookVersion <= OfficeAddin.SUPPORTED_OFFICE_VERSION_MAX; outlookVersion++) {
-			// Version-Key for Outlook, 2010: 14.0, 2013: 15.0, 2016: 16.0
-			String outlookVersion0 = outlookVersion + ".0";
-			String outlookRecilencyKey = String.format("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Office\\%s\\Outlook\\Resiliency", outlookVersion0);
+		
+		int officeVersion = detectOfficeVersion();
+		if (officeVersion != 0) {
+			
+			String outlookRecilencyKey = getKeyOfficeApplicationVersion(officeApplication, officeVersion, perUserNotMachine, false, "Resiliency");
 			
 			String doNotDisabledAddinsKey = outlookRecilencyKey + "\\DoNotDisableAddinList";
 			RegUtil.setRegistryValue(doNotDisabledAddinsKey, progId, 1);
@@ -151,6 +193,20 @@ public class RegisterAddin {
 		}
 	}
 	
+	private int detectOfficeVersion() {
+		final boolean perUserNotMachine = false;
+		for (int version = SUPPORTED_OFFICE_VERSION_MIN; version <= SUPPORTED_OFFICE_VERSION_MAX; version++) {
+			for (int wow6432Node = 0; wow6432Node < 2; wow6432Node++) {
+				String key = getKeyOfficeApplicationVersion(officeApplication, version, perUserNotMachine, wow6432Node != 0, "InstallRoot");
+				String path = (String)RegUtil.getRegistryValue(key, "Path", "");
+				if (!path.isEmpty()) {
+					return version;
+				}
+			}
+		}
+		throw new IllegalStateException("Cannot detect office version.");
+	}
+	
 	private static void setLoadBehavior(String key, LoadBehavior loadBehavior) {
 		if (loadBehavior == LoadBehavior.LoadByJoaUtil) {
 			RegUtil.setRegistryValue(key, "LoadBehavior", LoadBehavior.DoNotLoad.value);
@@ -161,25 +217,43 @@ public class RegisterAddin {
 		}
 	}
 
-	protected static String getKeyOfficeApplicationAddins(String officeApplication, boolean perUserNotMachine,
-			boolean wow6432Node) {
-		String rootKey = perUserNotMachine ? "HKCU" : "HKLM";
-		String key = rootKey + "\\Software\\";
-		if (wow6432Node)
-			key += "Wow6432Node\\";
-		key += "Microsoft\\Office\\" + officeApplication + "\\Addins";
+	private static String getKeyOfficeApplication(String officeApplication, boolean perUserNotMachine,
+			boolean wow6432Node, String subkey) {
+		String key = getKeyMicrosoftOffice(perUserNotMachine, wow6432Node) + "\\" + officeApplication + "\\" + subkey;
 		return key;
 	}
+	
+	private static String getKeyOfficeApplicationVersion(String officeApplication, int version, boolean perUserNotMachine,
+			boolean wow6432Node, String subkey) {
+		String key = getKeyMicrosoftOffice(perUserNotMachine, wow6432Node) 
+				+ "\\" + version + ".0" 
+				+ "\\" + officeApplication 
+				+ "\\" + subkey;
+		return key;
+	}
+	
+	private static String getKeyMicrosoftOffice(boolean perUserNotMachine, boolean wow6432Node) {
+		String rootKey = perUserNotMachine ? "HKCU" : "HKLM";
+		String key = rootKey + "\\Software\\";
+		if (!perUserNotMachine && wow6432Node) key += "Wow6432Node\\";
+		key += "Microsoft\\Office";
+		return key;
+	}
+	
+	protected static String getKeyOfficeApplicationAddins(String officeApplication, boolean perUserNotMachine, 
+			boolean wow6432Node) {
+		return getKeyOfficeApplication(officeApplication, perUserNotMachine, wow6432Node, "Addins");
+	}
 
-	protected static void registerJoaUtilAddin(String officeApplication, String referencedByAddin,
-			boolean perUserNotMachine) {
+	protected void registerJoaUtilAddin() {
 
+		String referencedByAddin = this.progId;
 		String progId = JoaUtilAddin_progId;
 		String name = JoaUtilAddin_name;
 		String desc = JoaUtilAddin_desc;
 		LoadBehavior loadBehavior = JoaUtilAddin_loadBehavior;
 
-		registerAddin(officeApplication, progId, name, desc, loadBehavior, perUserNotMachine);
+		registerAddin(progId, name, desc, loadBehavior);
 
 		// Add reference to JoaUtilAddin from referencing Add-in
 		String key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
@@ -199,16 +273,17 @@ public class RegisterAddin {
 		String progId = coClassAnnotation.progId();
 		String officeApplication = addinAnnotation.application().toString();
 
-		unregisterAddin(officeApplication, progId, perUserNotMachine);
+		RegisterAddin registerAddin = new RegisterAddin(officeApplication, progId, perUserNotMachine);
+		registerAddin.unregisterAddin(progId);
 
-		unregisterJoaUtilAddin(officeApplication, progId, perUserNotMachine);
+		registerAddin.unregisterJoaUtilAddin();
 
 		// Unregister ActiveX JoaBridgeCtrl.Class
-		registerBridgeCtrl(progId, perUserNotMachine, false);
+		registerAddin.registerBridgeCtrl(false);
 
 	}
 
-	private static void unregisterAddin(String officeApplication, String progId, boolean perUserNotMachine) {
+	private void unregisterAddin(String progId) {
 		String key = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
 		RegUtil.purgeRegistryKey(key);
 
@@ -218,29 +293,29 @@ public class RegisterAddin {
 		}
 
 		// Delete Registry keys where Outlook stores data about the Addin.
-		{
-			String keyOfficeApp = "HKCU\\Software\\Microsoft\\Office\\15.0\\" + officeApplication;
-
-			String keyAddinData = keyOfficeApp + "\\Addins\\" + progId;
+		// If unregistering for HKLM, we cannot delete this values for all users.
+		if (perUserNotMachine) {
+			int officeVersion = detectOfficeVersion();
+			String keyAddinData = getKeyOfficeApplicationVersion(officeApplication, officeVersion, perUserNotMachine, false, "Addins\\" + progId);
 			RegUtil.purgeRegistryKey(keyAddinData);
 
 			try {
-				String keyAddinLoadTimes = keyOfficeApp + "\\AddInLoadTimes";
+				String keyAddinLoadTimes = getKeyOfficeApplicationVersion(officeApplication, officeVersion, perUserNotMachine, false, "AddInLoadTimes");
 				RegUtil.deleteRegistryValue(keyAddinLoadTimes, progId);
 			}
 			catch(ComException ignored) {}
 		}
 	}
 
-	protected static void unregisterJoaUtilAddin(String officeApplication, String referencedByAddin,
-			boolean perUserNotMachine) {
+	protected void unregisterJoaUtilAddin() {
+		String referencedByAddin = this.progId;
 		String progId = JoaUtilAddin_progId;
 		String refsKey = getKeyOfficeApplicationAddins(officeApplication, perUserNotMachine, false) + "\\" + progId;
 		refsKey += "\\__References";
 		RegUtil.deleteRegistryKey(refsKey + "\\" + referencedByAddin);
 
 		if (RegUtil.deleteRegistryKey(refsKey)) {
-			unregisterAddin(officeApplication, JoaUtilAddin_progId, perUserNotMachine);
+			unregisterAddin(JoaUtilAddin_progId);
 		}
 	}
 

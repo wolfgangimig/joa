@@ -48,18 +48,6 @@ public abstract class OfficeAddin<CoAppType extends Dispatch> extends DispatchIm
 
 	protected final String TASK_PANE_CONTROL_PROGID = "JoaBridgeCtrl.Class";
 	
-	/**
-	 * Internal number of minimum supported office version.
-	 * Currently 14, which belongs to Office 2010.
-	 */
-	public final static int SUPPORTED_OFFICE_VERSION_MIN = 14;
-
-	/**
-	 * Internal number of maximum supported office version.
-	 * Currently 14, which belongs to Office 2016.
-	 */
-	public final static int SUPPORTED_OFFICE_VERSION_MAX = 16;
-
 	protected OfficeAddin(Class<CoAppType> applicationClass) {
 		this.module = ComModule.getInstance();
 		this.applicationClass = applicationClass;
