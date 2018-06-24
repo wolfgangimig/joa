@@ -100,7 +100,7 @@ public class RegisterAddin {
 		registerAddin.registerAddin(progId, name, desc, loadBehavior);
 		
 		// Register ActiveX JoaBridgeCtrl.Class
-		registerAddin.registerBridgeCtrl(true);
+		registerAddin.registerBridgeCtrl(Mode.Register);
 
 		registerAddin.registerJoaUtilAddin();
 		
@@ -113,7 +113,7 @@ public class RegisterAddin {
 		if (log.isLoggable(Level.FINE)) log.fine(")register");
 	}
 	
-	private void registerBridgeCtrl(boolean registerNotUnregister) {
+	private void registerBridgeCtrl(Mode registerMode) {
 		final String referencedByProgId = progId;
 		final File joaDllInstDir = new File(JoaDll.nativeGetModuleFileName()).getParentFile();
 		final String regcmdTemplate = "%s\\%s\\regsvr32 /s /n %s /i:\"%s %s\" \"%s\"";
@@ -128,7 +128,7 @@ public class RegisterAddin {
 				String regcmd = String.format(regcmdTemplate,
 						windir, 
 						"SysWOW64", 
-						(registerNotUnregister ? "" : "/u"), 
+						(registerMode == Mode.Register ? "" : "/u"), 
 						(registerFor == RegisterFor.User ? "user" : "all"),
 						referencedByProgId,
 						joa32);
@@ -139,7 +139,7 @@ public class RegisterAddin {
 				String regcmd = String.format(regcmdTemplate,
 						windir, 
 						"System32", 
-						(registerNotUnregister ? "" : "/u"), 
+						(registerMode == Mode.Register ? "" : "/u"), 
 						(registerFor == RegisterFor.User ? "user" : "all"),
 						referencedByProgId,
 						RegUtil.is64() ? joa64 : joa32);
@@ -198,7 +198,10 @@ public class RegisterAddin {
 		
 		String crashingAddinsKey = outlookRecilencyKey + "\\CrashingAddinList";
 		RegUtil.deleteRegistryKey(crashingAddinsKey);
-			RegUtil.setRegistryValue(crashingAddinsKey, "", "");
+		RegUtil.setRegistryValue(crashingAddinsKey, "", "");
+		
+		String loadBehaviorKey = getKeyOfficeApplicationAddins(officeApplication, RegisterFor.User, HklmNode.Default) + "\\" + progId;
+		setLoadBehavior(loadBehaviorKey, LoadBehavior.LoadOnStart);
 	}
 	
 	private void detectOfficeVersionAndHklm() {
@@ -295,7 +298,7 @@ public class RegisterAddin {
 		registerAddin.unregisterJoaUtilAddin();
 
 		// Unregister ActiveX JoaBridgeCtrl.Class
-		registerAddin.registerBridgeCtrl(false);
+		registerAddin.registerBridgeCtrl(Mode.Unregister);
 
 	}
 
