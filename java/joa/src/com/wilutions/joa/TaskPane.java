@@ -173,8 +173,8 @@ public abstract class TaskPane extends DispatchImpl implements WindowHandle, _Cu
 			BackgTask.run(() -> {
 				Throwable ex = null;
 				try {
-					customTaskPane.setVisible(Boolean.valueOf(v));
 					position.setVisible(v);
+					customTaskPane.setVisible(Boolean.valueOf(v));
 				} catch (ComException e) {
 					e.printStackTrace();
 					ex = e;

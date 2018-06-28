@@ -136,6 +136,7 @@ public class OutlookAddinEx extends OutlookAddin implements InspectorsEvents, Ex
 
 	@Override
 	public void onNewInspector(final _Inspector insp) throws ComException {
+		
 		Inspector inspector = Dispatch.as(insp, Inspector.class);
 		IDispatch dispItem = inspector.getCurrentItem();
 		OlObjectClass olclass = OlObjectClass.valueOf((Integer) dispItem._get("Class"));
