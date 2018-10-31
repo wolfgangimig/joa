@@ -10,14 +10,12 @@
  */
 package com.wilutions.joa;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.wilutions.com.BackgTask;
-import com.wilutions.com.CoClass;
 import com.wilutions.com.ComException;
 import com.wilutions.com.ComModule;
 import com.wilutions.com.DispatchImpl;
@@ -37,6 +35,7 @@ import javafx.stage.StageStyle;
 public class AddinApplication extends javafx.application.Application {
 	
 	private static Logger log = Logger.getLogger(AddinApplication.class.getName());
+	@SuppressWarnings("unused")
 	private final static String AUTOSTART_FOLDER = "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup";
 	
 	public static void main(String[] args) {
