@@ -74,7 +74,6 @@ public class DDAddinDll extends LoadDll {
 	}
 	
 	public static void closeLogFile() {
-		nativeCloseLogFile();
 	}
 	
 	public static void setProductName(String productName) {
@@ -98,8 +97,6 @@ public class DDAddinDll extends LoadDll {
 	private static native int nativeGetLicenseCount();
 
 	private static native void nativeOpenLogFile(String logFile, String level, boolean append);
-	
-	private static native void nativeCloseLogFile();
 	
 	private static native boolean nativeValidateLicense(String customer, String date, String opts, String installMaxStr, int checksum);
 }
