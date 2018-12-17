@@ -8,6 +8,14 @@ public class DDAddinDll extends LoadDll {
 	private final static String ADDIN_NAME = "WI: DnD for Issue Tracker";
 	private final static String ADDIN_DESCRIPTION = "This Add-in allows to drag and drop mails from Outlook into web browsers and other appliations.";
 
+	public final static String REGKEY_DDADDIN = "WILUTIONS\\DnD to HTML5 Addin for Microsoft Outlook";
+	
+	/**
+	 * Allow to paste items from Clipboard.
+	 * DDA-43: Paste from Clipboard. Default=true.
+	 */
+	public final static String  REGVAL_DDADDIN_CaptureClipboard = REGKEY_DDADDIN + "\\CaptureClipboard";
+	
 	static {
 		boolean isDebug = true;
 		String fileName = "ddaddin" + get3264();

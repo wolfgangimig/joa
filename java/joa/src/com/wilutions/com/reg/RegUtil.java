@@ -314,7 +314,30 @@ public class RegUtil {
 	public static String getClassesRoot(boolean perUserNotMachine) throws ComException {
 		return JoaDll.nativeGetClassesRoot(perUserNotMachine);
 	}
-
+	
+	/**
+	 * Get root key for configuration.
+	 * 
+	 * @param perUserNotMachine
+	 *            true: HKEY_CURRENT_USER\Software, false: HKEY_LOCAL_MACHINE\Software
+	 * @param bitness64
+	 *            true: HKEY_LOCAL_MACHINE\Software, false: HKEY_LOCAL_MACHINE\Software\WOW6432Node
+	 * @return Root key for program configuration.
+	 */
+	public static String getConfigRoot(boolean perUserNotMachine, boolean bitness64) {
+		String ret = "";
+		if (perUserNotMachine) {
+			ret = "HKEY_CURRENT_USER\\Software";
+		}
+		else if (bitness64) {
+			ret = "HKEY_LOCAL_MACHINE\\Software";
+		}
+		else {
+			ret = "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node";
+		}
+		return ret;
+	}
+	
 	/**
 	 * Register a LocalServer32.
 	 * 
