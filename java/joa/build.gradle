@@ -12,7 +12,7 @@ group = 'com.wilutions.joa'
 
 // Version number
 // Also stored in joa/res/com/wilutions/com/version.properties 
-version = '1.0.3.0'
+version = '1.0.4.0'
 
 archivesBaseName = 'JOA'
 

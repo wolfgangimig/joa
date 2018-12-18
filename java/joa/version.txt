@@ -1,5 +1,9 @@
 JOA Version History
 
+1.0.4.0 2018-12-18
+
+- DDAddin 2.1.0, support copy/paste mail item from clipboard.
+
 1.0.3.0 2017-06-08
 
 - Fixed JoaDll.activateDisabledAddin which ensures that the add-in is added to the list of 
