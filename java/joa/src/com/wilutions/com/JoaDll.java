@@ -24,14 +24,12 @@ import java.util.Properties;
 public class JoaDll extends LoadDll {
 	
 	static {
-		boolean isDebug = true;
+		boolean isDebug = false;
 		String fileName = "joa" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		
 		// Debugging: load from C++ output directories
 		if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\x64\\Debug\\" + fileNameWithExt, false)) {
-		}
-		else if (isDebug && loadLib("d:\\git\\joa-private\\cpp\\JoaCtrl\\Debug\\" + fileNameWithExt, false)) {
 		}
 		
 		// Packaged application loads joa.dll from current directory

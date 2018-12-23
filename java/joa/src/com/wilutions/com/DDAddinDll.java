@@ -17,14 +17,12 @@ public class DDAddinDll extends LoadDll {
 	public final static String  REGVAL_DDADDIN_CaptureClipboard = REGKEY_DDADDIN + "\\CaptureClipboard";
 	
 	static {
-		boolean isDebug = true;
+		boolean isDebug = false;
 		String fileName = "ddaddin" + get3264();
 		String fileNameWithExt = fileName + ".dll";
 		
 		// Debugging: load from C++ output directories
 		if (isDebug && loadLib("D:\\git\\outldd\\ddaddin\\Debug\\" + fileNameWithExt, false)) {
-		}
-		else if (isDebug && loadLib("D:\\git\\outldd\\ddaddin\\Debug\\" + fileNameWithExt, false)) {
 		}
 
 		// Packaged application loads joa.dll from current directory
