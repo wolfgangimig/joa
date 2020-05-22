@@ -1,5 +1,0 @@
-
-include("joa-decl")
-project(":joa-decl").projectDir = new File("../joa-decl")
-
-

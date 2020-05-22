@@ -5,15 +5,13 @@ import java.awt.Component;
 import javax.swing.JMenuBar;
 import javax.swing.SwingUtilities;
 
-import sun.awt.windows.WEmbeddedFrame;
-
 import com.wilutions.com.AsyncResult;
 import com.wilutions.com.WindowHandle;
 import com.wilutions.com.WindowsUtil;
 
 public class EmbeddedFrameSwing implements WindowHandle {
 
-	protected volatile WEmbeddedFrame window;
+	protected volatile java.awt.Frame window;
 	protected volatile JMenuBar menuBar;
 
 	/**
@@ -73,7 +71,7 @@ public class EmbeddedFrameSwing implements WindowHandle {
 		try {
 			// Create the Java window as a child window of the
 			// JoaBridgeCtrl.
-			window = new WEmbeddedFrame(hwndParent);
+			window = WEmbeddedFrame.create(hwndParent);
 
 			// Create and add the View to the window.
 			window.add(frameContent);

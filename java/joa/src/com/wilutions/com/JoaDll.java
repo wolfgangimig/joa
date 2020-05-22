@@ -159,4 +159,11 @@ public class JoaDll extends LoadDll {
 	public static native long createEmbeddedFrame(long hwndStage);
 	
 	public static native String getOfficeVersion();
+	
+	/**
+	 * Create frame window inside the given parent window.
+	 * @param hwndParent Parent window
+	 * @return Frame window
+	 */
+	public static native Object createEmbeddedAwtFrame(long hwndParent);
 }

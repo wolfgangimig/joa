@@ -4,10 +4,18 @@
  */
 package com.wilutions.joa.fx;
 
+import java.awt.EventQueue;
+import java.lang.reflect.InvocationTargetException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.swing.JFrame;
+
 import com.wilutions.com.JoaDll;
 import com.wilutions.com.WindowsUtil;
 
 import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -20,8 +28,14 @@ import javafx.stage.Window;
  */
 public class JFXEmbeddedFrame implements EmbeddedWindow {
 
-	private Stage stage;
+	private long hwndParent;
+	private Window stage;
+	private long hwndStage;
+	private java.awt.Frame frame;
+	private JFXPanel fxPanel;
+	private boolean firstMouseMove = true;
 	private double[] lastPos = new double[6];
+	private static Logger log = Logger.getLogger(JFXEmbeddedFrame.class.getName());
 
 	public JFXEmbeddedFrame(long hwndParent, Scene scene) {
 
@@ -29,56 +43,39 @@ public class JFXEmbeddedFrame implements EmbeddedWindow {
 			throw new IllegalStateException("This object must be created in the JavaFX application thread.");
 		}
 
-		stage = new Stage(StageStyle.UNDECORATED);
-		stage.setScene(scene);
+		this.hwndParent = hwndParent;
 		
-		// Die Men�-Eintr�ge und Combobox-Listen werden von JavaFX
-		// relativ zum scene.getWindow() positioniert. Dies hat in
-		// unserem Fall zun�chst die Position (0/0). Wenn das
-		// Anwendungsfenster (Outlookfenster) verschoben wird,
-		// bleibt die Postion auch unver�ndert. Die Men�-Eintr�ge
-		// werden also nach dem Verschieben des Anwendungsfensters
-		// falsch plaziert.
-		// Um dieses Problem zu beheben, registriere ich einen
-		// Mouse-Listener, der die Position des screen.getWindow()
-		// anpasst.
-		scene.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_ENTERED, (event) -> {
-			assert scene != null;
+		try {
+			EventQueue.invokeAndWait(() -> initAwtFrame(hwndParent, scene));
 			
-			final double[] xy = new double[6];
-			JoaDll.nativeGetWindowClientAreaPos(hwndParent, xy);
-			boolean posChanged = false;
-			for (int i = 0; i < xy.length && !posChanged; i++) {
-				posChanged = xy[i] != lastPos[i];
-			}
+			fxPanel.setScene(scene);
+			this.stage = scene.getWindow();
 			
-			if (posChanged) {
-				lastPos = xy;
-				Platform.runLater(() -> {
+			this.hwndStage = WindowsUtil.getWindowHandle(this.frame);
 
-					final Window w = scene.getWindow();
-//					System.out.println("w=" + w.getX() + "," + w.getY() + "," + w.getWidth() + "," + w.getHeight() + "");
-//					System.out.println("xy=" + Arrays.toString(xy));
-					
-					// This does not really move the window since moving is blocked
-					// by the window-subclass assigned in JoaDll.nativeSetParent.
-					w.setX(xy[0] / xy[4]);
-					w.setY(xy[1] / xy[5]);
-				});
-			}
-		});
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		stage.show();
-
-		long hwndStage = WindowsUtil.getWindowHandle(stage);
-		JoaDll.nativeSetParent(stage, hwndParent, hwndStage, 0, 0);
-//		System.out.println("parent assigned");
+	}
+	
+	private void initAwtFrame(long hwndParent, Scene scene) {
+		frame = (java.awt.Frame)JoaDll.createEmbeddedAwtFrame(hwndParent);
+        fxPanel = new JFXPanel();
+        frame.add(fxPanel);
+        frame.setSize(300, 200);
+        frame.setVisible(true);
 	}
 
 	@Override
 	public void dispose() {
 		Platform.runLater(() -> {
-			stage.close();
+			frame.setVisible(false);
 		});
 	}
 

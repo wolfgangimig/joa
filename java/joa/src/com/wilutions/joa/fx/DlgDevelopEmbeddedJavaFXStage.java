@@ -20,6 +20,9 @@ import javafx.stage.StageStyle;
 /**
  * This dialog was used to develop an embedded JavaFX stage.
  * It might be removed in a future version.
+ * 
+ * Required command line options:
+ * --module-path "c:\Program Files\OpenJDK\javafx-sdk-13.0.1\lib"  --add-modules javafx.controls,javafx.fxml,javafx.web --add-opens javafx.graphics/javafx.stage=ALL-UNNAMED --add-opens javafx.graphics/com.sun.javafx.tk.quantum=ALL-UNNAMED --add-opens javafx.graphics/com.sun.glass.ui=ALL-UNNAMED
  *
  * @deprecated This class was only used for development. 
  */
@@ -31,7 +34,7 @@ public class DlgDevelopEmbeddedJavaFXStage extends javafx.application.Applicatio
 	
 	public static void main(String[] args) {
 		
-		JoaDll.nativeInitLogger("d:\\temp\\log\\joa.log", "DEBUG", false);
+		JoaDll.nativeInitLogger("c:\\temp\\log\\joa.log", "DEBUG", false);
 		
 		if (args.length > 0) hwndParent = Long.parseLong(args[0]);
 		DlgDevelopEmbeddedJavaFXStage.launch(args);

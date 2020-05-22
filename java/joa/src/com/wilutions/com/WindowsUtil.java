@@ -10,18 +10,18 @@
 */
 package com.wilutions.com;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import com.wilutions.joa.fx.EmbeddedWindow;
-
-import sun.awt.windows.WComponentPeer;
 
 public class WindowsUtil {
 	
 	public static long getWindowHandle(javafx.stage.Window window) {
 		long retval = 0;
 		try {
-			Method m = window.getClass().getMethod("impl_getPeer");
+			Method m = javafx.stage.Window.class.getDeclaredMethod("getPeer");
+			m.setAccessible(true);
 			final Object tkStage = m.invoke(window);
 			if (tkStage != null) {
 				m = tkStage.getClass().getDeclaredMethod("getPlatformWindow");
@@ -29,16 +29,12 @@ public class WindowsUtil {
 				final Object platformWindow = m.invoke(tkStage);
 				m = platformWindow.getClass().getMethod("getNativeHandle");
 				retval = (Long) m.invoke(platformWindow);
-			}
+			}			
 		} catch (Throwable t) {
 			throw new IllegalStateException(t);
 		}
+		
 		return retval;
-	}
-	
-	@SuppressWarnings("deprecation")
-	public static long getWindowHandle(java.awt.Window window) {
-		return window != null && window.getPeer() != null ? ((WComponentPeer) window.getPeer()).getHWnd() : 0;
 	}
 	
 	/**
@@ -57,4 +53,18 @@ public class WindowsUtil {
 	public static long getWindowHandle(EmbeddedWindow window) {
 		return getWindowHandle(window.getWindow());
 	}
+	
+	public static long getWindowHandle(java.awt.Frame window) {
+		long retval = 0;
+		try {
+			Field f = java.awt.Frame.class.getField("handle");
+			f.setAccessible(true);
+			retval = f.getLong(window);
+		} catch (Throwable t) {
+			throw new IllegalStateException(t);
+		}
+		
+		return retval;
+	}
+
 }

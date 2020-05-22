@@ -1,6 +1,0 @@
-*.log
-bin
-.gradle
-.settings
-.classpath
-/.project

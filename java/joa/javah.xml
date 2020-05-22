@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="build" name="javah">
 
-	<property name="destJoa" value="d:/git/joa-private/cpp/JoaCtrl" />
-	<property name="destDDAddin" value="d:/git/outldd/ddaddin/ddaddin" />
+	<property name="destJoa" value="c:/Users/Wolfgang/git/joa-private/cpp/JoaCtrl" />
 	<property name="project.class.path" value="./bin" />
 
 	<target name="build">
 		<javah classpath="${project.class.path}" destdir="${destJoa}" force="yes" verbose="yes">
 			<class name="com.wilutions.com.JoaDll"/>
-		</javah>
-		<javah classpath="${project.class.path}" destdir="${destDDAddin}" force="yes" verbose="yes">
-			<class name="com.wilutions.com.DDAddinDll"/>
 		</javah>
 	</target>
 

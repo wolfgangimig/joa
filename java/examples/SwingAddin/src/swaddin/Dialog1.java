@@ -1,12 +1,12 @@
 package swaddin;
 
 import java.awt.Component;
+import java.awt.TextField;
 
-import javafx.scene.control.TextField;
-import learn.CelsiusConverterGUI;
-
-import com.wilutions.joa.fx.MessageBox;
+import com.wilutions.joa.swing.MessageBoxSwing;
 import com.wilutions.joa.swing.ModalDialogSwing;
+
+import learn.CelsiusConverterGUI;
 
 public class Dialog1 extends ModalDialogSwing<String> {
 
@@ -33,7 +33,7 @@ public class Dialog1 extends ModalDialogSwing<String> {
 
 		boolean hasText = true;
 		if (hasText) {
-			MessageBox.create(this).title("Confirm").text("Are you sure to close the dialog?").button(1, "YES")
+			MessageBoxSwing.create(this).title("Confirm").text("Are you sure to close the dialog?").button(1, "YES")
 					.button(0, "NO").focus().cancel().bdefault().show((result, ex) -> {
 						if (result == OK) {
 							Dialog1.this.finish("");

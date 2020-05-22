@@ -1,5 +1,6 @@
 package com.wilutions.joa.fx;
 
+import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -501,10 +502,19 @@ public abstract class ModalDialogFX<T> implements FrameContentFactory {
 		if (log.isLoggable(Level.FINE)) log.log(Level.FINE, ")internalShowAsyncInFxThread");
 	}
 
-	@SuppressWarnings("deprecation")
 	private void maybeSetWidthAndHightFromSceneExtent(Scene scene) {
 		if (width == 0 || height == 0) {
-			scene.impl_preferredSize();
+			
+			try {
+				Method m = Scene.class.getDeclaredMethod("preferredSize");
+				m.setAccessible(true);
+				m.invoke(scene);
+			} catch (Exception e) {
+				log.log(Level.WARNING, "Failed to compute dialog size.", e);
+			}
+			
+			// scene.impl_preferredSize();
+			
 			double sceneWidth = scene.getWidth();
 			double sceneHeight = scene.getHeight();
 			if (width == 0) {
